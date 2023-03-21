@@ -16,8 +16,12 @@ class _MY_UniformCrossover(Crossover):
         print(f'M shape:{M.shape} and X shape:{X.shape}')
         #2*50*12
 
+        # 1:
+        n = len(X.shape(-1))
+        # Choose a random crossover point between the first and last gene
+        
         for m in M:
-            crossover_point = np.random.randint(1, n_var-1)
+            crossover_point = np.random.randint(1, n-1)
             for i in range(len(m)):
                 if i<crossover_point:
                     m[i]=0

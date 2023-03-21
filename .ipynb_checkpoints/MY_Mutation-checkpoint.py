@@ -24,7 +24,8 @@ class _MY_Mutation(Mutation):
 		M = np.random.random(X.shape)
 		flip, no_flip = M < self.prob, M >= self.prob
 
-		_X[flip] = np.logical_not(X[flip])
+		_X[flip] = (X[flip] + np.random.randint(0, 18)) % 19
+        
 		_X[no_flip] = X[no_flip]
 
 		return _X.astype(np.bool)

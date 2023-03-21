@@ -10,9 +10,8 @@ def random_by_bounds(n_var, xl, xu, n_samples=1):
 
 
 class int_random(Sampling):
-	
-	def _do(self, problem, n_samples, **kwargs):
-		val = np.random.randint(problem.xl,problem.xu,size=(n_samples, problem.n_var))
+    def _do(self, problem, n_samples, **kwargs):
+        val = np.random.randint(problem.xl,problem.xu,size=(n_samples, problem.n_var))
         return val
 
 

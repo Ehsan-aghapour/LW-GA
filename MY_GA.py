@@ -22,7 +22,7 @@ from pymoo.util.termination.f_tol import MultiObjectiveSpaceToleranceTermination
 
 
 import time
-import pickle
+import pickle as pkl
 
 import sys
 #sys.stdout = open('somefile.txt', 'w')
@@ -34,8 +34,7 @@ import os
 
 from MY_CrossOver import _MY_UniformCrossover
 from MY_Mutation import _MY_Mutation
-from MY_Mutation import _MY_Mutation2
-from MY_Sampling import _MY_SumFixSampling
+from MY_Sampling import int_random
 from MY_Repair import _MY_Repair
 from MY_Profile import Eval
 from MY_Profile import set_parameters
@@ -46,17 +45,17 @@ from MY_Callback import _MY_Callback
 
 
 # +
-_Ns={'Alex':8,
-    'Google':11,
-    'Mobile':14,
-    'Squeeze':10,
-    'Res50':18,}
-cmpfreq(v){
+_Ns={'alex':8,
+    'google':11,
+    'mobile':14,
+    'squeeze':10,
+    'res50':18,}
+def cmpfreq(v):
     if v<6 :
         return "L",[v]
-    else if v<14:
+    elif v<14:
         return "B",[v-6]
-    else if v<54:
+    elif v<54:
         v2=v-14
         fgpu=v2/8
         fbig=v2%8
@@ -84,13 +83,13 @@ class MyProblem(ElementwiseProblem):
     n_eval=0
     #fp=0
     def __init__(self,_graph,Target_Latency):
-        targetlatency=Target_Latency
-        g=_graph
-        n=_Ns[_graph]
-        print("Initialize the problem for graph with " + str(n) + " layers.")
-        _xl=np.full(n,0)
-        _xu=np.full(n,18)
-        super().__init__(n_var=n,
+        self.targetlatency=Target_Latency
+        self.g=_graph
+        self.n=_Ns[_graph]
+        print("Initialize the problem for graph with " + str(self.n) + " layers.")
+        _xl=np.full(self.n,0)
+        _xu=np.full(self.n,18)
+        super().__init__(n_var=self.n,
                          n_obj=1,
                          n_constr=1,
                          xl=np.array(_xl),
@@ -99,6 +98,7 @@ class MyProblem(ElementwiseProblem):
         
 
     def _evaluate(self, x, out, *args, **kwargs):
+        g=self.g
         C=[]
         F=[]
         for i in x:
@@ -111,11 +111,15 @@ class MyProblem(ElementwiseProblem):
         for i,c in enumerate(C):
             d=0
             if c=="G":
-                d=data[g][c][F[i][0]][F[i][1]][i]["task"]
+                t=data[g][c][F[i][0]][F[i][1]][i]["task"]["time"]
+                p=data[g][c][F[i][0]][F[i][1]][i]["task"]["power"]
+                
             else:
-                d=data[g][c][F[i][0]][i]["task"]
-            t=d["time"]
-            p=d["power"]
+                t=data[g][c][F[i][0]][i]["task"]["time"]
+                p=data[g][c][F[i][0]][i]["task"]["power"]
+                
+            #t=d["time"]
+            #p=d["power"]
             e=p*t
             latency+=t
             energy+=e
@@ -140,7 +144,7 @@ class MyProblem(ElementwiseProblem):
                 transfer_time=transfer
                 #approximate:
                 transfer_energy=0
-                if C[i]=="G"
+                if C[i]=="G":
                     transfer_energy=1.2*(data[g][C[i]][F[i][0]][F[i][1]][i]["in"]["power"]*transfer_time)
                 else:
                     transfer_energy=1.2*(data[g][C[i]][F[i][0]][i]["in"]["power"]*transfer_time)
@@ -156,7 +160,6 @@ class MyProblem(ElementwiseProblem):
 
 
 Trm=200
-
 #https://pymoo.org/interface/termination.html
 _termination = MultiObjectiveDefaultTermination(
     #x_tol=1e-8,
@@ -178,19 +181,18 @@ _termination = MultiObjectiveDefaultTermination(
 )'''
 
 
-
-def main(_graph='Alex',TargetLatency):
+def main(_graph='alex',TargetLatency=200):
     #graph='Res50'
     graph=_graph
-    N=_NS[graph]
+    N=_Ns[graph]
     stime=time.time_ns()
     problem = MyProblem(graph,TargetLatency)
     
     _pop_size=1000
-    set_parameters(_Graph=graph)
+    #set_parameters(_Graph=graph)
     algorithm = NSGA2(pop_size=_pop_size,
         sampling=int_random(),
-        selection=TournamentSelection(func_comp=binary_tournament),
+        #selection=TournamentSelection(func_comp=binary_tournament),
         mutation=_MY_Mutation(1/N),
         crossover=_MY_UniformCrossover(prob=0.5),
     

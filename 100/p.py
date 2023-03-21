@@ -343,5 +343,5 @@ for graph in graphs[:2]:
 
 k=input("ok?")
 if k=='y':
-    with open("data10.pkl","wb") as f:
+    with open("data100.pkl","wb") as f:
         pk.dump(data,f)
