@@ -1,0 +1,153 @@
+/data/data/com.termux/files/home/ARMCL-RockPi//test_graph//graph_resnet50_n_pipe_npu_lw  --target=CL --data=/data/data/com.termux/files/home/ARMCL-RockPi/assets/./resnet50/ --image=/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/ --labels=/data/data/com.termux/files/home/ARMCL-RockPi/assets/./labels.txt --n=10 --save=0 --annotate=0 --partition_point=100 --partition_point2=100 --order=GLGLGLGLGLGLGLGLGL --layer_time=1 --threads=2  --threads2=4 --GPU_host=B --NPU_host=B 
+pandoon
+pandoon
+pandoon
+
+/data/data/com.termux/files/home/ARMCL-RockPi//test_graph//graph_resnet50_n_pipe_npu_lw
+
+Pandoon opened at 3
+5 Input images are read from /data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/
+NPU host: 4
+Little Cores host: 3
+Big Cores host: 5
+GPU host: 4
+Number of Layers: 18
+Threads : 2
+Small Cores Threads : 4
+Target : CL
+Data type : F32
+Data layout : NHWC
+Tuner enabled? : false
+Cache enabled? : true
+Tuner mode : Normal
+Tuner file : 
+MLGO file : 
+Fast math enabled? : false
+Data path : /data/data/com.termux/files/home/ARMCL-RockPi/assets/./resnet50/
+Image file : /data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gold_fish.ppm
+Labels file : /data/data/com.termux/files/home/ARMCL-RockPi/assets/./labels.txt
+Partition point is : 100
+Second partition point is : 100
+Order is : GLGLGLGLGLGLGLGLGL
+freqs of layers : 
+GPU host is: B
+NPU host is: B
+Number of totla cores is : 6
+Number of little cores is : 4
+Run network for 10 times.
+Layer timing: 1
+
+start creating graph
+creating image accessor
+std::string task_names[] = { "conv1/convolution+conv1/BatchNorm", "pool1/MaxPool" };
+number of tasks: 2
+std::set<std::string> end_task_names = { "pool1/MaxPool" };
+number of end tasks: 1
+std::set<std::string> start_task_names = { "conv1/convolution+conv1/BatchNorm" };
+number of start tasks: 1
+after pass graph 0
+std::string task_names[] = { "block1/unit1/bottleneck_v1/shortcut/convolution+block1/unit1/bottleneck_v1/shortcut/BatchNorm", "block1/unit1/bottleneck_v1/conv1/convolution+block1/unit1/bottleneck_v1/conv1/BatchNorm", "block1/unit1/bottleneck_v1/conv2/convolution+block1/unit1/bottleneck_v1/conv2/BatchNorm", "block1/unit1/bottleneck_v1/conv3/convolution+block1/unit1/bottleneck_v1/conv3/BatchNorm", "block1/unit1/bottleneck_v1/add", "block1/unit1/bottleneck_v1/Relu" };
+number of tasks: 6
+std::set<std::string> end_task_names = { "block1/unit1/bottleneck_v1/add" };
+number of end tasks: 1
+std::set<std::string> start_task_names = { "block1/unit1/bottleneck_v1/shortcut/convolution+block1/unit1/bottleneck_v1/shortcut/BatchNorm", "block1/unit1/bottleneck_v1/Relu" };
+number of start tasks: 1
+after pass graph 1
+std::string task_names[] = { "block1/unit2/bottleneck_v1/conv1/convolution+block1/unit2/bottleneck_v1/conv1/BatchNorm", "block1/unit2/bottleneck_v1/conv2/convolution+block1/unit2/bottleneck_v1/conv2/BatchNorm", "block1/unit2/bottleneck_v1/conv3/convolution+block1/unit2/bottleneck_v1/conv3/BatchNorm", "block1/unit2/bottleneck_v1/add" };
+number of tasks: 4
+std::set<std::string> end_task_names = { "block1/unit2/bottleneck_v1/add" };
+number of end tasks: 1
+std::set<std::string> start_task_names = { "block1/unit2/bottleneck_v1/conv1/convolution+block1/unit2/bottleneck_v1/conv1/BatchNorm" };
+number of start tasks: 1
+after pass graph 2
+std::string task_names[] = { "block1/unit3/bottleneck_v1/conv1/convolution+block1/unit3/bottleneck_v1/conv1/BatchNorm", "block1/unit3/bottleneck_v1/conv2/convolution+block1/unit3/bottleneck_v1/conv2/BatchNorm", "block1/unit3/bottleneck_v1/conv3/convolution+block1/unit3/bottleneck_v1/conv3/BatchNorm", "block1/unit3/bottleneck_v1/add", "block1/unit3/bottleneck_v1/Relu" };
+number of tasks: 5
+std::set<std::string> end_task_names = { "block1/unit3/bottleneck_v1/add" };
+number of end tasks: 1
+std::set<std::string> start_task_names = { "block1/unit3/bottleneck_v1/conv1/convolution+block1/unit3/bottleneck_v1/conv1/BatchNorm", "block1/unit3/bottleneck_v1/Relu" };
+number of start tasks: 1
+after pass graph 3
+std::string task_names[] = { "block2/unit1/bottleneck_v1/shortcut/convolution+block2/unit1/bottleneck_v1/shortcut/BatchNorm", "block2/unit1/bottleneck_v1/conv1/convolution+block2/unit1/bottleneck_v1/conv1/BatchNorm", "block2/unit1/bottleneck_v1/conv2/convolution+block2/unit1/bottleneck_v1/conv2/BatchNorm", "block2/unit1/bottleneck_v1/conv3/convolution+block2/unit1/bottleneck_v1/conv3/BatchNorm", "block2/unit1/bottleneck_v1/add" };
+number of tasks: 5
+std::set<std::string> end_task_names = { "block2/unit1/bottleneck_v1/add" };
+number of end tasks: 1
+std::set<std::string> start_task_names = { "block2/unit1/bottleneck_v1/shortcut/convolution+block2/unit1/bottleneck_v1/shortcut/BatchNorm" };
+number of start tasks: 1
+after pass graph 4
+std::string task_names[] = { "block2/unit2/bottleneck_v1/conv1/convolution+block2/unit2/bottleneck_v1/conv1/BatchNorm", "block2/unit2/bottleneck_v1/conv2/convolution+block2/unit2/bottleneck_v1/conv2/BatchNorm", "block2/unit2/bottleneck_v1/conv3/convolution+block2/unit2/bottleneck_v1/conv3/BatchNorm", "block2/unit2/bottleneck_v1/add", "block2/unit2/bottleneck_v1/Relu" };
+number of tasks: 5
+std::set<std::string> end_task_names = { "block2/unit2/bottleneck_v1/add" };
+number of end tasks: 1
+std::set<std::string> start_task_names = { "block2/unit2/bottleneck_v1/conv1/convolution+block2/unit2/bottleneck_v1/conv1/BatchNorm", "block2/unit2/bottleneck_v1/Relu" };
+number of start tasks: 1
+after pass graph 5
+std::string task_names[] = { "block2/unit3/bottleneck_v1/conv1/convolution+block2/unit3/bottleneck_v1/conv1/BatchNorm", "block2/unit3/bottleneck_v1/conv2/convolution+block2/unit3/bottleneck_v1/conv2/BatchNorm", "block2/unit3/bottleneck_v1/conv3/convolution+block2/unit3/bottleneck_v1/conv3/BatchNorm", "block2/unit3/bottleneck_v1/add" };
+number of tasks: 4
+std::set<std::string> end_task_names = { "block2/unit3/bottleneck_v1/add" };
+number of end tasks: 1
+std::set<std::string> start_task_names = { "block2/unit3/bottleneck_v1/conv1/convolution+block2/unit3/bottleneck_v1/conv1/BatchNorm" };
+number of start tasks: 1
+after pass graph 6
+std::string task_names[] = { "block2/unit4/bottleneck_v1/conv1/convolution+block2/unit4/bottleneck_v1/conv1/BatchNorm", "block2/unit4/bottleneck_v1/conv2/convolution+block2/unit4/bottleneck_v1/conv2/BatchNorm", "block2/unit4/bottleneck_v1/conv3/convolution+block2/unit4/bottleneck_v1/conv3/BatchNorm", "block2/unit4/bottleneck_v1/add", "block2/unit4/bottleneck_v1/Relu" };
+number of tasks: 5
+std::set<std::string> end_task_names = { "block2/unit4/bottleneck_v1/add" };
+number of end tasks: 1
+std::set<std::string> start_task_names = { "block2/unit4/bottleneck_v1/conv1/convolution+block2/unit4/bottleneck_v1/conv1/BatchNorm", "block2/unit4/bottleneck_v1/Relu" };
+number of start tasks: 1
+after pass graph 7
+std::string task_names[] = { "block3/unit1/bottleneck_v1/shortcut/convolution+block3/unit1/bottleneck_v1/shortcut/BatchNorm", "block3/unit1/bottleneck_v1/conv1/convolution+block3/unit1/bottleneck_v1/conv1/BatchNorm", "block3/unit1/bottleneck_v1/conv2/convolution+block3/unit1/bottleneck_v1/conv2/BatchNorm", "block3/unit1/bottleneck_v1/conv3/convolution+block3/unit1/bottleneck_v1/conv3/BatchNorm", "block3/unit1/bottleneck_v1/add" };
+number of tasks: 5
+std::set<std::string> end_task_names = { "block3/unit1/bottleneck_v1/add" };
+number of end tasks: 1
+std::set<std::string> start_task_names = { "block3/unit1/bottleneck_v1/shortcut/convolution+block3/unit1/bottleneck_v1/shortcut/BatchNorm" };
+number of start tasks: 1
+after pass graph 8
+std::string task_names[] = { "block3/unit2/bottleneck_v1/conv1/convolution+block3/unit2/bottleneck_v1/conv1/BatchNorm", "block3/unit2/bottleneck_v1/conv2/convolution+block3/unit2/bottleneck_v1/conv2/BatchNorm", "block3/unit2/bottleneck_v1/conv3/convolution+block3/unit2/bottleneck_v1/conv3/BatchNorm", "block3/unit2/bottleneck_v1/add", "block3/unit2/bottleneck_v1/Relu" };
+number of tasks: 5
+std::set<std::string> end_task_names = { "block3/unit2/bottleneck_v1/add" };
+number of end tasks: 1
+std::set<std::string> start_task_names = { "block3/unit2/bottleneck_v1/conv1/convolution+block3/unit2/bottleneck_v1/conv1/BatchNorm", "block3/unit2/bottleneck_v1/Relu" };
+number of start tasks: 1
+after pass graph 9
+std::string task_names[] = { "block3/unit3/bottleneck_v1/conv1/convolution+block3/unit3/bottleneck_v1/conv1/BatchNorm", "block3/unit3/bottleneck_v1/conv2/convolution+block3/unit3/bottleneck_v1/conv2/BatchNorm", "block3/unit3/bottleneck_v1/conv3/convolution+block3/unit3/bottleneck_v1/conv3/BatchNorm", "block3/unit3/bottleneck_v1/add" };
+number of tasks: 4
+std::set<std::string> end_task_names = { "block3/unit3/bottleneck_v1/add" };
+number of end tasks: 1
+std::set<std::string> start_task_names = { "block3/unit3/bottleneck_v1/conv1/convolution+block3/unit3/bottleneck_v1/conv1/BatchNorm" };
+number of start tasks: 1
+after pass graph 10
+std::string task_names[] = { "block3/unit4/bottleneck_v1/conv1/convolution+block3/unit4/bottleneck_v1/conv1/BatchNorm", "block3/unit4/bottleneck_v1/conv2/convolution+block3/unit4/bottleneck_v1/conv2/BatchNorm", "block3/unit4/bottleneck_v1/conv3/convolution+block3/unit4/bottleneck_v1/conv3/BatchNorm", "block3/unit4/bottleneck_v1/add", "block3/unit4/bottleneck_v1/Relu" };
+number of tasks: 5
+std::set<std::string> end_task_names = { "block3/unit4/bottleneck_v1/add" };
+number of end tasks: 1
+std::set<std::string> start_task_names = { "block3/unit4/bottleneck_v1/conv1/convolution+block3/unit4/bottleneck_v1/conv1/BatchNorm", "block3/unit4/bottleneck_v1/Relu" };
+number of start tasks: 1
+after pass graph 11
+std::string task_names[] = { "block3/unit5/bottleneck_v1/conv1/convolution+block3/unit5/bottleneck_v1/conv1/BatchNorm", "block3/unit5/bottleneck_v1/conv2/convolution+block3/unit5/bottleneck_v1/conv2/BatchNorm", "block3/unit5/bottleneck_v1/conv3/convolution+block3/unit5/bottleneck_v1/conv3/BatchNorm", "block3/unit5/bottleneck_v1/add" };
+number of tasks: 4
+std::set<std::string> end_task_names = { "block3/unit5/bottleneck_v1/add" };
+number of end tasks: 1
+std::set<std::string> start_task_names = { "block3/unit5/bottleneck_v1/conv1/convolution+block3/unit5/bottleneck_v1/conv1/BatchNorm" };
+number of start tasks: 1
+after pass graph 12
+std::string task_names[] = { "block3/unit6/bottleneck_v1/conv1/convolution+block3/unit6/bottleneck_v1/conv1/BatchNorm", "block3/unit6/bottleneck_v1/conv2/convolution+block3/unit6/bottleneck_v1/conv2/BatchNorm", "block3/unit6/bottleneck_v1/conv3/convolution+block3/unit6/bottleneck_v1/conv3/BatchNorm", "block3/unit6/bottleneck_v1/add", "block3/unit6/bottleneck_v1/Relu" };
+number of tasks: 5
+std::set<std::string> end_task_names = { "block3/unit6/bottleneck_v1/add" };
+number of end tasks: 1
+std::set<std::string> start_task_names = { "block3/unit6/bottleneck_v1/conv1/convolution+block3/unit6/bottleneck_v1/conv1/BatchNorm", "block3/unit6/bottleneck_v1/Relu" };
+number of start tasks: 1
+after pass graph 13
+std::string task_names[] = { "block4/unit1/bottleneck_v1/shortcut/convolution+block4/unit1/bottleneck_v1/shortcut/BatchNorm", "block4/unit1/bottleneck_v1/conv1/convolution+block4/unit1/bottleneck_v1/conv1/BatchNorm", "block4/unit1/bottleneck_v1/conv2/convolution+block4/unit1/bottleneck_v1/conv2/BatchNorm", "block4/unit1/bottleneck_v1/conv3/convolution+block4/unit1/bottleneck_v1/conv3/BatchNorm", "block4/unit1/bottleneck_v1/add" };
+number of tasks: 5
+std::set<std::string> end_task_names = { "block4/unit1/bottleneck_v1/add" };
+number of end tasks: 1
+std::set<std::string> start_task_names = { "block4/unit1/bottleneck_v1/shortcut/convolution+block4/unit1/bottleneck_v1/shortcut/BatchNorm" };
+number of start tasks: 1
+after pass graph 14
+std::string task_names[] = { "block4/unit2/bottleneck_v1/conv1/convolution+block4/unit2/bottleneck_v1/conv1/BatchNorm", "block4/unit2/bottleneck_v1/conv2/convolution+block4/unit2/bottleneck_v1/conv2/BatchNorm", "block4/unit2/bottleneck_v1/conv3/convolution+block4/unit2/bottleneck_v1/conv3/BatchNorm", "block4/unit2/bottleneck_v1/add", "block4/unit2/bottleneck_v1/Relu" };
+number of tasks: 5
+std::set<std::string> end_task_names = { "block4/unit2/bottleneck_v1/add" };
+number of end tasks: 1
+std::set<std::string> start_task_names = { "block4/unit2/bottleneck_v1/conv1/convolution+block4/unit2/bottleneck_v1/conv1/BatchNorm", "block4/unit2/bottleneck_v1/Relu" };
+number of start tasks: 1
+after pass graph 15

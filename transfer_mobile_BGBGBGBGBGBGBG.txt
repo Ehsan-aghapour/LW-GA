@@ -1,0 +1,641 @@
+/data/data/com.termux/files/home/ARMCL-RockPi//test_graph//graph_mobilenet_n_pipe_npu_lw  --target=CL --data=/data/data/com.termux/files/home/ARMCL-RockPi/assets/./mobilenet/ --image=/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/ --labels=/data/data/com.termux/files/home/ARMCL-RockPi/assets/./labels.txt --n=10 --save=0 --annotate=0 --partition_point=100 --partition_point2=100 --order=BGBGBGBGBGBGBG --layer_time=1 --threads=2  --threads2=4 --GPU_host=B --NPU_host=B 
+pandoon
+pandoon
+pandoon
+
+/data/data/com.termux/files/home/ARMCL-RockPi//test_graph//graph_mobilenet_n_pipe_npu_lw
+
+Pandoon opened at 3
+5 Input images are read from /data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/
+NPU host: 4
+Little Cores host: 3
+Big Cores host: 5
+GPU host: 4
+Number of Layers: 14
+Threads : 2
+Small Cores Threads : 4
+Target : CL
+Data type : F32
+Data layout : NHWC
+Tuner enabled? : false
+Cache enabled? : true
+Tuner mode : Normal
+Tuner file : 
+MLGO file : 
+Fast math enabled? : false
+Data path : /data/data/com.termux/files/home/ARMCL-RockPi/assets/./mobilenet/
+Image file : /data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gold_fish.ppm
+Labels file : /data/data/com.termux/files/home/ARMCL-RockPi/assets/./labels.txt
+Partition point is : 100
+Second partition point is : 100
+Order is : BGBGBGBGBGBGBG
+freqs of layers : 
+GPU host is: B
+NPU host is: B
+Number of totla cores is : 6
+Number of little cores is : 4
+Run network for 10 times.
+Layer timing: 1
+
+start creating graph
+creating image accessor
+std::string task_names[] = { "Conv2d_0+Conv2d_0/BatchNorm" };
+number of tasks: 1
+std::set<std::string> end_task_names = { "Conv2d_0+Conv2d_0/BatchNorm" };
+number of end tasks: 1
+std::set<std::string> start_task_names = { "Conv2d_0+Conv2d_0/BatchNorm" };
+number of start tasks: 1
+after pass graph 0
+std::string task_names[] = { "Conv2d_1_depthwise/depthwise+Conv2d_1_depthwise/BatchNorm", "Conv2d_1_pointwise/Conv2D+Conv2d_1_pointwise/BatchNorm" };
+number of tasks: 2
+std::set<std::string> end_task_names = { "Conv2d_1_pointwise/Conv2D+Conv2d_1_pointwise/BatchNorm" };
+number of end tasks: 1
+std::set<std::string> start_task_names = { "Conv2d_1_depthwise/depthwise+Conv2d_1_depthwise/BatchNorm" };
+number of start tasks: 1
+after pass graph 1
+std::string task_names[] = { "Conv2d_2_depthwise/depthwise+Conv2d_2_depthwise/BatchNorm", "Conv2d_2_pointwise/Conv2D+Conv2d_2_pointwise/BatchNorm" };
+number of tasks: 2
+std::set<std::string> end_task_names = { "Conv2d_2_pointwise/Conv2D+Conv2d_2_pointwise/BatchNorm" };
+number of end tasks: 1
+std::set<std::string> start_task_names = { "Conv2d_2_depthwise/depthwise+Conv2d_2_depthwise/BatchNorm" };
+number of start tasks: 1
+after pass graph 2
+std::string task_names[] = { "Conv2d_3_depthwise/depthwise+Conv2d_3_depthwise/BatchNorm", "Conv2d_3_pointwise/Conv2D+Conv2d_3_pointwise/BatchNorm" };
+number of tasks: 2
+std::set<std::string> end_task_names = { "Conv2d_3_pointwise/Conv2D+Conv2d_3_pointwise/BatchNorm" };
+number of end tasks: 1
+std::set<std::string> start_task_names = { "Conv2d_3_depthwise/depthwise+Conv2d_3_depthwise/BatchNorm" };
+number of start tasks: 1
+after pass graph 3
+std::string task_names[] = { "Conv2d_4_depthwise/depthwise+Conv2d_4_depthwise/BatchNorm", "Conv2d_4_pointwise/Conv2D+Conv2d_4_pointwise/BatchNorm" };
+number of tasks: 2
+std::set<std::string> end_task_names = { "Conv2d_4_pointwise/Conv2D+Conv2d_4_pointwise/BatchNorm" };
+number of end tasks: 1
+std::set<std::string> start_task_names = { "Conv2d_4_depthwise/depthwise+Conv2d_4_depthwise/BatchNorm" };
+number of start tasks: 1
+after pass graph 4
+std::string task_names[] = { "Conv2d_5_depthwise/depthwise+Conv2d_5_depthwise/BatchNorm", "Conv2d_5_pointwise/Conv2D+Conv2d_5_pointwise/BatchNorm" };
+number of tasks: 2
+std::set<std::string> end_task_names = { "Conv2d_5_pointwise/Conv2D+Conv2d_5_pointwise/BatchNorm" };
+number of end tasks: 1
+std::set<std::string> start_task_names = { "Conv2d_5_depthwise/depthwise+Conv2d_5_depthwise/BatchNorm" };
+number of start tasks: 1
+after pass graph 5
+std::string task_names[] = { "Conv2d_6_depthwise/depthwise+Conv2d_6_depthwise/BatchNorm", "Conv2d_6_pointwise/Conv2D+Conv2d_6_pointwise/BatchNorm" };
+number of tasks: 2
+std::set<std::string> end_task_names = { "Conv2d_6_pointwise/Conv2D+Conv2d_6_pointwise/BatchNorm" };
+number of end tasks: 1
+std::set<std::string> start_task_names = { "Conv2d_6_depthwise/depthwise+Conv2d_6_depthwise/BatchNorm" };
+number of start tasks: 1
+after pass graph 6
+std::string task_names[] = { "Conv2d_7_depthwise/depthwise+Conv2d_7_depthwise/BatchNorm", "Conv2d_7_pointwise/Conv2D+Conv2d_7_pointwise/BatchNorm" };
+number of tasks: 2
+std::set<std::string> end_task_names = { "Conv2d_7_pointwise/Conv2D+Conv2d_7_pointwise/BatchNorm" };
+number of end tasks: 1
+std::set<std::string> start_task_names = { "Conv2d_7_depthwise/depthwise+Conv2d_7_depthwise/BatchNorm" };
+number of start tasks: 1
+after pass graph 7
+std::string task_names[] = { "Conv2d_8_depthwise/depthwise+Conv2d_8_depthwise/BatchNorm", "Conv2d_8_pointwise/Conv2D+Conv2d_8_pointwise/BatchNorm" };
+number of tasks: 2
+std::set<std::string> end_task_names = { "Conv2d_8_pointwise/Conv2D+Conv2d_8_pointwise/BatchNorm" };
+number of end tasks: 1
+std::set<std::string> start_task_names = { "Conv2d_8_depthwise/depthwise+Conv2d_8_depthwise/BatchNorm" };
+number of start tasks: 1
+after pass graph 8
+std::string task_names[] = { "Conv2d_9_depthwise/depthwise+Conv2d_9_depthwise/BatchNorm", "Conv2d_9_pointwise/Conv2D+Conv2d_9_pointwise/BatchNorm" };
+number of tasks: 2
+std::set<std::string> end_task_names = { "Conv2d_9_pointwise/Conv2D+Conv2d_9_pointwise/BatchNorm" };
+number of end tasks: 1
+std::set<std::string> start_task_names = { "Conv2d_9_depthwise/depthwise+Conv2d_9_depthwise/BatchNorm" };
+number of start tasks: 1
+after pass graph 9
+std::string task_names[] = { "Conv2d_10_depthwise/depthwise+Conv2d_10_depthwise/BatchNorm", "Conv2d_10_pointwise/Conv2D+Conv2d_10_pointwise/BatchNorm" };
+number of tasks: 2
+std::set<std::string> end_task_names = { "Conv2d_10_pointwise/Conv2D+Conv2d_10_pointwise/BatchNorm" };
+number of end tasks: 1
+std::set<std::string> start_task_names = { "Conv2d_10_depthwise/depthwise+Conv2d_10_depthwise/BatchNorm" };
+number of start tasks: 1
+after pass graph 10
+std::string task_names[] = { "Conv2d_11_depthwise/depthwise+Conv2d_11_depthwise/BatchNorm", "Conv2d_11_pointwise/Conv2D+Conv2d_11_pointwise/BatchNorm" };
+number of tasks: 2
+std::set<std::string> end_task_names = { "Conv2d_11_pointwise/Conv2D+Conv2d_11_pointwise/BatchNorm" };
+number of end tasks: 1
+std::set<std::string> start_task_names = { "Conv2d_11_depthwise/depthwise+Conv2d_11_depthwise/BatchNorm" };
+number of start tasks: 1
+after pass graph 11
+std::string task_names[] = { "Conv2d_12_depthwise/depthwise+Conv2d_12_depthwise/BatchNorm", "Conv2d_12_pointwise/Conv2D+Conv2d_12_pointwise/BatchNorm" };
+number of tasks: 2
+std::set<std::string> end_task_names = { "Conv2d_12_pointwise/Conv2D+Conv2d_12_pointwise/BatchNorm" };
+number of end tasks: 1
+std::set<std::string> start_task_names = { "Conv2d_12_depthwise/depthwise+Conv2d_12_depthwise/BatchNorm" };
+number of start tasks: 1
+after pass graph 12
+std::string task_names[] = { "Conv2d_13_depthwise/depthwise+Conv2d_13_depthwise/BatchNorm", "Conv2d_13_pointwise/Conv2D+Conv2d_13_pointwise/BatchNorm", "Logits/AvgPool_1a", "Logits/Conv2d_1c_1x1", "Reshape", "Softmax" };
+number of tasks: 6
+std::set<std::string> end_task_names = { "Softmax" };
+number of end tasks: 1
+std::set<std::string> start_task_names = { "Conv2d_13_depthwise/depthwise+Conv2d_13_depthwise/BatchNorm" };
+number of start tasks: 1
+after pass graph 13
+Total layers:14
+
+0 Running Graph with min LW DVFS
+task: Conv2d_0+Conv2d_0/BatchNorm set freq for next task to 0, 0, 0
+task: Conv2d_1_depthwise/depthwise+Conv2d_1_depthwise/BatchNorm set freq for next task to -1, -1, -1
+task: Conv2d_1_pointwise/Conv2D+Conv2d_1_pointwise/BatchNorm set freq for next task to 0, 0, 0
+task: Conv2d_2_depthwise/depthwise+Conv2d_2_depthwise/BatchNorm set freq for next task to -1, -1, -1
+task: Conv2d_2_pointwise/Conv2D+Conv2d_2_pointwise/BatchNorm set freq for next task to 0, 0, 0
+task: Conv2d_3_depthwise/depthwise+Conv2d_3_depthwise/BatchNorm set freq for next task to -1, -1, -1
+task: Conv2d_3_pointwise/Conv2D+Conv2d_3_pointwise/BatchNorm set freq for next task to 0, 0, 0
+task: Conv2d_4_depthwise/depthwise+Conv2d_4_depthwise/BatchNorm set freq for next task to -1, -1, -1
+task: Conv2d_4_pointwise/Conv2D+Conv2d_4_pointwise/BatchNorm set freq for next task to 0, 0, 0
+task: Conv2d_5_depthwise/depthwise+Conv2d_5_depthwise/BatchNorm set freq for next task to -1, -1, -1
+task: Conv2d_5_pointwise/Conv2D+Conv2d_5_pointwise/BatchNorm set freq for next task to 0, 0, 0
+task: Conv2d_6_depthwise/depthwise+Conv2d_6_depthwise/BatchNorm set freq for next task to -1, -1, -1
+task: Conv2d_6_pointwise/Conv2D+Conv2d_6_pointwise/BatchNorm set freq for next task to 0, 0, 0
+task: Conv2d_7_depthwise/depthwise+Conv2d_7_depthwise/BatchNorm set freq for next task to -1, -1, -1
+task: Conv2d_7_pointwise/Conv2D+Conv2d_7_pointwise/BatchNorm set freq for next task to 0, 0, 0
+task: Conv2d_8_depthwise/depthwise+Conv2d_8_depthwise/BatchNorm set freq for next task to -1, -1, -1
+task: Conv2d_8_pointwise/Conv2D+Conv2d_8_pointwise/BatchNorm set freq for next task to 0, 0, 0
+task: Conv2d_9_depthwise/depthwise+Conv2d_9_depthwise/BatchNorm set freq for next task to -1, -1, -1
+task: Conv2d_9_pointwise/Conv2D+Conv2d_9_pointwise/BatchNorm set freq for next task to 0, 0, 0
+task: Conv2d_10_depthwise/depthwise+Conv2d_10_depthwise/BatchNorm set freq for next task to -1, -1, -1
+task: Conv2d_10_pointwise/Conv2D+Conv2d_10_pointwise/BatchNorm set freq for next task to 0, 0, 0
+task: Conv2d_11_depthwise/depthwise+Conv2d_11_depthwise/BatchNorm set freq for next task to -1, -1, -1
+task: Conv2d_11_pointwise/Conv2D+Conv2d_11_pointwise/BatchNorm set freq for next task to 0, 0, 0
+task: Conv2d_12_depthwise/depthwise+Conv2d_12_depthwise/BatchNorm set freq for next task to -1, -1, -1
+task: Conv2d_12_pointwise/Conv2D+Conv2d_12_pointwise/BatchNorm set freq for next task to 0, 0, 0
+task: Conv2d_13_depthwise/depthwise+Conv2d_13_depthwise/BatchNorm set freq for next task to -1, -1, -1
+task: Conv2d_13_pointwise/Conv2D+Conv2d_13_pointwise/BatchNorm set freq for next task to -1, -1, -1
+task: Logits/AvgPool_1a set freq for next task to -1, -1, -1
+task: Logits/Conv2d_1c_1x1 set freq for next task to -1, -1, -1
+task: Reshape set freq for next task to -1, -1, -1
+task: Softmax set freq for next task to 0, 0, 0
+
+
+WarmUp: First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gold_fish.ppm
+Subgraph0 Ready to trigger Start Running
+Subgraph1 Ready to trigger Start Running
+Subgraph2 Ready to trigger Start Running
+Subgraph3 Ready to trigger Start Running
+Subgraph4 Ready to trigger Start Running
+Subgraph5 Ready to trigger Start Running
+Subgraph6 Ready to trigger Start Running
+Subgraph7 Ready to trigger Start Running
+Subgraph8 Ready to trigger Start Running
+Subgraph9 Ready to trigger Start Running
+Subgraph10 Ready to trigger Start Running
+Subgraph11 Ready to trigger Start Running
+Subgraph12 Ready to trigger Start Running
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 130], n02007558 flamingo
+0.0000 - [id = 7], n01514668 cock
+0.0000 - [id = 8], n01514859 hen
+0.0000 - [id = 46], n01693334 green lizard, Lacerta viridis
+Subgraph13 Ready to trigger Start Running
+
+
+
+
+
+
+
+================================================
+Start Running All Subgraphs ...
+====================================================
+
+
+
+
+
+First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gold_fish.ppm
+
+
+First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gondola.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 130], n02007558 flamingo
+0.0000 - [id = 7], n01514668 cock
+0.0000 - [id = 8], n01514859 hen
+0.0000 - [id = 46], n01693334 green lizard, Lacerta viridis
+
+
+First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/space_shuttle_224.jpg
+---------- Top 5 predictions ----------
+
+0.9999 - [id = 576], n03447447 gondola
+0.0000 - [id = 780], n04147183 schooner
+0.0000 - [id = 914], n04612504 yawl
+0.0000 - [id = 536], n03216828 dock, dockage, docking facility
+0.0000 - [id = 449], n02859443 boathouse
+
+
+First graph inferencing image: 3:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/school_bus.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 812], n04266014 space shuttle
+0.0000 - [id = 833], n04347754 submarine, pigboat, sub, U-boat
+0.0000 - [id = 404], n02690373 airliner
+0.0000 - [id = 484], n02981792 catamaran
+0.0000 - [id = 657], n03773504 missile
+
+
+First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/go_kart.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 779], n04146614 school bus
+0.0000 - [id = 705], n03895866 passenger car, coach, carriage
+0.0000 - [id = 874], n04487081 trolleybus, trolley coach, trackless trolley
+0.0000 - [id = 864], n04461696 tow truck, tow car, wrecker
+0.0000 - [id = 555], n03345487 fire engine, fire truck
+start of graph: 0 for frame: 5
+
+
+First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gold_fish.ppm
+---------- Top 5 predictions ----------
+
+0.9916 - [id = 573], n03444034 go-kart
+0.0083 - [id = 518], n03127747 crash helmet
+0.0000 - [id = 560], n03379051 football helmet
+0.0000 - [id = 615], n03623198 knee pad
+0.0000 - [id = 621], n03649909 lawn mower, mower
+
+
+First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gondola.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 130], n02007558 flamingo
+0.0000 - [id = 7], n01514668 cock
+0.0000 - [id = 8], n01514859 hen
+0.0000 - [id = 46], n01693334 green lizard, Lacerta viridis
+
+
+First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/space_shuttle_224.jpg
+---------- Top 5 predictions ----------
+
+0.9999 - [id = 576], n03447447 gondola
+0.0000 - [id = 780], n04147183 schooner
+0.0000 - [id = 914], n04612504 yawl
+0.0000 - [id = 536], n03216828 dock, dockage, docking facility
+0.0000 - [id = 449], n02859443 boathouse
+
+
+First graph inferencing image: 3:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/school_bus.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 812], n04266014 space shuttle
+0.0000 - [id = 833], n04347754 submarine, pigboat, sub, U-boat
+0.0000 - [id = 404], n02690373 airliner
+0.0000 - [id = 484], n02981792 catamaran
+0.0000 - [id = 657], n03773504 missile
+
+
+First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/go_kart.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 779], n04146614 school bus
+0.0000 - [id = 705], n03895866 passenger car, coach, carriage
+0.0000 - [id = 874], n04487081 trolleybus, trolley coach, trackless trolley
+0.0000 - [id = 864], n04461696 tow truck, tow car, wrecker
+0.0000 - [id = 555], n03345487 fire engine, fire truck
+---------- Top 5 predictions ----------
+
+0.9916 - [id = 573], n03444034 go-kart
+0.0083 - [id = 518], n03127747 crash helmet
+0.0000 - [id = 560], n03379051 football helmet
+0.0000 - [id = 615], n03623198 knee pad
+0.0000 - [id = 621], n03649909 lawn mower, mower
+Finishing power measurement with first subgraph13
+0	Layer Name: Conv2d_0+Conv2d_0/BatchNorm 	 Layer time: 9.4027 	 number of inputs: 7 	 input shape: 3x224x224 	 output shape: 32x112x112
+Layer Number: 0 	 time: 9.4027
+----------------------------
+
+ Sum of Layers time: 9.4027
+
+ input time of layer 0 : 511.7542
+
+ transfer_time of layer 0 : 0.0000
+
+ output time of layer 0 : 0.0328
+
+ this part task time: 9.8449
+0	Layer Name: Conv2d_1_depthwise/depthwise+Conv2d_1_depthwise/BatchNorm 	 Layer time: 1.2021 	 number of inputs: 7 	 input shape: 32x112x112 	 output shape: 32x112x112
+1	Layer Name: Conv2d_1_pointwise/Conv2D+Conv2d_1_pointwise/BatchNorm 	 Layer time: 25.0779 	 number of inputs: 7 	 input shape: 32x112x112 	 output shape: 64x112x112
+Layer Number: 1 	 time: 26.2800
+----------------------------
+
+ Sum of Layers time: 26.2800
+
+ input time of layer 1 : 2.0235
+
+ transfer_time of layer 1 : 2.0563
+
+ output time of layer 1 : 6.0682
+
+ this part task time: 26.8006
+0	Layer Name: Conv2d_2_depthwise/depthwise+Conv2d_2_depthwise/BatchNorm 	 Layer time: 9.1741 	 number of inputs: 7 	 input shape: 64x112x112 	 output shape: 64x56x56
+1	Layer Name: Conv2d_2_pointwise/Conv2D+Conv2d_2_pointwise/BatchNorm 	 Layer time: 17.7929 	 number of inputs: 7 	 input shape: 64x56x56 	 output shape: 128x56x56
+Layer Number: 2 	 time: 26.9670
+----------------------------
+
+ Sum of Layers time: 26.9670
+
+ input time of layer 2 : 0.0612
+
+ transfer_time of layer 2 : 5.0635
+
+ output time of layer 2 : 0.2222
+
+ this part task time: 27.4731
+0	Layer Name: Conv2d_3_depthwise/depthwise+Conv2d_3_depthwise/BatchNorm 	 Layer time: 0.2892 	 number of inputs: 7 	 input shape: 128x56x56 	 output shape: 128x56x56
+1	Layer Name: Conv2d_3_pointwise/Conv2D+Conv2d_3_pointwise/BatchNorm 	 Layer time: 33.5127 	 number of inputs: 7 	 input shape: 128x56x56 	 output shape: 128x56x56
+Layer Number: 3 	 time: 33.8019
+----------------------------
+
+ Sum of Layers time: 33.8019
+
+ input time of layer 3 : 1.3328
+
+ transfer_time of layer 3 : 1.5015
+
+ output time of layer 3 : 4.3486
+
+ this part task time: 34.2778
+
+
+Cost0:442.241
+input0_time:511.754
+task0_time:9.84489
+output0_time:0.0328415
+total0_time:521.632
+***************************************
+
+
+
+Cost1:445.206
+input1_time:2.02347
+task1_time:26.8006
+output1_time:6.06818
+total1_time:34.8922
+***************************************
+
+
+
+Cost2:448.372
+input2_time:0.06125
+task2_time:27.4731
+output2_time:0.22225
+total2_time:27.7566
+***************************************
+
+
+
+Cost3:452.831
+input3_time:1.33283
+task3_time:34.2778
+output3_time:4.34863
+total3_time:39.9592
+***************************************
+
+0	Layer Name: Conv2d_4_depthwise/depthwise+Conv2d_4_depthwise/BatchNorm 	 Layer time: 5.7058 	 number of inputs: 7 	 input shape: 128x56x56 	 output shape: 128x28x28
+1	Layer Name: Conv2d_4_pointwise/Conv2D+Conv2d_4_pointwise/BatchNorm 	 Layer time: 14.8675 	 number of inputs: 7 	 input shape: 128x28x28 	 output shape: 256x28x28
+Layer Number: 4 	 time: 20.5732
+----------------------------
+
+ Sum of Layers time: 20.5732
+
+ input time of layer 4 : 0.0147
+
+ transfer_time of layer 4 : 2.7577
+
+ output time of layer 4 : 0.5797
+
+ this part task time: 21.0833
+
+
+Cost4:454.383
+input4_time:0.0146708
+task4_time:21.0833
+output4_time:0.579688
+total4_time:21.6777
+***************************************
+
+0	Layer Name: Conv2d_5_depthwise/depthwise+Conv2d_5_depthwise/BatchNorm 	 Layer time: 0.2755 	 number of inputs: 7 	 input shape: 256x28x28 	 output shape: 256x28x28
+1	Layer Name: Conv2d_5_pointwise/Conv2D+Conv2d_5_pointwise/BatchNorm 	 Layer time: 25.2571 	 number of inputs: 7 	 input shape: 256x28x28 	 output shape: 256x28x28
+Layer Number: 5 	 time: 25.5326
+----------------------------
+
+ Sum of Layers time: 25.5326
+
+ input time of layer 5 : 0.7089
+
+ transfer_time of layer 5 : 0.9154
+
+ output time of layer 5 : 1.6377
+
+ this part task time: 25.9673
+0	Layer Name: Conv2d_6_depthwise/depthwise+Conv2d_6_depthwise/BatchNorm 	 Layer time: 4.0592 	 number of inputs: 7 	 input shape: 256x28x28 	 output shape: 256x14x14
+
+
+Cost5:457.024
+input5_time:0.708925
+task5_time:25.9673
+output5_time:1.63765
+total5_time:28.3139
+***************************************
+
+1	Layer Name: Conv2d_6_pointwise/Conv2D+Conv2d_6_pointwise/BatchNorm 	 Layer time: 11.9161 	 number of inputs: 7 	 input shape: 256x14x14 	 output shape: 512x14x14
+Layer Number: 6 	 time: 15.9753
+----------------------------
+
+ Sum of Layers time: 15.9753
+
+ input time of layer 6 : 0.0720
+
+ transfer_time of layer 6 : 1.6907
+
+ output time of layer 6 : 0.3543
+
+ this part task time: 16.4979
+0	Layer Name: Conv2d_7_depthwise/depthwise+Conv2d_7_depthwise/BatchNorm 	 Layer time: 0.2733 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x14x14
+1	Layer Name: Conv2d_7_pointwise/Conv2D+Conv2d_7_pointwise/BatchNorm 	 Layer time: 33.1455 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x14x14
+Layer Number: 7 	 time: 33.4188
+
+
+Cost6:458.286
+input6_time:0.0719834
+task6_time:16.4979
+output6_time:0.354288
+total6_time:16.9241
+***************************************
+
+----------------------------
+
+ Sum of Layers time: 33.4188
+
+ input time of layer 7 : 0.4301
+
+ transfer_time of layer 7 : 0.5580
+
+ output time of layer 7 : 1.0521
+
+ this part task time: 33.7981
+
+
+Cost7:461.902
+input7_time:0.430063
+task7_time:33.7981
+output7_time:1.05207
+total7_time:35.2803
+***************************************
+
+0	Layer Name: Conv2d_8_depthwise/depthwise+Conv2d_8_depthwise/BatchNorm 	 Layer time: 4.0464 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x14x14
+1	Layer Name: Conv2d_8_pointwise/Conv2D+Conv2d_8_pointwise/BatchNorm 	 Layer time: 25.6194 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x14x14
+Layer Number: 8 	 time: 29.6658
+----------------------------
+
+ Sum of Layers time: 29.6658
+
+ input time of layer 8 : 0.0448
+
+ transfer_time of layer 8 : 1.0815
+
+ output time of layer 8 : 0.5508
+
+ this part task time: 30.1514
+
+
+Cost8:465.057
+input8_time:0.0448
+task8_time:30.1514
+output8_time:0.550754
+total8_time:30.7469
+***************************************
+
+0	Layer Name: Conv2d_9_depthwise/depthwise+Conv2d_9_depthwise/BatchNorm 	 Layer time: 0.2675 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x14x14
+1	Layer Name: Conv2d_9_pointwise/Conv2D+Conv2d_9_pointwise/BatchNorm 	 Layer time: 33.2986 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x14x14
+Layer Number: 9 	 time: 33.5661
+----------------------------
+
+ Sum of Layers time: 33.5661
+
+ input time of layer 9 : 0.3859
+
+ transfer_time of layer 9 : 0.5842
+
+ output time of layer 9 : 1.1035
+
+ this part task time: 33.9426
+
+
+Cost9:468.699
+input9_time:0.385875
+task9_time:33.9426
+output9_time:1.10349
+total9_time:35.432
+***************************************
+
+0	Layer Name: Conv2d_10_depthwise/depthwise+Conv2d_10_depthwise/BatchNorm 	 Layer time: 4.6403 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x14x14
+1	Layer Name: Conv2d_10_pointwise/Conv2D+Conv2d_10_pointwise/BatchNorm 	 Layer time: 25.0468 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x14x14
+Layer Number: 10 	 time: 29.6871
+----------------------------
+
+ Sum of Layers time: 29.6871
+
+ input time of layer 10 : 0.0426
+
+ transfer_time of layer 10 : 1.1298
+
+ output time of layer 10 : 0.3242
+
+ this part task time: 30.1788
+
+
+Cost10:472.587
+input10_time:0.0425833
+task10_time:30.1788
+output10_time:0.324246
+total10_time:30.5457
+***************************************
+
+0	Layer Name: Conv2d_11_depthwise/depthwise+Conv2d_11_depthwise/BatchNorm 	 Layer time: 0.2679 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x14x14
+1	Layer Name: Conv2d_11_pointwise/Conv2D+Conv2d_11_pointwise/BatchNorm 	 Layer time: 32.6746 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x14x14
+Layer Number: 11 	 time: 32.9426
+----------------------------
+
+ Sum of Layers time: 32.9426
+
+ input time of layer 11 : 0.4427
+
+ transfer_time of layer 11 : 0.5700
+
+ output time of layer 11 : 1.0493
+
+ this part task time: 33.3152
+
+
+Cost11:476.17
+input11_time:0.442692
+task11_time:33.3152
+output11_time:1.0493
+total11_time:34.8072
+***************************************
+
+0	Layer Name: Conv2d_12_depthwise/depthwise+Conv2d_12_depthwise/BatchNorm 	 Layer time: 2.5085 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x7x7
+1	Layer Name: Conv2d_12_pointwise/Conv2D+Conv2d_12_pointwise/BatchNorm 	 Layer time: 22.5835 	 number of inputs: 7 	 input shape: 512x7x7 	 output shape: 1024x7x7
+Layer Number: 12 	 time: 25.0919
+----------------------------
+
+ Sum of Layers time: 25.0919
+
+ input time of layer 12 : 0.0748
+
+ transfer_time of layer 12 : 1.1207
+
+ output time of layer 12 : 0.0297
+
+ this part task time: 25.5579
+
+
+Cost12:478.871
+input12_time:0.0748415
+task12_time:25.5579
+output12_time:0.0296624
+total12_time:25.6624
+***************************************
+
+0	Layer Name: Conv2d_13_depthwise/depthwise+Conv2d_13_depthwise/BatchNorm 	 Layer time: 0.2789 	 number of inputs: 7 	 input shape: 1024x7x7 	 output shape: 1024x7x7
+1	Layer Name: Conv2d_13_pointwise/Conv2D+Conv2d_13_pointwise/BatchNorm 	 Layer time: 0.2537 	 number of inputs: 7 	 input shape: 1024x7x7 	 output shape: 1024x7x7
+2	Layer Name: Logits/AvgPool_1a 	 Layer time: 0.1172 	 number of inputs: 1 	 input shape: 1024x7x7 	 output shape: 1024
+3	Layer Name: Logits/Conv2d_1c_1x1 	 Layer time: 0.1524 	 number of inputs: 3 	 input shape: 1024 	 output shape: 1000
+4	Layer Name: Reshape 	 Layer time: 0.1213 	 number of inputs: 1 	 input shape: 1000 	 output shape: 1001
+5	Layer Name: Softmax 	 Layer time: 52.0865 	 number of inputs: 1 	 input shape: 1001 	 output shape: 1001
+Layer Number: 13 	 time: 53.0100
+----------------------------
+
+ Sum of Layers time: 53.0100
+
+ input time of layer 13 : 0.3840
+
+ transfer_time of layer 13 : 0.4136
+
+ output time of layer 13 : 1.4743
+
+ this part task time: 53.4072
+
+
+Cost13:485.005
+input13_time:0.383979
+task13_time:53.4072
+output13_time:1.47432
+total13_time:55.2655
+***************************************
+
+Frame Latency: 879.297
+Profiling these DVFS settings finised
+
+Test passed

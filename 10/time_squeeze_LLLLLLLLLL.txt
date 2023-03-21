@@ -1,0 +1,1600 @@
+/data/data/com.termux/files/home/ARMCL-RockPi//test_graph//graph_squeezenet_n_pipe_npu_lw  --target=CL --data=/data/data/com.termux/files/home/ARMCL-RockPi/assets/./squeezenet/ --image=/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/ --labels=/data/data/com.termux/files/home/ARMCL-RockPi/assets/./labels.txt --n=10 --save=0 --annotate=0 --partition_point=100 --partition_point2=100 --order=LLLLLLLLLL --layer_time=1 --threads=2  --threads2=4 --GPU_host=B --NPU_host=B 
+pandoon
+pandoon
+pandoon
+
+/data/data/com.termux/files/home/ARMCL-RockPi//test_graph//graph_squeezenet_n_pipe_npu_lw
+
+Pandoon opened at 3
+5 Input images are read from /data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/
+NPU host: 4
+Little Cores host: 3
+Big Cores host: 5
+GPU host: 4
+Number of Layers: 10
+Threads : 2
+Small Cores Threads : 4
+Target : CL
+Data type : F32
+Data layout : NHWC
+Tuner enabled? : false
+Cache enabled? : true
+Tuner mode : Normal
+Tuner file : 
+MLGO file : 
+Fast math enabled? : false
+Data path : /data/data/com.termux/files/home/ARMCL-RockPi/assets/./squeezenet/
+Image file : /data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/space_shuttle_227.jpg
+Labels file : /data/data/com.termux/files/home/ARMCL-RockPi/assets/./labels.txt
+Partition point is : 100
+Second partition point is : 100
+Order is : LLLLLLLLLL
+freqs of layers : 
+GPU host is: B
+NPU host is: B
+Number of totla cores is : 6
+Number of little cores is : 4
+Run network for 10 times.
+Layer timing: 1
+
+start creating graph
+creating image accessor
+std::string task_names[] = { "conv1", "pool1", "fire2/squeeze1x1", "fire2/expand1x1", "fire2/expand3x3", "fire2/concat", "fire3/squeeze1x1", "fire3/expand1x1", "fire3/expand3x3", "fire3/concat", "fire4/squeeze1x1", "fire4/expand1x1", "fire4/expand3x3", "fire4/concat", "pool4", "fire5/squeeze1x1", "fire5/expand1x1", "fire5/expand3x3", "fire5/concat", "fire6/squeeze1x1", "fire6/expand1x1", "fire6/expand3x3", "fire6/concat", "fire7/squeeze1x1", "fire7/expand1x1", "fire7/expand3x3", "fire7/concat", "fire8/squeeze1x1", "fire8/expand1x1", "fire8/expand3x3", "fire8/concat", "pool8", "fire9/squeeze1x1", "fire9/expand1x1", "fire9/expand3x3", "fire9/concat", "conv10", "pool10", "flatten", "prob" };
+number of tasks: 40
+std::set<std::string> end_task_names = { "pool1", "fire2/concat", "fire3/concat", "pool4", "fire5/concat", "fire6/concat", "fire7/concat", "pool8", "fire9/concat", "prob" };
+number of end tasks: 10
+std::set<std::string> start_task_names = { "conv1", "fire2/squeeze1x1", "fire3/squeeze1x1", "fire4/squeeze1x1", "fire5/squeeze1x1", "fire6/squeeze1x1", "fire7/squeeze1x1", "fire8/squeeze1x1", "fire9/squeeze1x1", "conv10" };
+number of start tasks: 10
+after pass graph 0
+Total layers:10
+
+0 Running Graph with 0-0-0-0-0-0-0-0-0-0 LW DVFS
+layer:pool1	Little:0	big:0	GPU:0
+layer:fire2/concat	Little:0	big:0	GPU:0
+layer:fire3/concat	Little:0	big:0	GPU:0
+layer:pool4	Little:0	big:0	GPU:0
+layer:fire5/concat	Little:0	big:0	GPU:0
+layer:fire6/concat	Little:0	big:0	GPU:0
+layer:fire7/concat	Little:0	big:0	GPU:0
+layer:pool8	Little:0	big:0	GPU:0
+layer:fire9/concat	Little:0	big:0	GPU:0
+layer:prob	Little:0	big:0	GPU:0
+task: conv1 set freq for next task to -1, -1, -1
+task: pool1 set freq for next task to 0, 0, 0
+task: fire2/squeeze1x1 set freq for next task to -1, -1, -1
+task: fire2/expand1x1 set freq for next task to -1, -1, -1
+task: fire2/expand3x3 set freq for next task to -1, -1, -1
+task: fire2/concat set freq for next task to 0, 0, 0
+task: fire3/squeeze1x1 set freq for next task to -1, -1, -1
+task: fire3/expand1x1 set freq for next task to -1, -1, -1
+task: fire3/expand3x3 set freq for next task to -1, -1, -1
+task: fire3/concat set freq for next task to 0, 0, 0
+task: fire4/squeeze1x1 set freq for next task to -1, -1, -1
+task: fire4/expand1x1 set freq for next task to -1, -1, -1
+task: fire4/expand3x3 set freq for next task to -1, -1, -1
+task: fire4/concat set freq for next task to -1, -1, -1
+task: pool4 set freq for next task to 0, 0, 0
+task: fire5/squeeze1x1 set freq for next task to -1, -1, -1
+task: fire5/expand1x1 set freq for next task to -1, -1, -1
+task: fire5/expand3x3 set freq for next task to -1, -1, -1
+task: fire5/concat set freq for next task to 0, 0, 0
+task: fire6/squeeze1x1 set freq for next task to -1, -1, -1
+task: fire6/expand1x1 set freq for next task to -1, -1, -1
+task: fire6/expand3x3 set freq for next task to -1, -1, -1
+task: fire6/concat set freq for next task to 0, 0, 0
+task: fire7/squeeze1x1 set freq for next task to -1, -1, -1
+task: fire7/expand1x1 set freq for next task to -1, -1, -1
+task: fire7/expand3x3 set freq for next task to -1, -1, -1
+task: fire7/concat set freq for next task to 0, 0, 0
+task: fire8/squeeze1x1 set freq for next task to -1, -1, -1
+task: fire8/expand1x1 set freq for next task to -1, -1, -1
+task: fire8/expand3x3 set freq for next task to -1, -1, -1
+task: fire8/concat set freq for next task to -1, -1, -1
+task: pool8 set freq for next task to 0, 0, 0
+task: fire9/squeeze1x1 set freq for next task to -1, -1, -1
+task: fire9/expand1x1 set freq for next task to -1, -1, -1
+task: fire9/expand3x3 set freq for next task to -1, -1, -1
+task: fire9/concat set freq for next task to 0, 0, 0
+task: conv10 set freq for next task to -1, -1, -1
+task: pool10 set freq for next task to -1, -1, -1
+task: flatten set freq for next task to -1, -1, -1
+task: prob set freq for next task to 0, 0, 0
+
+
+WarmUp: First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/space_shuttle_227.jpg
+---------- Top 5 predictions ----------
+
+0.9472 - [id = 812], n04266014 space shuttle
+0.0188 - [id = 833], n04347754 submarine, pigboat, sub, U-boat
+0.0139 - [id = 814], n04273569 speedboat
+0.0037 - [id = 867], n04467665 trailer truck, tractor trailer, trucking rig, rig, articulated lorry, semi
+0.0032 - [id = 871], n04483307 trimaran
+Subgraph0 Ready to trigger Start Running
+
+
+
+
+
+
+
+================================================
+Start Running All Subgraphs ...
+====================================================
+
+
+
+
+
+First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/space_shuttle_227.jpg
+---------- Top 5 predictions ----------
+
+0.9472 - [id = 812], n04266014 space shuttle
+0.0188 - [id = 833], n04347754 submarine, pigboat, sub, U-boat
+0.0139 - [id = 814], n04273569 speedboat
+0.0037 - [id = 867], n04467665 trailer truck, tractor trailer, trucking rig, rig, articulated lorry, semi
+0.0032 - [id = 871], n04483307 trimaran
+
+
+First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/gold_fish.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 27], n01631663 eft
+0.0000 - [id = 310], n02219486 ant, emmet, pismire
+0.0000 - [id = 29], n01632777 axolotl, mud puppy, Ambystoma mexicanum
+0.0000 - [id = 26], n01630670 common newt, Triturus vulgaris
+
+
+First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/gondola.ppm
+---------- Top 5 predictions ----------
+
+0.9994 - [id = 576], n03447447 gondola
+0.0001 - [id = 765], n04099969 rocking chair, rocker
+0.0001 - [id = 536], n03216828 dock, dockage, docking facility
+0.0001 - [id = 532], n03201208 dining table, board
+0.0000 - [id = 540], n03240683 drilling platform, offshore rig
+
+
+First graph inferencing image: 3:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/school_bus.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 779], n04146614 school bus
+0.0000 - [id = 705], n03895866 passenger car, coach, carriage
+0.0000 - [id = 829], n04335435 streetcar, tram, tramcar, trolley, trolley car
+0.0000 - [id = 675], n03796401 moving van
+0.0000 - [id = 654], n03769881 minibus
+
+
+First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/go_kart.ppm
+---------- Top 5 predictions ----------
+
+0.9995 - [id = 573], n03444034 go-kart
+0.0001 - [id = 518], n03127747 crash helmet
+0.0001 - [id = 621], n03649909 lawn mower, mower
+0.0001 - [id = 665], n03785016 moped
+0.0000 - [id = 817], n04285008 sports car, sport car
+start of graph: 0 for frame: 5
+
+
+First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/space_shuttle_227.jpg
+---------- Top 5 predictions ----------
+
+0.9472 - [id = 812], n04266014 space shuttle
+0.0188 - [id = 833], n04347754 submarine, pigboat, sub, U-boat
+0.0139 - [id = 814], n04273569 speedboat
+0.0037 - [id = 867], n04467665 trailer truck, tractor trailer, trucking rig, rig, articulated lorry, semi
+0.0032 - [id = 871], n04483307 trimaran
+
+
+First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/gold_fish.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 27], n01631663 eft
+0.0000 - [id = 310], n02219486 ant, emmet, pismire
+0.0000 - [id = 29], n01632777 axolotl, mud puppy, Ambystoma mexicanum
+0.0000 - [id = 26], n01630670 common newt, Triturus vulgaris
+
+
+First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/gondola.ppm
+---------- Top 5 predictions ----------
+
+0.9994 - [id = 576], n03447447 gondola
+0.0001 - [id = 765], n04099969 rocking chair, rocker
+0.0001 - [id = 536], n03216828 dock, dockage, docking facility
+0.0001 - [id = 532], n03201208 dining table, board
+0.0000 - [id = 540], n03240683 drilling platform, offshore rig
+
+
+First graph inferencing image: 3:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/school_bus.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 779], n04146614 school bus
+0.0000 - [id = 705], n03895866 passenger car, coach, carriage
+0.0000 - [id = 829], n04335435 streetcar, tram, tramcar, trolley, trolley car
+0.0000 - [id = 675], n03796401 moving van
+0.0000 - [id = 654], n03769881 minibus
+
+
+First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/go_kart.ppm
+---------- Top 5 predictions ----------
+
+0.9995 - [id = 573], n03444034 go-kart
+0.0001 - [id = 518], n03127747 crash helmet
+0.0001 - [id = 621], n03649909 lawn mower, mower
+0.0001 - [id = 665], n03785016 moped
+0.0000 - [id = 817], n04285008 sports car, sport car
+Finishing power measurement with first subgraph0
+0	Layer Name: conv1 	 Layer time: 83.6611 	 number of inputs: 3 	 input shape: 3x227x227 	 output shape: 96x111x111
+1	Layer Name: pool1 	 Layer time: 7.8581 	 number of inputs: 1 	 input shape: 96x111x111 	 output shape: 96x55x55
+Layer Number: 0 	 time: 91.5192
+----------------------------
+2	Layer Name: fire2/squeeze1x1 	 Layer time: 3.7178 	 number of inputs: 3 	 input shape: 96x55x55 	 output shape: 16x55x55
+3	Layer Name: fire2/expand1x1 	 Layer time: 2.3999 	 number of inputs: 3 	 input shape: 16x55x55 	 output shape: 64x55x55
+4	Layer Name: fire2/expand3x3 	 Layer time: 15.7550 	 number of inputs: 3 	 input shape: 16x55x55 	 output shape: 64x55x55
+5	Layer Name: fire2/concat 	 Layer time: 2.7735 	 number of inputs: 2 	 input shape: 64x55x55 	 output shape: 128x55x55
+Layer Number: 1 	 time: 24.6463
+----------------------------
+6	Layer Name: fire3/squeeze1x1 	 Layer time: 4.8871 	 number of inputs: 3 	 input shape: 128x55x55 	 output shape: 16x55x55
+7	Layer Name: fire3/expand1x1 	 Layer time: 2.4313 	 number of inputs: 3 	 input shape: 16x55x55 	 output shape: 64x55x55
+8	Layer Name: fire3/expand3x3 	 Layer time: 15.6965 	 number of inputs: 3 	 input shape: 16x55x55 	 output shape: 64x55x55
+9	Layer Name: fire3/concat 	 Layer time: 2.6867 	 number of inputs: 2 	 input shape: 64x55x55 	 output shape: 128x55x55
+Layer Number: 2 	 time: 25.7017
+----------------------------
+10	Layer Name: fire4/squeeze1x1 	 Layer time: 8.2317 	 number of inputs: 3 	 input shape: 128x55x55 	 output shape: 32x55x55
+11	Layer Name: fire4/expand1x1 	 Layer time: 8.0115 	 number of inputs: 3 	 input shape: 32x55x55 	 output shape: 128x55x55
+12	Layer Name: fire4/expand3x3 	 Layer time: 35.8811 	 number of inputs: 3 	 input shape: 32x55x55 	 output shape: 128x55x55
+13	Layer Name: fire4/concat 	 Layer time: 3.6831 	 number of inputs: 2 	 input shape: 128x55x55 	 output shape: 256x55x55
+14	Layer Name: pool4 	 Layer time: 5.3395 	 number of inputs: 1 	 input shape: 256x55x55 	 output shape: 256x27x27
+Layer Number: 3 	 time: 61.1470
+----------------------------
+15	Layer Name: fire5/squeeze1x1 	 Layer time: 3.9748 	 number of inputs: 3 	 input shape: 256x27x27 	 output shape: 32x27x27
+16	Layer Name: fire5/expand1x1 	 Layer time: 2.3275 	 number of inputs: 3 	 input shape: 32x27x27 	 output shape: 128x27x27
+17	Layer Name: fire5/expand3x3 	 Layer time: 10.1499 	 number of inputs: 3 	 input shape: 32x27x27 	 output shape: 128x27x27
+18	Layer Name: fire5/concat 	 Layer time: 1.3915 	 number of inputs: 2 	 input shape: 128x27x27 	 output shape: 256x27x27
+Layer Number: 4 	 time: 17.8437
+----------------------------
+19	Layer Name: fire6/squeeze1x1 	 Layer time: 4.7539 	 number of inputs: 3 	 input shape: 256x27x27 	 output shape: 48x27x27
+20	Layer Name: fire6/expand1x1 	 Layer time: 3.9294 	 number of inputs: 3 	 input shape: 48x27x27 	 output shape: 192x27x27
+21	Layer Name: fire6/expand3x3 	 Layer time: 16.4345 	 number of inputs: 3 	 input shape: 48x27x27 	 output shape: 192x27x27
+22	Layer Name: fire6/concat 	 Layer time: 2.1219 	 number of inputs: 2 	 input shape: 192x27x27 	 output shape: 384x27x27
+Layer Number: 5 	 time: 27.2397
+----------------------------
+23	Layer Name: fire7/squeeze1x1 	 Layer time: 6.8242 	 number of inputs: 3 	 input shape: 384x27x27 	 output shape: 48x27x27
+24	Layer Name: fire7/expand1x1 	 Layer time: 3.9438 	 number of inputs: 3 	 input shape: 48x27x27 	 output shape: 192x27x27
+25	Layer Name: fire7/expand3x3 	 Layer time: 16.4301 	 number of inputs: 3 	 input shape: 48x27x27 	 output shape: 192x27x27
+26	Layer Name: fire7/concat 	 Layer time: 2.2005 	 number of inputs: 2 	 input shape: 192x27x27 	 output shape: 384x27x27
+Layer Number: 6 	 time: 29.3987
+----------------------------
+27	Layer Name: fire8/squeeze1x1 	 Layer time: 9.4429 	 number of inputs: 3 	 input shape: 384x27x27 	 output shape: 64x27x27
+28	Layer Name: fire8/expand1x1 	 Layer time: 6.3462 	 number of inputs: 3 	 input shape: 64x27x27 	 output shape: 256x27x27
+29	Layer Name: fire8/expand3x3 	 Layer time: 25.7578 	 number of inputs: 3 	 input shape: 64x27x27 	 output shape: 256x27x27
+30	Layer Name: fire8/concat 	 Layer time: 2.5978 	 number of inputs: 2 	 input shape: 256x27x27 	 output shape: 512x27x27
+31	Layer Name: pool8 	 Layer time: 2.5381 	 number of inputs: 1 	 input shape: 512x27x27 	 output shape: 512x13x13
+Layer Number: 7 	 time: 46.6828
+----------------------------
+32	Layer Name: fire9/squeeze1x1 	 Layer time: 3.2647 	 number of inputs: 3 	 input shape: 512x13x13 	 output shape: 64x13x13
+33	Layer Name: fire9/expand1x1 	 Layer time: 1.5755 	 number of inputs: 3 	 input shape: 64x13x13 	 output shape: 256x13x13
+34	Layer Name: fire9/expand3x3 	 Layer time: 9.9849 	 number of inputs: 3 	 input shape: 64x13x13 	 output shape: 256x13x13
+35	Layer Name: fire9/concat 	 Layer time: 1.2056 	 number of inputs: 2 	 input shape: 256x13x13 	 output shape: 512x13x13
+Layer Number: 8 	 time: 16.0307
+----------------------------
+36	Layer Name: conv10 	 Layer time: 35.7669 	 number of inputs: 3 	 input shape: 512x13x13 	 output shape: 1000x13x13
+37	Layer Name: pool10 	 Layer time: 2.8846 	 number of inputs: 1 	 input shape: 1000x13x13 	 output shape: 1000
+38	Layer Name: flatten 	 Layer time: 0.4306 	 number of inputs: 1 	 input shape: 1000 	 output shape: 1000
+39	Layer Name: prob 	 Layer time: 0.1945 	 number of inputs: 1 	 input shape: 1000 	 output shape: 1000
+Layer Number: 9 	 time: 39.2765
+----------------------------
+
+ Sum of Layers time: 379.4861
+
+ input time of layer 0 : 593.7565
+
+ transfer_time of layer 0 : 0.0000
+
+ output time of layer 9 : 0.8533
+
+ this part task time: 459.3076
+
+
+Cost0:578.903
+input0_time:593.756
+task0_time:459.308
+output0_time:0.853271
+total0_time:1053.92
+***************************************
+
+Frame Latency: 565.36
+layer:pool1	Little:1	big:0	GPU:0
+layer:fire2/concat	Little:1	big:0	GPU:0
+layer:fire3/concat	Little:1	big:0	GPU:0
+layer:pool4	Little:1	big:0	GPU:0
+layer:fire5/concat	Little:1	big:0	GPU:0
+layer:fire6/concat	Little:1	big:0	GPU:0
+layer:fire7/concat	Little:1	big:0	GPU:0
+layer:pool8	Little:1	big:0	GPU:0
+layer:fire9/concat	Little:1	big:0	GPU:0
+layer:prob	Little:1	big:0	GPU:0
+Profiling these DVFS settings finised
+1 Running Graph with 1-1-1-1-1-1-1-1-1-1 LW DVFS
+task: conv1 set freq for next task to -1, -1, -1
+task: pool1 set freq for next task to 1, 0, 0
+task: fire2/squeeze1x1 set freq for next task to -1, -1, -1
+task: fire2/expand1x1 set freq for next task to -1, -1, -1
+task: fire2/expand3x3 set freq for next task to -1, -1, -1
+task: fire2/concat set freq for next task to 1, 0, 0
+task: fire3/squeeze1x1 set freq for next task to -1, -1, -1
+task: fire3/expand1x1 set freq for next task to -1, -1, -1
+task: fire3/expand3x3 set freq for next task to -1, -1, -1
+task: fire3/concat set freq for next task to 1, 0, 0
+task: fire4/squeeze1x1 set freq for next task to -1, -1, -1
+task: fire4/expand1x1 set freq for next task to -1, -1, -1
+task: fire4/expand3x3 set freq for next task to -1, -1, -1
+task: fire4/concat set freq for next task to -1, -1, -1
+task: pool4 set freq for next task to 1, 0, 0
+task: fire5/squeeze1x1 set freq for next task to -1, -1, -1
+task: fire5/expand1x1 set freq for next task to -1, -1, -1
+task: fire5/expand3x3 set freq for next task to -1, -1, -1
+task: fire5/concat set freq for next task to 1, 0, 0
+task: fire6/squeeze1x1 set freq for next task to -1, -1, -1
+task: fire6/expand1x1 set freq for next task to -1, -1, -1
+task: fire6/expand3x3 set freq for next task to -1, -1, -1
+task: fire6/concat set freq for next task to 1, 0, 0
+task: fire7/squeeze1x1 set freq for next task to -1, -1, -1
+task: fire7/expand1x1 set freq for next task to -1, -1, -1
+task: fire7/expand3x3 set freq for next task to -1, -1, -1
+task: fire7/concat set freq for next task to 1, 0, 0
+task: fire8/squeeze1x1 set freq for next task to -1, -1, -1
+task: fire8/expand1x1 set freq for next task to -1, -1, -1
+task: fire8/expand3x3 set freq for next task to -1, -1, -1
+task: fire8/concat set freq for next task to -1, -1, -1
+task: pool8 set freq for next task to 1, 0, 0
+task: fire9/squeeze1x1 set freq for next task to -1, -1, -1
+task: fire9/expand1x1 set freq for next task to -1, -1, -1
+task: fire9/expand3x3 set freq for next task to -1, -1, -1
+task: fire9/concat set freq for next task to 1, 0, 0
+task: conv10 set freq for next task to -1, -1, -1
+task: pool10 set freq for next task to -1, -1, -1
+task: flatten set freq for next task to -1, -1, -1
+task: prob set freq for next task to 1, 0, 0
+
+
+WarmUp: First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/space_shuttle_227.jpg
+---------- Top 5 predictions ----------
+
+0.9472 - [id = 812], n04266014 space shuttle
+0.0188 - [id = 833], n04347754 submarine, pigboat, sub, U-boat
+0.0139 - [id = 814], n04273569 speedboat
+0.0037 - [id = 867], n04467665 trailer truck, tractor trailer, trucking rig, rig, articulated lorry, semi
+0.0032 - [id = 871], n04483307 trimaran
+Subgraph0 Ready to trigger Start Running
+
+
+First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/space_shuttle_227.jpg
+---------- Top 5 predictions ----------
+
+0.9472 - [id = 812], n04266014 space shuttle
+0.0188 - [id = 833], n04347754 submarine, pigboat, sub, U-boat
+0.0139 - [id = 814], n04273569 speedboat
+0.0037 - [id = 867], n04467665 trailer truck, tractor trailer, trucking rig, rig, articulated lorry, semi
+0.0032 - [id = 871], n04483307 trimaran
+
+
+First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/gold_fish.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 27], n01631663 eft
+0.0000 - [id = 310], n02219486 ant, emmet, pismire
+0.0000 - [id = 29], n01632777 axolotl, mud puppy, Ambystoma mexicanum
+0.0000 - [id = 26], n01630670 common newt, Triturus vulgaris
+
+
+First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/gondola.ppm
+---------- Top 5 predictions ----------
+
+0.9994 - [id = 576], n03447447 gondola
+0.0001 - [id = 765], n04099969 rocking chair, rocker
+0.0001 - [id = 536], n03216828 dock, dockage, docking facility
+0.0001 - [id = 532], n03201208 dining table, board
+0.0000 - [id = 540], n03240683 drilling platform, offshore rig
+
+
+First graph inferencing image: 3:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/school_bus.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 779], n04146614 school bus
+0.0000 - [id = 705], n03895866 passenger car, coach, carriage
+0.0000 - [id = 829], n04335435 streetcar, tram, tramcar, trolley, trolley car
+0.0000 - [id = 675], n03796401 moving van
+0.0000 - [id = 654], n03769881 minibus
+
+
+First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/go_kart.ppm
+---------- Top 5 predictions ----------
+
+0.9995 - [id = 573], n03444034 go-kart
+0.0001 - [id = 518], n03127747 crash helmet
+0.0001 - [id = 621], n03649909 lawn mower, mower
+0.0001 - [id = 665], n03785016 moped
+0.0000 - [id = 817], n04285008 sports car, sport car
+start of graph: 0 for frame: 5
+
+
+First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/space_shuttle_227.jpg
+---------- Top 5 predictions ----------
+
+0.9472 - [id = 812], n04266014 space shuttle
+0.0188 - [id = 833], n04347754 submarine, pigboat, sub, U-boat
+0.0139 - [id = 814], n04273569 speedboat
+0.0037 - [id = 867], n04467665 trailer truck, tractor trailer, trucking rig, rig, articulated lorry, semi
+0.0032 - [id = 871], n04483307 trimaran
+
+
+First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/gold_fish.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 27], n01631663 eft
+0.0000 - [id = 310], n02219486 ant, emmet, pismire
+0.0000 - [id = 29], n01632777 axolotl, mud puppy, Ambystoma mexicanum
+0.0000 - [id = 26], n01630670 common newt, Triturus vulgaris
+
+
+First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/gondola.ppm
+---------- Top 5 predictions ----------
+
+0.9994 - [id = 576], n03447447 gondola
+0.0001 - [id = 765], n04099969 rocking chair, rocker
+0.0001 - [id = 536], n03216828 dock, dockage, docking facility
+0.0001 - [id = 532], n03201208 dining table, board
+0.0000 - [id = 540], n03240683 drilling platform, offshore rig
+
+
+First graph inferencing image: 3:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/school_bus.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 779], n04146614 school bus
+0.0000 - [id = 705], n03895866 passenger car, coach, carriage
+0.0000 - [id = 829], n04335435 streetcar, tram, tramcar, trolley, trolley car
+0.0000 - [id = 675], n03796401 moving van
+0.0000 - [id = 654], n03769881 minibus
+
+
+First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/go_kart.ppm
+
+
+
+
+
+
+
+================================================
+Start Running All Subgraphs ...
+====================================================
+
+
+
+---------- Top 5 predictions ----------
+
+0.9995 - [id = 573], n03444034 go-kart
+0.0001 - [id = 518], n03127747 crash helmet
+0.0001 - [id = 621], n03649909 lawn mower, mower
+0.0001 - [id = 665], n03785016 moped
+0.0000 - [id = 817], n04285008 sports car, sport car
+Finishing power measurement with first subgraph0
+0	Layer Name: conv1 	 Layer time: 69.3007 	 number of inputs: 3 	 input shape: 3x227x227 	 output shape: 96x111x111
+1	Layer Name: pool1 	 Layer time: 6.3876 	 number of inputs: 1 	 input shape: 96x111x111 	 output shape: 96x55x55
+Layer Number: 0 	 time: 75.6882
+----------------------------
+2	Layer Name: fire2/squeeze1x1 	 Layer time: 2.6250 	 number of inputs: 3 	 input shape: 96x55x55 	 output shape: 16x55x55
+3	Layer Name: fire2/expand1x1 	 Layer time: 1.6766 	 number of inputs: 3 	 input shape: 16x55x55 	 output shape: 64x55x55
+4	Layer Name: fire2/expand3x3 	 Layer time: 11.8361 	 number of inputs: 3 	 input shape: 16x55x55 	 output shape: 64x55x55
+5	Layer Name: fire2/concat 	 Layer time: 2.3801 	 number of inputs: 2 	 input shape: 64x55x55 	 output shape: 128x55x55
+Layer Number: 1 	 time: 18.5178
+----------------------------
+6	Layer Name: fire3/squeeze1x1 	 Layer time: 3.4238 	 number of inputs: 3 	 input shape: 128x55x55 	 output shape: 16x55x55
+7	Layer Name: fire3/expand1x1 	 Layer time: 1.6859 	 number of inputs: 3 	 input shape: 16x55x55 	 output shape: 64x55x55
+8	Layer Name: fire3/expand3x3 	 Layer time: 11.8263 	 number of inputs: 3 	 input shape: 16x55x55 	 output shape: 64x55x55
+9	Layer Name: fire3/concat 	 Layer time: 2.5155 	 number of inputs: 2 	 input shape: 64x55x55 	 output shape: 128x55x55
+Layer Number: 2 	 time: 19.4515
+----------------------------
+10	Layer Name: fire4/squeeze1x1 	 Layer time: 6.8972 	 number of inputs: 3 	 input shape: 128x55x55 	 output shape: 32x55x55
+11	Layer Name: fire4/expand1x1 	 Layer time: 6.6775 	 number of inputs: 3 	 input shape: 32x55x55 	 output shape: 128x55x55
+12	Layer Name: fire4/expand3x3 	 Layer time: 29.4635 	 number of inputs: 3 	 input shape: 32x55x55 	 output shape: 128x55x55
+13	Layer Name: fire4/concat 	 Layer time: 3.4832 	 number of inputs: 2 	 input shape: 128x55x55 	 output shape: 256x55x55
+14	Layer Name: pool4 	 Layer time: 4.4698 	 number of inputs: 1 	 input shape: 256x55x55 	 output shape: 256x27x27
+Layer Number: 3 	 time: 50.9911
+----------------------------
+15	Layer Name: fire5/squeeze1x1 	 Layer time: 3.3580 	 number of inputs: 3 	 input shape: 256x27x27 	 output shape: 32x27x27
+16	Layer Name: fire5/expand1x1 	 Layer time: 2.0408 	 number of inputs: 3 	 input shape: 32x27x27 	 output shape: 128x27x27
+17	Layer Name: fire5/expand3x3 	 Layer time: 8.5564 	 number of inputs: 3 	 input shape: 32x27x27 	 output shape: 128x27x27
+18	Layer Name: fire5/concat 	 Layer time: 1.4115 	 number of inputs: 2 	 input shape: 128x27x27 	 output shape: 256x27x27
+Layer Number: 4 	 time: 15.3667
+----------------------------
+19	Layer Name: fire6/squeeze1x1 	 Layer time: 4.1389 	 number of inputs: 3 	 input shape: 256x27x27 	 output shape: 48x27x27
+20	Layer Name: fire6/expand1x1 	 Layer time: 3.3093 	 number of inputs: 3 	 input shape: 48x27x27 	 output shape: 192x27x27
+21	Layer Name: fire6/expand3x3 	 Layer time: 14.1781 	 number of inputs: 3 	 input shape: 48x27x27 	 output shape: 192x27x27
+22	Layer Name: fire6/concat 	 Layer time: 1.8507 	 number of inputs: 2 	 input shape: 192x27x27 	 output shape: 384x27x27
+Layer Number: 5 	 time: 23.4769
+----------------------------
+23	Layer Name: fire7/squeeze1x1 	 Layer time: 5.9024 	 number of inputs: 3 	 input shape: 384x27x27 	 output shape: 48x27x27
+24	Layer Name: fire7/expand1x1 	 Layer time: 3.3686 	 number of inputs: 3 	 input shape: 48x27x27 	 output shape: 192x27x27
+25	Layer Name: fire7/expand3x3 	 Layer time: 14.2594 	 number of inputs: 3 	 input shape: 48x27x27 	 output shape: 192x27x27
+26	Layer Name: fire7/concat 	 Layer time: 1.7459 	 number of inputs: 2 	 input shape: 192x27x27 	 output shape: 384x27x27
+Layer Number: 6 	 time: 25.2764
+----------------------------
+27	Layer Name: fire8/squeeze1x1 	 Layer time: 7.8617 	 number of inputs: 3 	 input shape: 384x27x27 	 output shape: 64x27x27
+28	Layer Name: fire8/expand1x1 	 Layer time: 5.3266 	 number of inputs: 3 	 input shape: 64x27x27 	 output shape: 256x27x27
+29	Layer Name: fire8/expand3x3 	 Layer time: 22.1713 	 number of inputs: 3 	 input shape: 64x27x27 	 output shape: 256x27x27
+30	Layer Name: fire8/concat 	 Layer time: 1.9861 	 number of inputs: 2 	 input shape: 256x27x27 	 output shape: 512x27x27
+31	Layer Name: pool8 	 Layer time: 2.1323 	 number of inputs: 1 	 input shape: 512x27x27 	 output shape: 512x13x13
+Layer Number: 7 	 time: 39.4780
+----------------------------
+32	Layer Name: fire9/squeeze1x1 	 Layer time: 2.5854 	 number of inputs: 3 	 input shape: 512x13x13 	 output shape: 64x13x13
+33	Layer Name: fire9/expand1x1 	 Layer time: 1.7619 	 number of inputs: 3 	 input shape: 64x13x13 	 output shape: 256x13x13
+34	Layer Name: fire9/expand3x3 	 Layer time: 8.3000 	 number of inputs: 3 	 input shape: 64x13x13 	 output shape: 256x13x13
+35	Layer Name: fire9/concat 	 Layer time: 0.7713 	 number of inputs: 2 	 input shape: 256x13x13 	 output shape: 512x13x13
+Layer Number: 8 	 time: 13.4187
+----------------------------
+36	Layer Name: conv10 	 Layer time: 30.1356 	 number of inputs: 3 	 input shape: 512x13x13 	 output shape: 1000x13x13
+37	Layer Name: pool10 	 Layer time: 2.5171 	 number of inputs: 1 	 input shape: 1000x13x13 	 output shape: 1000
+38	Layer Name: flatten 	 Layer time: 0.2983 	 number of inputs: 1 	 input shape: 1000 	 output shape: 1000
+39	Layer Name: prob 	 Layer time: 0.1488 	 number of inputs: 1 	 input shape: 1000 	 output shape: 1000
+Layer Number: 9 	 time: 33.0998
+----------------------------
+
+ Sum of Layers time: 314.7651
+
+ input time of layer 0 : 80.6156
+
+ transfer_time of layer 0 : 0.0000
+
+ output time of layer 9 : 0.6408
+
+ this part task time: 392.8226
+
+
+Cost0:474.527
+input0_time:80.6156
+task0_time:392.823
+output0_time:0.640763
+total0_time:474.079
+***************************************
+
+Frame Latency: 462.955
+layer:pool1	Little:2	big:0	GPU:0
+layer:fire2/concat	Little:2	big:0	GPU:0
+layer:fire3/concat	Little:2	big:0	GPU:0
+layer:pool4	Little:2	big:0	GPU:0
+layer:fire5/concat	Little:2	big:0	GPU:0
+layer:fire6/concat	Little:2	big:0	GPU:0
+layer:fire7/concat	Little:2	big:0	GPU:0
+layer:pool8	Little:2	big:0	GPU:0
+layer:fire9/concat	Little:2	big:0	GPU:0
+layer:prob	Little:2	big:0	GPU:0
+Profiling these DVFS settings finised
+2 Running Graph with 2-2-2-2-2-2-2-2-2-2 LW DVFS
+task: conv1 set freq for next task to -1, -1, -1
+task: pool1 set freq for next task to 2, 0, 0
+task: fire2/squeeze1x1 set freq for next task to -1, -1, -1
+task: fire2/expand1x1 set freq for next task to -1, -1, -1
+task: fire2/expand3x3 set freq for next task to -1, -1, -1
+task: fire2/concat set freq for next task to 2, 0, 0
+task: fire3/squeeze1x1 set freq for next task to -1, -1, -1
+task: fire3/expand1x1 set freq for next task to -1, -1, -1
+task: fire3/expand3x3 set freq for next task to -1, -1, -1
+task: fire3/concat set freq for next task to 2, 0, 0
+task: fire4/squeeze1x1 set freq for next task to -1, -1, -1
+task: fire4/expand1x1 set freq for next task to -1, -1, -1
+task: fire4/expand3x3 set freq for next task to -1, -1, -1
+task: fire4/concat set freq for next task to -1, -1, -1
+task: pool4 set freq for next task to 2, 0, 0
+task: fire5/squeeze1x1 set freq for next task to -1, -1, -1
+task: fire5/expand1x1 set freq for next task to -1, -1, -1
+task: fire5/expand3x3 set freq for next task to -1, -1, -1
+task: fire5/concat set freq for next task to 2, 0, 0
+task: fire6/squeeze1x1 set freq for next task to -1, -1, -1
+task: fire6/expand1x1 set freq for next task to -1, -1, -1
+task: fire6/expand3x3 set freq for next task to -1, -1, -1
+task: fire6/concat set freq for next task to 2, 0, 0
+task: fire7/squeeze1x1 set freq for next task to -1, -1, -1
+task: fire7/expand1x1 set freq for next task to -1, -1, -1
+task: fire7/expand3x3 set freq for next task to -1, -1, -1
+task: fire7/concat set freq for next task to 2, 0, 0
+task: fire8/squeeze1x1 set freq for next task to -1, -1, -1
+task: fire8/expand1x1 set freq for next task to -1, -1, -1
+task: fire8/expand3x3 set freq for next task to -1, -1, -1
+task: fire8/concat set freq for next task to -1, -1, -1
+task: pool8 set freq for next task to 2, 0, 0
+task: fire9/squeeze1x1 set freq for next task to -1, -1, -1
+task: fire9/expand1x1 set freq for next task to -1, -1, -1
+task: fire9/expand3x3 set freq for next task to -1, -1, -1
+task: fire9/concat set freq for next task to 2, 0, 0
+task: conv10 set freq for next task to -1, -1, -1
+task: pool10 set freq for next task to -1, -1, -1
+task: flatten set freq for next task to -1, -1, -1
+task: prob set freq for next task to 2, 0, 0
+
+
+WarmUp: First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/space_shuttle_227.jpg
+---------- Top 5 predictions ----------
+
+0.9472 - [id = 812], n04266014 space shuttle
+0.0188 - [id = 833], n04347754 submarine, pigboat, sub, U-boat
+0.0139 - [id = 814], n04273569 speedboat
+0.0037 - [id = 867], n04467665 trailer truck, tractor trailer, trucking rig, rig, articulated lorry, semi
+0.0032 - [id = 871], n04483307 trimaran
+Subgraph0 Ready to trigger Start Running
+
+
+First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/space_shuttle_227.jpg
+---------- Top 5 predictions ----------
+
+0.9472 - [id = 812], n04266014 space shuttle
+0.0188 - [id = 833], n04347754 submarine, pigboat, sub, U-boat
+0.0139 - [id = 814], n04273569 speedboat
+0.0037 - [id = 867], n04467665 trailer truck, tractor trailer, trucking rig, rig, articulated lorry, semi
+0.0032 - [id = 871], n04483307 trimaran
+
+
+First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/gold_fish.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 27], n01631663 eft
+0.0000 - [id = 310], n02219486 ant, emmet, pismire
+0.0000 - [id = 29], n01632777 axolotl, mud puppy, Ambystoma mexicanum
+0.0000 - [id = 26], n01630670 common newt, Triturus vulgaris
+
+
+First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/gondola.ppm
+---------- Top 5 predictions ----------
+
+0.9994 - [id = 576], n03447447 gondola
+0.0001 - [id = 765], n04099969 rocking chair, rocker
+0.0001 - [id = 536], n03216828 dock, dockage, docking facility
+0.0001 - [id = 532], n03201208 dining table, board
+0.0000 - [id = 540], n03240683 drilling platform, offshore rig
+
+
+First graph inferencing image: 3:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/school_bus.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 779], n04146614 school bus
+0.0000 - [id = 705], n03895866 passenger car, coach, carriage
+0.0000 - [id = 829], n04335435 streetcar, tram, tramcar, trolley, trolley car
+0.0000 - [id = 675], n03796401 moving van
+0.0000 - [id = 654], n03769881 minibus
+
+
+First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/go_kart.ppm
+---------- Top 5 predictions ----------
+
+0.9995 - [id = 573], n03444034 go-kart
+0.0001 - [id = 518], n03127747 crash helmet
+0.0001 - [id = 621], n03649909 lawn mower, mower
+0.0001 - [id = 665], n03785016 moped
+0.0000 - [id = 817], n04285008 sports car, sport car
+start of graph: 0 for frame: 5
+
+
+First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/space_shuttle_227.jpg
+---------- Top 5 predictions ----------
+
+0.9472 - [id = 812], n04266014 space shuttle
+0.0188 - [id = 833], n04347754 submarine, pigboat, sub, U-boat
+0.0139 - [id = 814], n04273569 speedboat
+0.0037 - [id = 867], n04467665 trailer truck, tractor trailer, trucking rig, rig, articulated lorry, semi
+0.0032 - [id = 871], n04483307 trimaran
+
+
+First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/gold_fish.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 27], n01631663 eft
+0.0000 - [id = 310], n02219486 ant, emmet, pismire
+0.0000 - [id = 29], n01632777 axolotl, mud puppy, Ambystoma mexicanum
+0.0000 - [id = 26], n01630670 common newt, Triturus vulgaris
+
+
+First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/gondola.ppm
+---------- Top 5 predictions ----------
+
+0.9994 - [id = 576], n03447447 gondola
+0.0001 - [id = 765], n04099969 rocking chair, rocker
+0.0001 - [id = 536], n03216828 dock, dockage, docking facility
+0.0001 - [id = 532], n03201208 dining table, board
+0.0000 - [id = 540], n03240683 drilling platform, offshore rig
+
+
+First graph inferencing image: 3:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/school_bus.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 779], n04146614 school bus
+0.0000 - [id = 705], n03895866 passenger car, coach, carriage
+0.0000 - [id = 829], n04335435 streetcar, tram, tramcar, trolley, trolley car
+0.0000 - [id = 675], n03796401 moving van
+0.0000 - [id = 654], n03769881 minibus
+
+
+First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/go_kart.ppm
+---------- Top 5 predictions ----------
+
+0.9995 - [id = 573], n03444034 go-kart
+0.0001 - [id = 518], n03127747 crash helmet
+0.0001 - [id = 621], n03649909 lawn mower, mower
+0.0001 - [id = 665], n03785016 moped
+0.0000 - [id = 817], n04285008 sports car, sport car
+Finishing power measurement with first subgraph0
+
+
+
+
+
+
+
+================================================
+Start Running All Subgraphs ...
+====================================================
+
+
+
+0	Layer Name: conv1 	 Layer time: 59.1077 	 number of inputs: 3 	 input shape: 3x227x227 	 output shape: 96x111x111
+1	Layer Name: pool1 	 Layer time: 5.5698 	 number of inputs: 1 	 input shape: 96x111x111 	 output shape: 96x55x55
+Layer Number: 0 	 time: 64.6775
+----------------------------
+2	Layer Name: fire2/squeeze1x1 	 Layer time: 2.2632 	 number of inputs: 3 	 input shape: 96x55x55 	 output shape: 16x55x55
+3	Layer Name: fire2/expand1x1 	 Layer time: 1.6476 	 number of inputs: 3 	 input shape: 16x55x55 	 output shape: 64x55x55
+4	Layer Name: fire2/expand3x3 	 Layer time: 10.1084 	 number of inputs: 3 	 input shape: 16x55x55 	 output shape: 64x55x55
+5	Layer Name: fire2/concat 	 Layer time: 2.3098 	 number of inputs: 2 	 input shape: 64x55x55 	 output shape: 128x55x55
+Layer Number: 1 	 time: 16.3289
+----------------------------
+6	Layer Name: fire3/squeeze1x1 	 Layer time: 2.7677 	 number of inputs: 3 	 input shape: 128x55x55 	 output shape: 16x55x55
+7	Layer Name: fire3/expand1x1 	 Layer time: 1.8220 	 number of inputs: 3 	 input shape: 16x55x55 	 output shape: 64x55x55
+8	Layer Name: fire3/expand3x3 	 Layer time: 10.1172 	 number of inputs: 3 	 input shape: 16x55x55 	 output shape: 64x55x55
+9	Layer Name: fire3/concat 	 Layer time: 2.1250 	 number of inputs: 2 	 input shape: 64x55x55 	 output shape: 128x55x55
+Layer Number: 2 	 time: 16.8319
+----------------------------
+10	Layer Name: fire4/squeeze1x1 	 Layer time: 5.8699 	 number of inputs: 3 	 input shape: 128x55x55 	 output shape: 32x55x55
+11	Layer Name: fire4/expand1x1 	 Layer time: 5.7047 	 number of inputs: 3 	 input shape: 32x55x55 	 output shape: 128x55x55
+12	Layer Name: fire4/expand3x3 	 Layer time: 25.5834 	 number of inputs: 3 	 input shape: 32x55x55 	 output shape: 128x55x55
+13	Layer Name: fire4/concat 	 Layer time: 3.1754 	 number of inputs: 2 	 input shape: 128x55x55 	 output shape: 256x55x55
+14	Layer Name: pool4 	 Layer time: 3.8911 	 number of inputs: 1 	 input shape: 256x55x55 	 output shape: 256x27x27
+Layer Number: 3 	 time: 44.2245
+----------------------------
+15	Layer Name: fire5/squeeze1x1 	 Layer time: 2.8661 	 number of inputs: 3 	 input shape: 256x27x27 	 output shape: 32x27x27
+16	Layer Name: fire5/expand1x1 	 Layer time: 1.8408 	 number of inputs: 3 	 input shape: 32x27x27 	 output shape: 128x27x27
+17	Layer Name: fire5/expand3x3 	 Layer time: 7.3183 	 number of inputs: 3 	 input shape: 32x27x27 	 output shape: 128x27x27
+18	Layer Name: fire5/concat 	 Layer time: 1.3055 	 number of inputs: 2 	 input shape: 128x27x27 	 output shape: 256x27x27
+Layer Number: 4 	 time: 13.3308
+----------------------------
+19	Layer Name: fire6/squeeze1x1 	 Layer time: 3.6301 	 number of inputs: 3 	 input shape: 256x27x27 	 output shape: 48x27x27
+20	Layer Name: fire6/expand1x1 	 Layer time: 2.8345 	 number of inputs: 3 	 input shape: 48x27x27 	 output shape: 192x27x27
+21	Layer Name: fire6/expand3x3 	 Layer time: 12.1606 	 number of inputs: 3 	 input shape: 48x27x27 	 output shape: 192x27x27
+22	Layer Name: fire6/concat 	 Layer time: 1.5792 	 number of inputs: 2 	 input shape: 192x27x27 	 output shape: 384x27x27
+Layer Number: 5 	 time: 20.2044
+----------------------------
+23	Layer Name: fire7/squeeze1x1 	 Layer time: 4.9050 	 number of inputs: 3 	 input shape: 384x27x27 	 output shape: 48x27x27
+24	Layer Name: fire7/expand1x1 	 Layer time: 2.9787 	 number of inputs: 3 	 input shape: 48x27x27 	 output shape: 192x27x27
+25	Layer Name: fire7/expand3x3 	 Layer time: 12.1532 	 number of inputs: 3 	 input shape: 48x27x27 	 output shape: 192x27x27
+26	Layer Name: fire7/concat 	 Layer time: 1.5582 	 number of inputs: 2 	 input shape: 192x27x27 	 output shape: 384x27x27
+Layer Number: 6 	 time: 21.5951
+----------------------------
+27	Layer Name: fire8/squeeze1x1 	 Layer time: 6.6569 	 number of inputs: 3 	 input shape: 384x27x27 	 output shape: 64x27x27
+28	Layer Name: fire8/expand1x1 	 Layer time: 4.5007 	 number of inputs: 3 	 input shape: 64x27x27 	 output shape: 256x27x27
+29	Layer Name: fire8/expand3x3 	 Layer time: 18.7029 	 number of inputs: 3 	 input shape: 64x27x27 	 output shape: 256x27x27
+30	Layer Name: fire8/concat 	 Layer time: 1.6890 	 number of inputs: 2 	 input shape: 256x27x27 	 output shape: 512x27x27
+31	Layer Name: pool8 	 Layer time: 1.8722 	 number of inputs: 1 	 input shape: 512x27x27 	 output shape: 512x13x13
+Layer Number: 7 	 time: 33.4218
+----------------------------
+32	Layer Name: fire9/squeeze1x1 	 Layer time: 2.2669 	 number of inputs: 3 	 input shape: 512x13x13 	 output shape: 64x13x13
+33	Layer Name: fire9/expand1x1 	 Layer time: 1.2042 	 number of inputs: 3 	 input shape: 64x13x13 	 output shape: 256x13x13
+34	Layer Name: fire9/expand3x3 	 Layer time: 7.8081 	 number of inputs: 3 	 input shape: 64x13x13 	 output shape: 256x13x13
+35	Layer Name: fire9/concat 	 Layer time: 0.8763 	 number of inputs: 2 	 input shape: 256x13x13 	 output shape: 512x13x13
+Layer Number: 8 	 time: 12.1556
+----------------------------
+36	Layer Name: conv10 	 Layer time: 24.9858 	 number of inputs: 3 	 input shape: 512x13x13 	 output shape: 1000x13x13
+37	Layer Name: pool10 	 Layer time: 2.3878 	 number of inputs: 1 	 input shape: 1000x13x13 	 output shape: 1000
+38	Layer Name: flatten 	 Layer time: 0.2212 	 number of inputs: 1 	 input shape: 1000 	 output shape: 1000
+39	Layer Name: prob 	 Layer time: 0.1141 	 number of inputs: 1 	 input shape: 1000 	 output shape: 1000
+Layer Number: 9 	 time: 27.7089
+----------------------------
+
+ Sum of Layers time: 270.4794
+
+ input time of layer 0 : 59.3475
+
+ transfer_time of layer 0 : 0.0000
+
+ output time of layer 9 : 0.5218
+
+ this part task time: 347.2115
+
+
+Cost0:407.516
+input0_time:59.3475
+task0_time:347.211
+output0_time:0.521821
+total0_time:407.081
+***************************************
+
+Frame Latency: 397.95
+Profiling these DVFS settings finised
+layer:pool1	Little:3	big:0	GPU:0
+layer:fire2/concat	Little:3	big:0	GPU:0
+layer:fire3/concat	Little:3	big:0	GPU:0
+layer:pool4	Little:3	big:0	GPU:0
+layer:fire5/concat	Little:3	big:0	GPU:0
+layer:fire6/concat	Little:3	big:0	GPU:0
+layer:fire7/concat	Little:3	big:0	GPU:0
+layer:pool8	Little:3	big:0	GPU:0
+layer:fire9/concat	Little:3	big:0	GPU:0
+layer:prob	Little:3	big:0	GPU:0
+3 Running Graph with 3-3-3-3-3-3-3-3-3-3 LW DVFS
+task: conv1 set freq for next task to -1, -1, -1
+task: pool1 set freq for next task to 3, 0, 0
+task: fire2/squeeze1x1 set freq for next task to -1, -1, -1
+task: fire2/expand1x1 set freq for next task to -1, -1, -1
+task: fire2/expand3x3 set freq for next task to -1, -1, -1
+task: fire2/concat set freq for next task to 3, 0, 0
+task: fire3/squeeze1x1 set freq for next task to -1, -1, -1
+task: fire3/expand1x1 set freq for next task to -1, -1, -1
+task: fire3/expand3x3 set freq for next task to -1, -1, -1
+task: fire3/concat set freq for next task to 3, 0, 0
+task: fire4/squeeze1x1 set freq for next task to -1, -1, -1
+task: fire4/expand1x1 set freq for next task to -1, -1, -1
+task: fire4/expand3x3 set freq for next task to -1, -1, -1
+task: fire4/concat set freq for next task to -1, -1, -1
+task: pool4 set freq for next task to 3, 0, 0
+task: fire5/squeeze1x1 set freq for next task to -1, -1, -1
+task: fire5/expand1x1 set freq for next task to -1, -1, -1
+task: fire5/expand3x3 set freq for next task to -1, -1, -1
+task: fire5/concat set freq for next task to 3, 0, 0
+task: fire6/squeeze1x1 set freq for next task to -1, -1, -1
+task: fire6/expand1x1 set freq for next task to -1, -1, -1
+task: fire6/expand3x3 set freq for next task to -1, -1, -1
+task: fire6/concat set freq for next task to 3, 0, 0
+task: fire7/squeeze1x1 set freq for next task to -1, -1, -1
+task: fire7/expand1x1 set freq for next task to -1, -1, -1
+task: fire7/expand3x3 set freq for next task to -1, -1, -1
+task: fire7/concat set freq for next task to 3, 0, 0
+task: fire8/squeeze1x1 set freq for next task to -1, -1, -1
+task: fire8/expand1x1 set freq for next task to -1, -1, -1
+task: fire8/expand3x3 set freq for next task to -1, -1, -1
+task: fire8/concat set freq for next task to -1, -1, -1
+task: pool8 set freq for next task to 3, 0, 0
+task: fire9/squeeze1x1 set freq for next task to -1, -1, -1
+task: fire9/expand1x1 set freq for next task to -1, -1, -1
+task: fire9/expand3x3 set freq for next task to -1, -1, -1
+task: fire9/concat set freq for next task to 3, 0, 0
+task: conv10 set freq for next task to -1, -1, -1
+task: pool10 set freq for next task to -1, -1, -1
+task: flatten set freq for next task to -1, -1, -1
+task: prob set freq for next task to 3, 0, 0
+
+
+WarmUp: First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/space_shuttle_227.jpg
+---------- Top 5 predictions ----------
+
+0.9472 - [id = 812], n04266014 space shuttle
+0.0188 - [id = 833], n04347754 submarine, pigboat, sub, U-boat
+0.0139 - [id = 814], n04273569 speedboat
+0.0037 - [id = 867], n04467665 trailer truck, tractor trailer, trucking rig, rig, articulated lorry, semi
+0.0032 - [id = 871], n04483307 trimaran
+Subgraph0 Ready to trigger Start Running
+
+
+First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/space_shuttle_227.jpg
+---------- Top 5 predictions ----------
+
+0.9472 - [id = 812], n04266014 space shuttle
+0.0188 - [id = 833], n04347754 submarine, pigboat, sub, U-boat
+0.0139 - [id = 814], n04273569 speedboat
+0.0037 - [id = 867], n04467665 trailer truck, tractor trailer, trucking rig, rig, articulated lorry, semi
+0.0032 - [id = 871], n04483307 trimaran
+
+
+First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/gold_fish.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 27], n01631663 eft
+0.0000 - [id = 310], n02219486 ant, emmet, pismire
+0.0000 - [id = 29], n01632777 axolotl, mud puppy, Ambystoma mexicanum
+0.0000 - [id = 26], n01630670 common newt, Triturus vulgaris
+
+
+First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/gondola.ppm
+---------- Top 5 predictions ----------
+
+0.9994 - [id = 576], n03447447 gondola
+0.0001 - [id = 765], n04099969 rocking chair, rocker
+0.0001 - [id = 536], n03216828 dock, dockage, docking facility
+0.0001 - [id = 532], n03201208 dining table, board
+0.0000 - [id = 540], n03240683 drilling platform, offshore rig
+
+
+First graph inferencing image: 3:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/school_bus.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 779], n04146614 school bus
+0.0000 - [id = 705], n03895866 passenger car, coach, carriage
+0.0000 - [id = 829], n04335435 streetcar, tram, tramcar, trolley, trolley car
+0.0000 - [id = 675], n03796401 moving van
+0.0000 - [id = 654], n03769881 minibus
+
+
+First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/go_kart.ppm
+---------- Top 5 predictions ----------
+
+0.9995 - [id = 573], n03444034 go-kart
+0.0001 - [id = 518], n03127747 crash helmet
+0.0001 - [id = 621], n03649909 lawn mower, mower
+0.0001 - [id = 665], n03785016 moped
+0.0000 - [id = 817], n04285008 sports car, sport car
+start of graph: 0 for frame: 5
+
+
+First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/space_shuttle_227.jpg
+---------- Top 5 predictions ----------
+
+0.9472 - [id = 812], n04266014 space shuttle
+0.0188 - [id = 833], n04347754 submarine, pigboat, sub, U-boat
+0.0139 - [id = 814], n04273569 speedboat
+0.0037 - [id = 867], n04467665 trailer truck, tractor trailer, trucking rig, rig, articulated lorry, semi
+0.0032 - [id = 871], n04483307 trimaran
+
+
+First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/gold_fish.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 27], n01631663 eft
+0.0000 - [id = 310], n02219486 ant, emmet, pismire
+0.0000 - [id = 29], n01632777 axolotl, mud puppy, Ambystoma mexicanum
+0.0000 - [id = 26], n01630670 common newt, Triturus vulgaris
+
+
+First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/gondola.ppm
+---------- Top 5 predictions ----------
+
+0.9994 - [id = 576], n03447447 gondola
+0.0001 - [id = 765], n04099969 rocking chair, rocker
+0.0001 - [id = 536], n03216828 dock, dockage, docking facility
+0.0001 - [id = 532], n03201208 dining table, board
+0.0000 - [id = 540], n03240683 drilling platform, offshore rig
+
+
+First graph inferencing image: 3:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/school_bus.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 779], n04146614 school bus
+0.0000 - [id = 705], n03895866 passenger car, coach, carriage
+0.0000 - [id = 829], n04335435 streetcar, tram, tramcar, trolley, trolley car
+0.0000 - [id = 675], n03796401 moving van
+0.0000 - [id = 654], n03769881 minibus
+
+
+First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/go_kart.ppm
+---------- Top 5 predictions ----------
+
+0.9995 - [id = 573], n03444034 go-kart
+0.0001 - [id = 518], n03127747 crash helmet
+0.0001 - [id = 621], n03649909 lawn mower, mower
+0.0001 - [id = 665], n03785016 moped
+0.0000 - [id = 817], n04285008 sports car, sport car
+Finishing power measurement with first subgraph0
+
+
+
+
+
+
+
+================================================
+Start Running All Subgraphs ...
+====================================================
+
+
+
+0	Layer Name: conv1 	 Layer time: 52.2250 	 number of inputs: 3 	 input shape: 3x227x227 	 output shape: 96x111x111
+1	Layer Name: pool1 	 Layer time: 5.1759 	 number of inputs: 1 	 input shape: 96x111x111 	 output shape: 96x55x55
+Layer Number: 0 	 time: 57.4009
+----------------------------
+2	Layer Name: fire2/squeeze1x1 	 Layer time: 2.1927 	 number of inputs: 3 	 input shape: 96x55x55 	 output shape: 16x55x55
+3	Layer Name: fire2/expand1x1 	 Layer time: 2.0210 	 number of inputs: 3 	 input shape: 16x55x55 	 output shape: 64x55x55
+4	Layer Name: fire2/expand3x3 	 Layer time: 9.4231 	 number of inputs: 3 	 input shape: 16x55x55 	 output shape: 64x55x55
+5	Layer Name: fire2/concat 	 Layer time: 2.3964 	 number of inputs: 2 	 input shape: 64x55x55 	 output shape: 128x55x55
+Layer Number: 1 	 time: 16.0332
+----------------------------
+6	Layer Name: fire3/squeeze1x1 	 Layer time: 2.7396 	 number of inputs: 3 	 input shape: 128x55x55 	 output shape: 16x55x55
+7	Layer Name: fire3/expand1x1 	 Layer time: 1.9438 	 number of inputs: 3 	 input shape: 16x55x55 	 output shape: 64x55x55
+8	Layer Name: fire3/expand3x3 	 Layer time: 9.4431 	 number of inputs: 3 	 input shape: 16x55x55 	 output shape: 64x55x55
+9	Layer Name: fire3/concat 	 Layer time: 2.0822 	 number of inputs: 2 	 input shape: 64x55x55 	 output shape: 128x55x55
+Layer Number: 2 	 time: 16.2088
+----------------------------
+10	Layer Name: fire4/squeeze1x1 	 Layer time: 5.2091 	 number of inputs: 3 	 input shape: 128x55x55 	 output shape: 32x55x55
+11	Layer Name: fire4/expand1x1 	 Layer time: 5.2662 	 number of inputs: 3 	 input shape: 32x55x55 	 output shape: 128x55x55
+12	Layer Name: fire4/expand3x3 	 Layer time: 23.2873 	 number of inputs: 3 	 input shape: 32x55x55 	 output shape: 128x55x55
+13	Layer Name: fire4/concat 	 Layer time: 3.2246 	 number of inputs: 2 	 input shape: 128x55x55 	 output shape: 256x55x55
+14	Layer Name: pool4 	 Layer time: 3.6398 	 number of inputs: 1 	 input shape: 256x55x55 	 output shape: 256x27x27
+Layer Number: 3 	 time: 40.6270
+----------------------------
+15	Layer Name: fire5/squeeze1x1 	 Layer time: 2.6544 	 number of inputs: 3 	 input shape: 256x27x27 	 output shape: 32x27x27
+16	Layer Name: fire5/expand1x1 	 Layer time: 1.6382 	 number of inputs: 3 	 input shape: 32x27x27 	 output shape: 128x27x27
+17	Layer Name: fire5/expand3x3 	 Layer time: 6.7978 	 number of inputs: 3 	 input shape: 32x27x27 	 output shape: 128x27x27
+18	Layer Name: fire5/concat 	 Layer time: 1.1360 	 number of inputs: 2 	 input shape: 128x27x27 	 output shape: 256x27x27
+Layer Number: 4 	 time: 12.2265
+----------------------------
+19	Layer Name: fire6/squeeze1x1 	 Layer time: 3.0568 	 number of inputs: 3 	 input shape: 256x27x27 	 output shape: 48x27x27
+20	Layer Name: fire6/expand1x1 	 Layer time: 2.5512 	 number of inputs: 3 	 input shape: 48x27x27 	 output shape: 192x27x27
+21	Layer Name: fire6/expand3x3 	 Layer time: 11.4280 	 number of inputs: 3 	 input shape: 48x27x27 	 output shape: 192x27x27
+22	Layer Name: fire6/concat 	 Layer time: 1.5113 	 number of inputs: 2 	 input shape: 192x27x27 	 output shape: 384x27x27
+Layer Number: 5 	 time: 18.5474
+----------------------------
+23	Layer Name: fire7/squeeze1x1 	 Layer time: 4.3229 	 number of inputs: 3 	 input shape: 384x27x27 	 output shape: 48x27x27
+24	Layer Name: fire7/expand1x1 	 Layer time: 2.4640 	 number of inputs: 3 	 input shape: 48x27x27 	 output shape: 192x27x27
+25	Layer Name: fire7/expand3x3 	 Layer time: 11.4136 	 number of inputs: 3 	 input shape: 48x27x27 	 output shape: 192x27x27
+26	Layer Name: fire7/concat 	 Layer time: 1.6035 	 number of inputs: 2 	 input shape: 192x27x27 	 output shape: 384x27x27
+Layer Number: 6 	 time: 19.8041
+----------------------------
+27	Layer Name: fire8/squeeze1x1 	 Layer time: 6.0024 	 number of inputs: 3 	 input shape: 384x27x27 	 output shape: 64x27x27
+28	Layer Name: fire8/expand1x1 	 Layer time: 3.9594 	 number of inputs: 3 	 input shape: 64x27x27 	 output shape: 256x27x27
+29	Layer Name: fire8/expand3x3 	 Layer time: 17.8638 	 number of inputs: 3 	 input shape: 64x27x27 	 output shape: 256x27x27
+30	Layer Name: fire8/concat 	 Layer time: 1.9878 	 number of inputs: 2 	 input shape: 256x27x27 	 output shape: 512x27x27
+31	Layer Name: pool8 	 Layer time: 1.8315 	 number of inputs: 1 	 input shape: 512x27x27 	 output shape: 512x13x13
+Layer Number: 7 	 time: 31.6448
+----------------------------
+32	Layer Name: fire9/squeeze1x1 	 Layer time: 2.0287 	 number of inputs: 3 	 input shape: 512x13x13 	 output shape: 64x13x13
+33	Layer Name: fire9/expand1x1 	 Layer time: 1.1303 	 number of inputs: 3 	 input shape: 64x13x13 	 output shape: 256x13x13
+34	Layer Name: fire9/expand3x3 	 Layer time: 7.7649 	 number of inputs: 3 	 input shape: 64x13x13 	 output shape: 256x13x13
+35	Layer Name: fire9/concat 	 Layer time: 0.7136 	 number of inputs: 2 	 input shape: 256x13x13 	 output shape: 512x13x13
+Layer Number: 8 	 time: 11.6374
+----------------------------
+36	Layer Name: conv10 	 Layer time: 22.1871 	 number of inputs: 3 	 input shape: 512x13x13 	 output shape: 1000x13x13
+37	Layer Name: pool10 	 Layer time: 2.2625 	 number of inputs: 1 	 input shape: 1000x13x13 	 output shape: 1000
+38	Layer Name: flatten 	 Layer time: 0.1755 	 number of inputs: 1 	 input shape: 1000 	 output shape: 1000
+39	Layer Name: prob 	 Layer time: 0.1045 	 number of inputs: 1 	 input shape: 1000 	 output shape: 1000
+Layer Number: 9 	 time: 24.7296
+----------------------------
+
+ Sum of Layers time: 248.8596
+
+ input time of layer 0 : 48.1772
+
+ transfer_time of layer 0 : 0.0000
+
+ output time of layer 9 : 0.4345
+
+ this part task time: 325.1449
+
+
+Cost0:374.196
+input0_time:48.1772
+task0_time:325.145
+output0_time:0.434525
+total0_time:373.757
+***************************************
+
+Frame Latency: 367.534
+Profiling these DVFS settings finised
+4 Running Graph with 4-4-4-4-4-4-4-4-4-4 LW DVFS
+layer:pool1	Little:4	big:0	GPU:0
+layer:fire2/concat	Little:4	big:0	GPU:0
+layer:fire3/concat	Little:4	big:0	GPU:0
+layer:pool4	Little:4	big:0	GPU:0
+layer:fire5/concat	Little:4	big:0	GPU:0
+layer:fire6/concat	Little:4	big:0	GPU:0
+layer:fire7/concat	Little:4	big:0	GPU:0
+layer:pool8	Little:4	big:0	GPU:0
+layer:fire9/concat	Little:4	big:0	GPU:0
+layer:prob	Little:4	big:0	GPU:0
+task: conv1 set freq for next task to -1, -1, -1
+task: pool1 set freq for next task to 4, 0, 0
+task: fire2/squeeze1x1 set freq for next task to -1, -1, -1
+task: fire2/expand1x1 set freq for next task to -1, -1, -1
+task: fire2/expand3x3 set freq for next task to -1, -1, -1
+task: fire2/concat set freq for next task to 4, 0, 0
+task: fire3/squeeze1x1 set freq for next task to -1, -1, -1
+task: fire3/expand1x1 set freq for next task to -1, -1, -1
+task: fire3/expand3x3 set freq for next task to -1, -1, -1
+task: fire3/concat set freq for next task to 4, 0, 0
+task: fire4/squeeze1x1 set freq for next task to -1, -1, -1
+task: fire4/expand1x1 set freq for next task to -1, -1, -1
+task: fire4/expand3x3 set freq for next task to -1, -1, -1
+task: fire4/concat set freq for next task to -1, -1, -1
+task: pool4 set freq for next task to 4, 0, 0
+task: fire5/squeeze1x1 set freq for next task to -1, -1, -1
+task: fire5/expand1x1 set freq for next task to -1, -1, -1
+task: fire5/expand3x3 set freq for next task to -1, -1, -1
+task: fire5/concat set freq for next task to 4, 0, 0
+task: fire6/squeeze1x1 set freq for next task to -1, -1, -1
+task: fire6/expand1x1 set freq for next task to -1, -1, -1
+task: fire6/expand3x3 set freq for next task to -1, -1, -1
+task: fire6/concat set freq for next task to 4, 0, 0
+task: fire7/squeeze1x1 set freq for next task to -1, -1, -1
+task: fire7/expand1x1 set freq for next task to -1, -1, -1
+task: fire7/expand3x3 set freq for next task to -1, -1, -1
+task: fire7/concat set freq for next task to 4, 0, 0
+task: fire8/squeeze1x1 set freq for next task to -1, -1, -1
+task: fire8/expand1x1 set freq for next task to -1, -1, -1
+task: fire8/expand3x3 set freq for next task to -1, -1, -1
+task: fire8/concat set freq for next task to -1, -1, -1
+task: pool8 set freq for next task to 4, 0, 0
+task: fire9/squeeze1x1 set freq for next task to -1, -1, -1
+task: fire9/expand1x1 set freq for next task to -1, -1, -1
+task: fire9/expand3x3 set freq for next task to -1, -1, -1
+task: fire9/concat set freq for next task to 4, 0, 0
+task: conv10 set freq for next task to -1, -1, -1
+task: pool10 set freq for next task to -1, -1, -1
+task: flatten set freq for next task to -1, -1, -1
+task: prob set freq for next task to 4, 0, 0
+
+
+WarmUp: First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/space_shuttle_227.jpg
+---------- Top 5 predictions ----------
+
+0.9472 - [id = 812], n04266014 space shuttle
+0.0188 - [id = 833], n04347754 submarine, pigboat, sub, U-boat
+0.0139 - [id = 814], n04273569 speedboat
+0.0037 - [id = 867], n04467665 trailer truck, tractor trailer, trucking rig, rig, articulated lorry, semi
+0.0032 - [id = 871], n04483307 trimaran
+Subgraph0 Ready to trigger Start Running
+
+
+First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/space_shuttle_227.jpg
+---------- Top 5 predictions ----------
+
+0.9472 - [id = 812], n04266014 space shuttle
+0.0188 - [id = 833], n04347754 submarine, pigboat, sub, U-boat
+0.0139 - [id = 814], n04273569 speedboat
+0.0037 - [id = 867], n04467665 trailer truck, tractor trailer, trucking rig, rig, articulated lorry, semi
+0.0032 - [id = 871], n04483307 trimaran
+
+
+First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/gold_fish.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 27], n01631663 eft
+0.0000 - [id = 310], n02219486 ant, emmet, pismire
+0.0000 - [id = 29], n01632777 axolotl, mud puppy, Ambystoma mexicanum
+0.0000 - [id = 26], n01630670 common newt, Triturus vulgaris
+
+
+First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/gondola.ppm
+---------- Top 5 predictions ----------
+
+0.9994 - [id = 576], n03447447 gondola
+0.0001 - [id = 765], n04099969 rocking chair, rocker
+0.0001 - [id = 536], n03216828 dock, dockage, docking facility
+0.0001 - [id = 532], n03201208 dining table, board
+0.0000 - [id = 540], n03240683 drilling platform, offshore rig
+
+
+First graph inferencing image: 3:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/school_bus.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 779], n04146614 school bus
+0.0000 - [id = 705], n03895866 passenger car, coach, carriage
+0.0000 - [id = 829], n04335435 streetcar, tram, tramcar, trolley, trolley car
+0.0000 - [id = 675], n03796401 moving van
+0.0000 - [id = 654], n03769881 minibus
+
+
+First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/go_kart.ppm
+---------- Top 5 predictions ----------
+
+0.9995 - [id = 573], n03444034 go-kart
+0.0001 - [id = 518], n03127747 crash helmet
+0.0001 - [id = 621], n03649909 lawn mower, mower
+0.0001 - [id = 665], n03785016 moped
+0.0000 - [id = 817], n04285008 sports car, sport car
+start of graph: 0 for frame: 5
+
+
+First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/space_shuttle_227.jpg
+---------- Top 5 predictions ----------
+
+0.9472 - [id = 812], n04266014 space shuttle
+0.0188 - [id = 833], n04347754 submarine, pigboat, sub, U-boat
+0.0139 - [id = 814], n04273569 speedboat
+0.0037 - [id = 867], n04467665 trailer truck, tractor trailer, trucking rig, rig, articulated lorry, semi
+0.0032 - [id = 871], n04483307 trimaran
+
+
+First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/gold_fish.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 27], n01631663 eft
+0.0000 - [id = 310], n02219486 ant, emmet, pismire
+0.0000 - [id = 29], n01632777 axolotl, mud puppy, Ambystoma mexicanum
+0.0000 - [id = 26], n01630670 common newt, Triturus vulgaris
+
+
+First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/gondola.ppm
+---------- Top 5 predictions ----------
+
+0.9994 - [id = 576], n03447447 gondola
+0.0001 - [id = 765], n04099969 rocking chair, rocker
+0.0001 - [id = 536], n03216828 dock, dockage, docking facility
+0.0001 - [id = 532], n03201208 dining table, board
+0.0000 - [id = 540], n03240683 drilling platform, offshore rig
+
+
+First graph inferencing image: 3:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/school_bus.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 779], n04146614 school bus
+0.0000 - [id = 705], n03895866 passenger car, coach, carriage
+0.0000 - [id = 829], n04335435 streetcar, tram, tramcar, trolley, trolley car
+0.0000 - [id = 675], n03796401 moving van
+0.0000 - [id = 654], n03769881 minibus
+
+
+First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/go_kart.ppm
+---------- Top 5 predictions ----------
+
+0.9995 - [id = 573], n03444034 go-kart
+0.0001 - [id = 518], n03127747 crash helmet
+0.0001 - [id = 621], n03649909 lawn mower, mower
+0.0001 - [id = 665], n03785016 moped
+0.0000 - [id = 817], n04285008 sports car, sport car
+Finishing power measurement with first subgraph0
+
+
+
+
+
+
+
+================================================
+Start Running All Subgraphs ...
+====================================================
+
+
+
+0	Layer Name: conv1 	 Layer time: 48.0035 	 number of inputs: 3 	 input shape: 3x227x227 	 output shape: 96x111x111
+1	Layer Name: pool1 	 Layer time: 4.8709 	 number of inputs: 1 	 input shape: 96x111x111 	 output shape: 96x55x55
+Layer Number: 0 	 time: 52.8744
+----------------------------
+2	Layer Name: fire2/squeeze1x1 	 Layer time: 2.1823 	 number of inputs: 3 	 input shape: 96x55x55 	 output shape: 16x55x55
+3	Layer Name: fire2/expand1x1 	 Layer time: 1.8652 	 number of inputs: 3 	 input shape: 16x55x55 	 output shape: 64x55x55
+4	Layer Name: fire2/expand3x3 	 Layer time: 8.9370 	 number of inputs: 3 	 input shape: 16x55x55 	 output shape: 64x55x55
+5	Layer Name: fire2/concat 	 Layer time: 2.2621 	 number of inputs: 2 	 input shape: 64x55x55 	 output shape: 128x55x55
+Layer Number: 1 	 time: 15.2467
+----------------------------
+6	Layer Name: fire3/squeeze1x1 	 Layer time: 2.6922 	 number of inputs: 3 	 input shape: 128x55x55 	 output shape: 16x55x55
+7	Layer Name: fire3/expand1x1 	 Layer time: 1.9185 	 number of inputs: 3 	 input shape: 16x55x55 	 output shape: 64x55x55
+8	Layer Name: fire3/expand3x3 	 Layer time: 8.9406 	 number of inputs: 3 	 input shape: 16x55x55 	 output shape: 64x55x55
+9	Layer Name: fire3/concat 	 Layer time: 2.1770 	 number of inputs: 2 	 input shape: 64x55x55 	 output shape: 128x55x55
+Layer Number: 2 	 time: 15.7284
+----------------------------
+10	Layer Name: fire4/squeeze1x1 	 Layer time: 4.7570 	 number of inputs: 3 	 input shape: 128x55x55 	 output shape: 32x55x55
+11	Layer Name: fire4/expand1x1 	 Layer time: 4.7630 	 number of inputs: 3 	 input shape: 32x55x55 	 output shape: 128x55x55
+12	Layer Name: fire4/expand3x3 	 Layer time: 21.6125 	 number of inputs: 3 	 input shape: 32x55x55 	 output shape: 128x55x55
+13	Layer Name: fire4/concat 	 Layer time: 2.9859 	 number of inputs: 2 	 input shape: 128x55x55 	 output shape: 256x55x55
+14	Layer Name: pool4 	 Layer time: 3.4703 	 number of inputs: 1 	 input shape: 256x55x55 	 output shape: 256x27x27
+Layer Number: 3 	 time: 37.5886
+----------------------------
+15	Layer Name: fire5/squeeze1x1 	 Layer time: 2.5466 	 number of inputs: 3 	 input shape: 256x27x27 	 output shape: 32x27x27
+16	Layer Name: fire5/expand1x1 	 Layer time: 1.4234 	 number of inputs: 3 	 input shape: 32x27x27 	 output shape: 128x27x27
+17	Layer Name: fire5/expand3x3 	 Layer time: 6.7065 	 number of inputs: 3 	 input shape: 32x27x27 	 output shape: 128x27x27
+18	Layer Name: fire5/concat 	 Layer time: 1.1148 	 number of inputs: 2 	 input shape: 128x27x27 	 output shape: 256x27x27
+Layer Number: 4 	 time: 11.7913
+----------------------------
+19	Layer Name: fire6/squeeze1x1 	 Layer time: 2.8097 	 number of inputs: 3 	 input shape: 256x27x27 	 output shape: 48x27x27
+20	Layer Name: fire6/expand1x1 	 Layer time: 2.3421 	 number of inputs: 3 	 input shape: 48x27x27 	 output shape: 192x27x27
+21	Layer Name: fire6/expand3x3 	 Layer time: 10.7332 	 number of inputs: 3 	 input shape: 48x27x27 	 output shape: 192x27x27
+22	Layer Name: fire6/concat 	 Layer time: 1.6101 	 number of inputs: 2 	 input shape: 192x27x27 	 output shape: 384x27x27
+Layer Number: 5 	 time: 17.4951
+----------------------------
+23	Layer Name: fire7/squeeze1x1 	 Layer time: 3.9523 	 number of inputs: 3 	 input shape: 384x27x27 	 output shape: 48x27x27
+24	Layer Name: fire7/expand1x1 	 Layer time: 2.3140 	 number of inputs: 3 	 input shape: 48x27x27 	 output shape: 192x27x27
+25	Layer Name: fire7/expand3x3 	 Layer time: 10.7482 	 number of inputs: 3 	 input shape: 48x27x27 	 output shape: 192x27x27
+26	Layer Name: fire7/concat 	 Layer time: 1.4992 	 number of inputs: 2 	 input shape: 192x27x27 	 output shape: 384x27x27
+Layer Number: 6 	 time: 18.5137
+----------------------------
+27	Layer Name: fire8/squeeze1x1 	 Layer time: 5.5020 	 number of inputs: 3 	 input shape: 384x27x27 	 output shape: 64x27x27
+28	Layer Name: fire8/expand1x1 	 Layer time: 3.6055 	 number of inputs: 3 	 input shape: 64x27x27 	 output shape: 256x27x27
+29	Layer Name: fire8/expand3x3 	 Layer time: 17.1578 	 number of inputs: 3 	 input shape: 64x27x27 	 output shape: 256x27x27
+30	Layer Name: fire8/concat 	 Layer time: 1.7785 	 number of inputs: 2 	 input shape: 256x27x27 	 output shape: 512x27x27
+31	Layer Name: pool8 	 Layer time: 1.7034 	 number of inputs: 1 	 input shape: 512x27x27 	 output shape: 512x13x13
+Layer Number: 7 	 time: 29.7471
+----------------------------
+32	Layer Name: fire9/squeeze1x1 	 Layer time: 1.8463 	 number of inputs: 3 	 input shape: 512x13x13 	 output shape: 64x13x13
+33	Layer Name: fire9/expand1x1 	 Layer time: 1.0227 	 number of inputs: 3 	 input shape: 64x13x13 	 output shape: 256x13x13
+34	Layer Name: fire9/expand3x3 	 Layer time: 7.2841 	 number of inputs: 3 	 input shape: 64x13x13 	 output shape: 256x13x13
+35	Layer Name: fire9/concat 	 Layer time: 0.9046 	 number of inputs: 2 	 input shape: 256x13x13 	 output shape: 512x13x13
+Layer Number: 8 	 time: 11.0576
+----------------------------
+36	Layer Name: conv10 	 Layer time: 22.0414 	 number of inputs: 3 	 input shape: 512x13x13 	 output shape: 1000x13x13
+37	Layer Name: pool10 	 Layer time: 2.2452 	 number of inputs: 1 	 input shape: 1000x13x13 	 output shape: 1000
+38	Layer Name: flatten 	 Layer time: 0.1647 	 number of inputs: 1 	 input shape: 1000 	 output shape: 1000
+39	Layer Name: prob 	 Layer time: 0.0853 	 number of inputs: 1 	 input shape: 1000 	 output shape: 1000
+Layer Number: 9 	 time: 24.5366
+----------------------------
+
+ Sum of Layers time: 234.5795
+
+ input time of layer 0 : 40.4253
+
+ transfer_time of layer 0 : 0.0000
+
+ output time of layer 9 : 0.3829
+
+ this part task time: 310.8326
+
+
+Cost0:352.071
+input0_time:40.4253
+task0_time:310.833
+output0_time:0.3829
+total0_time:351.641
+***************************************
+
+Frame Latency: 347.327
+Profiling these DVFS settings finised
+layer:pool1	Little:5	big:0	GPU:0
+layer:fire2/concat	Little:5	big:0	GPU:0
+layer:fire3/concat	Little:5	big:0	GPU:0
+layer:pool4	Little:5	big:0	GPU:0
+layer:fire5/concat	Little:5	big:0	GPU:0
+layer:fire6/concat	Little:5	big:0	GPU:0
+layer:fire7/concat	Little:5	big:0	GPU:0
+layer:pool8	Little:5	big:0	GPU:0
+layer:fire9/concat	Little:5	big:0	GPU:0
+layer:prob	Little:5	big:0	GPU:0
+5 Running Graph with 5-5-5-5-5-5-5-5-5-5 LW DVFS
+task: conv1 set freq for next task to -1, -1, -1
+task: pool1 set freq for next task to 5, 0, 0
+task: fire2/squeeze1x1 set freq for next task to -1, -1, -1
+task: fire2/expand1x1 set freq for next task to -1, -1, -1
+task: fire2/expand3x3 set freq for next task to -1, -1, -1
+task: fire2/concat set freq for next task to 5, 0, 0
+task: fire3/squeeze1x1 set freq for next task to -1, -1, -1
+task: fire3/expand1x1 set freq for next task to -1, -1, -1
+task: fire3/expand3x3 set freq for next task to -1, -1, -1
+task: fire3/concat set freq for next task to 5, 0, 0
+task: fire4/squeeze1x1 set freq for next task to -1, -1, -1
+task: fire4/expand1x1 set freq for next task to -1, -1, -1
+task: fire4/expand3x3 set freq for next task to -1, -1, -1
+task: fire4/concat set freq for next task to -1, -1, -1
+task: pool4 set freq for next task to 5, 0, 0
+task: fire5/squeeze1x1 set freq for next task to -1, -1, -1
+task: fire5/expand1x1 set freq for next task to -1, -1, -1
+task: fire5/expand3x3 set freq for next task to -1, -1, -1
+task: fire5/concat set freq for next task to 5, 0, 0
+task: fire6/squeeze1x1 set freq for next task to -1, -1, -1
+task: fire6/expand1x1 set freq for next task to -1, -1, -1
+task: fire6/expand3x3 set freq for next task to -1, -1, -1
+task: fire6/concat set freq for next task to 5, 0, 0
+task: fire7/squeeze1x1 set freq for next task to -1, -1, -1
+task: fire7/expand1x1 set freq for next task to -1, -1, -1
+task: fire7/expand3x3 set freq for next task to -1, -1, -1
+task: fire7/concat set freq for next task to 5, 0, 0
+task: fire8/squeeze1x1 set freq for next task to -1, -1, -1
+task: fire8/expand1x1 set freq for next task to -1, -1, -1
+task: fire8/expand3x3 set freq for next task to -1, -1, -1
+task: fire8/concat set freq for next task to -1, -1, -1
+task: pool8 set freq for next task to 5, 0, 0
+task: fire9/squeeze1x1 set freq for next task to -1, -1, -1
+task: fire9/expand1x1 set freq for next task to -1, -1, -1
+task: fire9/expand3x3 set freq for next task to -1, -1, -1
+task: fire9/concat set freq for next task to 5, 0, 0
+task: conv10 set freq for next task to -1, -1, -1
+task: pool10 set freq for next task to -1, -1, -1
+task: flatten set freq for next task to -1, -1, -1
+task: prob set freq for next task to 5, 0, 0
+
+
+WarmUp: First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/space_shuttle_227.jpg
+---------- Top 5 predictions ----------
+
+0.9472 - [id = 812], n04266014 space shuttle
+0.0188 - [id = 833], n04347754 submarine, pigboat, sub, U-boat
+0.0139 - [id = 814], n04273569 speedboat
+0.0037 - [id = 867], n04467665 trailer truck, tractor trailer, trucking rig, rig, articulated lorry, semi
+0.0032 - [id = 871], n04483307 trimaran
+Subgraph0 Ready to trigger Start Running
+
+
+First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/space_shuttle_227.jpg
+---------- Top 5 predictions ----------
+
+0.9472 - [id = 812], n04266014 space shuttle
+0.0188 - [id = 833], n04347754 submarine, pigboat, sub, U-boat
+0.0139 - [id = 814], n04273569 speedboat
+0.0037 - [id = 867], n04467665 trailer truck, tractor trailer, trucking rig, rig, articulated lorry, semi
+0.0032 - [id = 871], n04483307 trimaran
+
+
+First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/gold_fish.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 27], n01631663 eft
+0.0000 - [id = 310], n02219486 ant, emmet, pismire
+0.0000 - [id = 29], n01632777 axolotl, mud puppy, Ambystoma mexicanum
+0.0000 - [id = 26], n01630670 common newt, Triturus vulgaris
+
+
+First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/gondola.ppm
+---------- Top 5 predictions ----------
+
+0.9994 - [id = 576], n03447447 gondola
+0.0001 - [id = 765], n04099969 rocking chair, rocker
+0.0001 - [id = 536], n03216828 dock, dockage, docking facility
+0.0001 - [id = 532], n03201208 dining table, board
+0.0000 - [id = 540], n03240683 drilling platform, offshore rig
+
+
+First graph inferencing image: 3:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/school_bus.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 779], n04146614 school bus
+0.0000 - [id = 705], n03895866 passenger car, coach, carriage
+0.0000 - [id = 829], n04335435 streetcar, tram, tramcar, trolley, trolley car
+0.0000 - [id = 675], n03796401 moving van
+0.0000 - [id = 654], n03769881 minibus
+
+
+First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/go_kart.ppm
+---------- Top 5 predictions ----------
+
+0.9995 - [id = 573], n03444034 go-kart
+0.0001 - [id = 518], n03127747 crash helmet
+0.0001 - [id = 621], n03649909 lawn mower, mower
+0.0001 - [id = 665], n03785016 moped
+0.0000 - [id = 817], n04285008 sports car, sport car
+start of graph: 0 for frame: 5
+
+
+First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/space_shuttle_227.jpg
+---------- Top 5 predictions ----------
+
+0.9472 - [id = 812], n04266014 space shuttle
+0.0188 - [id = 833], n04347754 submarine, pigboat, sub, U-boat
+0.0139 - [id = 814], n04273569 speedboat
+0.0037 - [id = 867], n04467665 trailer truck, tractor trailer, trucking rig, rig, articulated lorry, semi
+0.0032 - [id = 871], n04483307 trimaran
+
+
+First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/gold_fish.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 27], n01631663 eft
+0.0000 - [id = 310], n02219486 ant, emmet, pismire
+0.0000 - [id = 29], n01632777 axolotl, mud puppy, Ambystoma mexicanum
+0.0000 - [id = 26], n01630670 common newt, Triturus vulgaris
+
+
+First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/gondola.ppm
+---------- Top 5 predictions ----------
+
+0.9994 - [id = 576], n03447447 gondola
+0.0001 - [id = 765], n04099969 rocking chair, rocker
+0.0001 - [id = 536], n03216828 dock, dockage, docking facility
+0.0001 - [id = 532], n03201208 dining table, board
+0.0000 - [id = 540], n03240683 drilling platform, offshore rig
+
+
+First graph inferencing image: 3:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/school_bus.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 779], n04146614 school bus
+0.0000 - [id = 705], n03895866 passenger car, coach, carriage
+0.0000 - [id = 829], n04335435 streetcar, tram, tramcar, trolley, trolley car
+0.0000 - [id = 675], n03796401 moving van
+0.0000 - [id = 654], n03769881 minibus
+
+
+First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/go_kart.ppm
+---------- Top 5 predictions ----------
+
+0.9995 - [id = 573], n03444034 go-kart
+0.0001 - [id = 518], n03127747 crash helmet
+0.0001 - [id = 621], n03649909 lawn mower, mower
+0.0001 - [id = 665], n03785016 moped
+0.0000 - [id = 817], n04285008 sports car, sport car
+Finishing power measurement with first subgraph0
+
+
+
+
+
+
+
+================================================
+Start Running All Subgraphs ...
+====================================================
+
+
+
+0	Layer Name: conv1 	 Layer time: 43.8519 	 number of inputs: 3 	 input shape: 3x227x227 	 output shape: 96x111x111
+1	Layer Name: pool1 	 Layer time: 4.6457 	 number of inputs: 1 	 input shape: 96x111x111 	 output shape: 96x55x55
+Layer Number: 0 	 time: 48.4976
+----------------------------
+2	Layer Name: fire2/squeeze1x1 	 Layer time: 2.2381 	 number of inputs: 3 	 input shape: 96x55x55 	 output shape: 16x55x55
+3	Layer Name: fire2/expand1x1 	 Layer time: 1.9319 	 number of inputs: 3 	 input shape: 16x55x55 	 output shape: 64x55x55
+4	Layer Name: fire2/expand3x3 	 Layer time: 8.6545 	 number of inputs: 3 	 input shape: 16x55x55 	 output shape: 64x55x55
+5	Layer Name: fire2/concat 	 Layer time: 2.3721 	 number of inputs: 2 	 input shape: 64x55x55 	 output shape: 128x55x55
+Layer Number: 1 	 time: 15.1966
+----------------------------
+6	Layer Name: fire3/squeeze1x1 	 Layer time: 2.7311 	 number of inputs: 3 	 input shape: 128x55x55 	 output shape: 16x55x55
+7	Layer Name: fire3/expand1x1 	 Layer time: 1.9065 	 number of inputs: 3 	 input shape: 16x55x55 	 output shape: 64x55x55
+8	Layer Name: fire3/expand3x3 	 Layer time: 8.7387 	 number of inputs: 3 	 input shape: 16x55x55 	 output shape: 64x55x55
+9	Layer Name: fire3/concat 	 Layer time: 2.3705 	 number of inputs: 2 	 input shape: 64x55x55 	 output shape: 128x55x55
+Layer Number: 2 	 time: 15.7467
+----------------------------
+10	Layer Name: fire4/squeeze1x1 	 Layer time: 4.4519 	 number of inputs: 3 	 input shape: 128x55x55 	 output shape: 32x55x55
+11	Layer Name: fire4/expand1x1 	 Layer time: 4.3255 	 number of inputs: 3 	 input shape: 32x55x55 	 output shape: 128x55x55
+12	Layer Name: fire4/expand3x3 	 Layer time: 20.5034 	 number of inputs: 3 	 input shape: 32x55x55 	 output shape: 128x55x55
+13	Layer Name: fire4/concat 	 Layer time: 3.1446 	 number of inputs: 2 	 input shape: 128x55x55 	 output shape: 256x55x55
+14	Layer Name: pool4 	 Layer time: 3.3244 	 number of inputs: 1 	 input shape: 256x55x55 	 output shape: 256x27x27
+Layer Number: 3 	 time: 35.7497
+----------------------------
+15	Layer Name: fire5/squeeze1x1 	 Layer time: 2.2026 	 number of inputs: 3 	 input shape: 256x27x27 	 output shape: 32x27x27
+16	Layer Name: fire5/expand1x1 	 Layer time: 1.4482 	 number of inputs: 3 	 input shape: 32x27x27 	 output shape: 128x27x27
+17	Layer Name: fire5/expand3x3 	 Layer time: 5.8682 	 number of inputs: 3 	 input shape: 32x27x27 	 output shape: 128x27x27
+18	Layer Name: fire5/concat 	 Layer time: 1.2300 	 number of inputs: 2 	 input shape: 128x27x27 	 output shape: 256x27x27
+Layer Number: 4 	 time: 10.7490
+----------------------------
+19	Layer Name: fire6/squeeze1x1 	 Layer time: 2.5184 	 number of inputs: 3 	 input shape: 256x27x27 	 output shape: 48x27x27
+20	Layer Name: fire6/expand1x1 	 Layer time: 2.1041 	 number of inputs: 3 	 input shape: 48x27x27 	 output shape: 192x27x27
+21	Layer Name: fire6/expand3x3 	 Layer time: 9.3199 	 number of inputs: 3 	 input shape: 48x27x27 	 output shape: 192x27x27
+22	Layer Name: fire6/concat 	 Layer time: 1.4178 	 number of inputs: 2 	 input shape: 192x27x27 	 output shape: 384x27x27
+Layer Number: 5 	 time: 15.3602
+----------------------------
+23	Layer Name: fire7/squeeze1x1 	 Layer time: 3.7186 	 number of inputs: 3 	 input shape: 384x27x27 	 output shape: 48x27x27
+24	Layer Name: fire7/expand1x1 	 Layer time: 2.1375 	 number of inputs: 3 	 input shape: 48x27x27 	 output shape: 192x27x27
+25	Layer Name: fire7/expand3x3 	 Layer time: 9.4224 	 number of inputs: 3 	 input shape: 48x27x27 	 output shape: 192x27x27
+26	Layer Name: fire7/concat 	 Layer time: 1.3407 	 number of inputs: 2 	 input shape: 192x27x27 	 output shape: 384x27x27
+Layer Number: 6 	 time: 16.6192
+----------------------------
+27	Layer Name: fire8/squeeze1x1 	 Layer time: 4.9102 	 number of inputs: 3 	 input shape: 384x27x27 	 output shape: 64x27x27
+28	Layer Name: fire8/expand1x1 	 Layer time: 3.2023 	 number of inputs: 3 	 input shape: 64x27x27 	 output shape: 256x27x27
+29	Layer Name: fire8/expand3x3 	 Layer time: 14.5831 	 number of inputs: 3 	 input shape: 64x27x27 	 output shape: 256x27x27
+30	Layer Name: fire8/concat 	 Layer time: 1.7351 	 number of inputs: 2 	 input shape: 256x27x27 	 output shape: 512x27x27
+31	Layer Name: pool8 	 Layer time: 1.6932 	 number of inputs: 1 	 input shape: 512x27x27 	 output shape: 512x13x13
+Layer Number: 7 	 time: 26.1238
+----------------------------
+32	Layer Name: fire9/squeeze1x1 	 Layer time: 1.7102 	 number of inputs: 3 	 input shape: 512x13x13 	 output shape: 64x13x13
+33	Layer Name: fire9/expand1x1 	 Layer time: 0.9536 	 number of inputs: 3 	 input shape: 64x13x13 	 output shape: 256x13x13
+34	Layer Name: fire9/expand3x3 	 Layer time: 7.3749 	 number of inputs: 3 	 input shape: 64x13x13 	 output shape: 256x13x13
+35	Layer Name: fire9/concat 	 Layer time: 0.6306 	 number of inputs: 2 	 input shape: 256x13x13 	 output shape: 512x13x13
+Layer Number: 8 	 time: 10.6693
+----------------------------
+36	Layer Name: conv10 	 Layer time: 19.6344 	 number of inputs: 3 	 input shape: 512x13x13 	 output shape: 1000x13x13
+37	Layer Name: pool10 	 Layer time: 2.1474 	 number of inputs: 1 	 input shape: 1000x13x13 	 output shape: 1000
+38	Layer Name: flatten 	 Layer time: 0.1365 	 number of inputs: 1 	 input shape: 1000 	 output shape: 1000
+39	Layer Name: prob 	 Layer time: 0.0780 	 number of inputs: 1 	 input shape: 1000 	 output shape: 1000
+Layer Number: 9 	 time: 21.9964
+----------------------------
+
+ Sum of Layers time: 216.7084
+
+ input time of layer 0 : 34.3137
+
+ transfer_time of layer 0 : 0.0000
+
+ output time of layer 9 : 0.3432
+
+ this part task time: 292.5259
+
+
+Cost0:327.612
+input0_time:34.3137
+task0_time:292.526
+output0_time:0.343204
+total0_time:327.183
+***************************************
+
+Frame Latency: 324.718
+Profiling these DVFS settings finised
+
+Test passed
