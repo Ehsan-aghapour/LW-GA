@@ -76,7 +76,8 @@ with open("transfers.pkl",'rb') as f:
     transfers=pkl.load(f)
 
 
-# +
+# -
+
 class MyProblem(ElementwiseProblem):
     g=0
     n=0
@@ -154,9 +155,6 @@ class MyProblem(ElementwiseProblem):
         out["G"] = [G1]
 
 
-# -
-
-
 Trm=200
 
 #https://pymoo.org/interface/termination.html
@@ -170,7 +168,6 @@ _termination = MultiObjectiveDefaultTermination(
     n_max_evals=Trm*100,
 )
 #__termination = get_termination("n_gen", 50)
-
 '''termination = DefaultMultiObjectiveTermination(
     xtol=1e-8,
     cvtol=1e-6,
@@ -180,27 +177,30 @@ _termination = MultiObjectiveDefaultTermination(
     n_max_evals=100000
 )'''
 
+
+
 def main(_graph='Alex',TargetLatency):
     #graph='Res50'
     graph=_graph
+    N=_NS[graph]
     stime=time.time_ns()
     problem = MyProblem(graph,TargetLatency)
-
+    
     _pop_size=1000
     set_parameters(_Graph=graph)
     algorithm = NSGA2(pop_size=_pop_size,
         sampling=int_random(),
-    #selection=TournamentSelection(func_comp=binary_tournament),
-    crossover=_MY_UniformCrossover(prob=0.5),
-    #mutation=_MY_Mutation(ProbFreqMutation=1/3,ProbHostMutation=1/2,ProbOrderMutation=1/4,ProbPartsMutation=1/4),
-    mutation=_MY_Mutation(ProbFreqMutation=1/12,ProbHostMutation=1/12,ProbOrderMutation=1/12,ProbPartsMutation=1/12),
-    #mutation=_MY_Mutation2(),
-    repair=_MY_Repair(),
+        selection=TournamentSelection(func_comp=binary_tournament),
+        mutation=_MY_Mutation(1/N),
+        crossover=_MY_UniformCrossover(prob=0.5),
     
-    eliminate_duplicates=True,
-    #n_offsprings=None,
-    #display=MultiObjectiveDisplay(),
-    )
+    
+        repair=_MY_Repair(),
+    
+        eliminate_duplicates=True,
+        #n_offsprings=None,
+        #display=MultiObjectiveDisplay(),
+        )
 
     res = minimize(problem,
                 algorithm,
@@ -226,7 +226,6 @@ def main(_graph='Alex',TargetLatency):
     plot.add(res.F, facecolor="none", edgecolor="red")
     plot.show()
     return res
-
 
 if __name__ == "__main__":
     main()

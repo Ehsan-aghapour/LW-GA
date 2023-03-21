@@ -100,15 +100,15 @@ def profile(ff=["7-6-4-[3,6]-4-5-6-7"],_n=n,order='BBBGBBBB',graph="alex",tme="t
     rr=f"PiTest build/examples/LW/{cnn[graph]} test_graph/ CL {params[graph][0]} {params[graph][1]} 1 {_n} 0 0 100 100 {order} 1 2 4 Alex B B"
     oo=open(tme,'w+')
     Run_Graph(ff,rr,oo,True)
-    time.sleep(2)
+    #time.sleep(2)
     oo.close()
 
 
 # +
 def profile_task_time(graph="alex"):
     
-    os.system(f"PiPush ../build/examples/LW/{cnn[graph]} test_graph/")
-    time.sleep(5)
+    #os.system(f"PiPush /home/ehsan/UvA/ARMCL/Rock-Pi/ComputeLibrary_64_CPUGPULW/build/examples/LW/{cnn[graph]} test_graph/")
+    #time.sleep(5)
     NL=NLayers[graph]
     
     C=["G","B","L"]
@@ -139,10 +139,10 @@ def profile_task_time(graph="alex"):
 for graph in graphs:
     profile_task_time(graph)
 
-k=input("ok?")
-if k=='y':
-    with open("transfers.pkl","wb") as f:
-        pk.dump(transfers,f)
+
+
+with open("./transfers.pkl","wb") as f:
+    pk.dump(transfer,f)
 # -
 
 

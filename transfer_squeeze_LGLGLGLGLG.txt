@@ -1,0 +1,116 @@
+/data/data/com.termux/files/home/ARMCL-RockPi//test_graph//graph_squeezenet_n_pipe_npu_lw  --target=CL --data=/data/data/com.termux/files/home/ARMCL-RockPi/assets/./squeezenet/ --image=/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/ --labels=/data/data/com.termux/files/home/ARMCL-RockPi/assets/./labels.txt --n=10 --save=0 --annotate=0 --partition_point=100 --partition_point2=100 --order=LGLGLGLGLG --layer_time=1 --threads=2  --threads2=4 --GPU_host=B --NPU_host=B 
+pandoon
+pandoon
+pandoon
+
+/data/data/com.termux/files/home/ARMCL-RockPi//test_graph//graph_squeezenet_n_pipe_npu_lw
+
+Pandoon opened at 3
+5 Input images are read from /data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/
+NPU host: 4
+Little Cores host: 3
+Big Cores host: 5
+GPU host: 4
+Number of Layers: 10
+Threads : 2
+Small Cores Threads : 4
+Target : CL
+Data type : F32
+Data layout : NHWC
+Tuner enabled? : false
+Cache enabled? : true
+Tuner mode : Normal
+Tuner file : 
+MLGO file : 
+Fast math enabled? : false
+Data path : /data/data/com.termux/files/home/ARMCL-RockPi/assets/./squeezenet/
+Image file : /data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/space_shuttle_227.jpg
+Labels file : /data/data/com.termux/files/home/ARMCL-RockPi/assets/./labels.txt
+Partition point is : 100
+Second partition point is : 100
+Order is : LGLGLGLGLG
+freqs of layers : 
+GPU host is: B
+NPU host is: B
+Number of totla cores is : 6
+Number of little cores is : 4
+Run network for 10 times.
+Layer timing: 1
+
+start creating graph
+creating image accessor
+std::string task_names[] = { "conv1", "pool1" };
+number of tasks: 2
+std::set<std::string> end_task_names = { "pool1" };
+number of end tasks: 1
+std::set<std::string> start_task_names = { "conv1" };
+number of start tasks: 1
+after pass graph 0
+std::string task_names[] = { "fire2/squeeze1x1", "fire2/expand1x1", "fire2/expand3x3", "fire2/concat" };
+number of tasks: 4
+std::set<std::string> end_task_names = { "fire2/concat" };
+number of end tasks: 1
+std::set<std::string> start_task_names = { "fire2/squeeze1x1" };
+number of start tasks: 1
+after pass graph 1
+std::string task_names[] = { "fire3/squeeze1x1", "fire3/expand1x1", "fire3/expand3x3", "fire3/concat" };
+number of tasks: 4
+std::set<std::string> end_task_names = { "fire3/concat" };
+number of end tasks: 1
+std::set<std::string> start_task_names = { "fire3/squeeze1x1" };
+number of start tasks: 1
+after pass graph 2
+std::string task_names[] = { "fire4/squeeze1x1", "fire4/expand1x1", "fire4/expand3x3", "fire4/concat", "pool4" };
+number of tasks: 5
+std::set<std::string> end_task_names = { "pool4" };
+number of end tasks: 1
+std::set<std::string> start_task_names = { "fire4/squeeze1x1" };
+number of start tasks: 1
+after pass graph 3
+std::string task_names[] = { "fire5/squeeze1x1", "fire5/expand1x1", "fire5/expand3x3", "fire5/concat" };
+number of tasks: 4
+std::set<std::string> end_task_names = { "fire5/concat" };
+number of end tasks: 1
+std::set<std::string> start_task_names = { "fire5/squeeze1x1" };
+number of start tasks: 1
+after pass graph 4
+std::string task_names[] = { "fire6/squeeze1x1", "fire6/expand1x1", "fire6/expand3x3", "fire6/concat" };
+number of tasks: 4
+std::set<std::string> end_task_names = { "fire6/concat" };
+number of end tasks: 1
+std::set<std::string> start_task_names = { "fire6/squeeze1x1" };
+number of start tasks: 1
+after pass graph 5
+std::string task_names[] = { "fire7/squeeze1x1", "fire7/expand1x1", "fire7/expand3x3", "fire7/concat" };
+number of tasks: 4
+std::set<std::string> end_task_names = { "fire7/concat" };
+number of end tasks: 1
+std::set<std::string> start_task_names = { "fire7/squeeze1x1" };
+number of start tasks: 1
+after pass graph 6
+std::string task_names[] = { "fire8/squeeze1x1", "fire8/expand1x1", "fire8/expand3x3", "fire8/concat", "pool8" };
+number of tasks: 5
+std::set<std::string> end_task_names = { "pool8" };
+number of end tasks: 1
+std::set<std::string> start_task_names = { "fire8/squeeze1x1" };
+number of start tasks: 1
+after pass graph 7
+std::string task_names[] = { "fire9/squeeze1x1", "fire9/expand1x1", "fire9/expand3x3", "fire9/concat" };
+number of tasks: 4
+std::set<std::string> end_task_names = { "fire9/concat" };
+number of end tasks: 1
+std::set<std::string> start_task_names = { "fire9/squeeze1x1" };
+number of start tasks: 1
+after pass graph 8
+std::string task_names[] = { "conv10", "pool10", "flatten", "prob" };
+number of tasks: 4
+std::set<std::string> end_task_names = { "prob" };
+number of end tasks: 1
+std::set<std::string> start_task_names = { "conv10" };
+number of start tasks: 1
+Total layers:10
+
+after pass graph 9
+0 Running Graph with min LW DVFS
+terminating with uncaught exception of type std::invalid_argument: stoi: no conversion
+Aborted 
