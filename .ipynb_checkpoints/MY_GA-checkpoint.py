@@ -63,7 +63,7 @@ def cmpfreq(v):
   
 #transfer[g][layer][c_dest][c_source]
 #data[g][c][f][fbig][layer][m][t/power]
-datafiles=["10/data10.pkl","100/data100.pkl"]
+datafiles=["Profiling/layers/data.pkl"]
 data={}
 for d in datafiles:
     with open(d,'rb') as f:

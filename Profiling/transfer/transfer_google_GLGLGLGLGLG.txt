@@ -1,0 +1,671 @@
+/data/data/com.termux/files/home/ARMCL-RockPi//test_graph//graph_googlenet_n_pipe_npu_lw  --target=CL --data=/data/data/com.termux/files/home/ARMCL-RockPi/assets/./googlenet/ --image=/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/ --labels=/data/data/com.termux/files/home/ARMCL-RockPi/assets/./labels.txt --n=10 --save=0 --annotate=0 --partition_point=100 --partition_point2=100 --order=GLGLGLGLGLG --layer_time=1 --threads=2  --threads2=4 --GPU_host=B --NPU_host=B 
+pandoon
+pandoon
+pandoon
+
+/data/data/com.termux/files/home/ARMCL-RockPi//test_graph//graph_googlenet_n_pipe_npu_lw
+
+Pandoon opened at 3
+5 Input images are read from /data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/
+NPU host: 4
+Little Cores host: 3
+Big Cores host: 5
+GPU host: 4
+Number of Layers: 11
+graphs id:
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+----------------->0
+Threads : 2
+Small Cores Threads : 4
+Target : CL
+Data type : F32
+Data layout : NHWC
+Tuner enabled? : false
+Cache enabled? : true
+Tuner mode : Normal
+Tuner file : 
+MLGO file : 
+Fast math enabled? : false
+Data path : /data/data/com.termux/files/home/ARMCL-RockPi/assets/./googlenet/
+Image file : /data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gold_fish.ppm
+Labels file : /data/data/com.termux/files/home/ARMCL-RockPi/assets/./labels.txt
+Partition point is : 100
+Second partition point is : 100
+Order is : GLGLGLGLGLG
+freqs of layers : 
+GPU host is: B
+NPU host is: B
+Number of totla cores is : 6
+Number of little cores is : 4
+Run network for 10 times.
+Layer timing: 1
+
+start creating graph
+creating image accessor
+std::string task_names[] = { "conv1/7x7_s2", "pool1/3x3_s2", "pool1/norm1" };
+number of tasks: 3
+std::set<std::string> end_task_names = { "pool1/norm1" };
+number of end tasks: 1
+std::set<std::string> start_task_names = { "conv1/7x7_s2" };
+number of start tasks: 1
+after pass graph 0
+std::string task_names[] = { "conv2/3x3_reduce", "conv2/3x3", "pool2/3x3_s2" };
+number of tasks: 3
+std::set<std::string> end_task_names = { "pool2/3x3_s2" };
+number of end tasks: 1
+std::set<std::string> start_task_names = { "conv2/3x3_reduce" };
+number of start tasks: 1
+after pass graph 1
+std::string task_names[] = { "inception_3a/5x5_reduce", "inception_3a/5x5", "inception_3a/3x3_reduce", "inception_3a/3x3", "inception_3a/1x1", "inception_3a/pool", "inception_3a/pool_proj", "inception_3a/concat" };
+number of tasks: 8
+std::set<std::string> end_task_names = { "inception_3a/concat" };
+number of end tasks: 1
+std::set<std::string> start_task_names = { "inception_3a/5x5_reduce" };
+number of start tasks: 1
+after pass graph 2
+std::string task_names[] = { "inception_3b/5x5_reduce", "inception_3b/5x5", "inception_3b/3x3_reduce", "inception_3b/3x3", "inception_3b/1x1", "inception_3b/pool", "inception_3b/pool_proj", "inception_3b/concat", "pool3/3x3_s2" };
+number of tasks: 9
+std::set<std::string> end_task_names = { "pool3/3x3_s2" };
+number of end tasks: 1
+std::set<std::string> start_task_names = { "inception_3b/5x5_reduce" };
+number of start tasks: 1
+after pass graph 3
+std::string task_names[] = { "inception_4a/5x5_reduce", "inception_4a/5x5", "inception_4a/3x3_reduce", "inception_4a/3x3", "inception_4a/1x1", "inception_4a/pool", "inception_4a/pool_proj", "inception_4a/concat" };
+number of tasks: 8
+std::set<std::string> end_task_names = { "inception_4a/concat" };
+number of end tasks: 1
+std::set<std::string> start_task_names = { "inception_4a/5x5_reduce" };
+number of start tasks: 1
+after pass graph 4
+std::string task_names[] = { "inception_4b/5x5_reduce", "inception_4b/5x5", "inception_4b/3x3_reduce", "inception_4b/3x3", "inception_4b/1x1", "inception_4b/pool", "inception_4b/pool_proj", "inception_4b/concat" };
+number of tasks: 8
+std::set<std::string> end_task_names = { "inception_4b/concat" };
+number of end tasks: 1
+std::set<std::string> start_task_names = { "inception_4b/5x5_reduce" };
+number of start tasks: 1
+after pass graph 5
+std::string task_names[] = { "inception_4c/5x5_reduce", "inception_4c/5x5", "inception_4c/3x3_reduce", "inception_4c/3x3", "inception_4c/1x1", "inception_4c/pool", "inception_4c/pool_proj", "inception_4c/concat" };
+number of tasks: 8
+std::set<std::string> end_task_names = { "inception_4c/concat" };
+number of end tasks: 1
+std::set<std::string> start_task_names = { "inception_4c/5x5_reduce" };
+number of start tasks: 1
+after pass graph 6
+std::string task_names[] = { "inception_4d/5x5_reduce", "inception_4d/5x5", "inception_4d/3x3_reduce", "inception_4d/3x3", "inception_4d/1x1", "inception_4d/pool", "inception_4d/pool_proj", "inception_4d/concat" };
+number of tasks: 8
+std::set<std::string> end_task_names = { "inception_4d/concat" };
+number of end tasks: 1
+std::set<std::string> start_task_names = { "inception_4d/5x5_reduce" };
+number of start tasks: 1
+after pass graph 7
+std::string task_names[] = { "inception_4e/5x5_reduce", "inception_4e/5x5", "inception_4e/3x3_reduce", "inception_4e/3x3", "inception_4e/1x1", "inception_4e/pool", "inception_4e/pool_proj", "inception_4e/concat", "pool4/3x3_s2" };
+number of tasks: 9
+std::set<std::string> end_task_names = { "pool4/3x3_s2" };
+number of end tasks: 1
+std::set<std::string> start_task_names = { "inception_4e/5x5_reduce" };
+number of start tasks: 1
+after pass graph 8
+std::string task_names[] = { "inception_5a/5x5_reduce", "inception_5a/5x5", "inception_5a/3x3_reduce", "inception_5a/3x3", "inception_5a/1x1", "inception_5a/pool", "inception_5a/pool_proj", "inception_5a/concat" };
+number of tasks: 8
+std::set<std::string> end_task_names = { "inception_5a/concat" };
+number of end tasks: 1
+std::set<std::string> start_task_names = { "inception_5a/5x5_reduce" };
+number of start tasks: 1
+after pass graph 9
+std::string task_names[] = { "inception_5b/5x5_reduce", "inception_5b/5x5", "inception_5b/3x3_reduce", "inception_5b/3x3", "inception_5b/1x1", "inception_5b/pool", "inception_5b/pool_proj", "inception_5b/concat", "pool5/7x7_s1", "loss3/classifier", "prob" };
+number of tasks: 11
+std::set<std::string> end_task_names = { "prob" };
+number of end tasks: 1
+std::set<std::string> start_task_names = { "inception_5b/5x5_reduce" };
+number of start tasks: 1
+after pass graph 10
+Total layers:11
+
+0 Running Graph with min LW DVFS
+task: conv1/7x7_s2 set freq for next task to -1, -1, -1
+task: pool1/3x3_s2 set freq for next task to -1, -1, -1
+task: pool1/norm1 set freq for next task to 0, 0, 0
+task: conv2/3x3_reduce set freq for next task to -1, -1, -1
+task: conv2/3x3 set freq for next task to -1, -1, -1
+task: pool2/3x3_s2 set freq for next task to 0, 0, 0
+task: inception_3a/5x5_reduce set freq for next task to -1, -1, -1
+task: inception_3a/5x5 set freq for next task to -1, -1, -1
+task: inception_3a/3x3_reduce set freq for next task to -1, -1, -1
+task: inception_3a/3x3 set freq for next task to -1, -1, -1
+task: inception_3a/1x1 set freq for next task to -1, -1, -1
+task: inception_3a/pool set freq for next task to -1, -1, -1
+task: inception_3a/pool_proj set freq for next task to -1, -1, -1
+task: inception_3a/concat set freq for next task to 0, 0, 0
+task: inception_3b/5x5_reduce set freq for next task to -1, -1, -1
+task: inception_3b/5x5 set freq for next task to -1, -1, -1
+task: inception_3b/3x3_reduce set freq for next task to -1, -1, -1
+task: inception_3b/3x3 set freq for next task to -1, -1, -1
+task: inception_3b/1x1 set freq for next task to -1, -1, -1
+task: inception_3b/pool set freq for next task to -1, -1, -1
+task: inception_3b/pool_proj set freq for next task to -1, -1, -1
+task: inception_3b/concat set freq for next task to -1, -1, -1
+task: pool3/3x3_s2 set freq for next task to 0, 0, 0
+task: inception_4a/5x5_reduce set freq for next task to -1, -1, -1
+task: inception_4a/5x5 set freq for next task to -1, -1, -1
+task: inception_4a/3x3_reduce set freq for next task to -1, -1, -1
+task: inception_4a/3x3 set freq for next task to -1, -1, -1
+task: inception_4a/1x1 set freq for next task to -1, -1, -1
+task: inception_4a/pool set freq for next task to -1, -1, -1
+task: inception_4a/pool_proj set freq for next task to -1, -1, -1
+task: inception_4a/concat set freq for next task to 0, 0, 0
+task: inception_4b/5x5_reduce set freq for next task to -1, -1, -1
+task: inception_4b/5x5 set freq for next task to -1, -1, -1
+task: inception_4b/3x3_reduce set freq for next task to -1, -1, -1
+task: inception_4b/3x3 set freq for next task to -1, -1, -1
+task: inception_4b/1x1 set freq for next task to -1, -1, -1
+task: inception_4b/pool set freq for next task to -1, -1, -1
+task: inception_4b/pool_proj set freq for next task to -1, -1, -1
+task: inception_4b/concat set freq for next task to 0, 0, 0
+task: inception_4c/5x5_reduce set freq for next task to -1, -1, -1
+task: inception_4c/5x5 set freq for next task to -1, -1, -1
+task: inception_4c/3x3_reduce set freq for next task to -1, -1, -1
+task: inception_4c/3x3 set freq for next task to -1, -1, -1
+task: inception_4c/1x1 set freq for next task to -1, -1, -1
+task: inception_4c/pool set freq for next task to -1, -1, -1
+task: inception_4c/pool_proj set freq for next task to -1, -1, -1
+task: inception_4c/concat set freq for next task to 0, 0, 0
+task: inception_4d/5x5_reduce set freq for next task to -1, -1, -1
+task: inception_4d/5x5 set freq for next task to -1, -1, -1
+task: inception_4d/3x3_reduce set freq for next task to -1, -1, -1
+task: inception_4d/3x3 set freq for next task to -1, -1, -1
+task: inception_4d/1x1 set freq for next task to -1, -1, -1
+task: inception_4d/pool set freq for next task to -1, -1, -1
+task: inception_4d/pool_proj set freq for next task to -1, -1, -1
+task: inception_4d/concat set freq for next task to 0, 0, 0
+task: inception_4e/5x5_reduce set freq for next task to -1, -1, -1
+task: inception_4e/5x5 set freq for next task to -1, -1, -1
+task: inception_4e/3x3_reduce set freq for next task to -1, -1, -1
+task: inception_4e/3x3 set freq for next task to -1, -1, -1
+task: inception_4e/1x1 set freq for next task to -1, -1, -1
+task: inception_4e/pool set freq for next task to -1, -1, -1
+task: inception_4e/pool_proj set freq for next task to -1, -1, -1
+task: inception_4e/concat set freq for next task to -1, -1, -1
+task: pool4/3x3_s2 set freq for next task to 0, 0, 0
+task: inception_5a/5x5_reduce set freq for next task to -1, -1, -1
+task: inception_5a/5x5 set freq for next task to -1, -1, -1
+task: inception_5a/3x3_reduce set freq for next task to -1, -1, -1
+task: inception_5a/3x3 set freq for next task to -1, -1, -1
+task: inception_5a/1x1 set freq for next task to -1, -1, -1
+task: inception_5a/pool set freq for next task to -1, -1, -1
+task: inception_5a/pool_proj set freq for next task to -1, -1, -1
+task: inception_5a/concat set freq for next task to 0, 0, 0
+task: inception_5b/5x5_reduce set freq for next task to -1, -1, -1
+task: inception_5b/5x5 set freq for next task to -1, -1, -1
+task: inception_5b/3x3_reduce set freq for next task to -1, -1, -1
+task: inception_5b/3x3 set freq for next task to -1, -1, -1
+task: inception_5b/1x1 set freq for next task to -1, -1, -1
+task: inception_5b/pool set freq for next task to -1, -1, -1
+task: inception_5b/pool_proj set freq for next task to -1, -1, -1
+task: inception_5b/concat set freq for next task to -1, -1, -1
+task: pool5/7x7_s1 set freq for next task to -1, -1, -1
+task: loss3/classifier set freq for next task to -1, -1, -1
+task: prob set freq for next task to 0, 0, 0
+
+
+WarmUp: First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gold_fish.ppm
+Subgraph0 Ready to trigger Start Running
+Subgraph1 Ready to trigger Start Running
+Subgraph2 Ready to trigger Start Running
+Subgraph3 Ready to trigger Start Running
+Subgraph4 Ready to trigger Start Running
+Subgraph5 Ready to trigger Start Running
+Subgraph6 Ready to trigger Start Running
+Subgraph7 Ready to trigger Start Running
+Subgraph8 Ready to trigger Start Running
+Subgraph9 Ready to trigger Start Running
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 392], n02606052 rock beauty, Holocanthus tricolor
+0.0000 - [id = 393], n02607072 anemone fish
+0.0000 - [id = 27], n01631663 eft
+0.0000 - [id = 301], n02165456 ladybug, ladybeetle, lady beetle, ladybird, ladybird beetle
+Subgraph10 Ready to trigger Start Running
+
+
+
+
+
+
+
+================================================
+Start Running All Subgraphs ...
+====================================================
+
+
+
+
+
+First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gold_fish.ppm
+
+
+First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gondola.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 392], n02606052 rock beauty, Holocanthus tricolor
+0.0000 - [id = 393], n02607072 anemone fish
+0.0000 - [id = 27], n01631663 eft
+0.0000 - [id = 301], n02165456 ladybug, ladybeetle, lady beetle, ladybird, ladybird beetle
+
+
+First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/space_shuttle_224.jpg
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 576], n03447447 gondola
+0.0000 - [id = 914], n04612504 yawl
+0.0000 - [id = 724], n03947888 pirate, pirate ship
+0.0000 - [id = 765], n04099969 rocking chair, rocker
+0.0000 - [id = 536], n03216828 dock, dockage, docking facility
+
+
+First graph inferencing image: 3:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/school_bus.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 812], n04266014 space shuttle
+0.0000 - [id = 404], n02690373 airliner
+0.0000 - [id = 466], n02917067 bullet train, bullet
+0.0000 - [id = 833], n04347754 submarine, pigboat, sub, U-boat
+0.0000 - [id = 657], n03773504 missile
+
+
+First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/go_kart.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 779], n04146614 school bus
+0.0000 - [id = 675], n03796401 moving van
+0.0000 - [id = 705], n03895866 passenger car, coach, carriage
+0.0000 - [id = 867], n04467665 trailer truck, tractor trailer, trucking rig, rig, articulated lorry, semi
+0.0000 - [id = 468], n02930766 cab, hack, taxi, taxicab
+start of graph: 0 for frame: 5
+
+
+First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gold_fish.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 573], n03444034 go-kart
+0.0000 - [id = 518], n03127747 crash helmet
+0.0000 - [id = 817], n04285008 sports car, sport car
+0.0000 - [id = 751], n04037443 racer, race car, racing car
+0.0000 - [id = 621], n03649909 lawn mower, mower
+
+
+First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gondola.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 392], n02606052 rock beauty, Holocanthus tricolor
+0.0000 - [id = 393], n02607072 anemone fish
+0.0000 - [id = 27], n01631663 eft
+0.0000 - [id = 301], n02165456 ladybug, ladybeetle, lady beetle, ladybird, ladybird beetle
+
+
+First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/space_shuttle_224.jpg
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 576], n03447447 gondola
+0.0000 - [id = 914], n04612504 yawl
+0.0000 - [id = 724], n03947888 pirate, pirate ship
+0.0000 - [id = 765], n04099969 rocking chair, rocker
+0.0000 - [id = 536], n03216828 dock, dockage, docking facility
+
+
+First graph inferencing image: 3:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/school_bus.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 812], n04266014 space shuttle
+0.0000 - [id = 404], n02690373 airliner
+0.0000 - [id = 466], n02917067 bullet train, bullet
+0.0000 - [id = 833], n04347754 submarine, pigboat, sub, U-boat
+0.0000 - [id = 657], n03773504 missile
+
+
+First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/go_kart.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 779], n04146614 school bus
+0.0000 - [id = 675], n03796401 moving van
+0.0000 - [id = 705], n03895866 passenger car, coach, carriage
+0.0000 - [id = 867], n04467665 trailer truck, tractor trailer, trucking rig, rig, articulated lorry, semi
+0.0000 - [id = 468], n02930766 cab, hack, taxi, taxicab
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 573], n03444034 go-kart
+0.0000 - [id = 518], n03127747 crash helmet
+0.0000 - [id = 817], n04285008 sports car, sport car
+0.0000 - [id = 751], n04037443 racer, race car, racing car
+0.0000 - [id = 621], n03649909 lawn mower, mower
+Finishing power measurement with first subgraph10
+0	Layer Name: conv1/7x7_s2 	 Layer time: 0.5457 	 number of inputs: 3 	 input shape: 3x224x224 	 output shape: 64x112x112
+1	Layer Name: pool1/3x3_s2 	 Layer time: 0.1323 	 number of inputs: 1 	 input shape: 64x112x112 	 output shape: 64x56x56
+2	Layer Name: pool1/norm1 	 Layer time: 74.5137 	 number of inputs: 1 	 input shape: 64x56x56 	 output shape: 64x56x56
+Layer Number: 0 	 time: 75.1916
+----------------------------
+
+ Sum of Layers time: 75.1916
+
+ input time of layer 0 : 505.7805
+
+ transfer_time of layer 0 : 0.0000
+
+ output time of layer 0 : 1.7241
+
+ this part task time: 75.6223
+
+
+Cost0:554.816
+input0_time:505.781
+task0_time:75.6223
+output0_time:1.7241
+total0_time:583.127
+***************************************
+
+0	Layer Name: conv2/3x3_reduce 	 Layer time: 6.3389 	 number of inputs: 3 	 input shape: 64x56x56 	 output shape: 64x56x56
+1	Layer Name: conv2/3x3 	 Layer time: 51.3040 	 number of inputs: 3 	 input shape: 64x56x56 	 output shape: 192x56x56
+2	Layer Name: pool2/3x3_s2 	 Layer time: 3.5150 	 number of inputs: 1 	 input shape: 192x56x56 	 output shape: 192x28x28
+Layer Number: 1 	 time: 61.1579
+----------------------------
+
+ Sum of Layers time: 61.1579
+
+ input time of layer 1 : 0.1539
+
+ transfer_time of layer 1 : 1.8744
+
+ output time of layer 1 : 0.0370
+
+ this part task time: 61.8172
+
+
+Cost1:560.056
+input1_time:0.153879
+task1_time:61.8172
+output1_time:0.0370124
+total1_time:62.0081
+***************************************
+
+0	Layer Name: inception_3a/5x5_reduce 	 Layer time: 0.3791 	 number of inputs: 3 	 input shape: 192x28x28 	 output shape: 16x28x28
+1	Layer Name: inception_3a/5x5 	 Layer time: 0.3407 	 number of inputs: 3 	 input shape: 16x28x28 	 output shape: 32x28x28
+2	Layer Name: inception_3a/3x3_reduce 	 Layer time: 0.2244 	 number of inputs: 3 	 input shape: 192x28x28 	 output shape: 96x28x28
+3	Layer Name: inception_3a/3x3 	 Layer time: 0.4679 	 number of inputs: 3 	 input shape: 96x28x28 	 output shape: 128x28x28
+4	Layer Name: inception_3a/1x1 	 Layer time: 0.2328 	 number of inputs: 3 	 input shape: 192x28x28 	 output shape: 64x28x28
+5	Layer Name: inception_3a/pool 	 Layer time: 0.1168 	 number of inputs: 1 	 input shape: 192x28x28 	 output shape: 192x28x28
+6	Layer Name: inception_3a/pool_proj 	 Layer time: 0.2164 	 number of inputs: 3 	 input shape: 192x28x28 	 output shape: 32x28x28
+7	Layer Name: inception_3a/concat 	 Layer time: 41.8088 	 number of inputs: 4 	 input shape: 64x28x28 	 output shape: 256x28x28
+Layer Number: 2 	 time: 43.7870
+----------------------------
+
+ Sum of Layers time: 43.7870
+
+ input time of layer 2 : 0.7958
+
+ transfer_time of layer 2 : 0.8328
+
+ output time of layer 2 : 1.6640
+
+ this part task time: 44.2815
+
+
+Cost2:564.791
+input2_time:0.795825
+task2_time:44.2815
+output2_time:1.66399
+total2_time:46.7413
+***************************************
+
+0	Layer Name: inception_3b/5x5_reduce 	 Layer time: 3.0588 	 number of inputs: 3 	 input shape: 256x28x28 	 output shape: 32x28x28
+1	Layer Name: inception_3b/5x5 	 Layer time: 19.3857 	 number of inputs: 3 	 input shape: 32x28x28 	 output shape: 96x28x28
+2	Layer Name: inception_3b/3x3_reduce 	 Layer time: 9.7096 	 number of inputs: 3 	 input shape: 256x28x28 	 output shape: 128x28x28
+3	Layer Name: inception_3b/3x3 	 Layer time: 22.6636 	 number of inputs: 3 	 input shape: 128x28x28 	 output shape: 192x28x28
+4	Layer Name: inception_3b/1x1 	 Layer time: 7.2342 	 number of inputs: 3 	 input shape: 256x28x28 	 output shape: 128x28x28
+5	Layer Name: inception_3b/pool 	 Layer time: 1.9778 	 number of inputs: 1 	 input shape: 256x28x28 	 output shape: 256x28x28
+6	Layer Name: inception_3b/pool_proj 	 Layer time: 4.7221 	 number of inputs: 3 	 input shape: 256x28x28 	 output shape: 64x28x28
+7	Layer Name: inception_3b/concat 	 Layer time: 2.4279 	 number of inputs: 4 	 input shape: 128x28x28 	 output shape: 480x28x28
+8	Layer Name: pool3/3x3_s2 	 Layer time: 2.1351 	 number of inputs: 1 	 input shape: 480x28x28 	 output shape: 480x14x14
+Layer Number: 3 	 time: 73.3148
+----------------------------
+
+ Sum of Layers time: 73.3148
+
+ input time of layer 3 : 0.1107
+
+ transfer_time of layer 3 : 1.7747
+
+ output time of layer 3 : 0.0358
+
+ this part task time: 74.0769
+
+
+Cost3:571.728
+input3_time:0.110675
+task3_time:74.0769
+output3_time:0.0358458
+total3_time:74.2234
+0	Layer Name: inception_4a/5x5_reduce 	 Layer time: 0.3694 	 number of inputs: 3 	 input shape: 480x14x14 	 output shape: 16x14x14
+***************************************
+
+1	Layer Name: inception_4a/5x5 	 Layer time: 0.3440 	 number of inputs: 3 	 input shape: 16x14x14 	 output shape: 48x14x14
+2	Layer Name: inception_4a/3x3_reduce 	 Layer time: 0.2321 	 number of inputs: 3 	 input shape: 480x14x14 	 output shape: 96x14x14
+3	Layer Name: inception_4a/3x3 	 Layer time: 0.4834 	 number of inputs: 3 	 input shape: 96x14x14 	 output shape: 208x14x14
+4	Layer Name: inception_4a/1x1 	 Layer time: 0.2277 	 number of inputs: 3 	 input shape: 480x14x14 	 output shape: 192x14x14
+5	Layer Name: inception_4a/pool 	 Layer time: 0.1182 	 number of inputs: 1 	 input shape: 480x14x14 	 output shape: 480x14x14
+6	Layer Name: inception_4a/pool_proj 	 Layer time: 0.2206 	 number of inputs: 3 	 input shape: 480x14x14 	 output shape: 64x14x14
+7	Layer Name: inception_4a/concat 	 Layer time: 33.9447 	 number of inputs: 4 	 input shape: 192x14x14 	 output shape: 512x14x14
+Layer Number: 4 	 time: 35.9401
+----------------------------
+
+ Sum of Layers time: 35.9401
+
+ input time of layer 4 : 0.6007
+
+ transfer_time of layer 4 : 0.6365
+
+ output time of layer 4 : 1.0774
+
+ this part task time: 36.4257
+
+
+Cost4:575.58
+input4_time:0.600704
+task4_time:36.4257
+output4_time:1.07742
+total4_time:38.1038
+***************************************
+
+0	Layer Name: inception_4b/5x5_reduce 	 Layer time: 1.1341 	 number of inputs: 3 	 input shape: 512x14x14 	 output shape: 24x14x14
+1	Layer Name: inception_4b/5x5 	 Layer time: 2.9938 	 number of inputs: 3 	 input shape: 24x14x14 	 output shape: 64x14x14
+2	Layer Name: inception_4b/3x3_reduce 	 Layer time: 3.9013 	 number of inputs: 3 	 input shape: 512x14x14 	 output shape: 112x14x14
+3	Layer Name: inception_4b/3x3 	 Layer time: 13.1759 	 number of inputs: 3 	 input shape: 112x14x14 	 output shape: 224x14x14
+4	Layer Name: inception_4b/1x1 	 Layer time: 5.2119 	 number of inputs: 3 	 input shape: 512x14x14 	 output shape: 160x14x14
+5	Layer Name: inception_4b/pool 	 Layer time: 1.5459 	 number of inputs: 1 	 input shape: 512x14x14 	 output shape: 512x14x14
+6	Layer Name: inception_4b/pool_proj 	 Layer time: 2.3146 	 number of inputs: 3 	 input shape: 512x14x14 	 output shape: 64x14x14
+7	Layer Name: inception_4b/concat 	 Layer time: 1.3221 	 number of inputs: 4 	 input shape: 160x14x14 	 output shape: 512x14x14
+Layer Number: 5 	 time: 31.5996
+----------------------------
+
+ Sum of Layers time: 31.5996
+
+ input time of layer 5 : 0.0932
+
+ transfer_time of layer 5 : 1.1706
+
+ output time of layer 5 : 0.0324
+
+ this part task time: 32.3404
+
+
+Cost5:578.218
+input5_time:0.0931835
+task5_time:32.3404
+output5_time:0.0323751
+total5_time:32.466
+***************************************
+
+0	Layer Name: inception_4c/5x5_reduce 	 Layer time: 0.3645 	 number of inputs: 3 	 input shape: 512x14x14 	 output shape: 24x14x14
+1	Layer Name: inception_4c/5x5 	 Layer time: 0.3587 	 number of inputs: 3 	 input shape: 24x14x14 	 output shape: 64x14x14
+2	Layer Name: inception_4c/3x3_reduce 	 Layer time: 0.2395 	 number of inputs: 3 	 input shape: 512x14x14 	 output shape: 128x14x14
+3	Layer Name: inception_4c/3x3 	 Layer time: 0.4437 	 number of inputs: 3 	 input shape: 128x14x14 	 output shape: 256x14x14
+4	Layer Name: inception_4c/1x1 	 Layer time: 0.2189 	 number of inputs: 3 	 input shape: 512x14x14 	 output shape: 128x14x14
+5	Layer Name: inception_4c/pool 	 Layer time: 0.1187 	 number of inputs: 1 	 input shape: 512x14x14 	 output shape: 512x14x14
+6	Layer Name: inception_4c/pool_proj 	 Layer time: 0.2178 	 number of inputs: 3 	 input shape: 512x14x14 	 output shape: 64x14x14
+7	Layer Name: inception_4c/concat 	 Layer time: 41.6756 	 number of inputs: 4 	 input shape: 128x14x14 	 output shape: 512x14x14
+Layer Number: 6 	 time: 43.6376
+----------------------------
+
+ Sum of Layers time: 43.6376
+
+ input time of layer 6 : 0.6382
+
+ transfer_time of layer 6 : 0.6705
+
+ output time of layer 6 : 1.0539
+
+ this part task time: 44.1179
+
+
+Cost6:582.838
+input6_time:0.638171
+task6_time:44.1179
+output6_time:1.05388
+total6_time:45.8099
+***************************************
+
+0	Layer Name: inception_4d/5x5_reduce 	 Layer time: 1.4923 	 number of inputs: 3 	 input shape: 512x14x14 	 output shape: 32x14x14
+1	Layer Name: inception_4d/5x5 	 Layer time: 3.6560 	 number of inputs: 3 	 input shape: 32x14x14 	 output shape: 64x14x14
+2	Layer Name: inception_4d/3x3_reduce 	 Layer time: 4.1187 	 number of inputs: 3 	 input shape: 512x14x14 	 output shape: 144x14x14
+3	Layer Name: inception_4d/3x3 	 Layer time: 18.9230 	 number of inputs: 3 	 input shape: 144x14x14 	 output shape: 288x14x14
+4	Layer Name: inception_4d/1x1 	 Layer time: 3.5153 	 number of inputs: 3 	 input shape: 512x14x14 	 output shape: 112x14x14
+5	Layer Name: inception_4d/pool 	 Layer time: 1.2343 	 number of inputs: 1 	 input shape: 512x14x14 	 output shape: 512x14x14
+6	Layer Name: inception_4d/pool_proj 	 Layer time: 2.3051 	 number of inputs: 3 	 input shape: 512x14x14 	 output shape: 64x14x14
+7	Layer Name: inception_4d/concat 	 Layer time: 1.4703 	 number of inputs: 4 	 input shape: 112x14x14 	 output shape: 528x14x14
+Layer Number: 7 	 time: 36.7150
+----------------------------
+
+ Sum of Layers time: 36.7150
+
+ input time of layer 7 : 0.1058
+
+ transfer_time of layer 7 : 1.1597
+
+ output time of layer 7 : 0.0324
+
+ this part task time: 37.4424
+
+
+Cost7:586.2
+input7_time:0.105846
+task7_time:37.4424
+output7_time:0.0323748
+total7_time:37.5806
+***************************************
+
+0	Layer Name: inception_4e/5x5_reduce 	 Layer time: 0.3751 	 number of inputs: 3 	 input shape: 528x14x14 	 output shape: 32x14x14
+1	Layer Name: inception_4e/5x5 	 Layer time: 0.3727 	 number of inputs: 3 	 input shape: 32x14x14 	 output shape: 128x14x14
+2	Layer Name: inception_4e/3x3_reduce 	 Layer time: 0.2388 	 number of inputs: 3 	 input shape: 528x14x14 	 output shape: 160x14x14
+3	Layer Name: inception_4e/3x3 	 Layer time: 0.4974 	 number of inputs: 3 	 input shape: 160x14x14 	 output shape: 320x14x14
+4	Layer Name: inception_4e/1x1 	 Layer time: 0.2406 	 number of inputs: 3 	 input shape: 528x14x14 	 output shape: 256x14x14
+5	Layer Name: inception_4e/pool 	 Layer time: 0.1432 	 number of inputs: 1 	 input shape: 528x14x14 	 output shape: 528x14x14
+6	Layer Name: inception_4e/pool_proj 	 Layer time: 0.2378 	 number of inputs: 3 	 input shape: 528x14x14 	 output shape: 128x14x14
+7	Layer Name: inception_4e/concat 	 Layer time: 0.1723 	 number of inputs: 4 	 input shape: 256x14x14 	 output shape: 832x14x14
+8	Layer Name: pool4/3x3_s2 	 Layer time: 66.4724 	 number of inputs: 1 	 input shape: 832x14x14 	 output shape: 832x7x7
+Layer Number: 8 	 time: 68.7503
+----------------------------
+
+ Sum of Layers time: 68.7503
+
+ input time of layer 8 : 0.6338
+
+ transfer_time of layer 8 : 0.6661
+
+ output time of layer 8 : 0.7987
+
+ this part task time: 69.2538
+
+
+Cost8:593.358
+input8_time:0.633775
+task8_time:69.2538
+output8_time:0.7987
+total8_time:70.6863
+***************************************
+
+0	Layer Name: inception_5a/5x5_reduce 	 Layer time: 1.0274 	 number of inputs: 3 	 input shape: 832x7x7 	 output shape: 32x7x7
+1	Layer Name: inception_5a/5x5 	 Layer time: 2.6415 	 number of inputs: 3 	 input shape: 32x7x7 	 output shape: 128x7x7
+2	Layer Name: inception_5a/3x3_reduce 	 Layer time: 3.1487 	 number of inputs: 3 	 input shape: 832x7x7 	 output shape: 160x7x7
+3	Layer Name: inception_5a/3x3 	 Layer time: 7.2145 	 number of inputs: 3 	 input shape: 160x7x7 	 output shape: 320x7x7
+4	Layer Name: inception_5a/1x1 	 Layer time: 4.9081 	 number of inputs: 3 	 input shape: 832x7x7 	 output shape: 256x7x7
+5	Layer Name: inception_5a/pool 	 Layer time: 0.6580 	 number of inputs: 1 	 input shape: 832x7x7 	 output shape: 832x7x7
+6	Layer Name: inception_5a/pool_proj 	 Layer time: 2.5914 	 number of inputs: 3 	 input shape: 832x7x7 	 output shape: 128x7x7
+7	Layer Name: inception_5a/concat 	 Layer time: 1.1024 	 number of inputs: 4 	 input shape: 256x7x7 	 output shape: 832x7x7
+Layer Number: 9 	 time: 23.2919
+----------------------------
+
+ Sum of Layers time: 23.2919
+
+ input time of layer 9 : 0.1413
+
+ transfer_time of layer 9 : 0.9400
+
+ output time of layer 9 : 0.0298
+
+ this part task time: 23.9741
+
+
+Cost9:596.059
+input9_time:0.141304
+task9_time:23.9741
+output9_time:0.0297792
+total9_time:24.1452
+***************************************
+
+0	Layer Name: inception_5b/5x5_reduce 	 Layer time: 0.3609 	 number of inputs: 3 	 input shape: 832x7x7 	 output shape: 48x7x7
+1	Layer Name: inception_5b/5x5 	 Layer time: 0.3812 	 number of inputs: 3 	 input shape: 48x7x7 	 output shape: 128x7x7
+2	Layer Name: inception_5b/3x3_reduce 	 Layer time: 0.2551 	 number of inputs: 3 	 input shape: 832x7x7 	 output shape: 192x7x7
+3	Layer Name: inception_5b/3x3 	 Layer time: 0.4623 	 number of inputs: 3 	 input shape: 192x7x7 	 output shape: 384x7x7
+4	Layer Name: inception_5b/1x1 	 Layer time: 0.2437 	 number of inputs: 3 	 input shape: 832x7x7 	 output shape: 384x7x7
+5	Layer Name: inception_5b/pool 	 Layer time: 0.1310 	 number of inputs: 1 	 input shape: 832x7x7 	 output shape: 832x7x7
+6	Layer Name: inception_5b/pool_proj 	 Layer time: 0.2372 	 number of inputs: 3 	 input shape: 832x7x7 	 output shape: 128x7x7
+7	Layer Name: inception_5b/concat 	 Layer time: 0.1844 	 number of inputs: 4 	 input shape: 384x7x7 	 output shape: 1024x7x7
+8	Layer Name: pool5/7x7_s1 	 Layer time: 0.1076 	 number of inputs: 1 	 input shape: 1024x7x7 	 output shape: 1024
+9	Layer Name: loss3/classifier 	 Layer time: 0.2104 	 number of inputs: 3 	 input shape: 1024 	 output shape: 1000
+10	Layer Name: prob 	 Layer time: 32.7586 	 number of inputs: 1 	 input shape: 1000 	 output shape: 1000
+Layer Number: 10 	 time: 35.3325
+----------------------------
+
+ Sum of Layers time: 35.3325
+
+ input time of layer 10 : 0.4335
+
+ transfer_time of layer 10 : 0.4633
+
+ output time of layer 10 : 1.2750
+
+ this part task time: 35.8125
+
+
+Cost10:600.19
+input10_time:0.433512
+task10_time:35.8125
+output10_time:1.27502
+total10_time:37.5211
+***************************************
+
+Frame Latency: 1075.94
+Profiling these DVFS settings finised
+
+Test passed

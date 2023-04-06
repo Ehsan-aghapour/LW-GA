@@ -1,0 +1,446 @@
+/data/data/com.termux/files/home/ARMCL-RockPi//test_graph//graph_alexnet_n_pipe_npu_lw  --target=CL --data=/data/data/com.termux/files/home/ARMCL-RockPi/assets/./alexnet/ --image=/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/ --labels=/data/data/com.termux/files/home/ARMCL-RockPi/assets/./labels.txt --n=10 --save=0 --annotate=0 --partition_point=100 --partition_point2=100 --order=GBGBGBGB --layer_time=1 --threads=2  --threads2=4 --GPU_host=B --NPU_host=B 
+pandoon
+pandoon
+pandoon
+
+/data/data/com.termux/files/home/ARMCL-RockPi//test_graph//graph_alexnet_n_pipe_npu_lw
+
+Pandoon opened at 3
+5 Input images are read from /data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/
+CN:B, CG:B
+NPU host: 4
+Little Cores host: 3
+Big Cores host: 5
+GPU host: 4
+Number of Layers: 8
+Threads : 2
+Small Cores Threads : 4
+Target : CL
+Data type : F32
+Data layout : NHWC
+Tuner enabled? : false
+Cache enabled? : true
+Tuner mode : Normal
+Tuner file : 
+MLGO file : 
+Fast math enabled? : false
+Data path : /data/data/com.termux/files/home/ARMCL-RockPi/assets/./alexnet/
+Image file : /data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/space_shuttle_227.jpg
+Labels file : /data/data/com.termux/files/home/ARMCL-RockPi/assets/./labels.txt
+Partition point is : 100
+Second partition point is : 100
+Order is : GBGBGBGB
+freqs of layers : 
+GPU host is: B
+NPU host is: B
+Number of totla cores is : 6
+Number of little cores is : 4
+Run network for 10 times.
+Layer timing: 1
+
+start creating graph
+creating image accessor
+std::string task_names[] = { "conv1", "norm1", "pool1" };
+number of tasks: 3
+std::set<std::string> end_task_names = { "pool1" };
+number of end tasks: 1
+std::set<std::string> start_task_names = { "conv1" };
+number of start tasks: 1
+after pass graph 0
+std::string task_names[] = { "conv2_g0", "conv2_g1", "conv2", "norm2", "pool2" };
+number of tasks: 5
+std::set<std::string> end_task_names = { "pool2" };
+number of end tasks: 1
+std::set<std::string> start_task_names = { "conv2_g0" };
+number of start tasks: 1
+after pass graph 1
+std::string task_names[] = { "conv3" };
+number of tasks: 1
+std::set<std::string> end_task_names = { "conv3" };
+number of end tasks: 1
+std::set<std::string> start_task_names = { "conv3" };
+number of start tasks: 1
+after pass graph 2
+std::string task_names[] = { "conv4_g0", "conv4_g1", "conv4" };
+number of tasks: 3
+std::set<std::string> end_task_names = { "conv4" };
+number of end tasks: 1
+std::set<std::string> start_task_names = { "conv4_g0" };
+number of start tasks: 1
+after pass graph 3
+std::string task_names[] = { "conv5_g0", "conv5_g1", "conv5", "pool5" };
+number of tasks: 4
+std::set<std::string> end_task_names = { "pool5" };
+number of end tasks: 1
+std::set<std::string> start_task_names = { "conv5_g0" };
+number of start tasks: 1
+after pass graph 4
+std::string task_names[] = { "fc6" };
+number of tasks: 1
+std::set<std::string> end_task_names = { "fc6" };
+number of end tasks: 1
+std::set<std::string> start_task_names = { "fc6" };
+number of start tasks: 1
+after pass graph 5
+std::string task_names[] = { "fc7" };
+number of tasks: 1
+std::set<std::string> end_task_names = { "fc7" };
+number of end tasks: 1
+std::set<std::string> start_task_names = { "fc7" };
+number of start tasks: 1
+after pass graph 6
+std::string task_names[] = { "fc8", "prob" };
+number of tasks: 2
+std::set<std::string> end_task_names = { "prob" };
+number of end tasks: 1
+std::set<std::string> start_task_names = { "fc8" };
+number of start tasks: 1
+after pass graph 7
+Total layers:8
+
+0 Running Graph with min LW DVFS
+task: conv1 set freq for next task to -1, -1, -1
+task: norm1 set freq for next task to -1, -1, -1
+task: pool1 set freq for next task to 0, 0, 0
+task: conv2_g0 set freq for next task to -1, -1, -1
+task: conv2_g1 set freq for next task to -1, -1, -1
+task: conv2 set freq for next task to -1, -1, -1
+task: norm2 set freq for next task to -1, -1, -1
+task: pool2 set freq for next task to 0, 0, 0
+task: conv3 set freq for next task to 0, 0, 0
+task: conv4_g0 set freq for next task to -1, -1, -1
+task: conv4_g1 set freq for next task to -1, -1, -1
+task: conv4 set freq for next task to 0, 0, 0
+task: conv5_g0 set freq for next task to -1, -1, -1
+task: conv5_g1 set freq for next task to -1, -1, -1
+task: conv5 set freq for next task to -1, -1, -1
+task: pool5 set freq for next task to 0, 0, 0
+task: fc6 set freq for next task to 0, 0, 0
+task: fc7 set freq for next task to 0, 0, 0
+task: fc8 set freq for next task to -1, -1, -1
+task: prob set freq for next task to 0, 0, 0
+
+
+WarmUp: First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/space_shuttle_227.jpg
+Subgraph0 Ready to trigger Start Running
+Subgraph1 Ready to trigger Start Running
+Subgraph2 Ready to trigger Start Running
+Subgraph3 Ready to trigger Start Running
+Subgraph4 Ready to trigger Start Running
+Subgraph5 Ready to trigger Start Running
+Subgraph6 Ready to trigger Start Running
+---------- Top 5 predictions ----------
+
+0.9650 - [id = 812], n04266014 space shuttle
+0.0242 - [id = 404], n02690373 airliner
+0.0057 - [id = 657], n03773504 missile
+0.0021 - [id = 895], n04552348 warplane, military plane
+0.0017 - [id = 744], n04008634 projectile, missile
+Subgraph7 Ready to trigger Start Running
+
+
+
+
+
+
+
+================================================
+Start Running All Subgraphs ...
+====================================================
+
+
+
+
+
+First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/space_shuttle_227.jpg
+
+
+First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/gold_fish.ppm
+---------- Top 5 predictions ----------
+
+0.9650 - [id = 812], n04266014 space shuttle
+0.0242 - [id = 404], n02690373 airliner
+0.0057 - [id = 657], n03773504 missile
+0.0021 - [id = 895], n04552348 warplane, military plane
+0.0017 - [id = 744], n04008634 projectile, missile
+
+
+First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/gondola.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 27], n01631663 eft
+0.0000 - [id = 29], n01632777 axolotl, mud puppy, Ambystoma mexicanum
+0.0000 - [id = 124], n01985128 crayfish, crawfish, crawdad, crawdaddy
+0.0000 - [id = 310], n02219486 ant, emmet, pismire
+
+
+First graph inferencing image: 3:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/school_bus.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 576], n03447447 gondola
+0.0000 - [id = 780], n04147183 schooner
+0.0000 - [id = 724], n03947888 pirate, pirate ship
+0.0000 - [id = 914], n04612504 yawl
+0.0000 - [id = 536], n03216828 dock, dockage, docking facility
+
+
+First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/go_kart.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 779], n04146614 school bus
+0.0000 - [id = 675], n03796401 moving van
+0.0000 - [id = 654], n03769881 minibus
+0.0000 - [id = 705], n03895866 passenger car, coach, carriage
+0.0000 - [id = 757], n04065272 recreational vehicle, RV, R.V.
+start of graph: 0 for frame: 5
+
+
+First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/space_shuttle_227.jpg
+---------- Top 5 predictions ----------
+
+0.9736 - [id = 573], n03444034 go-kart
+0.0118 - [id = 518], n03127747 crash helmet
+0.0108 - [id = 751], n04037443 racer, race car, racing car
+0.0022 - [id = 817], n04285008 sports car, sport car
+0.0006 - [id = 670], n03791053 motor scooter, scooter
+
+
+First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/gold_fish.ppm
+---------- Top 5 predictions ----------
+
+0.9650 - [id = 812], n04266014 space shuttle
+0.0242 - [id = 404], n02690373 airliner
+0.0057 - [id = 657], n03773504 missile
+0.0021 - [id = 895], n04552348 warplane, military plane
+0.0017 - [id = 744], n04008634 projectile, missile
+
+
+First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/gondola.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 27], n01631663 eft
+0.0000 - [id = 29], n01632777 axolotl, mud puppy, Ambystoma mexicanum
+0.0000 - [id = 124], n01985128 crayfish, crawfish, crawdad, crawdaddy
+0.0000 - [id = 310], n02219486 ant, emmet, pismire
+
+
+First graph inferencing image: 3:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/school_bus.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 576], n03447447 gondola
+0.0000 - [id = 780], n04147183 schooner
+0.0000 - [id = 724], n03947888 pirate, pirate ship
+0.0000 - [id = 914], n04612504 yawl
+0.0000 - [id = 536], n03216828 dock, dockage, docking facility
+
+
+First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/go_kart.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 779], n04146614 school bus
+0.0000 - [id = 675], n03796401 moving van
+0.0000 - [id = 654], n03769881 minibus
+0.0000 - [id = 705], n03895866 passenger car, coach, carriage
+0.0000 - [id = 757], n04065272 recreational vehicle, RV, R.V.
+---------- Top 5 predictions ----------
+
+0.9736 - [id = 573], n03444034 go-kart
+0.0118 - [id = 518], n03127747 crash helmet
+0.0108 - [id = 751], n04037443 racer, race car, racing car
+0.0022 - [id = 817], n04285008 sports car, sport car
+0.0006 - [id = 670], n03791053 motor scooter, scooter
+Finishing power measurement with first subgraph7
+0	Layer Name: conv1 	 Layer time: 0.7221 	 number of inputs: 3 	 input shape: 3x227x227 	 output shape: 96x55x55
+1	Layer Name: norm1 	 Layer time: 0.2427 	 number of inputs: 1 	 input shape: 96x55x55 	 output shape: 96x55x55
+2	Layer Name: pool1 	 Layer time: 42.4265 	 number of inputs: 1 	 input shape: 96x55x55 	 output shape: 96x27x27
+Layer Number: 0 	 time: 43.3913
+----------------------------
+
+ Sum of Layers time: 43.3913
+
+ input time of layer 0 : 51.5918
+
+ transfer_time of layer 0 : 0.0000
+
+ output time of layer 0 : 1.3607
+
+ this part task time: 43.9199
+0	Layer Name: conv2_g0 	 Layer time: 64.3076 	 number of inputs: 3 	 input shape: 48x27x27 	 output shape: 128x27x27
+1	Layer Name: conv2_g1 	 Layer time: 53.7999 	 number of inputs: 3 	 input shape: 48x27x27 	 output shape: 128x27x27
+2	Layer Name: conv2 	 Layer time: 1.5327 	 number of inputs: 2 	 input shape: 128x27x27 	 output shape: 256x27x27
+
+
+Cost0:425.273
+input0_time:51.5918
+task0_time:43.9199
+output0_time:1.36068
+total0_time:96.8723
+***************************************
+
+3	Layer Name: norm2 	 Layer time: 15.9478 	 number of inputs: 1 	 input shape: 256x27x27 	 output shape: 256x27x27
+4	Layer Name: pool2 	 Layer time: 0.9983 	 number of inputs: 1 	 input shape: 256x27x27 	 output shape: 256x13x13
+Layer Number: 1 	 time: 136.5863
+----------------------------
+
+ Sum of Layers time: 136.5863
+
+ input time of layer 1 : 0.0496
+
+ transfer_time of layer 1 : 1.2418
+
+ output time of layer 1 : 0.1888
+
+ this part task time: 137.1321
+
+
+Cost1:437.444
+input1_time:0.0496417
+task1_time:137.132
+output1_time:0.188825
+total1_time:137.371
+***************************************
+
+0	Layer Name: conv3 	 Layer time: 35.5479 	 number of inputs: 3 	 input shape: 256x13x13 	 output shape: 384x13x13
+Layer Number: 2 	 time: 35.5479
+----------------------------
+
+ Sum of Layers time: 35.5479
+
+ input time of layer 2 : 0.2920
+
+ transfer_time of layer 2 : 0.3561
+
+ output time of layer 2 : 1.0510
+
+ this part task time: 35.8876
+
+
+Cost2:441.171
+input2_time:0.292046
+task2_time:35.8876
+output2_time:1.05102
+total2_time:37.2307
+***************************************
+
+0	Layer Name: conv4_g0 	 Layer time: 18.2087 	 number of inputs: 3 	 input shape: 192x13x13 	 output shape: 192x13x13
+1	Layer Name: conv4_g1 	 Layer time: 17.8359 	 number of inputs: 3 	 input shape: 192x13x13 	 output shape: 192x13x13
+2	Layer Name: conv4 	 Layer time: 0.6623 	 number of inputs: 2 	 input shape: 192x13x13 	 output shape: 384x13x13
+Layer Number: 3 	 time: 36.7070
+----------------------------
+
+ Sum of Layers time: 36.7070
+
+ input time of layer 3 : 0.0579
+
+ transfer_time of layer 3 : 1.1054
+
+ output time of layer 3 : 0.1442
+
+ this part task time: 37.2125
+
+
+Cost3:444.382
+0	Layer Name: conv5_g0 	 Layer time: 0.5821 	 number of inputs: 3 	 input shape: 192x13x13 	 output shape: 128x13x13
+1	Layer Name: conv5_g1 	 Layer time: 0.4578 	 number of inputs: 3 	 input shape: 192x13x13 	 output shape: 128x13x13
+2	Layer Name: conv5 	 Layer time: 0.1611 	 number of inputs: 2 	 input shape: 128x13x13 	 output shape: 256x13x13
+3	Layer Name: pool5 	 Layer time: 22.6498 	 number of inputs: 1 	 input shape: 256x13x13 	 output shape: 256x6x6
+Layer Number: 4 	 time: 23.8508
+----------------------------
+
+ Sum of Layers time: 23.8508
+
+ input time of layer 4 : 0.3859
+
+ transfer_time of layer 4 : 0.4481
+
+ output time of layer 4 : 0.7763
+
+ this part task time: 24.2642
+input3_time:0.0578667
+task3_time:37.2125
+output3_time:0.144229
+total3_time:37.4146
+***************************************
+
+
+
+Cost4:446.967
+input4_time:0.385904
+task4_time:24.2642
+output4_time:0.776329
+total4_time:25.4265
+***************************************
+
+0	Layer Name: fc6 	 Layer time: 84.9302 	 number of inputs: 3 	 input shape: 256x6x6 	 output shape: 4096
+Layer Number: 5 	 time: 84.9302
+----------------------------
+
+ Sum of Layers time: 84.9302
+
+ input time of layer 5 : 0.0429
+
+ transfer_time of layer 5 : 0.8047
+
+ output time of layer 5 : 0.1064
+
+ this part task time: 85.4058
+
+
+Cost5:455.282
+input5_time:0.042875
+task5_time:85.4058
+output5_time:0.106429
+total5_time:85.5551
+***************************************
+
+0	Layer Name: fc7 	 Layer time: 25.1822 	 number of inputs: 3 	 input shape: 4096 	 output shape: 4096
+Layer Number: 6 	 time: 25.1822
+----------------------------
+
+ Sum of Layers time: 25.1822
+
+ input time of layer 6 : 0.2357
+
+ transfer_time of layer 6 : 0.2852
+
+ output time of layer 6 : 0.7327
+
+ this part task time: 25.5245
+
+
+Cost6:457.943
+input6_time:0.235667
+task6_time:25.5245
+output6_time:0.732696
+total6_time:26.4929
+***************************************
+
+0	Layer Name: fc8 	 Layer time: 10.1770 	 number of inputs: 3 	 input shape: 4096 	 output shape: 1000
+1	Layer Name: prob 	 Layer time: 0.1841 	 number of inputs: 1 	 input shape: 1000 	 output shape: 1000
+Layer Number: 7 	 time: 10.3612
+----------------------------
+
+ Sum of Layers time: 10.3612
+
+ input time of layer 7 : 0.0819
+
+ transfer_time of layer 7 : 0.8023
+
+ output time of layer 7 : 2.2166
+
+ this part task time: 10.8316
+
+
+Cost7:459.515
+input7_time:0.0819001
+task7_time:10.8316
+output7_time:2.21661
+total7_time:13.1301
+***************************************
+
+Frame Latency: 868.615
+Profiling these DVFS settings finised
+
+Test passed

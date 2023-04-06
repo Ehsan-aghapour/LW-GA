@@ -1,0 +1,61 @@
+
+formatted freqs:
+ ['0-1-2-3-4-5-6-7']
+1: /home/ehsan/UvA/ARMCL/Rock-Pi/ComputeLibrary_64_CPUGPULW//build/examples/LW/graph_alexnet_n_pipe_npu_lw
+2: test_graph/
+/home/ehsan/UvA/ARMCL/Rock-Pi/ComputeLibrary_64_CPUGPULW//build/examples/LW/graph_alexnet_n_pipe_npu_lw: 1 file pushed, 0 skipped. 20.2 MB/s (18070000 bytes in 0.854s)
+PiTest build/examples/LW/graph_alexnet_n_pipe_npu_lw test_graph/ CL 1 1 1 100 0 0 100 100 BBBBBBBB 1 2 4 Alex B B
+Serial port /dev/ttyACM0 opened  Baudrate 115200
+Start Monitoring Power...
+Next freq:[[0], [1], [2], [3], [4], [5], [6], [7]]
+Tasks:{0: 77.1722, 1: 86.6736, 2: 27.6539, 3: 17.8882, 4: 11.3665, 5: 34.1354, 6: 14.8788, 7: 3.9412}
+Inputs:{0: 60.831}
+trans:{0: 0.0}
+outs:{7: 0.4506}
+sum tasks+input:334.5408
+{'0': 336.857}
+latency is 336.857
+fn is [0, 0, 1, 2, 3, 4, 5, 6, 7]
+in:0, next_freq:0 time(next_freq):61.2754 cur_freq:7 time(cur_freq):13.9746 time:49.428706713608975
+layer:0, next_freq:0 time(next_freq):82.8549 cur_freq:0 time(cur_freq):82.8549 time:82.8549
+layer:1, next_freq:1 time(next_freq):80.3011 cur_freq:0 time(cur_freq):116.1498 time:81.3813468019747
+layer:2, next_freq:2 time(next_freq):28.4869 cur_freq:1 time(cur_freq):33.7706 time:29.03450501738198
+layer:3, next_freq:3 time(next_freq):17.9117 cur_freq:2 time(cur_freq):20.6357 time:18.373714857746528
+layer:4, next_freq:4 time(next_freq):11.3985 cur_freq:3 time(cur_freq):12.6831 time:11.752995352082692
+layer:5, next_freq:5 time(next_freq):34.3126 cur_freq:4 time(cur_freq):34.6352 time:34.345199782879845
+layer:6, next_freq:6 time(next_freq):14.8209 cur_freq:5 time(cur_freq):14.9419 time:14.84924311566802
+layer:7, next_freq:7 time(next_freq):3.9 cur_freq:6 time(cur_freq):3.8766 time:3.8788732394366194
+time with dvfs delay: 325.8994848807793
+time without dvfs delay: 335.262
+
+
+formatted freqs:
+ ['7-6-5-4-3-2-1-0']
+1: /home/ehsan/UvA/ARMCL/Rock-Pi/ComputeLibrary_64_CPUGPULW//build/examples/LW/graph_alexnet_n_pipe_npu_lw
+2: test_graph/
+closing file and serial port
+/home/ehsan/UvA/ARMCL/Rock-Pi/ComputeLibrary_64_CPUGPULW//build/examples/LW/graph_alexnet_n_pipe_npu_lw: 1 file pushed, 0 skipped. 20.1 MB/s (18070000 bytes in 0.857s)
+PiTest build/examples/LW/graph_alexnet_n_pipe_npu_lw test_graph/ CL 1 1 1 100 0 0 100 100 BBBBBBBB 1 2 4 Alex B B
+Serial port /dev/ttyACM0 opened  Baudrate 115200
+Start Monitoring Power...
+Next freq:[[7], [6], [5], [4], [3], [2], [1], [0]]
+Tasks:{0: 21.5944, 1: 34.4876, 2: 17.9133, 3: 15.6438, 4: 12.0245, 5: 42.4497, 6: 24.5233, 7: 9.18}
+Inputs:{0: 14.8845}
+trans:{0: 0.0}
+outs:{7: 0.8638}
+sum tasks+input:192.70110000000003
+{'0': 195.235}
+latency is 195.235
+fn is [7, 7, 6, 5, 4, 3, 2, 1, 0]
+in:0, next_freq:7 time(next_freq):13.9746 cur_freq:0 time(cur_freq):61.2754 time:16.676382444504647
+layer:0, next_freq:7 time(next_freq):20.4201 cur_freq:7 time(cur_freq):20.4201 time:20.4201
+layer:1, next_freq:6 time(next_freq):32.3765 cur_freq:7 time(cur_freq):29.9458 time:32.09240506849041
+layer:2, next_freq:5 time(next_freq):22.4738 cur_freq:6 time(cur_freq):21.5202 time:22.3187085045678
+layer:3, next_freq:4 time(next_freq):16.2534 cur_freq:5 time(cur_freq):14.8817 time:15.930792367807442
+layer:4, next_freq:3 time(next_freq):12.6831 cur_freq:4 time(cur_freq):11.3985 time:12.28865336228451
+layer:5, next_freq:2 time(next_freq):42.8814 cur_freq:3 time(cur_freq):36.7285 time:42.29506649876799
+layer:6, next_freq:1 time(next_freq):24.7084 cur_freq:2 time(cur_freq):18.758 time:23.59813238085084
+layer:7, next_freq:0 time(next_freq):9.4839 cur_freq:1 time(cur_freq):6.4946 time:7.872938585902134
+time with dvfs delay: 193.49317921317578
+time without dvfs delay: 195.2552
+closing file and serial port
