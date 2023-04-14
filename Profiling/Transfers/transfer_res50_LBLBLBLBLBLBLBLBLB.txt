@@ -1,0 +1,1775 @@
+/data/data/com.termux/files/home/ARMCL-RockPi//test_graph//graph_resnet50_n_pipe_npu_lw  --target=CL --data=/data/data/com.termux/files/home/ARMCL-RockPi/assets/./resnet50/ --image=/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/ --labels=/data/data/com.termux/files/home/ARMCL-RockPi/assets/./labels.txt --n=100 --save=0 --annotate=0 --partition_point=100 --partition_point2=100 --order=LBLBLBLBLBLBLBLBLB --layer_time=1 --threads=2  --threads2=4 --GPU_host=B --NPU_host=B 
+pandoon
+pandoon
+pandoon
+
+/data/data/com.termux/files/home/ARMCL-RockPi//test_graph//graph_resnet50_n_pipe_npu_lw
+
+Pandoon opened at 3
+5 Input images are read from /data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/
+NPU host: 4
+Little Cores host: 3
+Big Cores host: 5
+GPU host: 4
+Number of Layers: 18
+Threads : 2
+Small Cores Threads : 4
+Target : CL
+Data type : F32
+Data layout : NHWC
+Tuner enabled? : false
+Cache enabled? : true
+Tuner mode : Normal
+Tuner file : 
+MLGO file : 
+Fast math enabled? : false
+Data path : /data/data/com.termux/files/home/ARMCL-RockPi/assets/./resnet50/
+Image file : /data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gold_fish.ppm
+Labels file : /data/data/com.termux/files/home/ARMCL-RockPi/assets/./labels.txt
+Partition point is : 100
+Second partition point is : 100
+Order is : LBLBLBLBLBLBLBLBLB
+freqs of layers : 
+GPU host is: B
+NPU host is: B
+Number of totla cores is : 6
+Number of little cores is : 4
+Run network for 100 times.
+Layer timing: 1
+
+start creating graph
+creating image accessor
+std::string task_names[] = { "conv1/convolution+conv1/BatchNorm", "pool1/MaxPool" };
+number of tasks: 2
+std::set<std::string> end_task_names = { "pool1/MaxPool" };
+number of end tasks: 1
+std::set<std::string> start_task_names = { "conv1/convolution+conv1/BatchNorm" };
+number of start tasks: 1
+after pass graph 0
+std::string task_names[] = { "block1/unit1/bottleneck_v1/shortcut/convolution+block1/unit1/bottleneck_v1/shortcut/BatchNorm", "block1/unit1/bottleneck_v1/conv1/convolution+block1/unit1/bottleneck_v1/conv1/BatchNorm", "block1/unit1/bottleneck_v1/conv2/convolution+block1/unit1/bottleneck_v1/conv2/BatchNorm", "block1/unit1/bottleneck_v1/conv3/convolution+block1/unit1/bottleneck_v1/conv3/BatchNorm", "block1/unit1/bottleneck_v1/add", "block1/unit1/bottleneck_v1/Relu" };
+number of tasks: 6
+std::set<std::string> end_task_names = { "block1/unit1/bottleneck_v1/add" };
+number of end tasks: 1
+std::set<std::string> start_task_names = { "block1/unit1/bottleneck_v1/shortcut/convolution+block1/unit1/bottleneck_v1/shortcut/BatchNorm", "block1/unit1/bottleneck_v1/Relu" };
+number of start tasks: 1
+after pass graph 1
+std::string task_names[] = { "block1/unit2/bottleneck_v1/conv1/convolution+block1/unit2/bottleneck_v1/conv1/BatchNorm", "block1/unit2/bottleneck_v1/conv2/convolution+block1/unit2/bottleneck_v1/conv2/BatchNorm", "block1/unit2/bottleneck_v1/conv3/convolution+block1/unit2/bottleneck_v1/conv3/BatchNorm", "block1/unit2/bottleneck_v1/add", "block1/unit2/bottleneck_v1/Relu" };
+number of tasks: 5
+std::set<std::string> end_task_names = { "block1/unit2/bottleneck_v1/add" };
+number of end tasks: 1
+std::set<std::string> start_task_names = { "block1/unit2/bottleneck_v1/conv1/convolution+block1/unit2/bottleneck_v1/conv1/BatchNorm", "block1/unit2/bottleneck_v1/Relu" };
+number of start tasks: 1
+after pass graph 2
+std::string task_names[] = { "block1/unit3/bottleneck_v1/conv1/convolution+block1/unit3/bottleneck_v1/conv1/BatchNorm", "block1/unit3/bottleneck_v1/conv2/convolution+block1/unit3/bottleneck_v1/conv2/BatchNorm", "block1/unit3/bottleneck_v1/conv3/convolution+block1/unit3/bottleneck_v1/conv3/BatchNorm", "block1/unit3/bottleneck_v1/add", "block1/unit3/bottleneck_v1/Relu" };
+number of tasks: 5
+std::set<std::string> end_task_names = { "block1/unit3/bottleneck_v1/add" };
+number of end tasks: 1
+std::set<std::string> start_task_names = { "block1/unit3/bottleneck_v1/conv1/convolution+block1/unit3/bottleneck_v1/conv1/BatchNorm", "block1/unit3/bottleneck_v1/Relu" };
+number of start tasks: 1
+after pass graph 3
+std::string task_names[] = { "block2/unit1/bottleneck_v1/shortcut/convolution+block2/unit1/bottleneck_v1/shortcut/BatchNorm", "block2/unit1/bottleneck_v1/conv1/convolution+block2/unit1/bottleneck_v1/conv1/BatchNorm", "block2/unit1/bottleneck_v1/conv2/convolution+block2/unit1/bottleneck_v1/conv2/BatchNorm", "block2/unit1/bottleneck_v1/conv3/convolution+block2/unit1/bottleneck_v1/conv3/BatchNorm", "block2/unit1/bottleneck_v1/add", "block2/unit1/bottleneck_v1/Relu" };
+number of tasks: 6
+std::set<std::string> end_task_names = { "block2/unit1/bottleneck_v1/add" };
+number of end tasks: 1
+std::set<std::string> start_task_names = { "block2/unit1/bottleneck_v1/shortcut/convolution+block2/unit1/bottleneck_v1/shortcut/BatchNorm", "block2/unit1/bottleneck_v1/Relu" };
+number of start tasks: 1
+after pass graph 4
+std::string task_names[] = { "block2/unit2/bottleneck_v1/conv1/convolution+block2/unit2/bottleneck_v1/conv1/BatchNorm", "block2/unit2/bottleneck_v1/conv2/convolution+block2/unit2/bottleneck_v1/conv2/BatchNorm", "block2/unit2/bottleneck_v1/conv3/convolution+block2/unit2/bottleneck_v1/conv3/BatchNorm", "block2/unit2/bottleneck_v1/add", "block2/unit2/bottleneck_v1/Relu" };
+number of tasks: 5
+std::set<std::string> end_task_names = { "block2/unit2/bottleneck_v1/add" };
+number of end tasks: 1
+std::set<std::string> start_task_names = { "block2/unit2/bottleneck_v1/conv1/convolution+block2/unit2/bottleneck_v1/conv1/BatchNorm", "block2/unit2/bottleneck_v1/Relu" };
+number of start tasks: 1
+after pass graph 5
+std::string task_names[] = { "block2/unit3/bottleneck_v1/conv1/convolution+block2/unit3/bottleneck_v1/conv1/BatchNorm", "block2/unit3/bottleneck_v1/conv2/convolution+block2/unit3/bottleneck_v1/conv2/BatchNorm", "block2/unit3/bottleneck_v1/conv3/convolution+block2/unit3/bottleneck_v1/conv3/BatchNorm", "block2/unit3/bottleneck_v1/add", "block2/unit3/bottleneck_v1/Relu" };
+number of tasks: 5
+std::set<std::string> end_task_names = { "block2/unit3/bottleneck_v1/add" };
+number of end tasks: 1
+std::set<std::string> start_task_names = { "block2/unit3/bottleneck_v1/conv1/convolution+block2/unit3/bottleneck_v1/conv1/BatchNorm", "block2/unit3/bottleneck_v1/Relu" };
+number of start tasks: 1
+after pass graph 6
+std::string task_names[] = { "block2/unit4/bottleneck_v1/conv1/convolution+block2/unit4/bottleneck_v1/conv1/BatchNorm", "block2/unit4/bottleneck_v1/conv2/convolution+block2/unit4/bottleneck_v1/conv2/BatchNorm", "block2/unit4/bottleneck_v1/conv3/convolution+block2/unit4/bottleneck_v1/conv3/BatchNorm", "block2/unit4/bottleneck_v1/add", "block2/unit4/bottleneck_v1/Relu" };
+number of tasks: 5
+std::set<std::string> end_task_names = { "block2/unit4/bottleneck_v1/add" };
+number of end tasks: 1
+std::set<std::string> start_task_names = { "block2/unit4/bottleneck_v1/conv1/convolution+block2/unit4/bottleneck_v1/conv1/BatchNorm", "block2/unit4/bottleneck_v1/Relu" };
+number of start tasks: 1
+after pass graph 7
+std::string task_names[] = { "block3/unit1/bottleneck_v1/shortcut/convolution+block3/unit1/bottleneck_v1/shortcut/BatchNorm", "block3/unit1/bottleneck_v1/conv1/convolution+block3/unit1/bottleneck_v1/conv1/BatchNorm", "block3/unit1/bottleneck_v1/conv2/convolution+block3/unit1/bottleneck_v1/conv2/BatchNorm", "block3/unit1/bottleneck_v1/conv3/convolution+block3/unit1/bottleneck_v1/conv3/BatchNorm", "block3/unit1/bottleneck_v1/add", "block3/unit1/bottleneck_v1/Relu" };
+number of tasks: 6
+std::set<std::string> end_task_names = { "block3/unit1/bottleneck_v1/add" };
+number of end tasks: 1
+std::set<std::string> start_task_names = { "block3/unit1/bottleneck_v1/shortcut/convolution+block3/unit1/bottleneck_v1/shortcut/BatchNorm", "block3/unit1/bottleneck_v1/Relu" };
+number of start tasks: 1
+after pass graph 8
+std::string task_names[] = { "block3/unit2/bottleneck_v1/conv1/convolution+block3/unit2/bottleneck_v1/conv1/BatchNorm", "block3/unit2/bottleneck_v1/conv2/convolution+block3/unit2/bottleneck_v1/conv2/BatchNorm", "block3/unit2/bottleneck_v1/conv3/convolution+block3/unit2/bottleneck_v1/conv3/BatchNorm", "block3/unit2/bottleneck_v1/add", "block3/unit2/bottleneck_v1/Relu" };
+number of tasks: 5
+std::set<std::string> end_task_names = { "block3/unit2/bottleneck_v1/add" };
+number of end tasks: 1
+std::set<std::string> start_task_names = { "block3/unit2/bottleneck_v1/conv1/convolution+block3/unit2/bottleneck_v1/conv1/BatchNorm", "block3/unit2/bottleneck_v1/Relu" };
+number of start tasks: 1
+after pass graph 9
+std::string task_names[] = { "block3/unit3/bottleneck_v1/conv1/convolution+block3/unit3/bottleneck_v1/conv1/BatchNorm", "block3/unit3/bottleneck_v1/conv2/convolution+block3/unit3/bottleneck_v1/conv2/BatchNorm", "block3/unit3/bottleneck_v1/conv3/convolution+block3/unit3/bottleneck_v1/conv3/BatchNorm", "block3/unit3/bottleneck_v1/add", "block3/unit3/bottleneck_v1/Relu" };
+number of tasks: 5
+std::set<std::string> end_task_names = { "block3/unit3/bottleneck_v1/add" };
+number of end tasks: 1
+std::set<std::string> start_task_names = { "block3/unit3/bottleneck_v1/conv1/convolution+block3/unit3/bottleneck_v1/conv1/BatchNorm", "block3/unit3/bottleneck_v1/Relu" };
+number of start tasks: 1
+after pass graph 10
+std::string task_names[] = { "block3/unit4/bottleneck_v1/conv1/convolution+block3/unit4/bottleneck_v1/conv1/BatchNorm", "block3/unit4/bottleneck_v1/conv2/convolution+block3/unit4/bottleneck_v1/conv2/BatchNorm", "block3/unit4/bottleneck_v1/conv3/convolution+block3/unit4/bottleneck_v1/conv3/BatchNorm", "block3/unit4/bottleneck_v1/add", "block3/unit4/bottleneck_v1/Relu" };
+number of tasks: 5
+std::set<std::string> end_task_names = { "block3/unit4/bottleneck_v1/add" };
+number of end tasks: 1
+std::set<std::string> start_task_names = { "block3/unit4/bottleneck_v1/conv1/convolution+block3/unit4/bottleneck_v1/conv1/BatchNorm", "block3/unit4/bottleneck_v1/Relu" };
+number of start tasks: 1
+after pass graph 11
+std::string task_names[] = { "block3/unit5/bottleneck_v1/conv1/convolution+block3/unit5/bottleneck_v1/conv1/BatchNorm", "block3/unit5/bottleneck_v1/conv2/convolution+block3/unit5/bottleneck_v1/conv2/BatchNorm", "block3/unit5/bottleneck_v1/conv3/convolution+block3/unit5/bottleneck_v1/conv3/BatchNorm", "block3/unit5/bottleneck_v1/add", "block3/unit5/bottleneck_v1/Relu" };
+number of tasks: 5
+std::set<std::string> end_task_names = { "block3/unit5/bottleneck_v1/add" };
+number of end tasks: 1
+std::set<std::string> start_task_names = { "block3/unit5/bottleneck_v1/conv1/convolution+block3/unit5/bottleneck_v1/conv1/BatchNorm", "block3/unit5/bottleneck_v1/Relu" };
+number of start tasks: 1
+after pass graph 12
+std::string task_names[] = { "block3/unit6/bottleneck_v1/conv1/convolution+block3/unit6/bottleneck_v1/conv1/BatchNorm", "block3/unit6/bottleneck_v1/conv2/convolution+block3/unit6/bottleneck_v1/conv2/BatchNorm", "block3/unit6/bottleneck_v1/conv3/convolution+block3/unit6/bottleneck_v1/conv3/BatchNorm", "block3/unit6/bottleneck_v1/add", "block3/unit6/bottleneck_v1/Relu" };
+number of tasks: 5
+std::set<std::string> end_task_names = { "block3/unit6/bottleneck_v1/add" };
+number of end tasks: 1
+std::set<std::string> start_task_names = { "block3/unit6/bottleneck_v1/conv1/convolution+block3/unit6/bottleneck_v1/conv1/BatchNorm", "block3/unit6/bottleneck_v1/Relu" };
+number of start tasks: 1
+after pass graph 13
+std::string task_names[] = { "block4/unit1/bottleneck_v1/shortcut/convolution+block4/unit1/bottleneck_v1/shortcut/BatchNorm", "block4/unit1/bottleneck_v1/conv1/convolution+block4/unit1/bottleneck_v1/conv1/BatchNorm", "block4/unit1/bottleneck_v1/conv2/convolution+block4/unit1/bottleneck_v1/conv2/BatchNorm", "block4/unit1/bottleneck_v1/conv3/convolution+block4/unit1/bottleneck_v1/conv3/BatchNorm", "block4/unit1/bottleneck_v1/add", "block4/unit1/bottleneck_v1/Relu" };
+number of tasks: 6
+std::set<std::string> end_task_names = { "block4/unit1/bottleneck_v1/add" };
+number of end tasks: 1
+std::set<std::string> start_task_names = { "block4/unit1/bottleneck_v1/shortcut/convolution+block4/unit1/bottleneck_v1/shortcut/BatchNorm", "block4/unit1/bottleneck_v1/Relu" };
+number of start tasks: 1
+after pass graph 14
+std::string task_names[] = { "block4/unit2/bottleneck_v1/conv1/convolution+block4/unit2/bottleneck_v1/conv1/BatchNorm", "block4/unit2/bottleneck_v1/conv2/convolution+block4/unit2/bottleneck_v1/conv2/BatchNorm", "block4/unit2/bottleneck_v1/conv3/convolution+block4/unit2/bottleneck_v1/conv3/BatchNorm", "block4/unit2/bottleneck_v1/add", "block4/unit2/bottleneck_v1/Relu" };
+number of tasks: 5
+std::set<std::string> end_task_names = { "block4/unit2/bottleneck_v1/add" };
+number of end tasks: 1
+std::set<std::string> start_task_names = { "block4/unit2/bottleneck_v1/conv1/convolution+block4/unit2/bottleneck_v1/conv1/BatchNorm", "block4/unit2/bottleneck_v1/Relu" };
+number of start tasks: 1
+after pass graph 15
+std::string task_names[] = { "block4/unit3/bottleneck_v1/conv1/convolution+block4/unit3/bottleneck_v1/conv1/BatchNorm", "block4/unit3/bottleneck_v1/conv2/convolution+block4/unit3/bottleneck_v1/conv2/BatchNorm", "block4/unit3/bottleneck_v1/conv3/convolution+block4/unit3/bottleneck_v1/conv3/BatchNorm", "block4/unit3/bottleneck_v1/add", "block4/unit3/bottleneck_v1/Relu", "pool5" };
+number of tasks: 6
+std::set<std::string> end_task_names = { "pool5" };
+number of end tasks: 1
+std::set<std::string> start_task_names = { "block4/unit3/bottleneck_v1/conv1/convolution+block4/unit3/bottleneck_v1/conv1/BatchNorm" };
+number of start tasks: 1
+after pass graph 16
+std::string task_names[] = { "logits/convolution", "predictions/Reshape", "predictions/Softmax" };
+number of tasks: 3
+std::set<std::string> end_task_names = { "predictions/Softmax" };
+number of end tasks: 1
+std::set<std::string> start_task_names = { "logits/convolution" };
+number of start tasks: 1
+Total layers:18
+
+after pass graph 17
+0 Running Graph with min LW DVFS
+task: conv1/convolution+conv1/BatchNorm set freq for next task to -1, -1, -1
+task: pool1/MaxPool set freq for next task to 0, 0, 0
+task: block1/unit1/bottleneck_v1/shortcut/convolution+block1/unit1/bottleneck_v1/shortcut/BatchNorm set freq for next task to -1, -1, -1
+task: block1/unit1/bottleneck_v1/conv1/convolution+block1/unit1/bottleneck_v1/conv1/BatchNorm set freq for next task to -1, -1, -1
+task: block1/unit1/bottleneck_v1/conv2/convolution+block1/unit1/bottleneck_v1/conv2/BatchNorm set freq for next task to -1, -1, -1
+task: block1/unit1/bottleneck_v1/conv3/convolution+block1/unit1/bottleneck_v1/conv3/BatchNorm set freq for next task to -1, -1, -1
+task: block1/unit1/bottleneck_v1/add set freq for next task to 0, 0, 0
+task: block1/unit1/bottleneck_v1/Relu set freq for next task to -1, -1, -1
+task: block1/unit2/bottleneck_v1/conv1/convolution+block1/unit2/bottleneck_v1/conv1/BatchNorm set freq for next task to -1, -1, -1
+task: block1/unit2/bottleneck_v1/conv2/convolution+block1/unit2/bottleneck_v1/conv2/BatchNorm set freq for next task to -1, -1, -1
+task: block1/unit2/bottleneck_v1/conv3/convolution+block1/unit2/bottleneck_v1/conv3/BatchNorm set freq for next task to -1, -1, -1
+task: block1/unit2/bottleneck_v1/add set freq for next task to 0, 0, 0
+task: block1/unit2/bottleneck_v1/Relu set freq for next task to -1, -1, -1
+task: block1/unit3/bottleneck_v1/conv1/convolution+block1/unit3/bottleneck_v1/conv1/BatchNorm set freq for next task to -1, -1, -1
+task: block1/unit3/bottleneck_v1/conv2/convolution+block1/unit3/bottleneck_v1/conv2/BatchNorm set freq for next task to -1, -1, -1
+task: block1/unit3/bottleneck_v1/conv3/convolution+block1/unit3/bottleneck_v1/conv3/BatchNorm set freq for next task to -1, -1, -1
+task: block1/unit3/bottleneck_v1/add set freq for next task to 0, 0, 0
+task: block1/unit3/bottleneck_v1/Relu set freq for next task to -1, -1, -1
+task: block2/unit1/bottleneck_v1/shortcut/convolution+block2/unit1/bottleneck_v1/shortcut/BatchNorm set freq for next task to -1, -1, -1
+task: block2/unit1/bottleneck_v1/conv1/convolution+block2/unit1/bottleneck_v1/conv1/BatchNorm set freq for next task to -1, -1, -1
+task: block2/unit1/bottleneck_v1/conv2/convolution+block2/unit1/bottleneck_v1/conv2/BatchNorm set freq for next task to -1, -1, -1
+task: block2/unit1/bottleneck_v1/conv3/convolution+block2/unit1/bottleneck_v1/conv3/BatchNorm set freq for next task to -1, -1, -1
+task: block2/unit1/bottleneck_v1/add set freq for next task to 0, 0, 0
+task: block2/unit1/bottleneck_v1/Relu set freq for next task to -1, -1, -1
+task: block2/unit2/bottleneck_v1/conv1/convolution+block2/unit2/bottleneck_v1/conv1/BatchNorm set freq for next task to -1, -1, -1
+task: block2/unit2/bottleneck_v1/conv2/convolution+block2/unit2/bottleneck_v1/conv2/BatchNorm set freq for next task to -1, -1, -1
+task: block2/unit2/bottleneck_v1/conv3/convolution+block2/unit2/bottleneck_v1/conv3/BatchNorm set freq for next task to -1, -1, -1
+task: block2/unit2/bottleneck_v1/add set freq for next task to 0, 0, 0
+task: block2/unit2/bottleneck_v1/Relu set freq for next task to -1, -1, -1
+task: block2/unit3/bottleneck_v1/conv1/convolution+block2/unit3/bottleneck_v1/conv1/BatchNorm set freq for next task to -1, -1, -1
+task: block2/unit3/bottleneck_v1/conv2/convolution+block2/unit3/bottleneck_v1/conv2/BatchNorm set freq for next task to -1, -1, -1
+task: block2/unit3/bottleneck_v1/conv3/convolution+block2/unit3/bottleneck_v1/conv3/BatchNorm set freq for next task to -1, -1, -1
+task: block2/unit3/bottleneck_v1/add set freq for next task to 0, 0, 0
+task: block2/unit3/bottleneck_v1/Relu set freq for next task to -1, -1, -1
+task: block2/unit4/bottleneck_v1/conv1/convolution+block2/unit4/bottleneck_v1/conv1/BatchNorm set freq for next task to -1, -1, -1
+task: block2/unit4/bottleneck_v1/conv2/convolution+block2/unit4/bottleneck_v1/conv2/BatchNorm set freq for next task to -1, -1, -1
+task: block2/unit4/bottleneck_v1/conv3/convolution+block2/unit4/bottleneck_v1/conv3/BatchNorm set freq for next task to -1, -1, -1
+task: block2/unit4/bottleneck_v1/add set freq for next task to 0, 0, 0
+task: block2/unit4/bottleneck_v1/Relu set freq for next task to -1, -1, -1
+task: block3/unit1/bottleneck_v1/shortcut/convolution+block3/unit1/bottleneck_v1/shortcut/BatchNorm set freq for next task to -1, -1, -1
+task: block3/unit1/bottleneck_v1/conv1/convolution+block3/unit1/bottleneck_v1/conv1/BatchNorm set freq for next task to -1, -1, -1
+task: block3/unit1/bottleneck_v1/conv2/convolution+block3/unit1/bottleneck_v1/conv2/BatchNorm set freq for next task to -1, -1, -1
+task: block3/unit1/bottleneck_v1/conv3/convolution+block3/unit1/bottleneck_v1/conv3/BatchNorm set freq for next task to -1, -1, -1
+task: block3/unit1/bottleneck_v1/add set freq for next task to 0, 0, 0
+task: block3/unit1/bottleneck_v1/Relu set freq for next task to -1, -1, -1
+task: block3/unit2/bottleneck_v1/conv1/convolution+block3/unit2/bottleneck_v1/conv1/BatchNorm set freq for next task to -1, -1, -1
+task: block3/unit2/bottleneck_v1/conv2/convolution+block3/unit2/bottleneck_v1/conv2/BatchNorm set freq for next task to -1, -1, -1
+task: block3/unit2/bottleneck_v1/conv3/convolution+block3/unit2/bottleneck_v1/conv3/BatchNorm set freq for next task to -1, -1, -1
+task: block3/unit2/bottleneck_v1/add set freq for next task to 0, 0, 0
+task: block3/unit2/bottleneck_v1/Relu set freq for next task to -1, -1, -1
+task: block3/unit3/bottleneck_v1/conv1/convolution+block3/unit3/bottleneck_v1/conv1/BatchNorm set freq for next task to -1, -1, -1
+task: block3/unit3/bottleneck_v1/conv2/convolution+block3/unit3/bottleneck_v1/conv2/BatchNorm set freq for next task to -1, -1, -1
+task: block3/unit3/bottleneck_v1/conv3/convolution+block3/unit3/bottleneck_v1/conv3/BatchNorm set freq for next task to -1, -1, -1
+task: block3/unit3/bottleneck_v1/add set freq for next task to 0, 0, 0
+task: block3/unit3/bottleneck_v1/Relu set freq for next task to -1, -1, -1
+task: block3/unit4/bottleneck_v1/conv1/convolution+block3/unit4/bottleneck_v1/conv1/BatchNorm set freq for next task to -1, -1, -1
+task: block3/unit4/bottleneck_v1/conv2/convolution+block3/unit4/bottleneck_v1/conv2/BatchNorm set freq for next task to -1, -1, -1
+task: block3/unit4/bottleneck_v1/conv3/convolution+block3/unit4/bottleneck_v1/conv3/BatchNorm set freq for next task to -1, -1, -1
+task: block3/unit4/bottleneck_v1/add set freq for next task to 0, 0, 0
+task: block3/unit4/bottleneck_v1/Relu set freq for next task to -1, -1, -1
+task: block3/unit5/bottleneck_v1/conv1/convolution+block3/unit5/bottleneck_v1/conv1/BatchNorm set freq for next task to -1, -1, -1
+task: block3/unit5/bottleneck_v1/conv2/convolution+block3/unit5/bottleneck_v1/conv2/BatchNorm set freq for next task to -1, -1, -1
+task: block3/unit5/bottleneck_v1/conv3/convolution+block3/unit5/bottleneck_v1/conv3/BatchNorm set freq for next task to -1, -1, -1
+task: block3/unit5/bottleneck_v1/add set freq for next task to 0, 0, 0
+task: block3/unit5/bottleneck_v1/Relu set freq for next task to -1, -1, -1
+task: block3/unit6/bottleneck_v1/conv1/convolution+block3/unit6/bottleneck_v1/conv1/BatchNorm set freq for next task to -1, -1, -1
+task: block3/unit6/bottleneck_v1/conv2/convolution+block3/unit6/bottleneck_v1/conv2/BatchNorm set freq for next task to -1, -1, -1
+task: block3/unit6/bottleneck_v1/conv3/convolution+block3/unit6/bottleneck_v1/conv3/BatchNorm set freq for next task to -1, -1, -1
+task: block3/unit6/bottleneck_v1/add set freq for next task to 0, 0, 0
+task: block3/unit6/bottleneck_v1/Relu set freq for next task to -1, -1, -1
+task: block4/unit1/bottleneck_v1/shortcut/convolution+block4/unit1/bottleneck_v1/shortcut/BatchNorm set freq for next task to -1, -1, -1
+task: block4/unit1/bottleneck_v1/conv1/convolution+block4/unit1/bottleneck_v1/conv1/BatchNorm set freq for next task to -1, -1, -1
+task: block4/unit1/bottleneck_v1/conv2/convolution+block4/unit1/bottleneck_v1/conv2/BatchNorm set freq for next task to -1, -1, -1
+task: block4/unit1/bottleneck_v1/conv3/convolution+block4/unit1/bottleneck_v1/conv3/BatchNorm set freq for next task to -1, -1, -1
+task: block4/unit1/bottleneck_v1/add set freq for next task to 0, 0, 0
+task: block4/unit1/bottleneck_v1/Relu set freq for next task to -1, -1, -1
+task: block4/unit2/bottleneck_v1/conv1/convolution+block4/unit2/bottleneck_v1/conv1/BatchNorm set freq for next task to -1, -1, -1
+task: block4/unit2/bottleneck_v1/conv2/convolution+block4/unit2/bottleneck_v1/conv2/BatchNorm set freq for next task to -1, -1, -1
+task: block4/unit2/bottleneck_v1/conv3/convolution+block4/unit2/bottleneck_v1/conv3/BatchNorm set freq for next task to -1, -1, -1
+task: block4/unit2/bottleneck_v1/add set freq for next task to 0, 0, 0
+task: block4/unit2/bottleneck_v1/Relu set freq for next task to -1, -1, -1
+task: block4/unit3/bottleneck_v1/conv1/convolution+block4/unit3/bottleneck_v1/conv1/BatchNorm set freq for next task to -1, -1, -1
+task: block4/unit3/bottleneck_v1/conv2/convolution+block4/unit3/bottleneck_v1/conv2/BatchNorm set freq for next task to -1, -1, -1
+task: block4/unit3/bottleneck_v1/conv3/convolution+block4/unit3/bottleneck_v1/conv3/BatchNorm set freq for next task to -1, -1, -1
+task: block4/unit3/bottleneck_v1/add set freq for next task to -1, -1, -1
+task: block4/unit3/bottleneck_v1/Relu set freq for next task to -1, -1, -1
+task: pool5 set freq for next task to 0, 0, 0
+task: logits/convolution set freq for next task to -1, -1, -1
+task: predictions/Reshape set freq for next task to -1, -1, -1
+task: predictions/Softmax set freq for next task to 0, 0, 0
+
+
+WarmUp: First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gold_fish.ppm
+Subgraph0 Ready to trigger Start Running
+Subgraph1 Ready to trigger Start Running
+Subgraph2 Ready to trigger Start Running
+Subgraph3 Ready to trigger Start Running
+Subgraph4 Ready to trigger Start Running
+Subgraph5 Ready to trigger Start Running
+Subgraph6 Ready to trigger Start Running
+Subgraph7 Ready to trigger Start Running
+Subgraph8 Ready to trigger Start Running
+Subgraph9 Ready to trigger Start Running
+Subgraph10 Ready to trigger Start Running
+Subgraph11 Ready to trigger Start Running
+Subgraph12 Ready to trigger Start Running
+Subgraph13 Ready to trigger Start Running
+Subgraph14 Ready to trigger Start Running
+
+
+
+
+
+
+
+================================================
+Start Running All Subgraphs ...
+====================================================
+
+
+
+
+
+First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gold_fish.ppm
+Subgraph15 Ready to trigger Start Running
+Subgraph16 Ready to trigger Start Running
+---------- Top 5 predictions ----------
+
+0.6029 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0729 - [id = 723], n03944341 pinwheel
+0.0292 - [id = 397], n02655020 puffer, pufferfish, blowfish, globefish
+0.0256 - [id = 392], n02606052 rock beauty, Holocanthus tricolor
+0.0231 - [id = 973], n09256479 coral reef
+Subgraph17 Ready to trigger Start Running
+
+
+First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gondola.ppm
+---------- Top 5 predictions ----------
+
+0.4335 - [id = 626], n03666591 lighter, light, igniter, ignitor
+0.2656 - [id = 644], n03729826 matchstick
+0.1539 - [id = 470], n02948072 candle, taper, wax light
+0.1425 - [id = 862], n04456115 torch
+0.0015 - [id = 818], n04286575 spotlight, spot
+
+
+First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/space_shuttle_224.jpg
+---------- Top 5 predictions ----------
+
+0.9999 - [id = 576], n03447447 gondola
+0.0000 - [id = 780], n04147183 schooner
+0.0000 - [id = 914], n04612504 yawl
+0.0000 - [id = 536], n03216828 dock, dockage, docking facility
+0.0000 - [id = 913], n04606251 wreck
+
+
+First graph inferencing image: 3:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/school_bus.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 812], n04266014 space shuttle
+0.0000 - [id = 657], n03773504 missile
+0.0000 - [id = 517], n03126707 crane
+0.0000 - [id = 744], n04008634 projectile, missile
+0.0000 - [id = 404], n02690373 airliner
+
+
+First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/go_kart.ppm
+---------- Top 5 predictions ----------
+
+0.8981 - [id = 779], n04146614 school bus
+0.0376 - [id = 920], n06874185 traffic light, traffic signal, stoplight
+0.0314 - [id = 468], n02930766 cab, hack, taxi, taxicab
+0.0065 - [id = 734], n03977966 police van, police wagon, paddy wagon, patrol wagon, wagon, black Maria
+0.0057 - [id = 407], n02701002 ambulance
+
+
+First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gold_fish.ppm
+---------- Top 5 predictions ----------
+
+0.9986 - [id = 573], n03444034 go-kart
+0.0005 - [id = 751], n04037443 racer, race car, racing car
+0.0003 - [id = 468], n02930766 cab, hack, taxi, taxicab
+0.0002 - [id = 518], n03127747 crash helmet
+0.0001 - [id = 428], n02797295 barrow, garden cart, lawn cart, wheelbarrow
+
+
+First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gondola.ppm
+---------- Top 5 predictions ----------
+
+0.2138 - [id = 1], n01443537 goldfish, Carassius auratus
+0.1912 - [id = 723], n03944341 pinwheel
+0.1027 - [id = 632], n03691459 loudspeaker, speaker, speaker unit, loudspeaker system, speaker system
+0.0979 - [id = 818], n04286575 spotlight, spot
+0.0398 - [id = 626], n03666591 lighter, light, igniter, ignitor
+
+
+First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/space_shuttle_224.jpg
+---------- Top 5 predictions ----------
+
+0.9997 - [id = 576], n03447447 gondola
+0.0002 - [id = 470], n02948072 candle, taper, wax light
+0.0000 - [id = 978], n09428293 seashore, coast, seacoast, sea-coast
+0.0000 - [id = 536], n03216828 dock, dockage, docking facility
+0.0000 - [id = 780], n04147183 schooner
+
+
+First graph inferencing image: 3:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/school_bus.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 812], n04266014 space shuttle
+0.0000 - [id = 657], n03773504 missile
+0.0000 - [id = 517], n03126707 crane
+0.0000 - [id = 744], n04008634 projectile, missile
+0.0000 - [id = 404], n02690373 airliner
+
+
+First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/go_kart.ppm
+---------- Top 5 predictions ----------
+
+0.5278 - [id = 779], n04146614 school bus
+0.0596 - [id = 867], n04467665 trailer truck, tractor trailer, trucking rig, rig, articulated lorry, semi
+0.0398 - [id = 734], n03977966 police van, police wagon, paddy wagon, patrol wagon, wagon, black Maria
+0.0331 - [id = 654], n03769881 minibus
+0.0305 - [id = 705], n03895866 passenger car, coach, carriage
+
+
+First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gold_fish.ppm
+---------- Top 5 predictions ----------
+
+0.9986 - [id = 573], n03444034 go-kart
+0.0005 - [id = 751], n04037443 racer, race car, racing car
+0.0003 - [id = 468], n02930766 cab, hack, taxi, taxicab
+0.0002 - [id = 518], n03127747 crash helmet
+0.0001 - [id = 428], n02797295 barrow, garden cart, lawn cart, wheelbarrow
+
+
+First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gondola.ppm
+---------- Top 5 predictions ----------
+
+0.6029 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0729 - [id = 723], n03944341 pinwheel
+0.0292 - [id = 397], n02655020 puffer, pufferfish, blowfish, globefish
+0.0256 - [id = 392], n02606052 rock beauty, Holocanthus tricolor
+0.0231 - [id = 973], n09256479 coral reef
+
+
+First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/space_shuttle_224.jpg
+---------- Top 5 predictions ----------
+
+0.9998 - [id = 576], n03447447 gondola
+0.0001 - [id = 470], n02948072 candle, taper, wax light
+0.0000 - [id = 978], n09428293 seashore, coast, seacoast, sea-coast
+0.0000 - [id = 536], n03216828 dock, dockage, docking facility
+0.0000 - [id = 780], n04147183 schooner
+
+
+First graph inferencing image: 3:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/school_bus.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 812], n04266014 space shuttle
+0.0000 - [id = 657], n03773504 missile
+0.0000 - [id = 744], n04008634 projectile, missile
+0.0000 - [id = 517], n03126707 crane
+0.0000 - [id = 404], n02690373 airliner
+
+
+First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/go_kart.ppm
+---------- Top 5 predictions ----------
+
+0.5281 - [id = 779], n04146614 school bus
+0.0590 - [id = 867], n04467665 trailer truck, tractor trailer, trucking rig, rig, articulated lorry, semi
+0.0401 - [id = 734], n03977966 police van, police wagon, paddy wagon, patrol wagon, wagon, black Maria
+0.0332 - [id = 654], n03769881 minibus
+0.0306 - [id = 705], n03895866 passenger car, coach, carriage
+
+
+First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gold_fish.ppm
+---------- Top 5 predictions ----------
+
+0.9994 - [id = 573], n03444034 go-kart
+0.0004 - [id = 751], n04037443 racer, race car, racing car
+0.0000 - [id = 598], n03529860 home theater, home theatre
+0.0000 - [id = 817], n04285008 sports car, sport car
+0.0000 - [id = 518], n03127747 crash helmet
+
+
+First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gondola.ppm
+---------- Top 5 predictions ----------
+
+0.3909 - [id = 644], n03729826 matchstick
+0.2934 - [id = 626], n03666591 lighter, light, igniter, ignitor
+0.2295 - [id = 862], n04456115 torch
+0.0257 - [id = 470], n02948072 candle, taper, wax light
+0.0210 - [id = 818], n04286575 spotlight, spot
+
+
+First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/space_shuttle_224.jpg
+---------- Top 5 predictions ----------
+
+0.9998 - [id = 576], n03447447 gondola
+0.0001 - [id = 470], n02948072 candle, taper, wax light
+0.0000 - [id = 978], n09428293 seashore, coast, seacoast, sea-coast
+0.0000 - [id = 536], n03216828 dock, dockage, docking facility
+0.0000 - [id = 780], n04147183 schooner
+
+
+First graph inferencing image: 3:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/school_bus.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 812], n04266014 space shuttle
+0.0000 - [id = 657], n03773504 missile
+0.0000 - [id = 517], n03126707 crane
+0.0000 - [id = 744], n04008634 projectile, missile
+0.0000 - [id = 404], n02690373 airliner
+
+
+First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/go_kart.ppm
+---------- Top 5 predictions ----------
+
+0.5274 - [id = 779], n04146614 school bus
+0.0627 - [id = 867], n04467665 trailer truck, tractor trailer, trucking rig, rig, articulated lorry, semi
+0.0389 - [id = 734], n03977966 police van, police wagon, paddy wagon, patrol wagon, wagon, black Maria
+0.0331 - [id = 654], n03769881 minibus
+0.0295 - [id = 705], n03895866 passenger car, coach, carriage
+
+
+First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gold_fish.ppm
+---------- Top 5 predictions ----------
+
+0.9986 - [id = 573], n03444034 go-kart
+0.0005 - [id = 751], n04037443 racer, race car, racing car
+0.0003 - [id = 468], n02930766 cab, hack, taxi, taxicab
+0.0002 - [id = 518], n03127747 crash helmet
+0.0001 - [id = 428], n02797295 barrow, garden cart, lawn cart, wheelbarrow
+
+
+First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gondola.ppm
+---------- Top 5 predictions ----------
+
+0.6354 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0721 - [id = 723], n03944341 pinwheel
+0.0243 - [id = 392], n02606052 rock beauty, Holocanthus tricolor
+0.0242 - [id = 397], n02655020 puffer, pufferfish, blowfish, globefish
+0.0213 - [id = 973], n09256479 coral reef
+
+
+First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/space_shuttle_224.jpg
+---------- Top 5 predictions ----------
+
+0.9998 - [id = 576], n03447447 gondola
+0.0001 - [id = 470], n02948072 candle, taper, wax light
+0.0000 - [id = 536], n03216828 dock, dockage, docking facility
+0.0000 - [id = 978], n09428293 seashore, coast, seacoast, sea-coast
+0.0000 - [id = 780], n04147183 schooner
+
+
+First graph inferencing image: 3:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/school_bus.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 812], n04266014 space shuttle
+0.0000 - [id = 657], n03773504 missile
+0.0000 - [id = 744], n04008634 projectile, missile
+0.0000 - [id = 517], n03126707 crane
+0.0000 - [id = 404], n02690373 airliner
+
+
+First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/go_kart.ppm
+---------- Top 5 predictions ----------
+
+0.5281 - [id = 779], n04146614 school bus
+0.0590 - [id = 867], n04467665 trailer truck, tractor trailer, trucking rig, rig, articulated lorry, semi
+0.0401 - [id = 734], n03977966 police van, police wagon, paddy wagon, patrol wagon, wagon, black Maria
+0.0332 - [id = 654], n03769881 minibus
+0.0306 - [id = 705], n03895866 passenger car, coach, carriage
+
+
+First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gold_fish.ppm
+---------- Top 5 predictions ----------
+
+0.9995 - [id = 573], n03444034 go-kart
+0.0003 - [id = 751], n04037443 racer, race car, racing car
+0.0000 - [id = 408], n02704792 amphibian, amphibious vehicle
+0.0000 - [id = 621], n03649909 lawn mower, mower
+0.0000 - [id = 817], n04285008 sports car, sport car
+
+
+First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gondola.ppm
+---------- Top 5 predictions ----------
+
+0.3909 - [id = 644], n03729826 matchstick
+0.2935 - [id = 626], n03666591 lighter, light, igniter, ignitor
+0.2295 - [id = 862], n04456115 torch
+0.0257 - [id = 470], n02948072 candle, taper, wax light
+0.0210 - [id = 818], n04286575 spotlight, spot
+
+
+First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/space_shuttle_224.jpg
+---------- Top 5 predictions ----------
+
+0.9999 - [id = 576], n03447447 gondola
+0.0000 - [id = 780], n04147183 schooner
+0.0000 - [id = 914], n04612504 yawl
+0.0000 - [id = 536], n03216828 dock, dockage, docking facility
+0.0000 - [id = 913], n04606251 wreck
+
+
+First graph inferencing image: 3:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/school_bus.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 812], n04266014 space shuttle
+0.0000 - [id = 657], n03773504 missile
+0.0000 - [id = 744], n04008634 projectile, missile
+0.0000 - [id = 517], n03126707 crane
+0.0000 - [id = 404], n02690373 airliner
+
+
+First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/go_kart.ppm
+---------- Top 5 predictions ----------
+
+0.6732 - [id = 779], n04146614 school bus
+0.0538 - [id = 407], n02701002 ambulance
+0.0532 - [id = 734], n03977966 police van, police wagon, paddy wagon, patrol wagon, wagon, black Maria
+0.0399 - [id = 468], n02930766 cab, hack, taxi, taxicab
+0.0296 - [id = 920], n06874185 traffic light, traffic signal, stoplight
+
+
+First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gold_fish.ppm
+---------- Top 5 predictions ----------
+
+0.9994 - [id = 573], n03444034 go-kart
+0.0004 - [id = 751], n04037443 racer, race car, racing car
+0.0000 - [id = 598], n03529860 home theater, home theatre
+0.0000 - [id = 817], n04285008 sports car, sport car
+0.0000 - [id = 518], n03127747 crash helmet
+
+
+First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gondola.ppm
+---------- Top 5 predictions ----------
+
+0.3909 - [id = 644], n03729826 matchstick
+0.2935 - [id = 626], n03666591 lighter, light, igniter, ignitor
+0.2295 - [id = 862], n04456115 torch
+0.0257 - [id = 470], n02948072 candle, taper, wax light
+0.0210 - [id = 818], n04286575 spotlight, spot
+
+
+First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/space_shuttle_224.jpg
+---------- Top 5 predictions ----------
+
+0.9998 - [id = 576], n03447447 gondola
+0.0001 - [id = 470], n02948072 candle, taper, wax light
+0.0000 - [id = 978], n09428293 seashore, coast, seacoast, sea-coast
+0.0000 - [id = 536], n03216828 dock, dockage, docking facility
+0.0000 - [id = 780], n04147183 schooner
+
+
+First graph inferencing image: 3:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/school_bus.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 812], n04266014 space shuttle
+0.0000 - [id = 657], n03773504 missile
+0.0000 - [id = 744], n04008634 projectile, missile
+0.0000 - [id = 517], n03126707 crane
+0.0000 - [id = 404], n02690373 airliner
+
+
+First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/go_kart.ppm
+---------- Top 5 predictions ----------
+
+0.8979 - [id = 779], n04146614 school bus
+0.0373 - [id = 920], n06874185 traffic light, traffic signal, stoplight
+0.0317 - [id = 468], n02930766 cab, hack, taxi, taxicab
+0.0067 - [id = 734], n03977966 police van, police wagon, paddy wagon, patrol wagon, wagon, black Maria
+0.0057 - [id = 407], n02701002 ambulance
+
+
+First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gold_fish.ppm
+---------- Top 5 predictions ----------
+
+0.9986 - [id = 573], n03444034 go-kart
+0.0005 - [id = 751], n04037443 racer, race car, racing car
+0.0003 - [id = 468], n02930766 cab, hack, taxi, taxicab
+0.0002 - [id = 518], n03127747 crash helmet
+0.0001 - [id = 428], n02797295 barrow, garden cart, lawn cart, wheelbarrow
+
+
+First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gondola.ppm
+---------- Top 5 predictions ----------
+
+0.4230 - [id = 626], n03666591 lighter, light, igniter, ignitor
+0.2582 - [id = 644], n03729826 matchstick
+0.1576 - [id = 470], n02948072 candle, taper, wax light
+0.1566 - [id = 862], n04456115 torch
+0.0016 - [id = 818], n04286575 spotlight, spot
+
+
+First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/space_shuttle_224.jpg
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 576], n03447447 gondola
+0.0000 - [id = 780], n04147183 schooner
+0.0000 - [id = 978], n09428293 seashore, coast, seacoast, sea-coast
+0.0000 - [id = 536], n03216828 dock, dockage, docking facility
+0.0000 - [id = 724], n03947888 pirate, pirate ship
+
+
+First graph inferencing image: 3:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/school_bus.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 812], n04266014 space shuttle
+0.0000 - [id = 657], n03773504 missile
+0.0000 - [id = 744], n04008634 projectile, missile
+0.0000 - [id = 517], n03126707 crane
+0.0000 - [id = 404], n02690373 airliner
+
+
+First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/go_kart.ppm
+---------- Top 5 predictions ----------
+
+0.6719 - [id = 779], n04146614 school bus
+0.0538 - [id = 407], n02701002 ambulance
+0.0538 - [id = 734], n03977966 police van, police wagon, paddy wagon, patrol wagon, wagon, black Maria
+0.0397 - [id = 468], n02930766 cab, hack, taxi, taxicab
+0.0298 - [id = 920], n06874185 traffic light, traffic signal, stoplight
+
+
+First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gold_fish.ppm
+---------- Top 5 predictions ----------
+
+0.9996 - [id = 573], n03444034 go-kart
+0.0002 - [id = 751], n04037443 racer, race car, racing car
+0.0000 - [id = 518], n03127747 crash helmet
+0.0000 - [id = 428], n02797295 barrow, garden cart, lawn cart, wheelbarrow
+0.0000 - [id = 598], n03529860 home theater, home theatre
+
+
+First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gondola.ppm
+---------- Top 5 predictions ----------
+
+0.4700 - [id = 644], n03729826 matchstick
+0.1423 - [id = 468], n02930766 cab, hack, taxi, taxicab
+0.0898 - [id = 626], n03666591 lighter, light, igniter, ignitor
+0.0765 - [id = 862], n04456115 torch
+0.0591 - [id = 818], n04286575 spotlight, spot
+
+
+First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/space_shuttle_224.jpg
+---------- Top 5 predictions ----------
+
+0.9999 - [id = 576], n03447447 gondola
+0.0000 - [id = 780], n04147183 schooner
+0.0000 - [id = 914], n04612504 yawl
+0.0000 - [id = 536], n03216828 dock, dockage, docking facility
+0.0000 - [id = 913], n04606251 wreck
+
+
+First graph inferencing image: 3:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/school_bus.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 812], n04266014 space shuttle
+0.0000 - [id = 657], n03773504 missile
+0.0000 - [id = 517], n03126707 crane
+0.0000 - [id = 744], n04008634 projectile, missile
+0.0000 - [id = 404], n02690373 airliner
+
+
+First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/go_kart.ppm
+---------- Top 5 predictions ----------
+
+0.2708 - [id = 779], n04146614 school bus
+0.0944 - [id = 734], n03977966 police van, police wagon, paddy wagon, patrol wagon, wagon, black Maria
+0.0559 - [id = 555], n03345487 fire engine, fire truck
+0.0518 - [id = 407], n02701002 ambulance
+0.0507 - [id = 920], n06874185 traffic light, traffic signal, stoplight
+
+
+First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gold_fish.ppm
+---------- Top 5 predictions ----------
+
+0.9996 - [id = 573], n03444034 go-kart
+0.0002 - [id = 751], n04037443 racer, race car, racing car
+0.0000 - [id = 518], n03127747 crash helmet
+0.0000 - [id = 428], n02797295 barrow, garden cart, lawn cart, wheelbarrow
+0.0000 - [id = 598], n03529860 home theater, home theatre
+
+
+First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gondola.ppm
+---------- Top 5 predictions ----------
+
+0.2138 - [id = 1], n01443537 goldfish, Carassius auratus
+0.1912 - [id = 723], n03944341 pinwheel
+0.1027 - [id = 632], n03691459 loudspeaker, speaker, speaker unit, loudspeaker system, speaker system
+0.0980 - [id = 818], n04286575 spotlight, spot
+0.0398 - [id = 626], n03666591 lighter, light, igniter, ignitor
+
+
+First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/space_shuttle_224.jpg
+---------- Top 5 predictions ----------
+
+0.9999 - [id = 576], n03447447 gondola
+0.0000 - [id = 780], n04147183 schooner
+0.0000 - [id = 914], n04612504 yawl
+0.0000 - [id = 536], n03216828 dock, dockage, docking facility
+0.0000 - [id = 913], n04606251 wreck
+
+
+First graph inferencing image: 3:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/school_bus.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 812], n04266014 space shuttle
+0.0000 - [id = 657], n03773504 missile
+0.0000 - [id = 744], n04008634 projectile, missile
+0.0000 - [id = 517], n03126707 crane
+0.0000 - [id = 404], n02690373 airliner
+
+
+First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/go_kart.ppm
+---------- Top 5 predictions ----------
+
+0.5278 - [id = 779], n04146614 school bus
+0.0596 - [id = 867], n04467665 trailer truck, tractor trailer, trucking rig, rig, articulated lorry, semi
+0.0398 - [id = 734], n03977966 police van, police wagon, paddy wagon, patrol wagon, wagon, black Maria
+0.0331 - [id = 654], n03769881 minibus
+0.0305 - [id = 705], n03895866 passenger car, coach, carriage
+start of graph: 0 for frame: 50
+
+
+First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gold_fish.ppm
+---------- Top 5 predictions ----------
+
+0.9995 - [id = 573], n03444034 go-kart
+0.0003 - [id = 751], n04037443 racer, race car, racing car
+0.0000 - [id = 408], n02704792 amphibian, amphibious vehicle
+0.0000 - [id = 621], n03649909 lawn mower, mower
+0.0000 - [id = 817], n04285008 sports car, sport car
+
+
+First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gondola.ppm
+---------- Top 5 predictions ----------
+
+0.6029 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0729 - [id = 723], n03944341 pinwheel
+0.0292 - [id = 397], n02655020 puffer, pufferfish, blowfish, globefish
+0.0256 - [id = 392], n02606052 rock beauty, Holocanthus tricolor
+0.0231 - [id = 973], n09256479 coral reef
+
+
+First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/space_shuttle_224.jpg
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 576], n03447447 gondola
+0.0000 - [id = 780], n04147183 schooner
+0.0000 - [id = 978], n09428293 seashore, coast, seacoast, sea-coast
+0.0000 - [id = 536], n03216828 dock, dockage, docking facility
+0.0000 - [id = 724], n03947888 pirate, pirate ship
+
+
+First graph inferencing image: 3:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/school_bus.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 812], n04266014 space shuttle
+0.0000 - [id = 657], n03773504 missile
+0.0000 - [id = 744], n04008634 projectile, missile
+0.0000 - [id = 517], n03126707 crane
+0.0000 - [id = 404], n02690373 airliner
+
+
+First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/go_kart.ppm
+---------- Top 5 predictions ----------
+
+0.2708 - [id = 779], n04146614 school bus
+0.0944 - [id = 734], n03977966 police van, police wagon, paddy wagon, patrol wagon, wagon, black Maria
+0.0559 - [id = 555], n03345487 fire engine, fire truck
+0.0518 - [id = 407], n02701002 ambulance
+0.0507 - [id = 920], n06874185 traffic light, traffic signal, stoplight
+
+
+First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gold_fish.ppm
+---------- Top 5 predictions ----------
+
+0.9995 - [id = 573], n03444034 go-kart
+0.0003 - [id = 751], n04037443 racer, race car, racing car
+0.0000 - [id = 817], n04285008 sports car, sport car
+0.0000 - [id = 621], n03649909 lawn mower, mower
+0.0000 - [id = 428], n02797295 barrow, garden cart, lawn cart, wheelbarrow
+
+
+First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gondola.ppm
+---------- Top 5 predictions ----------
+
+0.4335 - [id = 626], n03666591 lighter, light, igniter, ignitor
+0.2656 - [id = 644], n03729826 matchstick
+0.1539 - [id = 470], n02948072 candle, taper, wax light
+0.1425 - [id = 862], n04456115 torch
+0.0015 - [id = 818], n04286575 spotlight, spot
+
+
+First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/space_shuttle_224.jpg
+---------- Top 5 predictions ----------
+
+0.9998 - [id = 576], n03447447 gondola
+0.0001 - [id = 470], n02948072 candle, taper, wax light
+0.0000 - [id = 978], n09428293 seashore, coast, seacoast, sea-coast
+0.0000 - [id = 536], n03216828 dock, dockage, docking facility
+0.0000 - [id = 780], n04147183 schooner
+
+
+First graph inferencing image: 3:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/school_bus.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 812], n04266014 space shuttle
+0.0000 - [id = 657], n03773504 missile
+0.0000 - [id = 744], n04008634 projectile, missile
+0.0000 - [id = 517], n03126707 crane
+0.0000 - [id = 404], n02690373 airliner
+
+
+First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/go_kart.ppm
+---------- Top 5 predictions ----------
+
+0.5281 - [id = 779], n04146614 school bus
+0.0590 - [id = 867], n04467665 trailer truck, tractor trailer, trucking rig, rig, articulated lorry, semi
+0.0401 - [id = 734], n03977966 police van, police wagon, paddy wagon, patrol wagon, wagon, black Maria
+0.0332 - [id = 654], n03769881 minibus
+0.0306 - [id = 705], n03895866 passenger car, coach, carriage
+
+
+First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gold_fish.ppm
+---------- Top 5 predictions ----------
+
+0.9995 - [id = 573], n03444034 go-kart
+0.0003 - [id = 751], n04037443 racer, race car, racing car
+0.0000 - [id = 408], n02704792 amphibian, amphibious vehicle
+0.0000 - [id = 621], n03649909 lawn mower, mower
+0.0000 - [id = 817], n04285008 sports car, sport car
+
+
+First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gondola.ppm
+---------- Top 5 predictions ----------
+
+0.4335 - [id = 626], n03666591 lighter, light, igniter, ignitor
+0.2656 - [id = 644], n03729826 matchstick
+0.1539 - [id = 470], n02948072 candle, taper, wax light
+0.1425 - [id = 862], n04456115 torch
+0.0015 - [id = 818], n04286575 spotlight, spot
+
+
+First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/space_shuttle_224.jpg
+---------- Top 5 predictions ----------
+
+0.9997 - [id = 576], n03447447 gondola
+0.0002 - [id = 470], n02948072 candle, taper, wax light
+0.0001 - [id = 536], n03216828 dock, dockage, docking facility
+0.0000 - [id = 780], n04147183 schooner
+0.0000 - [id = 978], n09428293 seashore, coast, seacoast, sea-coast
+
+
+First graph inferencing image: 3:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/school_bus.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 812], n04266014 space shuttle
+0.0000 - [id = 657], n03773504 missile
+0.0000 - [id = 744], n04008634 projectile, missile
+0.0000 - [id = 517], n03126707 crane
+0.0000 - [id = 404], n02690373 airliner
+
+
+First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/go_kart.ppm
+---------- Top 5 predictions ----------
+
+0.2706 - [id = 779], n04146614 school bus
+0.0948 - [id = 734], n03977966 police van, police wagon, paddy wagon, patrol wagon, wagon, black Maria
+0.0559 - [id = 555], n03345487 fire engine, fire truck
+0.0517 - [id = 407], n02701002 ambulance
+0.0508 - [id = 920], n06874185 traffic light, traffic signal, stoplight
+
+
+First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gold_fish.ppm
+---------- Top 5 predictions ----------
+
+0.9995 - [id = 573], n03444034 go-kart
+0.0003 - [id = 751], n04037443 racer, race car, racing car
+0.0000 - [id = 408], n02704792 amphibian, amphibious vehicle
+0.0000 - [id = 621], n03649909 lawn mower, mower
+0.0000 - [id = 817], n04285008 sports car, sport car
+
+
+First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gondola.ppm
+---------- Top 5 predictions ----------
+
+0.6029 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0729 - [id = 723], n03944341 pinwheel
+0.0292 - [id = 397], n02655020 puffer, pufferfish, blowfish, globefish
+0.0256 - [id = 392], n02606052 rock beauty, Holocanthus tricolor
+0.0231 - [id = 973], n09256479 coral reef
+
+
+First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/space_shuttle_224.jpg
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 576], n03447447 gondola
+0.0000 - [id = 780], n04147183 schooner
+0.0000 - [id = 978], n09428293 seashore, coast, seacoast, sea-coast
+0.0000 - [id = 536], n03216828 dock, dockage, docking facility
+0.0000 - [id = 724], n03947888 pirate, pirate ship
+
+
+First graph inferencing image: 3:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/school_bus.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 812], n04266014 space shuttle
+0.0000 - [id = 657], n03773504 missile
+0.0000 - [id = 517], n03126707 crane
+0.0000 - [id = 744], n04008634 projectile, missile
+0.0000 - [id = 404], n02690373 airliner
+
+
+First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/go_kart.ppm
+---------- Top 5 predictions ----------
+
+0.5281 - [id = 779], n04146614 school bus
+0.0590 - [id = 867], n04467665 trailer truck, tractor trailer, trucking rig, rig, articulated lorry, semi
+0.0401 - [id = 734], n03977966 police van, police wagon, paddy wagon, patrol wagon, wagon, black Maria
+0.0332 - [id = 654], n03769881 minibus
+0.0306 - [id = 705], n03895866 passenger car, coach, carriage
+
+
+First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gold_fish.ppm
+---------- Top 5 predictions ----------
+
+0.9995 - [id = 573], n03444034 go-kart
+0.0003 - [id = 751], n04037443 racer, race car, racing car
+0.0000 - [id = 408], n02704792 amphibian, amphibious vehicle
+0.0000 - [id = 621], n03649909 lawn mower, mower
+0.0000 - [id = 817], n04285008 sports car, sport car
+
+
+First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gondola.ppm
+---------- Top 5 predictions ----------
+
+0.6354 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0721 - [id = 723], n03944341 pinwheel
+0.0243 - [id = 392], n02606052 rock beauty, Holocanthus tricolor
+0.0242 - [id = 397], n02655020 puffer, pufferfish, blowfish, globefish
+0.0213 - [id = 973], n09256479 coral reef
+
+
+First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/space_shuttle_224.jpg
+---------- Top 5 predictions ----------
+
+0.9997 - [id = 576], n03447447 gondola
+0.0002 - [id = 470], n02948072 candle, taper, wax light
+0.0000 - [id = 978], n09428293 seashore, coast, seacoast, sea-coast
+0.0000 - [id = 536], n03216828 dock, dockage, docking facility
+0.0000 - [id = 780], n04147183 schooner
+
+
+First graph inferencing image: 3:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/school_bus.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 812], n04266014 space shuttle
+0.0000 - [id = 657], n03773504 missile
+0.0000 - [id = 517], n03126707 crane
+0.0000 - [id = 744], n04008634 projectile, missile
+0.0000 - [id = 404], n02690373 airliner
+
+
+First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/go_kart.ppm
+---------- Top 5 predictions ----------
+
+0.5274 - [id = 779], n04146614 school bus
+0.0627 - [id = 867], n04467665 trailer truck, tractor trailer, trucking rig, rig, articulated lorry, semi
+0.0389 - [id = 734], n03977966 police van, police wagon, paddy wagon, patrol wagon, wagon, black Maria
+0.0331 - [id = 654], n03769881 minibus
+0.0295 - [id = 705], n03895866 passenger car, coach, carriage
+
+
+First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gold_fish.ppm
+---------- Top 5 predictions ----------
+
+0.9996 - [id = 573], n03444034 go-kart
+0.0002 - [id = 751], n04037443 racer, race car, racing car
+0.0000 - [id = 518], n03127747 crash helmet
+0.0000 - [id = 428], n02797295 barrow, garden cart, lawn cart, wheelbarrow
+0.0000 - [id = 598], n03529860 home theater, home theatre
+
+
+First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gondola.ppm
+---------- Top 5 predictions ----------
+
+0.6029 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0729 - [id = 723], n03944341 pinwheel
+0.0292 - [id = 397], n02655020 puffer, pufferfish, blowfish, globefish
+0.0256 - [id = 392], n02606052 rock beauty, Holocanthus tricolor
+0.0231 - [id = 973], n09256479 coral reef
+
+
+First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/space_shuttle_224.jpg
+---------- Top 5 predictions ----------
+
+0.9999 - [id = 576], n03447447 gondola
+0.0000 - [id = 780], n04147183 schooner
+0.0000 - [id = 914], n04612504 yawl
+0.0000 - [id = 536], n03216828 dock, dockage, docking facility
+0.0000 - [id = 913], n04606251 wreck
+
+
+First graph inferencing image: 3:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/school_bus.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 812], n04266014 space shuttle
+0.0000 - [id = 657], n03773504 missile
+0.0000 - [id = 744], n04008634 projectile, missile
+0.0000 - [id = 517], n03126707 crane
+0.0000 - [id = 404], n02690373 airliner
+
+
+First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/go_kart.ppm
+---------- Top 5 predictions ----------
+
+0.6719 - [id = 779], n04146614 school bus
+0.0538 - [id = 407], n02701002 ambulance
+0.0538 - [id = 734], n03977966 police van, police wagon, paddy wagon, patrol wagon, wagon, black Maria
+0.0397 - [id = 468], n02930766 cab, hack, taxi, taxicab
+0.0298 - [id = 920], n06874185 traffic light, traffic signal, stoplight
+
+
+First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gold_fish.ppm
+---------- Top 5 predictions ----------
+
+0.9994 - [id = 573], n03444034 go-kart
+0.0004 - [id = 751], n04037443 racer, race car, racing car
+0.0000 - [id = 598], n03529860 home theater, home theatre
+0.0000 - [id = 817], n04285008 sports car, sport car
+0.0000 - [id = 518], n03127747 crash helmet
+
+
+First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gondola.ppm
+---------- Top 5 predictions ----------
+
+0.4335 - [id = 626], n03666591 lighter, light, igniter, ignitor
+0.2656 - [id = 644], n03729826 matchstick
+0.1539 - [id = 470], n02948072 candle, taper, wax light
+0.1425 - [id = 862], n04456115 torch
+0.0015 - [id = 818], n04286575 spotlight, spot
+
+
+First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/space_shuttle_224.jpg
+---------- Top 5 predictions ----------
+
+0.9998 - [id = 576], n03447447 gondola
+0.0001 - [id = 470], n02948072 candle, taper, wax light
+0.0000 - [id = 978], n09428293 seashore, coast, seacoast, sea-coast
+0.0000 - [id = 536], n03216828 dock, dockage, docking facility
+0.0000 - [id = 780], n04147183 schooner
+
+
+First graph inferencing image: 3:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/school_bus.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 812], n04266014 space shuttle
+0.0000 - [id = 657], n03773504 missile
+0.0000 - [id = 744], n04008634 projectile, missile
+0.0000 - [id = 517], n03126707 crane
+0.0000 - [id = 404], n02690373 airliner
+
+
+First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/go_kart.ppm
+---------- Top 5 predictions ----------
+
+0.5281 - [id = 779], n04146614 school bus
+0.0590 - [id = 867], n04467665 trailer truck, tractor trailer, trucking rig, rig, articulated lorry, semi
+0.0401 - [id = 734], n03977966 police van, police wagon, paddy wagon, patrol wagon, wagon, black Maria
+0.0332 - [id = 654], n03769881 minibus
+0.0306 - [id = 705], n03895866 passenger car, coach, carriage
+
+
+First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gold_fish.ppm
+---------- Top 5 predictions ----------
+
+0.9994 - [id = 573], n03444034 go-kart
+0.0004 - [id = 751], n04037443 racer, race car, racing car
+0.0000 - [id = 598], n03529860 home theater, home theatre
+0.0000 - [id = 817], n04285008 sports car, sport car
+0.0000 - [id = 518], n03127747 crash helmet
+
+
+First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gondola.ppm
+---------- Top 5 predictions ----------
+
+0.4623 - [id = 644], n03729826 matchstick
+0.1364 - [id = 468], n02930766 cab, hack, taxi, taxicab
+0.0919 - [id = 626], n03666591 lighter, light, igniter, ignitor
+0.0877 - [id = 862], n04456115 torch
+0.0601 - [id = 818], n04286575 spotlight, spot
+
+
+First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/space_shuttle_224.jpg
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 576], n03447447 gondola
+0.0000 - [id = 780], n04147183 schooner
+0.0000 - [id = 978], n09428293 seashore, coast, seacoast, sea-coast
+0.0000 - [id = 536], n03216828 dock, dockage, docking facility
+0.0000 - [id = 724], n03947888 pirate, pirate ship
+
+
+First graph inferencing image: 3:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/school_bus.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 812], n04266014 space shuttle
+0.0000 - [id = 657], n03773504 missile
+0.0000 - [id = 744], n04008634 projectile, missile
+0.0000 - [id = 517], n03126707 crane
+0.0000 - [id = 404], n02690373 airliner
+
+
+First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/go_kart.ppm
+---------- Top 5 predictions ----------
+
+0.2708 - [id = 779], n04146614 school bus
+0.0944 - [id = 734], n03977966 police van, police wagon, paddy wagon, patrol wagon, wagon, black Maria
+0.0559 - [id = 555], n03345487 fire engine, fire truck
+0.0518 - [id = 407], n02701002 ambulance
+0.0507 - [id = 920], n06874185 traffic light, traffic signal, stoplight
+
+
+First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gold_fish.ppm
+---------- Top 5 predictions ----------
+
+0.9438 - [id = 573], n03444034 go-kart
+0.0490 - [id = 468], n02930766 cab, hack, taxi, taxicab
+0.0023 - [id = 751], n04037443 racer, race car, racing car
+0.0010 - [id = 412], n02747177 ashcan, trash can, garbage can, wastebin, ash bin, ash-bin, ashbin, dustbin, trash barrel, trash bin
+0.0006 - [id = 920], n06874185 traffic light, traffic signal, stoplight
+
+
+First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gondola.ppm
+---------- Top 5 predictions ----------
+
+0.5777 - [id = 1], n01443537 goldfish, Carassius auratus
+0.1134 - [id = 723], n03944341 pinwheel
+0.0754 - [id = 644], n03729826 matchstick
+0.0125 - [id = 456], n02879718 bow
+0.0110 - [id = 626], n03666591 lighter, light, igniter, ignitor
+
+
+First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/space_shuttle_224.jpg
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 576], n03447447 gondola
+0.0000 - [id = 780], n04147183 schooner
+0.0000 - [id = 978], n09428293 seashore, coast, seacoast, sea-coast
+0.0000 - [id = 536], n03216828 dock, dockage, docking facility
+0.0000 - [id = 724], n03947888 pirate, pirate ship
+
+
+First graph inferencing image: 3:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/school_bus.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 812], n04266014 space shuttle
+0.0000 - [id = 657], n03773504 missile
+0.0000 - [id = 744], n04008634 projectile, missile
+0.0000 - [id = 517], n03126707 crane
+0.0000 - [id = 404], n02690373 airliner
+
+
+First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/go_kart.ppm
+---------- Top 5 predictions ----------
+
+0.5274 - [id = 779], n04146614 school bus
+0.0627 - [id = 867], n04467665 trailer truck, tractor trailer, trucking rig, rig, articulated lorry, semi
+0.0389 - [id = 734], n03977966 police van, police wagon, paddy wagon, patrol wagon, wagon, black Maria
+0.0331 - [id = 654], n03769881 minibus
+0.0295 - [id = 705], n03895866 passenger car, coach, carriage
+
+
+First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gold_fish.ppm
+---------- Top 5 predictions ----------
+
+0.9995 - [id = 573], n03444034 go-kart
+0.0003 - [id = 751], n04037443 racer, race car, racing car
+0.0000 - [id = 408], n02704792 amphibian, amphibious vehicle
+0.0000 - [id = 621], n03649909 lawn mower, mower
+0.0000 - [id = 817], n04285008 sports car, sport car
+
+
+First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gondola.ppm
+---------- Top 5 predictions ----------
+
+0.6354 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0721 - [id = 723], n03944341 pinwheel
+0.0243 - [id = 392], n02606052 rock beauty, Holocanthus tricolor
+0.0242 - [id = 397], n02655020 puffer, pufferfish, blowfish, globefish
+0.0213 - [id = 973], n09256479 coral reef
+
+
+First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/space_shuttle_224.jpg
+---------- Top 5 predictions ----------
+
+0.9999 - [id = 576], n03447447 gondola
+0.0000 - [id = 780], n04147183 schooner
+0.0000 - [id = 914], n04612504 yawl
+0.0000 - [id = 536], n03216828 dock, dockage, docking facility
+0.0000 - [id = 913], n04606251 wreck
+
+
+First graph inferencing image: 3:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/school_bus.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 812], n04266014 space shuttle
+0.0000 - [id = 657], n03773504 missile
+0.0000 - [id = 744], n04008634 projectile, missile
+0.0000 - [id = 517], n03126707 crane
+0.0000 - [id = 404], n02690373 airliner
+
+
+First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/go_kart.ppm
+---------- Top 5 predictions ----------
+
+0.5278 - [id = 779], n04146614 school bus
+0.0596 - [id = 867], n04467665 trailer truck, tractor trailer, trucking rig, rig, articulated lorry, semi
+0.0398 - [id = 734], n03977966 police van, police wagon, paddy wagon, patrol wagon, wagon, black Maria
+0.0331 - [id = 654], n03769881 minibus
+0.0305 - [id = 705], n03895866 passenger car, coach, carriage
+---------- Top 5 predictions ----------
+
+0.9995 - [id = 573], n03444034 go-kart
+0.0003 - [id = 751], n04037443 racer, race car, racing car
+0.0000 - [id = 408], n02704792 amphibian, amphibious vehicle
+0.0000 - [id = 621], n03649909 lawn mower, mower
+0.0000 - [id = 817], n04285008 sports car, sport car
+Finishing power measurement with first subgraph17
+0	Layer Name: conv1/convolution+conv1/BatchNorm 	 Layer time: 46.5442 	 number of inputs: 7 	 input shape: 3x224x224 	 output shape: 64x112x112
+1	Layer Name: pool1/MaxPool 	 Layer time: 3.6876 	 number of inputs: 1 	 input shape: 64x112x112 	 output shape: 64x56x56
+Layer Number: 0 	 time: 50.2317
+----------------------------
+
+ Sum of Layers time: 50.2317
+
+ input time of layer 0 : 118.7153
+
+ transfer_time of layer 0 : 0.0000
+
+ output time of layer 0 : 0.0456
+
+ this part task time: 50.8611
+
+
+Cost0:1417.11
+input0_time:118.715
+task0_time:50.8611
+output0_time:0.0456283
+total0_time:169.622
+***************************************
+
+0	Layer Name: block1/unit1/bottleneck_v1/shortcut/convolution+block1/unit1/bottleneck_v1/shortcut/BatchNorm 	 Layer time: 35.0848 	 number of inputs: 7 	 input shape: 64x56x56 	 output shape: 256x56x56
+1	Layer Name: block1/unit1/bottleneck_v1/conv1/convolution+block1/unit1/bottleneck_v1/conv1/BatchNorm 	 Layer time: 8.8554 	 number of inputs: 7 	 input shape: 64x56x56 	 output shape: 64x56x56
+2	Layer Name: block1/unit1/bottleneck_v1/conv2/convolution+block1/unit1/bottleneck_v1/conv2/BatchNorm 	 Layer time: 24.8884 	 number of inputs: 7 	 input shape: 64x56x56 	 output shape: 64x56x56
+3	Layer Name: block1/unit1/bottleneck_v1/conv3/convolution+block1/unit1/bottleneck_v1/conv3/BatchNorm 	 Layer time: 23.8252 	 number of inputs: 7 	 input shape: 64x56x56 	 output shape: 256x56x56
+4	Layer Name: block1/unit1/bottleneck_v1/add 	 Layer time: 4.0489 	 number of inputs: 2 	 input shape: 256x56x56 	 output shape: 256x56x56
+Layer Number: 1 	 time: 96.7027
+----------------------------
+5	Layer Name: block1/unit1/bottleneck_v1/Relu 	 Layer time: 2.7622 	 number of inputs: 1 	 input shape: 256x56x56 	 output shape: 256x56x56
+
+ Sum of Layers time: 99.4649
+
+ input time of layer 1 : 1.1971
+
+ transfer_time of layer 1 : 1.2427
+
+ output time of layer 1 : 0.0467
+
+ this part task time: 100.1482
+
+
+Cost1:1417.94
+input1_time:1.19709
+task1_time:100.148
+output1_time:0.0467221
+total1_time:101.392
+***************************************
+
+0	Layer Name: block1/unit2/bottleneck_v1/conv1/convolution+block1/unit2/bottleneck_v1/conv1/BatchNorm 	 Layer time: 19.1277 	 number of inputs: 7 	 input shape: 256x56x56 	 output shape: 64x56x56
+1	Layer Name: block1/unit2/bottleneck_v1/conv2/convolution+block1/unit2/bottleneck_v1/conv2/BatchNorm 	 Layer time: 24.4779 	 number of inputs: 7 	 input shape: 64x56x56 	 output shape: 64x56x56
+2	Layer Name: block1/unit2/bottleneck_v1/conv3/convolution+block1/unit2/bottleneck_v1/conv3/BatchNorm 	 Layer time: 16.5829 	 number of inputs: 7 	 input shape: 64x56x56 	 output shape: 256x56x56
+3	Layer Name: block1/unit2/bottleneck_v1/add 	 Layer time: 4.4331 	 number of inputs: 2 	 input shape: 256x56x56 	 output shape: 256x56x56
+Layer Number: 2 	 time: 64.6216
+----------------------------
+4	Layer Name: block1/unit2/bottleneck_v1/Relu 	 Layer time: 3.0506 	 number of inputs: 1 	 input shape: 256x56x56 	 output shape: 256x56x56
+
+ Sum of Layers time: 67.6722
+
+ input time of layer 2 : 3.3498
+
+ transfer_time of layer 2 : 3.3966
+
+ output time of layer 2 : 0.0476
+
+ this part task time: 68.4979
+
+
+Cost2:1418.77
+input2_time:3.34985
+task2_time:68.4979
+output2_time:0.0475504
+total2_time:71.8953
+***************************************
+
+0	Layer Name: block1/unit3/bottleneck_v1/conv1/convolution+block1/unit3/bottleneck_v1/conv1/BatchNorm 	 Layer time: 27.5930 	 number of inputs: 7 	 input shape: 256x56x56 	 output shape: 64x56x56
+1	Layer Name: block1/unit3/bottleneck_v1/conv2/convolution+block1/unit3/bottleneck_v1/conv2/BatchNorm 	 Layer time: 24.0777 	 number of inputs: 7 	 input shape: 64x56x56 	 output shape: 64x56x56
+2	Layer Name: block1/unit3/bottleneck_v1/conv3/convolution+block1/unit3/bottleneck_v1/conv3/BatchNorm 	 Layer time: 23.6144 	 number of inputs: 7 	 input shape: 64x56x56 	 output shape: 256x56x56
+3	Layer Name: block1/unit3/bottleneck_v1/add 	 Layer time: 5.5442 	 number of inputs: 2 	 input shape: 256x56x56 	 output shape: 256x56x56
+Layer Number: 3 	 time: 80.8294
+----------------------------
+4	Layer Name: block1/unit3/bottleneck_v1/Relu 	 Layer time: 2.8243 	 number of inputs: 1 	 input shape: 256x56x56 	 output shape: 256x56x56
+
+ Sum of Layers time: 83.6537
+
+ input time of layer 3 : 3.2774
+
+ transfer_time of layer 3 : 3.3249
+
+ output time of layer 3 : 0.0455
+
+ this part task time: 84.3562
+
+
+Cost3:1419.65
+input3_time:3.27735
+task3_time:84.3562
+output3_time:0.045468
+total3_time:87.679
+***************************************
+
+0	Layer Name: block2/unit1/bottleneck_v1/shortcut/convolution+block2/unit1/bottleneck_v1/shortcut/BatchNorm 	 Layer time: 28.3445 	 number of inputs: 7 	 input shape: 256x56x56 	 output shape: 512x28x28
+1	Layer Name: block2/unit1/bottleneck_v1/conv1/convolution+block2/unit1/bottleneck_v1/conv1/BatchNorm 	 Layer time: 8.4366 	 number of inputs: 7 	 input shape: 256x56x56 	 output shape: 128x28x28
+2	Layer Name: block2/unit1/bottleneck_v1/conv2/convolution+block2/unit1/bottleneck_v1/conv2/BatchNorm 	 Layer time: 14.9043 	 number of inputs: 7 	 input shape: 128x28x28 	 output shape: 128x28x28
+3	Layer Name: block2/unit1/bottleneck_v1/conv3/convolution+block2/unit1/bottleneck_v1/conv3/BatchNorm 	 Layer time: 13.2669 	 number of inputs: 7 	 input shape: 128x28x28 	 output shape: 512x28x28
+4	Layer Name: block2/unit1/bottleneck_v1/add 	 Layer time: 1.9060 	 number of inputs: 2 	 input shape: 512x28x28 	 output shape: 512x28x28
+Layer Number: 4 	 time: 66.8583
+----------------------------
+5	Layer Name: block2/unit1/bottleneck_v1/Relu 	 Layer time: 1.7024 	 number of inputs: 1 	 input shape: 512x28x28 	 output shape: 512x28x28
+
+ Sum of Layers time: 68.5607
+
+ input time of layer 4 : 3.3401
+
+ transfer_time of layer 4 : 3.3855
+
+ output time of layer 4 : 0.0458
+
+ this part task time: 69.3780
+
+
+Cost4:1420.35
+input4_time:3.34005
+task4_time:69.378
+output4_time:0.0458004
+total4_time:72.7638
+***************************************
+
+0	Layer Name: block2/unit2/bottleneck_v1/conv1/convolution+block2/unit2/bottleneck_v1/conv1/BatchNorm 	 Layer time: 30.0918 	 number of inputs: 7 	 input shape: 512x28x28 	 output shape: 128x28x28
+1	Layer Name: block2/unit2/bottleneck_v1/conv2/convolution+block2/unit2/bottleneck_v1/conv2/BatchNorm 	 Layer time: 19.4870 	 number of inputs: 7 	 input shape: 128x28x28 	 output shape: 128x28x28
+2	Layer Name: block2/unit2/bottleneck_v1/conv3/convolution+block2/unit2/bottleneck_v1/conv3/BatchNorm 	 Layer time: 21.0635 	 number of inputs: 7 	 input shape: 128x28x28 	 output shape: 512x28x28
+3	Layer Name: block2/unit2/bottleneck_v1/add 	 Layer time: 2.7387 	 number of inputs: 2 	 input shape: 512x28x28 	 output shape: 512x28x28
+Layer Number: 5 	 time: 73.3809
+----------------------------
+4	Layer Name: block2/unit2/bottleneck_v1/Relu 	 Layer time: 1.4489 	 number of inputs: 1 	 input shape: 512x28x28 	 output shape: 512x28x28
+
+ Sum of Layers time: 74.8299
+
+ input time of layer 5 : 1.4159
+
+ transfer_time of layer 5 : 1.4617
+
+ output time of layer 5 : 0.0470
+
+ this part task time: 75.5780
+
+
+Cost5:1421.05
+input5_time:1.41592
+task5_time:75.578
+output5_time:0.0470108
+total5_time:77.0409
+***************************************
+
+0	Layer Name: block2/unit3/bottleneck_v1/conv1/convolution+block2/unit3/bottleneck_v1/conv1/BatchNorm 	 Layer time: 15.9124 	 number of inputs: 7 	 input shape: 512x28x28 	 output shape: 128x28x28
+1	Layer Name: block2/unit3/bottleneck_v1/conv2/convolution+block2/unit3/bottleneck_v1/conv2/BatchNorm 	 Layer time: 16.4377 	 number of inputs: 7 	 input shape: 128x28x28 	 output shape: 128x28x28
+2	Layer Name: block2/unit3/bottleneck_v1/conv3/convolution+block2/unit3/bottleneck_v1/conv3/BatchNorm 	 Layer time: 13.7577 	 number of inputs: 7 	 input shape: 128x28x28 	 output shape: 512x28x28
+3	Layer Name: block2/unit3/bottleneck_v1/add 	 Layer time: 2.1029 	 number of inputs: 2 	 input shape: 512x28x28 	 output shape: 512x28x28
+Layer Number: 6 	 time: 48.2107
+----------------------------
+4	Layer Name: block2/unit3/bottleneck_v1/Relu 	 Layer time: 1.7799 	 number of inputs: 1 	 input shape: 512x28x28 	 output shape: 512x28x28
+
+ Sum of Layers time: 49.9906
+
+ input time of layer 6 : 1.7691
+
+ transfer_time of layer 6 : 1.8161
+
+ output time of layer 6 : 0.0467
+
+ this part task time: 50.8164
+
+
+Cost6:1421.53
+input6_time:1.76906
+task6_time:50.8164
+output6_time:0.046725
+total6_time:52.6322
+***************************************
+
+0	Layer Name: block2/unit4/bottleneck_v1/conv1/convolution+block2/unit4/bottleneck_v1/conv1/BatchNorm 	 Layer time: 23.4889 	 number of inputs: 7 	 input shape: 512x28x28 	 output shape: 128x28x28
+1	Layer Name: block2/unit4/bottleneck_v1/conv2/convolution+block2/unit4/bottleneck_v1/conv2/BatchNorm 	 Layer time: 19.9153 	 number of inputs: 7 	 input shape: 128x28x28 	 output shape: 128x28x28
+2	Layer Name: block2/unit4/bottleneck_v1/conv3/convolution+block2/unit4/bottleneck_v1/conv3/BatchNorm 	 Layer time: 21.9784 	 number of inputs: 7 	 input shape: 128x28x28 	 output shape: 512x28x28
+3	Layer Name: block2/unit4/bottleneck_v1/add 	 Layer time: 2.6854 	 number of inputs: 2 	 input shape: 512x28x28 	 output shape: 512x28x28
+Layer Number: 7 	 time: 68.0680
+----------------------------
+4	Layer Name: block2/unit4/bottleneck_v1/Relu 	 Layer time: 1.4845 	 number of inputs: 1 	 input shape: 512x28x28 	 output shape: 512x28x28
+
+ Sum of Layers time: 69.5525
+
+ input time of layer 7 : 1.4070
+
+ transfer_time of layer 7 : 1.4538
+
+ output time of layer 7 : 0.0497
+
+ this part task time: 70.2756
+
+
+Cost7:1422.18
+input7_time:1.40704
+task7_time:70.2756
+output7_time:0.0497292
+total7_time:71.7323
+***************************************
+
+0	Layer Name: block3/unit1/bottleneck_v1/shortcut/convolution+block3/unit1/bottleneck_v1/shortcut/BatchNorm 	 Layer time: 29.9264 	 number of inputs: 7 	 input shape: 512x28x28 	 output shape: 1024x14x14
+1	Layer Name: block3/unit1/bottleneck_v1/conv1/convolution+block3/unit1/bottleneck_v1/conv1/BatchNorm 	 Layer time: 8.0980 	 number of inputs: 7 	 input shape: 512x28x28 	 output shape: 256x14x14
+2	Layer Name: block3/unit1/bottleneck_v1/conv2/convolution+block3/unit1/bottleneck_v1/conv2/BatchNorm 	 Layer time: 20.0632 	 number of inputs: 7 	 input shape: 256x14x14 	 output shape: 256x14x14
+3	Layer Name: block3/unit1/bottleneck_v1/conv3/convolution+block3/unit1/bottleneck_v1/conv3/BatchNorm 	 Layer time: 13.8712 	 number of inputs: 7 	 input shape: 256x14x14 	 output shape: 1024x14x14
+4	Layer Name: block3/unit1/bottleneck_v1/add 	 Layer time: 1.2978 	 number of inputs: 2 	 input shape: 1024x14x14 	 output shape: 1024x14x14
+Layer Number: 8 	 time: 73.2566
+----------------------------
+5	Layer Name: block3/unit1/bottleneck_v1/Relu 	 Layer time: 1.0449 	 number of inputs: 1 	 input shape: 1024x14x14 	 output shape: 1024x14x14
+
+ Sum of Layers time: 74.3015
+
+ input time of layer 8 : 1.7167
+
+ transfer_time of layer 8 : 1.7664
+
+ output time of layer 8 : 0.0442
+
+ this part task time: 75.1122
+
+
+Cost8:1422.93
+input8_time:1.71667
+task8_time:75.1122
+output8_time:0.0442137
+total8_time:76.8731
+***************************************
+
+0	Layer Name: block3/unit2/bottleneck_v1/conv1/convolution+block3/unit2/bottleneck_v1/conv1/BatchNorm 	 Layer time: 27.6203 	 number of inputs: 7 	 input shape: 1024x14x14 	 output shape: 256x14x14
+1	Layer Name: block3/unit2/bottleneck_v1/conv2/convolution+block3/unit2/bottleneck_v1/conv2/BatchNorm 	 Layer time: 33.9819 	 number of inputs: 7 	 input shape: 256x14x14 	 output shape: 256x14x14
+2	Layer Name: block3/unit2/bottleneck_v1/conv3/convolution+block3/unit2/bottleneck_v1/conv3/BatchNorm 	 Layer time: 19.7366 	 number of inputs: 7 	 input shape: 256x14x14 	 output shape: 1024x14x14
+3	Layer Name: block3/unit2/bottleneck_v1/add 	 Layer time: 1.4211 	 number of inputs: 2 	 input shape: 1024x14x14 	 output shape: 1024x14x14
+Layer Number: 9 	 time: 82.7599
+----------------------------
+4	Layer Name: block3/unit2/bottleneck_v1/Relu 	 Layer time: 0.8859 	 number of inputs: 1 	 input shape: 1024x14x14 	 output shape: 1024x14x14
+
+ Sum of Layers time: 83.6458
+
+ input time of layer 9 : 0.7991
+
+ transfer_time of layer 9 : 0.8433
+
+ output time of layer 9 : 0.0455
+
+ this part task time: 84.3397
+
+
+Cost9:1424.33
+input9_time:0.799094
+task9_time:84.3397
+output9_time:0.0454678
+total9_time:85.1843
+***************************************
+
+0	Layer Name: block3/unit3/bottleneck_v1/conv1/convolution+block3/unit3/bottleneck_v1/conv1/BatchNorm 	 Layer time: 15.9585 	 number of inputs: 7 	 input shape: 1024x14x14 	 output shape: 256x14x14
+1	Layer Name: block3/unit3/bottleneck_v1/conv2/convolution+block3/unit3/bottleneck_v1/conv2/BatchNorm 	 Layer time: 21.9594 	 number of inputs: 7 	 input shape: 256x14x14 	 output shape: 256x14x14
+2	Layer Name: block3/unit3/bottleneck_v1/conv3/convolution+block3/unit3/bottleneck_v1/conv3/BatchNorm 	 Layer time: 14.1898 	 number of inputs: 7 	 input shape: 256x14x14 	 output shape: 1024x14x14
+3	Layer Name: block3/unit3/bottleneck_v1/add 	 Layer time: 1.3496 	 number of inputs: 2 	 input shape: 1024x14x14 	 output shape: 1024x14x14
+Layer Number: 10 	 time: 53.4572
+----------------------------
+4	Layer Name: block3/unit3/bottleneck_v1/Relu 	 Layer time: 1.0831 	 number of inputs: 1 	 input shape: 1024x14x14 	 output shape: 1024x14x14
+
+ Sum of Layers time: 54.5404
+
+ input time of layer 10 : 0.9792
+
+ transfer_time of layer 10 : 1.0247
+
+ output time of layer 10 : 0.0427
+
+ this part task time: 55.3564
+
+
+Cost10:1424.86
+input10_time:0.979214
+task10_time:55.3564
+output10_time:0.0426504
+total10_time:56.3782
+***************************************
+
+0	Layer Name: block3/unit4/bottleneck_v1/conv1/convolution+block3/unit4/bottleneck_v1/conv1/BatchNorm 	 Layer time: 29.2824 	 number of inputs: 7 	 input shape: 1024x14x14 	 output shape: 256x14x14
+1	Layer Name: block3/unit4/bottleneck_v1/conv2/convolution+block3/unit4/bottleneck_v1/conv2/BatchNorm 	 Layer time: 36.2091 	 number of inputs: 7 	 input shape: 256x14x14 	 output shape: 256x14x14
+2	Layer Name: block3/unit4/bottleneck_v1/conv3/convolution+block3/unit4/bottleneck_v1/conv3/BatchNorm 	 Layer time: 19.1995 	 number of inputs: 7 	 input shape: 256x14x14 	 output shape: 1024x14x14
+3	Layer Name: block3/unit4/bottleneck_v1/add 	 Layer time: 1.5742 	 number of inputs: 2 	 input shape: 1024x14x14 	 output shape: 1024x14x14
+Layer Number: 11 	 time: 86.2652
+----------------------------
+4	Layer Name: block3/unit4/bottleneck_v1/Relu 	 Layer time: 0.9393 	 number of inputs: 1 	 input shape: 1024x14x14 	 output shape: 1024x14x14
+
+ Sum of Layers time: 87.2044
+
+ input time of layer 11 : 0.8175
+
+ transfer_time of layer 11 : 0.8602
+
+ output time of layer 11 : 0.0475
+
+ this part task time: 87.8922
+
+
+Cost11:1425.65
+input11_time:0.817515
+task11_time:87.8922
+output11_time:0.0475387
+total11_time:88.7572
+***************************************
+
+0	Layer Name: block3/unit5/bottleneck_v1/conv1/convolution+block3/unit5/bottleneck_v1/conv1/BatchNorm 	 Layer time: 16.4361 	 number of inputs: 7 	 input shape: 1024x14x14 	 output shape: 256x14x14
+1	Layer Name: block3/unit5/bottleneck_v1/conv2/convolution+block3/unit5/bottleneck_v1/conv2/BatchNorm 	 Layer time: 21.3384 	 number of inputs: 7 	 input shape: 256x14x14 	 output shape: 256x14x14
+2	Layer Name: block3/unit5/bottleneck_v1/conv3/convolution+block3/unit5/bottleneck_v1/conv3/BatchNorm 	 Layer time: 14.1216 	 number of inputs: 7 	 input shape: 256x14x14 	 output shape: 1024x14x14
+3	Layer Name: block3/unit5/bottleneck_v1/add 	 Layer time: 1.3384 	 number of inputs: 2 	 input shape: 1024x14x14 	 output shape: 1024x14x14
+Layer Number: 12 	 time: 53.2346
+----------------------------
+4	Layer Name: block3/unit5/bottleneck_v1/Relu 	 Layer time: 1.0493 	 number of inputs: 1 	 input shape: 1024x14x14 	 output shape: 1024x14x14
+
+ Sum of Layers time: 54.2839
+
+ input time of layer 12 : 0.9897
+
+ transfer_time of layer 12 : 1.0373
+
+ output time of layer 12 : 0.0448
+
+ this part task time: 55.1032
+
+
+Cost12:1426.23
+input12_time:0.989714
+task12_time:55.1032
+output12_time:0.0448409
+total12_time:56.1377
+***************************************
+
+0	Layer Name: block3/unit6/bottleneck_v1/conv1/convolution+block3/unit6/bottleneck_v1/conv1/BatchNorm 	 Layer time: 24.5816 	 number of inputs: 7 	 input shape: 1024x14x14 	 output shape: 256x14x14
+1	Layer Name: block3/unit6/bottleneck_v1/conv2/convolution+block3/unit6/bottleneck_v1/conv2/BatchNorm 	 Layer time: 36.8648 	 number of inputs: 7 	 input shape: 256x14x14 	 output shape: 256x14x14
+2	Layer Name: block3/unit6/bottleneck_v1/conv3/convolution+block3/unit6/bottleneck_v1/conv3/BatchNorm 	 Layer time: 19.8970 	 number of inputs: 7 	 input shape: 256x14x14 	 output shape: 1024x14x14
+3	Layer Name: block3/unit6/bottleneck_v1/add 	 Layer time: 1.4495 	 number of inputs: 2 	 input shape: 1024x14x14 	 output shape: 1024x14x14
+Layer Number: 13 	 time: 82.7929
+----------------------------
+4	Layer Name: block3/unit6/bottleneck_v1/Relu 	 Layer time: 0.9535 	 number of inputs: 1 	 input shape: 1024x14x14 	 output shape: 1024x14x14
+
+ Sum of Layers time: 83.7464
+
+ input time of layer 13 : 0.8057
+
+ transfer_time of layer 13 : 0.8505
+
+ output time of layer 13 : 0.0435
+
+ this part task time: 84.4462
+
+
+Cost13:1426.96
+input13_time:0.805695
+task13_time:84.4462
+output13_time:0.043505
+total13_time:85.2954
+***************************************
+
+0	Layer Name: block4/unit1/bottleneck_v1/shortcut/convolution+block4/unit1/bottleneck_v1/shortcut/BatchNorm 	 Layer time: 34.3231 	 number of inputs: 7 	 input shape: 1024x14x14 	 output shape: 2048x7x7
+1	Layer Name: block4/unit1/bottleneck_v1/conv1/convolution+block4/unit1/bottleneck_v1/conv1/BatchNorm 	 Layer time: 8.8898 	 number of inputs: 7 	 input shape: 1024x14x14 	 output shape: 512x7x7
+2	Layer Name: block4/unit1/bottleneck_v1/conv2/convolution+block4/unit1/bottleneck_v1/conv2/BatchNorm 	 Layer time: 20.5215 	 number of inputs: 7 	 input shape: 512x7x7 	 output shape: 512x7x7
+3	Layer Name: block4/unit1/bottleneck_v1/conv3/convolution+block4/unit1/bottleneck_v1/conv3/BatchNorm 	 Layer time: 16.3112 	 number of inputs: 7 	 input shape: 512x7x7 	 output shape: 2048x7x7
+4	Layer Name: block4/unit1/bottleneck_v1/add 	 Layer time: 0.8053 	 number of inputs: 2 	 input shape: 2048x7x7 	 output shape: 2048x7x7
+Layer Number: 14 	 time: 80.8509
+----------------------------
+5	Layer Name: block4/unit1/bottleneck_v1/Relu 	 Layer time: 0.7039 	 number of inputs: 1 	 input shape: 2048x7x7 	 output shape: 2048x7x7
+
+ Sum of Layers time: 81.5548
+
+ input time of layer 14 : 0.9545
+
+ transfer_time of layer 14 : 0.9980
+
+ output time of layer 14 : 0.0430
+
+ this part task time: 82.3672
+
+
+Cost14:1427.78
+input14_time:0.954517
+task14_time:82.3672
+output14_time:0.0429538
+total14_time:83.3647
+***************************************
+
+0	Layer Name: block4/unit2/bottleneck_v1/conv1/convolution+block4/unit2/bottleneck_v1/conv1/BatchNorm 	 Layer time: 32.8307 	 number of inputs: 7 	 input shape: 2048x7x7 	 output shape: 512x7x7
+1	Layer Name: block4/unit2/bottleneck_v1/conv2/convolution+block4/unit2/bottleneck_v1/conv2/BatchNorm 	 Layer time: 35.0523 	 number of inputs: 7 	 input shape: 512x7x7 	 output shape: 512x7x7
+2	Layer Name: block4/unit2/bottleneck_v1/conv3/convolution+block4/unit2/bottleneck_v1/conv3/BatchNorm 	 Layer time: 26.6021 	 number of inputs: 7 	 input shape: 512x7x7 	 output shape: 2048x7x7
+3	Layer Name: block4/unit2/bottleneck_v1/add 	 Layer time: 0.8039 	 number of inputs: 2 	 input shape: 2048x7x7 	 output shape: 2048x7x7
+Layer Number: 15 	 time: 95.2888
+----------------------------
+4	Layer Name: block4/unit2/bottleneck_v1/Relu 	 Layer time: 0.6645 	 number of inputs: 1 	 input shape: 2048x7x7 	 output shape: 2048x7x7
+
+ Sum of Layers time: 95.9533
+
+ input time of layer 15 : 0.5148
+
+ transfer_time of layer 15 : 0.5578
+
+ output time of layer 15 : 0.0421
+
+ this part task time: 96.6397
+
+
+Cost15:1417.96
+input15_time:0.514842
+task15_time:96.6397
+output15_time:0.0421138
+total15_time:97.1967
+***************************************
+
+0	Layer Name: block4/unit3/bottleneck_v1/conv1/convolution+block4/unit3/bottleneck_v1/conv1/BatchNorm 	 Layer time: 18.9670 	 number of inputs: 7 	 input shape: 2048x7x7 	 output shape: 512x7x7
+1	Layer Name: block4/unit3/bottleneck_v1/conv2/convolution+block4/unit3/bottleneck_v1/conv2/BatchNorm 	 Layer time: 24.4373 	 number of inputs: 7 	 input shape: 512x7x7 	 output shape: 512x7x7
+2	Layer Name: block4/unit3/bottleneck_v1/conv3/convolution+block4/unit3/bottleneck_v1/conv3/BatchNorm 	 Layer time: 17.4466 	 number of inputs: 7 	 input shape: 512x7x7 	 output shape: 2048x7x7
+3	Layer Name: block4/unit3/bottleneck_v1/add 	 Layer time: 0.8294 	 number of inputs: 2 	 input shape: 2048x7x7 	 output shape: 2048x7x7
+4	Layer Name: block4/unit3/bottleneck_v1/Relu 	 Layer time: 0.6550 	 number of inputs: 1 	 input shape: 2048x7x7 	 output shape: 2048x7x7
+5	Layer Name: pool5 	 Layer time: 1.1802 	 number of inputs: 1 	 input shape: 2048x7x7 	 output shape: 2048
+Layer Number: 16 	 time: 63.5154
+----------------------------
+
+ Sum of Layers time: 63.5154
+
+ input time of layer 16 : 0.5874
+
+ transfer_time of layer 16 : 0.6295
+
+ output time of layer 16 : 0.0443
+
+ this part task time: 64.2120
+
+
+Cost16:1405.42
+input16_time:0.587395
+task16_time:64.212
+output16_time:0.0442895
+total16_time:64.8437
+***************************************
+
+0	Layer Name: logits/convolution 	 Layer time: 4.8420 	 number of inputs: 3 	 input shape: 2048 	 output shape: 1000
+1	Layer Name: predictions/Reshape 	 Layer time: 0.2146 	 number of inputs: 1 	 input shape: 1000 	 output shape: 1000
+2	Layer Name: predictions/Softmax 	 Layer time: 0.1459 	 number of inputs: 1 	 input shape: 1000 	 output shape: 1000
+Layer Number: 17 	 time: 5.2024
+----------------------------
+
+ Sum of Layers time: 5.2024
+
+ input time of layer 17 : 0.4038
+
+ transfer_time of layer 17 : 0.4481
+
+ output time of layer 17 : 0.7793
+
+ this part task time: 5.4493
+
+
+Cost17:1405.46
+input17_time:0.403776
+task17_time:5.44928
+output17_time:0.779298
+total17_time:6.63235
+***************************************
+
+Frame Latency: 2636.42
+Profiling these DVFS settings finised
+
+Test passed

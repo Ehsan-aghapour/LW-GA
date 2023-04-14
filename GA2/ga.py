@@ -202,27 +202,6 @@ _fn=[[0],[1],[2],[3],[4],[5],[6],[7]]
 comp_cost(fn=_fn[::-1],debug=True)
 
 
-def decode_gene(v):
-    if v<6 :
-        return "L",[v]
-    elif v<14:
-        return "B",[v-6]
-    elif v<54:
-        v2=v-14
-        fgpu=v2//8
-        fbig=v2%8
-        return "G",[fgpu,fbig]
-def decoder(chromosome):
-    freqs=[]
-    ps=''
-    for gene in chromosome:
-        p,fs=decode_gene(gene)
-        ps+=p
-        freqs.append(fs)
-    return freqs,ps
-
-
-
 def transfer_info(p1='B',p2='G',f1=[4],f2=[3,4]):
     '''p1='B'
     p2='G'
@@ -323,6 +302,29 @@ def comm_cost(g='alex',fn=[[0],[1],[2],[3],[4],[5],[6],[7]],cmps=8*'B',dvfs_dela
     return transfer_t, transfer_e/1000.0
 comm_cost(cmps="LLLBBBBB",debug=True)
 
+comp_cost(g="alex",cmps='BBBBBBBB',fn=[ [0],[1],[2],[3],[4],[5],[6],[7] ] )
+
+
+def decode_gene(v):
+    if v<6 :
+        return "L",[v]
+    elif v<14:
+        return "B",[v-6]
+    elif v<54:
+        v2=v-14
+        fgpu=v2//8
+        fbig=v2%8
+        return "G",[fgpu,fbig]
+def decoder(chromosome):
+    freqs=[]
+    ps=''
+    for gene in chromosome:
+        p,fs=decode_gene(gene)
+        ps+=p
+        freqs.append(fs)
+    return freqs,ps
+
+
 conf=decoder([1,6,8,14,44,6,0,0])
 print(conf)
 comp_cost(fn=conf[0],cmps=conf[1],debug=True)
@@ -346,70 +348,75 @@ from geneticalgorithm2 import Callbacks # simple callbacks (will be deprecated)
 
 from geneticalgorithm2 import Actions, ActionConditions, MiddleCallbacks # middle callbacks
 
-# +
-_g='alex'
-NL=NLayers[_g]
-varbound=[(0,53)]*NL
-target_latency=150
-
-def f(X):
-    #print(X)
-    global target_latency
-    config=decoder(X)
-    cmp_time,cmp_energy=comp_cost(g=_g, fn=config[0],cmps=config[1])
-    comm_time,comm_energy=comm_cost(g=_g, fn=config[0],cmps=config[1])
-    time=cmp_time+comm_time
-    energy=cmp_energy+comm_energy
-    #print(config)
-    #print(time)
-    if time<target_latency:
-        return energy
-    else:
-        return 1000000000
-    return time
-
-algorithm_param = {'max_num_iteration': 3000,
-                   'population_size':100,
-                   'mutation_probability': 0.1,
-                   'mutation_discrete_probability': None,
-                   'elit_ratio': 0.01,
-                   'parents_portion': 0.3,
-                   'crossover_type':'one_point',
-                   'mutation_type': 'uniform_by_center',
-                   'mutation_discrete_type': 'uniform_discrete',
-                   'selection_type': 'roulette',
-                   'max_iteration_without_improv':None}
-
-model=ga(function=f,
-            dimension=NL,
-            variable_type='int',
-            variable_boundaries=varbound,
-            algorithm_parameters=algorithm_param
-        )
-
-model.run(no_plot = False,)
-plt.plot(model.report, label = f"local optimization")
-with path(g+'model.pkl').open() as f:
-    pkl.dump(model,f)
+import matplotlib.pyplot as plt
 
 
 # -
 
-for r in model.result.last_generation.variables:
-    config=decoder(r)
+def run_ga(_g='alex',_target_latency=500):
+    NL=NLayers[_g]
+    varbound=[(0,53)]*NL
+    def f(X):
+        target_latency=_target_latency
+        config=decoder(X)
+        cmp_time,cmp_energy=comp_cost(g=_g, fn=config[0],cmps=config[1])
+        comm_time,comm_energy=comm_cost(g=_g, fn=config[0],cmps=config[1])
+        time=cmp_time+comm_time
+        energy=cmp_energy+comm_energy
+        if time<target_latency:
+            return energy
+        else:
+            return 1000000000
+        return time
+
+    algorithm_param = {'max_num_iteration': 15000,
+                       'population_size':500,
+                       'mutation_probability': 0.1,
+                       'mutation_discrete_probability': None,
+                       'elit_ratio': 0.01,
+                       'parents_portion': 0.3,
+                       'crossover_type':'one_point',
+                       'mutation_type': 'uniform_by_center',
+                       'mutation_discrete_type': 'uniform_discrete',
+                       'selection_type': 'roulette',
+                       'max_iteration_without_improv':None}
+
+    model=ga(function=f,
+                dimension=NL,
+                variable_type='int',
+                variable_boundaries=varbound,
+                algorithm_parameters=algorithm_param
+            )
+
+    filename=_g+'_last_g.npz'
+    model.run(no_plot = False,save_last_generation_as = filename)
+    with Path(_g+"_report.pkl").open('wb') as ff:
+        pkl.dump(model.report,ff)
+    '''with Path(_g+"_result.npz").open('wb') as ff:
+        pkl.dump(model.result,ff)
+    model.run(start_generation=model.result.last_generation)
+    '''
+    plt.plot(model.report, label = f"local optimization")
+    return model
+
+
+def main():
+    global model_alex,model_google,model_mobile,model_res50,model_squeeze
+    model_alex=run_ga(_g='alex', _target_latency=150)
+
+    model_google=run_ga(_g='google', _target_latency=180)
+
+    model_mobile=run_ga(_g='mobile', _target_latency=140)
+
+    model_res50=run_ga(_g='res50', _target_latency=600)
+
+    model_squeeze=run_ga(_g='squeeze', _target_latency=180)
+
+    for r in model.result.last_generation.variables:
+        config=decoder(r)
+        print(config)
+        print(comp_time(fn=config[0],cmps=config[1],debug=False))
+
+    config=decoder([53,53,53,53,53,53,53,13])
     print(config)
     print(comp_time(fn=config[0],cmps=config[1],debug=False))
-
-config=decoder([53,53,53,53,53,53,53,13])
-print(config)
-print(comp_time(fn=config[0],cmps=config[1],debug=False))
-
-m=model
-print(dir(m.result))
-#print(dir(m))
-#print(f'output:\n{m.output_dict}')
-#print(f'best function:\n{m.best_function}')
-print(dir(m.result.last_generation))
-print(f'best variable:\n{[decoder(i) for i in m.result.last_generation.variables]}')
-
-

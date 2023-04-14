@@ -1,0 +1,1443 @@
+/data/data/com.termux/files/home/ARMCL-RockPi//test_graph//graph_squeezenet_n_pipe_npu_lw  --target=CL --data=/data/data/com.termux/files/home/ARMCL-RockPi/assets/./squeezenet/ --image=/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/ --labels=/data/data/com.termux/files/home/ARMCL-RockPi/assets/./labels.txt --n=100 --save=0 --annotate=0 --partition_point=100 --partition_point2=100 --order=GLGLGLGLGL --layer_time=1 --threads=2  --threads2=4 --GPU_host=B --NPU_host=B 
+pandoon
+pandoon
+pandoon
+
+/data/data/com.termux/files/home/ARMCL-RockPi//test_graph//graph_squeezenet_n_pipe_npu_lw
+
+5 Input images are read from /data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/
+NPU host: 4
+Little Cores host: 3
+Big Cores host: 5
+GPU host: 4
+Pandoon opened at 3
+Number of Layers: 10
+Threads : 2
+Small Cores Threads : 4
+Target : CL
+Data type : F32
+Data layout : NHWC
+Tuner enabled? : false
+Cache enabled? : true
+Tuner mode : Normal
+Tuner file : 
+MLGO file : 
+Fast math enabled? : false
+Data path : /data/data/com.termux/files/home/ARMCL-RockPi/assets/./squeezenet/
+Image file : /data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/space_shuttle_227.jpg
+Labels file : /data/data/com.termux/files/home/ARMCL-RockPi/assets/./labels.txt
+Partition point is : 100
+Second partition point is : 100
+Order is : GLGLGLGLGL
+freqs of layers : 
+GPU host is: B
+NPU host is: B
+Number of totla cores is : 6
+Number of little cores is : 4
+Run network for 100 times.
+Layer timing: 1
+
+start creating graph
+creating image accessor
+std::string task_names[] = { "conv1", "pool1" };
+number of tasks: 2
+std::set<std::string> end_task_names = { "pool1" };
+number of end tasks: 1
+std::set<std::string> start_task_names = { "conv1" };
+number of start tasks: 1
+after pass graph 0
+std::string task_names[] = { "fire2/squeeze1x1", "fire2/expand1x1", "fire2/expand3x3", "fire2/concat" };
+number of tasks: 4
+std::set<std::string> end_task_names = { "fire2/concat" };
+number of end tasks: 1
+std::set<std::string> start_task_names = { "fire2/squeeze1x1" };
+number of start tasks: 1
+after pass graph 1
+std::string task_names[] = { "fire3/squeeze1x1", "fire3/expand1x1", "fire3/expand3x3", "fire3/concat" };
+number of tasks: 4
+std::set<std::string> end_task_names = { "fire3/concat" };
+number of end tasks: 1
+std::set<std::string> start_task_names = { "fire3/squeeze1x1" };
+number of start tasks: 1
+after pass graph 2
+std::string task_names[] = { "fire4/squeeze1x1", "fire4/expand1x1", "fire4/expand3x3", "fire4/concat", "pool4" };
+number of tasks: 5
+std::set<std::string> end_task_names = { "pool4" };
+number of end tasks: 1
+std::set<std::string> start_task_names = { "fire4/squeeze1x1" };
+number of start tasks: 1
+after pass graph 3
+std::string task_names[] = { "fire5/squeeze1x1", "fire5/expand1x1", "fire5/expand3x3", "fire5/concat" };
+number of tasks: 4
+std::set<std::string> end_task_names = { "fire5/concat" };
+number of end tasks: 1
+std::set<std::string> start_task_names = { "fire5/squeeze1x1" };
+number of start tasks: 1
+after pass graph 4
+std::string task_names[] = { "fire6/squeeze1x1", "fire6/expand1x1", "fire6/expand3x3", "fire6/concat" };
+number of tasks: 4
+std::set<std::string> end_task_names = { "fire6/concat" };
+number of end tasks: 1
+std::set<std::string> start_task_names = { "fire6/squeeze1x1" };
+number of start tasks: 1
+after pass graph 5
+std::string task_names[] = { "fire7/squeeze1x1", "fire7/expand1x1", "fire7/expand3x3", "fire7/concat" };
+number of tasks: 4
+std::set<std::string> end_task_names = { "fire7/concat" };
+number of end tasks: 1
+std::set<std::string> start_task_names = { "fire7/squeeze1x1" };
+number of start tasks: 1
+after pass graph 6
+std::string task_names[] = { "fire8/squeeze1x1", "fire8/expand1x1", "fire8/expand3x3", "fire8/concat", "pool8" };
+number of tasks: 5
+std::set<std::string> end_task_names = { "pool8" };
+number of end tasks: 1
+std::set<std::string> start_task_names = { "fire8/squeeze1x1" };
+number of start tasks: 1
+after pass graph 7
+std::string task_names[] = { "fire9/squeeze1x1", "fire9/expand1x1", "fire9/expand3x3", "fire9/concat" };
+number of tasks: 4
+std::set<std::string> end_task_names = { "fire9/concat" };
+number of end tasks: 1
+std::set<std::string> start_task_names = { "fire9/squeeze1x1" };
+number of start tasks: 1
+after pass graph 8
+std::string task_names[] = { "conv10", "pool10", "flatten", "prob" };
+number of tasks: 4
+std::set<std::string> end_task_names = { "prob" };
+number of end tasks: 1
+std::set<std::string> start_task_names = { "conv10" };
+number of start tasks: 1
+after pass graph 9
+Total layers:10
+
+0 Running Graph with min LW DVFS
+task: conv1 set freq for next task to -1, -1, -1
+task: pool1 set freq for next task to 0, 0, 0
+task: fire2/squeeze1x1 set freq for next task to -1, -1, -1
+task: fire2/expand1x1 set freq for next task to -1, -1, -1
+task: fire2/expand3x3 set freq for next task to -1, -1, -1
+task: fire2/concat set freq for next task to 0, 0, 0
+task: fire3/squeeze1x1 set freq for next task to -1, -1, -1
+task: fire3/expand1x1 set freq for next task to -1, -1, -1
+task: fire3/expand3x3 set freq for next task to -1, -1, -1
+task: fire3/concat set freq for next task to 0, 0, 0
+task: fire4/squeeze1x1 set freq for next task to -1, -1, -1
+task: fire4/expand1x1 set freq for next task to -1, -1, -1
+task: fire4/expand3x3 set freq for next task to -1, -1, -1
+task: fire4/concat set freq for next task to -1, -1, -1
+task: pool4 set freq for next task to 0, 0, 0
+task: fire5/squeeze1x1 set freq for next task to -1, -1, -1
+task: fire5/expand1x1 set freq for next task to -1, -1, -1
+task: fire5/expand3x3 set freq for next task to -1, -1, -1
+task: fire5/concat set freq for next task to 0, 0, 0
+task: fire6/squeeze1x1 set freq for next task to -1, -1, -1
+task: fire6/expand1x1 set freq for next task to -1, -1, -1
+task: fire6/expand3x3 set freq for next task to -1, -1, -1
+task: fire6/concat set freq for next task to 0, 0, 0
+task: fire7/squeeze1x1 set freq for next task to -1, -1, -1
+task: fire7/expand1x1 set freq for next task to -1, -1, -1
+task: fire7/expand3x3 set freq for next task to -1, -1, -1
+task: fire7/concat set freq for next task to 0, 0, 0
+task: fire8/squeeze1x1 set freq for next task to -1, -1, -1
+task: fire8/expand1x1 set freq for next task to -1, -1, -1
+task: fire8/expand3x3 set freq for next task to -1, -1, -1
+task: fire8/concat set freq for next task to -1, -1, -1
+task: pool8 set freq for next task to 0, 0, 0
+task: fire9/squeeze1x1 set freq for next task to -1, -1, -1
+task: fire9/expand1x1 set freq for next task to -1, -1, -1
+task: fire9/expand3x3 set freq for next task to -1, -1, -1
+task: fire9/concat set freq for next task to 0, 0, 0
+task: conv10 set freq for next task to -1, -1, -1
+task: pool10 set freq for next task to -1, -1, -1
+task: flatten set freq for next task to -1, -1, -1
+task: prob set freq for next task to 0, 0, 0
+
+
+WarmUp: First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/space_shuttle_227.jpg
+Subgraph0 Ready to trigger Start Running
+Subgraph1 Ready to trigger Start Running
+Subgraph2 Ready to trigger Start Running
+Subgraph3 Ready to trigger Start Running
+Subgraph4 Ready to trigger Start Running
+Subgraph5 Ready to trigger Start Running
+Subgraph6 Ready to trigger Start Running
+Subgraph7 Ready to trigger Start Running
+Subgraph8 Ready to trigger Start Running
+---------- Top 5 predictions ----------
+
+0.9472 - [id = 812], n04266014 space shuttle
+0.0188 - [id = 833], n04347754 submarine, pigboat, sub, U-boat
+0.0139 - [id = 814], n04273569 speedboat
+0.0037 - [id = 867], n04467665 trailer truck, tractor trailer, trucking rig, rig, articulated lorry, semi
+0.0032 - [id = 871], n04483307 trimaran
+Subgraph9 Ready to trigger Start Running
+
+
+
+
+
+
+
+================================================
+Start Running All Subgraphs ...
+====================================================
+
+
+
+
+
+First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/space_shuttle_227.jpg
+
+
+First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/gold_fish.ppm
+---------- Top 5 predictions ----------
+
+0.9472 - [id = 812], n04266014 space shuttle
+0.0188 - [id = 833], n04347754 submarine, pigboat, sub, U-boat
+0.0139 - [id = 814], n04273569 speedboat
+0.0037 - [id = 867], n04467665 trailer truck, tractor trailer, trucking rig, rig, articulated lorry, semi
+0.0032 - [id = 871], n04483307 trimaran
+
+
+First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/gondola.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 27], n01631663 eft
+0.0000 - [id = 310], n02219486 ant, emmet, pismire
+0.0000 - [id = 29], n01632777 axolotl, mud puppy, Ambystoma mexicanum
+0.0000 - [id = 26], n01630670 common newt, Triturus vulgaris
+
+
+First graph inferencing image: 3:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/school_bus.ppm
+---------- Top 5 predictions ----------
+
+0.9994 - [id = 576], n03447447 gondola
+0.0001 - [id = 765], n04099969 rocking chair, rocker
+0.0001 - [id = 536], n03216828 dock, dockage, docking facility
+0.0001 - [id = 532], n03201208 dining table, board
+0.0000 - [id = 540], n03240683 drilling platform, offshore rig
+
+
+First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/go_kart.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 779], n04146614 school bus
+0.0000 - [id = 705], n03895866 passenger car, coach, carriage
+0.0000 - [id = 829], n04335435 streetcar, tram, tramcar, trolley, trolley car
+0.0000 - [id = 675], n03796401 moving van
+0.0000 - [id = 654], n03769881 minibus
+
+
+First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/space_shuttle_227.jpg
+---------- Top 5 predictions ----------
+
+0.9995 - [id = 573], n03444034 go-kart
+0.0001 - [id = 518], n03127747 crash helmet
+0.0001 - [id = 621], n03649909 lawn mower, mower
+0.0001 - [id = 665], n03785016 moped
+0.0000 - [id = 817], n04285008 sports car, sport car
+
+
+First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/gold_fish.ppm
+---------- Top 5 predictions ----------
+
+0.9472 - [id = 812], n04266014 space shuttle
+0.0188 - [id = 833], n04347754 submarine, pigboat, sub, U-boat
+0.0139 - [id = 814], n04273569 speedboat
+0.0037 - [id = 867], n04467665 trailer truck, tractor trailer, trucking rig, rig, articulated lorry, semi
+0.0032 - [id = 871], n04483307 trimaran
+
+
+First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/gondola.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 27], n01631663 eft
+0.0000 - [id = 310], n02219486 ant, emmet, pismire
+0.0000 - [id = 29], n01632777 axolotl, mud puppy, Ambystoma mexicanum
+0.0000 - [id = 26], n01630670 common newt, Triturus vulgaris
+
+
+First graph inferencing image: 3:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/school_bus.ppm
+---------- Top 5 predictions ----------
+
+0.9994 - [id = 576], n03447447 gondola
+0.0001 - [id = 765], n04099969 rocking chair, rocker
+0.0001 - [id = 536], n03216828 dock, dockage, docking facility
+0.0001 - [id = 532], n03201208 dining table, board
+0.0000 - [id = 540], n03240683 drilling platform, offshore rig
+
+
+First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/go_kart.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 779], n04146614 school bus
+0.0000 - [id = 705], n03895866 passenger car, coach, carriage
+0.0000 - [id = 829], n04335435 streetcar, tram, tramcar, trolley, trolley car
+0.0000 - [id = 675], n03796401 moving van
+0.0000 - [id = 654], n03769881 minibus
+
+
+First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/space_shuttle_227.jpg
+---------- Top 5 predictions ----------
+
+0.9995 - [id = 573], n03444034 go-kart
+0.0001 - [id = 518], n03127747 crash helmet
+0.0001 - [id = 621], n03649909 lawn mower, mower
+0.0001 - [id = 665], n03785016 moped
+0.0000 - [id = 817], n04285008 sports car, sport car
+
+
+First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/gold_fish.ppm
+---------- Top 5 predictions ----------
+
+0.9472 - [id = 812], n04266014 space shuttle
+0.0188 - [id = 833], n04347754 submarine, pigboat, sub, U-boat
+0.0139 - [id = 814], n04273569 speedboat
+0.0037 - [id = 867], n04467665 trailer truck, tractor trailer, trucking rig, rig, articulated lorry, semi
+0.0032 - [id = 871], n04483307 trimaran
+
+
+First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/gondola.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 27], n01631663 eft
+0.0000 - [id = 310], n02219486 ant, emmet, pismire
+0.0000 - [id = 29], n01632777 axolotl, mud puppy, Ambystoma mexicanum
+0.0000 - [id = 26], n01630670 common newt, Triturus vulgaris
+
+
+First graph inferencing image: 3:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/school_bus.ppm
+---------- Top 5 predictions ----------
+
+0.9994 - [id = 576], n03447447 gondola
+0.0001 - [id = 765], n04099969 rocking chair, rocker
+0.0001 - [id = 536], n03216828 dock, dockage, docking facility
+0.0001 - [id = 532], n03201208 dining table, board
+0.0000 - [id = 540], n03240683 drilling platform, offshore rig
+
+
+First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/go_kart.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 779], n04146614 school bus
+0.0000 - [id = 705], n03895866 passenger car, coach, carriage
+0.0000 - [id = 829], n04335435 streetcar, tram, tramcar, trolley, trolley car
+0.0000 - [id = 675], n03796401 moving van
+0.0000 - [id = 654], n03769881 minibus
+
+
+First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/space_shuttle_227.jpg
+---------- Top 5 predictions ----------
+
+0.9995 - [id = 573], n03444034 go-kart
+0.0001 - [id = 518], n03127747 crash helmet
+0.0001 - [id = 621], n03649909 lawn mower, mower
+0.0001 - [id = 665], n03785016 moped
+0.0000 - [id = 817], n04285008 sports car, sport car
+
+
+First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/gold_fish.ppm
+---------- Top 5 predictions ----------
+
+0.9472 - [id = 812], n04266014 space shuttle
+0.0188 - [id = 833], n04347754 submarine, pigboat, sub, U-boat
+0.0139 - [id = 814], n04273569 speedboat
+0.0037 - [id = 867], n04467665 trailer truck, tractor trailer, trucking rig, rig, articulated lorry, semi
+0.0032 - [id = 871], n04483307 trimaran
+
+
+First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/gondola.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 27], n01631663 eft
+0.0000 - [id = 310], n02219486 ant, emmet, pismire
+0.0000 - [id = 29], n01632777 axolotl, mud puppy, Ambystoma mexicanum
+0.0000 - [id = 26], n01630670 common newt, Triturus vulgaris
+
+
+First graph inferencing image: 3:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/school_bus.ppm
+---------- Top 5 predictions ----------
+
+0.9994 - [id = 576], n03447447 gondola
+0.0001 - [id = 765], n04099969 rocking chair, rocker
+0.0001 - [id = 536], n03216828 dock, dockage, docking facility
+0.0001 - [id = 532], n03201208 dining table, board
+0.0000 - [id = 540], n03240683 drilling platform, offshore rig
+
+
+First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/go_kart.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 779], n04146614 school bus
+0.0000 - [id = 705], n03895866 passenger car, coach, carriage
+0.0000 - [id = 829], n04335435 streetcar, tram, tramcar, trolley, trolley car
+0.0000 - [id = 675], n03796401 moving van
+0.0000 - [id = 654], n03769881 minibus
+
+
+First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/space_shuttle_227.jpg
+---------- Top 5 predictions ----------
+
+0.9995 - [id = 573], n03444034 go-kart
+0.0001 - [id = 518], n03127747 crash helmet
+0.0001 - [id = 621], n03649909 lawn mower, mower
+0.0001 - [id = 665], n03785016 moped
+0.0000 - [id = 817], n04285008 sports car, sport car
+
+
+First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/gold_fish.ppm
+---------- Top 5 predictions ----------
+
+0.9472 - [id = 812], n04266014 space shuttle
+0.0188 - [id = 833], n04347754 submarine, pigboat, sub, U-boat
+0.0139 - [id = 814], n04273569 speedboat
+0.0037 - [id = 867], n04467665 trailer truck, tractor trailer, trucking rig, rig, articulated lorry, semi
+0.0032 - [id = 871], n04483307 trimaran
+
+
+First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/gondola.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 27], n01631663 eft
+0.0000 - [id = 310], n02219486 ant, emmet, pismire
+0.0000 - [id = 29], n01632777 axolotl, mud puppy, Ambystoma mexicanum
+0.0000 - [id = 26], n01630670 common newt, Triturus vulgaris
+
+
+First graph inferencing image: 3:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/school_bus.ppm
+---------- Top 5 predictions ----------
+
+0.9994 - [id = 576], n03447447 gondola
+0.0001 - [id = 765], n04099969 rocking chair, rocker
+0.0001 - [id = 536], n03216828 dock, dockage, docking facility
+0.0001 - [id = 532], n03201208 dining table, board
+0.0000 - [id = 540], n03240683 drilling platform, offshore rig
+
+
+First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/go_kart.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 779], n04146614 school bus
+0.0000 - [id = 705], n03895866 passenger car, coach, carriage
+0.0000 - [id = 829], n04335435 streetcar, tram, tramcar, trolley, trolley car
+0.0000 - [id = 675], n03796401 moving van
+0.0000 - [id = 654], n03769881 minibus
+
+
+First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/space_shuttle_227.jpg
+---------- Top 5 predictions ----------
+
+0.9995 - [id = 573], n03444034 go-kart
+0.0001 - [id = 518], n03127747 crash helmet
+0.0001 - [id = 621], n03649909 lawn mower, mower
+0.0001 - [id = 665], n03785016 moped
+0.0000 - [id = 817], n04285008 sports car, sport car
+
+
+First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/gold_fish.ppm
+---------- Top 5 predictions ----------
+
+0.9472 - [id = 812], n04266014 space shuttle
+0.0188 - [id = 833], n04347754 submarine, pigboat, sub, U-boat
+0.0139 - [id = 814], n04273569 speedboat
+0.0037 - [id = 867], n04467665 trailer truck, tractor trailer, trucking rig, rig, articulated lorry, semi
+0.0032 - [id = 871], n04483307 trimaran
+
+
+First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/gondola.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 27], n01631663 eft
+0.0000 - [id = 310], n02219486 ant, emmet, pismire
+0.0000 - [id = 29], n01632777 axolotl, mud puppy, Ambystoma mexicanum
+0.0000 - [id = 26], n01630670 common newt, Triturus vulgaris
+
+
+First graph inferencing image: 3:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/school_bus.ppm
+---------- Top 5 predictions ----------
+
+0.9994 - [id = 576], n03447447 gondola
+0.0001 - [id = 765], n04099969 rocking chair, rocker
+0.0001 - [id = 536], n03216828 dock, dockage, docking facility
+0.0001 - [id = 532], n03201208 dining table, board
+0.0000 - [id = 540], n03240683 drilling platform, offshore rig
+
+
+First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/go_kart.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 779], n04146614 school bus
+0.0000 - [id = 705], n03895866 passenger car, coach, carriage
+0.0000 - [id = 829], n04335435 streetcar, tram, tramcar, trolley, trolley car
+0.0000 - [id = 675], n03796401 moving van
+0.0000 - [id = 654], n03769881 minibus
+
+
+First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/space_shuttle_227.jpg
+---------- Top 5 predictions ----------
+
+0.9995 - [id = 573], n03444034 go-kart
+0.0001 - [id = 518], n03127747 crash helmet
+0.0001 - [id = 621], n03649909 lawn mower, mower
+0.0001 - [id = 665], n03785016 moped
+0.0000 - [id = 817], n04285008 sports car, sport car
+
+
+First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/gold_fish.ppm
+---------- Top 5 predictions ----------
+
+0.9472 - [id = 812], n04266014 space shuttle
+0.0188 - [id = 833], n04347754 submarine, pigboat, sub, U-boat
+0.0139 - [id = 814], n04273569 speedboat
+0.0037 - [id = 867], n04467665 trailer truck, tractor trailer, trucking rig, rig, articulated lorry, semi
+0.0032 - [id = 871], n04483307 trimaran
+
+
+First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/gondola.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 27], n01631663 eft
+0.0000 - [id = 310], n02219486 ant, emmet, pismire
+0.0000 - [id = 29], n01632777 axolotl, mud puppy, Ambystoma mexicanum
+0.0000 - [id = 26], n01630670 common newt, Triturus vulgaris
+
+
+First graph inferencing image: 3:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/school_bus.ppm
+---------- Top 5 predictions ----------
+
+0.9994 - [id = 576], n03447447 gondola
+0.0001 - [id = 765], n04099969 rocking chair, rocker
+0.0001 - [id = 536], n03216828 dock, dockage, docking facility
+0.0001 - [id = 532], n03201208 dining table, board
+0.0000 - [id = 540], n03240683 drilling platform, offshore rig
+
+
+First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/go_kart.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 779], n04146614 school bus
+0.0000 - [id = 705], n03895866 passenger car, coach, carriage
+0.0000 - [id = 829], n04335435 streetcar, tram, tramcar, trolley, trolley car
+0.0000 - [id = 675], n03796401 moving van
+0.0000 - [id = 654], n03769881 minibus
+
+
+First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/space_shuttle_227.jpg
+---------- Top 5 predictions ----------
+
+0.9995 - [id = 573], n03444034 go-kart
+0.0001 - [id = 518], n03127747 crash helmet
+0.0001 - [id = 621], n03649909 lawn mower, mower
+0.0001 - [id = 665], n03785016 moped
+0.0000 - [id = 817], n04285008 sports car, sport car
+
+
+First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/gold_fish.ppm
+---------- Top 5 predictions ----------
+
+0.9472 - [id = 812], n04266014 space shuttle
+0.0188 - [id = 833], n04347754 submarine, pigboat, sub, U-boat
+0.0139 - [id = 814], n04273569 speedboat
+0.0037 - [id = 867], n04467665 trailer truck, tractor trailer, trucking rig, rig, articulated lorry, semi
+0.0032 - [id = 871], n04483307 trimaran
+
+
+First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/gondola.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 27], n01631663 eft
+0.0000 - [id = 310], n02219486 ant, emmet, pismire
+0.0000 - [id = 29], n01632777 axolotl, mud puppy, Ambystoma mexicanum
+0.0000 - [id = 26], n01630670 common newt, Triturus vulgaris
+
+
+First graph inferencing image: 3:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/school_bus.ppm
+---------- Top 5 predictions ----------
+
+0.9994 - [id = 576], n03447447 gondola
+0.0001 - [id = 765], n04099969 rocking chair, rocker
+0.0001 - [id = 536], n03216828 dock, dockage, docking facility
+0.0001 - [id = 532], n03201208 dining table, board
+0.0000 - [id = 540], n03240683 drilling platform, offshore rig
+
+
+First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/go_kart.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 779], n04146614 school bus
+0.0000 - [id = 705], n03895866 passenger car, coach, carriage
+0.0000 - [id = 829], n04335435 streetcar, tram, tramcar, trolley, trolley car
+0.0000 - [id = 675], n03796401 moving van
+0.0000 - [id = 654], n03769881 minibus
+
+
+First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/space_shuttle_227.jpg
+---------- Top 5 predictions ----------
+
+0.9995 - [id = 573], n03444034 go-kart
+0.0001 - [id = 518], n03127747 crash helmet
+0.0001 - [id = 621], n03649909 lawn mower, mower
+0.0001 - [id = 665], n03785016 moped
+0.0000 - [id = 817], n04285008 sports car, sport car
+
+
+First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/gold_fish.ppm
+---------- Top 5 predictions ----------
+
+0.9472 - [id = 812], n04266014 space shuttle
+0.0188 - [id = 833], n04347754 submarine, pigboat, sub, U-boat
+0.0139 - [id = 814], n04273569 speedboat
+0.0037 - [id = 867], n04467665 trailer truck, tractor trailer, trucking rig, rig, articulated lorry, semi
+0.0032 - [id = 871], n04483307 trimaran
+
+
+First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/gondola.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 27], n01631663 eft
+0.0000 - [id = 310], n02219486 ant, emmet, pismire
+0.0000 - [id = 29], n01632777 axolotl, mud puppy, Ambystoma mexicanum
+0.0000 - [id = 26], n01630670 common newt, Triturus vulgaris
+
+
+First graph inferencing image: 3:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/school_bus.ppm
+---------- Top 5 predictions ----------
+
+0.9994 - [id = 576], n03447447 gondola
+0.0001 - [id = 765], n04099969 rocking chair, rocker
+0.0001 - [id = 536], n03216828 dock, dockage, docking facility
+0.0001 - [id = 532], n03201208 dining table, board
+0.0000 - [id = 540], n03240683 drilling platform, offshore rig
+
+
+First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/go_kart.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 779], n04146614 school bus
+0.0000 - [id = 705], n03895866 passenger car, coach, carriage
+0.0000 - [id = 829], n04335435 streetcar, tram, tramcar, trolley, trolley car
+0.0000 - [id = 675], n03796401 moving van
+0.0000 - [id = 654], n03769881 minibus
+
+
+First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/space_shuttle_227.jpg
+---------- Top 5 predictions ----------
+
+0.9995 - [id = 573], n03444034 go-kart
+0.0001 - [id = 518], n03127747 crash helmet
+0.0001 - [id = 621], n03649909 lawn mower, mower
+0.0001 - [id = 665], n03785016 moped
+0.0000 - [id = 817], n04285008 sports car, sport car
+
+
+First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/gold_fish.ppm
+---------- Top 5 predictions ----------
+
+0.9472 - [id = 812], n04266014 space shuttle
+0.0188 - [id = 833], n04347754 submarine, pigboat, sub, U-boat
+0.0139 - [id = 814], n04273569 speedboat
+0.0037 - [id = 867], n04467665 trailer truck, tractor trailer, trucking rig, rig, articulated lorry, semi
+0.0032 - [id = 871], n04483307 trimaran
+
+
+First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/gondola.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 27], n01631663 eft
+0.0000 - [id = 310], n02219486 ant, emmet, pismire
+0.0000 - [id = 29], n01632777 axolotl, mud puppy, Ambystoma mexicanum
+0.0000 - [id = 26], n01630670 common newt, Triturus vulgaris
+
+
+First graph inferencing image: 3:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/school_bus.ppm
+---------- Top 5 predictions ----------
+
+0.9994 - [id = 576], n03447447 gondola
+0.0001 - [id = 765], n04099969 rocking chair, rocker
+0.0001 - [id = 536], n03216828 dock, dockage, docking facility
+0.0001 - [id = 532], n03201208 dining table, board
+0.0000 - [id = 540], n03240683 drilling platform, offshore rig
+
+
+First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/go_kart.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 779], n04146614 school bus
+0.0000 - [id = 705], n03895866 passenger car, coach, carriage
+0.0000 - [id = 829], n04335435 streetcar, tram, tramcar, trolley, trolley car
+0.0000 - [id = 675], n03796401 moving van
+0.0000 - [id = 654], n03769881 minibus
+start of graph: 0 for frame: 50
+
+
+First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/space_shuttle_227.jpg
+---------- Top 5 predictions ----------
+
+0.9995 - [id = 573], n03444034 go-kart
+0.0001 - [id = 518], n03127747 crash helmet
+0.0001 - [id = 621], n03649909 lawn mower, mower
+0.0001 - [id = 665], n03785016 moped
+0.0000 - [id = 817], n04285008 sports car, sport car
+
+
+First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/gold_fish.ppm
+---------- Top 5 predictions ----------
+
+0.9472 - [id = 812], n04266014 space shuttle
+0.0188 - [id = 833], n04347754 submarine, pigboat, sub, U-boat
+0.0139 - [id = 814], n04273569 speedboat
+0.0037 - [id = 867], n04467665 trailer truck, tractor trailer, trucking rig, rig, articulated lorry, semi
+0.0032 - [id = 871], n04483307 trimaran
+
+
+First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/gondola.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 27], n01631663 eft
+0.0000 - [id = 310], n02219486 ant, emmet, pismire
+0.0000 - [id = 29], n01632777 axolotl, mud puppy, Ambystoma mexicanum
+0.0000 - [id = 26], n01630670 common newt, Triturus vulgaris
+
+
+First graph inferencing image: 3:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/school_bus.ppm
+---------- Top 5 predictions ----------
+
+0.9994 - [id = 576], n03447447 gondola
+0.0001 - [id = 765], n04099969 rocking chair, rocker
+0.0001 - [id = 536], n03216828 dock, dockage, docking facility
+0.0001 - [id = 532], n03201208 dining table, board
+0.0000 - [id = 540], n03240683 drilling platform, offshore rig
+
+
+First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/go_kart.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 779], n04146614 school bus
+0.0000 - [id = 705], n03895866 passenger car, coach, carriage
+0.0000 - [id = 829], n04335435 streetcar, tram, tramcar, trolley, trolley car
+0.0000 - [id = 675], n03796401 moving van
+0.0000 - [id = 654], n03769881 minibus
+
+
+First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/space_shuttle_227.jpg
+---------- Top 5 predictions ----------
+
+0.9995 - [id = 573], n03444034 go-kart
+0.0001 - [id = 518], n03127747 crash helmet
+0.0001 - [id = 621], n03649909 lawn mower, mower
+0.0001 - [id = 665], n03785016 moped
+0.0000 - [id = 817], n04285008 sports car, sport car
+
+
+First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/gold_fish.ppm
+---------- Top 5 predictions ----------
+
+0.9472 - [id = 812], n04266014 space shuttle
+0.0188 - [id = 833], n04347754 submarine, pigboat, sub, U-boat
+0.0139 - [id = 814], n04273569 speedboat
+0.0037 - [id = 867], n04467665 trailer truck, tractor trailer, trucking rig, rig, articulated lorry, semi
+0.0032 - [id = 871], n04483307 trimaran
+
+
+First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/gondola.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 27], n01631663 eft
+0.0000 - [id = 310], n02219486 ant, emmet, pismire
+0.0000 - [id = 29], n01632777 axolotl, mud puppy, Ambystoma mexicanum
+0.0000 - [id = 26], n01630670 common newt, Triturus vulgaris
+
+
+First graph inferencing image: 3:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/school_bus.ppm
+---------- Top 5 predictions ----------
+
+0.9994 - [id = 576], n03447447 gondola
+0.0001 - [id = 765], n04099969 rocking chair, rocker
+0.0001 - [id = 536], n03216828 dock, dockage, docking facility
+0.0001 - [id = 532], n03201208 dining table, board
+0.0000 - [id = 540], n03240683 drilling platform, offshore rig
+
+
+First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/go_kart.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 779], n04146614 school bus
+0.0000 - [id = 705], n03895866 passenger car, coach, carriage
+0.0000 - [id = 829], n04335435 streetcar, tram, tramcar, trolley, trolley car
+0.0000 - [id = 675], n03796401 moving van
+0.0000 - [id = 654], n03769881 minibus
+
+
+First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/space_shuttle_227.jpg
+---------- Top 5 predictions ----------
+
+0.9995 - [id = 573], n03444034 go-kart
+0.0001 - [id = 518], n03127747 crash helmet
+0.0001 - [id = 621], n03649909 lawn mower, mower
+0.0001 - [id = 665], n03785016 moped
+0.0000 - [id = 817], n04285008 sports car, sport car
+
+
+First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/gold_fish.ppm
+---------- Top 5 predictions ----------
+
+0.9472 - [id = 812], n04266014 space shuttle
+0.0188 - [id = 833], n04347754 submarine, pigboat, sub, U-boat
+0.0139 - [id = 814], n04273569 speedboat
+0.0037 - [id = 867], n04467665 trailer truck, tractor trailer, trucking rig, rig, articulated lorry, semi
+0.0032 - [id = 871], n04483307 trimaran
+
+
+First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/gondola.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 27], n01631663 eft
+0.0000 - [id = 310], n02219486 ant, emmet, pismire
+0.0000 - [id = 29], n01632777 axolotl, mud puppy, Ambystoma mexicanum
+0.0000 - [id = 26], n01630670 common newt, Triturus vulgaris
+
+
+First graph inferencing image: 3:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/school_bus.ppm
+---------- Top 5 predictions ----------
+
+0.9994 - [id = 576], n03447447 gondola
+0.0001 - [id = 765], n04099969 rocking chair, rocker
+0.0001 - [id = 536], n03216828 dock, dockage, docking facility
+0.0001 - [id = 532], n03201208 dining table, board
+0.0000 - [id = 540], n03240683 drilling platform, offshore rig
+
+
+First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/go_kart.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 779], n04146614 school bus
+0.0000 - [id = 705], n03895866 passenger car, coach, carriage
+0.0000 - [id = 829], n04335435 streetcar, tram, tramcar, trolley, trolley car
+0.0000 - [id = 675], n03796401 moving van
+0.0000 - [id = 654], n03769881 minibus
+
+
+First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/space_shuttle_227.jpg
+---------- Top 5 predictions ----------
+
+0.9995 - [id = 573], n03444034 go-kart
+0.0001 - [id = 518], n03127747 crash helmet
+0.0001 - [id = 621], n03649909 lawn mower, mower
+0.0001 - [id = 665], n03785016 moped
+0.0000 - [id = 817], n04285008 sports car, sport car
+
+
+First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/gold_fish.ppm
+---------- Top 5 predictions ----------
+
+0.9472 - [id = 812], n04266014 space shuttle
+0.0188 - [id = 833], n04347754 submarine, pigboat, sub, U-boat
+0.0139 - [id = 814], n04273569 speedboat
+0.0037 - [id = 867], n04467665 trailer truck, tractor trailer, trucking rig, rig, articulated lorry, semi
+0.0032 - [id = 871], n04483307 trimaran
+
+
+First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/gondola.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 27], n01631663 eft
+0.0000 - [id = 310], n02219486 ant, emmet, pismire
+0.0000 - [id = 29], n01632777 axolotl, mud puppy, Ambystoma mexicanum
+0.0000 - [id = 26], n01630670 common newt, Triturus vulgaris
+
+
+First graph inferencing image: 3:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/school_bus.ppm
+---------- Top 5 predictions ----------
+
+0.9994 - [id = 576], n03447447 gondola
+0.0001 - [id = 765], n04099969 rocking chair, rocker
+0.0001 - [id = 536], n03216828 dock, dockage, docking facility
+0.0001 - [id = 532], n03201208 dining table, board
+0.0000 - [id = 540], n03240683 drilling platform, offshore rig
+
+
+First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/go_kart.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 779], n04146614 school bus
+0.0000 - [id = 705], n03895866 passenger car, coach, carriage
+0.0000 - [id = 829], n04335435 streetcar, tram, tramcar, trolley, trolley car
+0.0000 - [id = 675], n03796401 moving van
+0.0000 - [id = 654], n03769881 minibus
+
+
+First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/space_shuttle_227.jpg
+---------- Top 5 predictions ----------
+
+0.9995 - [id = 573], n03444034 go-kart
+0.0001 - [id = 518], n03127747 crash helmet
+0.0001 - [id = 621], n03649909 lawn mower, mower
+0.0001 - [id = 665], n03785016 moped
+0.0000 - [id = 817], n04285008 sports car, sport car
+
+
+First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/gold_fish.ppm
+---------- Top 5 predictions ----------
+
+0.9472 - [id = 812], n04266014 space shuttle
+0.0188 - [id = 833], n04347754 submarine, pigboat, sub, U-boat
+0.0139 - [id = 814], n04273569 speedboat
+0.0037 - [id = 867], n04467665 trailer truck, tractor trailer, trucking rig, rig, articulated lorry, semi
+0.0032 - [id = 871], n04483307 trimaran
+
+
+First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/gondola.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 27], n01631663 eft
+0.0000 - [id = 310], n02219486 ant, emmet, pismire
+0.0000 - [id = 29], n01632777 axolotl, mud puppy, Ambystoma mexicanum
+0.0000 - [id = 26], n01630670 common newt, Triturus vulgaris
+
+
+First graph inferencing image: 3:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/school_bus.ppm
+---------- Top 5 predictions ----------
+
+0.9994 - [id = 576], n03447447 gondola
+0.0001 - [id = 765], n04099969 rocking chair, rocker
+0.0001 - [id = 536], n03216828 dock, dockage, docking facility
+0.0001 - [id = 532], n03201208 dining table, board
+0.0000 - [id = 540], n03240683 drilling platform, offshore rig
+
+
+First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/go_kart.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 779], n04146614 school bus
+0.0000 - [id = 705], n03895866 passenger car, coach, carriage
+0.0000 - [id = 829], n04335435 streetcar, tram, tramcar, trolley, trolley car
+0.0000 - [id = 675], n03796401 moving van
+0.0000 - [id = 654], n03769881 minibus
+
+
+First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/space_shuttle_227.jpg
+---------- Top 5 predictions ----------
+
+0.9995 - [id = 573], n03444034 go-kart
+0.0001 - [id = 518], n03127747 crash helmet
+0.0001 - [id = 621], n03649909 lawn mower, mower
+0.0001 - [id = 665], n03785016 moped
+0.0000 - [id = 817], n04285008 sports car, sport car
+
+
+First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/gold_fish.ppm
+---------- Top 5 predictions ----------
+
+0.9472 - [id = 812], n04266014 space shuttle
+0.0188 - [id = 833], n04347754 submarine, pigboat, sub, U-boat
+0.0139 - [id = 814], n04273569 speedboat
+0.0037 - [id = 867], n04467665 trailer truck, tractor trailer, trucking rig, rig, articulated lorry, semi
+0.0032 - [id = 871], n04483307 trimaran
+
+
+First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/gondola.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 27], n01631663 eft
+0.0000 - [id = 310], n02219486 ant, emmet, pismire
+0.0000 - [id = 29], n01632777 axolotl, mud puppy, Ambystoma mexicanum
+0.0000 - [id = 26], n01630670 common newt, Triturus vulgaris
+
+
+First graph inferencing image: 3:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/school_bus.ppm
+---------- Top 5 predictions ----------
+
+0.9994 - [id = 576], n03447447 gondola
+0.0001 - [id = 765], n04099969 rocking chair, rocker
+0.0001 - [id = 536], n03216828 dock, dockage, docking facility
+0.0001 - [id = 532], n03201208 dining table, board
+0.0000 - [id = 540], n03240683 drilling platform, offshore rig
+
+
+First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/go_kart.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 779], n04146614 school bus
+0.0000 - [id = 705], n03895866 passenger car, coach, carriage
+0.0000 - [id = 829], n04335435 streetcar, tram, tramcar, trolley, trolley car
+0.0000 - [id = 675], n03796401 moving van
+0.0000 - [id = 654], n03769881 minibus
+
+
+First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/space_shuttle_227.jpg
+---------- Top 5 predictions ----------
+
+0.9995 - [id = 573], n03444034 go-kart
+0.0001 - [id = 518], n03127747 crash helmet
+0.0001 - [id = 621], n03649909 lawn mower, mower
+0.0001 - [id = 665], n03785016 moped
+0.0000 - [id = 817], n04285008 sports car, sport car
+
+
+First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/gold_fish.ppm
+---------- Top 5 predictions ----------
+
+0.9472 - [id = 812], n04266014 space shuttle
+0.0188 - [id = 833], n04347754 submarine, pigboat, sub, U-boat
+0.0139 - [id = 814], n04273569 speedboat
+0.0037 - [id = 867], n04467665 trailer truck, tractor trailer, trucking rig, rig, articulated lorry, semi
+0.0032 - [id = 871], n04483307 trimaran
+
+
+First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/gondola.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 27], n01631663 eft
+0.0000 - [id = 310], n02219486 ant, emmet, pismire
+0.0000 - [id = 29], n01632777 axolotl, mud puppy, Ambystoma mexicanum
+0.0000 - [id = 26], n01630670 common newt, Triturus vulgaris
+
+
+First graph inferencing image: 3:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/school_bus.ppm
+---------- Top 5 predictions ----------
+
+0.9994 - [id = 576], n03447447 gondola
+0.0001 - [id = 765], n04099969 rocking chair, rocker
+0.0001 - [id = 536], n03216828 dock, dockage, docking facility
+0.0001 - [id = 532], n03201208 dining table, board
+0.0000 - [id = 540], n03240683 drilling platform, offshore rig
+
+
+First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/go_kart.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 779], n04146614 school bus
+0.0000 - [id = 705], n03895866 passenger car, coach, carriage
+0.0000 - [id = 829], n04335435 streetcar, tram, tramcar, trolley, trolley car
+0.0000 - [id = 675], n03796401 moving van
+0.0000 - [id = 654], n03769881 minibus
+
+
+First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/space_shuttle_227.jpg
+---------- Top 5 predictions ----------
+
+0.9995 - [id = 573], n03444034 go-kart
+0.0001 - [id = 518], n03127747 crash helmet
+0.0001 - [id = 621], n03649909 lawn mower, mower
+0.0001 - [id = 665], n03785016 moped
+0.0000 - [id = 817], n04285008 sports car, sport car
+
+
+First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/gold_fish.ppm
+---------- Top 5 predictions ----------
+
+0.9472 - [id = 812], n04266014 space shuttle
+0.0188 - [id = 833], n04347754 submarine, pigboat, sub, U-boat
+0.0139 - [id = 814], n04273569 speedboat
+0.0037 - [id = 867], n04467665 trailer truck, tractor trailer, trucking rig, rig, articulated lorry, semi
+0.0032 - [id = 871], n04483307 trimaran
+
+
+First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/gondola.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 27], n01631663 eft
+0.0000 - [id = 310], n02219486 ant, emmet, pismire
+0.0000 - [id = 29], n01632777 axolotl, mud puppy, Ambystoma mexicanum
+0.0000 - [id = 26], n01630670 common newt, Triturus vulgaris
+
+
+First graph inferencing image: 3:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/school_bus.ppm
+---------- Top 5 predictions ----------
+
+0.9994 - [id = 576], n03447447 gondola
+0.0001 - [id = 765], n04099969 rocking chair, rocker
+0.0001 - [id = 536], n03216828 dock, dockage, docking facility
+0.0001 - [id = 532], n03201208 dining table, board
+0.0000 - [id = 540], n03240683 drilling platform, offshore rig
+
+
+First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/go_kart.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 779], n04146614 school bus
+0.0000 - [id = 705], n03895866 passenger car, coach, carriage
+0.0000 - [id = 829], n04335435 streetcar, tram, tramcar, trolley, trolley car
+0.0000 - [id = 675], n03796401 moving van
+0.0000 - [id = 654], n03769881 minibus
+
+
+First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/space_shuttle_227.jpg
+---------- Top 5 predictions ----------
+
+0.9995 - [id = 573], n03444034 go-kart
+0.0001 - [id = 518], n03127747 crash helmet
+0.0001 - [id = 621], n03649909 lawn mower, mower
+0.0001 - [id = 665], n03785016 moped
+0.0000 - [id = 817], n04285008 sports car, sport car
+
+
+First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/gold_fish.ppm
+---------- Top 5 predictions ----------
+
+0.9472 - [id = 812], n04266014 space shuttle
+0.0188 - [id = 833], n04347754 submarine, pigboat, sub, U-boat
+0.0139 - [id = 814], n04273569 speedboat
+0.0037 - [id = 867], n04467665 trailer truck, tractor trailer, trucking rig, rig, articulated lorry, semi
+0.0032 - [id = 871], n04483307 trimaran
+
+
+First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/gondola.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 27], n01631663 eft
+0.0000 - [id = 310], n02219486 ant, emmet, pismire
+0.0000 - [id = 29], n01632777 axolotl, mud puppy, Ambystoma mexicanum
+0.0000 - [id = 26], n01630670 common newt, Triturus vulgaris
+
+
+First graph inferencing image: 3:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/school_bus.ppm
+---------- Top 5 predictions ----------
+
+0.9994 - [id = 576], n03447447 gondola
+0.0001 - [id = 765], n04099969 rocking chair, rocker
+0.0001 - [id = 536], n03216828 dock, dockage, docking facility
+0.0001 - [id = 532], n03201208 dining table, board
+0.0000 - [id = 540], n03240683 drilling platform, offshore rig
+
+
+First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/go_kart.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 779], n04146614 school bus
+0.0000 - [id = 705], n03895866 passenger car, coach, carriage
+0.0000 - [id = 829], n04335435 streetcar, tram, tramcar, trolley, trolley car
+0.0000 - [id = 675], n03796401 moving van
+0.0000 - [id = 654], n03769881 minibus
+
+
+First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/space_shuttle_227.jpg
+---------- Top 5 predictions ----------
+
+0.9995 - [id = 573], n03444034 go-kart
+0.0001 - [id = 518], n03127747 crash helmet
+0.0001 - [id = 621], n03649909 lawn mower, mower
+0.0001 - [id = 665], n03785016 moped
+0.0000 - [id = 817], n04285008 sports car, sport car
+
+
+First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/gold_fish.ppm
+---------- Top 5 predictions ----------
+
+0.9472 - [id = 812], n04266014 space shuttle
+0.0188 - [id = 833], n04347754 submarine, pigboat, sub, U-boat
+0.0139 - [id = 814], n04273569 speedboat
+0.0037 - [id = 867], n04467665 trailer truck, tractor trailer, trucking rig, rig, articulated lorry, semi
+0.0032 - [id = 871], n04483307 trimaran
+
+
+First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/gondola.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 27], n01631663 eft
+0.0000 - [id = 310], n02219486 ant, emmet, pismire
+0.0000 - [id = 29], n01632777 axolotl, mud puppy, Ambystoma mexicanum
+0.0000 - [id = 26], n01630670 common newt, Triturus vulgaris
+
+
+First graph inferencing image: 3:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/school_bus.ppm
+---------- Top 5 predictions ----------
+
+0.9994 - [id = 576], n03447447 gondola
+0.0001 - [id = 765], n04099969 rocking chair, rocker
+0.0001 - [id = 536], n03216828 dock, dockage, docking facility
+0.0001 - [id = 532], n03201208 dining table, board
+0.0000 - [id = 540], n03240683 drilling platform, offshore rig
+
+
+First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/go_kart.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 779], n04146614 school bus
+0.0000 - [id = 705], n03895866 passenger car, coach, carriage
+0.0000 - [id = 829], n04335435 streetcar, tram, tramcar, trolley, trolley car
+0.0000 - [id = 675], n03796401 moving van
+0.0000 - [id = 654], n03769881 minibus
+---------- Top 5 predictions ----------
+
+0.9995 - [id = 573], n03444034 go-kart
+0.0001 - [id = 518], n03127747 crash helmet
+0.0001 - [id = 621], n03649909 lawn mower, mower
+0.0001 - [id = 665], n03785016 moped
+0.0000 - [id = 817], n04285008 sports car, sport car
+Finishing power measurement with first subgraph9
+0	Layer Name: conv1 	 Layer time: 0.5986 	 number of inputs: 3 	 input shape: 3x227x227 	 output shape: 96x111x111
+1	Layer Name: pool1 	 Layer time: 64.0464 	 number of inputs: 1 	 input shape: 96x111x111 	 output shape: 96x55x55
+Layer Number: 0 	 time: 64.6450
+----------------------------
+
+ Sum of Layers time: 64.6450
+
+ input time of layer 0 : 101.7487
+
+ transfer_time of layer 0 : 0.0000
+
+ output time of layer 0 : 2.2107
+
+ this part task time: 65.1285
+0	Layer Name: fire2/squeeze1x1 	 Layer time: 3.4675 	 number of inputs: 3 	 input shape: 96x55x55 	 output shape: 16x55x55
+1	Layer Name: fire2/expand1x1 	 Layer time: 2.1635 	 number of inputs: 3 	 input shape: 16x55x55 	 output shape: 64x55x55
+2	Layer Name: fire2/expand3x3 	 Layer time: 14.3244 	 number of inputs: 3 	 input shape: 16x55x55 	 output shape: 64x55x55
+3	Layer Name: fire2/concat 	 Layer time: 1.7998 	 number of inputs: 2 	 input shape: 64x55x55 	 output shape: 128x55x55
+Layer Number: 1 	 time: 21.7551
+----------------------------
+
+ Sum of Layers time: 21.7551
+
+ input time of layer 1 : 0.1383
+
+ transfer_time of layer 1 : 2.3474
+
+ output time of layer 1 : 0.0419
+
+ this part task time: 22.4332
+0	Layer Name: fire3/squeeze1x1 	 Layer time: 0.3620 	 number of inputs: 3 	 input shape: 128x55x55 	 output shape: 16x55x55
+1	Layer Name: fire3/expand1x1 	 Layer time: 0.2357 	 number of inputs: 3 	 input shape: 16x55x55 	 output shape: 64x55x55
+
+
+Cost0:359.549
+input0_time:101.749
+task0_time:65.1285
+output0_time:2.21075
+total0_time:169.088
+***************************************
+
+
+
+Cost1:359.711
+input1_time:0.13826
+task1_time:22.4332
+output1_time:0.04193
+total1_time:22.6134
+***************************************
+
+2	Layer Name: fire3/expand3x3 	 Layer time: 0.4781 	 number of inputs: 3 	 input shape: 16x55x55 	 output shape: 64x55x55
+3	Layer Name: fire3/concat 	 Layer time: 20.3315 	 number of inputs: 2 	 input shape: 64x55x55 	 output shape: 128x55x55
+Layer Number: 2 	 time: 21.4073
+----------------------------
+
+ Sum of Layers time: 21.4073
+
+ input time of layer 2 : 1.7677
+
+ transfer_time of layer 2 : 1.8096
+
+ output time of layer 2 : 2.7537
+
+ this part task time: 21.8844
+
+
+Cost2:359.976
+input2_time:1.76767
+task2_time:21.8844
+output2_time:2.75367
+total2_time:26.4057
+***************************************
+
+0	Layer Name: fire4/squeeze1x1 	 Layer time: 5.6065 	 number of inputs: 3 	 input shape: 128x55x55 	 output shape: 32x55x55
+1	Layer Name: fire4/expand1x1 	 Layer time: 5.7464 	 number of inputs: 3 	 input shape: 32x55x55 	 output shape: 128x55x55
+2	Layer Name: fire4/expand3x3 	 Layer time: 26.4705 	 number of inputs: 3 	 input shape: 32x55x55 	 output shape: 128x55x55
+3	Layer Name: fire4/concat 	 Layer time: 2.8838 	 number of inputs: 2 	 input shape: 128x55x55 	 output shape: 256x55x55
+4	Layer Name: pool4 	 Layer time: 3.7372 	 number of inputs: 1 	 input shape: 256x55x55 	 output shape: 256x27x27
+Layer Number: 3 	 time: 44.4444
+----------------------------
+
+ Sum of Layers time: 44.4444
+
+ input time of layer 3 : 0.1147
+
+ transfer_time of layer 3 : 2.8672
+
+ output time of layer 3 : 0.0441
+
+ this part task time: 45.1260
+0	Layer Name: fire5/squeeze1x1 	 Layer time: 0.3677 	 number of inputs: 3 	 input shape: 256x27x27 	 output shape: 32x27x27
+1	Layer Name: fire5/expand1x1 	 Layer time: 0.2462 	 number of inputs: 3 	 input shape: 32x27x27 	 output shape: 128x27x27
+2	Layer Name: fire5/expand3x3 	 Layer time: 0.4616 	 number of inputs: 3 	 input shape: 32x27x27 	 output shape: 128x27x27
+3	Layer Name: fire5/concat 	 Layer time: 12.8118 	 number of inputs: 2 	 input shape: 128x27x27 	 output shape: 256x27x27
+Layer Number: 4 	 time: 13.8872
+----------------------------
+
+ Sum of Layers time: 13.8872
+
+ input time of layer 4 : 1.0382
+
+ transfer_time of layer 4 : 1.0823
+
+ output time of layer 4 : 1.6434
+
+ this part task time: 14.3436
+0	Layer Name: fire6/squeeze1x1 	 Layer time: 3.2888 	 number of inputs: 3 	 input shape: 256x27x27 	 output shape: 48x27x27
+1	Layer Name: fire6/expand1x1 	 Layer time: 2.7452 	 number of inputs: 3 	 input shape: 48x27x27 	 output shape: 192x27x27
+2	Layer Name: fire6/expand3x3 	 Layer time: 13.4979 	 number of inputs: 3 	 input shape: 48x27x27 	 output shape: 192x27x27
+
+
+Cost3:360.39
+input3_time:0.114742
+task3_time:45.126
+output3_time:0.0441437
+total3_time:45.2849
+***************************************
+
+
+
+Cost4:360.56
+input4_time:1.03819
+task4_time:14.3436
+output4_time:1.6434
+total4_time:17.0252
+***************************************
+
+3	Layer Name: fire6/concat 	 Layer time: 1.2909 	 number of inputs: 2 	 input shape: 192x27x27 	 output shape: 384x27x27
+Layer Number: 5 	 time: 20.8228
+----------------------------
+
+ Sum of Layers time: 20.8228
+
+ input time of layer 5 : 0.1000
+
+ transfer_time of layer 5 : 1.7397
+
+ output time of layer 5 : 0.0402
+
+ this part task time: 21.4541
+
+
+Cost5:360.743
+input5_time:0.0999575
+task5_time:21.4541
+output5_time:0.0402442
+total5_time:21.5943
+***************************************
+
+0	Layer Name: fire7/squeeze1x1 	 Layer time: 0.3672 	 number of inputs: 3 	 input shape: 384x27x27 	 output shape: 48x27x27
+1	Layer Name: fire7/expand1x1 	 Layer time: 0.2381 	 number of inputs: 3 	 input shape: 48x27x27 	 output shape: 192x27x27
+2	Layer Name: fire7/expand3x3 	 Layer time: 0.4783 	 number of inputs: 3 	 input shape: 48x27x27 	 output shape: 192x27x27
+3	Layer Name: fire7/concat 	 Layer time: 22.2116 	 number of inputs: 2 	 input shape: 192x27x27 	 output shape: 384x27x27
+Layer Number: 6 	 time: 23.2952
+----------------------------
+
+ Sum of Layers time: 23.2952
+
+ input time of layer 6 : 1.2187
+
+ transfer_time of layer 6 : 1.2590
+
+ output time of layer 6 : 2.0708
+
+ this part task time: 23.7448
+
+
+Cost6:361.015
+input6_time:1.21873
+task6_time:23.7448
+output6_time:2.0708
+total6_time:27.0343
+***************************************
+
+0	Layer Name: fire8/squeeze1x1 	 Layer time: 6.1788 	 number of inputs: 3 	 input shape: 384x27x27 	 output shape: 64x27x27
+1	Layer Name: fire8/expand1x1 	 Layer time: 4.3439 	 number of inputs: 3 	 input shape: 64x27x27 	 output shape: 256x27x27
+2	Layer Name: fire8/expand3x3 	 Layer time: 18.3703 	 number of inputs: 3 	 input shape: 64x27x27 	 output shape: 256x27x27
+3	Layer Name: fire8/concat 	 Layer time: 1.5056 	 number of inputs: 2 	 input shape: 256x27x27 	 output shape: 512x27x27
+4	Layer Name: pool8 	 Layer time: 2.2072 	 number of inputs: 1 	 input shape: 512x27x27 	 output shape: 512x13x13
+Layer Number: 7 	 time: 32.6057
+----------------------------
+
+ Sum of Layers time: 32.6057
+
+ input time of layer 7 : 0.1006
+
+ transfer_time of layer 7 : 2.1686
+
+ output time of layer 7 : 0.0455
+
+ this part task time: 33.2746
+
+
+Cost7:361.323
+input7_time:0.100553
+task7_time:33.2746
+output7_time:0.0454796
+total7_time:33.4206
+***************************************
+
+0	Layer Name: fire9/squeeze1x1 	 Layer time: 0.3536 	 number of inputs: 3 	 input shape: 512x13x13 	 output shape: 64x13x13
+1	Layer Name: fire9/expand1x1 	 Layer time: 0.2403 	 number of inputs: 3 	 input shape: 64x13x13 	 output shape: 256x13x13
+2	Layer Name: fire9/expand3x3 	 Layer time: 0.4621 	 number of inputs: 3 	 input shape: 64x13x13 	 output shape: 256x13x13
+3	Layer Name: fire9/concat 	 Layer time: 14.1489 	 number of inputs: 2 	 input shape: 256x13x13 	 output shape: 512x13x13
+Layer Number: 8 	 time: 15.2048
+----------------------------
+
+ Sum of Layers time: 15.2048
+
+ input time of layer 8 : 0.6982
+
+ transfer_time of layer 8 : 0.7437
+
+ output time of layer 8 : 1.0878
+
+ this part task time: 15.6383
+
+
+Cost8:361.499
+input8_time:0.698219
+task8_time:15.6383
+output8_time:1.08777
+total8_time:17.4243
+***************************************
+
+0	Layer Name: conv10 	 Layer time: 24.3632 	 number of inputs: 3 	 input shape: 512x13x13 	 output shape: 1000x13x13
+1	Layer Name: pool10 	 Layer time: 2.9350 	 number of inputs: 1 	 input shape: 1000x13x13 	 output shape: 1000
+2	Layer Name: flatten 	 Layer time: 0.4174 	 number of inputs: 1 	 input shape: 1000 	 output shape: 1000
+3	Layer Name: prob 	 Layer time: 0.2062 	 number of inputs: 1 	 input shape: 1000 	 output shape: 1000
+Layer Number: 9 	 time: 27.9217
+----------------------------
+
+ Sum of Layers time: 27.9217
+
+ input time of layer 9 : 0.0857
+
+ transfer_time of layer 9 : 1.1712
+
+ output time of layer 9 : 0.9043
+
+ this part task time: 28.2005
+
+
+Cost9:361.83
+input9_time:0.0856875
+task9_time:28.2005
+output9_time:0.90428
+total9_time:29.1905
+***************************************
+
+Frame Latency: 610.916
+Profiling these DVFS settings finised
+
+Test passed

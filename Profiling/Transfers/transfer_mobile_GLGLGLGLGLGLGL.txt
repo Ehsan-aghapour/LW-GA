@@ -1,0 +1,1541 @@
+/data/data/com.termux/files/home/ARMCL-RockPi//test_graph//graph_mobilenet_n_pipe_npu_lw  --target=CL --data=/data/data/com.termux/files/home/ARMCL-RockPi/assets/./mobilenet/ --image=/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/ --labels=/data/data/com.termux/files/home/ARMCL-RockPi/assets/./labels.txt --n=100 --save=0 --annotate=0 --partition_point=100 --partition_point2=100 --order=GLGLGLGLGLGLGL --layer_time=1 --threads=2  --threads2=4 --GPU_host=B --NPU_host=B 
+pandoon
+pandoon
+pandoon
+
+/data/data/com.termux/files/home/ARMCL-RockPi//test_graph//graph_mobilenet_n_pipe_npu_lw
+
+Pandoon opened at 3
+5 Input images are read from /data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/
+NPU host: 4
+Little Cores host: 3
+Big Cores host: 5
+GPU host: 4
+Number of Layers: 14
+Threads : 2
+Small Cores Threads : 4
+Target : CL
+Data type : F32
+Data layout : NHWC
+Tuner enabled? : false
+Cache enabled? : true
+Tuner mode : Normal
+Tuner file : 
+MLGO file : 
+Fast math enabled? : false
+Data path : /data/data/com.termux/files/home/ARMCL-RockPi/assets/./mobilenet/
+Image file : /data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gold_fish.ppm
+Labels file : /data/data/com.termux/files/home/ARMCL-RockPi/assets/./labels.txt
+Partition point is : 100
+Second partition point is : 100
+Order is : GLGLGLGLGLGLGL
+freqs of layers : 
+GPU host is: B
+NPU host is: B
+Number of totla cores is : 6
+Number of little cores is : 4
+Run network for 100 times.
+Layer timing: 1
+
+start creating graph
+creating image accessor
+std::string task_names[] = { "Conv2d_0+Conv2d_0/BatchNorm" };
+number of tasks: 1
+std::set<std::string> end_task_names = { "Conv2d_0+Conv2d_0/BatchNorm" };
+number of end tasks: 1
+std::set<std::string> start_task_names = { "Conv2d_0+Conv2d_0/BatchNorm" };
+number of start tasks: 1
+after pass graph 0
+std::string task_names[] = { "Conv2d_1_depthwise/depthwise+Conv2d_1_depthwise/BatchNorm", "Conv2d_1_pointwise/Conv2D+Conv2d_1_pointwise/BatchNorm" };
+number of tasks: 2
+std::set<std::string> end_task_names = { "Conv2d_1_pointwise/Conv2D+Conv2d_1_pointwise/BatchNorm" };
+number of end tasks: 1
+std::set<std::string> start_task_names = { "Conv2d_1_depthwise/depthwise+Conv2d_1_depthwise/BatchNorm" };
+number of start tasks: 1
+after pass graph 1
+std::string task_names[] = { "Conv2d_2_depthwise/depthwise+Conv2d_2_depthwise/BatchNorm", "Conv2d_2_pointwise/Conv2D+Conv2d_2_pointwise/BatchNorm" };
+number of tasks: 2
+std::set<std::string> end_task_names = { "Conv2d_2_pointwise/Conv2D+Conv2d_2_pointwise/BatchNorm" };
+number of end tasks: 1
+std::set<std::string> start_task_names = { "Conv2d_2_depthwise/depthwise+Conv2d_2_depthwise/BatchNorm" };
+number of start tasks: 1
+after pass graph 2
+std::string task_names[] = { "Conv2d_3_depthwise/depthwise+Conv2d_3_depthwise/BatchNorm", "Conv2d_3_pointwise/Conv2D+Conv2d_3_pointwise/BatchNorm" };
+number of tasks: 2
+std::set<std::string> end_task_names = { "Conv2d_3_pointwise/Conv2D+Conv2d_3_pointwise/BatchNorm" };
+number of end tasks: 1
+std::set<std::string> start_task_names = { "Conv2d_3_depthwise/depthwise+Conv2d_3_depthwise/BatchNorm" };
+number of start tasks: 1
+after pass graph 3
+std::string task_names[] = { "Conv2d_4_depthwise/depthwise+Conv2d_4_depthwise/BatchNorm", "Conv2d_4_pointwise/Conv2D+Conv2d_4_pointwise/BatchNorm" };
+number of tasks: 2
+std::set<std::string> end_task_names = { "Conv2d_4_pointwise/Conv2D+Conv2d_4_pointwise/BatchNorm" };
+number of end tasks: 1
+std::set<std::string> start_task_names = { "Conv2d_4_depthwise/depthwise+Conv2d_4_depthwise/BatchNorm" };
+number of start tasks: 1
+after pass graph 4
+std::string task_names[] = { "Conv2d_5_depthwise/depthwise+Conv2d_5_depthwise/BatchNorm", "Conv2d_5_pointwise/Conv2D+Conv2d_5_pointwise/BatchNorm" };
+number of tasks: 2
+std::set<std::string> end_task_names = { "Conv2d_5_pointwise/Conv2D+Conv2d_5_pointwise/BatchNorm" };
+number of end tasks: 1
+std::set<std::string> start_task_names = { "Conv2d_5_depthwise/depthwise+Conv2d_5_depthwise/BatchNorm" };
+number of start tasks: 1
+after pass graph 5
+std::string task_names[] = { "Conv2d_6_depthwise/depthwise+Conv2d_6_depthwise/BatchNorm", "Conv2d_6_pointwise/Conv2D+Conv2d_6_pointwise/BatchNorm" };
+number of tasks: 2
+std::set<std::string> end_task_names = { "Conv2d_6_pointwise/Conv2D+Conv2d_6_pointwise/BatchNorm" };
+number of end tasks: 1
+std::set<std::string> start_task_names = { "Conv2d_6_depthwise/depthwise+Conv2d_6_depthwise/BatchNorm" };
+number of start tasks: 1
+after pass graph 6
+std::string task_names[] = { "Conv2d_7_depthwise/depthwise+Conv2d_7_depthwise/BatchNorm", "Conv2d_7_pointwise/Conv2D+Conv2d_7_pointwise/BatchNorm" };
+number of tasks: 2
+std::set<std::string> end_task_names = { "Conv2d_7_pointwise/Conv2D+Conv2d_7_pointwise/BatchNorm" };
+number of end tasks: 1
+std::set<std::string> start_task_names = { "Conv2d_7_depthwise/depthwise+Conv2d_7_depthwise/BatchNorm" };
+number of start tasks: 1
+after pass graph 7
+std::string task_names[] = { "Conv2d_8_depthwise/depthwise+Conv2d_8_depthwise/BatchNorm", "Conv2d_8_pointwise/Conv2D+Conv2d_8_pointwise/BatchNorm" };
+number of tasks: 2
+std::set<std::string> end_task_names = { "Conv2d_8_pointwise/Conv2D+Conv2d_8_pointwise/BatchNorm" };
+number of end tasks: 1
+std::set<std::string> start_task_names = { "Conv2d_8_depthwise/depthwise+Conv2d_8_depthwise/BatchNorm" };
+number of start tasks: 1
+after pass graph 8
+std::string task_names[] = { "Conv2d_9_depthwise/depthwise+Conv2d_9_depthwise/BatchNorm", "Conv2d_9_pointwise/Conv2D+Conv2d_9_pointwise/BatchNorm" };
+number of tasks: 2
+std::set<std::string> end_task_names = { "Conv2d_9_pointwise/Conv2D+Conv2d_9_pointwise/BatchNorm" };
+number of end tasks: 1
+std::set<std::string> start_task_names = { "Conv2d_9_depthwise/depthwise+Conv2d_9_depthwise/BatchNorm" };
+number of start tasks: 1
+after pass graph 9
+std::string task_names[] = { "Conv2d_10_depthwise/depthwise+Conv2d_10_depthwise/BatchNorm", "Conv2d_10_pointwise/Conv2D+Conv2d_10_pointwise/BatchNorm" };
+number of tasks: 2
+std::set<std::string> end_task_names = { "Conv2d_10_pointwise/Conv2D+Conv2d_10_pointwise/BatchNorm" };
+number of end tasks: 1
+std::set<std::string> start_task_names = { "Conv2d_10_depthwise/depthwise+Conv2d_10_depthwise/BatchNorm" };
+number of start tasks: 1
+after pass graph 10
+std::string task_names[] = { "Conv2d_11_depthwise/depthwise+Conv2d_11_depthwise/BatchNorm", "Conv2d_11_pointwise/Conv2D+Conv2d_11_pointwise/BatchNorm" };
+number of tasks: 2
+std::set<std::string> end_task_names = { "Conv2d_11_pointwise/Conv2D+Conv2d_11_pointwise/BatchNorm" };
+number of end tasks: 1
+std::set<std::string> start_task_names = { "Conv2d_11_depthwise/depthwise+Conv2d_11_depthwise/BatchNorm" };
+number of start tasks: 1
+after pass graph 11
+std::string task_names[] = { "Conv2d_12_depthwise/depthwise+Conv2d_12_depthwise/BatchNorm", "Conv2d_12_pointwise/Conv2D+Conv2d_12_pointwise/BatchNorm" };
+number of tasks: 2
+std::set<std::string> end_task_names = { "Conv2d_12_pointwise/Conv2D+Conv2d_12_pointwise/BatchNorm" };
+number of end tasks: 1
+std::set<std::string> start_task_names = { "Conv2d_12_depthwise/depthwise+Conv2d_12_depthwise/BatchNorm" };
+number of start tasks: 1
+after pass graph 12
+std::string task_names[] = { "Conv2d_13_depthwise/depthwise+Conv2d_13_depthwise/BatchNorm", "Conv2d_13_pointwise/Conv2D+Conv2d_13_pointwise/BatchNorm", "Logits/AvgPool_1a", "Logits/Conv2d_1c_1x1", "Reshape", "Softmax" };
+number of tasks: 6
+std::set<std::string> end_task_names = { "Softmax" };
+number of end tasks: 1
+std::set<std::string> start_task_names = { "Conv2d_13_depthwise/depthwise+Conv2d_13_depthwise/BatchNorm" };
+number of start tasks: 1
+after pass graph 13
+Total layers:14
+
+0 Running Graph with min LW DVFS
+task: Conv2d_0+Conv2d_0/BatchNorm set freq for next task to 0, 0, 0
+task: Conv2d_1_depthwise/depthwise+Conv2d_1_depthwise/BatchNorm set freq for next task to -1, -1, -1
+task: Conv2d_1_pointwise/Conv2D+Conv2d_1_pointwise/BatchNorm set freq for next task to 0, 0, 0
+task: Conv2d_2_depthwise/depthwise+Conv2d_2_depthwise/BatchNorm set freq for next task to -1, -1, -1
+task: Conv2d_2_pointwise/Conv2D+Conv2d_2_pointwise/BatchNorm set freq for next task to 0, 0, 0
+task: Conv2d_3_depthwise/depthwise+Conv2d_3_depthwise/BatchNorm set freq for next task to -1, -1, -1
+task: Conv2d_3_pointwise/Conv2D+Conv2d_3_pointwise/BatchNorm set freq for next task to 0, 0, 0
+task: Conv2d_4_depthwise/depthwise+Conv2d_4_depthwise/BatchNorm set freq for next task to -1, -1, -1
+task: Conv2d_4_pointwise/Conv2D+Conv2d_4_pointwise/BatchNorm set freq for next task to 0, 0, 0
+task: Conv2d_5_depthwise/depthwise+Conv2d_5_depthwise/BatchNorm set freq for next task to -1, -1, -1
+task: Conv2d_5_pointwise/Conv2D+Conv2d_5_pointwise/BatchNorm set freq for next task to 0, 0, 0
+task: Conv2d_6_depthwise/depthwise+Conv2d_6_depthwise/BatchNorm set freq for next task to -1, -1, -1
+task: Conv2d_6_pointwise/Conv2D+Conv2d_6_pointwise/BatchNorm set freq for next task to 0, 0, 0
+task: Conv2d_7_depthwise/depthwise+Conv2d_7_depthwise/BatchNorm set freq for next task to -1, -1, -1
+task: Conv2d_7_pointwise/Conv2D+Conv2d_7_pointwise/BatchNorm set freq for next task to 0, 0, 0
+task: Conv2d_8_depthwise/depthwise+Conv2d_8_depthwise/BatchNorm set freq for next task to -1, -1, -1
+task: Conv2d_8_pointwise/Conv2D+Conv2d_8_pointwise/BatchNorm set freq for next task to 0, 0, 0
+task: Conv2d_9_depthwise/depthwise+Conv2d_9_depthwise/BatchNorm set freq for next task to -1, -1, -1
+task: Conv2d_9_pointwise/Conv2D+Conv2d_9_pointwise/BatchNorm set freq for next task to 0, 0, 0
+task: Conv2d_10_depthwise/depthwise+Conv2d_10_depthwise/BatchNorm set freq for next task to -1, -1, -1
+task: Conv2d_10_pointwise/Conv2D+Conv2d_10_pointwise/BatchNorm set freq for next task to 0, 0, 0
+task: Conv2d_11_depthwise/depthwise+Conv2d_11_depthwise/BatchNorm set freq for next task to -1, -1, -1
+task: Conv2d_11_pointwise/Conv2D+Conv2d_11_pointwise/BatchNorm set freq for next task to 0, 0, 0
+task: Conv2d_12_depthwise/depthwise+Conv2d_12_depthwise/BatchNorm set freq for next task to -1, -1, -1
+task: Conv2d_12_pointwise/Conv2D+Conv2d_12_pointwise/BatchNorm set freq for next task to 0, 0, 0
+task: Conv2d_13_depthwise/depthwise+Conv2d_13_depthwise/BatchNorm set freq for next task to -1, -1, -1
+task: Conv2d_13_pointwise/Conv2D+Conv2d_13_pointwise/BatchNorm set freq for next task to -1, -1, -1
+task: Logits/AvgPool_1a set freq for next task to -1, -1, -1
+task: Logits/Conv2d_1c_1x1 set freq for next task to -1, -1, -1
+task: Reshape set freq for next task to -1, -1, -1
+task: Softmax set freq for next task to 0, 0, 0
+
+
+WarmUp: First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gold_fish.ppm
+Subgraph0 Ready to trigger Start Running
+Subgraph1 Ready to trigger Start Running
+Subgraph2 Ready to trigger Start Running
+Subgraph3 Ready to trigger Start Running
+Subgraph4 Ready to trigger Start Running
+Subgraph5 Ready to trigger Start Running
+Subgraph6 Ready to trigger Start Running
+Subgraph7 Ready to trigger Start Running
+Subgraph8 Ready to trigger Start Running
+Subgraph9 Ready to trigger Start Running
+Subgraph10 Ready to trigger Start Running
+Subgraph11 Ready to trigger Start Running
+Subgraph12 Ready to trigger Start Running
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 130], n02007558 flamingo
+0.0000 - [id = 7], n01514668 cock
+0.0000 - [id = 8], n01514859 hen
+0.0000 - [id = 46], n01693334 green lizard, Lacerta viridis
+Subgraph13 Ready to trigger Start Running
+
+
+
+
+
+
+
+================================================
+Start Running All Subgraphs ...
+====================================================
+
+
+
+
+
+First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gold_fish.ppm
+
+
+First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gondola.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 130], n02007558 flamingo
+0.0000 - [id = 7], n01514668 cock
+0.0000 - [id = 8], n01514859 hen
+0.0000 - [id = 46], n01693334 green lizard, Lacerta viridis
+
+
+First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/space_shuttle_224.jpg
+---------- Top 5 predictions ----------
+
+0.9999 - [id = 576], n03447447 gondola
+0.0000 - [id = 780], n04147183 schooner
+0.0000 - [id = 914], n04612504 yawl
+0.0000 - [id = 536], n03216828 dock, dockage, docking facility
+0.0000 - [id = 449], n02859443 boathouse
+
+
+First graph inferencing image: 3:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/school_bus.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 812], n04266014 space shuttle
+0.0000 - [id = 833], n04347754 submarine, pigboat, sub, U-boat
+0.0000 - [id = 404], n02690373 airliner
+0.0000 - [id = 484], n02981792 catamaran
+0.0000 - [id = 657], n03773504 missile
+
+
+First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/go_kart.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 779], n04146614 school bus
+0.0000 - [id = 705], n03895866 passenger car, coach, carriage
+0.0000 - [id = 874], n04487081 trolleybus, trolley coach, trackless trolley
+0.0000 - [id = 864], n04461696 tow truck, tow car, wrecker
+0.0000 - [id = 555], n03345487 fire engine, fire truck
+
+
+First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gold_fish.ppm
+---------- Top 5 predictions ----------
+
+0.9916 - [id = 573], n03444034 go-kart
+0.0083 - [id = 518], n03127747 crash helmet
+0.0000 - [id = 560], n03379051 football helmet
+0.0000 - [id = 615], n03623198 knee pad
+0.0000 - [id = 621], n03649909 lawn mower, mower
+
+
+First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gondola.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 130], n02007558 flamingo
+0.0000 - [id = 7], n01514668 cock
+0.0000 - [id = 8], n01514859 hen
+0.0000 - [id = 46], n01693334 green lizard, Lacerta viridis
+
+
+First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/space_shuttle_224.jpg
+---------- Top 5 predictions ----------
+
+0.9999 - [id = 576], n03447447 gondola
+0.0000 - [id = 780], n04147183 schooner
+0.0000 - [id = 914], n04612504 yawl
+0.0000 - [id = 536], n03216828 dock, dockage, docking facility
+0.0000 - [id = 449], n02859443 boathouse
+
+
+First graph inferencing image: 3:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/school_bus.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 812], n04266014 space shuttle
+0.0000 - [id = 833], n04347754 submarine, pigboat, sub, U-boat
+0.0000 - [id = 404], n02690373 airliner
+0.0000 - [id = 484], n02981792 catamaran
+0.0000 - [id = 657], n03773504 missile
+
+
+First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/go_kart.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 779], n04146614 school bus
+0.0000 - [id = 705], n03895866 passenger car, coach, carriage
+0.0000 - [id = 874], n04487081 trolleybus, trolley coach, trackless trolley
+0.0000 - [id = 864], n04461696 tow truck, tow car, wrecker
+0.0000 - [id = 555], n03345487 fire engine, fire truck
+
+
+First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gold_fish.ppm
+---------- Top 5 predictions ----------
+
+0.9916 - [id = 573], n03444034 go-kart
+0.0083 - [id = 518], n03127747 crash helmet
+0.0000 - [id = 560], n03379051 football helmet
+0.0000 - [id = 615], n03623198 knee pad
+0.0000 - [id = 621], n03649909 lawn mower, mower
+
+
+First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gondola.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 130], n02007558 flamingo
+0.0000 - [id = 7], n01514668 cock
+0.0000 - [id = 8], n01514859 hen
+0.0000 - [id = 46], n01693334 green lizard, Lacerta viridis
+
+
+First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/space_shuttle_224.jpg
+---------- Top 5 predictions ----------
+
+0.9999 - [id = 576], n03447447 gondola
+0.0000 - [id = 780], n04147183 schooner
+0.0000 - [id = 914], n04612504 yawl
+0.0000 - [id = 536], n03216828 dock, dockage, docking facility
+0.0000 - [id = 449], n02859443 boathouse
+
+
+First graph inferencing image: 3:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/school_bus.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 812], n04266014 space shuttle
+0.0000 - [id = 833], n04347754 submarine, pigboat, sub, U-boat
+0.0000 - [id = 404], n02690373 airliner
+0.0000 - [id = 484], n02981792 catamaran
+0.0000 - [id = 657], n03773504 missile
+
+
+First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/go_kart.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 779], n04146614 school bus
+0.0000 - [id = 705], n03895866 passenger car, coach, carriage
+0.0000 - [id = 874], n04487081 trolleybus, trolley coach, trackless trolley
+0.0000 - [id = 864], n04461696 tow truck, tow car, wrecker
+0.0000 - [id = 555], n03345487 fire engine, fire truck
+
+
+First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gold_fish.ppm
+---------- Top 5 predictions ----------
+
+0.9916 - [id = 573], n03444034 go-kart
+0.0083 - [id = 518], n03127747 crash helmet
+0.0000 - [id = 560], n03379051 football helmet
+0.0000 - [id = 615], n03623198 knee pad
+0.0000 - [id = 621], n03649909 lawn mower, mower
+
+
+First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gondola.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 130], n02007558 flamingo
+0.0000 - [id = 7], n01514668 cock
+0.0000 - [id = 8], n01514859 hen
+0.0000 - [id = 46], n01693334 green lizard, Lacerta viridis
+
+
+First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/space_shuttle_224.jpg
+---------- Top 5 predictions ----------
+
+0.9999 - [id = 576], n03447447 gondola
+0.0000 - [id = 780], n04147183 schooner
+0.0000 - [id = 914], n04612504 yawl
+0.0000 - [id = 536], n03216828 dock, dockage, docking facility
+0.0000 - [id = 449], n02859443 boathouse
+
+
+First graph inferencing image: 3:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/school_bus.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 812], n04266014 space shuttle
+0.0000 - [id = 833], n04347754 submarine, pigboat, sub, U-boat
+0.0000 - [id = 404], n02690373 airliner
+0.0000 - [id = 484], n02981792 catamaran
+0.0000 - [id = 657], n03773504 missile
+
+
+First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/go_kart.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 779], n04146614 school bus
+0.0000 - [id = 705], n03895866 passenger car, coach, carriage
+0.0000 - [id = 874], n04487081 trolleybus, trolley coach, trackless trolley
+0.0000 - [id = 864], n04461696 tow truck, tow car, wrecker
+0.0000 - [id = 555], n03345487 fire engine, fire truck
+
+
+First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gold_fish.ppm
+---------- Top 5 predictions ----------
+
+0.9916 - [id = 573], n03444034 go-kart
+0.0083 - [id = 518], n03127747 crash helmet
+0.0000 - [id = 560], n03379051 football helmet
+0.0000 - [id = 615], n03623198 knee pad
+0.0000 - [id = 621], n03649909 lawn mower, mower
+
+
+First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gondola.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 130], n02007558 flamingo
+0.0000 - [id = 7], n01514668 cock
+0.0000 - [id = 8], n01514859 hen
+0.0000 - [id = 46], n01693334 green lizard, Lacerta viridis
+
+
+First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/space_shuttle_224.jpg
+---------- Top 5 predictions ----------
+
+0.9999 - [id = 576], n03447447 gondola
+0.0000 - [id = 780], n04147183 schooner
+0.0000 - [id = 914], n04612504 yawl
+0.0000 - [id = 536], n03216828 dock, dockage, docking facility
+0.0000 - [id = 449], n02859443 boathouse
+
+
+First graph inferencing image: 3:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/school_bus.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 812], n04266014 space shuttle
+0.0000 - [id = 833], n04347754 submarine, pigboat, sub, U-boat
+0.0000 - [id = 404], n02690373 airliner
+0.0000 - [id = 484], n02981792 catamaran
+0.0000 - [id = 657], n03773504 missile
+
+
+First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/go_kart.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 779], n04146614 school bus
+0.0000 - [id = 705], n03895866 passenger car, coach, carriage
+0.0000 - [id = 874], n04487081 trolleybus, trolley coach, trackless trolley
+0.0000 - [id = 864], n04461696 tow truck, tow car, wrecker
+0.0000 - [id = 555], n03345487 fire engine, fire truck
+
+
+First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gold_fish.ppm
+---------- Top 5 predictions ----------
+
+0.9916 - [id = 573], n03444034 go-kart
+0.0083 - [id = 518], n03127747 crash helmet
+0.0000 - [id = 560], n03379051 football helmet
+0.0000 - [id = 615], n03623198 knee pad
+0.0000 - [id = 621], n03649909 lawn mower, mower
+
+
+First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gondola.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 130], n02007558 flamingo
+0.0000 - [id = 7], n01514668 cock
+0.0000 - [id = 8], n01514859 hen
+0.0000 - [id = 46], n01693334 green lizard, Lacerta viridis
+
+
+First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/space_shuttle_224.jpg
+---------- Top 5 predictions ----------
+
+0.9999 - [id = 576], n03447447 gondola
+0.0000 - [id = 780], n04147183 schooner
+0.0000 - [id = 914], n04612504 yawl
+0.0000 - [id = 536], n03216828 dock, dockage, docking facility
+0.0000 - [id = 449], n02859443 boathouse
+
+
+First graph inferencing image: 3:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/school_bus.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 812], n04266014 space shuttle
+0.0000 - [id = 833], n04347754 submarine, pigboat, sub, U-boat
+0.0000 - [id = 404], n02690373 airliner
+0.0000 - [id = 484], n02981792 catamaran
+0.0000 - [id = 657], n03773504 missile
+
+
+First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/go_kart.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 779], n04146614 school bus
+0.0000 - [id = 705], n03895866 passenger car, coach, carriage
+0.0000 - [id = 874], n04487081 trolleybus, trolley coach, trackless trolley
+0.0000 - [id = 864], n04461696 tow truck, tow car, wrecker
+0.0000 - [id = 555], n03345487 fire engine, fire truck
+
+
+First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gold_fish.ppm
+---------- Top 5 predictions ----------
+
+0.9916 - [id = 573], n03444034 go-kart
+0.0083 - [id = 518], n03127747 crash helmet
+0.0000 - [id = 560], n03379051 football helmet
+0.0000 - [id = 615], n03623198 knee pad
+0.0000 - [id = 621], n03649909 lawn mower, mower
+
+
+First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gondola.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 130], n02007558 flamingo
+0.0000 - [id = 7], n01514668 cock
+0.0000 - [id = 8], n01514859 hen
+0.0000 - [id = 46], n01693334 green lizard, Lacerta viridis
+
+
+First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/space_shuttle_224.jpg
+---------- Top 5 predictions ----------
+
+0.9999 - [id = 576], n03447447 gondola
+0.0000 - [id = 780], n04147183 schooner
+0.0000 - [id = 914], n04612504 yawl
+0.0000 - [id = 536], n03216828 dock, dockage, docking facility
+0.0000 - [id = 449], n02859443 boathouse
+
+
+First graph inferencing image: 3:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/school_bus.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 812], n04266014 space shuttle
+0.0000 - [id = 833], n04347754 submarine, pigboat, sub, U-boat
+0.0000 - [id = 404], n02690373 airliner
+0.0000 - [id = 484], n02981792 catamaran
+0.0000 - [id = 657], n03773504 missile
+
+
+First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/go_kart.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 779], n04146614 school bus
+0.0000 - [id = 705], n03895866 passenger car, coach, carriage
+0.0000 - [id = 874], n04487081 trolleybus, trolley coach, trackless trolley
+0.0000 - [id = 864], n04461696 tow truck, tow car, wrecker
+0.0000 - [id = 555], n03345487 fire engine, fire truck
+
+
+First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gold_fish.ppm
+---------- Top 5 predictions ----------
+
+0.9916 - [id = 573], n03444034 go-kart
+0.0083 - [id = 518], n03127747 crash helmet
+0.0000 - [id = 560], n03379051 football helmet
+0.0000 - [id = 615], n03623198 knee pad
+0.0000 - [id = 621], n03649909 lawn mower, mower
+
+
+First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gondola.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 130], n02007558 flamingo
+0.0000 - [id = 7], n01514668 cock
+0.0000 - [id = 8], n01514859 hen
+0.0000 - [id = 46], n01693334 green lizard, Lacerta viridis
+
+
+First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/space_shuttle_224.jpg
+---------- Top 5 predictions ----------
+
+0.9999 - [id = 576], n03447447 gondola
+0.0000 - [id = 780], n04147183 schooner
+0.0000 - [id = 914], n04612504 yawl
+0.0000 - [id = 536], n03216828 dock, dockage, docking facility
+0.0000 - [id = 449], n02859443 boathouse
+
+
+First graph inferencing image: 3:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/school_bus.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 812], n04266014 space shuttle
+0.0000 - [id = 833], n04347754 submarine, pigboat, sub, U-boat
+0.0000 - [id = 404], n02690373 airliner
+0.0000 - [id = 484], n02981792 catamaran
+0.0000 - [id = 657], n03773504 missile
+
+
+First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/go_kart.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 779], n04146614 school bus
+0.0000 - [id = 705], n03895866 passenger car, coach, carriage
+0.0000 - [id = 874], n04487081 trolleybus, trolley coach, trackless trolley
+0.0000 - [id = 864], n04461696 tow truck, tow car, wrecker
+0.0000 - [id = 555], n03345487 fire engine, fire truck
+
+
+First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gold_fish.ppm
+---------- Top 5 predictions ----------
+
+0.9916 - [id = 573], n03444034 go-kart
+0.0083 - [id = 518], n03127747 crash helmet
+0.0000 - [id = 560], n03379051 football helmet
+0.0000 - [id = 615], n03623198 knee pad
+0.0000 - [id = 621], n03649909 lawn mower, mower
+
+
+First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gondola.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 130], n02007558 flamingo
+0.0000 - [id = 7], n01514668 cock
+0.0000 - [id = 8], n01514859 hen
+0.0000 - [id = 46], n01693334 green lizard, Lacerta viridis
+
+
+First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/space_shuttle_224.jpg
+---------- Top 5 predictions ----------
+
+0.9999 - [id = 576], n03447447 gondola
+0.0000 - [id = 780], n04147183 schooner
+0.0000 - [id = 914], n04612504 yawl
+0.0000 - [id = 536], n03216828 dock, dockage, docking facility
+0.0000 - [id = 449], n02859443 boathouse
+
+
+First graph inferencing image: 3:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/school_bus.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 812], n04266014 space shuttle
+0.0000 - [id = 833], n04347754 submarine, pigboat, sub, U-boat
+0.0000 - [id = 404], n02690373 airliner
+0.0000 - [id = 484], n02981792 catamaran
+0.0000 - [id = 657], n03773504 missile
+
+
+First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/go_kart.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 779], n04146614 school bus
+0.0000 - [id = 705], n03895866 passenger car, coach, carriage
+0.0000 - [id = 874], n04487081 trolleybus, trolley coach, trackless trolley
+0.0000 - [id = 864], n04461696 tow truck, tow car, wrecker
+0.0000 - [id = 555], n03345487 fire engine, fire truck
+
+
+First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gold_fish.ppm
+---------- Top 5 predictions ----------
+
+0.9916 - [id = 573], n03444034 go-kart
+0.0083 - [id = 518], n03127747 crash helmet
+0.0000 - [id = 560], n03379051 football helmet
+0.0000 - [id = 615], n03623198 knee pad
+0.0000 - [id = 621], n03649909 lawn mower, mower
+
+
+First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gondola.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 130], n02007558 flamingo
+0.0000 - [id = 7], n01514668 cock
+0.0000 - [id = 8], n01514859 hen
+0.0000 - [id = 46], n01693334 green lizard, Lacerta viridis
+
+
+First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/space_shuttle_224.jpg
+---------- Top 5 predictions ----------
+
+0.9999 - [id = 576], n03447447 gondola
+0.0000 - [id = 780], n04147183 schooner
+0.0000 - [id = 914], n04612504 yawl
+0.0000 - [id = 536], n03216828 dock, dockage, docking facility
+0.0000 - [id = 449], n02859443 boathouse
+
+
+First graph inferencing image: 3:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/school_bus.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 812], n04266014 space shuttle
+0.0000 - [id = 833], n04347754 submarine, pigboat, sub, U-boat
+0.0000 - [id = 404], n02690373 airliner
+0.0000 - [id = 484], n02981792 catamaran
+0.0000 - [id = 657], n03773504 missile
+
+
+First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/go_kart.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 779], n04146614 school bus
+0.0000 - [id = 705], n03895866 passenger car, coach, carriage
+0.0000 - [id = 874], n04487081 trolleybus, trolley coach, trackless trolley
+0.0000 - [id = 864], n04461696 tow truck, tow car, wrecker
+0.0000 - [id = 555], n03345487 fire engine, fire truck
+start of graph: 0 for frame: 50
+
+
+First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gold_fish.ppm
+---------- Top 5 predictions ----------
+
+0.9916 - [id = 573], n03444034 go-kart
+0.0083 - [id = 518], n03127747 crash helmet
+0.0000 - [id = 560], n03379051 football helmet
+0.0000 - [id = 615], n03623198 knee pad
+0.0000 - [id = 621], n03649909 lawn mower, mower
+
+
+First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gondola.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 130], n02007558 flamingo
+0.0000 - [id = 7], n01514668 cock
+0.0000 - [id = 8], n01514859 hen
+0.0000 - [id = 46], n01693334 green lizard, Lacerta viridis
+
+
+First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/space_shuttle_224.jpg
+---------- Top 5 predictions ----------
+
+0.9999 - [id = 576], n03447447 gondola
+0.0000 - [id = 780], n04147183 schooner
+0.0000 - [id = 914], n04612504 yawl
+0.0000 - [id = 536], n03216828 dock, dockage, docking facility
+0.0000 - [id = 449], n02859443 boathouse
+
+
+First graph inferencing image: 3:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/school_bus.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 812], n04266014 space shuttle
+0.0000 - [id = 833], n04347754 submarine, pigboat, sub, U-boat
+0.0000 - [id = 404], n02690373 airliner
+0.0000 - [id = 484], n02981792 catamaran
+0.0000 - [id = 657], n03773504 missile
+
+
+First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/go_kart.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 779], n04146614 school bus
+0.0000 - [id = 705], n03895866 passenger car, coach, carriage
+0.0000 - [id = 874], n04487081 trolleybus, trolley coach, trackless trolley
+0.0000 - [id = 864], n04461696 tow truck, tow car, wrecker
+0.0000 - [id = 555], n03345487 fire engine, fire truck
+
+
+First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gold_fish.ppm
+---------- Top 5 predictions ----------
+
+0.9916 - [id = 573], n03444034 go-kart
+0.0083 - [id = 518], n03127747 crash helmet
+0.0000 - [id = 560], n03379051 football helmet
+0.0000 - [id = 615], n03623198 knee pad
+0.0000 - [id = 621], n03649909 lawn mower, mower
+
+
+First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gondola.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 130], n02007558 flamingo
+0.0000 - [id = 7], n01514668 cock
+0.0000 - [id = 8], n01514859 hen
+0.0000 - [id = 46], n01693334 green lizard, Lacerta viridis
+
+
+First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/space_shuttle_224.jpg
+---------- Top 5 predictions ----------
+
+0.9999 - [id = 576], n03447447 gondola
+0.0000 - [id = 780], n04147183 schooner
+0.0000 - [id = 914], n04612504 yawl
+0.0000 - [id = 536], n03216828 dock, dockage, docking facility
+0.0000 - [id = 449], n02859443 boathouse
+
+
+First graph inferencing image: 3:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/school_bus.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 812], n04266014 space shuttle
+0.0000 - [id = 833], n04347754 submarine, pigboat, sub, U-boat
+0.0000 - [id = 404], n02690373 airliner
+0.0000 - [id = 484], n02981792 catamaran
+0.0000 - [id = 657], n03773504 missile
+
+
+First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/go_kart.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 779], n04146614 school bus
+0.0000 - [id = 705], n03895866 passenger car, coach, carriage
+0.0000 - [id = 874], n04487081 trolleybus, trolley coach, trackless trolley
+0.0000 - [id = 864], n04461696 tow truck, tow car, wrecker
+0.0000 - [id = 555], n03345487 fire engine, fire truck
+
+
+First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gold_fish.ppm
+---------- Top 5 predictions ----------
+
+0.9916 - [id = 573], n03444034 go-kart
+0.0083 - [id = 518], n03127747 crash helmet
+0.0000 - [id = 560], n03379051 football helmet
+0.0000 - [id = 615], n03623198 knee pad
+0.0000 - [id = 621], n03649909 lawn mower, mower
+
+
+First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gondola.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 130], n02007558 flamingo
+0.0000 - [id = 7], n01514668 cock
+0.0000 - [id = 8], n01514859 hen
+0.0000 - [id = 46], n01693334 green lizard, Lacerta viridis
+
+
+First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/space_shuttle_224.jpg
+---------- Top 5 predictions ----------
+
+0.9999 - [id = 576], n03447447 gondola
+0.0000 - [id = 780], n04147183 schooner
+0.0000 - [id = 914], n04612504 yawl
+0.0000 - [id = 536], n03216828 dock, dockage, docking facility
+0.0000 - [id = 449], n02859443 boathouse
+
+
+First graph inferencing image: 3:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/school_bus.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 812], n04266014 space shuttle
+0.0000 - [id = 833], n04347754 submarine, pigboat, sub, U-boat
+0.0000 - [id = 404], n02690373 airliner
+0.0000 - [id = 484], n02981792 catamaran
+0.0000 - [id = 657], n03773504 missile
+
+
+First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/go_kart.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 779], n04146614 school bus
+0.0000 - [id = 705], n03895866 passenger car, coach, carriage
+0.0000 - [id = 874], n04487081 trolleybus, trolley coach, trackless trolley
+0.0000 - [id = 864], n04461696 tow truck, tow car, wrecker
+0.0000 - [id = 555], n03345487 fire engine, fire truck
+
+
+First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gold_fish.ppm
+---------- Top 5 predictions ----------
+
+0.9916 - [id = 573], n03444034 go-kart
+0.0083 - [id = 518], n03127747 crash helmet
+0.0000 - [id = 560], n03379051 football helmet
+0.0000 - [id = 615], n03623198 knee pad
+0.0000 - [id = 621], n03649909 lawn mower, mower
+
+
+First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gondola.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 130], n02007558 flamingo
+0.0000 - [id = 7], n01514668 cock
+0.0000 - [id = 8], n01514859 hen
+0.0000 - [id = 46], n01693334 green lizard, Lacerta viridis
+
+
+First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/space_shuttle_224.jpg
+---------- Top 5 predictions ----------
+
+0.9999 - [id = 576], n03447447 gondola
+0.0000 - [id = 780], n04147183 schooner
+0.0000 - [id = 914], n04612504 yawl
+0.0000 - [id = 536], n03216828 dock, dockage, docking facility
+0.0000 - [id = 449], n02859443 boathouse
+
+
+First graph inferencing image: 3:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/school_bus.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 812], n04266014 space shuttle
+0.0000 - [id = 833], n04347754 submarine, pigboat, sub, U-boat
+0.0000 - [id = 404], n02690373 airliner
+0.0000 - [id = 484], n02981792 catamaran
+0.0000 - [id = 657], n03773504 missile
+
+
+First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/go_kart.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 779], n04146614 school bus
+0.0000 - [id = 705], n03895866 passenger car, coach, carriage
+0.0000 - [id = 874], n04487081 trolleybus, trolley coach, trackless trolley
+0.0000 - [id = 864], n04461696 tow truck, tow car, wrecker
+0.0000 - [id = 555], n03345487 fire engine, fire truck
+
+
+First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gold_fish.ppm
+---------- Top 5 predictions ----------
+
+0.9916 - [id = 573], n03444034 go-kart
+0.0083 - [id = 518], n03127747 crash helmet
+0.0000 - [id = 560], n03379051 football helmet
+0.0000 - [id = 615], n03623198 knee pad
+0.0000 - [id = 621], n03649909 lawn mower, mower
+
+
+First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gondola.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 130], n02007558 flamingo
+0.0000 - [id = 7], n01514668 cock
+0.0000 - [id = 8], n01514859 hen
+0.0000 - [id = 46], n01693334 green lizard, Lacerta viridis
+
+
+First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/space_shuttle_224.jpg
+---------- Top 5 predictions ----------
+
+0.9999 - [id = 576], n03447447 gondola
+0.0000 - [id = 780], n04147183 schooner
+0.0000 - [id = 914], n04612504 yawl
+0.0000 - [id = 536], n03216828 dock, dockage, docking facility
+0.0000 - [id = 449], n02859443 boathouse
+
+
+First graph inferencing image: 3:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/school_bus.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 812], n04266014 space shuttle
+0.0000 - [id = 833], n04347754 submarine, pigboat, sub, U-boat
+0.0000 - [id = 404], n02690373 airliner
+0.0000 - [id = 484], n02981792 catamaran
+0.0000 - [id = 657], n03773504 missile
+
+
+First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/go_kart.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 779], n04146614 school bus
+0.0000 - [id = 705], n03895866 passenger car, coach, carriage
+0.0000 - [id = 874], n04487081 trolleybus, trolley coach, trackless trolley
+0.0000 - [id = 864], n04461696 tow truck, tow car, wrecker
+0.0000 - [id = 555], n03345487 fire engine, fire truck
+
+
+First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gold_fish.ppm
+---------- Top 5 predictions ----------
+
+0.9916 - [id = 573], n03444034 go-kart
+0.0083 - [id = 518], n03127747 crash helmet
+0.0000 - [id = 560], n03379051 football helmet
+0.0000 - [id = 615], n03623198 knee pad
+0.0000 - [id = 621], n03649909 lawn mower, mower
+
+
+First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gondola.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 130], n02007558 flamingo
+0.0000 - [id = 7], n01514668 cock
+0.0000 - [id = 8], n01514859 hen
+0.0000 - [id = 46], n01693334 green lizard, Lacerta viridis
+
+
+First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/space_shuttle_224.jpg
+---------- Top 5 predictions ----------
+
+0.9999 - [id = 576], n03447447 gondola
+0.0000 - [id = 780], n04147183 schooner
+0.0000 - [id = 914], n04612504 yawl
+0.0000 - [id = 536], n03216828 dock, dockage, docking facility
+0.0000 - [id = 449], n02859443 boathouse
+
+
+First graph inferencing image: 3:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/school_bus.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 812], n04266014 space shuttle
+0.0000 - [id = 833], n04347754 submarine, pigboat, sub, U-boat
+0.0000 - [id = 404], n02690373 airliner
+0.0000 - [id = 484], n02981792 catamaran
+0.0000 - [id = 657], n03773504 missile
+
+
+First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/go_kart.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 779], n04146614 school bus
+0.0000 - [id = 705], n03895866 passenger car, coach, carriage
+0.0000 - [id = 874], n04487081 trolleybus, trolley coach, trackless trolley
+0.0000 - [id = 864], n04461696 tow truck, tow car, wrecker
+0.0000 - [id = 555], n03345487 fire engine, fire truck
+
+
+First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gold_fish.ppm
+---------- Top 5 predictions ----------
+
+0.9916 - [id = 573], n03444034 go-kart
+0.0083 - [id = 518], n03127747 crash helmet
+0.0000 - [id = 560], n03379051 football helmet
+0.0000 - [id = 615], n03623198 knee pad
+0.0000 - [id = 621], n03649909 lawn mower, mower
+
+
+First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gondola.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 130], n02007558 flamingo
+0.0000 - [id = 7], n01514668 cock
+0.0000 - [id = 8], n01514859 hen
+0.0000 - [id = 46], n01693334 green lizard, Lacerta viridis
+
+
+First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/space_shuttle_224.jpg
+---------- Top 5 predictions ----------
+
+0.9999 - [id = 576], n03447447 gondola
+0.0000 - [id = 780], n04147183 schooner
+0.0000 - [id = 914], n04612504 yawl
+0.0000 - [id = 536], n03216828 dock, dockage, docking facility
+0.0000 - [id = 449], n02859443 boathouse
+
+
+First graph inferencing image: 3:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/school_bus.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 812], n04266014 space shuttle
+0.0000 - [id = 833], n04347754 submarine, pigboat, sub, U-boat
+0.0000 - [id = 404], n02690373 airliner
+0.0000 - [id = 484], n02981792 catamaran
+0.0000 - [id = 657], n03773504 missile
+
+
+First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/go_kart.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 779], n04146614 school bus
+0.0000 - [id = 705], n03895866 passenger car, coach, carriage
+0.0000 - [id = 874], n04487081 trolleybus, trolley coach, trackless trolley
+0.0000 - [id = 864], n04461696 tow truck, tow car, wrecker
+0.0000 - [id = 555], n03345487 fire engine, fire truck
+
+
+First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gold_fish.ppm
+---------- Top 5 predictions ----------
+
+0.9916 - [id = 573], n03444034 go-kart
+0.0083 - [id = 518], n03127747 crash helmet
+0.0000 - [id = 560], n03379051 football helmet
+0.0000 - [id = 615], n03623198 knee pad
+0.0000 - [id = 621], n03649909 lawn mower, mower
+
+
+First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gondola.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 130], n02007558 flamingo
+0.0000 - [id = 7], n01514668 cock
+0.0000 - [id = 8], n01514859 hen
+0.0000 - [id = 46], n01693334 green lizard, Lacerta viridis
+
+
+First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/space_shuttle_224.jpg
+---------- Top 5 predictions ----------
+
+0.9999 - [id = 576], n03447447 gondola
+0.0000 - [id = 780], n04147183 schooner
+0.0000 - [id = 914], n04612504 yawl
+0.0000 - [id = 536], n03216828 dock, dockage, docking facility
+0.0000 - [id = 449], n02859443 boathouse
+
+
+First graph inferencing image: 3:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/school_bus.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 812], n04266014 space shuttle
+0.0000 - [id = 833], n04347754 submarine, pigboat, sub, U-boat
+0.0000 - [id = 404], n02690373 airliner
+0.0000 - [id = 484], n02981792 catamaran
+0.0000 - [id = 657], n03773504 missile
+
+
+First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/go_kart.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 779], n04146614 school bus
+0.0000 - [id = 705], n03895866 passenger car, coach, carriage
+0.0000 - [id = 874], n04487081 trolleybus, trolley coach, trackless trolley
+0.0000 - [id = 864], n04461696 tow truck, tow car, wrecker
+0.0000 - [id = 555], n03345487 fire engine, fire truck
+
+
+First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gold_fish.ppm
+---------- Top 5 predictions ----------
+
+0.9916 - [id = 573], n03444034 go-kart
+0.0083 - [id = 518], n03127747 crash helmet
+0.0000 - [id = 560], n03379051 football helmet
+0.0000 - [id = 615], n03623198 knee pad
+0.0000 - [id = 621], n03649909 lawn mower, mower
+
+
+First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gondola.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 130], n02007558 flamingo
+0.0000 - [id = 7], n01514668 cock
+0.0000 - [id = 8], n01514859 hen
+0.0000 - [id = 46], n01693334 green lizard, Lacerta viridis
+
+
+First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/space_shuttle_224.jpg
+---------- Top 5 predictions ----------
+
+0.9999 - [id = 576], n03447447 gondola
+0.0000 - [id = 780], n04147183 schooner
+0.0000 - [id = 914], n04612504 yawl
+0.0000 - [id = 536], n03216828 dock, dockage, docking facility
+0.0000 - [id = 449], n02859443 boathouse
+
+
+First graph inferencing image: 3:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/school_bus.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 812], n04266014 space shuttle
+0.0000 - [id = 833], n04347754 submarine, pigboat, sub, U-boat
+0.0000 - [id = 404], n02690373 airliner
+0.0000 - [id = 484], n02981792 catamaran
+0.0000 - [id = 657], n03773504 missile
+
+
+First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/go_kart.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 779], n04146614 school bus
+0.0000 - [id = 705], n03895866 passenger car, coach, carriage
+0.0000 - [id = 874], n04487081 trolleybus, trolley coach, trackless trolley
+0.0000 - [id = 864], n04461696 tow truck, tow car, wrecker
+0.0000 - [id = 555], n03345487 fire engine, fire truck
+
+
+First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gold_fish.ppm
+---------- Top 5 predictions ----------
+
+0.9916 - [id = 573], n03444034 go-kart
+0.0083 - [id = 518], n03127747 crash helmet
+0.0000 - [id = 560], n03379051 football helmet
+0.0000 - [id = 615], n03623198 knee pad
+0.0000 - [id = 621], n03649909 lawn mower, mower
+
+
+First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gondola.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 130], n02007558 flamingo
+0.0000 - [id = 7], n01514668 cock
+0.0000 - [id = 8], n01514859 hen
+0.0000 - [id = 46], n01693334 green lizard, Lacerta viridis
+
+
+First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/space_shuttle_224.jpg
+---------- Top 5 predictions ----------
+
+0.9999 - [id = 576], n03447447 gondola
+0.0000 - [id = 780], n04147183 schooner
+0.0000 - [id = 914], n04612504 yawl
+0.0000 - [id = 536], n03216828 dock, dockage, docking facility
+0.0000 - [id = 449], n02859443 boathouse
+
+
+First graph inferencing image: 3:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/school_bus.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 812], n04266014 space shuttle
+0.0000 - [id = 833], n04347754 submarine, pigboat, sub, U-boat
+0.0000 - [id = 404], n02690373 airliner
+0.0000 - [id = 484], n02981792 catamaran
+0.0000 - [id = 657], n03773504 missile
+
+
+First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/go_kart.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 779], n04146614 school bus
+0.0000 - [id = 705], n03895866 passenger car, coach, carriage
+0.0000 - [id = 874], n04487081 trolleybus, trolley coach, trackless trolley
+0.0000 - [id = 864], n04461696 tow truck, tow car, wrecker
+0.0000 - [id = 555], n03345487 fire engine, fire truck
+---------- Top 5 predictions ----------
+
+0.9916 - [id = 573], n03444034 go-kart
+0.0083 - [id = 518], n03127747 crash helmet
+0.0000 - [id = 560], n03379051 football helmet
+0.0000 - [id = 615], n03623198 knee pad
+0.0000 - [id = 621], n03649909 lawn mower, mower
+Finishing power measurement with first subgraph13
+0	Layer Name: Conv2d_0+Conv2d_0/BatchNorm 	 Layer time: 9.3703 	 number of inputs: 7 	 input shape: 3x224x224 	 output shape: 32x112x112
+Layer Number: 0 	 time: 9.3703
+----------------------------
+
+ Sum of Layers time: 9.3703
+
+ input time of layer 0 : 97.2311
+
+ transfer_time of layer 0 : 0.0000
+
+ output time of layer 0 : 3.1926
+
+ this part task time: 9.7927
+
+
+Cost0:373.681
+input0_time:97.2311
+task0_time:9.79268
+output0_time:3.19263
+total0_time:110.216
+***************************************
+
+0	Layer Name: Conv2d_1_depthwise/depthwise+Conv2d_1_depthwise/BatchNorm 	 Layer time: 7.9299 	 number of inputs: 7 	 input shape: 32x112x112 	 output shape: 32x112x112
+1	Layer Name: Conv2d_1_pointwise/Conv2D+Conv2d_1_pointwise/BatchNorm 	 Layer time: 13.0449 	 number of inputs: 7 	 input shape: 32x112x112 	 output shape: 64x112x112
+Layer Number: 1 	 time: 20.9748
+----------------------------
+
+ Sum of Layers time: 20.9748
+
+ input time of layer 1 : 0.1220
+
+ transfer_time of layer 1 : 3.3142
+
+ output time of layer 1 : 0.0451
+
+ this part task time: 21.6529
+
+
+Cost1:373.883
+input1_time:0.121975
+task1_time:21.6529
+output1_time:0.0451092
+total1_time:21.82
+***************************************
+
+0	Layer Name: Conv2d_2_depthwise/depthwise+Conv2d_2_depthwise/BatchNorm 	 Layer time: 0.3763 	 number of inputs: 7 	 input shape: 64x112x112 	 output shape: 64x56x56
+1	Layer Name: Conv2d_2_pointwise/Conv2D+Conv2d_2_pointwise/BatchNorm 	 Layer time: 26.6499 	 number of inputs: 7 	 input shape: 64x56x56 	 output shape: 128x56x56
+Layer Number: 2 	 time: 27.0262
+----------------------------
+
+ Sum of Layers time: 27.0262
+
+ input time of layer 2 : 3.3129
+
+ transfer_time of layer 2 : 3.3580
+
+ output time of layer 2 : 2.8284
+
+ this part task time: 27.4902
+
+
+Cost2:374.226
+input2_time:3.3129
+task2_time:27.4902
+output2_time:2.82843
+total2_time:33.6316
+***************************************
+
+0	Layer Name: Conv2d_3_depthwise/depthwise+Conv2d_3_depthwise/BatchNorm 	 Layer time: 7.5292 	 number of inputs: 7 	 input shape: 128x56x56 	 output shape: 128x56x56
+1	Layer Name: Conv2d_3_pointwise/Conv2D+Conv2d_3_pointwise/BatchNorm 	 Layer time: 15.5679 	 number of inputs: 7 	 input shape: 128x56x56 	 output shape: 128x56x56
+Layer Number: 3 	 time: 23.0972
+----------------------------
+
+ Sum of Layers time: 23.0972
+
+ input time of layer 3 : 0.1294
+
+ transfer_time of layer 3 : 2.9573
+
+ output time of layer 3 : 0.0441
+
+ this part task time: 23.7685
+
+
+Cost3:374.462
+0	Layer Name: Conv2d_4_depthwise/depthwise+Conv2d_4_depthwise/BatchNorm 	 Layer time: 0.3000 	 number of inputs: 7 	 input shape: 128x56x56 	 output shape: 128x28x28
+input3_time:0.129376
+task3_time:23.7685
+output3_time:0.0441321
+total3_time:23.942
+***************************************
+
+1	Layer Name: Conv2d_4_pointwise/Conv2D+Conv2d_4_pointwise/BatchNorm 	 Layer time: 18.5517 	 number of inputs: 7 	 input shape: 128x28x28 	 output shape: 256x28x28
+Layer Number: 4 	 time: 18.8516
+----------------------------
+
+ Sum of Layers time: 18.8516
+
+ input time of layer 4 : 1.7405
+
+ transfer_time of layer 4 : 1.7846
+
+ output time of layer 4 : 1.9714
+
+ this part task time: 19.3041
+
+
+Cost4:374.697
+input4_time:1.74049
+task4_time:19.3041
+output4_time:1.97137
+total4_time:23.016
+***************************************
+
+0	Layer Name: Conv2d_5_depthwise/depthwise+Conv2d_5_depthwise/BatchNorm 	 Layer time: 4.8747 	 number of inputs: 7 	 input shape: 256x28x28 	 output shape: 256x28x28
+1	Layer Name: Conv2d_5_pointwise/Conv2D+Conv2d_5_pointwise/BatchNorm 	 Layer time: 14.2132 	 number of inputs: 7 	 input shape: 256x28x28 	 output shape: 256x28x28
+Layer Number: 5 	 time: 19.0879
+----------------------------
+
+ Sum of Layers time: 19.0879
+
+ input time of layer 5 : 0.1385
+
+ transfer_time of layer 5 : 2.1091
+
+ output time of layer 5 : 0.0445
+
+ this part task time: 19.7541
+
+
+Cost5:374.896
+input5_time:0.138477
+task5_time:19.7541
+output5_time:0.0445317
+total5_time:19.9371
+***************************************
+
+0	Layer Name: Conv2d_6_depthwise/depthwise+Conv2d_6_depthwise/BatchNorm 	 Layer time: 0.2705 	 number of inputs: 7 	 input shape: 256x28x28 	 output shape: 256x14x14
+1	Layer Name: Conv2d_6_pointwise/Conv2D+Conv2d_6_pointwise/BatchNorm 	 Layer time: 14.3401 	 number of inputs: 7 	 input shape: 256x14x14 	 output shape: 512x14x14
+Layer Number: 6 	 time: 14.6106
+----------------------------
+
+ Sum of Layers time: 14.6106
+
+ input time of layer 6 : 0.9677
+
+ transfer_time of layer 6 : 1.0123
+
+ output time of layer 6 : 1.1070
+
+ this part task time: 15.0473
+
+
+Cost6:375.068
+input6_time:0.967725
+task6_time:15.0473
+output6_time:1.107
+total6_time:17.122
+***************************************
+
+0	Layer Name: Conv2d_7_depthwise/depthwise+Conv2d_7_depthwise/BatchNorm 	 Layer time: 3.3256 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x14x14
+1	Layer Name: Conv2d_7_pointwise/Conv2D+Conv2d_7_pointwise/BatchNorm 	 Layer time: 14.4218 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x14x14
+Layer Number: 7 	 time: 17.7474
+----------------------------
+
+ Sum of Layers time: 17.7474
+
+ input time of layer 7 : 0.1380
+
+ transfer_time of layer 7 : 1.2450
+
+ output time of layer 7 : 0.0438
+
+ this part task time: 18.4014
+
+
+Cost7:375.244
+input7_time:0.137983
+task7_time:18.4014
+output7_time:0.0437588
+total7_time:18.5831
+***************************************
+
+0	Layer Name: Conv2d_8_depthwise/depthwise+Conv2d_8_depthwise/BatchNorm 	 Layer time: 0.2743 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x14x14
+1	Layer Name: Conv2d_8_pointwise/Conv2D+Conv2d_8_pointwise/BatchNorm 	 Layer time: 32.5010 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x14x14
+Layer Number: 8 	 time: 32.7753
+----------------------------
+
+ Sum of Layers time: 32.7753
+
+ input time of layer 8 : 0.6306
+
+ transfer_time of layer 8 : 0.6744
+
+ output time of layer 8 : 1.1608
+
+ this part task time: 33.2123
+
+
+Cost8:375.587
+input8_time:0.630643
+task8_time:33.2123
+output8_time:1.16077
+total8_time:35.0037
+***************************************
+
+0	Layer Name: Conv2d_9_depthwise/depthwise+Conv2d_9_depthwise/BatchNorm 	 Layer time: 3.8787 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x14x14
+1	Layer Name: Conv2d_9_pointwise/Conv2D+Conv2d_9_pointwise/BatchNorm 	 Layer time: 15.1018 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x14x14
+Layer Number: 9 	 time: 18.9805
+----------------------------
+
+ Sum of Layers time: 18.9805
+
+ input time of layer 9 : 0.1633
+
+ transfer_time of layer 9 : 1.3241
+
+ output time of layer 9 : 0.0449
+
+ this part task time: 19.6474
+
+
+Cost9:375.779
+input9_time:0.163342
+task9_time:19.6474
+output9_time:0.0448875
+total9_time:19.8556
+***************************************
+
+0	Layer Name: Conv2d_10_depthwise/depthwise+Conv2d_10_depthwise/BatchNorm 	 Layer time: 0.2744 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x14x14
+1	Layer Name: Conv2d_10_pointwise/Conv2D+Conv2d_10_pointwise/BatchNorm 	 Layer time: 32.3017 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x14x14
+Layer Number: 10 	 time: 32.5761
+----------------------------
+
+ Sum of Layers time: 32.5761
+
+ input time of layer 10 : 0.6083
+
+ transfer_time of layer 10 : 0.6532
+
+ output time of layer 10 : 1.1337
+
+ this part task time: 33.0117
+
+
+Cost10:376.13
+input10_time:0.608277
+task10_time:33.0117
+output10_time:1.13367
+total10_time:34.7536
+***************************************
+
+0	Layer Name: Conv2d_11_depthwise/depthwise+Conv2d_11_depthwise/BatchNorm 	 Layer time: 3.7805 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x14x14
+1	Layer Name: Conv2d_11_pointwise/Conv2D+Conv2d_11_pointwise/BatchNorm 	 Layer time: 14.6543 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x14x14
+Layer Number: 11 	 time: 18.4348
+----------------------------
+
+ Sum of Layers time: 18.4348
+
+ input time of layer 11 : 0.1684
+
+ transfer_time of layer 11 : 1.3020
+
+ output time of layer 11 : 0.0431
+
+ this part task time: 19.1000
+
+
+Cost11:376.32
+input11_time:0.168379
+task11_time:19.1
+output11_time:0.0431054
+total11_time:19.3114
+***************************************
+
+0	Layer Name: Conv2d_12_depthwise/depthwise+Conv2d_12_depthwise/BatchNorm 	 Layer time: 0.2676 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x7x7
+1	Layer Name: Conv2d_12_pointwise/Conv2D+Conv2d_12_pointwise/BatchNorm 	 Layer time: 18.2195 	 number of inputs: 7 	 input shape: 512x7x7 	 output shape: 1024x7x7
+Layer Number: 12 	 time: 18.4871
+----------------------------
+
+ Sum of Layers time: 18.4871
+
+ input time of layer 12 : 0.6285
+
+ transfer_time of layer 12 : 0.6716
+
+ output time of layer 12 : 0.8544
+
+ this part task time: 18.9232
+
+
+Cost12:376.521
+input12_time:0.628508
+task12_time:18.9232
+output12_time:0.854429
+total12_time:20.4062
+***************************************
+
+0	Layer Name: Conv2d_13_depthwise/depthwise+Conv2d_13_depthwise/BatchNorm 	 Layer time: 2.3502 	 number of inputs: 7 	 input shape: 1024x7x7 	 output shape: 1024x7x7
+1	Layer Name: Conv2d_13_pointwise/Conv2D+Conv2d_13_pointwise/BatchNorm 	 Layer time: 17.0627 	 number of inputs: 7 	 input shape: 1024x7x7 	 output shape: 1024x7x7
+2	Layer Name: Logits/AvgPool_1a 	 Layer time: 0.8782 	 number of inputs: 1 	 input shape: 1024x7x7 	 output shape: 1024
+3	Layer Name: Logits/Conv2d_1c_1x1 	 Layer time: 1.8691 	 number of inputs: 3 	 input shape: 1024 	 output shape: 1000
+4	Layer Name: Reshape 	 Layer time: 0.4371 	 number of inputs: 1 	 input shape: 1000 	 output shape: 1001
+5	Layer Name: Softmax 	 Layer time: 0.2059 	 number of inputs: 1 	 input shape: 1001 	 output shape: 1001
+Layer Number: 13 	 time: 22.8032
+----------------------------
+
+ Sum of Layers time: 22.8032
+
+ input time of layer 13 : 0.1663
+
+ transfer_time of layer 13 : 1.0207
+
+ output time of layer 13 : 0.9036
+
+ this part task time: 23.1837
+
+
+Cost13:376.793
+input13_time:0.166314
+task13_time:23.1837
+output13_time:0.903566
+total13_time:24.2536
+***************************************
+
+Frame Latency: 704.589
+Profiling these DVFS settings finised
+
+Test passed

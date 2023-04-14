@@ -1,0 +1,1571 @@
+/data/data/com.termux/files/home/ARMCL-RockPi//test_graph//graph_googlenet_n_pipe_npu_lw  --target=CL --data=/data/data/com.termux/files/home/ARMCL-RockPi/assets/./googlenet/ --image=/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/ --labels=/data/data/com.termux/files/home/ARMCL-RockPi/assets/./labels.txt --n=100 --save=0 --annotate=0 --partition_point=100 --partition_point2=100 --order=BLBLBLBLBLB --layer_time=1 --threads=2  --threads2=4 --GPU_host=B --NPU_host=B 
+pandoon
+pandoon
+pandoon
+
+/data/data/com.termux/files/home/ARMCL-RockPi//test_graph//graph_googlenet_n_pipe_npu_lw
+
+Pandoon opened at 3
+5 Input images are read from /data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/
+NPU host: 4
+Little Cores host: 3
+Big Cores host: 5
+GPU host: 4
+Number of Layers: 11
+graphs id:
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+----------------->0
+Threads : 2
+Small Cores Threads : 4
+Target : CL
+Data type : F32
+Data layout : NHWC
+Tuner enabled? : false
+Cache enabled? : true
+Tuner mode : Normal
+Tuner file : 
+MLGO file : 
+Fast math enabled? : false
+Data path : /data/data/com.termux/files/home/ARMCL-RockPi/assets/./googlenet/
+Image file : /data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gold_fish.ppm
+Labels file : /data/data/com.termux/files/home/ARMCL-RockPi/assets/./labels.txt
+Partition point is : 100
+Second partition point is : 100
+Order is : BLBLBLBLBLB
+freqs of layers : 
+GPU host is: B
+NPU host is: B
+Number of totla cores is : 6
+Number of little cores is : 4
+Run network for 100 times.
+Layer timing: 1
+
+start creating graph
+creating image accessor
+std::string task_names[] = { "conv1/7x7_s2", "pool1/3x3_s2", "pool1/norm1" };
+number of tasks: 3
+std::set<std::string> end_task_names = { "pool1/norm1" };
+number of end tasks: 1
+std::set<std::string> start_task_names = { "conv1/7x7_s2" };
+number of start tasks: 1
+after pass graph 0
+std::string task_names[] = { "conv2/3x3_reduce", "conv2/3x3", "pool2/3x3_s2" };
+number of tasks: 3
+std::set<std::string> end_task_names = { "pool2/3x3_s2" };
+number of end tasks: 1
+std::set<std::string> start_task_names = { "conv2/3x3_reduce" };
+number of start tasks: 1
+after pass graph 1
+std::string task_names[] = { "inception_3a/5x5_reduce", "inception_3a/5x5", "inception_3a/3x3_reduce", "inception_3a/3x3", "inception_3a/1x1", "inception_3a/pool", "inception_3a/pool_proj", "inception_3a/concat" };
+number of tasks: 8
+std::set<std::string> end_task_names = { "inception_3a/concat" };
+number of end tasks: 1
+std::set<std::string> start_task_names = { "inception_3a/5x5_reduce" };
+number of start tasks: 1
+after pass graph 2
+std::string task_names[] = { "inception_3b/5x5_reduce", "inception_3b/5x5", "inception_3b/3x3_reduce", "inception_3b/3x3", "inception_3b/1x1", "inception_3b/pool", "inception_3b/pool_proj", "inception_3b/concat", "pool3/3x3_s2" };
+number of tasks: 9
+std::set<std::string> end_task_names = { "pool3/3x3_s2" };
+number of end tasks: 1
+std::set<std::string> start_task_names = { "inception_3b/5x5_reduce" };
+number of start tasks: 1
+after pass graph 3
+std::string task_names[] = { "inception_4a/5x5_reduce", "inception_4a/5x5", "inception_4a/3x3_reduce", "inception_4a/3x3", "inception_4a/1x1", "inception_4a/pool", "inception_4a/pool_proj", "inception_4a/concat" };
+number of tasks: 8
+std::set<std::string> end_task_names = { "inception_4a/concat" };
+number of end tasks: 1
+std::set<std::string> start_task_names = { "inception_4a/5x5_reduce" };
+number of start tasks: 1
+after pass graph 4
+std::string task_names[] = { "inception_4b/5x5_reduce", "inception_4b/5x5", "inception_4b/3x3_reduce", "inception_4b/3x3", "inception_4b/1x1", "inception_4b/pool", "inception_4b/pool_proj", "inception_4b/concat" };
+number of tasks: 8
+std::set<std::string> end_task_names = { "inception_4b/concat" };
+number of end tasks: 1
+std::set<std::string> start_task_names = { "inception_4b/5x5_reduce" };
+number of start tasks: 1
+after pass graph 5
+std::string task_names[] = { "inception_4c/5x5_reduce", "inception_4c/5x5", "inception_4c/3x3_reduce", "inception_4c/3x3", "inception_4c/1x1", "inception_4c/pool", "inception_4c/pool_proj", "inception_4c/concat" };
+number of tasks: 8
+std::set<std::string> end_task_names = { "inception_4c/concat" };
+number of end tasks: 1
+std::set<std::string> start_task_names = { "inception_4c/5x5_reduce" };
+number of start tasks: 1
+after pass graph 6
+std::string task_names[] = { "inception_4d/5x5_reduce", "inception_4d/5x5", "inception_4d/3x3_reduce", "inception_4d/3x3", "inception_4d/1x1", "inception_4d/pool", "inception_4d/pool_proj", "inception_4d/concat" };
+number of tasks: 8
+std::set<std::string> end_task_names = { "inception_4d/concat" };
+number of end tasks: 1
+std::set<std::string> start_task_names = { "inception_4d/5x5_reduce" };
+number of start tasks: 1
+after pass graph 7
+std::string task_names[] = { "inception_4e/5x5_reduce", "inception_4e/5x5", "inception_4e/3x3_reduce", "inception_4e/3x3", "inception_4e/1x1", "inception_4e/pool", "inception_4e/pool_proj", "inception_4e/concat", "pool4/3x3_s2" };
+number of tasks: 9
+std::set<std::string> end_task_names = { "pool4/3x3_s2" };
+number of end tasks: 1
+std::set<std::string> start_task_names = { "inception_4e/5x5_reduce" };
+number of start tasks: 1
+after pass graph 8
+std::string task_names[] = { "inception_5a/5x5_reduce", "inception_5a/5x5", "inception_5a/3x3_reduce", "inception_5a/3x3", "inception_5a/1x1", "inception_5a/pool", "inception_5a/pool_proj", "inception_5a/concat" };
+number of tasks: 8
+std::set<std::string> end_task_names = { "inception_5a/concat" };
+number of end tasks: 1
+std::set<std::string> start_task_names = { "inception_5a/5x5_reduce" };
+number of start tasks: 1
+after pass graph 9
+std::string task_names[] = { "inception_5b/5x5_reduce", "inception_5b/5x5", "inception_5b/3x3_reduce", "inception_5b/3x3", "inception_5b/1x1", "inception_5b/pool", "inception_5b/pool_proj", "inception_5b/concat", "pool5/7x7_s1", "loss3/classifier", "prob" };
+number of tasks: 11
+std::set<std::string> end_task_names = { "prob" };
+number of end tasks: 1
+std::set<std::string> start_task_names = { "inception_5b/5x5_reduce" };
+number of start tasks: 1
+Total layers:11
+
+after pass graph 10
+0 Running Graph with min LW DVFS
+task: conv1/7x7_s2 set freq for next task to -1, -1, -1
+task: pool1/3x3_s2 set freq for next task to -1, -1, -1
+task: pool1/norm1 set freq for next task to 0, 0, 0
+task: conv2/3x3_reduce set freq for next task to -1, -1, -1
+task: conv2/3x3 set freq for next task to -1, -1, -1
+task: pool2/3x3_s2 set freq for next task to 0, 0, 0
+task: inception_3a/5x5_reduce set freq for next task to -1, -1, -1
+task: inception_3a/5x5 set freq for next task to -1, -1, -1
+task: inception_3a/3x3_reduce set freq for next task to -1, -1, -1
+task: inception_3a/3x3 set freq for next task to -1, -1, -1
+task: inception_3a/1x1 set freq for next task to -1, -1, -1
+task: inception_3a/pool set freq for next task to -1, -1, -1
+task: inception_3a/pool_proj set freq for next task to -1, -1, -1
+task: inception_3a/concat set freq for next task to 0, 0, 0
+task: inception_3b/5x5_reduce set freq for next task to -1, -1, -1
+task: inception_3b/5x5 set freq for next task to -1, -1, -1
+task: inception_3b/3x3_reduce set freq for next task to -1, -1, -1
+task: inception_3b/3x3 set freq for next task to -1, -1, -1
+task: inception_3b/1x1 set freq for next task to -1, -1, -1
+task: inception_3b/pool set freq for next task to -1, -1, -1
+task: inception_3b/pool_proj set freq for next task to -1, -1, -1
+task: inception_3b/concat set freq for next task to -1, -1, -1
+task: pool3/3x3_s2 set freq for next task to 0, 0, 0
+task: inception_4a/5x5_reduce set freq for next task to -1, -1, -1
+task: inception_4a/5x5 set freq for next task to -1, -1, -1
+task: inception_4a/3x3_reduce set freq for next task to -1, -1, -1
+task: inception_4a/3x3 set freq for next task to -1, -1, -1
+task: inception_4a/1x1 set freq for next task to -1, -1, -1
+task: inception_4a/pool set freq for next task to -1, -1, -1
+task: inception_4a/pool_proj set freq for next task to -1, -1, -1
+task: inception_4a/concat set freq for next task to 0, 0, 0
+task: inception_4b/5x5_reduce set freq for next task to -1, -1, -1
+task: inception_4b/5x5 set freq for next task to -1, -1, -1
+task: inception_4b/3x3_reduce set freq for next task to -1, -1, -1
+task: inception_4b/3x3 set freq for next task to -1, -1, -1
+task: inception_4b/1x1 set freq for next task to -1, -1, -1
+task: inception_4b/pool set freq for next task to -1, -1, -1
+task: inception_4b/pool_proj set freq for next task to -1, -1, -1
+task: inception_4b/concat set freq for next task to 0, 0, 0
+task: inception_4c/5x5_reduce set freq for next task to -1, -1, -1
+task: inception_4c/5x5 set freq for next task to -1, -1, -1
+task: inception_4c/3x3_reduce set freq for next task to -1, -1, -1
+task: inception_4c/3x3 set freq for next task to -1, -1, -1
+task: inception_4c/1x1 set freq for next task to -1, -1, -1
+task: inception_4c/pool set freq for next task to -1, -1, -1
+task: inception_4c/pool_proj set freq for next task to -1, -1, -1
+task: inception_4c/concat set freq for next task to 0, 0, 0
+task: inception_4d/5x5_reduce set freq for next task to -1, -1, -1
+task: inception_4d/5x5 set freq for next task to -1, -1, -1
+task: inception_4d/3x3_reduce set freq for next task to -1, -1, -1
+task: inception_4d/3x3 set freq for next task to -1, -1, -1
+task: inception_4d/1x1 set freq for next task to -1, -1, -1
+task: inception_4d/pool set freq for next task to -1, -1, -1
+task: inception_4d/pool_proj set freq for next task to -1, -1, -1
+task: inception_4d/concat set freq for next task to 0, 0, 0
+task: inception_4e/5x5_reduce set freq for next task to -1, -1, -1
+task: inception_4e/5x5 set freq for next task to -1, -1, -1
+task: inception_4e/3x3_reduce set freq for next task to -1, -1, -1
+task: inception_4e/3x3 set freq for next task to -1, -1, -1
+task: inception_4e/1x1 set freq for next task to -1, -1, -1
+task: inception_4e/pool set freq for next task to -1, -1, -1
+task: inception_4e/pool_proj set freq for next task to -1, -1, -1
+task: inception_4e/concat set freq for next task to -1, -1, -1
+task: pool4/3x3_s2 set freq for next task to 0, 0, 0
+task: inception_5a/5x5_reduce set freq for next task to -1, -1, -1
+task: inception_5a/5x5 set freq for next task to -1, -1, -1
+task: inception_5a/3x3_reduce set freq for next task to -1, -1, -1
+task: inception_5a/3x3 set freq for next task to -1, -1, -1
+task: inception_5a/1x1 set freq for next task to -1, -1, -1
+task: inception_5a/pool set freq for next task to -1, -1, -1
+task: inception_5a/pool_proj set freq for next task to -1, -1, -1
+task: inception_5a/concat set freq for next task to 0, 0, 0
+task: inception_5b/5x5_reduce set freq for next task to -1, -1, -1
+task: inception_5b/5x5 set freq for next task to -1, -1, -1
+task: inception_5b/3x3_reduce set freq for next task to -1, -1, -1
+task: inception_5b/3x3 set freq for next task to -1, -1, -1
+task: inception_5b/1x1 set freq for next task to -1, -1, -1
+task: inception_5b/pool set freq for next task to -1, -1, -1
+task: inception_5b/pool_proj set freq for next task to -1, -1, -1
+task: inception_5b/concat set freq for next task to -1, -1, -1
+task: pool5/7x7_s1 set freq for next task to -1, -1, -1
+task: loss3/classifier set freq for next task to -1, -1, -1
+task: prob set freq for next task to 0, 0, 0
+
+
+WarmUp: First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gold_fish.ppm
+Subgraph0 Ready to trigger Start Running
+Subgraph1 Ready to trigger Start Running
+Subgraph2 Ready to trigger Start Running
+Subgraph3 Ready to trigger Start Running
+Subgraph4 Ready to trigger Start Running
+Subgraph5 Ready to trigger Start Running
+Subgraph6 Ready to trigger Start Running
+Subgraph7 Ready to trigger Start Running
+Subgraph8 Ready to trigger Start Running
+Subgraph9 Ready to trigger Start Running
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 392], n02606052 rock beauty, Holocanthus tricolor
+0.0000 - [id = 393], n02607072 anemone fish
+0.0000 - [id = 27], n01631663 eft
+0.0000 - [id = 301], n02165456 ladybug, ladybeetle, lady beetle, ladybird, ladybird beetle
+Subgraph10 Ready to trigger Start Running
+
+
+
+
+
+
+
+================================================
+Start Running All Subgraphs ...
+====================================================
+
+
+
+
+
+First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gold_fish.ppm
+
+
+First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gondola.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 392], n02606052 rock beauty, Holocanthus tricolor
+0.0000 - [id = 393], n02607072 anemone fish
+0.0000 - [id = 27], n01631663 eft
+0.0000 - [id = 301], n02165456 ladybug, ladybeetle, lady beetle, ladybird, ladybird beetle
+
+
+First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/space_shuttle_224.jpg
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 576], n03447447 gondola
+0.0000 - [id = 914], n04612504 yawl
+0.0000 - [id = 724], n03947888 pirate, pirate ship
+0.0000 - [id = 765], n04099969 rocking chair, rocker
+0.0000 - [id = 536], n03216828 dock, dockage, docking facility
+
+
+First graph inferencing image: 3:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/school_bus.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 812], n04266014 space shuttle
+0.0000 - [id = 404], n02690373 airliner
+0.0000 - [id = 466], n02917067 bullet train, bullet
+0.0000 - [id = 833], n04347754 submarine, pigboat, sub, U-boat
+0.0000 - [id = 657], n03773504 missile
+
+
+First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/go_kart.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 779], n04146614 school bus
+0.0000 - [id = 675], n03796401 moving van
+0.0000 - [id = 705], n03895866 passenger car, coach, carriage
+0.0000 - [id = 867], n04467665 trailer truck, tractor trailer, trucking rig, rig, articulated lorry, semi
+0.0000 - [id = 468], n02930766 cab, hack, taxi, taxicab
+
+
+First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gold_fish.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 573], n03444034 go-kart
+0.0000 - [id = 518], n03127747 crash helmet
+0.0000 - [id = 817], n04285008 sports car, sport car
+0.0000 - [id = 751], n04037443 racer, race car, racing car
+0.0000 - [id = 621], n03649909 lawn mower, mower
+
+
+First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gondola.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 392], n02606052 rock beauty, Holocanthus tricolor
+0.0000 - [id = 393], n02607072 anemone fish
+0.0000 - [id = 27], n01631663 eft
+0.0000 - [id = 301], n02165456 ladybug, ladybeetle, lady beetle, ladybird, ladybird beetle
+
+
+First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/space_shuttle_224.jpg
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 576], n03447447 gondola
+0.0000 - [id = 914], n04612504 yawl
+0.0000 - [id = 724], n03947888 pirate, pirate ship
+0.0000 - [id = 765], n04099969 rocking chair, rocker
+0.0000 - [id = 536], n03216828 dock, dockage, docking facility
+
+
+First graph inferencing image: 3:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/school_bus.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 812], n04266014 space shuttle
+0.0000 - [id = 404], n02690373 airliner
+0.0000 - [id = 466], n02917067 bullet train, bullet
+0.0000 - [id = 833], n04347754 submarine, pigboat, sub, U-boat
+0.0000 - [id = 657], n03773504 missile
+
+
+First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/go_kart.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 779], n04146614 school bus
+0.0000 - [id = 675], n03796401 moving van
+0.0000 - [id = 705], n03895866 passenger car, coach, carriage
+0.0000 - [id = 867], n04467665 trailer truck, tractor trailer, trucking rig, rig, articulated lorry, semi
+0.0000 - [id = 468], n02930766 cab, hack, taxi, taxicab
+
+
+First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gold_fish.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 573], n03444034 go-kart
+0.0000 - [id = 518], n03127747 crash helmet
+0.0000 - [id = 817], n04285008 sports car, sport car
+0.0000 - [id = 751], n04037443 racer, race car, racing car
+0.0000 - [id = 621], n03649909 lawn mower, mower
+
+
+First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gondola.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 392], n02606052 rock beauty, Holocanthus tricolor
+0.0000 - [id = 393], n02607072 anemone fish
+0.0000 - [id = 27], n01631663 eft
+0.0000 - [id = 301], n02165456 ladybug, ladybeetle, lady beetle, ladybird, ladybird beetle
+
+
+First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/space_shuttle_224.jpg
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 576], n03447447 gondola
+0.0000 - [id = 914], n04612504 yawl
+0.0000 - [id = 724], n03947888 pirate, pirate ship
+0.0000 - [id = 765], n04099969 rocking chair, rocker
+0.0000 - [id = 536], n03216828 dock, dockage, docking facility
+
+
+First graph inferencing image: 3:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/school_bus.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 812], n04266014 space shuttle
+0.0000 - [id = 404], n02690373 airliner
+0.0000 - [id = 466], n02917067 bullet train, bullet
+0.0000 - [id = 833], n04347754 submarine, pigboat, sub, U-boat
+0.0000 - [id = 657], n03773504 missile
+
+
+First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/go_kart.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 779], n04146614 school bus
+0.0000 - [id = 675], n03796401 moving van
+0.0000 - [id = 705], n03895866 passenger car, coach, carriage
+0.0000 - [id = 867], n04467665 trailer truck, tractor trailer, trucking rig, rig, articulated lorry, semi
+0.0000 - [id = 468], n02930766 cab, hack, taxi, taxicab
+
+
+First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gold_fish.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 573], n03444034 go-kart
+0.0000 - [id = 518], n03127747 crash helmet
+0.0000 - [id = 817], n04285008 sports car, sport car
+0.0000 - [id = 751], n04037443 racer, race car, racing car
+0.0000 - [id = 621], n03649909 lawn mower, mower
+
+
+First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gondola.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 392], n02606052 rock beauty, Holocanthus tricolor
+0.0000 - [id = 393], n02607072 anemone fish
+0.0000 - [id = 27], n01631663 eft
+0.0000 - [id = 301], n02165456 ladybug, ladybeetle, lady beetle, ladybird, ladybird beetle
+
+
+First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/space_shuttle_224.jpg
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 576], n03447447 gondola
+0.0000 - [id = 914], n04612504 yawl
+0.0000 - [id = 724], n03947888 pirate, pirate ship
+0.0000 - [id = 765], n04099969 rocking chair, rocker
+0.0000 - [id = 536], n03216828 dock, dockage, docking facility
+
+
+First graph inferencing image: 3:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/school_bus.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 812], n04266014 space shuttle
+0.0000 - [id = 404], n02690373 airliner
+0.0000 - [id = 466], n02917067 bullet train, bullet
+0.0000 - [id = 833], n04347754 submarine, pigboat, sub, U-boat
+0.0000 - [id = 657], n03773504 missile
+
+
+First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/go_kart.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 779], n04146614 school bus
+0.0000 - [id = 675], n03796401 moving van
+0.0000 - [id = 705], n03895866 passenger car, coach, carriage
+0.0000 - [id = 867], n04467665 trailer truck, tractor trailer, trucking rig, rig, articulated lorry, semi
+0.0000 - [id = 468], n02930766 cab, hack, taxi, taxicab
+
+
+First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gold_fish.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 573], n03444034 go-kart
+0.0000 - [id = 518], n03127747 crash helmet
+0.0000 - [id = 817], n04285008 sports car, sport car
+0.0000 - [id = 751], n04037443 racer, race car, racing car
+0.0000 - [id = 621], n03649909 lawn mower, mower
+
+
+First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gondola.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 392], n02606052 rock beauty, Holocanthus tricolor
+0.0000 - [id = 393], n02607072 anemone fish
+0.0000 - [id = 27], n01631663 eft
+0.0000 - [id = 301], n02165456 ladybug, ladybeetle, lady beetle, ladybird, ladybird beetle
+
+
+First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/space_shuttle_224.jpg
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 576], n03447447 gondola
+0.0000 - [id = 914], n04612504 yawl
+0.0000 - [id = 724], n03947888 pirate, pirate ship
+0.0000 - [id = 765], n04099969 rocking chair, rocker
+0.0000 - [id = 536], n03216828 dock, dockage, docking facility
+
+
+First graph inferencing image: 3:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/school_bus.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 812], n04266014 space shuttle
+0.0000 - [id = 404], n02690373 airliner
+0.0000 - [id = 466], n02917067 bullet train, bullet
+0.0000 - [id = 833], n04347754 submarine, pigboat, sub, U-boat
+0.0000 - [id = 657], n03773504 missile
+
+
+First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/go_kart.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 779], n04146614 school bus
+0.0000 - [id = 675], n03796401 moving van
+0.0000 - [id = 705], n03895866 passenger car, coach, carriage
+0.0000 - [id = 867], n04467665 trailer truck, tractor trailer, trucking rig, rig, articulated lorry, semi
+0.0000 - [id = 468], n02930766 cab, hack, taxi, taxicab
+
+
+First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gold_fish.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 573], n03444034 go-kart
+0.0000 - [id = 518], n03127747 crash helmet
+0.0000 - [id = 817], n04285008 sports car, sport car
+0.0000 - [id = 751], n04037443 racer, race car, racing car
+0.0000 - [id = 621], n03649909 lawn mower, mower
+
+
+First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gondola.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 392], n02606052 rock beauty, Holocanthus tricolor
+0.0000 - [id = 393], n02607072 anemone fish
+0.0000 - [id = 27], n01631663 eft
+0.0000 - [id = 301], n02165456 ladybug, ladybeetle, lady beetle, ladybird, ladybird beetle
+
+
+First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/space_shuttle_224.jpg
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 576], n03447447 gondola
+0.0000 - [id = 914], n04612504 yawl
+0.0000 - [id = 724], n03947888 pirate, pirate ship
+0.0000 - [id = 765], n04099969 rocking chair, rocker
+0.0000 - [id = 536], n03216828 dock, dockage, docking facility
+
+
+First graph inferencing image: 3:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/school_bus.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 812], n04266014 space shuttle
+0.0000 - [id = 404], n02690373 airliner
+0.0000 - [id = 466], n02917067 bullet train, bullet
+0.0000 - [id = 833], n04347754 submarine, pigboat, sub, U-boat
+0.0000 - [id = 657], n03773504 missile
+
+
+First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/go_kart.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 779], n04146614 school bus
+0.0000 - [id = 675], n03796401 moving van
+0.0000 - [id = 705], n03895866 passenger car, coach, carriage
+0.0000 - [id = 867], n04467665 trailer truck, tractor trailer, trucking rig, rig, articulated lorry, semi
+0.0000 - [id = 468], n02930766 cab, hack, taxi, taxicab
+
+
+First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gold_fish.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 573], n03444034 go-kart
+0.0000 - [id = 518], n03127747 crash helmet
+0.0000 - [id = 817], n04285008 sports car, sport car
+0.0000 - [id = 751], n04037443 racer, race car, racing car
+0.0000 - [id = 621], n03649909 lawn mower, mower
+
+
+First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gondola.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 392], n02606052 rock beauty, Holocanthus tricolor
+0.0000 - [id = 393], n02607072 anemone fish
+0.0000 - [id = 27], n01631663 eft
+0.0000 - [id = 301], n02165456 ladybug, ladybeetle, lady beetle, ladybird, ladybird beetle
+
+
+First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/space_shuttle_224.jpg
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 576], n03447447 gondola
+0.0000 - [id = 914], n04612504 yawl
+0.0000 - [id = 724], n03947888 pirate, pirate ship
+0.0000 - [id = 765], n04099969 rocking chair, rocker
+0.0000 - [id = 536], n03216828 dock, dockage, docking facility
+
+
+First graph inferencing image: 3:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/school_bus.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 812], n04266014 space shuttle
+0.0000 - [id = 404], n02690373 airliner
+0.0000 - [id = 466], n02917067 bullet train, bullet
+0.0000 - [id = 833], n04347754 submarine, pigboat, sub, U-boat
+0.0000 - [id = 657], n03773504 missile
+
+
+First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/go_kart.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 779], n04146614 school bus
+0.0000 - [id = 675], n03796401 moving van
+0.0000 - [id = 705], n03895866 passenger car, coach, carriage
+0.0000 - [id = 867], n04467665 trailer truck, tractor trailer, trucking rig, rig, articulated lorry, semi
+0.0000 - [id = 468], n02930766 cab, hack, taxi, taxicab
+
+
+First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gold_fish.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 573], n03444034 go-kart
+0.0000 - [id = 518], n03127747 crash helmet
+0.0000 - [id = 817], n04285008 sports car, sport car
+0.0000 - [id = 751], n04037443 racer, race car, racing car
+0.0000 - [id = 621], n03649909 lawn mower, mower
+
+
+First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gondola.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 392], n02606052 rock beauty, Holocanthus tricolor
+0.0000 - [id = 393], n02607072 anemone fish
+0.0000 - [id = 27], n01631663 eft
+0.0000 - [id = 301], n02165456 ladybug, ladybeetle, lady beetle, ladybird, ladybird beetle
+
+
+First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/space_shuttle_224.jpg
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 576], n03447447 gondola
+0.0000 - [id = 914], n04612504 yawl
+0.0000 - [id = 724], n03947888 pirate, pirate ship
+0.0000 - [id = 765], n04099969 rocking chair, rocker
+0.0000 - [id = 536], n03216828 dock, dockage, docking facility
+
+
+First graph inferencing image: 3:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/school_bus.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 812], n04266014 space shuttle
+0.0000 - [id = 404], n02690373 airliner
+0.0000 - [id = 466], n02917067 bullet train, bullet
+0.0000 - [id = 833], n04347754 submarine, pigboat, sub, U-boat
+0.0000 - [id = 657], n03773504 missile
+
+
+First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/go_kart.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 779], n04146614 school bus
+0.0000 - [id = 675], n03796401 moving van
+0.0000 - [id = 705], n03895866 passenger car, coach, carriage
+0.0000 - [id = 867], n04467665 trailer truck, tractor trailer, trucking rig, rig, articulated lorry, semi
+0.0000 - [id = 468], n02930766 cab, hack, taxi, taxicab
+
+
+First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gold_fish.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 573], n03444034 go-kart
+0.0000 - [id = 518], n03127747 crash helmet
+0.0000 - [id = 817], n04285008 sports car, sport car
+0.0000 - [id = 751], n04037443 racer, race car, racing car
+0.0000 - [id = 621], n03649909 lawn mower, mower
+
+
+First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gondola.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 392], n02606052 rock beauty, Holocanthus tricolor
+0.0000 - [id = 393], n02607072 anemone fish
+0.0000 - [id = 27], n01631663 eft
+0.0000 - [id = 301], n02165456 ladybug, ladybeetle, lady beetle, ladybird, ladybird beetle
+
+
+First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/space_shuttle_224.jpg
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 576], n03447447 gondola
+0.0000 - [id = 914], n04612504 yawl
+0.0000 - [id = 724], n03947888 pirate, pirate ship
+0.0000 - [id = 765], n04099969 rocking chair, rocker
+0.0000 - [id = 536], n03216828 dock, dockage, docking facility
+
+
+First graph inferencing image: 3:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/school_bus.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 812], n04266014 space shuttle
+0.0000 - [id = 404], n02690373 airliner
+0.0000 - [id = 466], n02917067 bullet train, bullet
+0.0000 - [id = 833], n04347754 submarine, pigboat, sub, U-boat
+0.0000 - [id = 657], n03773504 missile
+
+
+First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/go_kart.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 779], n04146614 school bus
+0.0000 - [id = 675], n03796401 moving van
+0.0000 - [id = 705], n03895866 passenger car, coach, carriage
+0.0000 - [id = 867], n04467665 trailer truck, tractor trailer, trucking rig, rig, articulated lorry, semi
+0.0000 - [id = 468], n02930766 cab, hack, taxi, taxicab
+
+
+First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gold_fish.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 573], n03444034 go-kart
+0.0000 - [id = 518], n03127747 crash helmet
+0.0000 - [id = 817], n04285008 sports car, sport car
+0.0000 - [id = 751], n04037443 racer, race car, racing car
+0.0000 - [id = 621], n03649909 lawn mower, mower
+
+
+First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gondola.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 392], n02606052 rock beauty, Holocanthus tricolor
+0.0000 - [id = 393], n02607072 anemone fish
+0.0000 - [id = 27], n01631663 eft
+0.0000 - [id = 301], n02165456 ladybug, ladybeetle, lady beetle, ladybird, ladybird beetle
+
+
+First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/space_shuttle_224.jpg
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 576], n03447447 gondola
+0.0000 - [id = 914], n04612504 yawl
+0.0000 - [id = 724], n03947888 pirate, pirate ship
+0.0000 - [id = 765], n04099969 rocking chair, rocker
+0.0000 - [id = 536], n03216828 dock, dockage, docking facility
+
+
+First graph inferencing image: 3:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/school_bus.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 812], n04266014 space shuttle
+0.0000 - [id = 404], n02690373 airliner
+0.0000 - [id = 466], n02917067 bullet train, bullet
+0.0000 - [id = 833], n04347754 submarine, pigboat, sub, U-boat
+0.0000 - [id = 657], n03773504 missile
+
+
+First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/go_kart.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 779], n04146614 school bus
+0.0000 - [id = 675], n03796401 moving van
+0.0000 - [id = 705], n03895866 passenger car, coach, carriage
+0.0000 - [id = 867], n04467665 trailer truck, tractor trailer, trucking rig, rig, articulated lorry, semi
+0.0000 - [id = 468], n02930766 cab, hack, taxi, taxicab
+start of graph: 0 for frame: 50
+
+
+First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gold_fish.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 573], n03444034 go-kart
+0.0000 - [id = 518], n03127747 crash helmet
+0.0000 - [id = 817], n04285008 sports car, sport car
+0.0000 - [id = 751], n04037443 racer, race car, racing car
+0.0000 - [id = 621], n03649909 lawn mower, mower
+
+
+First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gondola.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 392], n02606052 rock beauty, Holocanthus tricolor
+0.0000 - [id = 393], n02607072 anemone fish
+0.0000 - [id = 27], n01631663 eft
+0.0000 - [id = 301], n02165456 ladybug, ladybeetle, lady beetle, ladybird, ladybird beetle
+
+
+First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/space_shuttle_224.jpg
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 576], n03447447 gondola
+0.0000 - [id = 914], n04612504 yawl
+0.0000 - [id = 724], n03947888 pirate, pirate ship
+0.0000 - [id = 765], n04099969 rocking chair, rocker
+0.0000 - [id = 536], n03216828 dock, dockage, docking facility
+
+
+First graph inferencing image: 3:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/school_bus.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 812], n04266014 space shuttle
+0.0000 - [id = 404], n02690373 airliner
+0.0000 - [id = 466], n02917067 bullet train, bullet
+0.0000 - [id = 833], n04347754 submarine, pigboat, sub, U-boat
+0.0000 - [id = 657], n03773504 missile
+
+
+First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/go_kart.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 779], n04146614 school bus
+0.0000 - [id = 675], n03796401 moving van
+0.0000 - [id = 705], n03895866 passenger car, coach, carriage
+0.0000 - [id = 867], n04467665 trailer truck, tractor trailer, trucking rig, rig, articulated lorry, semi
+0.0000 - [id = 468], n02930766 cab, hack, taxi, taxicab
+
+
+First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gold_fish.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 573], n03444034 go-kart
+0.0000 - [id = 518], n03127747 crash helmet
+0.0000 - [id = 817], n04285008 sports car, sport car
+0.0000 - [id = 751], n04037443 racer, race car, racing car
+0.0000 - [id = 621], n03649909 lawn mower, mower
+
+
+First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gondola.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 392], n02606052 rock beauty, Holocanthus tricolor
+0.0000 - [id = 393], n02607072 anemone fish
+0.0000 - [id = 27], n01631663 eft
+0.0000 - [id = 301], n02165456 ladybug, ladybeetle, lady beetle, ladybird, ladybird beetle
+
+
+First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/space_shuttle_224.jpg
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 576], n03447447 gondola
+0.0000 - [id = 914], n04612504 yawl
+0.0000 - [id = 724], n03947888 pirate, pirate ship
+0.0000 - [id = 765], n04099969 rocking chair, rocker
+0.0000 - [id = 536], n03216828 dock, dockage, docking facility
+
+
+First graph inferencing image: 3:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/school_bus.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 812], n04266014 space shuttle
+0.0000 - [id = 404], n02690373 airliner
+0.0000 - [id = 466], n02917067 bullet train, bullet
+0.0000 - [id = 833], n04347754 submarine, pigboat, sub, U-boat
+0.0000 - [id = 657], n03773504 missile
+
+
+First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/go_kart.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 779], n04146614 school bus
+0.0000 - [id = 675], n03796401 moving van
+0.0000 - [id = 705], n03895866 passenger car, coach, carriage
+0.0000 - [id = 867], n04467665 trailer truck, tractor trailer, trucking rig, rig, articulated lorry, semi
+0.0000 - [id = 468], n02930766 cab, hack, taxi, taxicab
+
+
+First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gold_fish.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 573], n03444034 go-kart
+0.0000 - [id = 518], n03127747 crash helmet
+0.0000 - [id = 817], n04285008 sports car, sport car
+0.0000 - [id = 751], n04037443 racer, race car, racing car
+0.0000 - [id = 621], n03649909 lawn mower, mower
+
+
+First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gondola.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 392], n02606052 rock beauty, Holocanthus tricolor
+0.0000 - [id = 393], n02607072 anemone fish
+0.0000 - [id = 27], n01631663 eft
+0.0000 - [id = 301], n02165456 ladybug, ladybeetle, lady beetle, ladybird, ladybird beetle
+
+
+First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/space_shuttle_224.jpg
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 576], n03447447 gondola
+0.0000 - [id = 914], n04612504 yawl
+0.0000 - [id = 724], n03947888 pirate, pirate ship
+0.0000 - [id = 765], n04099969 rocking chair, rocker
+0.0000 - [id = 536], n03216828 dock, dockage, docking facility
+
+
+First graph inferencing image: 3:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/school_bus.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 812], n04266014 space shuttle
+0.0000 - [id = 404], n02690373 airliner
+0.0000 - [id = 466], n02917067 bullet train, bullet
+0.0000 - [id = 833], n04347754 submarine, pigboat, sub, U-boat
+0.0000 - [id = 657], n03773504 missile
+
+
+First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/go_kart.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 779], n04146614 school bus
+0.0000 - [id = 675], n03796401 moving van
+0.0000 - [id = 705], n03895866 passenger car, coach, carriage
+0.0000 - [id = 867], n04467665 trailer truck, tractor trailer, trucking rig, rig, articulated lorry, semi
+0.0000 - [id = 468], n02930766 cab, hack, taxi, taxicab
+
+
+First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gold_fish.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 573], n03444034 go-kart
+0.0000 - [id = 518], n03127747 crash helmet
+0.0000 - [id = 817], n04285008 sports car, sport car
+0.0000 - [id = 751], n04037443 racer, race car, racing car
+0.0000 - [id = 621], n03649909 lawn mower, mower
+
+
+First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gondola.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 392], n02606052 rock beauty, Holocanthus tricolor
+0.0000 - [id = 393], n02607072 anemone fish
+0.0000 - [id = 27], n01631663 eft
+0.0000 - [id = 301], n02165456 ladybug, ladybeetle, lady beetle, ladybird, ladybird beetle
+
+
+First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/space_shuttle_224.jpg
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 576], n03447447 gondola
+0.0000 - [id = 914], n04612504 yawl
+0.0000 - [id = 724], n03947888 pirate, pirate ship
+0.0000 - [id = 765], n04099969 rocking chair, rocker
+0.0000 - [id = 536], n03216828 dock, dockage, docking facility
+
+
+First graph inferencing image: 3:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/school_bus.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 812], n04266014 space shuttle
+0.0000 - [id = 404], n02690373 airliner
+0.0000 - [id = 466], n02917067 bullet train, bullet
+0.0000 - [id = 833], n04347754 submarine, pigboat, sub, U-boat
+0.0000 - [id = 657], n03773504 missile
+
+
+First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/go_kart.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 779], n04146614 school bus
+0.0000 - [id = 675], n03796401 moving van
+0.0000 - [id = 705], n03895866 passenger car, coach, carriage
+0.0000 - [id = 867], n04467665 trailer truck, tractor trailer, trucking rig, rig, articulated lorry, semi
+0.0000 - [id = 468], n02930766 cab, hack, taxi, taxicab
+
+
+First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gold_fish.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 573], n03444034 go-kart
+0.0000 - [id = 518], n03127747 crash helmet
+0.0000 - [id = 817], n04285008 sports car, sport car
+0.0000 - [id = 751], n04037443 racer, race car, racing car
+0.0000 - [id = 621], n03649909 lawn mower, mower
+
+
+First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gondola.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 392], n02606052 rock beauty, Holocanthus tricolor
+0.0000 - [id = 393], n02607072 anemone fish
+0.0000 - [id = 27], n01631663 eft
+0.0000 - [id = 301], n02165456 ladybug, ladybeetle, lady beetle, ladybird, ladybird beetle
+
+
+First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/space_shuttle_224.jpg
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 576], n03447447 gondola
+0.0000 - [id = 914], n04612504 yawl
+0.0000 - [id = 724], n03947888 pirate, pirate ship
+0.0000 - [id = 765], n04099969 rocking chair, rocker
+0.0000 - [id = 536], n03216828 dock, dockage, docking facility
+
+
+First graph inferencing image: 3:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/school_bus.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 812], n04266014 space shuttle
+0.0000 - [id = 404], n02690373 airliner
+0.0000 - [id = 466], n02917067 bullet train, bullet
+0.0000 - [id = 833], n04347754 submarine, pigboat, sub, U-boat
+0.0000 - [id = 657], n03773504 missile
+
+
+First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/go_kart.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 779], n04146614 school bus
+0.0000 - [id = 675], n03796401 moving van
+0.0000 - [id = 705], n03895866 passenger car, coach, carriage
+0.0000 - [id = 867], n04467665 trailer truck, tractor trailer, trucking rig, rig, articulated lorry, semi
+0.0000 - [id = 468], n02930766 cab, hack, taxi, taxicab
+
+
+First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gold_fish.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 573], n03444034 go-kart
+0.0000 - [id = 518], n03127747 crash helmet
+0.0000 - [id = 817], n04285008 sports car, sport car
+0.0000 - [id = 751], n04037443 racer, race car, racing car
+0.0000 - [id = 621], n03649909 lawn mower, mower
+
+
+First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gondola.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 392], n02606052 rock beauty, Holocanthus tricolor
+0.0000 - [id = 393], n02607072 anemone fish
+0.0000 - [id = 27], n01631663 eft
+0.0000 - [id = 301], n02165456 ladybug, ladybeetle, lady beetle, ladybird, ladybird beetle
+
+
+First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/space_shuttle_224.jpg
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 576], n03447447 gondola
+0.0000 - [id = 914], n04612504 yawl
+0.0000 - [id = 724], n03947888 pirate, pirate ship
+0.0000 - [id = 765], n04099969 rocking chair, rocker
+0.0000 - [id = 536], n03216828 dock, dockage, docking facility
+
+
+First graph inferencing image: 3:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/school_bus.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 812], n04266014 space shuttle
+0.0000 - [id = 404], n02690373 airliner
+0.0000 - [id = 466], n02917067 bullet train, bullet
+0.0000 - [id = 833], n04347754 submarine, pigboat, sub, U-boat
+0.0000 - [id = 657], n03773504 missile
+
+
+First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/go_kart.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 779], n04146614 school bus
+0.0000 - [id = 675], n03796401 moving van
+0.0000 - [id = 705], n03895866 passenger car, coach, carriage
+0.0000 - [id = 867], n04467665 trailer truck, tractor trailer, trucking rig, rig, articulated lorry, semi
+0.0000 - [id = 468], n02930766 cab, hack, taxi, taxicab
+
+
+First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gold_fish.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 573], n03444034 go-kart
+0.0000 - [id = 518], n03127747 crash helmet
+0.0000 - [id = 817], n04285008 sports car, sport car
+0.0000 - [id = 751], n04037443 racer, race car, racing car
+0.0000 - [id = 621], n03649909 lawn mower, mower
+
+
+First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gondola.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 392], n02606052 rock beauty, Holocanthus tricolor
+0.0000 - [id = 393], n02607072 anemone fish
+0.0000 - [id = 27], n01631663 eft
+0.0000 - [id = 301], n02165456 ladybug, ladybeetle, lady beetle, ladybird, ladybird beetle
+
+
+First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/space_shuttle_224.jpg
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 576], n03447447 gondola
+0.0000 - [id = 914], n04612504 yawl
+0.0000 - [id = 724], n03947888 pirate, pirate ship
+0.0000 - [id = 765], n04099969 rocking chair, rocker
+0.0000 - [id = 536], n03216828 dock, dockage, docking facility
+
+
+First graph inferencing image: 3:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/school_bus.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 812], n04266014 space shuttle
+0.0000 - [id = 404], n02690373 airliner
+0.0000 - [id = 466], n02917067 bullet train, bullet
+0.0000 - [id = 833], n04347754 submarine, pigboat, sub, U-boat
+0.0000 - [id = 657], n03773504 missile
+
+
+First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/go_kart.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 779], n04146614 school bus
+0.0000 - [id = 675], n03796401 moving van
+0.0000 - [id = 705], n03895866 passenger car, coach, carriage
+0.0000 - [id = 867], n04467665 trailer truck, tractor trailer, trucking rig, rig, articulated lorry, semi
+0.0000 - [id = 468], n02930766 cab, hack, taxi, taxicab
+
+
+First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gold_fish.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 573], n03444034 go-kart
+0.0000 - [id = 518], n03127747 crash helmet
+0.0000 - [id = 817], n04285008 sports car, sport car
+0.0000 - [id = 751], n04037443 racer, race car, racing car
+0.0000 - [id = 621], n03649909 lawn mower, mower
+
+
+First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gondola.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 392], n02606052 rock beauty, Holocanthus tricolor
+0.0000 - [id = 393], n02607072 anemone fish
+0.0000 - [id = 27], n01631663 eft
+0.0000 - [id = 301], n02165456 ladybug, ladybeetle, lady beetle, ladybird, ladybird beetle
+
+
+First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/space_shuttle_224.jpg
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 576], n03447447 gondola
+0.0000 - [id = 914], n04612504 yawl
+0.0000 - [id = 724], n03947888 pirate, pirate ship
+0.0000 - [id = 765], n04099969 rocking chair, rocker
+0.0000 - [id = 536], n03216828 dock, dockage, docking facility
+
+
+First graph inferencing image: 3:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/school_bus.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 812], n04266014 space shuttle
+0.0000 - [id = 404], n02690373 airliner
+0.0000 - [id = 466], n02917067 bullet train, bullet
+0.0000 - [id = 833], n04347754 submarine, pigboat, sub, U-boat
+0.0000 - [id = 657], n03773504 missile
+
+
+First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/go_kart.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 779], n04146614 school bus
+0.0000 - [id = 675], n03796401 moving van
+0.0000 - [id = 705], n03895866 passenger car, coach, carriage
+0.0000 - [id = 867], n04467665 trailer truck, tractor trailer, trucking rig, rig, articulated lorry, semi
+0.0000 - [id = 468], n02930766 cab, hack, taxi, taxicab
+
+
+First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gold_fish.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 573], n03444034 go-kart
+0.0000 - [id = 518], n03127747 crash helmet
+0.0000 - [id = 817], n04285008 sports car, sport car
+0.0000 - [id = 751], n04037443 racer, race car, racing car
+0.0000 - [id = 621], n03649909 lawn mower, mower
+
+
+First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gondola.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 392], n02606052 rock beauty, Holocanthus tricolor
+0.0000 - [id = 393], n02607072 anemone fish
+0.0000 - [id = 27], n01631663 eft
+0.0000 - [id = 301], n02165456 ladybug, ladybeetle, lady beetle, ladybird, ladybird beetle
+
+
+First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/space_shuttle_224.jpg
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 576], n03447447 gondola
+0.0000 - [id = 914], n04612504 yawl
+0.0000 - [id = 724], n03947888 pirate, pirate ship
+0.0000 - [id = 765], n04099969 rocking chair, rocker
+0.0000 - [id = 536], n03216828 dock, dockage, docking facility
+
+
+First graph inferencing image: 3:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/school_bus.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 812], n04266014 space shuttle
+0.0000 - [id = 404], n02690373 airliner
+0.0000 - [id = 466], n02917067 bullet train, bullet
+0.0000 - [id = 833], n04347754 submarine, pigboat, sub, U-boat
+0.0000 - [id = 657], n03773504 missile
+
+
+First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/go_kart.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 779], n04146614 school bus
+0.0000 - [id = 675], n03796401 moving van
+0.0000 - [id = 705], n03895866 passenger car, coach, carriage
+0.0000 - [id = 867], n04467665 trailer truck, tractor trailer, trucking rig, rig, articulated lorry, semi
+0.0000 - [id = 468], n02930766 cab, hack, taxi, taxicab
+
+
+First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gold_fish.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 573], n03444034 go-kart
+0.0000 - [id = 518], n03127747 crash helmet
+0.0000 - [id = 817], n04285008 sports car, sport car
+0.0000 - [id = 751], n04037443 racer, race car, racing car
+0.0000 - [id = 621], n03649909 lawn mower, mower
+
+
+First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gondola.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 392], n02606052 rock beauty, Holocanthus tricolor
+0.0000 - [id = 393], n02607072 anemone fish
+0.0000 - [id = 27], n01631663 eft
+0.0000 - [id = 301], n02165456 ladybug, ladybeetle, lady beetle, ladybird, ladybird beetle
+
+
+First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/space_shuttle_224.jpg
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 576], n03447447 gondola
+0.0000 - [id = 914], n04612504 yawl
+0.0000 - [id = 724], n03947888 pirate, pirate ship
+0.0000 - [id = 765], n04099969 rocking chair, rocker
+0.0000 - [id = 536], n03216828 dock, dockage, docking facility
+
+
+First graph inferencing image: 3:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/school_bus.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 812], n04266014 space shuttle
+0.0000 - [id = 404], n02690373 airliner
+0.0000 - [id = 466], n02917067 bullet train, bullet
+0.0000 - [id = 833], n04347754 submarine, pigboat, sub, U-boat
+0.0000 - [id = 657], n03773504 missile
+
+
+First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/go_kart.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 779], n04146614 school bus
+0.0000 - [id = 675], n03796401 moving van
+0.0000 - [id = 705], n03895866 passenger car, coach, carriage
+0.0000 - [id = 867], n04467665 trailer truck, tractor trailer, trucking rig, rig, articulated lorry, semi
+0.0000 - [id = 468], n02930766 cab, hack, taxi, taxicab
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 573], n03444034 go-kart
+0.0000 - [id = 518], n03127747 crash helmet
+0.0000 - [id = 817], n04285008 sports car, sport car
+0.0000 - [id = 751], n04037443 racer, race car, racing car
+0.0000 - [id = 621], n03649909 lawn mower, mower
+Finishing power measurement with first subgraph10
+0	Layer Name: conv1/7x7_s2 	 Layer time: 54.8986 	 number of inputs: 3 	 input shape: 3x224x224 	 output shape: 64x112x112
+1	Layer Name: pool1/3x3_s2 	 Layer time: 3.4430 	 number of inputs: 1 	 input shape: 64x112x112 	 output shape: 64x56x56
+2	Layer Name: pool1/norm1 	 Layer time: 20.3433 	 number of inputs: 1 	 input shape: 64x56x56 	 output shape: 64x56x56
+Layer Number: 0 	 time: 78.6849
+----------------------------
+
+ Sum of Layers time: 78.6849
+
+ input time of layer 0 : 105.3017
+
+ transfer_time of layer 0 : 0.0000
+
+ output time of layer 0 : 0.0446
+
+ this part task time: 79.2290
+
+
+Cost0:650.073
+input0_time:105.302
+task0_time:79.229
+output0_time:0.0445958
+total0_time:184.575
+***************************************
+
+0	Layer Name: conv2/3x3_reduce 	 Layer time: 6.1037 	 number of inputs: 3 	 input shape: 64x56x56 	 output shape: 64x56x56
+1	Layer Name: conv2/3x3 	 Layer time: 53.3664 	 number of inputs: 3 	 input shape: 64x56x56 	 output shape: 192x56x56
+2	Layer Name: pool2/3x3_s2 	 Layer time: 3.2416 	 number of inputs: 1 	 input shape: 192x56x56 	 output shape: 192x28x28
+Layer Number: 1 	 time: 62.7117
+----------------------------
+
+ Sum of Layers time: 62.7117
+
+ input time of layer 1 : 1.1189
+
+ transfer_time of layer 1 : 1.1635
+
+ output time of layer 1 : 0.0424
+
+ this part task time: 63.4061
+
+
+Cost1:650.686
+input1_time:1.11894
+task1_time:63.4061
+output1_time:0.0423529
+total1_time:64.5674
+***************************************
+
+0	Layer Name: inception_3a/5x5_reduce 	 Layer time: 1.4351 	 number of inputs: 3 	 input shape: 192x28x28 	 output shape: 16x28x28
+1	Layer Name: inception_3a/5x5 	 Layer time: 7.7153 	 number of inputs: 3 	 input shape: 16x28x28 	 output shape: 32x28x28
+2	Layer Name: inception_3a/3x3_reduce 	 Layer time: 9.2725 	 number of inputs: 3 	 input shape: 192x28x28 	 output shape: 96x28x28
+3	Layer Name: inception_3a/3x3 	 Layer time: 19.9216 	 number of inputs: 3 	 input shape: 96x28x28 	 output shape: 128x28x28
+4	Layer Name: inception_3a/1x1 	 Layer time: 6.1723 	 number of inputs: 3 	 input shape: 192x28x28 	 output shape: 64x28x28
+5	Layer Name: inception_3a/pool 	 Layer time: 1.9361 	 number of inputs: 1 	 input shape: 192x28x28 	 output shape: 192x28x28
+6	Layer Name: inception_3a/pool_proj 	 Layer time: 3.1609 	 number of inputs: 3 	 input shape: 192x28x28 	 output shape: 32x28x28
+7	Layer Name: inception_3a/concat 	 Layer time: 1.9557 	 number of inputs: 4 	 input shape: 64x28x28 	 output shape: 256x28x28
+Layer Number: 2 	 time: 51.5696
+----------------------------
+
+ Sum of Layers time: 51.5696
+
+ input time of layer 2 : 0.8700
+
+ transfer_time of layer 2 : 0.9124
+
+ output time of layer 2 : 0.0436
+
+ this part task time: 52.1840
+
+
+Cost2:651.056
+input2_time:0.870029
+task2_time:52.184
+output2_time:0.0435721
+total2_time:53.0976
+***************************************
+
+0	Layer Name: inception_3b/5x5_reduce 	 Layer time: 3.0232 	 number of inputs: 3 	 input shape: 256x28x28 	 output shape: 32x28x28
+1	Layer Name: inception_3b/5x5 	 Layer time: 18.8988 	 number of inputs: 3 	 input shape: 32x28x28 	 output shape: 96x28x28
+2	Layer Name: inception_3b/3x3_reduce 	 Layer time: 8.8162 	 number of inputs: 3 	 input shape: 256x28x28 	 output shape: 128x28x28
+3	Layer Name: inception_3b/3x3 	 Layer time: 20.5414 	 number of inputs: 3 	 input shape: 128x28x28 	 output shape: 192x28x28
+4	Layer Name: inception_3b/1x1 	 Layer time: 7.3549 	 number of inputs: 3 	 input shape: 256x28x28 	 output shape: 128x28x28
+5	Layer Name: inception_3b/pool 	 Layer time: 2.0062 	 number of inputs: 1 	 input shape: 256x28x28 	 output shape: 256x28x28
+6	Layer Name: inception_3b/pool_proj 	 Layer time: 4.6892 	 number of inputs: 3 	 input shape: 256x28x28 	 output shape: 64x28x28
+7	Layer Name: inception_3b/concat 	 Layer time: 2.2838 	 number of inputs: 4 	 input shape: 128x28x28 	 output shape: 480x28x28
+8	Layer Name: pool3/3x3_s2 	 Layer time: 2.1319 	 number of inputs: 1 	 input shape: 480x28x28 	 output shape: 480x14x14
+Layer Number: 3 	 time: 69.7458
+----------------------------
+
+ Sum of Layers time: 69.7458
+
+ input time of layer 3 : 1.0418
+
+ transfer_time of layer 3 : 1.0853
+
+ output time of layer 3 : 0.0444
+
+ this part task time: 70.5029
+
+
+Cost3:651.804
+input3_time:1.04178
+task3_time:70.5029
+output3_time:0.0444412
+total3_time:71.5891
+***************************************
+
+0	Layer Name: inception_4a/5x5_reduce 	 Layer time: 1.0212 	 number of inputs: 3 	 input shape: 480x14x14 	 output shape: 16x14x14
+1	Layer Name: inception_4a/5x5 	 Layer time: 3.1420 	 number of inputs: 3 	 input shape: 16x14x14 	 output shape: 48x14x14
+2	Layer Name: inception_4a/3x3_reduce 	 Layer time: 8.1298 	 number of inputs: 3 	 input shape: 480x14x14 	 output shape: 96x14x14
+3	Layer Name: inception_4a/3x3 	 Layer time: 13.2395 	 number of inputs: 3 	 input shape: 96x14x14 	 output shape: 208x14x14
+4	Layer Name: inception_4a/1x1 	 Layer time: 16.2748 	 number of inputs: 3 	 input shape: 480x14x14 	 output shape: 192x14x14
+5	Layer Name: inception_4a/pool 	 Layer time: 1.2147 	 number of inputs: 1 	 input shape: 480x14x14 	 output shape: 480x14x14
+6	Layer Name: inception_4a/pool_proj 	 Layer time: 4.1687 	 number of inputs: 3 	 input shape: 480x14x14 	 output shape: 64x14x14
+7	Layer Name: inception_4a/concat 	 Layer time: 0.9673 	 number of inputs: 4 	 input shape: 192x14x14 	 output shape: 512x14x14
+Layer Number: 4 	 time: 48.1578
+----------------------------
+
+ Sum of Layers time: 48.1578
+
+ input time of layer 4 : 0.6834
+
+ transfer_time of layer 4 : 0.7279
+
+ output time of layer 4 : 0.0431
+
+ this part task time: 48.7462
+
+
+Cost4:652.27
+input4_time:0.683426
+task4_time:48.7462
+output4_time:0.0430938
+total4_time:49.4727
+***************************************
+
+0	Layer Name: inception_4b/5x5_reduce 	 Layer time: 1.3060 	 number of inputs: 3 	 input shape: 512x14x14 	 output shape: 24x14x14
+1	Layer Name: inception_4b/5x5 	 Layer time: 3.4075 	 number of inputs: 3 	 input shape: 24x14x14 	 output shape: 64x14x14
+2	Layer Name: inception_4b/3x3_reduce 	 Layer time: 4.3795 	 number of inputs: 3 	 input shape: 512x14x14 	 output shape: 112x14x14
+3	Layer Name: inception_4b/3x3 	 Layer time: 14.5229 	 number of inputs: 3 	 input shape: 112x14x14 	 output shape: 224x14x14
+4	Layer Name: inception_4b/1x1 	 Layer time: 5.6035 	 number of inputs: 3 	 input shape: 512x14x14 	 output shape: 160x14x14
+5	Layer Name: inception_4b/pool 	 Layer time: 1.5981 	 number of inputs: 1 	 input shape: 512x14x14 	 output shape: 512x14x14
+6	Layer Name: inception_4b/pool_proj 	 Layer time: 2.5463 	 number of inputs: 3 	 input shape: 512x14x14 	 output shape: 64x14x14
+7	Layer Name: inception_4b/concat 	 Layer time: 1.4413 	 number of inputs: 4 	 input shape: 160x14x14 	 output shape: 512x14x14
+Layer Number: 5 	 time: 34.8051
+----------------------------
+
+ Sum of Layers time: 34.8051
+
+ input time of layer 5 : 0.6133
+
+ transfer_time of layer 5 : 0.6564
+
+ output time of layer 5 : 0.0409
+
+ this part task time: 35.5441
+
+
+Cost5:652.585
+input5_time:0.613281
+task5_time:35.5441
+output5_time:0.0408916
+total5_time:36.1982
+***************************************
+
+0	Layer Name: inception_4c/5x5_reduce 	 Layer time: 1.7922 	 number of inputs: 3 	 input shape: 512x14x14 	 output shape: 24x14x14
+1	Layer Name: inception_4c/5x5 	 Layer time: 4.6518 	 number of inputs: 3 	 input shape: 24x14x14 	 output shape: 64x14x14
+2	Layer Name: inception_4c/3x3_reduce 	 Layer time: 9.3374 	 number of inputs: 3 	 input shape: 512x14x14 	 output shape: 128x14x14
+3	Layer Name: inception_4c/3x3 	 Layer time: 14.4406 	 number of inputs: 3 	 input shape: 128x14x14 	 output shape: 256x14x14
+4	Layer Name: inception_4c/1x1 	 Layer time: 8.0090 	 number of inputs: 3 	 input shape: 512x14x14 	 output shape: 128x14x14
+5	Layer Name: inception_4c/pool 	 Layer time: 1.3187 	 number of inputs: 1 	 input shape: 512x14x14 	 output shape: 512x14x14
+6	Layer Name: inception_4c/pool_proj 	 Layer time: 3.9831 	 number of inputs: 3 	 input shape: 512x14x14 	 output shape: 64x14x14
+7	Layer Name: inception_4c/concat 	 Layer time: 1.3005 	 number of inputs: 4 	 input shape: 128x14x14 	 output shape: 512x14x14
+Layer Number: 6 	 time: 44.8333
+----------------------------
+
+ Sum of Layers time: 44.8333
+
+ input time of layer 6 : 0.7076
+
+ transfer_time of layer 6 : 0.7485
+
+ output time of layer 6 : 0.0419
+
+ this part task time: 45.4568
+
+
+Cost6:652.94
+input6_time:0.707648
+task6_time:45.4568
+output6_time:0.0418513
+total6_time:46.2063
+***************************************
+
+0	Layer Name: inception_4d/5x5_reduce 	 Layer time: 1.6117 	 number of inputs: 3 	 input shape: 512x14x14 	 output shape: 32x14x14
+1	Layer Name: inception_4d/5x5 	 Layer time: 3.9048 	 number of inputs: 3 	 input shape: 32x14x14 	 output shape: 64x14x14
+2	Layer Name: inception_4d/3x3_reduce 	 Layer time: 4.5210 	 number of inputs: 3 	 input shape: 512x14x14 	 output shape: 144x14x14
+3	Layer Name: inception_4d/3x3 	 Layer time: 21.2996 	 number of inputs: 3 	 input shape: 144x14x14 	 output shape: 288x14x14
+4	Layer Name: inception_4d/1x1 	 Layer time: 3.8659 	 number of inputs: 3 	 input shape: 512x14x14 	 output shape: 112x14x14
+5	Layer Name: inception_4d/pool 	 Layer time: 1.3345 	 number of inputs: 1 	 input shape: 512x14x14 	 output shape: 512x14x14
+6	Layer Name: inception_4d/pool_proj 	 Layer time: 2.4809 	 number of inputs: 3 	 input shape: 512x14x14 	 output shape: 64x14x14
+7	Layer Name: inception_4d/concat 	 Layer time: 1.4961 	 number of inputs: 4 	 input shape: 112x14x14 	 output shape: 528x14x14
+Layer Number: 7 	 time: 40.5146
+----------------------------
+
+ Sum of Layers time: 40.5146
+
+ input time of layer 7 : 0.6097
+
+ transfer_time of layer 7 : 0.6515
+
+ output time of layer 7 : 0.0397
+
+ this part task time: 41.2469
+
+
+Cost7:653.307
+input7_time:0.609689
+task7_time:41.2469
+output7_time:0.03969
+total7_time:41.8962
+***************************************
+
+0	Layer Name: inception_4e/5x5_reduce 	 Layer time: 1.9475 	 number of inputs: 3 	 input shape: 528x14x14 	 output shape: 32x14x14
+1	Layer Name: inception_4e/5x5 	 Layer time: 14.0163 	 number of inputs: 3 	 input shape: 32x14x14 	 output shape: 128x14x14
+2	Layer Name: inception_4e/3x3_reduce 	 Layer time: 10.6357 	 number of inputs: 3 	 input shape: 528x14x14 	 output shape: 160x14x14
+3	Layer Name: inception_4e/3x3 	 Layer time: 25.1802 	 number of inputs: 3 	 input shape: 160x14x14 	 output shape: 320x14x14
+4	Layer Name: inception_4e/1x1 	 Layer time: 13.3917 	 number of inputs: 3 	 input shape: 528x14x14 	 output shape: 256x14x14
+5	Layer Name: inception_4e/pool 	 Layer time: 1.0855 	 number of inputs: 1 	 input shape: 528x14x14 	 output shape: 528x14x14
+6	Layer Name: inception_4e/pool_proj 	 Layer time: 6.1277 	 number of inputs: 3 	 input shape: 528x14x14 	 output shape: 128x14x14
+7	Layer Name: inception_4e/concat 	 Layer time: 1.5189 	 number of inputs: 4 	 input shape: 256x14x14 	 output shape: 832x14x14
+8	Layer Name: pool4/3x3_s2 	 Layer time: 0.8887 	 number of inputs: 1 	 input shape: 832x14x14 	 output shape: 832x7x7
+Layer Number: 8 	 time: 74.7922
+----------------------------
+
+ Sum of Layers time: 74.7922
+
+ input time of layer 8 : 0.6737
+
+ transfer_time of layer 8 : 0.7133
+
+ output time of layer 8 : 0.0424
+
+ this part task time: 75.4277
+
+
+Cost8:653.91
+input8_time:0.673652
+task8_time:75.4277
+output8_time:0.0423733
+total8_time:76.1437
+***************************************
+
+0	Layer Name: inception_5a/5x5_reduce 	 Layer time: 0.9236 	 number of inputs: 3 	 input shape: 832x7x7 	 output shape: 32x7x7
+1	Layer Name: inception_5a/5x5 	 Layer time: 2.5857 	 number of inputs: 3 	 input shape: 32x7x7 	 output shape: 128x7x7
+2	Layer Name: inception_5a/3x3_reduce 	 Layer time: 3.3705 	 number of inputs: 3 	 input shape: 832x7x7 	 output shape: 160x7x7
+3	Layer Name: inception_5a/3x3 	 Layer time: 8.1136 	 number of inputs: 3 	 input shape: 160x7x7 	 output shape: 320x7x7
+4	Layer Name: inception_5a/1x1 	 Layer time: 5.0279 	 number of inputs: 3 	 input shape: 832x7x7 	 output shape: 256x7x7
+5	Layer Name: inception_5a/pool 	 Layer time: 0.6584 	 number of inputs: 1 	 input shape: 832x7x7 	 output shape: 832x7x7
+6	Layer Name: inception_5a/pool_proj 	 Layer time: 2.8207 	 number of inputs: 3 	 input shape: 832x7x7 	 output shape: 128x7x7
+7	Layer Name: inception_5a/concat 	 Layer time: 1.0411 	 number of inputs: 4 	 input shape: 256x7x7 	 output shape: 832x7x7
+Layer Number: 9 	 time: 24.5414
+----------------------------
+
+ Sum of Layers time: 24.5414
+
+ input time of layer 9 : 0.3819
+
+ transfer_time of layer 9 : 0.4242
+
+ output time of layer 9 : 0.0365
+
+ this part task time: 25.2394
+
+
+Cost9:654.18
+input9_time:0.38187
+task9_time:25.2394
+output9_time:0.0364525
+total9_time:25.6577
+***************************************
+
+0	Layer Name: inception_5b/5x5_reduce 	 Layer time: 1.5704 	 number of inputs: 3 	 input shape: 832x7x7 	 output shape: 48x7x7
+1	Layer Name: inception_5b/5x5 	 Layer time: 5.8527 	 number of inputs: 3 	 input shape: 48x7x7 	 output shape: 128x7x7
+2	Layer Name: inception_5b/3x3_reduce 	 Layer time: 5.8577 	 number of inputs: 3 	 input shape: 832x7x7 	 output shape: 192x7x7
+3	Layer Name: inception_5b/3x3 	 Layer time: 12.9844 	 number of inputs: 3 	 input shape: 192x7x7 	 output shape: 384x7x7
+4	Layer Name: inception_5b/1x1 	 Layer time: 12.8037 	 number of inputs: 3 	 input shape: 832x7x7 	 output shape: 384x7x7
+5	Layer Name: inception_5b/pool 	 Layer time: 0.5742 	 number of inputs: 1 	 input shape: 832x7x7 	 output shape: 832x7x7
+6	Layer Name: inception_5b/pool_proj 	 Layer time: 3.9841 	 number of inputs: 3 	 input shape: 832x7x7 	 output shape: 128x7x7
+7	Layer Name: inception_5b/concat 	 Layer time: 0.6130 	 number of inputs: 4 	 input shape: 384x7x7 	 output shape: 1024x7x7
+8	Layer Name: pool5/7x7_s1 	 Layer time: 0.2388 	 number of inputs: 1 	 input shape: 1024x7x7 	 output shape: 1024
+9	Layer Name: loss3/classifier 	 Layer time: 2.5148 	 number of inputs: 3 	 input shape: 1024 	 output shape: 1000
+10	Layer Name: prob 	 Layer time: 0.1574 	 number of inputs: 1 	 input shape: 1000 	 output shape: 1000
+Layer Number: 10 	 time: 47.1512
+----------------------------
+
+ Sum of Layers time: 47.1512
+
+ input time of layer 10 : 0.3799
+
+ transfer_time of layer 10 : 0.4163
+
+ output time of layer 10 : 2.2735
+
+ this part task time: 47.4771
+
+
+Cost10:654.697
+input10_time:0.379863
+task10_time:47.4771
+output10_time:2.27353
+total10_time:50.1305
+***************************************
+
+Frame Latency: 1222.34
+Profiling these DVFS settings finised
+
+Test passed
