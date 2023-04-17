@@ -15,10 +15,6 @@ import select
 from pathlib import Path
 import traceback
 import random
-import math
-
-
-Test=1
 
 
 cnn_dir="/home/ehsan/UvA/ARMCL/Rock-Pi/ComputeLibrary_64_CPUGPULW/"
@@ -96,8 +92,6 @@ def Load_Data():
     ### Load tranfering VS data size with max freq
     if Transfer_Data_Size_Max_Freq_csv.exists():
         Transfer_Data_Size_Max_Freq_df=pd.read_csv(Transfer_Data_Size_Max_Freq_csv)
-if Test:
-    Load_Data()
 
 
 def ab():
@@ -190,27 +184,15 @@ def Read_Power(file_name):#(graph,file_name,frqss):
     return powers,tts
 
 
-# +
 ## Convert freqs list to string
 def format_freqs(fs=[ [ [7],[6],[4],[3,6],[4],[5],[6],[7] ], [] ]):
         formated_fs=[]
         for f in fs:
-            if type(f)==str:
-                f=[[int(j) for j in re.findall(r"\b\d+\b", l)] for l in f.split('),')]
             ff = '-'.join(['[' + str(sublist[0]) + ',' + str(sublist[1]) + ']' if len(sublist) > 1 else str(sublist[0]) for sublist in f])
             #print(ff)
             formated_fs.append(ff)
         return formated_fs
 
-def format_to_list(fs):
-    formated_fs=[]
-    for f in fs:
-        t=[[int(j) for j in re.findall(r"\b\d+\b", l)] for l in f.split('),')]
-        formated_fs.append(t)
-    return formated_fs
-
-
-# -
 
 ### This is common function to run a case
 ## Remember to modify ARMcL code based on your desire
@@ -611,8 +593,7 @@ def Analyze(graph_name=graphs,metric=['task','in','out','trans'],comp=['G','B','
     plt.ylabel(f'{metric} {parameter}')
     plt.show()
     return pivot_table
-if Test==2:
-    Analyze(graph_name=['alex'],metric=['task'],comp=['G'],freq_h=[0],index=['Layer'],columns=['Freq'])
+#Analyze(graph_name=['alex'],metric=['task'],comp=['G'],freq_h=[0],index=['Layer'],columns=['Freq'])
 
 
 def Analyze2(graph_name = 'alex'):
@@ -630,8 +611,7 @@ def Analyze2(graph_name = 'alex'):
     plt.ylabel('Task Timing (ms)')
     plt.show()
     return pivot_table
-if Test==2:
-    Analyze2()
+#Analyze2()
 
 
 def Value(graph,comp,freq,layer,metric,attr):
@@ -761,9 +741,8 @@ def Transfer_Info(p1='B',p2='G',f1=[4],f2=[3,4]):
     power=row['transfer_power'].iloc[0]
     coef_t=row['time_ratio'].iloc[0]  
     return power,coef_t
-if Test==2:
-    a,b=transfer_info('G','B',[2.0, 7.0],[7.0])
-    Transfer_Freq_df
+#a,b=transfer_info('G','B',[2.0, 7.0],[7.0])
+#Transfer_Freq_df
 
 
 def Comm_Cost(g='alex',fn=[[0],[1],[2],[3],[4],[5],[6],[7]],cmps=8*'B',dvfs_delay=3.5, debug=False):
@@ -901,28 +880,22 @@ def Real_Evaluation(g="alex",_ord='GBBBBBBB',_fs=[ [ [0,0],[0],[0],[0],[0],[0],[
     repeat=False
     #print(evaluations)
     for ff in _fs:
-        tpl_f=ff
-        if type(ff)==list:
-            tpl_f=(tuple(tuple(i) for i in ff))
-        
-        row=Evaluations_df[(Evaluations_df['order']==_ord) & (Evaluations_df['freq']==str(tpl_f)) & (Evaluations_df['graph']==g)]
-        
-        if repeat==False and row.shape[0]==0:
+        tpl_f=(tuple(tuple(i) for i in ff))
+        #print(f"f:{tpl_f}\nhey:{evaluations['freq'][0]}")
+        #input()
+        if repeat==False and Evaluations_df[(Evaluations_df['order']==_ord) & (Evaluations_df['freq']==str(tpl_f)) & (Evaluations_df['graph']==g)].shape[0]==0:
             new_fs.append(ff)
         else:
             print(f'{_ord}, Freq:{ff} already evaluated:')
-            display(row)
-            if pd.isna(row.reset_index().loc[0,'task_time']):
-                new_fs.append(ff)
+            display(Evaluations_df[(Evaluations_df['order']==_ord) & (Evaluations_df['freq']==str(tpl_f)) & (Evaluations_df['graph']==g)])
 
     if len(new_fs)==0:
         return Evaluations_df
     Profile(_ff=new_fs, _n=n, order=_ord, graph=g, pwr=pf, tme=tf,caching=False,kernel_c=96*50)
     time_df=Parse_total(timefile=tf, graph=g, order=_ord, frqss=new_fs)
     power_df=Parse_Power_total(file_name=pf,graph=g,order=_ord,frqss=new_fs)
-    if type(_fs[0])==list:
-        power_df['freq'] = power_df['freq'].apply(lambda x: str(tuple(tuple(i) for i in x)) )
-        time_df['freq'] = time_df['freq'].apply(lambda x: str(tuple(tuple(i) for i in x)) )
+    power_df['freq'] = power_df['freq'].apply(lambda x: tuple(tuple(i) for i in x))
+    time_df['freq'] = time_df['freq'].apply(lambda x: tuple(tuple(i) for i in x))
     merged_df = pd.merge(power_df, time_df, on=['graph', 'order', 'freq'])
 
 
@@ -936,24 +909,12 @@ def Real_Evaluation(g="alex",_ord='GBBBBBBB',_fs=[ [ [0,0],[0],[0],[0],[0],[0],[
     merged_df['input_e']=input_e/1000.0
     merged_df['task_e']=task_e/1000.0
     merged_df['total_e']=total_e/1000.0
-    display(merged_df)
-    #merged_df=merged_df.reset_index(drop=True,inplace=True)
-    
-    for i,k in merged_df.iterrows(): 
-        r=Evaluations_df[(Evaluations_df['graph']==k['graph']) & (Evaluations_df['order']==k['order']) & (Evaluations_df['freq']==str(k['freq']))].index
-        if(len(r)):
-            r=r[0]
-            Evaluations_df.iloc[r]=k
-        else:
-            Evaluations_df=pd.concat([Evaluations_df,merged_df], ignore_index=True)
-        
 
+    Evaluations_df=pd.concat([Evaluations_df,merged_df], ignore_index=True)
     Evaluations_df.to_csv(Evaluations_csv,index=False)
     return Evaluations_df
-if Test==2:
-    Real_Evaluation(g="alex",_ord='GBBBBBBB',_fs=[ [ [4,6],[6],[6],[6],[6],[6],[6],[6] ] ])
-    Real_Evaluation(g="alex",_ord='BBBBBBBB',_fs=[ [ [0],[1],[2],[3],[4],[5],[6],[7] ] ])
-
+#Real_Evaluation(g="alex",_ord='GBBBBBBB',_fs=[ [ [4,6],[6],[6],[6],[6],[6],[6],[6] ] ])
+#Real_Evaluation(g="alex",_ord='BBBBBBBB',_fs=[ [ [0],[1],[2],[3],[4],[5],[6],[7] ] ])
 
 def Test():
     _fs=[ [ [0],[1],[2],[3],[4],[5],[6],[7] ],
@@ -1038,8 +999,7 @@ def Explore_Freq_on_Transfering():
     Transfer_Freq_df['time_ratio'] = Transfer_Freq_df['transfer_time'] / Transfer_Freq_df['order'].map(first_transfer_time)
     Transfer_Freq_df['power_ratio'] = Transfer_Freq_df['transfer_power'] / Transfer_Freq_df['order'].map(first_transfer_power)   
     Transfer_Freq_df.to_csv(Transfer_Freq_csv,index=False)
-if Test==3:
-    Explore_Freq_on_Transfering()
+#Explore_Freq_on_Transfering()
 
 
 def Plot_Transfer_VS_Data_size(order,freq_mode):
@@ -1138,19 +1098,14 @@ def Explore_Data_Size_on_Transfering(freq_mode="max"):
         return Transfer_Data_Size_Min_Freq_df
 
 
-# +
 def Run_Explore_Data_Size_on_Transfering(_freq_mode="max"):
     orders={0:'BL', 1:'LB', 2:'GB', 3:'LG', 4:'BG'}
     Explore_Data_Size_on_Transfering(freq_mode=_freq_mode)
     for i in orders:
         Plot_Transfer_VS_Data_size(order=orders[i],freq_mode=_freq_mode)
-        
-if Test==3:
-    Run_Explore_Data_Size_on_Transfering(_freq_mode="max")
-    Run_Explore_Data_Size_on_Transfering(_freq_mode="min")
+#Run_Explore_Data_Size_on_Transfering(_freq_mode="max")
+#Run_Explore_Data_Size_on_Transfering(_freq_mode="min")
 
-
-# -
 
 def Compute_Layer_Percentage():
 #if True:
@@ -1217,8 +1172,7 @@ def _Analyze_Components(g=['alex']):
     time_plot.set_xlabel('Layer')
     time_plot.set_ylabel('Time')
     plt.show()
-if Test==2:
-    _Analyze_Components(g=['alex'])
+_Analyze_Components(g=['alex'])
 
 
 ## plot (and extract and save result to csv files) energy of layers running with different components with freq min
@@ -1299,8 +1253,7 @@ def Analyze_Components(g=['alex']):
         time_plot.set_xlabel('Layer')
         time_plot.set_ylabel('Time')
         plt.show()
-if Test==2:
-    Analyze_Components(g=['google'])
+#Analyze_Components(g=['google'])
 
 
 def generate_random_strings(n, num_strings):
@@ -1313,63 +1266,8 @@ def generate_random_strings(n, num_strings):
 #random_strings = generate_random_strings(8, 100)
 
 
-# +
-def Run_Eval(g='alex',num_evals=10,num_freqs=1):
-    Evaluation_df=pd.read_csv(Evaluations_csv)
-    
-    cases=Evaluation_df[Evaluation_df['graph']==g].shape[0]
-    print(f'There are {cases} existed for graph {g}')
-    num_evals=max(0,num_evals-cases)
-    num_orders=math.ceil(num_evals/num_freqs)
-    
-    _n=NLayers[g]
-    orders=generate_random_strings(_n,num_orders)
-               
-    fs={}
-    for order in orders:
-        fs[order]=[]
-        for k in range(num_freqs):
-            f=[]
-            for i,comp in enumerate(order):
-                v=[]
-                v.append(random.randint(0, NFreqs[comp]-1))
-                if comp=='G':
-                    v.append(random.randint(0, NFreqs['B']-1))
-                f.append(tuple(v))
-                
-            fs[order].append(str(tuple(f)))
-            
-            
-    for order in fs:
-        for f in fs[order]:
-            row=Evaluation_df[(Evaluation_df['order']==order) & (Evaluation_df['freq']==str(f)) & (Evaluation_df['graph']==g)]
-            if row.shape[0]==0:
-                Evaluation_df.loc[len(Evaluation_df)]={"graph":g,"order":order,"freq":f}
-            
-    Evaluation_df.to_csv(Evaluations_csv,index=False)
-    
-    grouped = Evaluation_df.groupby('order')
-    unique_values_order = Evaluation_df['order'].unique()
-
-    # Loop through the unique values in column 'order'
-    for value in unique_values_order:
-        # Get the group corresponding to the current value in column 'order'
-        group = grouped.get_group(value)
-        # Get the values in column 'freq' for the current group
-        column_freq_values = group['freq'].values
-        # Print the value in column 'A' and the corresponding values in column 'freq'
-        print(f"Value in column 'order': {value}")
-        print(f"Values in column 'freq': {column_freq_values}")
-        print("----")
-        list_fs=format_to_list(column_freq_values)
-        Real_Evaluation(g,_ord=value,_fs=list_fs)
-
-Run_Eval(g='alex')
-
-# -
-
-def main():
-
+#def main():
+if True:
     Load_Data()
     
     '''print('\n\n\n\n***************Run_Profile_Transfer_Time\n')
@@ -1445,3 +1343,5 @@ def main():
     n = 8  # replace with desired length of the random strings
     num_strings = 1000  # replace with desired number of random strings
     random_strings = generate_random_strings(n, num_strings)
+
+

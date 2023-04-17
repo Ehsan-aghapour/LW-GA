@@ -13,13 +13,6 @@ from pathlib import Path
 import itertools
 import select
 from pathlib import Path
-import traceback
-import random
-import math
-
-
-Test=1
-
 
 cnn_dir="/home/ehsan/UvA/ARMCL/Rock-Pi/ComputeLibrary_64_CPUGPULW/"
 
@@ -53,8 +46,8 @@ Synthetic_Tranfer_logs=Path("./Synthetic_Transfers/").resolve()
 Layers_Percentage_csv=Path("Layers_Percentage.csv").resolve()
 Layers_With_Percentage_csv=Path("Layers_With_Percentage.csv").resolve()
 
+
 Layers_df=pd.DataFrame(columns=["Graph", "Component", "Freq", "Freq_Host", "Layer", "Metric", "Time", "Power"])
-Layers_df_indexed=pd.DataFrame()
 Transfers_df=pd.DataFrame(columns=["Graph", "Layer", "Dest", "Src", "Time"])
 Transfer_Freq_df = pd.DataFrame(columns=['kernels', 'order', 'SenderFreq','RecFreq' 'transfer_time', 'transfer_power'])
 Transfer_Data_Size_Min_Freq_df = pd.DataFrame(columns=['kernels', 'order', 'transfer_time', 'transfer_power'])
@@ -67,7 +60,7 @@ Evaluations_df=pd.DataFrame(columns=['graph','order','freq','input_time','task_t
 
 def Load_Data():
     global Layers_df, Transfers_df, Transfer_Freq_df,\
-        Transfer_Data_Size_Min_Freq_df,Transfer_Data_Size_Max_Freq_df,Layers_df_indexed
+        Transfer_Data_Size_Min_Freq_df,Transfer_Data_Size_Max_Freq_df
     #### Load data of layer times with different freqs
     if Layers_csv.exists():
         Layers_df=pd.read_csv(Layers_csv)
@@ -96,8 +89,41 @@ def Load_Data():
     ### Load tranfering VS data size with max freq
     if Transfer_Data_Size_Max_Freq_csv.exists():
         Transfer_Data_Size_Max_Freq_df=pd.read_csv(Transfer_Data_Size_Max_Freq_csv)
-if Test:
-    Load_Data()
+
+Load_Data()
+
+
+
+print(Layers_df[(Layers_df['Graph']=="alex") & (Layers_df['Component']=="B") & 
+          (Layers_df['Freq']==0) & (Layers_df['Freq_Host']==-1)])
+print(Layers_df[(Layers_df['Graph']=="alex") & (Layers_df['Component']=="B") & 
+          (Layers_df['Freq']==0) & (Layers_df['Freq_Host']==-1)]["Time"].sum())
+i=0
+100*Layers_df[(Layers_df['Graph']=="alex") & (Layers_df['Component']=="B") & 
+          (Layers_df['Freq']==0) & (Layers_df['Freq_Host']==-1) & (Layers_df['Layer']==i) ]["Time"]/Layers_df[(Layers_df['Graph']=="alex") & (Layers_df['Component']=="B") & 
+          (Layers_df['Freq']==0) & (Layers_df['Freq_Host']==-1)]["Time"].sum()
+
+#def Compute_Layer_Percentage():
+if True:
+    sum_time_per_graph_component = Layers_df.groupby(['Graph', 'Component', 'Freq', 'Freq_Host'])['Time'].sum().reset_index()
+    pd.set_option('display.max_rows', 1000)
+    #print(sum_time_per_graph_component)
+    Layers_With_Percentage_df=Layers_df.merge(sum_time_per_graph_component, on=['Graph', 'Component', 'Freq', 'Freq_Host'], suffixes=('', '_sum'))
+    Layers_With_Percentage_df['Time_Percentage'] = Layers_With_Percentage_df['Time'] / Layers_With_Percentage_df['Time_sum'] * 100
+    print(Layers_With_Percentage_df[(Layers_With_Percentage_df["Graph"]=="alex") & (Layers_With_Percentage_df["Freq"]==0) & (Layers_With_Percentage_df["Component"]=="G") & (Layers_With_Percentage_df["Freq_Host"]==0)]["Time_Percentage"].sum())
+    Layers_With_Percentage_df.to_csv(Layers_With_Percentage_csv, index=False)
+    Layers_Percentage_df=Layers_With_Percentage_df.groupby(['Graph', 'Component','Layer','Metric'])['Time_Percentage'].mean().reset_index()
+    print(Layers_Percentage_df)
+    #Layers_Percentage_df.to_csv(Layers_Percentage_csv, index=False)
+    pivot_df = Layers_Percentage_df.pivot_table(index=['Graph', 'Layer', 'Metric'], columns='Component', values='Time_Percentage')
+    pivot_df.columns = ['Time_Percentage_{}'.format(col) for col in pivot_df.columns]
+    pivot_df = pivot_df.reset_index()
+    
+    pivot_df['Time_Percentage_Average'] = pivot_df[['Time_Percentage_B', 'Time_Percentage_G', 'Time_Percentage_L']].mean(axis=1)
+    
+    pivot_df = pivot_df.groupby(['Graph', 'Layer']).sum().reset_index()
+    pivot_df.to_csv(Layers_Percentage_csv, index=False)
+    print(pivot_df)
 
 
 def ab():
@@ -190,27 +216,15 @@ def Read_Power(file_name):#(graph,file_name,frqss):
     return powers,tts
 
 
-# +
 ## Convert freqs list to string
 def format_freqs(fs=[ [ [7],[6],[4],[3,6],[4],[5],[6],[7] ], [] ]):
         formated_fs=[]
         for f in fs:
-            if type(f)==str:
-                f=[[int(j) for j in re.findall(r"\b\d+\b", l)] for l in f.split('),')]
             ff = '-'.join(['[' + str(sublist[0]) + ',' + str(sublist[1]) + ']' if len(sublist) > 1 else str(sublist[0]) for sublist in f])
             #print(ff)
             formated_fs.append(ff)
         return formated_fs
 
-def format_to_list(fs):
-    formated_fs=[]
-    for f in fs:
-        t=[[int(j) for j in re.findall(r"\b\d+\b", l)] for l in f.split('),')]
-        formated_fs.append(t)
-    return formated_fs
-
-
-# -
 
 ### This is common function to run a case
 ## Remember to modify ARMcL code based on your desire
@@ -223,11 +237,10 @@ def Profile(_ff=[[[0],[1],[2],[3,6],[4],[5],[6],[7]]],_n=n,order='BBBGBBBB',grap
     print(f'\n\nformatted freqs:\n {ff}')
     os.system(f"PiPush {cnn_dir}/build/examples/LW/{cnn[graph]} test_graph/")
     os.system('adb shell "echo 0 > /sys/class/gpio/gpio157/value"')
-    time.sleep(1)
+    time.sleep(4)
     Power_monitoring = threading.Thread(target=Arduino_read.run,args=(pwr,))
     Power_monitoring.start()
     rr=f"PiTest build/examples/LW/{cnn[graph]} test_graph/ CL {params[graph][0]} {params[graph][1]} {params[graph][2]} {_n} 0 0 100 100 {order} 1 2 4 Alex B B --kernel_c={kernel_c}"
-    print(f'run command is {rr}')
     oo=open(tme,'w+')
     Run_Graph(ff,rr,oo,True)
     time.sleep(2)
@@ -401,7 +414,7 @@ def Parse_transfer_graph(timefile,graph,order,frqss):
     trans={}
     parts={}
     prof_trans=[]
-    transfer_df_time = pd.DataFrame(columns=['order', 'freq', 'transfer_time', 'RecFreq','SenderFreq'])
+    transfer_df_time = pd.DataFrame(columns=['order', 'freq', 'transfer_time'])
     
     for l in lines:     
         if "Profiling these DVFS settings finised" in l:
@@ -410,7 +423,7 @@ def Parse_transfer_graph(timefile,graph,order,frqss):
             print(f'trans:{trans}')
             print(f'outs:{outs}')
             prof_trans=trans
-            transfer_df_time.loc[len(transfer_df_time)]={'order':order, 'freq': tuple(freqs), 'transfer_time':trans[1], 'RecFreq':tuple(freqs[1]),'SenderFreq':tuple(freqs[0])}
+            transfer_df_time.loc[len(transfer_df_time)]={'order':order, 'freq': tuple(freqs), 'transfer_time':trans[1]}
             t={}
             ins={}
             outs={}
@@ -504,14 +517,13 @@ def Parse_Power_Transfer_graph(file_name,graph,order,frqss):
     input_pwrs=[]
     task_pwrs={}
     trans_pwrs={}
-    transfer_df_pwr = pd.DataFrame(columns=['order', 'freq', 'transfer_power','RecFreq','SenderFreq'])
+    transfer_df_pwr = pd.DataFrame(columns=['order', 'freq', 'transfer_power'])
     #for each freq: NL*2(which is input-layer pairs)
     #after each freq we have a excess [0]and[1]interval so:
     nn=((2*NL*n)+2)
     nnn=nn*len(frqss)
     if len(powers)!=nnn:
         print(f"bad power size: {len(powers)}")
-        print(f'Expected size is:NFreqx((2xNLxn)+2) which is {len(frqss)}x((2x{NL}x{n})+2)=nnn')
         input("what")
         return
     print(f'len powers is {len(powers)}')
@@ -537,7 +549,7 @@ def Parse_Power_Transfer_graph(file_name,graph,order,frqss):
             else:
                 #d[layer]["trans"]["Power"]=trans_pwrs[layer]
                 print(f'setting power for {graph}-{order}-{layer}-{freq[layer][0]}-trans-power->{trans_pwrs[layer]}')
-                transfer_df_pwr.loc[len(transfer_df_pwr)]={'order':order, 'freq': tuple(freq), 'transfer_power':trans_pwrs[layer],'RecFreq':tuple(freq[1]),'SenderFreq':tuple(freq[0])}
+                transfer_df_pwr.loc[len(transfer_df_pwr)]={'order':order, 'freq': tuple(freq), 'transfer_power':trans_pwrs[layer]}
             #d[layer]["task"]["Power"]=task_pwrs[layer]
             print(f'setting power for {graph}-{order}-{layer}-{freq[layer][0]}-task-power->{task_pwrs[layer]}')
     return trans_pwrs,transfer_df_pwr
@@ -573,7 +585,7 @@ def Profile_Task_Time(graph):
         pwrfile=f'{Layers_logs}/power_{graph}_'+order+'.csv'
         timefile=f'{Layers_logs}/time_{graph}_'+order+'.txt'
         Profile(frqss,n,order,graph,pwrfile,timefile,caching=True)
-        #time.sleep(10)
+        time.sleep(10)
         time_df=Parse(timefile,graph,order,frqss)
         power_df=Parse_Power(pwrfile,graph,order,frqss)
         #time_df['Freq'] = time_df['Freq'].apply(lambda x: tuple(x))
@@ -593,7 +605,7 @@ def Profiling_Layers():
 
 
 def Analyze(graph_name=graphs,metric=['task','in','out','trans'],comp=['G','B','L'],
-            freq_h=[-1],f=range(10),layers=range(40),index=['Layer'],columns=['Freq'],parameter='Time'):
+            freq_h=[float('nan')],f=range(10),layers=range(40),index=['Layer'],columns=['Freq'],parameter='Time'):
 
     # Group the filtered DataFrame by the 'Layer' and 'Freq' columns, and aggregate the 'Time' column using the 'mean()' function
     grouped_df = Layers_df[(Layers_df['Graph'].isin(graph_name)) & 
@@ -611,16 +623,144 @@ def Analyze(graph_name=graphs,metric=['task','in','out','trans'],comp=['G','B','
     plt.ylabel(f'{metric} {parameter}')
     plt.show()
     return pivot_table
-if Test==2:
-    Analyze(graph_name=['alex'],metric=['task'],comp=['G'],freq_h=[0],index=['Layer'],columns=['Freq'])
+Analyze(graph_name=['alex'],metric=['task'],comp=['G'],freq_h=[0],index=['Layer'],columns=['Freq'])
 
+
+def _Analyze_Components():
+    grouped_df = Layers_df[(Layers_df['Graph'].isin(['alex'])) & 
+                        (Layers_df['Metric'].isin(['in','task'])) & 
+                        (Layers_df['Freq'].isin([0])) & 
+                        (Layers_df['Freq_Host'].isin([0,-1]))&
+                        (Layers_df['Layer'].isin(range(10))) ].groupby(['Component','Layer','Metric'])\
+                        ['Time','Power'].sum().reset_index()
+
+    grouped_df['Energy']=grouped_df['Time']*grouped_df['Power']/1000.0
+    print(grouped_df)
+
+    '''grouped_df['Layer'] = grouped_df['Layer'].where(grouped_df['Metric'] != 'in', 'input')
+    grouped_df = grouped_df.drop('Metric', axis=1)
+    print(grouped_df)'''
+
+    aggregations = {
+        'Time': 'sum',
+        'Power': 'mean',
+        'Energy': 'sum'
+    }
+    grouped_df = grouped_df.groupby(['Component', 'Layer']).agg(aggregations).reset_index()
+    print(grouped_df)
+
+    pivot_df = grouped_df.pivot_table(index=['Layer'], columns='Component', values='Energy')
+    pivot_df.columns = ['Energy_{}'.format(col) for col in pivot_df.columns]
+    pivot_df = pivot_df.reset_index()
+
+    print(pivot_df)
+    pivot_df.plot(x='Layer',y=['Energy_G','Energy_B','Energy_L'],kind='bar')
+
+
+def Analyze_Components(g=['alex']):
+
+    grouped_df = Layers_df[(Layers_df['Graph'].isin(g)) & 
+                        (Layers_df['Metric'].isin(['in','task'])) &  
+                        (Layers_df['Freq_Host'].isin([0,-1]))&
+                        (Layers_df['Layer'].isin(range(10))) ].groupby(['Freq','Component','Layer','Metric'])\
+                        ['Time','Power'].sum().reset_index()
+
+    grouped_df['Energy']=grouped_df['Time']*grouped_df['Power']/1000.0
+    print(grouped_df)
+
+    '''grouped_df['Layer'] = grouped_df['Layer'].where(grouped_df['Metric'] != 'in', 'input')
+    grouped_df = grouped_df.drop('Metric', axis=1)
+    print(grouped_df)'''
+
+    aggregations = {
+        'Time': 'sum',
+        'Power': 'mean',
+        'Energy': 'sum'
+    }
+    grouped_df = grouped_df.groupby(['Freq','Component', 'Layer']).agg(aggregations).reset_index()
+    print(grouped_df)
+
+    pivot_df = grouped_df.pivot_table(index=['Layer','Freq'], columns='Component', values=['Time', 'Energy'])
+    pivot_df.columns = ['{}_{}'.format(col[0], col[1]) for col in pivot_df.columns]
+    #pivot_df = grouped_df.pivot_table(index=['Layer','Freq'], columns='Component', values='Energy')
+    #pivot_df.columns = ['Energy_{}'.format(col) for col in pivot_df.columns]
+    pivot_df = pivot_df.reset_index()
+    print(pivot_df)
+    pivot_df.to_csv("Components.csv",index=False)
+    
+   # Group by 'Layer' and get the maximum valid frequency for each parameter
+    max_freq_B = pivot_df[pivot_df['Energy_B'].notna()].groupby('Layer')['Freq'].max()
+    max_freq_G = pivot_df[pivot_df['Energy_G'].notna()].groupby('Layer')['Freq'].max()
+    max_freq_L = pivot_df[pivot_df['Energy_L'].notna()].groupby('Layer')['Freq'].max()
+
+    # Extract the values at the maximum valid frequency for each parameter
+    freq_df = pd.DataFrame({
+        'Layer': max_freq_B.index,
+        'Energy_B_MaxFreq': pivot_df[pivot_df['Freq'].isin(max_freq_B.values)]['Energy_B'].values,
+        'Time_B_MaxFreq': pivot_df[pivot_df['Freq'].isin(max_freq_B.values)]['Time_B'].values,
+        'Energy_G_MaxFreq': pivot_df[pivot_df['Freq'].isin(max_freq_G.values)]['Energy_G'].values,
+        'Time_G_MaxFreq': pivot_df[pivot_df['Freq'].isin(max_freq_G.values)]['Time_G'].values,
+        'Energy_L_MaxFreq': pivot_df[pivot_df['Freq'].isin(max_freq_L.values)]['Energy_L'].values,
+        'Time_L_MaxFreq': pivot_df[pivot_df['Freq'].isin(max_freq_L.values)]['Time_L'].values})
+    display(freq_df)
+    energy_cols = ['Energy_G_MaxFreq', 'Energy_B_MaxFreq', 'Energy_L_MaxFreq']
+    energy_plot = freq_df.plot(x='Layer', y=energy_cols, kind='bar', title='Energy for Freq Max')
+    energy_plot.set_xlabel('Layer')
+    energy_plot.set_ylabel('Energy')
+    plt.show()
+
+    # Plot Time columns
+    time_cols = ['Time_G_MaxFreq', 'Time_B_MaxFreq', 'Time_L_MaxFreq']
+    time_plot = freq_df.plot(x='Layer', y=time_cols, kind='bar', title='Time for Freq Max')
+    time_plot.set_xlabel('Layer')
+    time_plot.set_ylabel('Time')
+    plt.show()
+    
+    for freq in pivot_df['Freq'].unique():
+        # Filter dataframe for the current Freq value
+        freq_df = pivot_df[pivot_df['Freq'] == freq]
+        display(freq_df)
+
+        # Plot Energy columns
+        energy_cols = ['Energy_G', 'Energy_B', 'Energy_L']
+        energy_plot = freq_df.plot(x='Layer', y=energy_cols, kind='bar', title='Energy for Freq {}'.format(freq))
+        energy_plot.set_xlabel('Layer')
+        energy_plot.set_ylabel('Energy')
+        plt.show()
+
+        # Plot Time columns
+        time_cols = ['Time_G', 'Time_B', 'Time_L']
+        time_plot = freq_df.plot(x='Layer', y=time_cols, kind='bar', title='Time for Freq {}'.format(freq))
+        time_plot.set_xlabel('Layer')
+        time_plot.set_ylabel('Time')
+        plt.show()
+Analyze_Components2(g=['google'])
+
+# +
+import random
+def generate_random_strings(n, num_strings):
+    chars = ['L', 'B', 'G']
+    random_strings = []
+    for _ in range(num_strings):
+        random_string = ''.join(random.choice(chars) for _ in range(n))
+        random_strings.append(random_string)
+    return random_strings
+
+n = 8  # replace with desired length of the random strings
+num_strings = 1000  # replace with desired number of random strings
+random_strings = generate_random_strings(n, num_strings)
+for i, random_string in enumerate(random_strings):
+    print(f"Random String {i + 1}: {random_string}")
+
+
+# -
 
 def Analyze2(graph_name = 'alex'):
     graph_df = Layers_df[Layers_df['Graph'] == graph_name]
     # Group the filtered DataFrame by the 'Layer' and 'Freq' columns, and aggregate the 'Time' column using the 'mean()' function
     #grouped_df = graph_df[graph_df['Metric'] == 'task'].groupby(['Graph', 'Component', 'Freq', 'Layer'])['Time'].sum()
     grouped_df = graph_df[graph_df['Metric'] == 'task'].groupby(['Graph', 'Component', 'Layer', 'Freq'])['Time'].sum().reset_index()
-    #print(grouped_df)
+    print(grouped_df)
     # Create a pivot table to rearrange the data for plotting
     pivot_table = pd.pivot_table(grouped_df,index=['Graph', 'Component', 'Layer'], columns='Freq', values='Time')
     # Generate a line plot to visualize the effect of frequency on task timing for different layers
@@ -630,16 +770,12 @@ def Analyze2(graph_name = 'alex'):
     plt.ylabel('Task Timing (ms)')
     plt.show()
     return pivot_table
-if Test==2:
-    Analyze2()
+#Analyze2()
 
 
 def Value(graph,comp,freq,layer,metric,attr):
-    global Layers_df_indexed
-    if Layers_df_indexed.shape[0]==0:
-        Layers_df_indexed = Layers_df.set_index(['Graph', 'Component', 'Freq', 'Layer', 'Metric', 'Freq_Host'])
     if len(freq)==1 or comp!='G':
-        return Layers_df_indexed.loc[(graph, comp, freq[0], layer, metric, -1), attr]
+        return Layers_df_indexed.loc[(graph, comp, freq[0], layer, metric, np.NaN), attr]
     if len(freq)==2:
         return Layers_df_indexed.loc[(graph, comp, freq[0], layer, metric, freq[1]), attr]
     else:
@@ -730,8 +866,8 @@ def Comp_Cost(g='alex',fn=[[0],[1],[2],[3],[4],[5],[6],[7]],cmps=8*'B',dvfs_dela
     if debug:
         print(f'time with dvfs delay: {tt}')
         print(f'time without dvfs delay: {tt_nodvfs}')
-        print(f'Energy with dvfs delay: {ee/1000.0}')
-        print(f'Energy without dvfs delay: {ee_nodvfs/1000.0}')
+        print(f'power with dvfs delay: {ee}')
+        print(f'power without dvfs delay: {ee_nodvfs}')
     return tt,ee/1000.0
 
 
@@ -755,15 +891,14 @@ def Transfer_Info(p1='B',p2='G',f1=[4],f2=[3,4]):
     if order=='GB':
         f2[0]=f1[1]
     freqs=tuple([tuple(f1),tuple(f2)])
-    print(freqs)
+    #print(freqs)
     row=Transfer_Freq_df[ (Transfer_Freq_df['freq']==str(freqs)) & (Transfer_Freq_df['order']==order)]
-    print(row)
+    #print(row)
     power=row['transfer_power'].iloc[0]
     coef_t=row['time_ratio'].iloc[0]  
     return power,coef_t
-if Test==2:
-    a,b=transfer_info('G','B',[2.0, 7.0],[7.0])
-    Transfer_Freq_df
+#a,b=transfer_info('G','B',[2.0, 7.0],[7.0])
+#Transfer_Freq_df
 
 
 def Comm_Cost(g='alex',fn=[[0],[1],[2],[3],[4],[5],[6],[7]],cmps=8*'B',dvfs_delay=3.5, debug=False):
@@ -800,16 +935,14 @@ def Comm_Cost(g='alex',fn=[[0],[1],[2],[3],[4],[5],[6],[7]],cmps=8*'B',dvfs_dela
         
     transfer_t=0
     transfer_e=0
-    # Layers are indexed from 1 (because first index in cmps, fn, and fc is for input)
-    # We start from layer=2 because comparing with previous layer
-    for i in range(2,len(fn)):
+    
+    for i in range(1,len(fn)-1):
         if cmps[i]!=cmps[i-1]:           
             #transfer_time=transfer_times[g][i][cmps[i]][cmps[i-1]]
             transfer_time=Transfers_df[(Transfers_df["Graph"]==g) &
-                                       (Transfers_df["Layer"]==i-1) &
+                                       (Transfers_df["Layer"]==i) &
                                        (Transfers_df["Dest"]==cmps[i]) &
-                                       (Transfers_df["Src"]==cmps[i-1])]["Time"].iloc[0]
-            print(f'{fc[i-1]}--{fc[i]}')
+                                       (Transfers_df["Source"]==cmps[i-1])]["Time"]
             transfer_power,time_ratio=Transfer_Info(p1=cmps[i-1],p2=cmps[i],f1=fc[i-1],f2=fc[i])
         
             scaled_time=transfer_time * time_ratio
@@ -818,12 +951,32 @@ def Comm_Cost(g='alex',fn=[[0],[1],[2],[3],[4],[5],[6],[7]],cmps=8*'B',dvfs_dela
             transfer_t+=scaled_time
             transfer_e+=transfer_energy
             if debug:
-                print(f"Transfer between layer {i-1} and {i} (inexed start with 1)")
+                print(f"Transfer between layer {i-1} and {i}")
                 print(f'transfer_time: {transfer_time}, time_ratio:{time_ratio}, scaled_time:{scaled_time}')
                 print(f'transfer_power:{transfer_power}, transfer_energy:{transfer_energy}')
                 print(f'total time:{transfer_t}')
                 print(f'total energy:{transfer_e}')
     return transfer_t, transfer_e/1000.0
+
+
+def Test():
+    _fs=[ [ [0],[1],[2],[3],[4],[5],[6],[7] ],
+         [ [7],[6],[5],[4],[3],[2],[1],[0] ] ]
+    ord='BBBBBBBB'
+    _g="alex"
+    for fs in _fs:
+        Profile(_ff=[fs], _n=n, order=ord, graph=_g, pwr="pwr.csv", tme="temp.txt",caching=False)
+        time=Parse(timefile="temp.txt", graph=_g, order=ord, frqss=[fs])
+        power=Parse_Power(pwrfile="pwr.csv", graph=_g, order=ord, frqss=[fs])
+        _dvfs_delay=3.5
+        #np.reshape(fs,-1)
+        cmp=Comp_Cost(g=_g,fn=fs,cmps=ord,dvfs_delay=_dvfs_delay, debug=False)
+        cmm=Comm_Cost(g=_g,fn=fs,cmps=ord,dvfs_delay=_dvfs_delay, debug=False)
+        print(time)
+        print(power)
+        print(cmp)
+        print(cmm)
+#test()
 
 
 def Parse_Power_total(file_name,graph,order,frqss):
@@ -888,7 +1041,7 @@ def Parse_total(timefile,graph,order,frqss):
     return df_time
 
 
-def Real_Evaluation(g="alex",_ord='GBBBBBBB',_fs=[ [ [0,0],[0],[0],[0],[0],[0],[0],[0] ] ]):   
+def Real_Evaluation(g="alex",ord='GBBBBBBB',_fs=[ [ [0,0],[0],[0],[0],[0],[0],[0],[0] ] ]):   
     pf="pwr_whole.csv"
     tf="temp_whole.txt"
     global Evaluations_df
@@ -901,28 +1054,21 @@ def Real_Evaluation(g="alex",_ord='GBBBBBBB',_fs=[ [ [0,0],[0],[0],[0],[0],[0],[
     repeat=False
     #print(evaluations)
     for ff in _fs:
-        tpl_f=ff
-        if type(ff)==list:
-            tpl_f=(tuple(tuple(i) for i in ff))
-        
-        row=Evaluations_df[(Evaluations_df['order']==_ord) & (Evaluations_df['freq']==str(tpl_f)) & (Evaluations_df['graph']==g)]
-        
-        if repeat==False and row.shape[0]==0:
+        tpl_f=(tuple(tuple(i) for i in ff))
+        #print(f"f:{tpl_f}\nhey:{evaluations['freq'][0]}")
+        #input()
+        if repeat==False and Evaluations_df[(Evaluations_df['order']==ord) & (Evaluations_df['freq']==str(tpl_f)) & (Evaluations_df['graph']==g)].shape[0]==0:
             new_fs.append(ff)
         else:
-            print(f'{_ord}, Freq:{ff} already evaluated:')
-            display(row)
-            if pd.isna(row.reset_index().loc[0,'task_time']):
-                new_fs.append(ff)
+            print(f'{ord}, Freq:{ff} already evaluated')
 
     if len(new_fs)==0:
-        return Evaluations_df
-    Profile(_ff=new_fs, _n=n, order=_ord, graph=g, pwr=pf, tme=tf,caching=False,kernel_c=96*50)
-    time_df=Parse_total(timefile=tf, graph=g, order=_ord, frqss=new_fs)
-    power_df=Parse_Power_total(file_name=pf,graph=g,order=_ord,frqss=new_fs)
-    if type(_fs[0])==list:
-        power_df['freq'] = power_df['freq'].apply(lambda x: str(tuple(tuple(i) for i in x)) )
-        time_df['freq'] = time_df['freq'].apply(lambda x: str(tuple(tuple(i) for i in x)) )
+        return evaluations
+    Profile(_ff=new_fs, _n=n, order=ord, graph=g, pwr=pf, tme=tf,caching=False,kernel_c=96*50)
+    time_df=Parse_total(timefile=tf, graph=g, order=ord, frqss=new_fs)
+    power_df=Parse_Power_total(file_name=pf,graph=g,order=ord,frqss=new_fs)
+    power_df['freq'] = power_df['freq'].apply(lambda x: tuple(tuple(i) for i in x))
+    time_df['freq'] = time_df['freq'].apply(lambda x: tuple(tuple(i) for i in x))
     merged_df = pd.merge(power_df, time_df, on=['graph', 'order', 'freq'])
 
 
@@ -936,44 +1082,12 @@ def Real_Evaluation(g="alex",_ord='GBBBBBBB',_fs=[ [ [0,0],[0],[0],[0],[0],[0],[
     merged_df['input_e']=input_e/1000.0
     merged_df['task_e']=task_e/1000.0
     merged_df['total_e']=total_e/1000.0
-    display(merged_df)
-    #merged_df=merged_df.reset_index(drop=True,inplace=True)
-    
-    for i,k in merged_df.iterrows(): 
-        r=Evaluations_df[(Evaluations_df['graph']==k['graph']) & (Evaluations_df['order']==k['order']) & (Evaluations_df['freq']==str(k['freq']))].index
-        if(len(r)):
-            r=r[0]
-            Evaluations_df.iloc[r]=k
-        else:
-            Evaluations_df=pd.concat([Evaluations_df,merged_df], ignore_index=True)
-        
 
+    Evaluations_df=pd.concat([Evaluations_df,merged_df], ignore_index=True)
     Evaluations_df.to_csv(Evaluations_csv,index=False)
     return Evaluations_df
-if Test==2:
-    Real_Evaluation(g="alex",_ord='GBBBBBBB',_fs=[ [ [4,6],[6],[6],[6],[6],[6],[6],[6] ] ])
-    Real_Evaluation(g="alex",_ord='BBBBBBBB',_fs=[ [ [0],[1],[2],[3],[4],[5],[6],[7] ] ])
-
-
-def Test():
-    _fs=[ [ [0],[1],[2],[3],[4],[5],[6],[7] ],
-         [ [7],[6],[5],[4],[3],[2],[1],[0] ] ]
-    _order='BBBBBBBB'
-    _g="alex"
-    for fs in _fs:
-        Real_Evaluation(g="alex",_ord=_order,_fs=[fs])
-        ''' Profile(_ff=[fs], _n=n, order=_order, graph=_g, pwr="pwr.csv", tme="temp.txt",caching=False)
-        time=Parse(timefile="temp.txt", graph=_g, order=_order, frqss=[fs])
-        power=Parse_Power(pwrfile="pwr.csv", graph=_g, order=_order, frqss=[fs])
-        print(time)
-        print(power)'''
-        _dvfs_delay=3.5
-        #np.reshape(fs,-1)
-        cmp=Comp_Cost(g=_g,fn=fs,cmps=_order,dvfs_delay=_dvfs_delay, debug=False)
-        cmm=Comm_Cost(g=_g,fn=fs,cmps=_order,dvfs_delay=_dvfs_delay, debug=False)
-        print(cmp)
-        print(cmm)
-
+#Real_Evaluation(g="alex",ord='GBBBBBBB',_fs=[ [ [4,6],[6],[6],[6],[6],[6],[6],[6] ] ])
+#Real_Evaluation(g="alex",ord='BBBBBBBB',_fs=[ [ [0],[1],[2],[3],[4],[5],[6],[7] ] ])
 
 def Transfer_Cost(_order,fs,_kernel_c=96*100):   
     g="test_transfer"
@@ -984,11 +1098,11 @@ def Transfer_Cost(_order,fs,_kernel_c=96*100):
     pwrfile=f'{Synthetic_Tranfer_logs}/power_{g}_{_order}_{str(_kernel_c)}_{str(fs)}.csv'
     timefile=f'{Synthetic_Tranfer_logs}/time_{g}_{_order}_{str(_kernel_c)}_{str(fs)}.txt'
     
-    Profile(_ff=fs, _n=n, order=_order, graph=g, pwr=pwrfile, tme=timefile,caching=False,kernel_c=_kernel_c)
+    Profile(_ff=fs, _n=n, order=ord, graph=g, pwr=pwrfile, tme=timefile,caching=True,kernel_c=_kernel_c)
     
-    trans,transfer_df_time=Parse_transfer_graph(timefile=timefile, graph=g, order=_order, frqss=fs)
+    trans,transfer_df_time=Parse_transfer_graph(timefile=timefile, graph=g, order=ord, frqss=fs)
 
-    trans_pwr,trans_pwr_df=Parse_Power_Transfer_graph(file_name=pwrfile,graph=g,order=_order,frqss=fs)
+    trans_pwr,trans_pwr_df=Parse_Power_Transfer_graph(file_name=pwrfile,graph=g,order=ord,frqss=fs)
     
     return trans,trans_pwr,trans_pwr_df,transfer_df_time
 
@@ -999,47 +1113,35 @@ def Explore_Freq_on_Transfering():
             'LB':[[[0],[i]] for i in range(NFreqs['B'])],
             'GB':[[[0,i],[i]] for i in range(NFreqs['B'])],
             'LG':[[[0],[0,i]] for i in range(NFreqs['B'])],
-            'BG':[[[i],[0,i]] for i in range(NFreqs['B'])],
-        }
+            'BG':[[[i],[0,i]] for i in range(NFreqs['B'])]}
     global Transfer_Freq_df
-    if Transfer_Freq_csv.exists():
+    if Transfer_Freq_df.exists():
         Transfer_Freq_df=pd.read_csv(Transfer_Freq_csv)
     else:
-        Transfer_Freq_df = pd.DataFrame(columns=['kernels', 'order', 'SenderFreq','RecFreq', 'transfer_time', 'transfer_power'])
+        Transfer_Freq_df = pd.DataFrame(columns=['kernels', 'order', 'SenderFreq','RecFreq' 'transfer_time', 'transfer_power'])
     kernel_cs=[150]
     kernel_cs=[96*i for i in kernel_cs]
     
     #global trans,trans_pwr,trans_pwr_df,transfer_df_time
     for kernel_c in kernel_cs:
         for order in _fs:
-            print(f'order:{order}, kernels:{kernel_c}, shape: {Transfer_Freq_df[(Transfer_Freq_df["order"]==order) & (Transfer_Freq_df["kernels"]==kernel_c)].shape[0]}')
-            if Transfer_Freq_df[(Transfer_Freq_df['order']==order) & (Transfer_Freq_df['kernels']==kernel_c)].shape[0]==0:
+            print(f'order:{order}, kernels:{kernel_c}, shape: {Transfer_Freq_df[(Transfer_Freq_df["order"]==orders[order]) & (Transfer_Freq_df["kernels"]==kernel_c)].shape[0]}')
+            if Transfer_Freq_df[(Transfer_Freq_df['order']==orders[order]) & (Transfer_Freq_df['kernels']==kernel_c)].shape[0]==0:
                 try:
-                #if True:
                     trans,trans_pwr,trans_pwr_df,transfer_df_time=Transfer_Cost(_order=order,fs=_fs[order],_kernel_c=kernel_c)
                     #transfer_df_freq.loc[len(transfer_df_freq)] = {"kernels":kernel_c, "c":orders[_c], "transfer_time":transfer_df_time, "transfer_power":trans_pwr_df}
                     trans_pwr_df['freq'] = trans_pwr_df['freq'].apply(lambda x: tuple(tuple(i) for i in x))
                     transfer_df_time['freq'] = transfer_df_time['freq'].apply(lambda x: tuple(tuple(i) for i in x))
-                    merged_df = pd.merge(trans_pwr_df, transfer_df_time, on=['order', 'freq','SenderFreq','RecFreq'])
+                    merged_df = pd.merge(trans_pwr_df, transfer_df_time, on=['order', 'freq'])
                     merged_df['kernels']=kernel_c
                     Transfer_Freq_df=pd.concat([Transfer_Freq_df,merged_df], ignore_index=True)
                     print(f'merged is:\n{merged_df}')
                     print(f'accumulated result is:\n{Transfer_Freq_df}')
                     Transfer_Freq_df.to_csv(Transfer_Freq_csv,index=False)
-                    time.sleep(5)
-                    #input()
-                except Exception as e:
-                    print("Error occurred:", e)
-                    print("Traceback:")
-                    traceback.print_exc()
+                    time.sleep(10)
+                except:
                     ab()
-    first_transfer_time = Transfer_Freq_df.groupby('order')['transfer_time'].first()
-    first_transfer_power = Transfer_Freq_df.groupby('order')['transfer_power'].first()
-    Transfer_Freq_df['time_ratio'] = Transfer_Freq_df['transfer_time'] / Transfer_Freq_df['order'].map(first_transfer_time)
-    Transfer_Freq_df['power_ratio'] = Transfer_Freq_df['transfer_power'] / Transfer_Freq_df['order'].map(first_transfer_power)   
-    Transfer_Freq_df.to_csv(Transfer_Freq_csv,index=False)
-if Test==3:
-    Explore_Freq_on_Transfering()
+#Explore_Freq_on_Transfering()
 
 
 def Plot_Transfer_VS_Data_size(order,freq_mode):
@@ -1093,15 +1195,15 @@ def Explore_Data_Size_on_Transfering(freq_mode="max"):
 
         for kernel_c in kernel_cs:
             for order in _fs["max"]:
-                if Transfer_Data_Size_Max_Freq_df[(Transfer_Data_Size_Max_Freq_df['order']==order) & 
+                if Transfer_Data_Size_Max_Freq_df[(Transfer_Data_Size_Max_Freq_df['order']==orders[order]) & 
                                                   (Transfer_Data_Size_Max_Freq_df['kernels']==kernel_c)].shape[0]==0:
                     try:
-                        if order[1]=='G' and kernel_c > 150*96:
+                        if orders[order][1]=='G' and kernel_c > 150*96:
                             continue
                                                     
-                        ff=_fs["max"][order]
-                        trans,trans_pwr,trans_pwr_df,transfer_df_time=Transfer_Cost(_order=order,fs=ff,_kernel_c=kernel_c)
-                        Transfer_Data_Size_Max_Freq_df.loc[len(Transfer_Data_Size_Max_Freq_df)] = {"kernels":kernel_c, "order":order, "transfer_time":trans[1], "transfer_power":trans_pwr[1]}
+                        _fs=_fs["max"][order]
+                        trans,trans_pwr,trans_pwr_df,transfer_df_time=Transfer_Cost(_order=order,fs=_fs,_kernel_c=kernel_c)
+                        Transfer_Data_Size_Max_Freq_df.loc[len(Transfer_Data_Size_Max_Freq_df)] = {"kernels":kernel_c, "order":orders[_c], "transfer_time":trans[1], "transfer_power":trans_pwr[1]}
                         Transfer_Data_Size_Max_Freq_df.to_csv(Transfer_Data_Size_Max_Freq_csv,index=False)
                         time.sleep(10)
                     except:
@@ -1122,14 +1224,14 @@ def Explore_Data_Size_on_Transfering(freq_mode="max"):
 
         for kernel_c in kernel_cs:
             for order in _fs["min"]:
-                if Transfer_Data_Size_Min_Freq_df[(Transfer_Data_Size_Min_Freq_df['order']==order) & 
+                if Transfer_Data_Size_Min_Freq_df[(Transfer_Data_Size_Min_Freq_df['order']==orders[order]) & 
                                                   (Transfer_Data_Size_Min_Freq_df['kernels']==kernel_c)].shape[0]==0:
                     try:
-                        if order[1]=='G' and kernel_c > 150*96:
+                        if orders[order][1]=='G' and kernel_c > 150*96:
                             continue
-                        ff=_fs["min"][order]
-                        trans,trans_pwr,trans_pwr_df,transfer_df_time=Transfer_Cost(_order=order,fs=ff,_kernel_c=kernel_c)
-                        Transfer_Data_Size_Min_Freq_df.loc[len(Transfer_Data_Size_Min_Freq_df)] = {"kernels":kernel_c, "order":order, "transfer_time":trans[1], "transfer_power":trans_pwr[1]}
+                        _fs=_fs["min"][order]
+                        trans,trans_pwr,trans_pwr_df,transfer_df_time=Transfer_Cost(_order=order,fs=_fs,_kernel_c=kernel_c)
+                        Transfer_Data_Size_Min_Freq_df.loc[len(Transfer_Data_Size_Min_Freq_df)] = {"kernels":kernel_c, "order":orders[_c], "transfer_time":trans[1], "transfer_power":trans_pwr[1]}
                         Transfer_Data_Size_Min_Freq_df.to_csv(Transfer_Data_Size_Min_Freq_csv,index=False)
                         time.sleep(10)
                     except:
@@ -1138,255 +1240,32 @@ def Explore_Data_Size_on_Transfering(freq_mode="max"):
         return Transfer_Data_Size_Min_Freq_df
 
 
-# +
 def Run_Explore_Data_Size_on_Transfering(_freq_mode="max"):
     orders={0:'BL', 1:'LB', 2:'GB', 3:'LG', 4:'BG'}
-    Explore_Data_Size_on_Transfering(freq_mode=_freq_mode)
+    Explore_Data_Size_on_Transfering(freqs_mode=_freq_mode)
     for i in orders:
         Plot_Transfer_VS_Data_size(order=orders[i],freq_mode=_freq_mode)
-        
-if Test==3:
-    Run_Explore_Data_Size_on_Transfering(_freq_mode="max")
-    Run_Explore_Data_Size_on_Transfering(_freq_mode="min")
+#Run_Explore_Data_Size_on_Transfering(_freq_mode="max")
+#Run_Explore_Data_Size_on_Transfering(_freq_mode="min")
 
 
-# -
-
-def Compute_Layer_Percentage():
-#if True:
-    sum_time_per_graph_component = Layers_df.groupby(['Graph', 'Component', 'Freq', 'Freq_Host'])['Time'].sum().reset_index()
-    pd.set_option('display.max_rows', 1000)
-    Layers_With_Percentage_df=Layers_df.merge(sum_time_per_graph_component, on=['Graph', 'Component', 'Freq', 'Freq_Host'], suffixes=('', '_sum'))
-    Layers_With_Percentage_df['Time_Percentage'] = Layers_With_Percentage_df['Time'] / Layers_With_Percentage_df['Time_sum'] * 100
-    #print(Layers_With_Percentage_df[(Layers_With_Percentage_df["Graph"]=="alex") & (Layers_With_Percentage_df["Freq"]==0) & (Layers_With_Percentage_df["Component"]=="G") & (Layers_With_Percentage_df["Freq_Host"]==0)]["Time_Percentage"].sum())
-    Layers_With_Percentage_df.to_csv(Layers_With_Percentage_csv, index=False)
-    Layers_Percentage_df=Layers_With_Percentage_df.groupby(['Graph', 'Component','Layer','Metric'])['Time_Percentage'].mean().reset_index()
-    #print(Layers_Percentage_df)
-    #Layers_Percentage_df.to_csv(Layers_Percentage_csv, index=False)
-    pivot_df = Layers_Percentage_df.pivot_table(index=['Graph', 'Layer', 'Metric'], columns='Component', values='Time_Percentage')
-    pivot_df.columns = ['Time_Percentage_{}'.format(col) for col in pivot_df.columns]
-    pivot_df = pivot_df.reset_index()
-    
-    pivot_df['Time_Percentage_Average'] = pivot_df[['Time_Percentage_B', 'Time_Percentage_G', 'Time_Percentage_L']].mean(axis=1)
-    
-    pivot_df = pivot_df.groupby(['Graph', 'Layer']).sum().reset_index()
-    pivot_df.to_csv(Layers_Percentage_csv, index=False)
-    display(pivot_df)
-
-
-## plot energy of layers running with different components with freq min
-def _Analyze_Components(g=['alex']):
-    Layers_df['Energy']=Layers_df['Time']*Layers_df['Power']/1000.0
-    grouped_df = Layers_df[(Layers_df['Graph'].isin(g)) & 
-                        (Layers_df['Metric'].isin(['in','task'])) & 
-                        (Layers_df['Freq'].isin(range(10))) & 
-                        (Layers_df['Freq_Host'].isin([0,-1]))&
-                        (Layers_df['Layer'].isin(range(10))) ].groupby(['Component','Layer','Metric'])\
-                        ['Time','Power','Energy'].mean().reset_index()
-
-    
-    
-    #display(grouped_df)
-
-    '''grouped_df['Layer'] = grouped_df['Layer'].where(grouped_df['Metric'] != 'in', 'input')
-    grouped_df = grouped_df.drop('Metric', axis=1)
-    print(grouped_df)'''
-
-    aggregations = {
-        'Time': 'sum',
-        'Power': 'mean',
-        'Energy': 'sum'
-    }
-    grouped_df = grouped_df.groupby(['Component', 'Layer']).agg(aggregations).reset_index()
-    #display(grouped_df)
-
-    pivot_df = grouped_df.pivot_table(index=['Layer'], columns='Component', values=['Time', 'Energy'])
-    pivot_df.columns = ['{}_{}'.format(col[0], col[1]) for col in pivot_df.columns]
-    pivot_df = pivot_df.reset_index()
-
-    display(pivot_df)
-    energy_cols = ['Energy_G', 'Energy_B', 'Energy_L']
-    energy_plot = pivot_df.plot(x='Layer', y=energy_cols, kind='bar', title='{} Energy for Average Freqs'.format(g))
-    energy_plot.set_xlabel('Layer')
-    energy_plot.set_ylabel('Energy')
-    plt.show()
-
-    # Plot Time columns
-    time_cols = ['Time_G', 'Time_B', 'Time_L']
-    time_plot = pivot_df.plot(x='Layer', y=time_cols, kind='bar', title='{} Time for Average Freqs'.format(g))
-    time_plot.set_xlabel('Layer')
-    time_plot.set_ylabel('Time')
-    plt.show()
-if Test==2:
-    _Analyze_Components(g=['alex'])
-
-
-## plot (and extract and save result to csv files) energy of layers running with different components with freq min
-def Analyze_Components(g=['alex']):
-
-    grouped_df = Layers_df[(Layers_df['Graph'].isin(g)) & 
-                        (Layers_df['Metric'].isin(['in','task'])) &  
-                        (Layers_df['Freq_Host'].isin([0,-1]))&
-                        (Layers_df['Layer'].isin(range(10))) ].groupby(['Freq','Component','Layer','Metric'])\
-                        ['Time','Power'].sum().reset_index()
-
-    grouped_df['Energy']=grouped_df['Time']*grouped_df['Power']/1000.0
-    #print(grouped_df)
-
-    '''grouped_df['Layer'] = grouped_df['Layer'].where(grouped_df['Metric'] != 'in', 'input')
-    grouped_df = grouped_df.drop('Metric', axis=1)
-    print(grouped_df)'''
-
-    aggregations = {
-        'Time': 'sum',
-        'Power': 'mean',
-        'Energy': 'sum'
-    }
-    grouped_df = grouped_df.groupby(['Freq','Component', 'Layer']).agg(aggregations).reset_index()
-    #print(grouped_df)
-
-    pivot_df = grouped_df.pivot_table(index=['Layer','Freq'], columns='Component', values=['Time', 'Energy'])
-    pivot_df.columns = ['{}_{}'.format(col[0], col[1]) for col in pivot_df.columns]
-    #pivot_df = grouped_df.pivot_table(index=['Layer','Freq'], columns='Component', values='Energy')
-    #pivot_df.columns = ['Energy_{}'.format(col) for col in pivot_df.columns]
-    pivot_df = pivot_df.reset_index()
-    #print(pivot_df)
-    pivot_df.to_csv("Components.csv",index=False)
-    
-   # Group by 'Layer' and get the maximum valid frequency for each parameter
-    max_freq_B = pivot_df[pivot_df['Energy_B'].notna()].groupby('Layer')['Freq'].max()
-    max_freq_G = pivot_df[pivot_df['Energy_G'].notna()].groupby('Layer')['Freq'].max()
-    max_freq_L = pivot_df[pivot_df['Energy_L'].notna()].groupby('Layer')['Freq'].max()
-
-    # Extract the values at the maximum valid frequency for each parameter
-    freq_df = pd.DataFrame({
-        'Layer': max_freq_B.index,
-        'Energy_B_MaxFreq': pivot_df[pivot_df['Freq'].isin(max_freq_B.values)]['Energy_B'].values,
-        'Time_B_MaxFreq': pivot_df[pivot_df['Freq'].isin(max_freq_B.values)]['Time_B'].values,
-        'Energy_G_MaxFreq': pivot_df[pivot_df['Freq'].isin(max_freq_G.values)]['Energy_G'].values,
-        'Time_G_MaxFreq': pivot_df[pivot_df['Freq'].isin(max_freq_G.values)]['Time_G'].values,
-        'Energy_L_MaxFreq': pivot_df[pivot_df['Freq'].isin(max_freq_L.values)]['Energy_L'].values,
-        'Time_L_MaxFreq': pivot_df[pivot_df['Freq'].isin(max_freq_L.values)]['Time_L'].values})
-    display(freq_df)
-    energy_cols = ['Energy_G_MaxFreq', 'Energy_B_MaxFreq', 'Energy_L_MaxFreq']
-    energy_plot = freq_df.plot(x='Layer', y=energy_cols, kind='bar', title='Energy for Freq Max')
-    energy_plot.set_xlabel('Layer')
-    energy_plot.set_ylabel('Energy')
-    plt.show()
-
-    # Plot Time columns
-    time_cols = ['Time_G_MaxFreq', 'Time_B_MaxFreq', 'Time_L_MaxFreq']
-    time_plot = freq_df.plot(x='Layer', y=time_cols, kind='bar', title='Time for Freq Max')
-    time_plot.set_xlabel('Layer')
-    time_plot.set_ylabel('Time')
-    plt.show()
-    
-    for freq in pivot_df['Freq'].unique():
-        # Filter dataframe for the current Freq value
-        freq_df = pivot_df[pivot_df['Freq'] == freq]
-        display(freq_df)
-
-        # Plot Energy columns
-        energy_cols = ['Energy_G', 'Energy_B', 'Energy_L']
-        energy_plot = freq_df.plot(x='Layer', y=energy_cols, kind='bar', title='Energy for Freq {}'.format(freq))
-        energy_plot.set_xlabel('Layer')
-        energy_plot.set_ylabel('Energy')
-        plt.show()
-
-        # Plot Time columns
-        time_cols = ['Time_G', 'Time_B', 'Time_L']
-        time_plot = freq_df.plot(x='Layer', y=time_cols, kind='bar', title='Time for Freq {}'.format(freq))
-        time_plot.set_xlabel('Layer')
-        time_plot.set_ylabel('Time')
-        plt.show()
-if Test==2:
-    Analyze_Components(g=['google'])
-
-
-def generate_random_strings(n, num_strings):
-    chars = ['L', 'B', 'G']
-    random_strings = []
-    for _ in range(num_strings):
-        random_string = ''.join(random.choice(chars) for _ in range(n))
-        random_strings.append(random_string)
-    return random_strings
-#random_strings = generate_random_strings(8, 100)
-
-
-# +
-def Run_Eval(g='alex',num_evals=10,num_freqs=1):
-    Evaluation_df=pd.read_csv(Evaluations_csv)
-    
-    cases=Evaluation_df[Evaluation_df['graph']==g].shape[0]
-    print(f'There are {cases} existed for graph {g}')
-    num_evals=max(0,num_evals-cases)
-    num_orders=math.ceil(num_evals/num_freqs)
-    
-    _n=NLayers[g]
-    orders=generate_random_strings(_n,num_orders)
-               
-    fs={}
-    for order in orders:
-        fs[order]=[]
-        for k in range(num_freqs):
-            f=[]
-            for i,comp in enumerate(order):
-                v=[]
-                v.append(random.randint(0, NFreqs[comp]-1))
-                if comp=='G':
-                    v.append(random.randint(0, NFreqs['B']-1))
-                f.append(tuple(v))
-                
-            fs[order].append(str(tuple(f)))
-            
-            
-    for order in fs:
-        for f in fs[order]:
-            row=Evaluation_df[(Evaluation_df['order']==order) & (Evaluation_df['freq']==str(f)) & (Evaluation_df['graph']==g)]
-            if row.shape[0]==0:
-                Evaluation_df.loc[len(Evaluation_df)]={"graph":g,"order":order,"freq":f}
-            
-    Evaluation_df.to_csv(Evaluations_csv,index=False)
-    
-    grouped = Evaluation_df.groupby('order')
-    unique_values_order = Evaluation_df['order'].unique()
-
-    # Loop through the unique values in column 'order'
-    for value in unique_values_order:
-        # Get the group corresponding to the current value in column 'order'
-        group = grouped.get_group(value)
-        # Get the values in column 'freq' for the current group
-        column_freq_values = group['freq'].values
-        # Print the value in column 'A' and the corresponding values in column 'freq'
-        print(f"Value in column 'order': {value}")
-        print(f"Values in column 'freq': {column_freq_values}")
-        print("----")
-        list_fs=format_to_list(column_freq_values)
-        Real_Evaluation(g,_ord=value,_fs=list_fs)
-
-Run_Eval(g='alex')
-
-# -
-
-def main():
-
+#def main():
+if True:
     Load_Data()
     
-    '''print('\n\n\n\n***************Run_Profile_Transfer_Time\n')
+    print('\n\n\n\n***************Run_Profile_Transfer_Time\n')
     input('Make sure to set profile mode to PROFILE_MODE_TRANSFER_TIMES in ExecutionHelpers.cpp')
     Run_Profile_Transfer_Time()
     
     print('\n\n\n\n***************Profiling_Layers\n')
     input('Make sure to set profile mode to PROFILE_MODE_LAYERS in ExecutionHelpers.cpp')
-    Profiling_Layers()'''
+    Profiling_Layers()
     
     
     print('\n\n\n\n***************Explore_Freq_on_Transfering\n')
-    #input('Make sure to set profile mode to PROFILE_MODE_SYNTHETIC_TRANSFERS in ExecutionHelpers.cpp')
+    input('Make sure to set profile mode to PROFILE_MODE_SYNTHETIC_TRANSFERS in ExecutionHelpers.cpp')
     Explore_Freq_on_Transfering()
     
-    # For first kernel size (10*96) it needs several runs because time is small
-    # and may power sampling does not happen
     print('\n\n\n\n***************Run_Explore_Data_Size_on_Transfering(Max)\n')
     Run_Explore_Data_Size_on_Transfering(_freq_mode="max")
     
@@ -1394,17 +1273,8 @@ def main():
     Run_Explore_Data_Size_on_Transfering(_freq_mode="min")
     
     
-    print('\n\n\n\n***************Real_Evaluation\n')
-    #input('Make sure to set profile mode to PROFILE_MODE_WHOLE_NETWORK in ExecutionHelpers.cpp')
-    Real_Evaluation(g="alex",_ord='GBBBBBBB',_fs=[ [ [4,6],[6],[6],[6],[6],[6],[6],[6] ] ])
-    Real_Evaluation(g="alex",_ord='BBBBBBBB',_fs=[ [ [0],[1],[2],[3],[4],[5],[6],[7] ] ])
-    
-    
-    print('\n\n\n\n***************Compute_Layer_Percentage\n')
-    Compute_Layer_Percentage()
-    
     print('\n\n\n\n***************Value function for indexing\n')
-    Value('alex','B',[7],7,'task','Time')
+    Value('alex','B',[7],7,'out','Time')
     Value('alex','G',[0,0],0,'task','Time')
     [Value('alex','B',[i],i,'task','Time') for i in range(0,8)]
     [Value('alex','B',[i-1],i,'task','Time') for i in range(1,8)]
@@ -1432,16 +1302,11 @@ def main():
     Comm_Cost(cmps="LLLBBBBB",debug=True)
     
     print('\n\n\n\n***************Comp_Cost\n')
-    print(Comp_Cost(g="alex",cmps='BBBBBBBB',fn=_fn[::-1]))
+    Comp_Cost(g="alex",cmps='BBBBBBBB',fn=_fn[::-1])
     
-    print('\n\n\n\n***************_Analyze_Components\n')
-    _g='google'
-    _Analyze_Components(g=[_g])
-    
-    print('\n\n\n\n***************Analyze_Components\n')
-    Analyze_Components(g=[_g])
-    
-    print('\n\n\n\n***************Random strings:\n')
-    n = 8  # replace with desired length of the random strings
-    num_strings = 1000  # replace with desired number of random strings
-    random_strings = generate_random_strings(n, num_strings)
+    print('\n\n\n\n***************Real_Evaluation\n')
+    input('Make sure to set profile mode to PROFILE_MODE_WHOLE_NETWORK in ExecutionHelpers.cpp')
+    Real_Evaluation(g="alex",ord='GBBBBBBB',_fs=[ [ [4,6],[6],[6],[6],[6],[6],[6],[6] ] ])
+    Real_Evaluation(g="alex",ord='BBBBBBBB',_fs=[ [ [0],[1],[2],[3],[4],[5],[6],[7] ] ])
+
+
