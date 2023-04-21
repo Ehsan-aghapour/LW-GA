@@ -18,7 +18,7 @@ import random
 import math
 
 
-Test=1
+Test=0
 
 
 cnn_dir="/home/ehsan/UvA/ARMCL/Rock-Pi/ComputeLibrary_64_CPUGPULW/"
@@ -37,7 +37,7 @@ graphs=["alex", "google", "mobile", "res50", "squeeze"]
 NLayers={"alex":8, "google":11, "mobile":14, "res50":18, "squeeze":10, "test_transfer":2}
 NFreqs={"L":6, "B":8, "G":5}
 Metrics=["in","task","out","trans"]
-n=100
+Num_frames=100
 params={"alex":(1,1,1), "google":(2,2,1), "mobile":(2,3,1), "res50":(2,4,1), "squeeze":(1,5,1), "test_transfer":(1,0,0)}
 C=["L","B", "G"]
 
@@ -214,7 +214,7 @@ def format_to_list(fs):
 
 ### This is common function to run a case
 ## Remember to modify ARMcL code based on your desire
-def Profile(_ff=[[[0],[1],[2],[3,6],[4],[5],[6],[7]]],_n=n,order='BBBGBBBB',graph="alex",pwr="pwr.csv",tme="temp.txt", caching=True, kernel_c=96):
+def Profile(_ff=[[[0],[1],[2],[3,6],[4],[5],[6],[7]]],_Num_frames=Num_frames,order='BBBGBBBB',graph="alex",pwr="pwr.csv",tme="temp.txt", caching=True, kernel_c=96):
     if os.path.isfile(pwr) and os.path.isfile(tme) and caching:
         print("loading existed files")
         return 
@@ -226,7 +226,7 @@ def Profile(_ff=[[[0],[1],[2],[3,6],[4],[5],[6],[7]]],_n=n,order='BBBGBBBB',grap
     time.sleep(1)
     Power_monitoring = threading.Thread(target=Arduino_read.run,args=(pwr,))
     Power_monitoring.start()
-    rr=f"PiTest build/examples/LW/{cnn[graph]} test_graph/ CL {params[graph][0]} {params[graph][1]} {params[graph][2]} {_n} 0 0 100 100 {order} 1 2 4 Alex B B --kernel_c={kernel_c}"
+    rr=f"PiTest build/examples/LW/{cnn[graph]} test_graph/ CL {params[graph][0]} {params[graph][1]} {params[graph][2]} {_Num_frames} 0 0 100 100 {order} 1 2 4 Alex B B --kernel_c={kernel_c}"
     print(f'run command is {rr}')
     oo=open(tme,'w+')
     Run_Graph(ff,rr,oo,True)
@@ -260,12 +260,12 @@ def Parse_Transfer_Layers(timefile,graph="alex",order="BGBGBGBG"):
  
 #### Run a graph for measuring trasfer times of real layers
 #### As transfer time of real layers is small, it does not profile power
-def Profile_Transfer_Layers(ff=["7-6-4-[3,6]-4-5-6-7"],_n=n,order='BBBGBBBB',graph="alex",tme="temp.txt",caching=False):
+def Profile_Transfer_Layers(ff=["7-6-4-[3,6]-4-5-6-7"],_Num_frames=Num_frames,order='BBBGBBBB',graph="alex",tme="temp.txt",caching=False):
     if os.path.isfile(tme) and caching:
         print("loading existed files")
         return 
     
-    rr=f"PiTest build/examples/LW/{cnn[graph]} test_graph/ CL {params[graph][0]} {params[graph][1]} 1 {_n} 0 0 100 100 {order} 1 2 4 Alex B B"
+    rr=f"PiTest build/examples/LW/{cnn[graph]} test_graph/ CL {params[graph][0]} {params[graph][1]} 1 {_Num_frames} 0 0 100 100 {order} 1 2 4 Alex B B"
     oo=open(tme,'w+')
     Run_Graph(ff,rr,oo,True)
     #time.sleep(2)
@@ -299,7 +299,7 @@ def Profile_Transfer_Time(graph="alex"):
         print(f'graph:{graph} order:{_order} ')
         Transfers_logs.mkdir(parents=True, exist_ok=True)
         timefile=f'{Transfers_logs}/transfer_{graph}_'+_order+'.txt'
-        Profile_Transfer_Layers(["min"],n,_order,graph,timefile,caching=True)
+        Profile_Transfer_Layers(["min"],Num_frames,_order,graph,timefile,caching=True)
         time.sleep(2)
         trans_df=Parse_Transfer_Layers(timefile,graph,_order)
         print(trans_df)
@@ -465,11 +465,11 @@ def Parse_Power(file_name,graph,order,frqss):
     task_pwrs={}
     #for each freq: NL*2(which is input-layer pairs)
     #after each freq we have an excess [0] and [1] interval, so:
-    nn=((2*NL*n)+2)
+    nn=((2*NL*Num_frames)+2)
     nnn=nn*len(frqss)
     if len(powers)!=nnn:
         print(f"bad power size:{len(powers)}")
-        print(f'Expected size is:NFreqx((2xNLxn)+2) which is {len(frqss)}x((2x{NL}x{n})+2)=nnn')
+        print(f'Expected size is:NFreqx((2xNLxn)+2) which is {len(frqss)}x((2x{NL}x{Num_frames})+2)=nnn')
         input("what")
         return
     print(f'len powers is {len(powers)}')
@@ -507,11 +507,11 @@ def Parse_Power_Transfer_graph(file_name,graph,order,frqss):
     transfer_df_pwr = pd.DataFrame(columns=['order', 'freq', 'transfer_power','RecFreq','SenderFreq'])
     #for each freq: NL*2(which is input-layer pairs)
     #after each freq we have a excess [0]and[1]interval so:
-    nn=((2*NL*n)+2)
+    nn=((2*NL*Num_frames)+2)
     nnn=nn*len(frqss)
     if len(powers)!=nnn:
         print(f"bad power size: {len(powers)}")
-        print(f'Expected size is:NFreqx((2xNLxn)+2) which is {len(frqss)}x((2x{NL}x{n})+2)=nnn')
+        print(f'Expected size is:NFreqx((2xNLxn)+2) which is {len(frqss)}x((2x{NL}x{Num_frames})+2)=nnn')
         input("what")
         return
     print(f'len powers is {len(powers)}')
@@ -572,7 +572,7 @@ def Profile_Task_Time(graph):
         Layers_logs.mkdir(parents=True, exist_ok=True)
         pwrfile=f'{Layers_logs}/power_{graph}_'+order+'.csv'
         timefile=f'{Layers_logs}/time_{graph}_'+order+'.txt'
-        Profile(frqss,n,order,graph,pwrfile,timefile,caching=True)
+        Profile(frqss,Num_frames,order,graph,pwrfile,timefile,caching=True)
         #time.sleep(10)
         time_df=Parse(timefile,graph,order,frqss)
         power_df=Parse_Power(pwrfile,graph,order,frqss)
@@ -830,10 +830,11 @@ def Parse_Power_total(file_name,graph,order,frqss):
     powers,tts=Read_Power(file_name)
     power_df = pd.DataFrame(columns=['graph', 'order', 'freq', 'input_power','task_power'])
     NL=1
-    nn=((2*NL*n)+2)
+    nn=((2*NL*Num_frames)+2)
     nnn=nn*len(frqss)
     if len(powers)!=nnn:
         print(f"bad power size: {len(powers)}")
+        print(f'Expected size is:NFreqx((2xNLxn)+2) which is {len(frqss)}x((2x{NL}x{Num_frames})+2)={nnn}')
         input("what")
         return
     print(f'len powers is {len(powers)}')
@@ -884,7 +885,9 @@ def Parse_total(timefile,graph,order,frqss):
             k = match.group(1)
             value = float(match.group(2))
             parts.append(value)
-
+    if df_time.shape[0] != len(frqss):
+        print(f'Parse performance error: number of runs {df_time.shape[0]} is not equals to number of freqs {len(frqss)}')
+        input()
     return df_time
 
 
@@ -917,7 +920,8 @@ def Real_Evaluation(g="alex",_ord='GBBBBBBB',_fs=[ [ [0,0],[0],[0],[0],[0],[0],[
 
     if len(new_fs)==0:
         return Evaluations_df
-    Profile(_ff=new_fs, _n=n, order=_ord, graph=g, pwr=pf, tme=tf,caching=False,kernel_c=96*50)
+    global n
+    Profile(_ff=new_fs, _Num_frames=Num_frames, order=_ord, graph=g, pwr=pf, tme=tf,caching=False,kernel_c=96*50)
     time_df=Parse_total(timefile=tf, graph=g, order=_ord, frqss=new_fs)
     power_df=Parse_Power_total(file_name=pf,graph=g,order=_ord,frqss=new_fs)
     if type(_fs[0])==list:
@@ -926,7 +930,7 @@ def Real_Evaluation(g="alex",_ord='GBBBBBBB',_fs=[ [ [0,0],[0],[0],[0],[0],[0],[
     merged_df = pd.merge(power_df, time_df, on=['graph', 'order', 'freq'])
 
 
-    input_time=time_df['input_time'].iloc[0]
+    '''input_time=time_df['input_time'].iloc[0]
     task_time=time_df['task_time'].iloc[0]
     input_power=power_df['input_power'].iloc[0]
     task_power=power_df['task_power'].iloc[0]
@@ -935,7 +939,11 @@ def Real_Evaluation(g="alex",_ord='GBBBBBBB',_fs=[ [ [0,0],[0],[0],[0],[0],[0],[
     total_e=input_e+task_e
     merged_df['input_e']=input_e/1000.0
     merged_df['task_e']=task_e/1000.0
-    merged_df['total_e']=total_e/1000.0
+    merged_df['total_e']=total_e/1000.0'''
+    
+    merged_df['input_e']=merged_df['input_power']*merged_df['input_time']/1000.0
+    merged_df['task_e']=merged_df['task_power']*merged_df['task_time']/1000.0
+    merged_df['total_e']=merged_df['input_e']+merged_df['task_e']
     display(merged_df)
     #merged_df=merged_df.reset_index(drop=True,inplace=True)
     
@@ -943,7 +951,8 @@ def Real_Evaluation(g="alex",_ord='GBBBBBBB',_fs=[ [ [0,0],[0],[0],[0],[0],[0],[
         r=Evaluations_df[(Evaluations_df['graph']==k['graph']) & (Evaluations_df['order']==k['order']) & (Evaluations_df['freq']==str(k['freq']))].index
         if(len(r)):
             r=r[0]
-            Evaluations_df.iloc[r]=k
+            for j,col in enumerate(Evaluations_df):
+                Evaluations_df.iloc[r,j]=k[col]
         else:
             Evaluations_df=pd.concat([Evaluations_df,merged_df], ignore_index=True)
         
@@ -962,7 +971,7 @@ def Test():
     _g="alex"
     for fs in _fs:
         Real_Evaluation(g="alex",_ord=_order,_fs=[fs])
-        ''' Profile(_ff=[fs], _n=n, order=_order, graph=_g, pwr="pwr.csv", tme="temp.txt",caching=False)
+        ''' Profile(_ff=[fs], _Num_frames=Num_frames, order=_order, graph=_g, pwr="pwr.csv", tme="temp.txt",caching=False)
         time=Parse(timefile="temp.txt", graph=_g, order=_order, frqss=[fs])
         power=Parse_Power(pwrfile="pwr.csv", graph=_g, order=_order, frqss=[fs])
         print(time)
@@ -984,7 +993,7 @@ def Transfer_Cost(_order,fs,_kernel_c=96*100):
     pwrfile=f'{Synthetic_Tranfer_logs}/power_{g}_{_order}_{str(_kernel_c)}_{str(fs)}.csv'
     timefile=f'{Synthetic_Tranfer_logs}/time_{g}_{_order}_{str(_kernel_c)}_{str(fs)}.txt'
     
-    Profile(_ff=fs, _n=n, order=_order, graph=g, pwr=pwrfile, tme=timefile,caching=False,kernel_c=_kernel_c)
+    Profile(_ff=fs, _Num_frames=Num_frames, order=_order, graph=g, pwr=pwrfile, tme=timefile,caching=False,kernel_c=_kernel_c)
     
     trans,transfer_df_time=Parse_transfer_graph(timefile=timefile, graph=g, order=_order, frqss=fs)
 
@@ -1303,18 +1312,18 @@ if Test==2:
     Analyze_Components(g=['google'])
 
 
-def generate_random_strings(n, num_strings):
+def generate_random_strings(_n, num_strings):
     chars = ['L', 'B', 'G']
     random_strings = []
     for _ in range(num_strings):
-        random_string = ''.join(random.choice(chars) for _ in range(n))
+        random_string = ''.join(random.choice(chars) for _ in range(_n))
         random_strings.append(random_string)
     return random_strings
 #random_strings = generate_random_strings(8, 100)
 
 
 # +
-def Run_Eval(g='alex',num_evals=10,num_freqs=1):
+def Run_Eval(g='alex',num_evals=1000,num_freqs=10):
     Evaluation_df=pd.read_csv(Evaluations_csv)
     
     cases=Evaluation_df[Evaluation_df['graph']==g].shape[0]
@@ -1442,6 +1451,6 @@ def main():
     Analyze_Components(g=[_g])
     
     print('\n\n\n\n***************Random strings:\n')
-    n = 8  # replace with desired length of the random strings
+    _n = 8  # replace with desired length of the random strings
     num_strings = 1000  # replace with desired number of random strings
-    random_strings = generate_random_strings(n, num_strings)
+    random_strings = generate_random_strings(_n, num_strings)
