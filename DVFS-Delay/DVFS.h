@@ -111,7 +111,7 @@ public:
 	        }
 	        clock_gettime(CLOCK_MONOTONIC, &t_end);
 	        unsigned long int ioctltime=diff_time(t_start,t_end);
-			std::cerr<<"IOCTL time:"<<ioctltime<<std::endl;
+		//std::cerr<<"commit freq time:"<<ioctltime<<std::endl;
 	        return 0;
 	}
 	

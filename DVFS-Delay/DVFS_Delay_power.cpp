@@ -1,6 +1,7 @@
 #include <iostream>
 #include <chrono>
 #include <cmath>
+#include <vector>
 
 #include "Power.h"
 #include "DVFS.h"
