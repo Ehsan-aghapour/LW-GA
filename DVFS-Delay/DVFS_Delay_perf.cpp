@@ -23,111 +23,94 @@
 #include "DVFS.h"
 
 class DVFS dvfs;
-/*
-int init_rockpi(){
-    std::string CPU_path="/sys/devices/system/cpu/cpufreq/";
-    std::string GPU_path="/sys/class/devfreq/ff9a0000.gpu/";
-    std::string IOCTL_path="/dev/pandoon_device";
-    std::string Command="chmod 666 " + IOCTL_path;
-    Command="echo pandoon > " + CPU_path + "policy4/scaling_governor";
-    system(Command.c_str());
-    Command="echo pandoon > " + CPU_path + "policy0/scaling_governor";
-    system(Command.c_str());
-    Command="echo pandoon > " + GPU_path + "/governor";
-    system(Command.c_str());
+std::string FreqMeasurementFile="/system/FreqMeasurements.csv";
+const double target_ms=1000;
+int NumLittleFreqs=6;
+int NumBigFreqs=8;
+int NumGPUFreqs=5;
+std::vector<int> littlecpus={3};
+std::vector<int> bigcpus={5};
+std::vector<int> gpucpus={5};
+int relaxtime=5000; //ms
+int N_runs=10;
 
-    Command="cat " + CPU_path + "policy4/scaling_governor";
-    system(Command.c_str());
-    Command="cat " + CPU_path + "policy4/scaling_governor";
-    system(Command.c_str());
-    Command="cat " + GPU_path + "/governor";
-    system(Command.c_str());
-    return 0;
+struct Key {
+    std::string PE;
+    int Freq;
+    int NextFreq;
+};
+
+bool operator==(const Key& lhs, const Key& rhs) {
+    return lhs.PE == rhs.PE && lhs.Freq == rhs.Freq && lhs.NextFreq == rhs.NextFreq;
 }
 
-int open_pandoon(){
-    //int fddd=-1;
-    fd = open("/dev/pandoon_device", O_RDWR);
-    std::cerr<<"Pandoon opened at "<<fd<<std::endl;
-    if (fd<0){
-        printf("DRPM_Ehsan: Pandoon Not Opened. ERROR CODE:%d, ERROR MEANING:%s\n",errno,strerror(errno));
-        close(fd);
-        return -1;
+// Hash function for Key to be used in unordered_map
+struct KeyHash {
+    std::size_t operator()(const Key& key) const {
+        std::size_t h1 = std::hash<std::string>{}(key.PE);
+        std::size_t h2 = std::hash<int>{}(key.Freq);
+        std::size_t h3 = std::hash<int>{}(key.NextFreq);
+        return h1 ^ h2 ^ h3 ;
     }
-    return fd;
-}*/
+};
+std::unordered_map<Key, std::vector<double>, KeyHash> FreqMeasurements;
 
-int init_GPIO(){
-    if (-1 == GPIOExport(POUT))
-        return(1);
-    if (-1 == GPIODirection(POUT, OUT))
-        return(2);
-    if (-1 == GPIOWrite(POUT, 0))
-        std::cerr<<"Could not write 0 to GPIO\n";
-        return (3);
-    return 0;
-}
-
-int init(){
-    int ret=0;
-    //ret=init_rockpi();
-    //ret=open_pandoon();
-    dvfs.init();
-    ret=init_GPIO();
-    return ret;
-}
-
-int calc_num_iterations(const double target_duration_ms=1000){
-    int num_iterations = 10000000;    // initial number of iterations
-    double result = 0;
-
-    // Measure the execution time of the loop
-    auto start_time = std::chrono::high_resolution_clock::now();
-    for (int i = 0; i < num_iterations; ++i) {
-        result += std::sqrt(i);
+int Load_FreqMeasurements(){
+    std::ifstream file(FreqMeasurementFile); // Replace "data.csv" with your actual CSV file name
+    if (!file.is_open()) {
+        std::cout << "Failed to open file" << std::endl;
+        return 1;
     }
-    auto end_time = std::chrono::high_resolution_clock::now();
-    auto duration_ms = std::chrono::duration_cast<std::chrono::milliseconds>(end_time - start_time).count();
-
-    // Adjust the number of iterations based on the measured duration
-    while (duration_ms < target_duration_ms) {
-        num_iterations *= 2;
-        result = 0;
-        start_time = std::chrono::high_resolution_clock::now();
-        for (int i = 0; i < num_iterations; ++i) {
-            result += std::sqrt(i);
+    std::string line;
+    while (std::getline(file, line)) {
+        std::replace(line.begin(), line.end(), ',', ' ');
+        std::istringstream iss(line);
+        int num_iterations;
+        std::string PE;
+        int Freq;
+        int NextFreq;
+        double t;
+        if (iss >> num_iterations >> PE >> Freq>> NextFreq) {
+            // Create a key based on graph, layer, and component
+            Key key{PE, Freq, NextFreq};
+            while(iss >> t){
+                FreqMeasurements[key].push_back(t);
+            }
+            if(FreqMeasurements[key].size()!=N_runs+1){
+                std::cout<<"Number of read times is not equal to "<<N_runs<<" for line: "<<line;
+            }
+        } else {
+            std::cout << "Failed to parse line: " << line << std::endl;
         }
-        end_time = std::chrono::high_resolution_clock::now();
-        duration_ms = std::chrono::duration_cast<std::chrono::milliseconds>(end_time - start_time).count();
     }
-
-    //std::cout << "Result: " << result << std::endl;
-    std::cout << "Number of iterations: " << num_iterations << std::endl;
-    std::cout << "Duration: " << duration_ms << " ms" << std::endl;
-    return num_iterations;
+    return 0;
 }
 
-std::chrono::microseconds measure_time(int num_iterations, std::vector<int> cpus, int LittleFreq, int BigFreq, int GPUFreq){
-    double result=0;
-    cpu_set_t set;
-    CPU_ZERO(&set);
-    for(int i=0;i<cpus.size();i++){
-        CPU_SET(cpus[i],&set);
+void write_to_FreqMeasurements(int num_iterations){
+    // Open file for writing
+    std::ofstream file(FreqMeasurementFile);
+    // Write header row
+    file << "Num_iterations,PE,Freq,NextFreq";
+    for(int j=0;j<N_runs;j++){
+        file<<","<<"T"<<j+1;
     }
-    sched_setaffinity(0, sizeof(set), &set);
-    dvfs.commit_freq(LittleFreq, BigFreq, GPUFreq);
-    std::this_thread::sleep_for(std::chrono::milliseconds(1000));
-    auto start = std::chrono::high_resolution_clock::now();
-    for(int i=0;i<num_iterations;i++){
-        result += std::sqrt(i);
+    file<<",AVG\n";
+    // Write data rows
+    for (const auto& kv : FreqMeasurements) {
+        file << num_iterations <<","<< kv.first.PE << "," << kv.first.Freq << "," <<kv.first.NextFreq;
+        if (kv.second.size()!=N_runs+1){
+            std::cout<<"Error, number of elements "<<kv.second.size()-1<<" is not euqal to "<<N_runs<<std::endl;
+        }
+        for(int j=0;j<kv.second.size();j++){
+            file<<","<< kv.second[j];
+        }
+        file<<"\n";
     }
-    auto end = std::chrono::high_resolution_clock::now();
-    auto duration = std::chrono::duration_cast<std::chrono::microseconds>(end - start);
-    std::cerr << "Time taken: " << duration.count() << " microseconds"<< std::endl;
-    return duration;
+    // Close file
+    file.close();
 }
 
-
+//Functions for initializing GPU
 void initialise_context_properties(const cl::Platform &platform, const cl::Device &device, std::array<cl_context_properties, 7> &prop)
 {
 #if defined(ARM_COMPUTE_ASSERTS_ENABLED)
@@ -159,8 +142,6 @@ void initialise_context_properties(const cl::Platform &platform, const cl::Devic
     };
 }
 
-
-
 std::tuple<cl::Context, cl::Device, cl_int>
 create_opencl_context_and_device()
 {
@@ -186,16 +167,91 @@ create_opencl_context_and_device()
         std::cerr<<"Failed to create OpenCL context\n";
     return std::make_tuple(cl_context, device, err);
 }
+
+
+//Function for init GPIO
+int init_GPIO(){
+    if (-1 == GPIOExport(POUT))
+        return(1);
+    if (-1 == GPIODirection(POUT, OUT))
+        return(2);
+    if (-1 == GPIOWrite(POUT, 0))
+        std::cerr<<"Could not write 0 to GPIO\n";
+        return (3);
+    return 0;
+}
+
+//Call this init at start of the program
+//to init dvfs and GPIO
+int init(){
+    int ret=0;
+    //ret=init_rockpi();
+    //ret=open_pandoon();
+    dvfs.init();
+    ret=init_GPIO();
+    return ret;
+}
+
+//Calculate number of iterations for target ms 
+int calc_num_iterations(const double target_duration_ms=1000){
+    int num_iterations = 10000000;    // initial number of iterations
+    double result = 0;
+
+    // Measure the execution time of the loop
+    auto start_time = std::chrono::high_resolution_clock::now();
+    for (int i = 0; i < num_iterations; ++i) {
+        result += std::sqrt(i);
+    }
+    auto end_time = std::chrono::high_resolution_clock::now();
+    auto duration_ms = std::chrono::duration_cast<std::chrono::milliseconds>(end_time - start_time).count();
+
+    // Adjust the number of iterations based on the measured duration
+    while (duration_ms < target_duration_ms) {
+        num_iterations *= 2;
+        result = 0;
+        start_time = std::chrono::high_resolution_clock::now();
+        for (int i = 0; i < num_iterations; ++i) {
+            result += std::sqrt(i);
+        }
+        end_time = std::chrono::high_resolution_clock::now();
+        duration_ms = std::chrono::duration_cast<std::chrono::milliseconds>(end_time - start_time).count();
+    }
+
+    //std::cout << "Result: " << result << std::endl;
+    std::cout << "Number of iterations: " << num_iterations << std::endl;
+    std::cout << "Duration: " << duration_ms << " ms" << std::endl;
+    return num_iterations;
+}
+
+//Measure time for num_iterations with specific frequency on specific PE
+//It waits to freqs applied then profile
+double measure_time(int num_iterations, std::vector<int> cpus, int LittleFreq, int BigFreq, int GPUFreq){
+    double result=0;
+    cpu_set_t set;
+    CPU_ZERO(&set);
+    for(int i=0;i<cpus.size();i++){
+        CPU_SET(cpus[i],&set);
+    }
+    sched_setaffinity(0, sizeof(set), &set);
+    dvfs.commit_freq(LittleFreq, BigFreq, GPUFreq);
+    std::this_thread::sleep_for(std::chrono::milliseconds(1000));
+    auto start = std::chrono::high_resolution_clock::now();
+    for(int i=0;i<num_iterations;i++){
+        result += std::sqrt(i);
+    }
+    auto end = std::chrono::high_resolution_clock::now();
+    auto duration = std::chrono::duration_cast<std::chrono::microseconds>(end - start);
+    std::cerr << "Time taken: " << duration.count() << " microseconds"<< std::endl;
+    return duration.count();
+}
+
+
 // Function to generate random float values between 0 and 1
 float random_float() {
     return static_cast<float>(rand()) / RAND_MAX;
 }
-   
-
-    
-    
-    
-std::chrono::microseconds measure_time_GPU(int vectorSize, std::vector<int> cpus, int LittleFreq, int BigFreq, int GPUFreq, cl::CommandQueue queue, cl::Context context ){
+//Funciton to profile on GPU with applied freq (delay to make sure freq is applied on hardware)
+double measure_time_GPU(int vectorSize, std::vector<int> cpus, int LittleFreq, int BigFreq, int GPUFreq, cl::CommandQueue queue, cl::Context context ){
 
     cpu_set_t set;
     CPU_ZERO(&set);
@@ -229,7 +285,9 @@ std::chrono::microseconds measure_time_GPU(int vectorSize, std::vector<int> cpus
     std::string kernelSource = R"(
         __kernel void vector_addition(__global float* a, __global float* b, __global float* c) {
             const int gid = get_global_id(0);
-            c[gid] = a[gid] + b[gid];
+            for (int i = 0; i < 1000000; ++i) {
+                c[gid] += a[gid] * b[gid] * (i % 7);
+            }
         }
     )";
     cl::Program program(context, kernelSource);
@@ -241,9 +299,6 @@ std::chrono::microseconds measure_time_GPU(int vectorSize, std::vector<int> cpus
     kernel.setArg(1, bufferB);
     kernel.setArg(2, bufferC);
 
-
-    
-    
     // Run the OpenCL kernel
     cl::Event event;
     std::this_thread::sleep_for(std::chrono::milliseconds(100));
@@ -261,9 +316,280 @@ std::chrono::microseconds measure_time_GPU(int vectorSize, std::vector<int> cpus
     //double elapsed = static_cast<double>(endTime - startTime) * 1e-9;
     std::cerr << "Time taken: " << duration.count() << " microseconds"<< std::endl;
 
-    return duration;
+    return duration.count();
 }
 
+//Profile PEs with Their Freqs for applied freqs
+void Measure_Freq_times(int num_iterations, cl::CommandQueue queue, cl::Context cntx){
+    //Measure Little CPU freqs
+    Key key{"?", 0, 0};  
+    key.PE="Little";  
+    std::cerr<<"Measure Little Freqs:\n";
+    for(int i=0;i<NumLittleFreqs;i++){
+        key.NextFreq=i;
+        if (FreqMeasurements.count(key) > 0){
+            int s=FreqMeasurements[key].size();
+            std::cout<<"Already evaluated size:"<<s-1<<", avg:"<<FreqMeasurements[key][s-1]<<std::endl;
+            continue;
+        }
+        double sum=0;
+        for(int j=0; j<N_runs; j++){
+            auto duration=measure_time(num_iterations, littlecpus, i, 0, 0);
+            FreqMeasurements[key].push_back(duration);
+            sum+=duration;
+            std::this_thread::sleep_for(std::chrono::milliseconds(relaxtime));
+        }
+        FreqMeasurements[key].push_back(sum/N_runs);
+    }
+
+    //Measure Big CPU freqs
+    key.PE="Big";  
+    std::cerr<<"Measure Big Freqs:\n";
+    for(int i=0;i<NumBigFreqs;i++){
+        key.NextFreq=i;
+        if (FreqMeasurements.count(key) > 0){
+            int s=FreqMeasurements[key].size();
+            std::cout<<"Already evaluated size:"<<s-1<<", avg:"<<FreqMeasurements[key][s-1]<<std::endl;
+            continue;
+        }
+        double sum=0;
+        for(int j=0; j<N_runs; j++){
+            auto duration=measure_time(num_iterations, bigcpus, 0, i, 0);
+            FreqMeasurements[key].push_back(duration);
+            sum+=duration;
+            std::this_thread::sleep_for(std::chrono::milliseconds(relaxtime));
+        }
+        FreqMeasurements[key].push_back(sum/N_runs);
+    }
+
+    //Measure GPU freqs
+    key.PE="GPU";
+    std::cerr<<"Measure GPU Freqs:\n";
+    for(int i=0;i<NumGPUFreqs;i++){
+        key.NextFreq=i;
+        if (FreqMeasurements.count(key) > 0){
+            int s=FreqMeasurements[key].size();
+            std::cout<<"Already evaluated size:"<<s-1<<", avg:"<<FreqMeasurements[key][s-1]<<std::endl;
+            continue;
+        }
+        double sum=0;
+        for(int j=0; j<N_runs; j++){
+            auto duration=measure_time_GPU(num_iterations, gpucpus, 0, 0, i, queue, cntx);
+            FreqMeasurements[key].push_back(duration);
+            sum+=duration;
+            std::this_thread::sleep_for(std::chrono::milliseconds(relaxtime));
+        }
+        FreqMeasurements[key].push_back(sum/N_runs);
+    }
+    write_to_FreqMeasurements(num_iterations);
+}
+
+
+//Profile PEs with swithch from a freqs settings to new freqs settings without wait to apply
+double Measure_Time_2(int num_iterations, std::vector<int> cpus, int LittleFreq, int BigFreq, int GPUFreq, int LittleFreqNew, int BigFreqNew, int GPUFreqNew){
+    double result=0;
+    cpu_set_t set;
+    CPU_ZERO(&set);
+    for(int i=0;i<cpus.size();i++){
+        CPU_SET(cpus[i],&set);
+    }
+    sched_setaffinity(0, sizeof(set), &set);
+    dvfs.commit_freq(LittleFreq, BigFreq, GPUFreq);
+    std::this_thread::sleep_for(std::chrono::milliseconds(1000));
+    dvfs.commit_freq(LittleFreqNew, BigFreqNew, GPUFreqNew);
+    auto start = std::chrono::high_resolution_clock::now();
+    for(int i=0;i<num_iterations;i++){
+        result += std::sqrt(i);
+    }
+    auto end = std::chrono::high_resolution_clock::now();
+    auto duration = std::chrono::duration_cast<std::chrono::microseconds>(end - start);
+    std::cerr << "Time taken: " << duration.count() << " microseconds\n";
+    return duration.count();
+}
+
+//Profile time (when switch from freqs to newfreqs) for GPU
+double Measure_Time_GPU_2(int vectorSize, std::vector<int> cpus, int LittleFreq, int BigFreq, int GPUFreq, int LittleFreqNew, int BigFreqNew, int GPUFreqNew, cl::CommandQueue queue, cl::Context context){
+    cpu_set_t set;
+    CPU_ZERO(&set);
+    for(int i=0;i<cpus.size();i++){
+        CPU_SET(cpus[i],&set);
+    }
+    sched_setaffinity(0, sizeof(set), &set);
+    dvfs.commit_freq(LittleFreq, BigFreq, GPUFreq);
+    
+
+    std::vector<float> a(vectorSize);
+    std::vector<float> b(vectorSize);
+    std::vector<float> c(vectorSize);
+    
+    // Initialize input vectors with random values
+    for (int i = 0; i < vectorSize; ++i) {
+        a[i] = random_float();
+        b[i] = random_float();
+    }
+
+    // Create OpenCL buffers
+    cl::Buffer bufferA(context, CL_MEM_READ_ONLY, sizeof(float) * vectorSize);
+    cl::Buffer bufferB(context, CL_MEM_READ_ONLY, sizeof(float) * vectorSize);
+    cl::Buffer bufferC(context, CL_MEM_WRITE_ONLY, sizeof(float) * vectorSize);
+
+    // Copy input vectors to device
+    queue.enqueueWriteBuffer(bufferA, CL_TRUE, 0, sizeof(float) * vectorSize, a.data());
+    queue.enqueueWriteBuffer(bufferB, CL_TRUE, 0, sizeof(float) * vectorSize, b.data());
+
+    // Load and compile the OpenCL kernel
+    std::string kernelSource = R"(
+        __kernel void vector_addition(__global float* a, __global float* b, __global float* c) {
+            const int gid = get_global_id(0);
+            for (int i = 0; i < 10000; ++i) {
+                c[gid] += a[gid] * b[gid] * (i % 7);
+            }
+        }
+    )";
+    cl::Program program(context, kernelSource);
+    program.build();
+
+    // Create OpenCL kernel
+    cl::Kernel kernel(program, "vector_addition");
+    kernel.setArg(0, bufferA);
+    kernel.setArg(1, bufferB);
+    kernel.setArg(2, bufferC);
+    
+    // Run the OpenCL kernel
+    cl::Event event;
+    std::this_thread::sleep_for(std::chrono::milliseconds(1000));
+    dvfs.commit_freq(LittleFreqNew, BigFreqNew, GPUFreqNew);
+    auto start=std::chrono::high_resolution_clock::now();
+    //cl_ulong startTime = event.getProfilingInfo<CL_PROFILING_COMMAND_START>();
+    queue.enqueueNDRangeKernel(kernel, cl::NullRange, cl::NDRange(vectorSize), cl::NullRange, nullptr, &event);
+    // Wait for the kernel to complete
+    event.wait();
+    auto end=std::chrono::high_resolution_clock::now();
+
+    // Copy result back to host
+    queue.enqueueReadBuffer(bufferC, CL_TRUE, 0, sizeof(float) * vectorSize, c.data());    
+    auto duration = std::chrono::duration_cast<std::chrono::microseconds>(end - start);
+    //double elapsed = static_cast<double>(endTime - startTime) * 1e-9;
+    std::cerr << "Time taken: " << duration.count() << " microseconds\n";
+    return duration.count();
+}
+
+
+
+void Measure_Two_Freqs_times(int num_iterations, cl::CommandQueue queue, cl::Context cntx){
+    Key key{"?", 0, 0};  
+    //Measure GPU freqs
+    key.PE="GPU";
+    std::cerr<<"Measure GPU Freqs:\n";
+    for(int j=0;j<NumGPUFreqs;j++){
+        key.Freq=j;
+        std::cerr<<"Cur Freq:"<<j<<std::endl;
+        for(int i=0;i<NumGPUFreqs;i++){
+            key.NextFreq=i;
+            std::cerr<<"NextFreq: "<<i<<std::endl;
+            if (FreqMeasurements.count(key) > 0){
+                int s=FreqMeasurements[key].size();
+                std::cout<<"Already evaluated size:"<<s-1<<", avg:"<<FreqMeasurements[key][s-1]<<std::endl;
+                continue;
+            }
+            double sum=0;
+            //Warmup
+            Measure_Time_GPU_2(num_iterations/1000, gpucpus, 0, 0, 0, 0, 0, 0, queue, cntx);
+            std::this_thread::sleep_for(std::chrono::milliseconds(relaxtime));
+            for(int k=0; k<N_runs; k++){            
+                auto duration=Measure_Time_GPU_2(num_iterations/1000, gpucpus, 0, 0, j, 0, 0, i, queue, cntx);
+                FreqMeasurements[key].push_back(duration);
+                sum+=duration;
+                std::this_thread::sleep_for(std::chrono::milliseconds(relaxtime));
+            }
+            FreqMeasurements[key].push_back(sum/N_runs);
+        }
+    }
+    write_to_FreqMeasurements(num_iterations);
+    //Measure Little CPU freqs
+    key.PE="Little";  
+    std::cerr<<"Measure Little Freqs:\n";
+    for(int j=0;j<NumLittleFreqs;j++){
+        key.Freq=j;
+        std::cerr<<"Cur Freq:"<<j<<std::endl;
+        for(int i=0;i<NumLittleFreqs;i++){
+            key.NextFreq=i;
+            std::cerr<<"NextFreq: "<<i<<std::endl;
+            if (FreqMeasurements.count(key) > 0){
+                int s=FreqMeasurements[key].size();
+                std::cout<<"Already evaluated size:"<<s-1<<", avg:"<<FreqMeasurements[key][s-1]<<std::endl;
+                continue;
+            }
+            double sum=0;
+            //Warmup
+            Measure_Time_2(num_iterations, littlecpus, 0, 0, 0, 0, 0, 0);
+            std::this_thread::sleep_for(std::chrono::milliseconds(relaxtime));
+            for(int k=0; k<N_runs; k++){            
+                auto duration=Measure_Time_2(num_iterations, littlecpus, j, 0, 0, i, 0, 0);
+                FreqMeasurements[key].push_back(duration);
+                sum+=duration;
+                std::this_thread::sleep_for(std::chrono::milliseconds(relaxtime));
+            }
+            FreqMeasurements[key].push_back(sum/N_runs);
+        }
+    }
+    write_to_FreqMeasurements(num_iterations);
+    //Measure Big CPU freqs
+    key.PE="Big";  
+    std::cerr<<"Measure Big Freqs:\n";
+    for(int j=0;j<NumBigFreqs;j++){
+        key.Freq=j;
+        std::cerr<<"Cur Freq:"<<j<<std::endl;
+        for(int i=0;i<NumBigFreqs;i++){
+            key.NextFreq=i;
+            std::cerr<<"NextFreq: "<<i<<std::endl;
+            if (FreqMeasurements.count(key) > 0){
+                int s=FreqMeasurements[key].size();
+                std::cout<<"Already evaluated size:"<<s-1<<", avg:"<<FreqMeasurements[key][s-1]<<std::endl;
+                continue;
+            }
+            double sum=0;
+            //Warmup
+            Measure_Time_2(num_iterations, bigcpus, 0, 0, 0, 0, 0, 0);
+            std::this_thread::sleep_for(std::chrono::milliseconds(relaxtime));
+            for(int k=0; k<N_runs; k++){            
+                auto duration=Measure_Time_2(num_iterations, bigcpus, 0, j, 0, 0, i, 0);
+                FreqMeasurements[key].push_back(duration);
+                sum+=duration;
+                std::this_thread::sleep_for(std::chrono::milliseconds(relaxtime));
+            }
+            FreqMeasurements[key].push_back(sum/N_runs);
+        }
+    }
+    write_to_FreqMeasurements(num_iterations);
+}
+
+int main(){
+
+    init();
+    Load_FreqMeasurements();
+    dvfs.commit_freq(0, 0, 0);
+    
+    int num_iterations = calc_num_iterations(target_ms);
+    
+    cl::Context context;
+    cl::Device  gpuDevice;
+    cl_int      err;
+    std::tie(context, gpuDevice, err) = create_opencl_context_and_device();
+    if(err != CL_SUCCESS)
+        std::cerr<<"Failed to create OpenCL context\n";
+    cl::CommandQueue queue = cl::CommandQueue(context, gpuDevice,CL_QUEUE_PROFILING_ENABLE);
+
+    //Measure_Freq_times(num_iterations, queue, context);
+    Measure_Two_Freqs_times(num_iterations, queue, context);
+    
+
+
+    return 0;
+}
+
+
+/*
 std::pair<double, double> measure_time_combination(int num_iterations, std::vector<int> cpus, int LittleFreq, int BigFreq, int GPUFreq, int LittleFreqNew, int BigFreqNew, int GPUFreqNew){
     double result=0;
     cpu_set_t set;
@@ -366,201 +692,4 @@ std::pair<double, double> measure_time_combination_GPU(int vectorSize, std::vect
     return std::make_pair(duration.count(),duration2.count());
 }
 
-
-struct Key {
-    std::string PE;
-    int Freq;
-    int NextFreq;
-};
-
-bool operator==(const Key& lhs, const Key& rhs) {
-    return lhs.PE == rhs.PE && lhs.Freq == rhs.Freq && lhs.NextFreq == rhs.NextFreq;
-}
-
-// Hash function for Key to be used in unordered_map
-struct KeyHash {
-    std::size_t operator()(const Key& key) const {
-        std::size_t h1 = std::hash<std::string>{}(key.PE);
-        std::size_t h2 = std::hash<int>{}(key.Freq);
-        std::size_t h3 = std::hash<int>{}(key.NextFreq);
-        return h1 ^ h2 ^ h3 ;
-    }
-};
-std::unordered_map<Key, std::pair<double,double>, KeyHash> FreqMeasurements;
-std::string FreqMeasurementFile="/system/FreqMeasurements.csv";
-const double target_ms=1000;
-int NumLittleFreqs=6;
-int NumBigFreqs=8;
-int NumGPUFreqs=5;
-std::vector<int> littlecpus={0,1,2,3};
-std::vector<int> bigcpus={4,5};
-std::vector<int> gpucpus={5};
-int relaxtime=4000; //ms
-
-int Load_FreqMeasurements(){
-    std::ifstream file(FreqMeasurementFile); // Replace "data.csv" with your actual CSV file name
-    if (!file.is_open()) {
-        std::cout << "Failed to open file" << std::endl;
-        return 1;
-    }
-    std::string line;
-    while (std::getline(file, line)) {
-        std::replace(line.begin(), line.end(), ',', ' ');
-        std::istringstream iss(line);
-        int num_iterations;
-        std::string PE;
-        int Freq;
-        double timeFreq1;
-        double timeTotal;
-        if (iss >> num_iterations >> PE >> Freq >> timeFreq1 >> timeTotal) {
-            // Create a key based on graph, layer, and component
-            Key key{PE, Freq};
-            FreqMeasurements[key] = std::make_pair(timeFreq1,timeTotal);
-        } else {
-            std::cout << "Failed to parse line: " << line << std::endl;
-        }
-    }
-    return 0;
-}
-
-void write_to_FreqMeasurements(){
-    // Open file for writing
-    std::ofstream file(FreqMeasurementFile);
-    // Write header row
-    file << "Num_iterations,PE,Freq,NextFreq,TimeFreq1,TimeTotal\n";
-    // Write data rows
-    for (const auto& kv : FreqMeasurements) {
-        file << num_iterations <<","<< kv.first.PE << "," << kv.first.Freq << "," <<kv.first.NextFreq<<","<< kv.second.first<<","<<kv.second.second << "\n";
-    }
-    // Close file
-    file.close();
-}
-
-void Measure_Freq_times(int num_iterations, cl::CommandQueue queue, cl::Context cntx){
-    //Measure Little CPU freqs
-    Key key{"Little", 0, 0};    
-    std::cerr<<"Measure Little Freqs:\n";
-    for(int i=0;i<NumLittleFreqs;i++){
-        key.NextFreq=i;
-        if (FreqMeasurements.count(key) > 0){
-            std::cout<<"Already evaluated:"<<FreqMeasurements[key].first<<","<<FreqMeasurements[key].second<<std::endl;
-            continue;
-        }
-        auto duraton=measure_time(num_iterations, littlecpus, i, 0, 0);
-        FreqMeasurements[key] = std::make_pair(duraton.count(),0);
-        std::this_thread::sleep_for(std::chrono::milliseconds(relaxtime));
-    }
-
-    //Measure Big CPU freqs
-    key.PE="Big";  
-    std::cerr<<"Measure Big Freqs:\n";
-    for(int i=0;i<NumBigFreqs;i++){
-        key.NextFreq=i;
-        if (FreqMeasurements.count(key) > 0){
-            std::cout<<"Already evaluated:"<<FreqMeasurements[key].first<<","<<FreqMeasurements[key].second<<std::endl;
-            continue;
-        }
-        auto duraton=measure_time(num_iterations, bigcpus, 0, i, 0);
-        FreqMeasurements[key] = std::make_pair(duraton.count(),0);
-        std::this_thread::sleep_for(std::chrono::milliseconds(relaxtime));
-    }
-
-    //Measure GPU freqs
-    key.PE="GPU";
-    std::cerr<<"Measure GPU Freqs:\n";
-    for(int i=0;i<NumGPUFreqs;i++){
-        key.NextFreq=i;
-        if (FreqMeasurements.count(key) > 0){
-            std::cout<<"Already evaluated:"<<FreqMeasurements[key].first<<","<<FreqMeasurements[key].second<<std::endl;
-            continue;
-        }
-        auto duraton=measure_time_GPU(num_iterations, gpucpus, 0, 0, i, queue, cntx);
-        FreqMeasurements[key] = std::make_pair(duraton.count(),0);
-        std::this_thread::sleep_for(std::chrono::milliseconds(relaxtime));
-    }
-    write_to_FreqMeasurements();
-}
-
-
-void Measure_Two_Freqs_times(int num_iterations, cl::CommandQueue queue, cl::Context cntx){
-    //Measure Little CPU freqs
-    Key key{"Little", 0, 0};    
-    std::cerr<<"Measure Little Freqs:\n";
-    for(int j=0;j<NumLittleFreqs;j++){
-        key.Freq=j;
-        std::cerr<<"Cur Freq:"<<j<<std::endl;
-        for(int i=0;i<NumLittleFreqs;i++){
-            key.NextFreq=i;
-            if (FreqMeasurements.count(key) > 0){
-                std::cout<<"Already evaluated:"<<FreqMeasurements[key].first<<","<<FreqMeasurements[key].second<<std::endl;
-                continue;
-            }
-            std::pair<double,double> durations=measure_time_combination(num_iterations, littlecpus, j, 0, 0, i, 0, 0);
-            FreqMeasurements[key] = durations;
-            std::this_thread::sleep_for(std::chrono::milliseconds(relaxtime));
-        }
-    }
-    write_to_FreqMeasurements();
-    //Measure Big CPU freqs
-    key.PE="Big";  
-    std::cerr<<"Measure Big Freqs:\n";
-    for(int j=0;j<NumBigFreqs;j++){
-        key.Freq=j;
-        std::cerr<<"Cur Freq:"<<j<<std::endl;
-        for(int i=0;i<NumBigFreqs;i++){
-            key.NextFreq=i;
-            if (FreqMeasurements.count(key) > 0){
-                std::cout<<"Already evaluated:"<<FreqMeasurements[key].first<<","<<FreqMeasurements[key].second<<std::endl;
-                continue;
-            }
-            std::pair<double,double> durations=measure_time_combination(num_iterations, littlecpus, j, 0, 0, i, 0, 0);
-            FreqMeasurements[key] = durations;
-            std::this_thread::sleep_for(std::chrono::milliseconds(relaxtime));
-        }
-    }   
-    write_to_FreqMeasurements();
-    //Measure GPU freqs
-    key.PE="GPU";
-    std::cerr<<"Measure GPU Freqs:\n";
-    for(int j=0;j<NumGPUFreqs;j++){
-        key.Freq=j;
-        std::cerr<<"Cur Freq:"<<j<<std::endl;
-        for(int i=0;i<NumGPUFreqs;i++){
-            key.NextFreq=i;
-            if (FreqMeasurements.count(key) > 0){
-                std::cout<<"Already evaluated:"<<FreqMeasurements[key].first<<","<<FreqMeasurements[key].second<<std::endl;
-                continue;
-            }
-            std::pair<double,double> durations=measure_time_combination(num_iterations, littlecpus, j, 0, 0, i, 0, 0);
-            FreqMeasurements[key] = durations;
-            std::this_thread::sleep_for(std::chrono::milliseconds(relaxtime));
-        }
-    }
-    write_to_FreqMeasurements();
-
- 
-}
-
-int main(){
-
-    init();
-    Load_FreqMeasurements();
-    dvfs.commit_freq(0, 0, 0);
-    
-    int num_iterations = calc_num_iterations(target_ms);
-    
-    cl::Context context;
-    cl::Device  gpuDevice;
-    cl_int      err;
-    std::tie(context, gpuDevice, err) = create_opencl_context_and_device();
-    if(err != CL_SUCCESS)
-        std::cerr<<"Failed to create OpenCL context\n";
-    cl::CommandQueue queue = cl::CommandQueue(context, gpuDevice,CL_QUEUE_PROFILING_ENABLE);
-
-    //Measure_Freq_times(num_iterations, queue, context);
-    Measure_Two_Freqs_times(num_iterations, queue, context);
-    
-
-
-    return 0;
-}
+*/
