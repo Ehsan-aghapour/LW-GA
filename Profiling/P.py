@@ -24,7 +24,7 @@ Test=2
 cnn_dir="/home/ehsan/UvA/ARMCL/Rock-Pi/ComputeLibrary_64_CPUGPULW/"
 
 cnn={
-    "alex":"graph_alexnet_n_pipe_npu_lw_whole",
+    "alex":"graph_alexnet_n_pipe_npu_lw",
     "google":"graph_googlenet_n_pipe_npu_lw",
     "mobile":"graph_mobilenet_n_pipe_npu_lw",
     "res50":"graph_resnet50_n_pipe_npu_lw",
@@ -195,6 +195,9 @@ def Read_Power(file_name):#(graph,file_name,frqss):
 def format_freqs(fs=[ [ [7],[6],[4],[3,6],[4],[5],[6],[7] ], [] ]):
         formated_fs=[]
         for f in fs:
+            if f[0]=="min":
+                formated_fs.append(f)
+                continue
             if type(f)==str:
                 f=[[int(j) for j in re.findall(r"\b\d+\b", l)] for l in f.split('),')]
             ff = '-'.join(['[' + str(sublist[0]) + ',' + str(sublist[1]) + ']' if len(sublist) > 1 else str(sublist[0]) for sublist in f])
@@ -899,12 +902,17 @@ def Parse_total(timefile,graph,order,frqss):
     return df_time
 
 
-def Real_Evaluation(g="alex",_ord='GBBBBBBB',_fs=[ [ [0,0],[0],[0],[0],[0],[0],[0],[0] ] ]):   
+# +
+def Real_Evaluation(g="alex",_ord='GBBBBBBB',_fs=[ [ [0,0],[0],[0],[0],[0],[0],[0],[0] ] ],suffix=g):   
     pf="pwr_whole.csv"
     tf="temp_whole.txt"
+    if len(_ord)==1:
+        _ord=NLayers[g]*_ord
     global Evaluations_df
-    if Evaluations_csv.exists():
-        Evaluations_df=pd.read_csv(Evaluations_csv)
+    EvalFile=Evaluations_csv.with_name(Evaluations_csv.name.replace(".csv", "_" + suffix + ".csv"))
+    #EvalFile=Evaluations_csv.split(".")[0]+'_'+g+Evaluations_csv.split(".")[0]
+    if EvalFile.exists():
+        Evaluations_df=pd.read_csv(EvalFile)
     else:
         Evaluations_df=pd.DataFrame(columns=['graph','order','freq','input_time','task_time','total_time', 'input_power','task_power'])
     
@@ -965,12 +973,18 @@ def Real_Evaluation(g="alex",_ord='GBBBBBBB',_fs=[ [ [0,0],[0],[0],[0],[0],[0],[
             Evaluations_df=pd.concat([Evaluations_df,merged_df], ignore_index=True)
         
 
-    Evaluations_df.to_csv(Evaluations_csv,index=False)
+    Evaluations_df.to_csv(EvalFile,index=False)
     return Evaluations_df
 if Test==3:
     Real_Evaluation(g="alex",_ord='GBBBBBBB',_fs=[ [ [4,6],[6],[6],[6],[6],[6],[6],[6] ] ])
     Real_Evaluation(g="alex",_ord='BBBBBBBB',_fs=[ [ [0],[1],[2],[3],[4],[5],[6],[7] ] ])
 
+AOA=1
+if AOA==1:
+    for _g in graphs:
+        Real_Evaluation(g=_g,_ord='G',_fs=[[["min"]]],suffix="AOA")
+    
+# -
 
 def _Test():
     _fs=[ [ [0],[1],[2],[3],[4],[5],[6],[7] ],
@@ -1407,7 +1421,7 @@ def Run_Eval(g='alex',num_evals=1000,num_freqs=10):
 '''if Test==2:
     Run_Eval(g='alex')'''
 
-if Test==2:
+if Test==3:
     Finished=False
     while not Finished:
         try:
@@ -1506,11 +1520,9 @@ def main():
 if Test==1:
     main()
 
-a=np.array(tts)
-b=np.array([a[j*202:j*202+203] for j in range(10)])
-ind=np.where(a>1000)
-a[ind]
 
-
-
-
+def irad():
+    a=np.array(tts)
+    b=np.array([a[j*202:j*202+203] for j in range(10)])
+    ind=np.where(a>1000)
+    a[ind]
