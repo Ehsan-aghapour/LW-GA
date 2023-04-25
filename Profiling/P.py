@@ -16,9 +16,11 @@ from pathlib import Path
 import traceback
 import random
 import math
+import pprint
 
 
-Test=2
+
+Test=0
 
 
 cnn_dir="/home/ehsan/UvA/ARMCL/Rock-Pi/ComputeLibrary_64_CPUGPULW/"
@@ -41,17 +43,32 @@ Num_frames=100
 params={"alex":(1,1,1), "google":(2,2,1), "mobile":(2,3,1), "res50":(2,4,1), "squeeze":(1,5,1), "test_transfer":(1,0,0)}
 C=["L","B", "G"]
 
-Layers_csv=Path('Layers.csv').resolve()
-Transfers_csv=Path('Transfers.csv').resolve()
-Transfer_Freq_csv=Path('Transfer_Freq.csv').resolve()
-Transfer_Data_Size_Min_Freq_csv=Path('Transfer_Data_Size_Min_Freq.csv').resolve()
-Transfer_Data_Size_Max_Freq_csv=Path('Transfer_Data_Size_Max_Freq.csv').resolve()
-Evaluations_csv=Path("Evaluations.csv").resolve()
-Layers_logs=Path("./Layers/").resolve()
-Transfers_logs=Path("./Transfers/").resolve()
-Synthetic_Tranfer_logs=Path("./Synthetic_Transfers/").resolve()
-Layers_Percentage_csv=Path("Layers_Percentage.csv").resolve()
-Layers_With_Percentage_csv=Path("Layers_With_Percentage.csv").resolve()
+
+try:
+    script_dir = Path(os.path.dirname(os.path.abspath(__file__)))
+    Layers_csv = script_dir / 'Layers.csv'
+    Transfers_csv = script_dir / 'Transfers.csv'
+    Transfer_Freq_csv = script_dir / 'Transfer_Freq.csv'
+    Transfer_Data_Size_Min_Freq_csv = script_dir / 'Transfer_Data_Size_Min_Freq.csv'
+    Transfer_Data_Size_Max_Freq_csv = script_dir / 'Transfer_Data_Size_Max_Freq.csv'
+    Evaluations_csv = script_dir / 'Evaluations.csv'
+    Layers_logs = script_dir / 'Layers'
+    Transfers_logs = script_dir / 'Transfers'
+    Synthetic_Tranfer_logs = script_dir / 'Synthetic_Transfers'
+    Layers_Percentage_csv = script_dir / 'Layers_Percentage.csv'
+    Layers_With_Percentage_csv = script_dir / 'Layers_With_Percentage.csv'
+except:
+    Layers_csv=Path('Layers.csv').resolve()
+    Transfers_csv=Path('Transfers.csv').resolve()
+    Transfer_Freq_csv=Path('Transfer_Freq.csv').resolve()
+    Transfer_Data_Size_Min_Freq_csv=Path('Transfer_Data_Size_Min_Freq.csv').resolve()
+    Transfer_Data_Size_Max_Freq_csv=Path('Transfer_Data_Size_Max_Freq.csv').resolve()
+    Evaluations_csv=Path("Evaluations.csv").resolve()
+    Layers_logs=Path("./Layers/").resolve()
+    Transfers_logs=Path("./Transfers/").resolve()
+    Synthetic_Tranfer_logs=Path("./Synthetic_Transfers/").resolve()
+    Layers_Percentage_csv=Path("Layers_Percentage.csv").resolve()
+    Layers_With_Percentage_csv=Path("Layers_With_Percentage.csv").resolve()
 
 Layers_df=pd.DataFrame(columns=["Graph", "Component", "Freq", "Freq_Host", "Layer", "Metric", "Time", "Power"])
 Layers_df_indexed=pd.DataFrame()
@@ -609,7 +626,10 @@ def Analyze(graph_name=graphs,metric=['task','in','out','trans'],comp=['G','B','
     grouped_df['Energy-Efficiency']=1000.0/(grouped_df['Energy'])
     # Create a pivot table to rearrange the data for plotting
     pivot_table = pd.pivot_table(grouped_df, values=parameter, index=index, columns=columns)
-    display(pivot_table)
+    try:
+        display(pivot_table)
+    except:
+        pprint.pprint(pivot_table)
     pivot_table.plot(kind='bar', stacked=False, figsize=(30, 6))
     plt.title(f'{metric} {parameter} vs {columns} for {graph_name}')
     plt.xlabel(f'{index}')
@@ -745,7 +765,7 @@ def Comp_Cost(g='alex',fn=[[0],[1],[2],[3],[4],[5],[6],[7]],cmps=8*'B',dvfs_dela
     return tt,ee/1000.0
 
 
-def Transfer_Info(p1='B',p2='G',f1=[4],f2=[3,4]):
+def Transfer_Info(p1='B',p2='G',f1=[4],f2=[3,4],_debug=False):
     global Transfer_Freq_df
     f1=[int(i) for i in f1]
     f2=[int(i) for i in f2]
@@ -765,9 +785,10 @@ def Transfer_Info(p1='B',p2='G',f1=[4],f2=[3,4]):
     if order=='GB':
         f2[0]=f1[1]
     freqs=tuple([tuple(f1),tuple(f2)])
-    print(freqs)
     row=Transfer_Freq_df[ (Transfer_Freq_df['freq']==str(freqs)) & (Transfer_Freq_df['order']==order)]
-    print(row)
+    if _debug:
+        print(freqs)
+        print(row)
     power=row['transfer_power'].iloc[0]
     coef_t=row['time_ratio'].iloc[0]  
     return power,coef_t
@@ -819,8 +840,9 @@ def Comm_Cost(g='alex',fn=[[0],[1],[2],[3],[4],[5],[6],[7]],cmps=8*'B',dvfs_dela
                                        (Transfers_df["Layer"]==i-1) &
                                        (Transfers_df["Dest"]==cmps[i]) &
                                        (Transfers_df["Src"]==cmps[i-1])]["Time"].iloc[0]
-            print(f'{fc[i-1]}--{fc[i]}')
-            transfer_power,time_ratio=Transfer_Info(p1=cmps[i-1],p2=cmps[i],f1=fc[i-1],f2=fc[i])
+            if debug:
+                print(f'{fc[i-1]}--{fc[i]}')
+            transfer_power,time_ratio=Transfer_Info(p1=cmps[i-1],p2=cmps[i],f1=fc[i-1],f2=fc[i],_debug=debug)
         
             scaled_time=transfer_time * time_ratio
             transfer_energy=scaled_time * transfer_power
@@ -834,6 +856,18 @@ def Comm_Cost(g='alex',fn=[[0],[1],[2],[3],[4],[5],[6],[7]],cmps=8*'B',dvfs_dela
                 print(f'total time:{transfer_t}')
                 print(f'total energy:{transfer_e}')
     return transfer_t, transfer_e/1000.0
+
+
+def Inference_Cost(_graph='alex',_freq=[[0],[1],[2],[3],[4],[5],[6],[7]],_order=8*'B',_dvfs_delay=3.5, _debug=False):
+    total_time=0
+    total_energy=0
+    t_cmp,e_cmp=Comp_Cost(g=_graph,fn=_freq,cmps=_order,dvfs_delay=_dvfs_delay, debug=_debug)
+    t_cmu,e_cmu=Comm_Cost(g=_graph,fn=_freq,cmps=_order,dvfs_delay=_dvfs_delay, debug=_debug)
+    total_time=t_cmp + t_cmu
+    total_energy=e_cmp + e_cmu
+    return total_time,total_energy
+if Test==2:
+    print(Inference_Cost())
 
 
 def Parse_Power_total(file_name,graph,order,frqss):
@@ -903,12 +937,15 @@ def Parse_total(timefile,graph,order,frqss):
 
 
 # +
-def Real_Evaluation(g="alex",_ord='GBBBBBBB',_fs=[ [ [0,0],[0],[0],[0],[0],[0],[0],[0] ] ],suffix=g):   
+def Real_Evaluation(g="alex",_ord='GBBBBBBB',_fs=[ [ [0,0],[0],[0],[0],[0],[0],[0],[0] ] ],suffix=''):
     pf="pwr_whole.csv"
     tf="temp_whole.txt"
+    
     if len(_ord)==1:
         _ord=NLayers[g]*_ord
     global Evaluations_df
+    if suffix=='':
+        suffix=g
     EvalFile=Evaluations_csv.with_name(Evaluations_csv.name.replace(".csv", "_" + suffix + ".csv"))
     #EvalFile=Evaluations_csv.split(".")[0]+'_'+g+Evaluations_csv.split(".")[0]
     if EvalFile.exists():
@@ -930,7 +967,10 @@ def Real_Evaluation(g="alex",_ord='GBBBBBBB',_fs=[ [ [0,0],[0],[0],[0],[0],[0],[
             new_fs.append(ff)
         else:
             print(f'{_ord}, Freq:{ff} already evaluated:')
-            display(row)
+            try:
+                display(row)
+            except:
+                pprint.pprint(row)
             if pd.isna(row.reset_index().loc[0,'task_time']):
                 new_fs.append(ff)
 
@@ -960,7 +1000,10 @@ def Real_Evaluation(g="alex",_ord='GBBBBBBB',_fs=[ [ [0,0],[0],[0],[0],[0],[0],[
     merged_df['input_e']=merged_df['input_power']*merged_df['input_time']/1000.0
     merged_df['task_e']=merged_df['task_power']*merged_df['task_time']/1000.0
     merged_df['total_e']=merged_df['input_e']+merged_df['task_e']
-    display(merged_df)
+    try:
+        display(merged_df)
+    except:
+        pprint.pprint(merged_df)
     #merged_df=merged_df.reset_index(drop=True,inplace=True)
     
     for i,k in merged_df.iterrows(): 
@@ -979,10 +1022,12 @@ if Test==3:
     Real_Evaluation(g="alex",_ord='GBBBBBBB',_fs=[ [ [4,6],[6],[6],[6],[6],[6],[6],[6] ] ])
     Real_Evaluation(g="alex",_ord='BBBBBBBB',_fs=[ [ [0],[1],[2],[3],[4],[5],[6],[7] ] ])
 
-AOA=1
-if AOA==1:
+def AOA():
     for _g in graphs:
         Real_Evaluation(g=_g,_ord='G',_fs=[[["min"]]],suffix="AOA")
+        
+if Test==3:
+    AOA()
     
 # -
 
@@ -1202,7 +1247,10 @@ def Compute_Layer_Percentage():
     
     pivot_df = pivot_df.groupby(['Graph', 'Layer']).sum().reset_index()
     pivot_df.to_csv(Layers_Percentage_csv, index=False)
-    display(pivot_df)
+    try:
+        display(pivot_df)
+    except:
+        pprint.pprint(pivot_df)
 
 
 # +
@@ -1235,8 +1283,10 @@ def _Analyze_Components(g=['alex']):
     pivot_df = grouped_df.pivot_table(index=['Layer'], columns='Component', values=['Time', 'Energy'])
     pivot_df.columns = ['{}_{}'.format(col[0], col[1]) for col in pivot_df.columns]
     pivot_df = pivot_df.reset_index()
-
-    display(pivot_df)
+    try:
+        display(pivot_df)
+    except:
+        pprint.pprint(pivot_df)
     energy_cols = ['Energy_G', 'Energy_B', 'Energy_L']
     energy_plot = pivot_df.plot(x='Layer', y=energy_cols, kind='bar', title='{} Energy for Average Freqs'.format(g))
     energy_plot.set_xlabel('Layer')
@@ -1309,7 +1359,10 @@ def Analyze_Components(g=['alex']):
         'Energy-Efficiency_B_MaxFreq': pivot_df[pivot_df['Freq'].isin(max_freq_B.values)]['Energy-Efficiency_B'].values,
         'Energy-Efficiency_G_MaxFreq': pivot_df[pivot_df['Freq'].isin(max_freq_G.values)]['Energy-Efficiency_G'].values,
     })
-    display(freq_df)
+    try:
+        display(freq_df)
+    except:
+        pprint.pprint(freq_df)
     energy_cols = ['Energy_G_MaxFreq', 'Energy_B_MaxFreq', 'Energy_L_MaxFreq']
     energy_plot = freq_df.plot(x='Layer', y=energy_cols, kind='bar', title='Energy for Freq Max')
     energy_plot.set_xlabel('Layer')
@@ -1332,7 +1385,10 @@ def Analyze_Components(g=['alex']):
     for freq in pivot_df['Freq'].unique():
         # Filter dataframe for the current Freq value
         freq_df = pivot_df[pivot_df['Freq'] == freq]
-        display(freq_df)
+        try:
+            display(freq_df)
+        except:
+            pprint.pprint(freq_df)
         
         # Plot Energy-Efficiency columns
         energy_efficiency_cols = ['Energy-Efficiency_G', 'Energy-Efficiency_B', 'Energy-Efficiency_L']

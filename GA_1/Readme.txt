@@ -1,0 +1,1 @@
+GA_0 was try to use nsga2 but I intrrupt and first try to use this single objectove more simple lib. By this I have a first try, but then move all profile tasks and function to profiling, so I interrupt and switch to GA_2

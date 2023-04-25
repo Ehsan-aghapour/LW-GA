@@ -5,6 +5,8 @@ from geneticalgorithm import geneticalgorithm as ga
 from genetic_algorithm import GeneticAlgorithm as GA
 import pandas as pd
 import os
+import sys
+
 
 from pathlib import Path
 explore_freq=Path('freq_tranfer.csv').resolve()
@@ -369,8 +371,8 @@ def run_ga(_g='alex',_target_latency=500):
             return 1000000000
         return time
 
-    algorithm_param = {'max_num_iteration': 15000,
-                       'population_size':500,
+    algorithm_param = {'max_num_iteration': 3000,
+                       'population_size':200,
                        'mutation_probability': 0.1,
                        'mutation_discrete_probability': None,
                        'elit_ratio': 0.01,
@@ -389,7 +391,7 @@ def run_ga(_g='alex',_target_latency=500):
             )
 
     filename=_g+'_last_g.npz'
-    model.run(no_plot = False,save_last_generation_as = filename)
+    res=model.run(no_plot = False,save_last_generation_as = filename)
     with Path(_g+"_report.pkl").open('wb') as ff:
         pkl.dump(model.report,ff)
     '''with Path(_g+"_result.npz").open('wb') as ff:
@@ -397,20 +399,40 @@ def run_ga(_g='alex',_target_latency=500):
     model.run(start_generation=model.result.last_generation)
     '''
     plt.plot(model.report, label = f"local optimization")
+    last_generation=model.result.last_generation
+    solutions=last_generation.variables
+    scores=last_generation.scores
+    Freqs=[]
+    Order=[]
+    sols=[]
+    for solution in solutions:
+        freq,comps=decoder(solution)
+        freq=[tuple(f) for f in freq]
+        Freqs.append(tuple(freq))
+        Order.append(comps)
+        sols.append(solution)
+    df = pd.DataFrame({
+        'graph':_g,
+        'order': Order,
+        'freq': Freqs,
+        'score': scores
+    })
+    # Save the DataFrame as a CSV file
+    df.to_csv('ga_result_'+str(_g)+'.csv', index=False)
     return model
 
 
 def main():
     global model_alex,model_google,model_mobile,model_res50,model_squeeze
-    model_alex=run_ga(_g='alex', _target_latency=150)
+    model_alex=run_ga(_g='alex', _target_latency=300)
 
-    model_google=run_ga(_g='google', _target_latency=180)
+    model_google=run_ga(_g='google', _target_latency=450)
 
-    model_mobile=run_ga(_g='mobile', _target_latency=140)
+    model_mobile=run_ga(_g='mobile', _target_latency=350)
 
-    model_res50=run_ga(_g='res50', _target_latency=600)
+    model_res50=run_ga(_g='res50', _target_latency=900)
 
-    model_squeeze=run_ga(_g='squeeze', _target_latency=180)
+    model_squeeze=run_ga(_g='squeeze', _target_latency=400)
 
     for r in model.result.last_generation.variables:
         config=decoder(r)
@@ -420,3 +442,6 @@ def main():
     config=decoder([53,53,53,53,53,53,53,13])
     print(config)
     print(comp_time(fn=config[0],cmps=config[1],debug=False))
+
+
+main()
