@@ -142,6 +142,7 @@ def run_ga(_g='alex',_target_latency=Target_Latency):
 
 def main():
     global model_alex,model_google,model_mobile,model_res50,model_squeeze
+    os.makedirs("Results", exist_ok=True)
     
     model_alex=run_ga(_g='alex')
     #model_alex.run(start_generation='Results/alex_last_g.npz')
