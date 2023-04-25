@@ -52,7 +52,7 @@ def decoder(chromosome):
 
 def run_ga(_g='alex',_target_latency=Target_Latency):
     NL=NLayers[_g]
-    varbound=np.array([(0,53)]*NL)
+    varbound=np.array([[0,53]]*NL)
     graph=_g
     target_latency=Target_Latency[_g]
     
@@ -80,7 +80,7 @@ def run_ga(_g='alex',_target_latency=Target_Latency):
 
     model=ga(function=f,
                 dimension=NL,
-                variable_type='int',
+                variable_type=tuple(['int']*NL),
                 variable_boundaries=varbound,
                 algorithm_parameters=algorithm_param
             )
@@ -102,6 +102,7 @@ def run_ga(_g='alex',_target_latency=Target_Latency):
     sols=[]
     for solution in solutions:
         freq,comps=decoder(solution)
+        freq = [[int(x) for x in inner_list] for inner_list in freq]
         freq=[tuple(f) for f in freq]
         Freqs.append(tuple(freq))
         Order.append(comps)
@@ -142,5 +143,7 @@ main()
 def test():
     config=decoder([53,53,53,53,53,53,53,13])
     print(config)
-    print(P.Inference_Cost(_graph=g,_freq=config[0],_order=config[1]))
+    print(P.Inference_Cost(_graph='alex',_freq=config[0],_order=config[1]))
 test()
+
+
