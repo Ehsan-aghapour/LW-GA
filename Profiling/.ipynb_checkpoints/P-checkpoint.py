@@ -57,6 +57,7 @@ try:
     Synthetic_Tranfer_logs = script_dir / 'Synthetic_Transfers'
     Layers_Percentage_csv = script_dir / 'Layers_Percentage.csv'
     Layers_With_Percentage_csv = script_dir / 'Layers_With_Percentage.csv'
+    Freq_Transition_Dealy_csv = script_dir/'..'/'DVFS-Delay'/'Perf2'/'Data'/'FreqMeasurements2_5.csv'
 except:
     Layers_csv=Path('Layers.csv').resolve()
     Transfers_csv=Path('Transfers.csv').resolve()
@@ -69,6 +70,7 @@ except:
     Synthetic_Tranfer_logs=Path("./Synthetic_Transfers/").resolve()
     Layers_Percentage_csv=Path("Layers_Percentage.csv").resolve()
     Layers_With_Percentage_csv=Path("Layers_With_Percentage.csv").resolve()
+    Freq_Transition_Dealy_csv = Path("../DVFS-Delay/Perf2/Data/FreqMeasurements2_5.csv").resolve()
 
 Layers_df=pd.DataFrame(columns=["Graph", "Component", "Freq", "Freq_Host", "Layer", "Metric", "Time", "Power"])
 Layers_df_indexed=pd.DataFrame()
@@ -77,14 +79,13 @@ Transfer_Freq_df = pd.DataFrame(columns=['kernels', 'order', 'SenderFreq','RecFr
 Transfer_Data_Size_Min_Freq_df = pd.DataFrame(columns=['kernels', 'order', 'transfer_time', 'transfer_power'])
 Transfer_Data_Size_Max_Freq_df = pd.DataFrame(columns=['kernels', 'order', 'transfer_time', 'transfer_power'])
 Evaluations_df=pd.DataFrame(columns=['graph','order','freq','input_time','task_time','total_time', 'input_power','task_power'])
+Freq_Transition_Dealy_df=None
 
 
-# -
-
-
+# +
 def Load_Data():
     global Layers_df, Transfers_df, Transfer_Freq_df,\
-        Transfer_Data_Size_Min_Freq_df,Transfer_Data_Size_Max_Freq_df,Layers_df_indexed
+        Transfer_Data_Size_Min_Freq_df,Transfer_Data_Size_Max_Freq_df,Layers_df_indexed,Freq_Transition_Dealy_df
     #### Load data of layer times with different freqs
     if Layers_csv.exists():
         Layers_df=pd.read_csv(Layers_csv)
@@ -113,9 +114,16 @@ def Load_Data():
     ### Load tranfering VS data size with max freq
     if Transfer_Data_Size_Max_Freq_csv.exists():
         Transfer_Data_Size_Max_Freq_df=pd.read_csv(Transfer_Data_Size_Max_Freq_csv)
+        
+    ## Loading frequency transmition delay times 
+    if Freq_Transition_Dealy_csv.exists():
+        Freq_Transition_Dealy_df = pd.read_csv(Freq_Transition_Dealy_csv)
+        
 if Test:
     Load_Data()
 
+
+# -
 
 def ab():
     rr='ab'
@@ -765,6 +773,101 @@ def Comp_Cost(g='alex',fn=[[0],[1],[2],[3],[4],[5],[6],[7]],cmps=8*'B',dvfs_dela
     return tt,ee/1000.0
 
 
+def Comp_Cost_variable_dvfs_delay(g='alex',fn=[[0],[1],[2],[3],[4],[5],[6],[7]],cmps=8*'B', debug=False):
+    fn=list(fn)
+    fn.insert(0,fn[0])
+    cmps=cmps[0]+cmps
+    if debug:
+        print(f'fn is {fn}')
+    
+    fc=len(fn)*[None]
+    for i in range(len(fc)):
+        fc_l=0
+        fc_b=0
+        fc_g=0
+        if cmps[i-1]=='G':
+            fc_g=fn[i-1][0]
+            fc_b=fn[i-1][1]
+        if cmps[i-1]=='B':
+            fc_b=fn[i-1][0]
+        if cmps[i-1]=='L':
+            fc_l=fn[i-1][0]
+        
+        f={"L":[fc_l], "B":[fc_b], "G":[fc_g,fc_b]}
+        fc[i]=f[cmps[i]]
+        if debug:
+            print(f'i:{i}, previous p:{cmps[i-1]}, current p:{cmps[i]}, curent p freqs:{f}, fc[i]:{fc[i]}')
+    
+    #just first layer(i=1) current freq is equal to its next freq
+    #because next freq is applied before input(i=0) and it is already applied for the first layer
+    fc[1]=fn[1]
+    if debug:
+        print(f'fc is:{fc}')
+        print(f'processors:{cmps}')
+    tt=0
+    ee=0
+    tt_nodvfs=0
+    ee_nodvfs=0
+    
+    #comp time
+    tfn=Value(g,cmps[0],fn[0],0,'in','Time')
+    tfc=Value(g,cmps[0],fc[0],0,'in','Time')
+    t=tfc
+    _dvfs_delay=Freq_Transition_Dealy_df[(Freq_Transition_Dealy_df["PE"]==cmps[0]) &\
+                                         (Freq_Transition_Dealy_df['Freq']==fc[0][0]) &\
+                                         (Freq_Transition_Dealy_df['NextFreq']==fn[0][0])]['AVG'].mean()
+    if tfc > _dvfs_delay:
+        t=tfn - (_dvfs_delay/tfc)*tfn + _dvfs_delay  
+    if debug:
+        print(f'in:{0}, next_freq:{fn[0]} time(next_freq):{tfn} cur_freq:{fc[0]} time(cur_freq):{tfc} time:{t}')      
+    tt+=t
+    tt_nodvfs+=tfn
+    
+    #comp power
+    pfn=Value(g,cmps[0],fn[0],0,'in','Power')
+    pfc=Value(g,cmps[0],fc[0],0,'in','Power') 
+    e=t*pfc
+    if t > _dvfs_delay:
+        e=_dvfs_delay*pfc + (t-_dvfs_delay)*pfn
+    e_nodvfs= tfn*pfn
+    ee+=e
+    ee_nodvfs+=e_nodvfs
+    if debug:
+        print(f'in:{0}, next_freq:{fn[0]} power(next_freq):{pfn} cur_freq:{fc[0]} power(cur_freq):{pfc} energy:{e}')
+        
+    for i in range(0,len(fn)-1):
+        tfn=Value(g,cmps[i+1],fn[i+1],i,'task','Time')
+        tfc=Value(g,cmps[i+1],fc[i+1],i,'task','Time')
+        t=tfc
+        _dvfs_delay=Freq_Transition_Dealy_df[(Freq_Transition_Dealy_df["PE"]==cmps[i+1]) &\
+                                             (Freq_Transition_Dealy_df['Freq']==fc[i+1][0]) &\
+                                             (Freq_Transition_Dealy_df['NextFreq']==fn[i+1][0])]['AVG'].mean()
+        if tfc > _dvfs_delay:
+            t=tfn - (_dvfs_delay/tfc)*tfn + _dvfs_delay
+        if debug:
+            print(f'layer:{i}, next_freq:{fn[i+1]} time(next_freq):{tfn} cur_freq:{fc[i+1]} time(cur_freq):{tfc} time:{t}')
+        tt+=t
+        tt_nodvfs+=tfn
+        
+        pfn=Value(g,cmps[i+1],fn[i+1],i,'task','Power')
+        pfc=Value(g,cmps[i+1],fc[i+1],i,'task','Power') 
+        e=t*pfc
+        if t > _dvfs_delay:
+            e=_dvfs_delay*pfc + (t-_dvfs_delay)*pfn
+        e_nodvfs= tfn*pfn
+        if debug:
+            print(f'layer:{i}, next_freq:{fn[i+1]} power(next_freq):{pfn} cur_freq:{fc[i+1]} power(cur_freq):{pfc} energy:{e}')
+        ee+=e
+        ee_nodvfs+=e_nodvfs
+        
+    if debug:
+        print(f'time with dvfs delay: {tt}')
+        print(f'time without dvfs delay: {tt_nodvfs}')
+        print(f'Energy with dvfs delay: {ee/1000.0}')
+        print(f'Energy without dvfs delay: {ee_nodvfs/1000.0}')
+    return tt,ee/1000.0
+
+
 def Transfer_Info(p1='B',p2='G',f1=[4],f2=[3,4],_debug=False):
     global Transfer_Freq_df
     f1=[int(i) for i in f1]
@@ -797,7 +900,7 @@ if Test==2:
     Transfer_Freq_df
 
 
-def Comm_Cost(g='alex',fn=[[0],[1],[2],[3],[4],[5],[6],[7]],cmps=8*'B',dvfs_delay=3.5, debug=False):
+def Comm_Cost(g='alex',fn=[[0],[1],[2],[3],[4],[5],[6],[7]],cmps=8*'B', debug=False):
     fn=list(fn)
     fn.insert(0,fn[0])
     cmps=cmps[0]+cmps
@@ -861,13 +964,18 @@ def Comm_Cost(g='alex',fn=[[0],[1],[2],[3],[4],[5],[6],[7]],cmps=8*'B',dvfs_dela
 def Inference_Cost(_graph='alex',_freq=[[0],[1],[2],[3],[4],[5],[6],[7]],_order=8*'B',_dvfs_delay=3.5, _debug=False):
     total_time=0
     total_energy=0
-    t_cmp,e_cmp=Comp_Cost(g=_graph,fn=_freq,cmps=_order,dvfs_delay=_dvfs_delay, debug=_debug)
-    t_cmu,e_cmu=Comm_Cost(g=_graph,fn=_freq,cmps=_order,dvfs_delay=_dvfs_delay, debug=_debug)
+    if _dvfs_delay=="variable":
+        t_cmp,e_cmp=Comp_Cost_variable_dvfs_delay(g=_graph,fn=_freq,cmps=_order, debug=_debug)
+    else:
+        t_cmp,e_cmp=Comp_Cost(g=_graph,fn=_freq,cmps=_order,dvfs_delay=_dvfs_delay, debug=_debug)
+    t_cmu,e_cmu=Comm_Cost(g=_graph,fn=_freq,cmps=_order, debug=_debug)
     total_time=t_cmp + t_cmu
     total_energy=e_cmp + e_cmu
     return total_time,total_energy
 if Test==2:
-    print(Inference_Cost())
+    print(Inference_Cost(_dvfs_delay=0))
+    print(Inference_Cost(_dvfs_delay=3.5))
+    print(Inference_Cost(_dvfs_delay='variable'))
 
 
 def Parse_Power_total(file_name,graph,order,frqss):

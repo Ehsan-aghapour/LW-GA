@@ -1,6 +1,6 @@
 import pandas as pd
 
-data=pd.read_csv("FreqMeasurements2.csv")
+data=pd.read_csv("FreqMeasurements2_5.csv")
 
 
 data.columns
@@ -25,5 +25,9 @@ table=pd.pivot_table(gdata,values="AVG", index=["NextFreq"], columns=["Freq"])
 table
 
 table.plot()
+
+F1=0
+F2=4
+data[(data["PE"]=='GPU') & (data['Freq']==F1) & (data['NextFreq']==F2)]['AVG'].mean()
 
 
