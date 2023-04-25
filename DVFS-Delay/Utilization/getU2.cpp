@@ -7,15 +7,22 @@
 void getCpuStats(unsigned long long& total_time, unsigned long long& idle_time) {
     std::ifstream file("/proc/stat");
     std::string line;
-    unsigned long long user, nice, system, idle;
+    //unsigned long long user, nice, system, idle;
+    unsigned long long user, nice, system, idle, iowait, irq, softirq, steal, guest, guest_nice;
     total_time = 0;
     idle_time = 0;
 
     if (file.is_open()) {
         std::getline(file, line);
+        /*
         sscanf(line.c_str(), "cpu %llu %llu %llu %llu", &user, &nice, &system, &idle);
         total_time = user + nice + system + idle;
         idle_time = idle;
+        */
+        sscanf(line.c_str(), "cpu %llu %llu %llu %llu %llu %llu %llu %llu %llu %llu",
+           &user, &nice, &system, &idle, &iowait, &irq, &softirq, &steal, &guest, &guest_nice);
+        total_time = user + nice + system + idle + iowait + irq + softirq + steal;
+        idle_time = idle + iowait;
     }
     file.close();
 }

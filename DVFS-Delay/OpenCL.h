@@ -139,6 +139,11 @@ public:
 
     // Third-party extensions
     DECLARE_FUNCTION_PTR(clImportMemoryARM);
+    
+    //Ehsan
+    DECLARE_FUNCTION_PTR(clSetUserEventStatus);
+    DECLARE_FUNCTION_PTR(clCreateUserEvent);
+    
 
 #undef DECLARE_FUNCTION_PTR
 

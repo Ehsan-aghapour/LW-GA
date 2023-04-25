@@ -18,13 +18,13 @@ import random
 import math
 
 
-Test=0
+Test=2
 
 
 cnn_dir="/home/ehsan/UvA/ARMCL/Rock-Pi/ComputeLibrary_64_CPUGPULW/"
 
 cnn={
-    "alex":"graph_alexnet_n_pipe_npu_lw",
+    "alex":"graph_alexnet_n_pipe_npu_lw_whole",
     "google":"graph_googlenet_n_pipe_npu_lw",
     "mobile":"graph_mobilenet_n_pipe_npu_lw",
     "res50":"graph_resnet50_n_pipe_npu_lw",
@@ -223,7 +223,7 @@ def Profile(_ff=[[[0],[1],[2],[3,6],[4],[5],[6],[7]]],_Num_frames=Num_frames,ord
     print(f'\n\nformatted freqs:\n {ff}')
     os.system(f"PiPush {cnn_dir}/build/examples/LW/{cnn[graph]} test_graph/")
     os.system('adb shell "echo 0 > /sys/class/gpio/gpio157/value"')
-    time.sleep(1)
+    time.sleep(3)
     Power_monitoring = threading.Thread(target=Arduino_read.run,args=(pwr,))
     Power_monitoring.start()
     rr=f"PiTest build/examples/LW/{cnn[graph]} test_graph/ CL {params[graph][0]} {params[graph][1]} {params[graph][2]} {_Num_frames} 0 0 100 100 {order} 1 2 4 Alex B B --kernel_c={kernel_c}"
@@ -592,6 +592,7 @@ def Profiling_Layers():
             Profile_Task_Time(graph)   
 
 
+# +
 def Analyze(graph_name=graphs,metric=['task','in','out','trans'],comp=['G','B','L'],
             freq_h=[-1],f=range(10),layers=range(40),index=['Layer'],columns=['Freq'],parameter='Time'):
 
@@ -605,15 +606,21 @@ def Analyze(graph_name=graphs,metric=['task','in','out','trans'],comp=['G','B','
     grouped_df['Energy-Efficiency']=1000.0/(grouped_df['Energy'])
     # Create a pivot table to rearrange the data for plotting
     pivot_table = pd.pivot_table(grouped_df, values=parameter, index=index, columns=columns)
+    display(pivot_table)
     pivot_table.plot(kind='bar', stacked=False, figsize=(30, 6))
     plt.title(f'{metric} {parameter} vs {columns} for {graph_name}')
     plt.xlabel(f'{index}')
     plt.ylabel(f'{metric} {parameter}')
     plt.show()
     return pivot_table
-if Test==2:
-    Analyze(graph_name=['alex'],metric=['task'],comp=['G'],freq_h=[0],index=['Layer'],columns=['Freq'])
 
+if Test==2:
+    g='alex'
+    Analyze(graph_name=[g],metric=['task'],comp=['L'],index=['Layer'],columns=['Freq'],parameter='Energy-Efficiency')
+    Analyze(graph_name=[g],metric=['task'],comp=['B'],index=['Layer'],columns=['Freq'],parameter='Energy-Efficiency')
+    Analyze(graph_name=[g],metric=['task'],comp=['G'],freq_h=[0],index=['Layer'],columns=['Freq'],parameter='Energy-Efficiency')
+    
+# -
 
 def Analyze2(graph_name = 'alex'):
     graph_df = Layers_df[Layers_df['Graph'] == graph_name]
@@ -762,7 +769,7 @@ def Transfer_Info(p1='B',p2='G',f1=[4],f2=[3,4]):
     coef_t=row['time_ratio'].iloc[0]  
     return power,coef_t
 if Test==2:
-    a,b=transfer_info('G','B',[2.0, 7.0],[7.0])
+    a,b=Transfer_Info('G','B',[2.0, 7.0],[7.0])
     Transfer_Freq_df
 
 
@@ -827,6 +834,7 @@ def Comm_Cost(g='alex',fn=[[0],[1],[2],[3],[4],[5],[6],[7]],cmps=8*'B',dvfs_dela
 
 
 def Parse_Power_total(file_name,graph,order,frqss):
+    global tts,powers
     powers,tts=Read_Power(file_name)
     power_df = pd.DataFrame(columns=['graph', 'order', 'freq', 'input_power','task_power'])
     NL=1
@@ -959,12 +967,12 @@ def Real_Evaluation(g="alex",_ord='GBBBBBBB',_fs=[ [ [0,0],[0],[0],[0],[0],[0],[
 
     Evaluations_df.to_csv(Evaluations_csv,index=False)
     return Evaluations_df
-if Test==2:
+if Test==3:
     Real_Evaluation(g="alex",_ord='GBBBBBBB',_fs=[ [ [4,6],[6],[6],[6],[6],[6],[6],[6] ] ])
     Real_Evaluation(g="alex",_ord='BBBBBBBB',_fs=[ [ [0],[1],[2],[3],[4],[5],[6],[7] ] ])
 
 
-def Test():
+def _Test():
     _fs=[ [ [0],[1],[2],[3],[4],[5],[6],[7] ],
          [ [7],[6],[5],[4],[3],[2],[1],[0] ] ]
     _order='BBBBBBBB'
@@ -1183,6 +1191,7 @@ def Compute_Layer_Percentage():
     display(pivot_df)
 
 
+# +
 ## plot energy of layers running with different components with freq min
 def _Analyze_Components(g=['alex']):
     Layers_df['Energy']=Layers_df['Time']*Layers_df['Power']/1000.0
@@ -1226,9 +1235,12 @@ def _Analyze_Components(g=['alex']):
     time_plot.set_xlabel('Layer')
     time_plot.set_ylabel('Time')
     plt.show()
+
 if Test==2:
     _Analyze_Components(g=['alex'])
 
+
+# -
 
 ## plot (and extract and save result to csv files) energy of layers running with different components with freq min
 def Analyze_Components(g=['alex']):
@@ -1240,6 +1252,7 @@ def Analyze_Components(g=['alex']):
                         ['Time','Power'].sum().reset_index()
 
     grouped_df['Energy']=grouped_df['Time']*grouped_df['Power']/1000.0
+    
     #print(grouped_df)
 
     '''grouped_df['Layer'] = grouped_df['Layer'].where(grouped_df['Metric'] != 'in', 'input')
@@ -1254,7 +1267,9 @@ def Analyze_Components(g=['alex']):
     grouped_df = grouped_df.groupby(['Freq','Component', 'Layer']).agg(aggregations).reset_index()
     #print(grouped_df)
 
-    pivot_df = grouped_df.pivot_table(index=['Layer','Freq'], columns='Component', values=['Time', 'Energy'])
+    grouped_df['Energy-Efficiency']=1000.0/grouped_df['Energy']
+    
+    pivot_df = grouped_df.pivot_table(index=['Layer','Freq'], columns='Component', values=['Time', 'Energy','Energy-Efficiency'])
     pivot_df.columns = ['{}_{}'.format(col[0], col[1]) for col in pivot_df.columns]
     #pivot_df = grouped_df.pivot_table(index=['Layer','Freq'], columns='Component', values='Energy')
     #pivot_df.columns = ['Energy_{}'.format(col) for col in pivot_df.columns]
@@ -1275,10 +1290,20 @@ def Analyze_Components(g=['alex']):
         'Energy_G_MaxFreq': pivot_df[pivot_df['Freq'].isin(max_freq_G.values)]['Energy_G'].values,
         'Time_G_MaxFreq': pivot_df[pivot_df['Freq'].isin(max_freq_G.values)]['Time_G'].values,
         'Energy_L_MaxFreq': pivot_df[pivot_df['Freq'].isin(max_freq_L.values)]['Energy_L'].values,
-        'Time_L_MaxFreq': pivot_df[pivot_df['Freq'].isin(max_freq_L.values)]['Time_L'].values})
+        'Time_L_MaxFreq': pivot_df[pivot_df['Freq'].isin(max_freq_L.values)]['Time_L'].values,
+        'Energy-Efficiency_L_MaxFreq': pivot_df[pivot_df['Freq'].isin(max_freq_L.values)]['Energy-Efficiency_L'].values,
+        'Energy-Efficiency_B_MaxFreq': pivot_df[pivot_df['Freq'].isin(max_freq_B.values)]['Energy-Efficiency_B'].values,
+        'Energy-Efficiency_G_MaxFreq': pivot_df[pivot_df['Freq'].isin(max_freq_G.values)]['Energy-Efficiency_G'].values,
+    })
     display(freq_df)
     energy_cols = ['Energy_G_MaxFreq', 'Energy_B_MaxFreq', 'Energy_L_MaxFreq']
     energy_plot = freq_df.plot(x='Layer', y=energy_cols, kind='bar', title='Energy for Freq Max')
+    energy_plot.set_xlabel('Layer')
+    energy_plot.set_ylabel('Energy')
+    plt.show()
+    
+    energy_cols = ['Energy-Efficiency_G_MaxFreq', 'Energy-Efficiency_B_MaxFreq', 'Energy-Efficiency_L_MaxFreq']
+    energy_plot = freq_df.plot(x='Layer', y=energy_cols, kind='bar', title='Energy-Efficiency for Freq Max')
     energy_plot.set_xlabel('Layer')
     energy_plot.set_ylabel('Energy')
     plt.show()
@@ -1294,6 +1319,13 @@ def Analyze_Components(g=['alex']):
         # Filter dataframe for the current Freq value
         freq_df = pivot_df[pivot_df['Freq'] == freq]
         display(freq_df)
+        
+        # Plot Energy-Efficiency columns
+        energy_efficiency_cols = ['Energy-Efficiency_G', 'Energy-Efficiency_B', 'Energy-Efficiency_L']
+        energy_plot = freq_df.plot(x='Layer', y=energy_efficiency_cols, kind='bar', title='Energy-Efficiency for Freq {}'.format(freq))
+        energy_plot.set_xlabel('Layer')
+        energy_plot.set_ylabel('Energy-Efficiency')
+        plt.show()
 
         # Plot Energy columns
         energy_cols = ['Energy_G', 'Energy_B', 'Energy_L']
@@ -1309,7 +1341,7 @@ def Analyze_Components(g=['alex']):
         time_plot.set_ylabel('Time')
         plt.show()
 if Test==2:
-    Analyze_Components(g=['google'])
+    Analyze_Components(g=['alex'])
 
 
 def generate_random_strings(_n, num_strings):
@@ -1372,8 +1404,25 @@ def Run_Eval(g='alex',num_evals=1000,num_freqs=10):
         print("----")
         list_fs=format_to_list(column_freq_values)
         Real_Evaluation(g,_ord=value,_fs=list_fs)
+'''if Test==2:
+    Run_Eval(g='alex')'''
 
-Run_Eval(g='alex')
+if Test==2:
+    Finished=False
+    while not Finished:
+        try:
+            Run_Eval(g='alex')
+            Finished=True
+        except Exception as e:
+            
+            print("Error occurred:", e)
+            print("Traceback:")
+            traceback.print_exc()
+            # #!sudo apt install sox
+            os.system('play -nq -t alsa synth {} sine {}'.format(5, 440))
+            input("Continue?")
+            ab()
+            sleep(5)
 
 # -
 
@@ -1387,7 +1436,7 @@ def main():
     
     print('\n\n\n\n***************Profiling_Layers\n')
     input('Make sure to set profile mode to PROFILE_MODE_LAYERS in ExecutionHelpers.cpp')
-    Profiling_Layers()'''
+    Profiling_Layers()
     
     
     print('\n\n\n\n***************Explore_Freq_on_Transfering\n')
@@ -1400,7 +1449,7 @@ def main():
     Run_Explore_Data_Size_on_Transfering(_freq_mode="max")
     
     print('\n\n\n\n***************Run_Explore_Data_Size_on_Transfering(min)\n')
-    Run_Explore_Data_Size_on_Transfering(_freq_mode="min")
+    Run_Explore_Data_Size_on_Transfering(_freq_mode="min")'''
     
     
     print('\n\n\n\n***************Real_Evaluation\n')
@@ -1428,7 +1477,7 @@ def main():
     print('\n\n\n\n***************Test\n')
     print(f'Real Run time is: 334.5 ms')
     print(f'Real Run time is: 192.7 ms')
-    Test()
+    _Test()
     
     
     
@@ -1454,3 +1503,14 @@ def main():
     _n = 8  # replace with desired length of the random strings
     num_strings = 1000  # replace with desired number of random strings
     random_strings = generate_random_strings(_n, num_strings)
+if Test==1:
+    main()
+
+a=np.array(tts)
+b=np.array([a[j*202:j*202+203] for j in range(10)])
+ind=np.where(a>1000)
+a[ind]
+
+
+
+

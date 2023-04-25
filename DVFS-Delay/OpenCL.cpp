@@ -150,6 +150,10 @@ bool CLSymbols::load(const std::string &library)
 
     // Third-party extensions
     LOAD_FUNCTION_PTR(clImportMemoryARM, handle);
+    
+    //Ehsan
+    LOAD_FUNCTION_PTR(clCreateUserEvent, handle);
+    LOAD_FUNCTION_PTR(clSetUserEventStatus, handle);
 
 #undef LOAD_FUNCTION_PTR
 
@@ -174,6 +178,39 @@ bool opencl_is_available()
     return CLSymbols::get().clBuildProgram_ptr != nullptr;
 }
 } // namespace arm_compute
+
+/********Ehsan********************/
+cl_event clCreateUserEvent(cl_context  context,
+                            cl_int *err)
+{
+    arm_compute::CLSymbols::get().load_default();
+    auto func = arm_compute::CLSymbols::get().clCreateUserEvent_ptr;
+    if(func != nullptr)
+    {
+        return func(context, err);
+    }
+    else
+    {
+        return nullptr;
+    }
+}
+
+cl_int clSetUserEventStatus(cl_event  event /* event */,
+                     cl_int     status/* execution_status */)
+{
+    arm_compute::CLSymbols::get().load_default();
+    auto func = arm_compute::CLSymbols::get().clSetUserEventStatus_ptr;
+    if(func != nullptr)
+    {
+        return func(event, status);
+    }
+    else
+    {
+        return CL_OUT_OF_RESOURCES;
+    }
+}
+/**********************/
+
 
 cl_int clEnqueueMarker(cl_command_queue command_queue,
                        cl_event        *event)
