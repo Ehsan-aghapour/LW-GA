@@ -3,32 +3,21 @@ import numpy as np
 
 from geneticalgorithm2 import geneticalgorithm2 as ga # for creating and running optimization model
 
-from geneticalgorithm2 import Generation, AlgorithmParams#, MiddleCallbackData # classes for comfortable parameters setting and getting
-
-from geneticalgorithm2 import Crossover, Mutations, Selection # classes for specific mutation and crossover behavior
-
-from geneticalgorithm2 import Population_initializer # for creating better start population
-
-from geneticalgorithm2 import np_lru_cache # for cache function (if u want)
-
-from geneticalgorithm2 import plot_pop_scores # for plotting population scores, if u want
-
-from geneticalgorithm2 import Callbacks # simple callbacks (will be deprecated)
-
-from geneticalgorithm2 import Actions, ActionConditions, MiddleCallbacks # middle callbacks
-
 import matplotlib.pyplot as plt
 
 import numpy as np
-import pickle as pkl
-#from geneticalgorithm import geneticalgorithm as ga
-#from genetic_algorithm import GeneticAlgorithm as GA
-import pandas as pd
-import os
-import sys
-from pathlib import Path
-sys.path.append('../Profiling/')
 
+import pickle as pkl
+
+import pandas as pd
+
+import os
+
+import sys
+
+from pathlib import Path
+
+sys.path.append('../Profiling/')
 import P
 #Inference_Cost(_graph='alex',_freq=[[0],[1],[2],[3],[4],[5],[6],[7]],_order=8*'B',_dvfs_delay=3.5, _debug=False)
 P.Load_Data()
@@ -37,18 +26,6 @@ P.Load_Data()
 Target_Latency={"alex":300, "google":450, "mobile":350, "res50":900, "squeeze":400}
 
 NLayers={"alex":8, "google":11, "mobile":14, "res50":18, "squeeze":10, "test_transfer":2}
-
-
-'''
-explore_freq=Path('freq_tranfer.csv').resolve()
-NFreqs={"L":6, "B":8, "G":5}
-Metrics=["in","task","out","trans"]
-n=100
-params={"alex":(1,1,1), "google":(2,2,1), "mobile":(2,3,1), "res50":(2,4,1), "squeeze":(1,5,1), "test_transfer":(1,0,0)}
-data={}
-df=None
-df2=None
-%config Completer.use_jedi = False'''
 
 
 # -
@@ -140,6 +117,7 @@ def run_ga(_g='alex',_target_latency=Target_Latency):
     return model
 
 
+# +
 def main():
     global model_alex,model_google,model_mobile,model_res50,model_squeeze
     os.makedirs("Results", exist_ok=True)
@@ -155,19 +133,14 @@ def main():
 
     model_squeeze=run_ga(_g='squeeze')
 
-    for r in model.result.last_generation.variables:
-        config=decoder(r)
-        print(config)
-        print(P.Inference_Cost(_graph=g,_freq=config[0],_order=config[1]))
+
 main()
 
+
+# -
 
 def test():
     config=decoder([53,53,53,53,53,53,53,13])
     print(config)
     print(P.Inference_Cost(_graph=g,_freq=config[0],_order=config[1]))
 test()
-
-
-
-
