@@ -137,7 +137,7 @@ def run_ga_LW(_g,_target_latency,comp):
 def main():
     global model_alex,model_google,model_mobile,model_res50,model_squeeze
     os.makedirs("Results", exist_ok=True)
-    l=400
+    l=300
     model_alex=run_ga(_g='alex',_target_latency=l,comp='L')
     model_alex=run_ga(_g='alex',_target_latency=l,comp='B')
     model_alex=run_ga(_g='alex',_target_latency=l,comp='G')

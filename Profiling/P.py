@@ -1146,9 +1146,9 @@ if Motivation_Fig2:
     _g='alex'
     N=NLayers[g]
     Real_Evaluation(g="alex",_ord='L',_fs=[[[5]]*N],suffix="Motivation_Figure")
-    Real_Evaluation(g="alex",_ord='B',_fs=[[[3]]*N],suffix="Motivation_Figure")
-    Real_Evaluation(g="alex",_ord='G',_fs=[[[3,3]]*N],suffix="Motivation_Figure")
-
+    Real_Evaluation(g="alex",_ord='B',_fs=[[[1]]*N],suffix="Motivation_Figure")
+    Real_Evaluation(g="alex",_ord='G',_fs=[[[1,1]]*N],suffix="Motivation_Figure")
+    
 
 # +
 #This version of Real_Evalutaion is for evaluating GA results, so it get the df instead of using global one
@@ -1282,7 +1282,7 @@ def Run_Eval_For_GA():
             print("----")
             list_fs=format_to_list(column_freq_values)
             Real_Evaluation_For_GA(g,_ord=value,_fs=list_fs,Evals_df=Evals_df)
-if Test==2:
+if Test==3:
     Run_Eval_For_GA()
 
 
