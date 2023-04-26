@@ -66,7 +66,7 @@ def run_ga(_g='alex',_target_latency=Target_Latency):
         else:
             return 1000000000
 
-    algorithm_param = {'max_num_iteration': 3,
+    algorithm_param = {'max_num_iteration': 3000,
                        'population_size':200,
                        'mutation_probability': 0.1,
                        'mutation_discrete_probability': None,
@@ -133,7 +133,6 @@ def main():
     #model_google=run_ga(_g='google')
 
     model_mobile=run_ga(_g='mobile')
-    input('mobile finished press to continue')
 
     model_res50=run_ga(_g='res50')
 
