@@ -76,7 +76,7 @@ def run_ga_LW(_g,_target_latency,comp):
         else:
             return 1000000000
 
-    algorithm_param = {'max_num_iteration': 1000,
+    algorithm_param = {'max_num_iteration': 5,
                        'population_size':200,
                        'mutation_probability': 0.1,
                        'mutation_discrete_probability': None,
@@ -138,10 +138,10 @@ def main():
     global model_alex,model_google,model_mobile,model_res50,model_squeeze
     os.makedirs("Results", exist_ok=True)
     l=300
-    model_alex=run_ga(_g='alex',_target_latency=l,comp='L')
-    model_alex=run_ga(_g='alex',_target_latency=l,comp='B')
-    model_alex=run_ga(_g='alex',_target_latency=l,comp='G')
-    model_alex=run_ga(_g='alex',_target_latency=l,comp='LBG')
+    model_alex=run_ga_LW(_g='alex',_target_latency=l,comp='L')
+    model_alex=run_ga_LW(_g='alex',_target_latency=l,comp='B')
+    model_alex=run_ga_LW(_g='alex',_target_latency=l,comp='G')
+    model_alex=run_ga_LW(_g='alex',_target_latency=l,comp='LBG')
     #model_alex.run(start_generation='Results/alex_last_g.npz')
 
 
@@ -158,7 +158,7 @@ def test():
     
     print(config)
     t,e=P.Inference_Cost(_graph=g,_freq=config[0],_order=config[1])
-    print(g,config[1],str(freqs).replace(' ',''),e,t)
+    print(g,config[1],str(freqs),e,t)
 test()
 
 

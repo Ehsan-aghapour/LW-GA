@@ -57,7 +57,8 @@ try:
     Layers_Percentage_csv = script_dir / 'Layers_Percentage.csv'
     Layers_With_Percentage_csv = script_dir / 'Layers_With_Percentage.csv'
     Freq_Transition_Dealy_csv = script_dir/'..'/'DVFS-Delay'/'Perf2'/'Data'/'FreqMeasurements2_5.csv'
-    GA_Results = script_dir / 'ga_result.csv'
+    GA_Results_PELSI = script_dir / 'ga_result.csv'
+    GA_Results_LW = script_dir / 'ga_result_LW.csv'
 except:
     Layers_csv=Path('Layers.csv').resolve()
     Transfers_csv=Path('Transfers.csv').resolve()
@@ -71,7 +72,8 @@ except:
     Layers_Percentage_csv=Path("Layers_Percentage.csv").resolve()
     Layers_With_Percentage_csv=Path("Layers_With_Percentage.csv").resolve()
     Freq_Transition_Dealy_csv = Path("../DVFS-Delay/Perf2/Data/FreqMeasurements2_5.csv").resolve()
-    GA_Results = Path('ga_result.csv').resolve()
+    GA_Results_PELSI = Path('ga_result.csv').resolve()
+    GA_Results_LW = Path('ga_result_LW.csv').resolve()
 
 Layers_df=pd.DataFrame(columns=["Graph", "Component", "Freq", "Freq_Host", "Layer", "Metric", "Time", "Power"])
 Layers_df_indexed=pd.DataFrame()
@@ -1140,7 +1142,7 @@ if Test==3:
 # -
 
 #Fixed freq
-Motivation_Fig2=True
+Motivation_Fig2=False
 #def Motivation_Fig2():
 if Motivation_Fig2:
     _g='alex'
@@ -1152,14 +1154,14 @@ if Motivation_Fig2:
 
 # +
 #This version of Real_Evalutaion is for evaluating GA results, so it get the df instead of using global one
-def Real_Evaluation_For_GA(g="alex",_ord='GBBBBBBB',_fs=[ [ [0,0],[0],[0],[0],[0],[0],[0],[0] ] ],Evals_df=None):
+def Real_Evaluation_For_GA(g="alex",_ord='GBBBBBBB',_fs=[ [ [0,0],[0],[0],[0],[0],[0],[0],[0] ] ],Evals_df=None,FileName=""):
     pf="pwr_whole.csv"
     tf="temp_whole.txt"
     
     if len(_ord)==1:
         _ord=NLayers[g]*_ord
     
-    EvalFile = GA_Results
+    EvalFile = FileName
     if EvalFile.exists():
         Evals_df=pd.read_csv(EvalFile)
     #else:
@@ -1245,18 +1247,17 @@ def Real_Evaluation_For_GA(g="alex",_ord='GBBBBBBB',_fs=[ [ [0,0],[0],[0],[0],[0
 
     Evals_df.to_csv(EvalFile,index=False)
     return Evals_df
-if Test==3:
-    Real_Evaluation_For_GA(g="alex",_ord='GBBBBBBB',_fs=[ [ [4,6],[6],[6],[6],[6],[6],[6],[6] ] ])
-    Real_Evaluation_For_GA(g="alex",_ord='BBBBBBBB',_fs=[ [ [0],[1],[2],[3],[4],[5],[6],[7] ] ])
+
 
 
 # -
 
 #This is for reading GA result file and run the the real evalation for GA
-def Run_Eval_For_GA():
+def Run_Eval_For_GA(_FileName):
     
-    if GA_Results.exists():
-        Evals_df=pd.read_csv(GA_Results)
+    
+    if _FileName.exists():
+        Evals_df=pd.read_csv(_FileName).drop_duplicates()
     else:
         print("Ga result file is not existed")
         return
@@ -1281,10 +1282,98 @@ def Run_Eval_For_GA():
             print(f"Values in column 'freq': {column_freq_values}")
             print("----")
             list_fs=format_to_list(column_freq_values)
-            Real_Evaluation_For_GA(g,_ord=value,_fs=list_fs,Evals_df=Evals_df)
-if Test==3:
-    Run_Eval_For_GA()
+            Real_Evaluation_For_GA(g,_ord=value,_fs=list_fs,Evals_df=Evals_df,FileName=_FileName)
+if Test==2:
+    Run_Eval_For_GA(_FileName=GA_Results_PELSI)
+    Run_Eval_For_GA(_FileName=GA_Results_LW)
+    
 
+def Fill_prediction(_FileName, dvfs_delay):
+    
+    
+    if _FileName.exists():
+        Evals_df=pd.read_csv(_FileName).drop_duplicates()
+    else:
+        print("Ga result file is not existed")
+        return
+    
+    cases=Evals_df.shape[0]
+    print(f'There are {cases}')
+    
+    def prediction(row):
+        #print(row)
+        graph=row['graph']
+        freq=format_to_list([row['freq']])[0]
+        order=row['order']
+        #print(graph,freq,order,dvfs_delay)
+        return Inference_Cost(_graph=graph,_freq=freq,_order=order,_dvfs_delay=dvfs_delay, _debug=False)
+    Evals_df[['Predicted_Time','Predicted_Energy']]=Evals_df.apply(prediction,axis=1, result_type='expand')
+    new_file=_FileName.with_name(_FileName.name.replace(".csv", "_prediction.csv"))
+    Evals_df.to_csv(new_file)
+    
+    
+
+    
+    '''for g in  graphs:
+        
+        grouped = Evals_df[Evals_df['graph']==g].groupby('order')
+        unique_values_order = Evals_df[Evals_df['graph']==g]['order'].unique()
+
+        # Loop through the unique values in column 'order'
+        for value in unique_values_order:
+            # Get the group corresponding to the current value in column 'order'
+            group = grouped.get_group(value)
+            # Get the values in column 'freq' for the current group
+            column_freq_values = group['freq'].values
+            # Print the value in column 'A' and the corresponding values in column 'freq'
+            print(f"Value in column 'order': {value}")
+            print(f"Values in column 'freq': {column_freq_values}")
+            print("----")
+            list_fs=format_to_list(column_freq_values)
+            Real_Evaluation_For_GA(g,_ord=value,_fs=list_fs,Evals_df=Evals_df,FileName=_FileName)'''
+fname=Path('test.csv')
+Fill_prediction(fname, 'variable')
+
+# +
+from scipy.stats import norm
+Evals_df=pd.read_csv('test_prediction.csv')
+error_time = (Evals_df['total_time'] - Evals_df['Predicted_Time'])/Evals_df['total_time']
+error_energy = (Evals_df['total_e'] - Evals_df['Predicted_Energy'])/Evals_df['total_e']
+
+plt.hist(error, bins=20, density=True)
+
+# Add normal curve
+mu, std = norm.fit(error_time)
+x = np.linspace(-1.5, 1, 100)
+y = norm.pdf(x, mu, std)
+plt.plot(x, y)
+
+# Add labels and title
+plt.xlabel('Error')
+plt.ylabel('Density')
+plt.title(f'Distribution of Error Values for Time (mean={mu:.2f}, std={std:.2f})')
+
+# Show plot
+plt.show()
+
+
+plt.hist(error_energy, bins=20, density=True)
+
+# Add normal curve
+mu, std = norm.fit(error)
+x = np.linspace(-1.5, 1, 100)
+y = norm.pdf(x, mu, std)
+plt.plot(x, y)
+
+# Add labels and title
+plt.xlabel('Error')
+plt.ylabel('Density')
+plt.title(f'Distribution of Error Values for Energy (mean={mu:.2f}, std={std:.2f})')
+
+# Show plot
+plt.show()
+
+# -
 
 def _Test():
     _fs=[ [ [0],[1],[2],[3],[4],[5],[6],[7] ],
@@ -1754,7 +1843,7 @@ def Gather_real_profile(_g):
     
 if Test==3:
     for g in graphs:
-        if g is not "alex":
+        if g != "alex":
             Gather_real_profile(g)
 
 
@@ -1842,6 +1931,7 @@ if Test==1:
 
 
 def irad():
+#if True:
     a=np.array(tts)
     b=np.array([a[j*202:j*202+203] for j in range(10)])
     ind=np.where(a>1000)
