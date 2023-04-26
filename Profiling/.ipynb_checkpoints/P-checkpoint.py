@@ -19,7 +19,6 @@ import math
 import pprint
 
 
-
 Test=2
 
 
@@ -58,6 +57,7 @@ try:
     Layers_Percentage_csv = script_dir / 'Layers_Percentage.csv'
     Layers_With_Percentage_csv = script_dir / 'Layers_With_Percentage.csv'
     Freq_Transition_Dealy_csv = script_dir/'..'/'DVFS-Delay'/'Perf2'/'Data'/'FreqMeasurements2_5.csv'
+    GA_Results = script_dir / 'ga_result.csv'
 except:
     Layers_csv=Path('Layers.csv').resolve()
     Transfers_csv=Path('Transfers.csv').resolve()
@@ -71,6 +71,7 @@ except:
     Layers_Percentage_csv=Path("Layers_Percentage.csv").resolve()
     Layers_With_Percentage_csv=Path("Layers_With_Percentage.csv").resolve()
     Freq_Transition_Dealy_csv = Path("../DVFS-Delay/Perf2/Data/FreqMeasurements2_5.csv").resolve()
+    GA_Results = Path('ga_result.csv').resolve()
 
 Layers_df=pd.DataFrame(columns=["Graph", "Component", "Freq", "Freq_Host", "Layer", "Metric", "Time", "Power"])
 Layers_df_indexed=pd.DataFrame()
@@ -1136,8 +1137,154 @@ def AOA():
         
 if Test==3:
     AOA()
-    
 # -
+
+#Fixed freq
+Motivation_Fig2=True
+#def Motivation_Fig2():
+if Motivation_Fig2:
+    _g='alex'
+    N=NLayers[g]
+    Real_Evaluation(g="alex",_ord='L',_fs=[[[5]]*N],suffix="Motivation_Figure")
+    Real_Evaluation(g="alex",_ord='B',_fs=[[[3]]*N],suffix="Motivation_Figure")
+    Real_Evaluation(g="alex",_ord='G',_fs=[[[3,3]]*N],suffix="Motivation_Figure")
+
+
+# +
+#This version of Real_Evalutaion is for evaluating GA results, so it get the df instead of using global one
+def Real_Evaluation_For_GA(g="alex",_ord='GBBBBBBB',_fs=[ [ [0,0],[0],[0],[0],[0],[0],[0],[0] ] ],Evals_df=None):
+    pf="pwr_whole.csv"
+    tf="temp_whole.txt"
+    
+    if len(_ord)==1:
+        _ord=NLayers[g]*_ord
+    
+    EvalFile = GA_Results
+    if EvalFile.exists():
+        Evals_df=pd.read_csv(EvalFile)
+    #else:
+    #    Evals_df=pd.DataFrame(columns=['graph','order','freq','socre','input_time','task_time','total_time', 'input_power','task_power'])
+    cols_to_add = ['input_time','task_time','total_time', 'input_power','task_power','input_e','task_e','total_e']
+    # Loop through the columns to add
+    
+    for col in cols_to_add:
+        # Check if the column is not already in the DataFrame
+        if col not in Evals_df.columns:
+            # Add the column with default values (in this case, NaN)
+            Evals_df[col] = pd.Series([float('nan')] * len(Evals_df))
+    
+    
+    
+    new_fs=[]
+    repeat=False
+    #print(evaluations)
+    for ff in _fs:
+        tpl_f=ff
+        if type(ff)==list:
+            tpl_f=(tuple(tuple(i) for i in ff))
+        
+        row=Evals_df[(Evals_df['order']==_ord) & (Evals_df['freq']==str(tpl_f)) & (Evals_df['graph']==g)]
+        
+        if repeat==False and row.shape[0]==0:
+            print(f'new freq adding freq {ff}')
+            new_fs.append(ff)
+        else:
+            print(f'{_ord}, Freq:{ff} already evaluated:')
+            try:
+                display(row)
+            except:
+                pprint.pprint(row)
+            
+            if pd.isna(row.reset_index()['task_time']).all():
+                print(f'task_time is none adding freq {ff}')
+                new_fs.append(ff)
+
+    if len(new_fs)==0:
+        return Evals_df
+    
+    Profile(_ff=new_fs, _Num_frames=Num_frames, order=_ord, graph=g, pwr=pf, tme=tf,caching=False,kernel_c=96*50)
+    time_df=Parse_total(timefile=tf, graph=g, order=_ord, frqss=new_fs)
+    power_df=Parse_Power_total(file_name=pf,graph=g,order=_ord,frqss=new_fs)
+    if type(_fs[0])==list:
+        power_df['freq'] = power_df['freq'].apply(lambda x: str(tuple(tuple(i) for i in x)) )
+        time_df['freq'] = time_df['freq'].apply(lambda x: str(tuple(tuple(i) for i in x)) )
+    merged_df = pd.merge(power_df, time_df, on=['graph', 'order', 'freq'])
+
+
+    '''input_time=time_df['input_time'].iloc[0]
+    task_time=time_df['task_time'].iloc[0]
+    input_power=power_df['input_power'].iloc[0]
+    task_power=power_df['task_power'].iloc[0]
+    input_e=input_power*input_time
+    task_e=task_power*task_time
+    total_e=input_e+task_e
+    merged_df['input_e']=input_e/1000.0
+    merged_df['task_e']=task_e/1000.0
+    merged_df['total_e']=total_e/1000.0'''
+    
+    merged_df['input_e']=merged_df['input_power']*merged_df['input_time']/1000.0
+    merged_df['task_e']=merged_df['task_power']*merged_df['task_time']/1000.0
+    merged_df['total_e']=merged_df['input_e']+merged_df['task_e']
+    merged_df['score']=Evals_df['score']
+    try:
+        display(merged_df)
+    except:
+        pprint.pprint(merged_df)
+    #merged_df=merged_df.reset_index(drop=True,inplace=True)
+    
+    for i,k in merged_df.iterrows(): 
+        r=Evals_df[(Evals_df['graph']==k['graph']) & (Evals_df['order']==k['order']) & (Evals_df['freq']==str(k['freq']))].index
+        if(len(r)):
+            r=r[0]
+            for j,col in enumerate(Evals_df):
+                if col!='score':
+                    Evals_df.iloc[r,j]=k[col]
+        else:
+            Evals_df=pd.concat([Evals_df,merged_df], ignore_index=True)
+        
+
+    Evals_df.to_csv(EvalFile,index=False)
+    return Evals_df
+if Test==3:
+    Real_Evaluation_For_GA(g="alex",_ord='GBBBBBBB',_fs=[ [ [4,6],[6],[6],[6],[6],[6],[6],[6] ] ])
+    Real_Evaluation_For_GA(g="alex",_ord='BBBBBBBB',_fs=[ [ [0],[1],[2],[3],[4],[5],[6],[7] ] ])
+
+
+# -
+
+#This is for reading GA result file and run the the real evalation for GA
+def Run_Eval_For_GA():
+    
+    if GA_Results.exists():
+        Evals_df=pd.read_csv(GA_Results)
+    else:
+        print("Ga result file is not existed")
+        return
+    
+    cases=Evals_df.shape[0]
+    print(f'There are {cases}')
+    
+
+    for g in  graphs:
+        
+        grouped = Evals_df[Evals_df['graph']==g].groupby('order')
+        unique_values_order = Evals_df[Evals_df['graph']==g]['order'].unique()
+
+        # Loop through the unique values in column 'order'
+        for value in unique_values_order:
+            # Get the group corresponding to the current value in column 'order'
+            group = grouped.get_group(value)
+            # Get the values in column 'freq' for the current group
+            column_freq_values = group['freq'].values
+            # Print the value in column 'A' and the corresponding values in column 'freq'
+            print(f"Value in column 'order': {value}")
+            print(f"Values in column 'freq': {column_freq_values}")
+            print("----")
+            list_fs=format_to_list(column_freq_values)
+            Real_Evaluation_For_GA(g,_ord=value,_fs=list_fs,Evals_df=Evals_df)
+if Test==2:
+    Run_Eval_For_GA()
+
 
 def _Test():
     _fs=[ [ [0],[1],[2],[3],[4],[5],[6],[7] ],
@@ -1538,7 +1685,7 @@ def Run_Eval(g='alex',num_evals=1000,num_freqs=10):
         Evaluations_df=pd.read_csv(EvalFile)
     else:
         Evaluations_df=pd.DataFrame(columns=['graph','order','freq','input_time','task_time','total_time', 'input_power','task_power'])    
-    cases=Evaluation_df[Evaluation_df['graph']==g].shape[0]
+    cases=Evaluations_df[Evaluations_df['graph']==g].shape[0]
     print(f'There are {cases} existed for graph {g}')
     num_evals=max(0,num_evals-cases)
     num_orders=math.ceil(num_evals/num_freqs)
@@ -1563,14 +1710,14 @@ def Run_Eval(g='alex',num_evals=1000,num_freqs=10):
             
     for order in fs:
         for f in fs[order]:
-            row=Evaluation_df[(Evaluation_df['order']==order) & (Evaluation_df['freq']==str(f)) & (Evaluation_df['graph']==g)]
+            row=Evaluations_df[(Evaluations_df['order']==order) & (Evaluations_df['freq']==str(f)) & (Evaluations_df['graph']==g)]
             if row.shape[0]==0:
-                Evaluation_df.loc[len(Evaluation_df)]={"graph":g,"order":order,"freq":f}
+                Evaluations_df.loc[len(Evaluations_df)]={"graph":g,"order":order,"freq":f}
             
-    Evaluation_df.to_csv(Evaluations_csv,index=False)
+    Evaluations_df.to_csv(Evaluations_csv,index=False)
     
-    grouped = Evaluation_df.groupby('order')
-    unique_values_order = Evaluation_df['order'].unique()
+    grouped = Evaluations_df.groupby('order')
+    unique_values_order = Evaluations_df['order'].unique()
 
     # Loop through the unique values in column 'order'
     for value in unique_values_order:
@@ -1605,7 +1752,7 @@ def Gather_real_profile(_g):
             ab()
             sleep(5)
     
-if Test==2:
+if Test==3:
     for g in graphs:
         if g is not "alex":
             Gather_real_profile(g)

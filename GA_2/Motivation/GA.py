@@ -17,7 +17,7 @@ import sys
 
 from pathlib import Path
 
-sys.path.append('../Profiling/')
+sys.path.append('../../Profiling/')
 import P_import as P
 #Inference_Cost(_graph='alex',_freq=[[0],[1],[2],[3],[4],[5],[6],[7]],_order=8*'B',_dvfs_delay=3.5, _debug=False)
 P.Load_Data()
@@ -50,11 +50,21 @@ def decoder(chromosome):
     return freqs,ps
 
 
-def run_ga(_g='alex',_target_latency=Target_Latency):
+def run_ga_LW(_g,_target_latency,comp):
     NL=NLayers[_g]
-    varbound=np.array([[0,53]]*NL)
     graph=_g
-    target_latency=Target_Latency[_g]
+    target_latency=_target_latency
+    
+    if comp=='L':
+        varbound=np.array([[0,5]]*NL)
+    if comp=='B':
+        varbound=np.array([[6,13]]*NL)
+    if comp=='G':
+        varbound=np.array([[14,53]]*NL)
+    if comp=='LBG':
+        varbound=np.array([[0,53]]*NL)
+        
+    
     
     
     def f(X):
@@ -66,7 +76,7 @@ def run_ga(_g='alex',_target_latency=Target_Latency):
         else:
             return 1000000000
 
-    algorithm_param = {'max_num_iteration': 3000,
+    algorithm_param = {'max_num_iteration': 1000,
                        'population_size':200,
                        'mutation_probability': 0.1,
                        'mutation_discrete_probability': None,
@@ -85,9 +95,9 @@ def run_ga(_g='alex',_target_latency=Target_Latency):
                 algorithm_parameters=algorithm_param
             )
 
-    filename='Results/'+_g+'_last_g.npz'
+    filename='Results/'+_g+'_'+comp+'_last_g.npz'
     model.run(no_plot = True,save_last_generation_as = filename)
-    with Path('Results/'+_g+"_report.pkl").open('wb') as ff:
+    with Path('Results/'+_g+'_'+comp+"_report.pkl").open('wb') as ff:
         pkl.dump(model.report,ff)
     '''with Path(_g+"_result.npz").open('wb') as ff:
         pkl.dump(model.result,ff)
@@ -95,7 +105,7 @@ def run_ga(_g='alex',_target_latency=Target_Latency):
     '''
     plt.plot(model.report, label = 'local optimizationion')
     plt.title('Score Graph '+str(graph))
-    plt.savefig('Results/Score_'+str(graph)+'.png', bbox_inches="tight")
+    plt.savefig('Results/Score_'+str(graph)+'_'+comp+'.png', bbox_inches="tight")
 
 
     
@@ -119,7 +129,7 @@ def run_ga(_g='alex',_target_latency=Target_Latency):
         'score': scores
     })
     # Save the DataFrame as a CSV file
-    df.to_csv('Results/ga_result_'+str(graph)+'.csv', index=False)
+    df.to_csv('Results/ga_result_'+str(graph)+'_'+comp+'.csv', index=False)
     return model
 
 
@@ -127,17 +137,12 @@ def run_ga(_g='alex',_target_latency=Target_Latency):
 def main():
     global model_alex,model_google,model_mobile,model_res50,model_squeeze
     os.makedirs("Results", exist_ok=True)
-    
-    #model_alex=run_ga(_g='alex')
+    l=400
+    model_alex=run_ga(_g='alex',_target_latency=l,comp='L')
+    model_alex=run_ga(_g='alex',_target_latency=l,comp='B')
+    model_alex=run_ga(_g='alex',_target_latency=l,comp='G')
+    model_alex=run_ga(_g='alex',_target_latency=l,comp='LBG')
     #model_alex.run(start_generation='Results/alex_last_g.npz')
-
-    #model_google=run_ga(_g='google')
-
-    model_mobile=run_ga(_g='mobile')
-
-    model_res50=run_ga(_g='res50')
-
-    model_squeeze=run_ga(_g='squeeze')
 
 
 main()
@@ -146,9 +151,14 @@ main()
 # -
 
 def test():
+    g='alex'
     config=decoder([53,53,53,53,53,53,53,13])
+    freqs=config[0]
+    freqs=tuple([tuple(f) for f in freqs])
+    
     print(config)
-    print(P.Inference_Cost(_graph='alex',_freq=config[0],_order=config[1]))
+    t,e=P.Inference_Cost(_graph=g,_freq=config[0],_order=config[1])
+    print(g,config[1],str(freqs).replace(' ',''),e,t)
 test()
 
 
