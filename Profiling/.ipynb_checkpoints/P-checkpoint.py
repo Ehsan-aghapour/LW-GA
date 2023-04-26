@@ -20,7 +20,7 @@ import pprint
 
 
 
-Test=0
+Test=2
 
 
 cnn_dir="/home/ehsan/UvA/ARMCL/Rock-Pi/ComputeLibrary_64_CPUGPULW/"
@@ -1532,10 +1532,12 @@ def generate_random_strings(_n, num_strings):
 #random_strings = generate_random_strings(8, 100)
 
 
-# +
 def Run_Eval(g='alex',num_evals=1000,num_freqs=10):
-    Evaluation_df=pd.read_csv(Evaluations_csv)
-    
+    EvalFile=Evaluations_csv.with_name(Evaluations_csv.name.replace(".csv", "_" + g + ".csv"))
+    if EvalFile.exists():
+        Evaluations_df=pd.read_csv(EvalFile)
+    else:
+        Evaluations_df=pd.DataFrame(columns=['graph','order','freq','input_time','task_time','total_time', 'input_power','task_power'])    
     cases=Evaluation_df[Evaluation_df['graph']==g].shape[0]
     print(f'There are {cases} existed for graph {g}')
     num_evals=max(0,num_evals-cases)
@@ -1582,17 +1584,18 @@ def Run_Eval(g='alex',num_evals=1000,num_freqs=10):
         print("----")
         list_fs=format_to_list(column_freq_values)
         Real_Evaluation(g,_ord=value,_fs=list_fs)
-'''if Test==2:
-    Run_Eval(g='alex')'''
-
 if Test==3:
+    Run_Eval(g='alex')
+
+
+# +
+def Gather_real_profile(_g):
     Finished=False
     while not Finished:
         try:
-            Run_Eval(g='alex')
+            Run_Eval(g=_g)
             Finished=True
         except Exception as e:
-            
             print("Error occurred:", e)
             print("Traceback:")
             traceback.print_exc()
@@ -1601,6 +1604,12 @@ if Test==3:
             input("Continue?")
             ab()
             sleep(5)
+    
+if Test==2:
+    for g in graphs:
+        if g is not "alex":
+            Gather_real_profile(g)
+
 
 # -
 

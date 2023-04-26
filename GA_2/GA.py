@@ -3,7 +3,7 @@ import numpy as np
 
 from geneticalgorithm2 import geneticalgorithm2 as ga # for creating and running optimization model
 
-import matplotlib.pyplot as plt
+from matplotlib import pyplot as plt
 
 import numpy as np
 
@@ -18,7 +18,7 @@ import sys
 from pathlib import Path
 
 sys.path.append('../Profiling/')
-import P
+import P_import as P
 #Inference_Cost(_graph='alex',_freq=[[0],[1],[2],[3],[4],[5],[6],[7]],_order=8*'B',_dvfs_delay=3.5, _debug=False)
 P.Load_Data()
 
@@ -66,7 +66,7 @@ def run_ga(_g='alex',_target_latency=Target_Latency):
         else:
             return 1000000000
 
-    algorithm_param = {'max_num_iteration': 3000,
+    algorithm_param = {'max_num_iteration': 3,
                        'population_size':200,
                        'mutation_probability': 0.1,
                        'mutation_discrete_probability': None,
@@ -86,7 +86,7 @@ def run_ga(_g='alex',_target_latency=Target_Latency):
             )
 
     filename='Results/'+_g+'_last_g.npz'
-    model.run(no_plot = False,save_last_generation_as = filename)
+    model.run(no_plot = True,save_last_generation_as = filename)
     with Path('Results/'+_g+"_report.pkl").open('wb') as ff:
         pkl.dump(model.report,ff)
     '''with Path(_g+"_result.npz").open('wb') as ff:
@@ -94,6 +94,10 @@ def run_ga(_g='alex',_target_latency=Target_Latency):
     model.run(start_generation=model.result.last_generation)
     '''
     plt.plot(model.report, label = f"local optimization")
+    plt.title(f'Score Graph {graph}')
+    plt.savefig('Results/Score_'+str(graph)+'.png', bbox_inches="tight")
+
+    
     last_generation=model.result.last_generation
     solutions=last_generation.variables
     scores=last_generation.scores
@@ -129,6 +133,7 @@ def main():
     #model_google=run_ga(_g='google')
 
     model_mobile=run_ga(_g='mobile')
+    input('mobile finished press to continue')
 
     model_res50=run_ga(_g='res50')
 
