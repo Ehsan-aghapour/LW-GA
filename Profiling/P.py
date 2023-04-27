@@ -17,9 +17,11 @@ import traceback
 import random
 import math
 import pprint
+from scipy.stats import norm
 
 
-Test=2
+
+Test=1
 
 
 cnn_dir="/home/ehsan/UvA/ARMCL/Rock-Pi/ComputeLibrary_64_CPUGPULW/"
@@ -121,6 +123,7 @@ def Load_Data():
     ## Loading frequency transmition delay times 
     if Freq_Transition_Dealy_csv.exists():
         Freq_Transition_Dealy_df = pd.read_csv(Freq_Transition_Dealy_csv)
+    Freq_Transition_Dealy_df.replace({'Little': 'L', 'Big': 'B', 'GPU': 'G'}, inplace=True)
         
 if Test:
     Load_Data()
@@ -818,7 +821,9 @@ def Comp_Cost_variable_dvfs_delay(g='alex',fn=[[0],[1],[2],[3],[4],[5],[6],[7]],
     t=tfc
     _dvfs_delay=Freq_Transition_Dealy_df[(Freq_Transition_Dealy_df["PE"]==cmps[0]) &\
                                          (Freq_Transition_Dealy_df['Freq']==fc[0][0]) &\
-                                         (Freq_Transition_Dealy_df['NextFreq']==fn[0][0])]['AVG'].mean()
+                                         (Freq_Transition_Dealy_df['NextFreq']==fn[0][0])]['AVG'].mean()/1000000.0
+    if debug:
+        print(f'dvfs delay for inpu: {_dvfs_delay}')
     if tfc > _dvfs_delay:
         t=tfn - (_dvfs_delay/tfc)*tfn + _dvfs_delay  
     if debug:
@@ -844,7 +849,9 @@ def Comp_Cost_variable_dvfs_delay(g='alex',fn=[[0],[1],[2],[3],[4],[5],[6],[7]],
         t=tfc
         _dvfs_delay=Freq_Transition_Dealy_df[(Freq_Transition_Dealy_df["PE"]==cmps[i+1]) &\
                                              (Freq_Transition_Dealy_df['Freq']==fc[i+1][0]) &\
-                                             (Freq_Transition_Dealy_df['NextFreq']==fn[i+1][0])]['AVG'].mean()
+                                             (Freq_Transition_Dealy_df['NextFreq']==fn[i+1][0])]['AVG'].mean()/1000000.0
+        if debug:
+            print(f'dvfs delay for layer{i}: {_dvfs_delay}')
         if tfc > _dvfs_delay:
             t=tfn - (_dvfs_delay/tfc)*tfn + _dvfs_delay
         if debug:
@@ -939,8 +946,12 @@ def Comm_Cost(g='alex',fn=[[0],[1],[2],[3],[4],[5],[6],[7]],cmps=8*'B', debug=Fa
     transfer_e=0
     # Layers are indexed from 1 (because first index in cmps, fn, and fc is for input)
     # We start from layer=2 because comparing with previous layer
+    if debug:
+        print(f'cmps: {cmps}')
     for i in range(2,len(fn)):
-        if cmps[i]!=cmps[i-1]:           
+        if cmps[i]!=cmps[i-1]: 
+            if debug:
+                print(f'transfer happen between {cmps[i-1]} and {cmps[i]}')
             #transfer_time=transfer_times[g][i][cmps[i]][cmps[i-1]]
             transfer_time=Transfers_df[(Transfers_df["Graph"]==g) &
                                        (Transfers_df["Layer"]==i-1) &
@@ -1133,6 +1144,7 @@ if Test==3:
     Real_Evaluation(g="alex",_ord='GBBBBBBB',_fs=[ [ [4,6],[6],[6],[6],[6],[6],[6],[6] ] ])
     Real_Evaluation(g="alex",_ord='BBBBBBBB',_fs=[ [ [0],[1],[2],[3],[4],[5],[6],[7] ] ])
 
+
 def AOA():
     for _g in graphs:
         Real_Evaluation(g=_g,_ord='G',_fs=[[["min"]]],suffix="AOA")
@@ -1288,9 +1300,8 @@ if Test==3:
     Run_Eval_For_GA(_FileName=GA_Results_LW)
 
 
+# +
 def Fill_prediction(_FileName, dvfs_delay):
-    
-    
     if _FileName.exists():
         Evals_df=pd.read_csv(_FileName).drop_duplicates()
     else:
@@ -1310,31 +1321,13 @@ def Fill_prediction(_FileName, dvfs_delay):
     Evals_df[['Predicted_Time','Predicted_Energy']]=Evals_df.apply(prediction,axis=1, result_type='expand')
     new_file=_FileName.with_name(_FileName.name.replace(".csv", "_prediction.csv"))
     Evals_df.to_csv(new_file)
-    
-    
 
-    
-    '''for g in  graphs:
-        
-        grouped = Evals_df[Evals_df['graph']==g].groupby('order')
-        unique_values_order = Evals_df[Evals_df['graph']==g]['order'].unique()
-
-        # Loop through the unique values in column 'order'
-        for value in unique_values_order:
-            # Get the group corresponding to the current value in column 'order'
-            group = grouped.get_group(value)
-            # Get the values in column 'freq' for the current group
-            column_freq_values = group['freq'].values
-            # Print the value in column 'A' and the corresponding values in column 'freq'
-            print(f"Value in column 'order': {value}")
-            print(f"Values in column 'freq': {column_freq_values}")
-            print("----")
-            list_fs=format_to_list(column_freq_values)
-            Real_Evaluation_For_GA(g,_ord=value,_fs=list_fs,Evals_df=Evals_df,FileName=_FileName)'''
-fname=Path('test.csv')
-Fill_prediction(fname, 'variable')
+if Test==3:
+    fname=Path('test.csv')
+    Fill_prediction(fname, 'variable')
 
 
+# +
 def prediction(File,row_num,dvfs_delay):
         _FileName=Path(File)
         if _FileName.exists():
@@ -1348,52 +1341,52 @@ def prediction(File,row_num,dvfs_delay):
         #print(row)
         row=Evals_df.iloc[row_num]
         graph=row['graph']
-        freq=format_to_list([row['freq']])[0]
+        freq=format_to_list([row['freq']])
         order=row['order']
         #print(graph,freq,order,dvfs_delay)
-        return Inference_Cost(_graph=graph,_freq=freq,_order=order,_dvfs_delay=dvfs_delay, _debug=True)
-prediction("test.csv",-1,'variable')
+        t,e=Inference_Cost(_graph=graph,_freq=freq[0],_order=order,_dvfs_delay=dvfs_delay, _debug=True)
+        run=False
+        if run:
+            Real_Evaluation(g=graph,_ord=order,_fs=freq)
+            
+        return t,e
+    
 
-# +
-from scipy.stats import norm
-Evals_df=pd.read_csv('test_prediction.csv')
-error_time = (Evals_df['total_time'] - Evals_df['Predicted_Time'])/Evals_df['total_time']
-error_energy = (Evals_df['total_e'] - Evals_df['Predicted_Energy'])/Evals_df['total_e']
-
-plt.hist(error_time, bins=20, density=True)
-
-# Add normal curve
-mu, std = norm.fit(error_time)
-x = np.linspace(-1.5, 1, 100)
-y = norm.pdf(x, mu, std)
-plt.plot(x, y)
-
-# Add labels and title
-plt.xlabel('Error')
-plt.ylabel('Density')
-plt.title(f'Distribution of Error Values for Time (mean={mu:.2f}, std={std:.2f})')
-
-# Show plot
-plt.show()
-
-
-plt.hist(error_energy, bins=200, density=False)
-
-# Add normal curve
-mu, std = norm.fit(error_energy)
-x = np.linspace(-10, 10, 100)
-y = norm.pdf(x, mu, std)
-'''plt.plot(x, y)
-
-# Add labels and title
-plt.xlabel('Error')
-plt.ylabel('Density')
-plt.title(f'Distribution of Error Values for Energy (mean={mu:.2f}, std={std:.2f})')
-
-# Show plot
-plt.show()'''
-
+if Test==2:
+    prediction("test.csv",-1,'variable')
+    
 # -
+
+def Anlze_Error():
+    Evals_df=pd.read_csv('test_prediction.csv')
+    error_time = (Evals_df['total_time'] - Evals_df['Predicted_Time'])/Evals_df['total_time']
+    error_energy = (Evals_df['total_e'] - Evals_df['Predicted_Energy'])/Evals_df['total_e']
+    plt.hist(error_time, bins=20, density=True)
+    # Add normal curve
+    mu, std = norm.fit(error_time)
+    x = np.linspace(-1.5, 1, 100)
+    y = norm.pdf(x, mu, std)
+    plt.plot(x, y)
+    # Add labels and title
+    plt.xlabel('Error')
+    plt.ylabel('Density')
+    plt.title(f'Distribution of Error Values for Time (mean={mu:.2f}, std={std:.2f})')
+    # Show plot
+    plt.show()
+    plt.hist(error_energy, bins=200, density=False)
+    # Add normal curve
+    mu, std = norm.fit(error_energy)
+    x = np.linspace(-10, 10, 100)
+    y = norm.pdf(x, mu, std)
+    plt.plot(x, y)
+    # Add labels and title
+    plt.xlabel('Error')
+    plt.ylabel('Density')
+    plt.title(f'Distribution of Error Values for Energy (mean={mu:.2f}, std={std:.2f})')
+    # Show plot
+    plt.show()
+
+
 
 def _Test():
     _fs=[ [ [0],[1],[2],[3],[4],[5],[6],[7] ],
@@ -1844,12 +1837,11 @@ if Test==3:
     Run_Eval(g='alex')
 
 
-# +
-def Gather_real_profile(_g):
+def Gather_real_profile(_g,_num_evals):
     Finished=False
     while not Finished:
         try:
-            Run_Eval(g=_g)
+            Run_Eval(g=_g,num_evals=_num_evals)
             Finished=True
         except Exception as e:
             print("Error occurred:", e)
@@ -1860,14 +1852,11 @@ def Gather_real_profile(_g):
             #input("Continue?")
             ab()
             time.sleep(5)
-    
-if Test==2:
+#3
+if Test==1:
     for g in graphs:
-        if g != "alex":
-            Gather_real_profile(g)
+            Gather_real_profile(g,200)
 
-
-# -
 
 def main():
 
@@ -1946,7 +1935,7 @@ def main():
     _n = 8  # replace with desired length of the random strings
     num_strings = 1000  # replace with desired number of random strings
     random_strings = generate_random_strings(_n, num_strings)
-if Test==1:
+if Test==2:
     main()
 
 

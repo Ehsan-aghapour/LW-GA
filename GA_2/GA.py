@@ -128,10 +128,10 @@ def main():
     global model_alex,model_google,model_mobile,model_res50,model_squeeze
     os.makedirs("Results", exist_ok=True)
     
-    #model_alex=run_ga(_g='alex')
+    model_alex=run_ga(_g='alex')
     #model_alex.run(start_generation='Results/alex_last_g.npz')
 
-    #model_google=run_ga(_g='google')
+    model_google=run_ga(_g='google')
 
     model_mobile=run_ga(_g='mobile')
 
