@@ -873,7 +873,7 @@ def Comp_Cost_variable_dvfs_delay(g='alex',fn=[[0],[1],[2],[3],[4],[5],[6],[7]],
     return tt,ee/1000.0
 
 
-Freq_Transition_Dealy_df[(Freq_Transition_Dealy_df["PE"]=="L") & (Freq_Transition_Dealy_df['Freq']==0)]
+Freq_Transition_Dealy_df[Freq_Transition_Dealy_df["PE"]=="Little"]
 
 
 

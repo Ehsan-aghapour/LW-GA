@@ -991,7 +991,7 @@ def Parse_Power_total(file_name,graph,order,frqss):
     if len(powers)!=nnn:
         print(f"bad power size: {len(powers)}")
         print(f'Expected size is:NFreqx((2xNLxn)+2) which is {len(frqss)}x((2x{NL}x{Num_frames})+2)={nnn}')
-        input("what")
+        #input("what")
         return
     print(f'len powers is {len(powers)}')
      
@@ -1150,7 +1150,7 @@ if Motivation_Fig2:
     Real_Evaluation(g="alex",_ord='L',_fs=[[[5]]*N],suffix="Motivation_Figure")
     Real_Evaluation(g="alex",_ord='B',_fs=[[[1]]*N],suffix="Motivation_Figure")
     Real_Evaluation(g="alex",_ord='G',_fs=[[[1,1]]*N],suffix="Motivation_Figure")
-    
+
 
 # +
 #This version of Real_Evalutaion is for evaluating GA results, so it get the df instead of using global one
@@ -1283,10 +1283,10 @@ def Run_Eval_For_GA(_FileName):
             print("----")
             list_fs=format_to_list(column_freq_values)
             Real_Evaluation_For_GA(g,_ord=value,_fs=list_fs,Evals_df=Evals_df,FileName=_FileName)
-if Test==2:
+if Test==3:
     Run_Eval_For_GA(_FileName=GA_Results_PELSI)
     Run_Eval_For_GA(_FileName=GA_Results_LW)
-    
+
 
 def Fill_prediction(_FileName, dvfs_delay):
     
@@ -1334,13 +1334,33 @@ def Fill_prediction(_FileName, dvfs_delay):
 fname=Path('test.csv')
 Fill_prediction(fname, 'variable')
 
+
+def prediction(File,row_num,dvfs_delay):
+        _FileName=Path(File)
+        if _FileName.exists():
+            Evals_df=pd.read_csv(_FileName).drop_duplicates()
+        else:
+            print("Ga result file is not existed")
+            return
+
+        cases=Evals_df.shape[0]
+        print(f'There are {cases}')
+        #print(row)
+        row=Evals_df.iloc[row_num]
+        graph=row['graph']
+        freq=format_to_list([row['freq']])[0]
+        order=row['order']
+        #print(graph,freq,order,dvfs_delay)
+        return Inference_Cost(_graph=graph,_freq=freq,_order=order,_dvfs_delay=dvfs_delay, _debug=True)
+prediction("test.csv",-1,'variable')
+
 # +
 from scipy.stats import norm
 Evals_df=pd.read_csv('test_prediction.csv')
 error_time = (Evals_df['total_time'] - Evals_df['Predicted_Time'])/Evals_df['total_time']
 error_energy = (Evals_df['total_e'] - Evals_df['Predicted_Energy'])/Evals_df['total_e']
 
-plt.hist(error, bins=20, density=True)
+plt.hist(error_time, bins=20, density=True)
 
 # Add normal curve
 mu, std = norm.fit(error_time)
@@ -1360,7 +1380,7 @@ plt.show()
 plt.hist(error_energy, bins=200, density=False)
 
 # Add normal curve
-mu, std = norm.fit(error)
+mu, std = norm.fit(error_energy)
 x = np.linspace(-10, 10, 100)
 y = norm.pdf(x, mu, std)
 '''plt.plot(x, y)
@@ -1837,11 +1857,11 @@ def Gather_real_profile(_g):
             traceback.print_exc()
             # #!sudo apt install sox
             os.system('play -nq -t alsa synth {} sine {}'.format(5, 440))
-            input("Continue?")
+            #input("Continue?")
             ab()
-            sleep(5)
+            time.sleep(5)
     
-if Test==3:
+if Test==2:
     for g in graphs:
         if g != "alex":
             Gather_real_profile(g)
