@@ -1355,6 +1355,9 @@ def prediction(File,row_num,dvfs_delay):
 if Test==2:
     prediction("test.csv",-1,'variable')
     
+
+# +
+#Layers_df[(Layers_df['Graph']=='alex') & (Layers_df['Component']=='L') & (Layers_df['Layer']==0)]
 # -
 
 def Anlze_Error():
