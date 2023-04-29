@@ -96,7 +96,7 @@ def run_ga(_g='alex',_target_latency=Target_Latency):
     plt.plot(model.report, label = 'local optimizationion')
     plt.title('Score Graph '+str(graph))
     plt.savefig('Results/Score_'+str(graph)+'.png', bbox_inches="tight")
-
+    plt.clf()
 
     
     last_generation=model.result.last_generation
