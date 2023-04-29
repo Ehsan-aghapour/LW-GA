@@ -12,13 +12,13 @@ NPU host: 4
 Little Cores host: 3
 Big Cores host: 5
 GPU host: 4
-Number of Layers: 8
 Threads : 2
 Small Cores Threads : 4
 Target : CL
 Data type : F32
 Data layout : NHWC
 Tuner enabled? : false
+Number of Layers: 8
 Cache enabled? : true
 Tuner mode : Normal
 Tuner file : 
@@ -40,44 +40,12 @@ Layer timing: 1
 
 start creating graph
 creating image accessor
-std::string task_names[] = { "conv1", "norm1", "pool1", "conv2_g0", "conv2_g1", "conv2", "norm2", "pool2", "conv3", "conv4_g0", "conv4_g1", "conv4", "conv5_g0", "conv5_g1", "conv5", "pool5", "fc6", "fc7", "fc8", "prob" };
 number of tasks: 20
-std::set<std::string> end_task_names = { "pool1", "pool2", "conv3", "conv4", "pool5", "fc6", "fc7", "prob" };
 number of end tasks: 8
-std::set<std::string> start_task_names = { "conv1", "conv2_g0", "conv3", "conv4_g0", "conv5_g0", "fc6", "fc7", "fc8" };
 number of start tasks: 8
 Total layers:8
 
-layer:pool1	Little:0	big:0	GPU:0
-layer:pool2	Little:0	big:0	GPU:0
-layer:conv3	Little:0	big:0	GPU:0
-layer:conv4	Little:0	big:0	GPU:0
-layer:pool5	Little:0	big:0	GPU:0
-after pass graph 0
 0 Running Graph with 0-0-0-0-0-0-0-0 LW DVFS
-layer:fc6	Little:0	big:0	GPU:0
-layer:fc7	Little:0	big:0	GPU:0
-layer:prob	Little:0	big:0	GPU:0
-task: conv1 set freq for next task to -1, -1, -1
-task: norm1 set freq for next task to -1, -1, -1
-task: pool1 set freq for next task to 0, 0, 0
-task: conv2_g0 set freq for next task to -1, -1, -1
-task: conv2_g1 set freq for next task to -1, -1, -1
-task: conv2 set freq for next task to -1, -1, -1
-task: norm2 set freq for next task to -1, -1, -1
-task: pool2 set freq for next task to 0, 0, 0
-task: conv3 set freq for next task to 0, 0, 0
-task: conv4_g0 set freq for next task to -1, -1, -1
-task: conv4_g1 set freq for next task to -1, -1, -1
-task: conv4 set freq for next task to 0, 0, 0
-task: conv5_g0 set freq for next task to -1, -1, -1
-task: conv5_g1 set freq for next task to -1, -1, -1
-task: conv5 set freq for next task to -1, -1, -1
-task: pool5 set freq for next task to 0, 0, 0
-task: fc6 set freq for next task to 0, 0, 0
-task: fc7 set freq for next task to 0, 0, 0
-task: fc8 set freq for next task to -1, -1, -1
-task: prob set freq for next task to 0, 0, 0
 
 
 WarmUp: First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/space_shuttle_227.jpg
@@ -97,7 +65,7 @@ Subgraph0 Ready to trigger Start Running
 
 
 ================================================
-Start Running All Subgraphs ...
+Startt Running All Subgraphs ...
 ====================================================
 
 
@@ -1104,92 +1072,64 @@ First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/a
 0.0022 - [id = 817], n04285008 sports car, sport car
 0.0006 - [id = 670], n03791053 motor scooter, scooter
 Finishing power measurement with first subgraph0
-0	Layer Name: conv1 	 Layer time: 49.3706 	 number of inputs: 3 	 input shape: 3x227x227 	 output shape: 96x55x55
-1	Layer Name: norm1 	 Layer time: 35.5200 	 number of inputs: 1 	 input shape: 96x55x55 	 output shape: 96x55x55
-2	Layer Name: pool1 	 Layer time: 1.8191 	 number of inputs: 1 	 input shape: 96x55x55 	 output shape: 96x27x27
-Layer Number: 0 	 time: 86.7097
+0	Layer Name: conv1 	 Layer time: 38.4858 	 number of inputs: 3 	 input shape: 3x227x227 	 output shape: 96x55x55
+1	Layer Name: norm1 	 Layer time: 20.7857 	 number of inputs: 1 	 input shape: 96x55x55 	 output shape: 96x55x55
+2	Layer Name: pool1 	 Layer time: 1.4239 	 number of inputs: 1 	 input shape: 96x55x55 	 output shape: 96x27x27
+Layer Number: 0 	 time: 60.6955
 ----------------------------
-3	Layer Name: conv2_g0 	 Layer time: 49.4411 	 number of inputs: 3 	 input shape: 48x27x27 	 output shape: 128x27x27
-4	Layer Name: conv2_g1 	 Layer time: 49.2395 	 number of inputs: 3 	 input shape: 48x27x27 	 output shape: 128x27x27
-5	Layer Name: conv2 	 Layer time: 1.8864 	 number of inputs: 2 	 input shape: 128x27x27 	 output shape: 256x27x27
-6	Layer Name: norm2 	 Layer time: 19.9842 	 number of inputs: 1 	 input shape: 256x27x27 	 output shape: 256x27x27
-7	Layer Name: pool2 	 Layer time: 1.1570 	 number of inputs: 1 	 input shape: 256x27x27 	 output shape: 256x13x13
-Layer Number: 1 	 time: 121.7081
+3	Layer Name: conv2_g0 	 Layer time: 30.3518 	 number of inputs: 3 	 input shape: 48x27x27 	 output shape: 128x27x27
+4	Layer Name: conv2_g1 	 Layer time: 30.3043 	 number of inputs: 3 	 input shape: 48x27x27 	 output shape: 128x27x27
+5	Layer Name: conv2 	 Layer time: 1.0278 	 number of inputs: 2 	 input shape: 128x27x27 	 output shape: 256x27x27
+6	Layer Name: norm2 	 Layer time: 11.3880 	 number of inputs: 1 	 input shape: 256x27x27 	 output shape: 256x27x27
+7	Layer Name: pool2 	 Layer time: 1.1060 	 number of inputs: 1 	 input shape: 256x27x27 	 output shape: 256x13x13
+Layer Number: 1 	 time: 74.1779
 ----------------------------
-8	Layer Name: conv3 	 Layer time: 33.5058 	 number of inputs: 3 	 input shape: 256x13x13 	 output shape: 384x13x13
-Layer Number: 2 	 time: 33.5058
+8	Layer Name: conv3 	 Layer time: 28.0276 	 number of inputs: 3 	 input shape: 256x13x13 	 output shape: 384x13x13
+Layer Number: 2 	 time: 28.0276
 ----------------------------
-9	Layer Name: conv4_g0 	 Layer time: 13.8529 	 number of inputs: 3 	 input shape: 192x13x13 	 output shape: 192x13x13
-10	Layer Name: conv4_g1 	 Layer time: 13.6826 	 number of inputs: 3 	 input shape: 192x13x13 	 output shape: 192x13x13
-11	Layer Name: conv4 	 Layer time: 1.3827 	 number of inputs: 2 	 input shape: 192x13x13 	 output shape: 384x13x13
-Layer Number: 3 	 time: 28.9182
+9	Layer Name: conv4_g0 	 Layer time: 11.4800 	 number of inputs: 3 	 input shape: 192x13x13 	 output shape: 192x13x13
+10	Layer Name: conv4_g1 	 Layer time: 11.5197 	 number of inputs: 3 	 input shape: 192x13x13 	 output shape: 192x13x13
+11	Layer Name: conv4 	 Layer time: 0.7379 	 number of inputs: 2 	 input shape: 192x13x13 	 output shape: 384x13x13
+Layer Number: 3 	 time: 23.7377
 ----------------------------
-12	Layer Name: conv5_g0 	 Layer time: 10.4368 	 number of inputs: 3 	 input shape: 192x13x13 	 output shape: 128x13x13
-13	Layer Name: conv5_g1 	 Layer time: 10.2730 	 number of inputs: 3 	 input shape: 192x13x13 	 output shape: 128x13x13
-14	Layer Name: conv5 	 Layer time: 1.1114 	 number of inputs: 2 	 input shape: 128x13x13 	 output shape: 256x13x13
-15	Layer Name: pool5 	 Layer time: 0.6172 	 number of inputs: 1 	 input shape: 256x13x13 	 output shape: 256x6x6
-Layer Number: 4 	 time: 22.4383
+12	Layer Name: conv5_g0 	 Layer time: 8.3559 	 number of inputs: 3 	 input shape: 192x13x13 	 output shape: 128x13x13
+13	Layer Name: conv5_g1 	 Layer time: 8.3864 	 number of inputs: 3 	 input shape: 192x13x13 	 output shape: 128x13x13
+14	Layer Name: conv5 	 Layer time: 0.6380 	 number of inputs: 2 	 input shape: 128x13x13 	 output shape: 256x13x13
+15	Layer Name: pool5 	 Layer time: 0.3873 	 number of inputs: 1 	 input shape: 256x13x13 	 output shape: 256x6x6
+Layer Number: 4 	 time: 17.7676
 ----------------------------
-16	Layer Name: fc6 	 Layer time: 59.3945 	 number of inputs: 3 	 input shape: 256x6x6 	 output shape: 4096
-Layer Number: 5 	 time: 59.3945
+16	Layer Name: fc6 	 Layer time: 50.1335 	 number of inputs: 3 	 input shape: 256x6x6 	 output shape: 4096
+Layer Number: 5 	 time: 50.1335
 ----------------------------
-17	Layer Name: fc7 	 Layer time: 25.5722 	 number of inputs: 3 	 input shape: 4096 	 output shape: 4096
-Layer Number: 6 	 time: 25.5722
+17	Layer Name: fc7 	 Layer time: 21.5637 	 number of inputs: 3 	 input shape: 4096 	 output shape: 4096
+Layer Number: 6 	 time: 21.5637
 ----------------------------
-18	Layer Name: fc8 	 Layer time: 6.4162 	 number of inputs: 3 	 input shape: 4096 	 output shape: 1000
-19	Layer Name: prob 	 Layer time: 0.2309 	 number of inputs: 1 	 input shape: 1000 	 output shape: 1000
-Layer Number: 7 	 time: 6.6471
+18	Layer Name: fc8 	 Layer time: 5.6174 	 number of inputs: 3 	 input shape: 4096 	 output shape: 1000
+19	Layer Name: prob 	 Layer time: 0.2243 	 number of inputs: 1 	 input shape: 1000 	 output shape: 1000
+Layer Number: 7 	 time: 5.8417
 ----------------------------
 
- Sum of Layers time: 384.8939
+ Sum of Layers time: 281.9451
 
- input time of layer 0 : 119.3379
+ input time of layer 0 : 121.7433
 
  transfer_time of layer 0 : 0.0000
 
- output time of layer 7 : 0.8815
+ output time of layer 7 : 0.8686
 
- this part task time: 447.1278
+ this part task time: 343.1047
 
 
-Cost0:567.405
-input0_time:119.338
-task0_time:447.128
-output0_time:0.881469
-total0_time:567.347
+Cost0:467.728
+input0_time:121.743
+task0_time:343.105
+output0_time:0.868621
+total0_time:465.717
 ***************************************
 
-Frame Latency: 552.664
+Frame Latency: 451.624
 Profiling these DVFS settings finised
 1 Running Graph with 1-1-1-1-1-1-1-1 LW DVFS
-layer:pool1	Little:1	big:0	GPU:0
-layer:pool2	Little:1	big:0	GPU:0
-layer:conv3	Little:1	big:0	GPU:0
-layer:conv4	Little:1	big:0	GPU:0
-layer:pool5	Little:1	big:0	GPU:0
-layer:fc6	Little:1	big:0	GPU:0
-layer:fc7	Little:1	big:0	GPU:0
-layer:prob	Little:1	big:0	GPU:0
-task: conv1 set freq for next task to -1, -1, -1
-task: norm1 set freq for next task to -1, -1, -1
-task: pool1 set freq for next task to 1, 0, 0
-task: conv2_g0 set freq for next task to -1, -1, -1
-task: conv2_g1 set freq for next task to -1, -1, -1
-task: conv2 set freq for next task to -1, -1, -1
-task: norm2 set freq for next task to -1, -1, -1
-task: pool2 set freq for next task to 1, 0, 0
-task: conv3 set freq for next task to 1, 0, 0
-task: conv4_g0 set freq for next task to -1, -1, -1
-task: conv4_g1 set freq for next task to -1, -1, -1
-task: conv4 set freq for next task to 1, 0, 0
-task: conv5_g0 set freq for next task to -1, -1, -1
-task: conv5_g1 set freq for next task to -1, -1, -1
-task: conv5 set freq for next task to -1, -1, -1
-task: pool5 set freq for next task to 1, 0, 0
-task: fc6 set freq for next task to 1, 0, 0
-task: fc7 set freq for next task to 1, 0, 0
-task: fc8 set freq for next task to -1, -1, -1
-task: prob set freq for next task to 1, 0, 0
 
 
 WarmUp: First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/space_shuttle_227.jpg
@@ -1203,120 +1143,120 @@ WarmUp: First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-
 Subgraph0 Ready to trigger Start Running
 
 
-First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/space_shuttle_227.jpg
----------- Top 5 predictions ----------
-
-0.9650 - [id = 812], n04266014 space shuttle
-0.0242 - [id = 404], n02690373 airliner
-0.0057 - [id = 657], n03773504 missile
-0.0021 - [id = 895], n04552348 warplane, military plane
-0.0017 - [id = 744], n04008634 projectile, missile
-
-
-First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/gold_fish.ppm
----------- Top 5 predictions ----------
-
-1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
-0.0000 - [id = 27], n01631663 eft
-0.0000 - [id = 29], n01632777 axolotl, mud puppy, Ambystoma mexicanum
-0.0000 - [id = 124], n01985128 crayfish, crawfish, crawdad, crawdaddy
-0.0000 - [id = 310], n02219486 ant, emmet, pismire
-
-
-First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/gondola.ppm
----------- Top 5 predictions ----------
-
-1.0000 - [id = 576], n03447447 gondola
-0.0000 - [id = 780], n04147183 schooner
-0.0000 - [id = 724], n03947888 pirate, pirate ship
-0.0000 - [id = 914], n04612504 yawl
-0.0000 - [id = 536], n03216828 dock, dockage, docking facility
-
-
-First graph inferencing image: 3:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/school_bus.ppm
----------- Top 5 predictions ----------
-
-1.0000 - [id = 779], n04146614 school bus
-0.0000 - [id = 675], n03796401 moving van
-0.0000 - [id = 654], n03769881 minibus
-0.0000 - [id = 705], n03895866 passenger car, coach, carriage
-0.0000 - [id = 757], n04065272 recreational vehicle, RV, R.V.
-
-
-First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/go_kart.ppm
----------- Top 5 predictions ----------
-
-0.9736 - [id = 573], n03444034 go-kart
-0.0118 - [id = 518], n03127747 crash helmet
-0.0108 - [id = 751], n04037443 racer, race car, racing car
-0.0022 - [id = 817], n04285008 sports car, sport car
-0.0006 - [id = 670], n03791053 motor scooter, scooter
-
-
-First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/space_shuttle_227.jpg
----------- Top 5 predictions ----------
-
-0.9650 - [id = 812], n04266014 space shuttle
-0.0242 - [id = 404], n02690373 airliner
-0.0057 - [id = 657], n03773504 missile
-0.0021 - [id = 895], n04552348 warplane, military plane
-0.0017 - [id = 744], n04008634 projectile, missile
-
-
-First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/gold_fish.ppm
----------- Top 5 predictions ----------
-
-1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
-0.0000 - [id = 27], n01631663 eft
-0.0000 - [id = 29], n01632777 axolotl, mud puppy, Ambystoma mexicanum
-0.0000 - [id = 124], n01985128 crayfish, crawfish, crawdad, crawdaddy
-0.0000 - [id = 310], n02219486 ant, emmet, pismire
-
-
-First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/gondola.ppm
----------- Top 5 predictions ----------
-
-1.0000 - [id = 576], n03447447 gondola
-0.0000 - [id = 780], n04147183 schooner
-0.0000 - [id = 724], n03947888 pirate, pirate ship
-0.0000 - [id = 914], n04612504 yawl
-0.0000 - [id = 536], n03216828 dock, dockage, docking facility
-
-
-First graph inferencing image: 3:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/school_bus.ppm
----------- Top 5 predictions ----------
-
-1.0000 - [id = 779], n04146614 school bus
-0.0000 - [id = 675], n03796401 moving van
-0.0000 - [id = 654], n03769881 minibus
-0.0000 - [id = 705], n03895866 passenger car, coach, carriage
-0.0000 - [id = 757], n04065272 recreational vehicle, RV, R.V.
-
-
-First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/go_kart.ppm
----------- Top 5 predictions ----------
-
-0.9736 - [id = 573], n03444034 go-kart
-0.0118 - [id = 518], n03127747 crash helmet
-0.0108 - [id = 751], n04037443 racer, race car, racing car
-0.0022 - [id = 817], n04285008 sports car, sport car
-0.0006 - [id = 670], n03791053 motor scooter, scooter
-
-
-First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/space_shuttle_227.jpg
-
-
 
 
 
 
 
 ================================================
-Start Running All Subgraphs ...
+Startt Running All Subgraphs ...
 ====================================================
 
 
 
+
+
+First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/space_shuttle_227.jpg
+---------- Top 5 predictions ----------
+
+0.9650 - [id = 812], n04266014 space shuttle
+0.0242 - [id = 404], n02690373 airliner
+0.0057 - [id = 657], n03773504 missile
+0.0021 - [id = 895], n04552348 warplane, military plane
+0.0017 - [id = 744], n04008634 projectile, missile
+
+
+First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/gold_fish.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 27], n01631663 eft
+0.0000 - [id = 29], n01632777 axolotl, mud puppy, Ambystoma mexicanum
+0.0000 - [id = 124], n01985128 crayfish, crawfish, crawdad, crawdaddy
+0.0000 - [id = 310], n02219486 ant, emmet, pismire
+
+
+First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/gondola.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 576], n03447447 gondola
+0.0000 - [id = 780], n04147183 schooner
+0.0000 - [id = 724], n03947888 pirate, pirate ship
+0.0000 - [id = 914], n04612504 yawl
+0.0000 - [id = 536], n03216828 dock, dockage, docking facility
+
+
+First graph inferencing image: 3:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/school_bus.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 779], n04146614 school bus
+0.0000 - [id = 675], n03796401 moving van
+0.0000 - [id = 654], n03769881 minibus
+0.0000 - [id = 705], n03895866 passenger car, coach, carriage
+0.0000 - [id = 757], n04065272 recreational vehicle, RV, R.V.
+
+
+First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/go_kart.ppm
+---------- Top 5 predictions ----------
+
+0.9736 - [id = 573], n03444034 go-kart
+0.0118 - [id = 518], n03127747 crash helmet
+0.0108 - [id = 751], n04037443 racer, race car, racing car
+0.0022 - [id = 817], n04285008 sports car, sport car
+0.0006 - [id = 670], n03791053 motor scooter, scooter
+
+
+First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/space_shuttle_227.jpg
+---------- Top 5 predictions ----------
+
+0.9650 - [id = 812], n04266014 space shuttle
+0.0242 - [id = 404], n02690373 airliner
+0.0057 - [id = 657], n03773504 missile
+0.0021 - [id = 895], n04552348 warplane, military plane
+0.0017 - [id = 744], n04008634 projectile, missile
+
+
+First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/gold_fish.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 27], n01631663 eft
+0.0000 - [id = 29], n01632777 axolotl, mud puppy, Ambystoma mexicanum
+0.0000 - [id = 124], n01985128 crayfish, crawfish, crawdad, crawdaddy
+0.0000 - [id = 310], n02219486 ant, emmet, pismire
+
+
+First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/gondola.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 576], n03447447 gondola
+0.0000 - [id = 780], n04147183 schooner
+0.0000 - [id = 724], n03947888 pirate, pirate ship
+0.0000 - [id = 914], n04612504 yawl
+0.0000 - [id = 536], n03216828 dock, dockage, docking facility
+
+
+First graph inferencing image: 3:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/school_bus.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 779], n04146614 school bus
+0.0000 - [id = 675], n03796401 moving van
+0.0000 - [id = 654], n03769881 minibus
+0.0000 - [id = 705], n03895866 passenger car, coach, carriage
+0.0000 - [id = 757], n04065272 recreational vehicle, RV, R.V.
+
+
+First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/go_kart.ppm
+---------- Top 5 predictions ----------
+
+0.9736 - [id = 573], n03444034 go-kart
+0.0118 - [id = 518], n03127747 crash helmet
+0.0108 - [id = 751], n04037443 racer, race car, racing car
+0.0022 - [id = 817], n04285008 sports car, sport car
+0.0006 - [id = 670], n03791053 motor scooter, scooter
+
+
+First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/space_shuttle_227.jpg
 ---------- Top 5 predictions ----------
 
 0.9650 - [id = 812], n04266014 space shuttle
@@ -2216,92 +2156,64 @@ First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/a
 0.0022 - [id = 817], n04285008 sports car, sport car
 0.0006 - [id = 670], n03791053 motor scooter, scooter
 Finishing power measurement with first subgraph0
-0	Layer Name: conv1 	 Layer time: 41.3263 	 number of inputs: 3 	 input shape: 3x227x227 	 output shape: 96x55x55
-1	Layer Name: norm1 	 Layer time: 25.7213 	 number of inputs: 1 	 input shape: 96x55x55 	 output shape: 96x55x55
-2	Layer Name: pool1 	 Layer time: 1.5255 	 number of inputs: 1 	 input shape: 96x55x55 	 output shape: 96x27x27
-Layer Number: 0 	 time: 68.5731
+0	Layer Name: conv1 	 Layer time: 27.0116 	 number of inputs: 3 	 input shape: 3x227x227 	 output shape: 96x55x55
+1	Layer Name: norm1 	 Layer time: 13.9799 	 number of inputs: 1 	 input shape: 96x55x55 	 output shape: 96x55x55
+2	Layer Name: pool1 	 Layer time: 1.1104 	 number of inputs: 1 	 input shape: 96x55x55 	 output shape: 96x27x27
+Layer Number: 0 	 time: 42.1018
 ----------------------------
-3	Layer Name: conv2_g0 	 Layer time: 41.1549 	 number of inputs: 3 	 input shape: 48x27x27 	 output shape: 128x27x27
-4	Layer Name: conv2_g1 	 Layer time: 41.3051 	 number of inputs: 3 	 input shape: 48x27x27 	 output shape: 128x27x27
-5	Layer Name: conv2 	 Layer time: 1.8203 	 number of inputs: 2 	 input shape: 128x27x27 	 output shape: 256x27x27
-6	Layer Name: norm2 	 Layer time: 15.2174 	 number of inputs: 1 	 input shape: 256x27x27 	 output shape: 256x27x27
-7	Layer Name: pool2 	 Layer time: 1.4671 	 number of inputs: 1 	 input shape: 256x27x27 	 output shape: 256x13x13
-Layer Number: 1 	 time: 100.9648
+3	Layer Name: conv2_g0 	 Layer time: 20.9841 	 number of inputs: 3 	 input shape: 48x27x27 	 output shape: 128x27x27
+4	Layer Name: conv2_g1 	 Layer time: 20.9333 	 number of inputs: 3 	 input shape: 48x27x27 	 output shape: 128x27x27
+5	Layer Name: conv2 	 Layer time: 0.8139 	 number of inputs: 2 	 input shape: 128x27x27 	 output shape: 256x27x27
+6	Layer Name: norm2 	 Layer time: 8.0611 	 number of inputs: 1 	 input shape: 256x27x27 	 output shape: 256x27x27
+7	Layer Name: pool2 	 Layer time: 0.9224 	 number of inputs: 1 	 input shape: 256x27x27 	 output shape: 256x13x13
+Layer Number: 1 	 time: 51.7148
 ----------------------------
-8	Layer Name: conv3 	 Layer time: 25.7212 	 number of inputs: 3 	 input shape: 256x13x13 	 output shape: 384x13x13
-Layer Number: 2 	 time: 25.7212
+8	Layer Name: conv3 	 Layer time: 19.6440 	 number of inputs: 3 	 input shape: 256x13x13 	 output shape: 384x13x13
+Layer Number: 2 	 time: 19.6440
 ----------------------------
-9	Layer Name: conv4_g0 	 Layer time: 10.9644 	 number of inputs: 3 	 input shape: 192x13x13 	 output shape: 192x13x13
-10	Layer Name: conv4_g1 	 Layer time: 11.2710 	 number of inputs: 3 	 input shape: 192x13x13 	 output shape: 192x13x13
-11	Layer Name: conv4 	 Layer time: 1.3081 	 number of inputs: 2 	 input shape: 192x13x13 	 output shape: 384x13x13
-Layer Number: 3 	 time: 23.5435
+9	Layer Name: conv4_g0 	 Layer time: 8.1114 	 number of inputs: 3 	 input shape: 192x13x13 	 output shape: 192x13x13
+10	Layer Name: conv4_g1 	 Layer time: 8.1520 	 number of inputs: 3 	 input shape: 192x13x13 	 output shape: 192x13x13
+11	Layer Name: conv4 	 Layer time: 0.5307 	 number of inputs: 2 	 input shape: 192x13x13 	 output shape: 384x13x13
+Layer Number: 3 	 time: 16.7940
 ----------------------------
-12	Layer Name: conv5_g0 	 Layer time: 8.6381 	 number of inputs: 3 	 input shape: 192x13x13 	 output shape: 128x13x13
-13	Layer Name: conv5_g1 	 Layer time: 8.7112 	 number of inputs: 3 	 input shape: 192x13x13 	 output shape: 128x13x13
-14	Layer Name: conv5 	 Layer time: 1.0919 	 number of inputs: 2 	 input shape: 128x13x13 	 output shape: 256x13x13
-15	Layer Name: pool5 	 Layer time: 0.4867 	 number of inputs: 1 	 input shape: 256x13x13 	 output shape: 256x6x6
-Layer Number: 4 	 time: 18.9278
+12	Layer Name: conv5_g0 	 Layer time: 6.0193 	 number of inputs: 3 	 input shape: 192x13x13 	 output shape: 128x13x13
+13	Layer Name: conv5_g1 	 Layer time: 5.9636 	 number of inputs: 3 	 input shape: 192x13x13 	 output shape: 128x13x13
+14	Layer Name: conv5 	 Layer time: 0.5205 	 number of inputs: 2 	 input shape: 128x13x13 	 output shape: 256x13x13
+15	Layer Name: pool5 	 Layer time: 0.2988 	 number of inputs: 1 	 input shape: 256x13x13 	 output shape: 256x6x6
+Layer Number: 4 	 time: 12.8023
 ----------------------------
-16	Layer Name: fc6 	 Layer time: 47.7859 	 number of inputs: 3 	 input shape: 256x6x6 	 output shape: 4096
-Layer Number: 5 	 time: 47.7859
+16	Layer Name: fc6 	 Layer time: 37.4377 	 number of inputs: 3 	 input shape: 256x6x6 	 output shape: 4096
+Layer Number: 5 	 time: 37.4377
 ----------------------------
-17	Layer Name: fc7 	 Layer time: 20.6131 	 number of inputs: 3 	 input shape: 4096 	 output shape: 4096
-Layer Number: 6 	 time: 20.6131
+17	Layer Name: fc7 	 Layer time: 15.3655 	 number of inputs: 3 	 input shape: 4096 	 output shape: 4096
+Layer Number: 6 	 time: 15.3655
 ----------------------------
-18	Layer Name: fc8 	 Layer time: 5.2918 	 number of inputs: 3 	 input shape: 4096 	 output shape: 1000
-19	Layer Name: prob 	 Layer time: 0.1757 	 number of inputs: 1 	 input shape: 1000 	 output shape: 1000
-Layer Number: 7 	 time: 5.4675
+18	Layer Name: fc8 	 Layer time: 4.1200 	 number of inputs: 3 	 input shape: 4096 	 output shape: 1000
+19	Layer Name: prob 	 Layer time: 0.1663 	 number of inputs: 1 	 input shape: 1000 	 output shape: 1000
+Layer Number: 7 	 time: 4.2863
 ----------------------------
 
- Sum of Layers time: 311.5970
+ Sum of Layers time: 200.1463
 
- input time of layer 0 : 81.1907
+ input time of layer 0 : 82.8063
 
  transfer_time of layer 0 : 0.0000
 
- output time of layer 7 : 0.6563
+ output time of layer 7 : 0.6175
 
- this part task time: 372.4355
+ this part task time: 260.2038
 
 
-Cost0:454.339
-input0_time:81.1907
-task0_time:372.436
-output0_time:0.656323
-total0_time:454.283
+Cost0:345.639
+input0_time:82.8063
+task0_time:260.204
+output0_time:0.617488
+total0_time:343.628
 ***************************************
 
-Frame Latency: 443.487
+Frame Latency: 333.715
 Profiling these DVFS settings finised
 2 Running Graph with 2-2-2-2-2-2-2-2 LW DVFS
-layer:pool1	Little:2	big:0	GPU:0
-layer:pool2	Little:2	big:0	GPU:0
-layer:conv3	Little:2	big:0	GPU:0
-layer:conv4	Little:2	big:0	GPU:0
-layer:pool5	Little:2	big:0	GPU:0
-layer:fc6	Little:2	big:0	GPU:0
-layer:fc7	Little:2	big:0	GPU:0
-layer:prob	Little:2	big:0	GPU:0
-task: conv1 set freq for next task to -1, -1, -1
-task: norm1 set freq for next task to -1, -1, -1
-task: pool1 set freq for next task to 2, 0, 0
-task: conv2_g0 set freq for next task to -1, -1, -1
-task: conv2_g1 set freq for next task to -1, -1, -1
-task: conv2 set freq for next task to -1, -1, -1
-task: norm2 set freq for next task to -1, -1, -1
-task: pool2 set freq for next task to 2, 0, 0
-task: conv3 set freq for next task to 2, 0, 0
-task: conv4_g0 set freq for next task to -1, -1, -1
-task: conv4_g1 set freq for next task to -1, -1, -1
-task: conv4 set freq for next task to 2, 0, 0
-task: conv5_g0 set freq for next task to -1, -1, -1
-task: conv5_g1 set freq for next task to -1, -1, -1
-task: conv5 set freq for next task to -1, -1, -1
-task: pool5 set freq for next task to 2, 0, 0
-task: fc6 set freq for next task to 2, 0, 0
-task: fc7 set freq for next task to 2, 0, 0
-task: fc8 set freq for next task to -1, -1, -1
-task: prob set freq for next task to 2, 0, 0
 
 
 WarmUp: First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/space_shuttle_227.jpg
@@ -2315,130 +2227,130 @@ WarmUp: First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-
 Subgraph0 Ready to trigger Start Running
 
 
-First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/space_shuttle_227.jpg
----------- Top 5 predictions ----------
-
-0.9650 - [id = 812], n04266014 space shuttle
-0.0242 - [id = 404], n02690373 airliner
-0.0057 - [id = 657], n03773504 missile
-0.0021 - [id = 895], n04552348 warplane, military plane
-0.0017 - [id = 744], n04008634 projectile, missile
-
-
-First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/gold_fish.ppm
----------- Top 5 predictions ----------
-
-1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
-0.0000 - [id = 27], n01631663 eft
-0.0000 - [id = 29], n01632777 axolotl, mud puppy, Ambystoma mexicanum
-0.0000 - [id = 124], n01985128 crayfish, crawfish, crawdad, crawdaddy
-0.0000 - [id = 310], n02219486 ant, emmet, pismire
-
-
-First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/gondola.ppm
----------- Top 5 predictions ----------
-
-1.0000 - [id = 576], n03447447 gondola
-0.0000 - [id = 780], n04147183 schooner
-0.0000 - [id = 724], n03947888 pirate, pirate ship
-0.0000 - [id = 914], n04612504 yawl
-0.0000 - [id = 536], n03216828 dock, dockage, docking facility
-
-
-First graph inferencing image: 3:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/school_bus.ppm
----------- Top 5 predictions ----------
-
-1.0000 - [id = 779], n04146614 school bus
-0.0000 - [id = 675], n03796401 moving van
-0.0000 - [id = 654], n03769881 minibus
-0.0000 - [id = 705], n03895866 passenger car, coach, carriage
-0.0000 - [id = 757], n04065272 recreational vehicle, RV, R.V.
-
-
-First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/go_kart.ppm
----------- Top 5 predictions ----------
-
-0.9736 - [id = 573], n03444034 go-kart
-0.0118 - [id = 518], n03127747 crash helmet
-0.0108 - [id = 751], n04037443 racer, race car, racing car
-0.0022 - [id = 817], n04285008 sports car, sport car
-0.0006 - [id = 670], n03791053 motor scooter, scooter
-
-
-First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/space_shuttle_227.jpg
----------- Top 5 predictions ----------
-
-0.9650 - [id = 812], n04266014 space shuttle
-0.0242 - [id = 404], n02690373 airliner
-0.0057 - [id = 657], n03773504 missile
-0.0021 - [id = 895], n04552348 warplane, military plane
-0.0017 - [id = 744], n04008634 projectile, missile
-
-
-First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/gold_fish.ppm
----------- Top 5 predictions ----------
-
-1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
-0.0000 - [id = 27], n01631663 eft
-0.0000 - [id = 29], n01632777 axolotl, mud puppy, Ambystoma mexicanum
-0.0000 - [id = 124], n01985128 crayfish, crawfish, crawdad, crawdaddy
-0.0000 - [id = 310], n02219486 ant, emmet, pismire
-
-
-First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/gondola.ppm
----------- Top 5 predictions ----------
-
-1.0000 - [id = 576], n03447447 gondola
-0.0000 - [id = 780], n04147183 schooner
-0.0000 - [id = 724], n03947888 pirate, pirate ship
-0.0000 - [id = 914], n04612504 yawl
-0.0000 - [id = 536], n03216828 dock, dockage, docking facility
-
-
-First graph inferencing image: 3:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/school_bus.ppm
----------- Top 5 predictions ----------
-
-1.0000 - [id = 779], n04146614 school bus
-0.0000 - [id = 675], n03796401 moving van
-0.0000 - [id = 654], n03769881 minibus
-0.0000 - [id = 705], n03895866 passenger car, coach, carriage
-0.0000 - [id = 757], n04065272 recreational vehicle, RV, R.V.
-
-
-First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/go_kart.ppm
----------- Top 5 predictions ----------
-
-0.9736 - [id = 573], n03444034 go-kart
-0.0118 - [id = 518], n03127747 crash helmet
-0.0108 - [id = 751], n04037443 racer, race car, racing car
-0.0022 - [id = 817], n04285008 sports car, sport car
-0.0006 - [id = 670], n03791053 motor scooter, scooter
-
-
-First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/space_shuttle_227.jpg
----------- Top 5 predictions ----------
-
-0.9650 - [id = 812], n04266014 space shuttle
-0.0242 - [id = 404], n02690373 airliner
-0.0057 - [id = 657], n03773504 missile
-0.0021 - [id = 895], n04552348 warplane, military plane
-0.0017 - [id = 744], n04008634 projectile, missile
-
-
-First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/gold_fish.ppm
-
-
 
 
 
 
 
 ================================================
-Start Running All Subgraphs ...
+Startt Running All Subgraphs ...
 ====================================================
 
 
 
+
+
+First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/space_shuttle_227.jpg
+---------- Top 5 predictions ----------
+
+0.9650 - [id = 812], n04266014 space shuttle
+0.0242 - [id = 404], n02690373 airliner
+0.0057 - [id = 657], n03773504 missile
+0.0021 - [id = 895], n04552348 warplane, military plane
+0.0017 - [id = 744], n04008634 projectile, missile
+
+
+First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/gold_fish.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 27], n01631663 eft
+0.0000 - [id = 29], n01632777 axolotl, mud puppy, Ambystoma mexicanum
+0.0000 - [id = 124], n01985128 crayfish, crawfish, crawdad, crawdaddy
+0.0000 - [id = 310], n02219486 ant, emmet, pismire
+
+
+First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/gondola.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 576], n03447447 gondola
+0.0000 - [id = 780], n04147183 schooner
+0.0000 - [id = 724], n03947888 pirate, pirate ship
+0.0000 - [id = 914], n04612504 yawl
+0.0000 - [id = 536], n03216828 dock, dockage, docking facility
+
+
+First graph inferencing image: 3:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/school_bus.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 779], n04146614 school bus
+0.0000 - [id = 675], n03796401 moving van
+0.0000 - [id = 654], n03769881 minibus
+0.0000 - [id = 705], n03895866 passenger car, coach, carriage
+0.0000 - [id = 757], n04065272 recreational vehicle, RV, R.V.
+
+
+First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/go_kart.ppm
+---------- Top 5 predictions ----------
+
+0.9736 - [id = 573], n03444034 go-kart
+0.0118 - [id = 518], n03127747 crash helmet
+0.0108 - [id = 751], n04037443 racer, race car, racing car
+0.0022 - [id = 817], n04285008 sports car, sport car
+0.0006 - [id = 670], n03791053 motor scooter, scooter
+
+
+First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/space_shuttle_227.jpg
+---------- Top 5 predictions ----------
+
+0.9650 - [id = 812], n04266014 space shuttle
+0.0242 - [id = 404], n02690373 airliner
+0.0057 - [id = 657], n03773504 missile
+0.0021 - [id = 895], n04552348 warplane, military plane
+0.0017 - [id = 744], n04008634 projectile, missile
+
+
+First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/gold_fish.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 27], n01631663 eft
+0.0000 - [id = 29], n01632777 axolotl, mud puppy, Ambystoma mexicanum
+0.0000 - [id = 124], n01985128 crayfish, crawfish, crawdad, crawdaddy
+0.0000 - [id = 310], n02219486 ant, emmet, pismire
+
+
+First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/gondola.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 576], n03447447 gondola
+0.0000 - [id = 780], n04147183 schooner
+0.0000 - [id = 724], n03947888 pirate, pirate ship
+0.0000 - [id = 914], n04612504 yawl
+0.0000 - [id = 536], n03216828 dock, dockage, docking facility
+
+
+First graph inferencing image: 3:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/school_bus.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 779], n04146614 school bus
+0.0000 - [id = 675], n03796401 moving van
+0.0000 - [id = 654], n03769881 minibus
+0.0000 - [id = 705], n03895866 passenger car, coach, carriage
+0.0000 - [id = 757], n04065272 recreational vehicle, RV, R.V.
+
+
+First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/go_kart.ppm
+---------- Top 5 predictions ----------
+
+0.9736 - [id = 573], n03444034 go-kart
+0.0118 - [id = 518], n03127747 crash helmet
+0.0108 - [id = 751], n04037443 racer, race car, racing car
+0.0022 - [id = 817], n04285008 sports car, sport car
+0.0006 - [id = 670], n03791053 motor scooter, scooter
+
+
+First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/space_shuttle_227.jpg
+---------- Top 5 predictions ----------
+
+0.9650 - [id = 812], n04266014 space shuttle
+0.0242 - [id = 404], n02690373 airliner
+0.0057 - [id = 657], n03773504 missile
+0.0021 - [id = 895], n04552348 warplane, military plane
+0.0017 - [id = 744], n04008634 projectile, missile
+
+
+First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/gold_fish.ppm
 ---------- Top 5 predictions ----------
 
 1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
@@ -3328,92 +3240,64 @@ First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/a
 0.0022 - [id = 817], n04285008 sports car, sport car
 0.0006 - [id = 670], n03791053 motor scooter, scooter
 Finishing power measurement with first subgraph0
-0	Layer Name: conv1 	 Layer time: 35.7701 	 number of inputs: 3 	 input shape: 3x227x227 	 output shape: 96x55x55
-1	Layer Name: norm1 	 Layer time: 25.7204 	 number of inputs: 1 	 input shape: 96x55x55 	 output shape: 96x55x55
-2	Layer Name: pool1 	 Layer time: 1.4984 	 number of inputs: 1 	 input shape: 96x55x55 	 output shape: 96x27x27
-Layer Number: 0 	 time: 62.9889
+0	Layer Name: conv1 	 Layer time: 16.3413 	 number of inputs: 3 	 input shape: 3x227x227 	 output shape: 96x55x55
+1	Layer Name: norm1 	 Layer time: 10.0229 	 number of inputs: 1 	 input shape: 96x55x55 	 output shape: 96x55x55
+2	Layer Name: pool1 	 Layer time: 0.9461 	 number of inputs: 1 	 input shape: 96x55x55 	 output shape: 96x27x27
+Layer Number: 0 	 time: 27.3102
 ----------------------------
-3	Layer Name: conv2_g0 	 Layer time: 35.1929 	 number of inputs: 3 	 input shape: 48x27x27 	 output shape: 128x27x27
-4	Layer Name: conv2_g1 	 Layer time: 35.3066 	 number of inputs: 3 	 input shape: 48x27x27 	 output shape: 128x27x27
-5	Layer Name: conv2 	 Layer time: 1.8850 	 number of inputs: 2 	 input shape: 128x27x27 	 output shape: 256x27x27
-6	Layer Name: norm2 	 Layer time: 15.1233 	 number of inputs: 1 	 input shape: 256x27x27 	 output shape: 256x27x27
-7	Layer Name: pool2 	 Layer time: 1.2252 	 number of inputs: 1 	 input shape: 256x27x27 	 output shape: 256x13x13
-Layer Number: 1 	 time: 88.7329
+3	Layer Name: conv2_g0 	 Layer time: 15.8572 	 number of inputs: 3 	 input shape: 48x27x27 	 output shape: 128x27x27
+4	Layer Name: conv2_g1 	 Layer time: 15.9409 	 number of inputs: 3 	 input shape: 48x27x27 	 output shape: 128x27x27
+5	Layer Name: conv2 	 Layer time: 0.6843 	 number of inputs: 2 	 input shape: 128x27x27 	 output shape: 256x27x27
+6	Layer Name: norm2 	 Layer time: 6.1157 	 number of inputs: 1 	 input shape: 256x27x27 	 output shape: 256x27x27
+7	Layer Name: pool2 	 Layer time: 0.8413 	 number of inputs: 1 	 input shape: 256x27x27 	 output shape: 256x13x13
+Layer Number: 1 	 time: 39.4394
 ----------------------------
-8	Layer Name: conv3 	 Layer time: 25.0108 	 number of inputs: 3 	 input shape: 256x13x13 	 output shape: 384x13x13
-Layer Number: 2 	 time: 25.0108
+8	Layer Name: conv3 	 Layer time: 15.2388 	 number of inputs: 3 	 input shape: 256x13x13 	 output shape: 384x13x13
+Layer Number: 2 	 time: 15.2388
 ----------------------------
-9	Layer Name: conv4_g0 	 Layer time: 11.0810 	 number of inputs: 3 	 input shape: 192x13x13 	 output shape: 192x13x13
-10	Layer Name: conv4_g1 	 Layer time: 11.1830 	 number of inputs: 3 	 input shape: 192x13x13 	 output shape: 192x13x13
-11	Layer Name: conv4 	 Layer time: 1.1538 	 number of inputs: 2 	 input shape: 192x13x13 	 output shape: 384x13x13
-Layer Number: 3 	 time: 23.4177
+9	Layer Name: conv4_g0 	 Layer time: 6.3731 	 number of inputs: 3 	 input shape: 192x13x13 	 output shape: 192x13x13
+10	Layer Name: conv4_g1 	 Layer time: 6.3538 	 number of inputs: 3 	 input shape: 192x13x13 	 output shape: 192x13x13
+11	Layer Name: conv4 	 Layer time: 0.4383 	 number of inputs: 2 	 input shape: 192x13x13 	 output shape: 384x13x13
+Layer Number: 3 	 time: 13.1652
 ----------------------------
-12	Layer Name: conv5_g0 	 Layer time: 8.4947 	 number of inputs: 3 	 input shape: 192x13x13 	 output shape: 128x13x13
-13	Layer Name: conv5_g1 	 Layer time: 8.4502 	 number of inputs: 3 	 input shape: 192x13x13 	 output shape: 128x13x13
-14	Layer Name: conv5 	 Layer time: 0.9056 	 number of inputs: 2 	 input shape: 128x13x13 	 output shape: 256x13x13
-15	Layer Name: pool5 	 Layer time: 0.5107 	 number of inputs: 1 	 input shape: 256x13x13 	 output shape: 256x6x6
-Layer Number: 4 	 time: 18.3611
+12	Layer Name: conv5_g0 	 Layer time: 4.7019 	 number of inputs: 3 	 input shape: 192x13x13 	 output shape: 128x13x13
+13	Layer Name: conv5_g1 	 Layer time: 4.7186 	 number of inputs: 3 	 input shape: 192x13x13 	 output shape: 128x13x13
+14	Layer Name: conv5 	 Layer time: 0.4311 	 number of inputs: 2 	 input shape: 128x13x13 	 output shape: 256x13x13
+15	Layer Name: pool5 	 Layer time: 0.2642 	 number of inputs: 1 	 input shape: 256x13x13 	 output shape: 256x6x6
+Layer Number: 4 	 time: 10.1158
 ----------------------------
-16	Layer Name: fc6 	 Layer time: 46.1046 	 number of inputs: 3 	 input shape: 256x6x6 	 output shape: 4096
-Layer Number: 5 	 time: 46.1046
+16	Layer Name: fc6 	 Layer time: 36.9279 	 number of inputs: 3 	 input shape: 256x6x6 	 output shape: 4096
+Layer Number: 5 	 time: 36.9279
 ----------------------------
-17	Layer Name: fc7 	 Layer time: 20.0164 	 number of inputs: 3 	 input shape: 4096 	 output shape: 4096
-Layer Number: 6 	 time: 20.0164
+17	Layer Name: fc7 	 Layer time: 15.3963 	 number of inputs: 3 	 input shape: 4096 	 output shape: 4096
+Layer Number: 6 	 time: 15.3963
 ----------------------------
-18	Layer Name: fc8 	 Layer time: 5.3313 	 number of inputs: 3 	 input shape: 4096 	 output shape: 1000
-19	Layer Name: prob 	 Layer time: 0.1414 	 number of inputs: 1 	 input shape: 1000 	 output shape: 1000
-Layer Number: 7 	 time: 5.4727
+18	Layer Name: fc8 	 Layer time: 4.0392 	 number of inputs: 3 	 input shape: 4096 	 output shape: 1000
+19	Layer Name: prob 	 Layer time: 0.1350 	 number of inputs: 1 	 input shape: 1000 	 output shape: 1000
+Layer Number: 7 	 time: 4.1742
 ----------------------------
 
- Sum of Layers time: 290.1051
+ Sum of Layers time: 161.7679
 
- input time of layer 0 : 59.8028
+ input time of layer 0 : 60.9367
 
  transfer_time of layer 0 : 0.0000
 
- output time of layer 7 : 0.5045
+ output time of layer 7 : 0.4976
 
- this part task time: 350.3012
+ this part task time: 221.1402
 
 
-Cost0:410.665
-input0_time:59.8028
-task0_time:350.301
-output0_time:0.504467
-total0_time:410.609
+Cost0:284.586
+input0_time:60.9367
+task0_time:221.14
+output0_time:0.497575
+total0_time:282.574
 ***************************************
 
-Frame Latency: 405.044
+Frame Latency: 276.484
 Profiling these DVFS settings finised
 3 Running Graph with 3-3-3-3-3-3-3-3 LW DVFS
-layer:pool1	Little:3	big:0	GPU:0
-layer:pool2	Little:3	big:0	GPU:0
-layer:conv3	Little:3	big:0	GPU:0
-layer:conv4	Little:3	big:0	GPU:0
-layer:pool5	Little:3	big:0	GPU:0
-layer:fc6	Little:3	big:0	GPU:0
-layer:fc7	Little:3	big:0	GPU:0
-layer:prob	Little:3	big:0	GPU:0
-task: conv1 set freq for next task to -1, -1, -1
-task: norm1 set freq for next task to -1, -1, -1
-task: pool1 set freq for next task to 3, 0, 0
-task: conv2_g0 set freq for next task to -1, -1, -1
-task: conv2_g1 set freq for next task to -1, -1, -1
-task: conv2 set freq for next task to -1, -1, -1
-task: norm2 set freq for next task to -1, -1, -1
-task: pool2 set freq for next task to 3, 0, 0
-task: conv3 set freq for next task to 3, 0, 0
-task: conv4_g0 set freq for next task to -1, -1, -1
-task: conv4_g1 set freq for next task to -1, -1, -1
-task: conv4 set freq for next task to 3, 0, 0
-task: conv5_g0 set freq for next task to -1, -1, -1
-task: conv5_g1 set freq for next task to -1, -1, -1
-task: conv5 set freq for next task to -1, -1, -1
-task: pool5 set freq for next task to 3, 0, 0
-task: fc6 set freq for next task to 3, 0, 0
-task: fc7 set freq for next task to 3, 0, 0
-task: fc8 set freq for next task to -1, -1, -1
-task: prob set freq for next task to 3, 0, 0
 
 
 WarmUp: First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/space_shuttle_227.jpg
@@ -3427,140 +3311,140 @@ WarmUp: First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-
 Subgraph0 Ready to trigger Start Running
 
 
-First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/space_shuttle_227.jpg
----------- Top 5 predictions ----------
-
-0.9650 - [id = 812], n04266014 space shuttle
-0.0242 - [id = 404], n02690373 airliner
-0.0057 - [id = 657], n03773504 missile
-0.0021 - [id = 895], n04552348 warplane, military plane
-0.0017 - [id = 744], n04008634 projectile, missile
-
-
-First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/gold_fish.ppm
----------- Top 5 predictions ----------
-
-1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
-0.0000 - [id = 27], n01631663 eft
-0.0000 - [id = 29], n01632777 axolotl, mud puppy, Ambystoma mexicanum
-0.0000 - [id = 124], n01985128 crayfish, crawfish, crawdad, crawdaddy
-0.0000 - [id = 310], n02219486 ant, emmet, pismire
-
-
-First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/gondola.ppm
----------- Top 5 predictions ----------
-
-1.0000 - [id = 576], n03447447 gondola
-0.0000 - [id = 780], n04147183 schooner
-0.0000 - [id = 724], n03947888 pirate, pirate ship
-0.0000 - [id = 914], n04612504 yawl
-0.0000 - [id = 536], n03216828 dock, dockage, docking facility
-
-
-First graph inferencing image: 3:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/school_bus.ppm
----------- Top 5 predictions ----------
-
-1.0000 - [id = 779], n04146614 school bus
-0.0000 - [id = 675], n03796401 moving van
-0.0000 - [id = 654], n03769881 minibus
-0.0000 - [id = 705], n03895866 passenger car, coach, carriage
-0.0000 - [id = 757], n04065272 recreational vehicle, RV, R.V.
-
-
-First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/go_kart.ppm
----------- Top 5 predictions ----------
-
-0.9736 - [id = 573], n03444034 go-kart
-0.0118 - [id = 518], n03127747 crash helmet
-0.0108 - [id = 751], n04037443 racer, race car, racing car
-0.0022 - [id = 817], n04285008 sports car, sport car
-0.0006 - [id = 670], n03791053 motor scooter, scooter
-
-
-First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/space_shuttle_227.jpg
----------- Top 5 predictions ----------
-
-0.9650 - [id = 812], n04266014 space shuttle
-0.0242 - [id = 404], n02690373 airliner
-0.0057 - [id = 657], n03773504 missile
-0.0021 - [id = 895], n04552348 warplane, military plane
-0.0017 - [id = 744], n04008634 projectile, missile
-
-
-First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/gold_fish.ppm
----------- Top 5 predictions ----------
-
-1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
-0.0000 - [id = 27], n01631663 eft
-0.0000 - [id = 29], n01632777 axolotl, mud puppy, Ambystoma mexicanum
-0.0000 - [id = 124], n01985128 crayfish, crawfish, crawdad, crawdaddy
-0.0000 - [id = 310], n02219486 ant, emmet, pismire
-
-
-First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/gondola.ppm
----------- Top 5 predictions ----------
-
-1.0000 - [id = 576], n03447447 gondola
-0.0000 - [id = 780], n04147183 schooner
-0.0000 - [id = 724], n03947888 pirate, pirate ship
-0.0000 - [id = 914], n04612504 yawl
-0.0000 - [id = 536], n03216828 dock, dockage, docking facility
-
-
-First graph inferencing image: 3:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/school_bus.ppm
----------- Top 5 predictions ----------
-
-1.0000 - [id = 779], n04146614 school bus
-0.0000 - [id = 675], n03796401 moving van
-0.0000 - [id = 654], n03769881 minibus
-0.0000 - [id = 705], n03895866 passenger car, coach, carriage
-0.0000 - [id = 757], n04065272 recreational vehicle, RV, R.V.
-
-
-First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/go_kart.ppm
----------- Top 5 predictions ----------
-
-0.9736 - [id = 573], n03444034 go-kart
-0.0118 - [id = 518], n03127747 crash helmet
-0.0108 - [id = 751], n04037443 racer, race car, racing car
-0.0022 - [id = 817], n04285008 sports car, sport car
-0.0006 - [id = 670], n03791053 motor scooter, scooter
-
-
-First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/space_shuttle_227.jpg
----------- Top 5 predictions ----------
-
-0.9650 - [id = 812], n04266014 space shuttle
-0.0242 - [id = 404], n02690373 airliner
-0.0057 - [id = 657], n03773504 missile
-0.0021 - [id = 895], n04552348 warplane, military plane
-0.0017 - [id = 744], n04008634 projectile, missile
-
-
-First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/gold_fish.ppm
----------- Top 5 predictions ----------
-
-1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
-0.0000 - [id = 27], n01631663 eft
-0.0000 - [id = 29], n01632777 axolotl, mud puppy, Ambystoma mexicanum
-0.0000 - [id = 124], n01985128 crayfish, crawfish, crawdad, crawdaddy
-0.0000 - [id = 310], n02219486 ant, emmet, pismire
-
-
-First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/gondola.ppm
-
-
 
 
 
 
 
 ================================================
-Start Running All Subgraphs ...
+Startt Running All Subgraphs ...
 ====================================================
 
 
 
+
+
+First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/space_shuttle_227.jpg
+---------- Top 5 predictions ----------
+
+0.9650 - [id = 812], n04266014 space shuttle
+0.0242 - [id = 404], n02690373 airliner
+0.0057 - [id = 657], n03773504 missile
+0.0021 - [id = 895], n04552348 warplane, military plane
+0.0017 - [id = 744], n04008634 projectile, missile
+
+
+First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/gold_fish.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 27], n01631663 eft
+0.0000 - [id = 29], n01632777 axolotl, mud puppy, Ambystoma mexicanum
+0.0000 - [id = 124], n01985128 crayfish, crawfish, crawdad, crawdaddy
+0.0000 - [id = 310], n02219486 ant, emmet, pismire
+
+
+First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/gondola.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 576], n03447447 gondola
+0.0000 - [id = 780], n04147183 schooner
+0.0000 - [id = 724], n03947888 pirate, pirate ship
+0.0000 - [id = 914], n04612504 yawl
+0.0000 - [id = 536], n03216828 dock, dockage, docking facility
+
+
+First graph inferencing image: 3:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/school_bus.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 779], n04146614 school bus
+0.0000 - [id = 675], n03796401 moving van
+0.0000 - [id = 654], n03769881 minibus
+0.0000 - [id = 705], n03895866 passenger car, coach, carriage
+0.0000 - [id = 757], n04065272 recreational vehicle, RV, R.V.
+
+
+First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/go_kart.ppm
+---------- Top 5 predictions ----------
+
+0.9736 - [id = 573], n03444034 go-kart
+0.0118 - [id = 518], n03127747 crash helmet
+0.0108 - [id = 751], n04037443 racer, race car, racing car
+0.0022 - [id = 817], n04285008 sports car, sport car
+0.0006 - [id = 670], n03791053 motor scooter, scooter
+
+
+First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/space_shuttle_227.jpg
+---------- Top 5 predictions ----------
+
+0.9650 - [id = 812], n04266014 space shuttle
+0.0242 - [id = 404], n02690373 airliner
+0.0057 - [id = 657], n03773504 missile
+0.0021 - [id = 895], n04552348 warplane, military plane
+0.0017 - [id = 744], n04008634 projectile, missile
+
+
+First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/gold_fish.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 27], n01631663 eft
+0.0000 - [id = 29], n01632777 axolotl, mud puppy, Ambystoma mexicanum
+0.0000 - [id = 124], n01985128 crayfish, crawfish, crawdad, crawdaddy
+0.0000 - [id = 310], n02219486 ant, emmet, pismire
+
+
+First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/gondola.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 576], n03447447 gondola
+0.0000 - [id = 780], n04147183 schooner
+0.0000 - [id = 724], n03947888 pirate, pirate ship
+0.0000 - [id = 914], n04612504 yawl
+0.0000 - [id = 536], n03216828 dock, dockage, docking facility
+
+
+First graph inferencing image: 3:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/school_bus.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 779], n04146614 school bus
+0.0000 - [id = 675], n03796401 moving van
+0.0000 - [id = 654], n03769881 minibus
+0.0000 - [id = 705], n03895866 passenger car, coach, carriage
+0.0000 - [id = 757], n04065272 recreational vehicle, RV, R.V.
+
+
+First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/go_kart.ppm
+---------- Top 5 predictions ----------
+
+0.9736 - [id = 573], n03444034 go-kart
+0.0118 - [id = 518], n03127747 crash helmet
+0.0108 - [id = 751], n04037443 racer, race car, racing car
+0.0022 - [id = 817], n04285008 sports car, sport car
+0.0006 - [id = 670], n03791053 motor scooter, scooter
+
+
+First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/space_shuttle_227.jpg
+---------- Top 5 predictions ----------
+
+0.9650 - [id = 812], n04266014 space shuttle
+0.0242 - [id = 404], n02690373 airliner
+0.0057 - [id = 657], n03773504 missile
+0.0021 - [id = 895], n04552348 warplane, military plane
+0.0017 - [id = 744], n04008634 projectile, missile
+
+
+First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/gold_fish.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 27], n01631663 eft
+0.0000 - [id = 29], n01632777 axolotl, mud puppy, Ambystoma mexicanum
+0.0000 - [id = 124], n01985128 crayfish, crawfish, crawdad, crawdaddy
+0.0000 - [id = 310], n02219486 ant, emmet, pismire
+
+
+First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/gondola.ppm
 ---------- Top 5 predictions ----------
 
 1.0000 - [id = 576], n03447447 gondola
@@ -4440,92 +4324,64 @@ First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/a
 0.0022 - [id = 817], n04285008 sports car, sport car
 0.0006 - [id = 670], n03791053 motor scooter, scooter
 Finishing power measurement with first subgraph0
-0	Layer Name: conv1 	 Layer time: 31.8285 	 number of inputs: 3 	 input shape: 3x227x227 	 output shape: 96x55x55
-1	Layer Name: norm1 	 Layer time: 25.8098 	 number of inputs: 1 	 input shape: 96x55x55 	 output shape: 96x55x55
-2	Layer Name: pool1 	 Layer time: 1.7822 	 number of inputs: 1 	 input shape: 96x55x55 	 output shape: 96x27x27
-Layer Number: 0 	 time: 59.4205
+0	Layer Name: conv1 	 Layer time: 13.6392 	 number of inputs: 3 	 input shape: 3x227x227 	 output shape: 96x55x55
+1	Layer Name: norm1 	 Layer time: 8.3565 	 number of inputs: 1 	 input shape: 96x55x55 	 output shape: 96x55x55
+2	Layer Name: pool1 	 Layer time: 0.9220 	 number of inputs: 1 	 input shape: 96x55x55 	 output shape: 96x27x27
+Layer Number: 0 	 time: 22.9177
 ----------------------------
-3	Layer Name: conv2_g0 	 Layer time: 31.1228 	 number of inputs: 3 	 input shape: 48x27x27 	 output shape: 128x27x27
-4	Layer Name: conv2_g1 	 Layer time: 31.3301 	 number of inputs: 3 	 input shape: 48x27x27 	 output shape: 128x27x27
-5	Layer Name: conv2 	 Layer time: 1.8609 	 number of inputs: 2 	 input shape: 128x27x27 	 output shape: 256x27x27
-6	Layer Name: norm2 	 Layer time: 15.1131 	 number of inputs: 1 	 input shape: 256x27x27 	 output shape: 256x27x27
-7	Layer Name: pool2 	 Layer time: 1.1753 	 number of inputs: 1 	 input shape: 256x27x27 	 output shape: 256x13x13
-Layer Number: 1 	 time: 80.6022
+3	Layer Name: conv2_g0 	 Layer time: 13.3562 	 number of inputs: 3 	 input shape: 48x27x27 	 output shape: 128x27x27
+4	Layer Name: conv2_g1 	 Layer time: 13.3831 	 number of inputs: 3 	 input shape: 48x27x27 	 output shape: 128x27x27
+5	Layer Name: conv2 	 Layer time: 0.7106 	 number of inputs: 2 	 input shape: 128x27x27 	 output shape: 256x27x27
+6	Layer Name: norm2 	 Layer time: 5.0145 	 number of inputs: 1 	 input shape: 256x27x27 	 output shape: 256x27x27
+7	Layer Name: pool2 	 Layer time: 0.7881 	 number of inputs: 1 	 input shape: 256x27x27 	 output shape: 256x13x13
+Layer Number: 1 	 time: 33.2525
 ----------------------------
-8	Layer Name: conv3 	 Layer time: 24.6409 	 number of inputs: 3 	 input shape: 256x13x13 	 output shape: 384x13x13
-Layer Number: 2 	 time: 24.6409
+8	Layer Name: conv3 	 Layer time: 12.9525 	 number of inputs: 3 	 input shape: 256x13x13 	 output shape: 384x13x13
+Layer Number: 2 	 time: 12.9525
 ----------------------------
-9	Layer Name: conv4_g0 	 Layer time: 10.9207 	 number of inputs: 3 	 input shape: 192x13x13 	 output shape: 192x13x13
-10	Layer Name: conv4_g1 	 Layer time: 10.9282 	 number of inputs: 3 	 input shape: 192x13x13 	 output shape: 192x13x13
-11	Layer Name: conv4 	 Layer time: 1.0600 	 number of inputs: 2 	 input shape: 192x13x13 	 output shape: 384x13x13
-Layer Number: 3 	 time: 22.9089
+9	Layer Name: conv4_g0 	 Layer time: 5.5189 	 number of inputs: 3 	 input shape: 192x13x13 	 output shape: 192x13x13
+10	Layer Name: conv4_g1 	 Layer time: 5.4729 	 number of inputs: 3 	 input shape: 192x13x13 	 output shape: 192x13x13
+11	Layer Name: conv4 	 Layer time: 0.4096 	 number of inputs: 2 	 input shape: 192x13x13 	 output shape: 384x13x13
+Layer Number: 3 	 time: 11.4014
 ----------------------------
-12	Layer Name: conv5_g0 	 Layer time: 8.2697 	 number of inputs: 3 	 input shape: 192x13x13 	 output shape: 128x13x13
-13	Layer Name: conv5_g1 	 Layer time: 8.1181 	 number of inputs: 3 	 input shape: 192x13x13 	 output shape: 128x13x13
-14	Layer Name: conv5 	 Layer time: 0.7962 	 number of inputs: 2 	 input shape: 128x13x13 	 output shape: 256x13x13
-15	Layer Name: pool5 	 Layer time: 0.4006 	 number of inputs: 1 	 input shape: 256x13x13 	 output shape: 256x6x6
-Layer Number: 4 	 time: 17.5845
+12	Layer Name: conv5_g0 	 Layer time: 4.1315 	 number of inputs: 3 	 input shape: 192x13x13 	 output shape: 128x13x13
+13	Layer Name: conv5_g1 	 Layer time: 4.0048 	 number of inputs: 3 	 input shape: 192x13x13 	 output shape: 128x13x13
+14	Layer Name: conv5 	 Layer time: 0.3596 	 number of inputs: 2 	 input shape: 128x13x13 	 output shape: 256x13x13
+15	Layer Name: pool5 	 Layer time: 0.2221 	 number of inputs: 1 	 input shape: 256x13x13 	 output shape: 256x6x6
+Layer Number: 4 	 time: 8.7180
 ----------------------------
-16	Layer Name: fc6 	 Layer time: 46.1891 	 number of inputs: 3 	 input shape: 256x6x6 	 output shape: 4096
-Layer Number: 5 	 time: 46.1891
+16	Layer Name: fc6 	 Layer time: 36.8230 	 number of inputs: 3 	 input shape: 256x6x6 	 output shape: 4096
+Layer Number: 5 	 time: 36.8230
 ----------------------------
-17	Layer Name: fc7 	 Layer time: 20.0070 	 number of inputs: 3 	 input shape: 4096 	 output shape: 4096
-Layer Number: 6 	 time: 20.0070
+17	Layer Name: fc7 	 Layer time: 15.3445 	 number of inputs: 3 	 input shape: 4096 	 output shape: 4096
+Layer Number: 6 	 time: 15.3445
 ----------------------------
-18	Layer Name: fc8 	 Layer time: 5.3250 	 number of inputs: 3 	 input shape: 4096 	 output shape: 1000
-19	Layer Name: prob 	 Layer time: 0.1208 	 number of inputs: 1 	 input shape: 1000 	 output shape: 1000
-Layer Number: 7 	 time: 5.4458
+18	Layer Name: fc8 	 Layer time: 4.0077 	 number of inputs: 3 	 input shape: 4096 	 output shape: 1000
+19	Layer Name: prob 	 Layer time: 0.1210 	 number of inputs: 1 	 input shape: 1000 	 output shape: 1000
+Layer Number: 7 	 time: 4.1287
 ----------------------------
 
- Sum of Layers time: 276.7988
+ Sum of Layers time: 145.5383
 
- input time of layer 0 : 48.4728
+ input time of layer 0 : 49.3955
 
  transfer_time of layer 0 : 0.0000
 
- output time of layer 7 : 0.4413
+ output time of layer 7 : 0.4253
 
- this part task time: 336.7233
+ this part task time: 204.6854
 
 
-Cost0:385.692
-input0_time:48.4728
-task0_time:336.723
-output0_time:0.44128
-total0_time:385.637
+Cost0:256.513
+input0_time:49.3955
+task0_time:204.685
+output0_time:0.425335
+total0_time:254.506
 ***************************************
 
-Frame Latency: 383.861
+Frame Latency: 248.893
 Profiling these DVFS settings finised
 4 Running Graph with 4-4-4-4-4-4-4-4 LW DVFS
-layer:pool1	Little:4	big:0	GPU:0
-layer:pool2	Little:4	big:0	GPU:0
-layer:conv3	Little:4	big:0	GPU:0
-layer:conv4	Little:4	big:0	GPU:0
-layer:pool5	Little:4	big:0	GPU:0
-layer:fc6	Little:4	big:0	GPU:0
-layer:fc7	Little:4	big:0	GPU:0
-layer:prob	Little:4	big:0	GPU:0
-task: conv1 set freq for next task to -1, -1, -1
-task: norm1 set freq for next task to -1, -1, -1
-task: pool1 set freq for next task to 4, 0, 0
-task: conv2_g0 set freq for next task to -1, -1, -1
-task: conv2_g1 set freq for next task to -1, -1, -1
-task: conv2 set freq for next task to -1, -1, -1
-task: norm2 set freq for next task to -1, -1, -1
-task: pool2 set freq for next task to 4, 0, 0
-task: conv3 set freq for next task to 4, 0, 0
-task: conv4_g0 set freq for next task to -1, -1, -1
-task: conv4_g1 set freq for next task to -1, -1, -1
-task: conv4 set freq for next task to 4, 0, 0
-task: conv5_g0 set freq for next task to -1, -1, -1
-task: conv5_g1 set freq for next task to -1, -1, -1
-task: conv5 set freq for next task to -1, -1, -1
-task: pool5 set freq for next task to 4, 0, 0
-task: fc6 set freq for next task to 4, 0, 0
-task: fc7 set freq for next task to 4, 0, 0
-task: fc8 set freq for next task to -1, -1, -1
-task: prob set freq for next task to 4, 0, 0
 
 
 WarmUp: First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/space_shuttle_227.jpg
@@ -4539,140 +4395,140 @@ WarmUp: First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-
 Subgraph0 Ready to trigger Start Running
 
 
-First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/space_shuttle_227.jpg
----------- Top 5 predictions ----------
-
-0.9650 - [id = 812], n04266014 space shuttle
-0.0242 - [id = 404], n02690373 airliner
-0.0057 - [id = 657], n03773504 missile
-0.0021 - [id = 895], n04552348 warplane, military plane
-0.0017 - [id = 744], n04008634 projectile, missile
-
-
-First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/gold_fish.ppm
----------- Top 5 predictions ----------
-
-1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
-0.0000 - [id = 27], n01631663 eft
-0.0000 - [id = 29], n01632777 axolotl, mud puppy, Ambystoma mexicanum
-0.0000 - [id = 124], n01985128 crayfish, crawfish, crawdad, crawdaddy
-0.0000 - [id = 310], n02219486 ant, emmet, pismire
-
-
-First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/gondola.ppm
----------- Top 5 predictions ----------
-
-1.0000 - [id = 576], n03447447 gondola
-0.0000 - [id = 780], n04147183 schooner
-0.0000 - [id = 724], n03947888 pirate, pirate ship
-0.0000 - [id = 914], n04612504 yawl
-0.0000 - [id = 536], n03216828 dock, dockage, docking facility
-
-
-First graph inferencing image: 3:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/school_bus.ppm
----------- Top 5 predictions ----------
-
-1.0000 - [id = 779], n04146614 school bus
-0.0000 - [id = 675], n03796401 moving van
-0.0000 - [id = 654], n03769881 minibus
-0.0000 - [id = 705], n03895866 passenger car, coach, carriage
-0.0000 - [id = 757], n04065272 recreational vehicle, RV, R.V.
-
-
-First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/go_kart.ppm
----------- Top 5 predictions ----------
-
-0.9736 - [id = 573], n03444034 go-kart
-0.0118 - [id = 518], n03127747 crash helmet
-0.0108 - [id = 751], n04037443 racer, race car, racing car
-0.0022 - [id = 817], n04285008 sports car, sport car
-0.0006 - [id = 670], n03791053 motor scooter, scooter
-
-
-First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/space_shuttle_227.jpg
----------- Top 5 predictions ----------
-
-0.9650 - [id = 812], n04266014 space shuttle
-0.0242 - [id = 404], n02690373 airliner
-0.0057 - [id = 657], n03773504 missile
-0.0021 - [id = 895], n04552348 warplane, military plane
-0.0017 - [id = 744], n04008634 projectile, missile
-
-
-First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/gold_fish.ppm
----------- Top 5 predictions ----------
-
-1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
-0.0000 - [id = 27], n01631663 eft
-0.0000 - [id = 29], n01632777 axolotl, mud puppy, Ambystoma mexicanum
-0.0000 - [id = 124], n01985128 crayfish, crawfish, crawdad, crawdaddy
-0.0000 - [id = 310], n02219486 ant, emmet, pismire
-
-
-First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/gondola.ppm
----------- Top 5 predictions ----------
-
-1.0000 - [id = 576], n03447447 gondola
-0.0000 - [id = 780], n04147183 schooner
-0.0000 - [id = 724], n03947888 pirate, pirate ship
-0.0000 - [id = 914], n04612504 yawl
-0.0000 - [id = 536], n03216828 dock, dockage, docking facility
-
-
-First graph inferencing image: 3:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/school_bus.ppm
----------- Top 5 predictions ----------
-
-1.0000 - [id = 779], n04146614 school bus
-0.0000 - [id = 675], n03796401 moving van
-0.0000 - [id = 654], n03769881 minibus
-0.0000 - [id = 705], n03895866 passenger car, coach, carriage
-0.0000 - [id = 757], n04065272 recreational vehicle, RV, R.V.
-
-
-First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/go_kart.ppm
----------- Top 5 predictions ----------
-
-0.9736 - [id = 573], n03444034 go-kart
-0.0118 - [id = 518], n03127747 crash helmet
-0.0108 - [id = 751], n04037443 racer, race car, racing car
-0.0022 - [id = 817], n04285008 sports car, sport car
-0.0006 - [id = 670], n03791053 motor scooter, scooter
-
-
-First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/space_shuttle_227.jpg
----------- Top 5 predictions ----------
-
-0.9650 - [id = 812], n04266014 space shuttle
-0.0242 - [id = 404], n02690373 airliner
-0.0057 - [id = 657], n03773504 missile
-0.0021 - [id = 895], n04552348 warplane, military plane
-0.0017 - [id = 744], n04008634 projectile, missile
-
-
-First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/gold_fish.ppm
----------- Top 5 predictions ----------
-
-1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
-0.0000 - [id = 27], n01631663 eft
-0.0000 - [id = 29], n01632777 axolotl, mud puppy, Ambystoma mexicanum
-0.0000 - [id = 124], n01985128 crayfish, crawfish, crawdad, crawdaddy
-0.0000 - [id = 310], n02219486 ant, emmet, pismire
-
-
-First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/gondola.ppm
-
-
 
 
 
 
 
 ================================================
-Start Running All Subgraphs ...
+Startt Running All Subgraphs ...
 ====================================================
 
 
 
+
+
+First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/space_shuttle_227.jpg
+---------- Top 5 predictions ----------
+
+0.9650 - [id = 812], n04266014 space shuttle
+0.0242 - [id = 404], n02690373 airliner
+0.0057 - [id = 657], n03773504 missile
+0.0021 - [id = 895], n04552348 warplane, military plane
+0.0017 - [id = 744], n04008634 projectile, missile
+
+
+First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/gold_fish.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 27], n01631663 eft
+0.0000 - [id = 29], n01632777 axolotl, mud puppy, Ambystoma mexicanum
+0.0000 - [id = 124], n01985128 crayfish, crawfish, crawdad, crawdaddy
+0.0000 - [id = 310], n02219486 ant, emmet, pismire
+
+
+First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/gondola.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 576], n03447447 gondola
+0.0000 - [id = 780], n04147183 schooner
+0.0000 - [id = 724], n03947888 pirate, pirate ship
+0.0000 - [id = 914], n04612504 yawl
+0.0000 - [id = 536], n03216828 dock, dockage, docking facility
+
+
+First graph inferencing image: 3:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/school_bus.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 779], n04146614 school bus
+0.0000 - [id = 675], n03796401 moving van
+0.0000 - [id = 654], n03769881 minibus
+0.0000 - [id = 705], n03895866 passenger car, coach, carriage
+0.0000 - [id = 757], n04065272 recreational vehicle, RV, R.V.
+
+
+First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/go_kart.ppm
+---------- Top 5 predictions ----------
+
+0.9736 - [id = 573], n03444034 go-kart
+0.0118 - [id = 518], n03127747 crash helmet
+0.0108 - [id = 751], n04037443 racer, race car, racing car
+0.0022 - [id = 817], n04285008 sports car, sport car
+0.0006 - [id = 670], n03791053 motor scooter, scooter
+
+
+First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/space_shuttle_227.jpg
+---------- Top 5 predictions ----------
+
+0.9650 - [id = 812], n04266014 space shuttle
+0.0242 - [id = 404], n02690373 airliner
+0.0057 - [id = 657], n03773504 missile
+0.0021 - [id = 895], n04552348 warplane, military plane
+0.0017 - [id = 744], n04008634 projectile, missile
+
+
+First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/gold_fish.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 27], n01631663 eft
+0.0000 - [id = 29], n01632777 axolotl, mud puppy, Ambystoma mexicanum
+0.0000 - [id = 124], n01985128 crayfish, crawfish, crawdad, crawdaddy
+0.0000 - [id = 310], n02219486 ant, emmet, pismire
+
+
+First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/gondola.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 576], n03447447 gondola
+0.0000 - [id = 780], n04147183 schooner
+0.0000 - [id = 724], n03947888 pirate, pirate ship
+0.0000 - [id = 914], n04612504 yawl
+0.0000 - [id = 536], n03216828 dock, dockage, docking facility
+
+
+First graph inferencing image: 3:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/school_bus.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 779], n04146614 school bus
+0.0000 - [id = 675], n03796401 moving van
+0.0000 - [id = 654], n03769881 minibus
+0.0000 - [id = 705], n03895866 passenger car, coach, carriage
+0.0000 - [id = 757], n04065272 recreational vehicle, RV, R.V.
+
+
+First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/go_kart.ppm
+---------- Top 5 predictions ----------
+
+0.9736 - [id = 573], n03444034 go-kart
+0.0118 - [id = 518], n03127747 crash helmet
+0.0108 - [id = 751], n04037443 racer, race car, racing car
+0.0022 - [id = 817], n04285008 sports car, sport car
+0.0006 - [id = 670], n03791053 motor scooter, scooter
+
+
+First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/space_shuttle_227.jpg
+---------- Top 5 predictions ----------
+
+0.9650 - [id = 812], n04266014 space shuttle
+0.0242 - [id = 404], n02690373 airliner
+0.0057 - [id = 657], n03773504 missile
+0.0021 - [id = 895], n04552348 warplane, military plane
+0.0017 - [id = 744], n04008634 projectile, missile
+
+
+First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/gold_fish.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 27], n01631663 eft
+0.0000 - [id = 29], n01632777 axolotl, mud puppy, Ambystoma mexicanum
+0.0000 - [id = 124], n01985128 crayfish, crawfish, crawdad, crawdaddy
+0.0000 - [id = 310], n02219486 ant, emmet, pismire
+
+
+First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/gondola.ppm
 ---------- Top 5 predictions ----------
 
 1.0000 - [id = 576], n03447447 gondola
@@ -5552,92 +5408,64 @@ First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/a
 0.0022 - [id = 817], n04285008 sports car, sport car
 0.0006 - [id = 670], n03791053 motor scooter, scooter
 Finishing power measurement with first subgraph0
-0	Layer Name: conv1 	 Layer time: 29.1353 	 number of inputs: 3 	 input shape: 3x227x227 	 output shape: 96x55x55
-1	Layer Name: norm1 	 Layer time: 25.8542 	 number of inputs: 1 	 input shape: 96x55x55 	 output shape: 96x55x55
-2	Layer Name: pool1 	 Layer time: 1.5030 	 number of inputs: 1 	 input shape: 96x55x55 	 output shape: 96x27x27
-Layer Number: 0 	 time: 56.4925
+0	Layer Name: conv1 	 Layer time: 11.9033 	 number of inputs: 3 	 input shape: 3x227x227 	 output shape: 96x55x55
+1	Layer Name: norm1 	 Layer time: 7.1889 	 number of inputs: 1 	 input shape: 96x55x55 	 output shape: 96x55x55
+2	Layer Name: pool1 	 Layer time: 0.8388 	 number of inputs: 1 	 input shape: 96x55x55 	 output shape: 96x27x27
+Layer Number: 0 	 time: 19.9311
 ----------------------------
-3	Layer Name: conv2_g0 	 Layer time: 28.3665 	 number of inputs: 3 	 input shape: 48x27x27 	 output shape: 128x27x27
-4	Layer Name: conv2_g1 	 Layer time: 28.4166 	 number of inputs: 3 	 input shape: 48x27x27 	 output shape: 128x27x27
-5	Layer Name: conv2 	 Layer time: 1.8918 	 number of inputs: 2 	 input shape: 128x27x27 	 output shape: 256x27x27
-6	Layer Name: norm2 	 Layer time: 15.1092 	 number of inputs: 1 	 input shape: 256x27x27 	 output shape: 256x27x27
-7	Layer Name: pool2 	 Layer time: 1.2540 	 number of inputs: 1 	 input shape: 256x27x27 	 output shape: 256x13x13
-Layer Number: 1 	 time: 75.0380
+3	Layer Name: conv2_g0 	 Layer time: 11.8308 	 number of inputs: 3 	 input shape: 48x27x27 	 output shape: 128x27x27
+4	Layer Name: conv2_g1 	 Layer time: 11.8954 	 number of inputs: 3 	 input shape: 48x27x27 	 output shape: 128x27x27
+5	Layer Name: conv2 	 Layer time: 0.6495 	 number of inputs: 2 	 input shape: 128x27x27 	 output shape: 256x27x27
+6	Layer Name: norm2 	 Layer time: 4.3103 	 number of inputs: 1 	 input shape: 256x27x27 	 output shape: 256x27x27
+7	Layer Name: pool2 	 Layer time: 0.7335 	 number of inputs: 1 	 input shape: 256x27x27 	 output shape: 256x13x13
+Layer Number: 1 	 time: 29.4196
 ----------------------------
-8	Layer Name: conv3 	 Layer time: 24.7318 	 number of inputs: 3 	 input shape: 256x13x13 	 output shape: 384x13x13
-Layer Number: 2 	 time: 24.7318
+8	Layer Name: conv3 	 Layer time: 11.3727 	 number of inputs: 3 	 input shape: 256x13x13 	 output shape: 384x13x13
+Layer Number: 2 	 time: 11.3727
 ----------------------------
-9	Layer Name: conv4_g0 	 Layer time: 10.9653 	 number of inputs: 3 	 input shape: 192x13x13 	 output shape: 192x13x13
-10	Layer Name: conv4_g1 	 Layer time: 10.9279 	 number of inputs: 3 	 input shape: 192x13x13 	 output shape: 192x13x13
-11	Layer Name: conv4 	 Layer time: 1.0958 	 number of inputs: 2 	 input shape: 192x13x13 	 output shape: 384x13x13
-Layer Number: 3 	 time: 22.9890
+9	Layer Name: conv4_g0 	 Layer time: 4.8206 	 number of inputs: 3 	 input shape: 192x13x13 	 output shape: 192x13x13
+10	Layer Name: conv4_g1 	 Layer time: 4.8534 	 number of inputs: 3 	 input shape: 192x13x13 	 output shape: 192x13x13
+11	Layer Name: conv4 	 Layer time: 0.4090 	 number of inputs: 2 	 input shape: 192x13x13 	 output shape: 384x13x13
+Layer Number: 3 	 time: 10.0830
 ----------------------------
-12	Layer Name: conv5_g0 	 Layer time: 8.3584 	 number of inputs: 3 	 input shape: 192x13x13 	 output shape: 128x13x13
-13	Layer Name: conv5_g1 	 Layer time: 8.2324 	 number of inputs: 3 	 input shape: 192x13x13 	 output shape: 128x13x13
-14	Layer Name: conv5 	 Layer time: 0.8300 	 number of inputs: 2 	 input shape: 128x13x13 	 output shape: 256x13x13
-15	Layer Name: pool5 	 Layer time: 0.4135 	 number of inputs: 1 	 input shape: 256x13x13 	 output shape: 256x6x6
-Layer Number: 4 	 time: 17.8343
+12	Layer Name: conv5_g0 	 Layer time: 3.5782 	 number of inputs: 3 	 input shape: 192x13x13 	 output shape: 128x13x13
+13	Layer Name: conv5_g1 	 Layer time: 3.5822 	 number of inputs: 3 	 input shape: 192x13x13 	 output shape: 128x13x13
+14	Layer Name: conv5 	 Layer time: 0.3166 	 number of inputs: 2 	 input shape: 128x13x13 	 output shape: 256x13x13
+15	Layer Name: pool5 	 Layer time: 0.1939 	 number of inputs: 1 	 input shape: 256x13x13 	 output shape: 256x6x6
+Layer Number: 4 	 time: 7.6708
 ----------------------------
-16	Layer Name: fc6 	 Layer time: 46.0896 	 number of inputs: 3 	 input shape: 256x6x6 	 output shape: 4096
-Layer Number: 5 	 time: 46.0896
+16	Layer Name: fc6 	 Layer time: 36.5473 	 number of inputs: 3 	 input shape: 256x6x6 	 output shape: 4096
+Layer Number: 5 	 time: 36.5473
 ----------------------------
-17	Layer Name: fc7 	 Layer time: 20.1009 	 number of inputs: 3 	 input shape: 4096 	 output shape: 4096
-Layer Number: 6 	 time: 20.1009
+17	Layer Name: fc7 	 Layer time: 15.4685 	 number of inputs: 3 	 input shape: 4096 	 output shape: 4096
+Layer Number: 6 	 time: 15.4685
 ----------------------------
-18	Layer Name: fc8 	 Layer time: 5.3641 	 number of inputs: 3 	 input shape: 4096 	 output shape: 1000
-19	Layer Name: prob 	 Layer time: 0.1100 	 number of inputs: 1 	 input shape: 1000 	 output shape: 1000
-Layer Number: 7 	 time: 5.4741
+18	Layer Name: fc8 	 Layer time: 4.0313 	 number of inputs: 3 	 input shape: 4096 	 output shape: 1000
+19	Layer Name: prob 	 Layer time: 0.1074 	 number of inputs: 1 	 input shape: 1000 	 output shape: 1000
+Layer Number: 7 	 time: 4.1387
 ----------------------------
 
- Sum of Layers time: 268.7502
+ Sum of Layers time: 134.6317
 
- input time of layer 0 : 40.8138
+ input time of layer 0 : 41.5743
 
  transfer_time of layer 0 : 0.0000
 
- output time of layer 7 : 0.3863
+ output time of layer 7 : 0.3715
 
- this part task time: 328.5297
+ this part task time: 193.5578
 
 
-Cost0:369.784
-input0_time:40.8138
-task0_time:328.53
-output0_time:0.386313
-total0_time:369.73
+Cost0:237.51
+input0_time:41.5743
+task0_time:193.558
+output0_time:0.37147
+total0_time:235.504
 ***************************************
 
-Frame Latency: 366.962
+Frame Latency: 231.656
 Profiling these DVFS settings finised
 5 Running Graph with 5-5-5-5-5-5-5-5 LW DVFS
-layer:pool1	Little:5	big:0	GPU:0
-layer:pool2	Little:5	big:0	GPU:0
-layer:conv3	Little:5	big:0	GPU:0
-layer:conv4	Little:5	big:0	GPU:0
-layer:pool5	Little:5	big:0	GPU:0
-layer:fc6	Little:5	big:0	GPU:0
-layer:fc7	Little:5	big:0	GPU:0
-layer:prob	Little:5	big:0	GPU:0
-task: conv1 set freq for next task to -1, -1, -1
-task: norm1 set freq for next task to -1, -1, -1
-task: pool1 set freq for next task to 5, 0, 0
-task: conv2_g0 set freq for next task to -1, -1, -1
-task: conv2_g1 set freq for next task to -1, -1, -1
-task: conv2 set freq for next task to -1, -1, -1
-task: norm2 set freq for next task to -1, -1, -1
-task: pool2 set freq for next task to 5, 0, 0
-task: conv3 set freq for next task to 5, 0, 0
-task: conv4_g0 set freq for next task to -1, -1, -1
-task: conv4_g1 set freq for next task to -1, -1, -1
-task: conv4 set freq for next task to 5, 0, 0
-task: conv5_g0 set freq for next task to -1, -1, -1
-task: conv5_g1 set freq for next task to -1, -1, -1
-task: conv5 set freq for next task to -1, -1, -1
-task: pool5 set freq for next task to 5, 0, 0
-task: fc6 set freq for next task to 5, 0, 0
-task: fc7 set freq for next task to 5, 0, 0
-task: fc8 set freq for next task to -1, -1, -1
-task: prob set freq for next task to 5, 0, 0
 
 
 WarmUp: First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/space_shuttle_227.jpg
@@ -5651,150 +5479,150 @@ WarmUp: First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-
 Subgraph0 Ready to trigger Start Running
 
 
-First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/space_shuttle_227.jpg
----------- Top 5 predictions ----------
-
-0.9650 - [id = 812], n04266014 space shuttle
-0.0242 - [id = 404], n02690373 airliner
-0.0057 - [id = 657], n03773504 missile
-0.0021 - [id = 895], n04552348 warplane, military plane
-0.0017 - [id = 744], n04008634 projectile, missile
-
-
-First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/gold_fish.ppm
----------- Top 5 predictions ----------
-
-1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
-0.0000 - [id = 27], n01631663 eft
-0.0000 - [id = 29], n01632777 axolotl, mud puppy, Ambystoma mexicanum
-0.0000 - [id = 124], n01985128 crayfish, crawfish, crawdad, crawdaddy
-0.0000 - [id = 310], n02219486 ant, emmet, pismire
-
-
-First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/gondola.ppm
----------- Top 5 predictions ----------
-
-1.0000 - [id = 576], n03447447 gondola
-0.0000 - [id = 780], n04147183 schooner
-0.0000 - [id = 724], n03947888 pirate, pirate ship
-0.0000 - [id = 914], n04612504 yawl
-0.0000 - [id = 536], n03216828 dock, dockage, docking facility
-
-
-First graph inferencing image: 3:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/school_bus.ppm
----------- Top 5 predictions ----------
-
-1.0000 - [id = 779], n04146614 school bus
-0.0000 - [id = 675], n03796401 moving van
-0.0000 - [id = 654], n03769881 minibus
-0.0000 - [id = 705], n03895866 passenger car, coach, carriage
-0.0000 - [id = 757], n04065272 recreational vehicle, RV, R.V.
-
-
-First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/go_kart.ppm
----------- Top 5 predictions ----------
-
-0.9736 - [id = 573], n03444034 go-kart
-0.0118 - [id = 518], n03127747 crash helmet
-0.0108 - [id = 751], n04037443 racer, race car, racing car
-0.0022 - [id = 817], n04285008 sports car, sport car
-0.0006 - [id = 670], n03791053 motor scooter, scooter
-
-
-First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/space_shuttle_227.jpg
----------- Top 5 predictions ----------
-
-0.9650 - [id = 812], n04266014 space shuttle
-0.0242 - [id = 404], n02690373 airliner
-0.0057 - [id = 657], n03773504 missile
-0.0021 - [id = 895], n04552348 warplane, military plane
-0.0017 - [id = 744], n04008634 projectile, missile
-
-
-First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/gold_fish.ppm
----------- Top 5 predictions ----------
-
-1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
-0.0000 - [id = 27], n01631663 eft
-0.0000 - [id = 29], n01632777 axolotl, mud puppy, Ambystoma mexicanum
-0.0000 - [id = 124], n01985128 crayfish, crawfish, crawdad, crawdaddy
-0.0000 - [id = 310], n02219486 ant, emmet, pismire
-
-
-First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/gondola.ppm
----------- Top 5 predictions ----------
-
-1.0000 - [id = 576], n03447447 gondola
-0.0000 - [id = 780], n04147183 schooner
-0.0000 - [id = 724], n03947888 pirate, pirate ship
-0.0000 - [id = 914], n04612504 yawl
-0.0000 - [id = 536], n03216828 dock, dockage, docking facility
-
-
-First graph inferencing image: 3:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/school_bus.ppm
----------- Top 5 predictions ----------
-
-1.0000 - [id = 779], n04146614 school bus
-0.0000 - [id = 675], n03796401 moving van
-0.0000 - [id = 654], n03769881 minibus
-0.0000 - [id = 705], n03895866 passenger car, coach, carriage
-0.0000 - [id = 757], n04065272 recreational vehicle, RV, R.V.
-
-
-First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/go_kart.ppm
----------- Top 5 predictions ----------
-
-0.9736 - [id = 573], n03444034 go-kart
-0.0118 - [id = 518], n03127747 crash helmet
-0.0108 - [id = 751], n04037443 racer, race car, racing car
-0.0022 - [id = 817], n04285008 sports car, sport car
-0.0006 - [id = 670], n03791053 motor scooter, scooter
-
-
-First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/space_shuttle_227.jpg
----------- Top 5 predictions ----------
-
-0.9650 - [id = 812], n04266014 space shuttle
-0.0242 - [id = 404], n02690373 airliner
-0.0057 - [id = 657], n03773504 missile
-0.0021 - [id = 895], n04552348 warplane, military plane
-0.0017 - [id = 744], n04008634 projectile, missile
-
-
-First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/gold_fish.ppm
----------- Top 5 predictions ----------
-
-1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
-0.0000 - [id = 27], n01631663 eft
-0.0000 - [id = 29], n01632777 axolotl, mud puppy, Ambystoma mexicanum
-0.0000 - [id = 124], n01985128 crayfish, crawfish, crawdad, crawdaddy
-0.0000 - [id = 310], n02219486 ant, emmet, pismire
-
-
-First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/gondola.ppm
----------- Top 5 predictions ----------
-
-1.0000 - [id = 576], n03447447 gondola
-0.0000 - [id = 780], n04147183 schooner
-0.0000 - [id = 724], n03947888 pirate, pirate ship
-0.0000 - [id = 914], n04612504 yawl
-0.0000 - [id = 536], n03216828 dock, dockage, docking facility
-
-
-First graph inferencing image: 3:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/school_bus.ppm
-
-
 
 
 
 
 
 ================================================
-Start Running All Subgraphs ...
+Startt Running All Subgraphs ...
 ====================================================
 
 
 
+
+
+First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/space_shuttle_227.jpg
+---------- Top 5 predictions ----------
+
+0.9650 - [id = 812], n04266014 space shuttle
+0.0242 - [id = 404], n02690373 airliner
+0.0057 - [id = 657], n03773504 missile
+0.0021 - [id = 895], n04552348 warplane, military plane
+0.0017 - [id = 744], n04008634 projectile, missile
+
+
+First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/gold_fish.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 27], n01631663 eft
+0.0000 - [id = 29], n01632777 axolotl, mud puppy, Ambystoma mexicanum
+0.0000 - [id = 124], n01985128 crayfish, crawfish, crawdad, crawdaddy
+0.0000 - [id = 310], n02219486 ant, emmet, pismire
+
+
+First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/gondola.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 576], n03447447 gondola
+0.0000 - [id = 780], n04147183 schooner
+0.0000 - [id = 724], n03947888 pirate, pirate ship
+0.0000 - [id = 914], n04612504 yawl
+0.0000 - [id = 536], n03216828 dock, dockage, docking facility
+
+
+First graph inferencing image: 3:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/school_bus.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 779], n04146614 school bus
+0.0000 - [id = 675], n03796401 moving van
+0.0000 - [id = 654], n03769881 minibus
+0.0000 - [id = 705], n03895866 passenger car, coach, carriage
+0.0000 - [id = 757], n04065272 recreational vehicle, RV, R.V.
+
+
+First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/go_kart.ppm
+---------- Top 5 predictions ----------
+
+0.9736 - [id = 573], n03444034 go-kart
+0.0118 - [id = 518], n03127747 crash helmet
+0.0108 - [id = 751], n04037443 racer, race car, racing car
+0.0022 - [id = 817], n04285008 sports car, sport car
+0.0006 - [id = 670], n03791053 motor scooter, scooter
+
+
+First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/space_shuttle_227.jpg
+---------- Top 5 predictions ----------
+
+0.9650 - [id = 812], n04266014 space shuttle
+0.0242 - [id = 404], n02690373 airliner
+0.0057 - [id = 657], n03773504 missile
+0.0021 - [id = 895], n04552348 warplane, military plane
+0.0017 - [id = 744], n04008634 projectile, missile
+
+
+First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/gold_fish.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 27], n01631663 eft
+0.0000 - [id = 29], n01632777 axolotl, mud puppy, Ambystoma mexicanum
+0.0000 - [id = 124], n01985128 crayfish, crawfish, crawdad, crawdaddy
+0.0000 - [id = 310], n02219486 ant, emmet, pismire
+
+
+First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/gondola.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 576], n03447447 gondola
+0.0000 - [id = 780], n04147183 schooner
+0.0000 - [id = 724], n03947888 pirate, pirate ship
+0.0000 - [id = 914], n04612504 yawl
+0.0000 - [id = 536], n03216828 dock, dockage, docking facility
+
+
+First graph inferencing image: 3:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/school_bus.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 779], n04146614 school bus
+0.0000 - [id = 675], n03796401 moving van
+0.0000 - [id = 654], n03769881 minibus
+0.0000 - [id = 705], n03895866 passenger car, coach, carriage
+0.0000 - [id = 757], n04065272 recreational vehicle, RV, R.V.
+
+
+First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/go_kart.ppm
+---------- Top 5 predictions ----------
+
+0.9736 - [id = 573], n03444034 go-kart
+0.0118 - [id = 518], n03127747 crash helmet
+0.0108 - [id = 751], n04037443 racer, race car, racing car
+0.0022 - [id = 817], n04285008 sports car, sport car
+0.0006 - [id = 670], n03791053 motor scooter, scooter
+
+
+First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/space_shuttle_227.jpg
+---------- Top 5 predictions ----------
+
+0.9650 - [id = 812], n04266014 space shuttle
+0.0242 - [id = 404], n02690373 airliner
+0.0057 - [id = 657], n03773504 missile
+0.0021 - [id = 895], n04552348 warplane, military plane
+0.0017 - [id = 744], n04008634 projectile, missile
+
+
+First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/gold_fish.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 27], n01631663 eft
+0.0000 - [id = 29], n01632777 axolotl, mud puppy, Ambystoma mexicanum
+0.0000 - [id = 124], n01985128 crayfish, crawfish, crawdad, crawdaddy
+0.0000 - [id = 310], n02219486 ant, emmet, pismire
+
+
+First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/gondola.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 576], n03447447 gondola
+0.0000 - [id = 780], n04147183 schooner
+0.0000 - [id = 724], n03947888 pirate, pirate ship
+0.0000 - [id = 914], n04612504 yawl
+0.0000 - [id = 536], n03216828 dock, dockage, docking facility
+
+
+First graph inferencing image: 3:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_227/school_bus.ppm
 ---------- Top 5 predictions ----------
 
 1.0000 - [id = 779], n04146614 school bus
@@ -6664,62 +6492,62 @@ First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/a
 0.0022 - [id = 817], n04285008 sports car, sport car
 0.0006 - [id = 670], n03791053 motor scooter, scooter
 Finishing power measurement with first subgraph0
-0	Layer Name: conv1 	 Layer time: 26.8211 	 number of inputs: 3 	 input shape: 3x227x227 	 output shape: 96x55x55
-1	Layer Name: norm1 	 Layer time: 25.7630 	 number of inputs: 1 	 input shape: 96x55x55 	 output shape: 96x55x55
-2	Layer Name: pool1 	 Layer time: 1.5017 	 number of inputs: 1 	 input shape: 96x55x55 	 output shape: 96x27x27
-Layer Number: 0 	 time: 54.0858
+0	Layer Name: conv1 	 Layer time: 10.5303 	 number of inputs: 3 	 input shape: 3x227x227 	 output shape: 96x55x55
+1	Layer Name: norm1 	 Layer time: 6.3894 	 number of inputs: 1 	 input shape: 96x55x55 	 output shape: 96x55x55
+2	Layer Name: pool1 	 Layer time: 0.8221 	 number of inputs: 1 	 input shape: 96x55x55 	 output shape: 96x27x27
+Layer Number: 0 	 time: 17.7418
 ----------------------------
-3	Layer Name: conv2_g0 	 Layer time: 25.7578 	 number of inputs: 3 	 input shape: 48x27x27 	 output shape: 128x27x27
-4	Layer Name: conv2_g1 	 Layer time: 25.9438 	 number of inputs: 3 	 input shape: 48x27x27 	 output shape: 128x27x27
-5	Layer Name: conv2 	 Layer time: 1.8286 	 number of inputs: 2 	 input shape: 128x27x27 	 output shape: 256x27x27
-6	Layer Name: norm2 	 Layer time: 15.0245 	 number of inputs: 1 	 input shape: 256x27x27 	 output shape: 256x27x27
-7	Layer Name: pool2 	 Layer time: 1.1873 	 number of inputs: 1 	 input shape: 256x27x27 	 output shape: 256x13x13
-Layer Number: 1 	 time: 69.7421
+3	Layer Name: conv2_g0 	 Layer time: 10.7283 	 number of inputs: 3 	 input shape: 48x27x27 	 output shape: 128x27x27
+4	Layer Name: conv2_g1 	 Layer time: 10.7723 	 number of inputs: 3 	 input shape: 48x27x27 	 output shape: 128x27x27
+5	Layer Name: conv2 	 Layer time: 0.5876 	 number of inputs: 2 	 input shape: 128x27x27 	 output shape: 256x27x27
+6	Layer Name: norm2 	 Layer time: 3.7971 	 number of inputs: 1 	 input shape: 256x27x27 	 output shape: 256x27x27
+7	Layer Name: pool2 	 Layer time: 0.7000 	 number of inputs: 1 	 input shape: 256x27x27 	 output shape: 256x13x13
+Layer Number: 1 	 time: 26.5853
 ----------------------------
-8	Layer Name: conv3 	 Layer time: 24.6338 	 number of inputs: 3 	 input shape: 256x13x13 	 output shape: 384x13x13
-Layer Number: 2 	 time: 24.6338
+8	Layer Name: conv3 	 Layer time: 10.2531 	 number of inputs: 3 	 input shape: 256x13x13 	 output shape: 384x13x13
+Layer Number: 2 	 time: 10.2531
 ----------------------------
-9	Layer Name: conv4_g0 	 Layer time: 10.9268 	 number of inputs: 3 	 input shape: 192x13x13 	 output shape: 192x13x13
-10	Layer Name: conv4_g1 	 Layer time: 10.9561 	 number of inputs: 3 	 input shape: 192x13x13 	 output shape: 192x13x13
-11	Layer Name: conv4 	 Layer time: 1.1048 	 number of inputs: 2 	 input shape: 192x13x13 	 output shape: 384x13x13
-Layer Number: 3 	 time: 22.9878
+9	Layer Name: conv4_g0 	 Layer time: 4.4638 	 number of inputs: 3 	 input shape: 192x13x13 	 output shape: 192x13x13
+10	Layer Name: conv4_g1 	 Layer time: 4.3390 	 number of inputs: 3 	 input shape: 192x13x13 	 output shape: 192x13x13
+11	Layer Name: conv4 	 Layer time: 0.4099 	 number of inputs: 2 	 input shape: 192x13x13 	 output shape: 384x13x13
+Layer Number: 3 	 time: 9.2127
 ----------------------------
-12	Layer Name: conv5_g0 	 Layer time: 8.2562 	 number of inputs: 3 	 input shape: 192x13x13 	 output shape: 128x13x13
-13	Layer Name: conv5_g1 	 Layer time: 8.2385 	 number of inputs: 3 	 input shape: 192x13x13 	 output shape: 128x13x13
-14	Layer Name: conv5 	 Layer time: 0.7814 	 number of inputs: 2 	 input shape: 128x13x13 	 output shape: 256x13x13
-15	Layer Name: pool5 	 Layer time: 0.3865 	 number of inputs: 1 	 input shape: 256x13x13 	 output shape: 256x6x6
-Layer Number: 4 	 time: 17.6626
+12	Layer Name: conv5_g0 	 Layer time: 3.3479 	 number of inputs: 3 	 input shape: 192x13x13 	 output shape: 128x13x13
+13	Layer Name: conv5_g1 	 Layer time: 3.2897 	 number of inputs: 3 	 input shape: 192x13x13 	 output shape: 128x13x13
+14	Layer Name: conv5 	 Layer time: 0.3066 	 number of inputs: 2 	 input shape: 128x13x13 	 output shape: 256x13x13
+15	Layer Name: pool5 	 Layer time: 0.1682 	 number of inputs: 1 	 input shape: 256x13x13 	 output shape: 256x6x6
+Layer Number: 4 	 time: 7.1123
 ----------------------------
-16	Layer Name: fc6 	 Layer time: 46.1518 	 number of inputs: 3 	 input shape: 256x6x6 	 output shape: 4096
-Layer Number: 5 	 time: 46.1518
+16	Layer Name: fc6 	 Layer time: 36.5144 	 number of inputs: 3 	 input shape: 256x6x6 	 output shape: 4096
+Layer Number: 5 	 time: 36.5144
 ----------------------------
-17	Layer Name: fc7 	 Layer time: 20.0651 	 number of inputs: 3 	 input shape: 4096 	 output shape: 4096
-Layer Number: 6 	 time: 20.0651
+17	Layer Name: fc7 	 Layer time: 15.4360 	 number of inputs: 3 	 input shape: 4096 	 output shape: 4096
+Layer Number: 6 	 time: 15.4360
 ----------------------------
-18	Layer Name: fc8 	 Layer time: 5.3541 	 number of inputs: 3 	 input shape: 4096 	 output shape: 1000
-19	Layer Name: prob 	 Layer time: 0.1017 	 number of inputs: 1 	 input shape: 1000 	 output shape: 1000
-Layer Number: 7 	 time: 5.4558
+18	Layer Name: fc8 	 Layer time: 3.9817 	 number of inputs: 3 	 input shape: 4096 	 output shape: 1000
+19	Layer Name: prob 	 Layer time: 0.0988 	 number of inputs: 1 	 input shape: 1000 	 output shape: 1000
+Layer Number: 7 	 time: 4.0805
 ----------------------------
 
- Sum of Layers time: 260.7847
+ Sum of Layers time: 126.9362
 
- input time of layer 0 : 34.6666
+ input time of layer 0 : 35.3086
 
  transfer_time of layer 0 : 0.0000
 
- output time of layer 7 : 0.3539
+ output time of layer 7 : 0.3424
 
- this part task time: 320.4291
+ this part task time: 185.7173
 
 
-Cost0:355.503
-input0_time:34.6666
-task0_time:320.429
-output0_time:0.353885
-total0_time:355.45
+Cost0:223.376
+input0_time:35.3086
+task0_time:185.717
+output0_time:0.342417
+total0_time:221.368
 ***************************************
 
-Frame Latency: 350.679
+Frame Latency: 217.025
 Profiling these DVFS settings finised
 
 Test passed

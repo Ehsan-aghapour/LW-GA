@@ -617,13 +617,18 @@ def Profile_Task_Time(graph):
         Layers_df.to_csv(Layers_csv,index=False)
 
 
+# +
 #when reading:
 #test=pd.read_csv("data_df.csv",index_col=0)
 #or you can use df.to_csv with index=False argument
+
 def Profiling_Layers():
     for graph in graphs[::1]:
         if Layers_df[Layers_df["Graph"]==graph].shape[0]==0:
             Profile_Task_Time(graph)   
+            
+if Test==1:
+    Profiling_Layers()
 
 
 # +
@@ -1151,8 +1156,8 @@ def AOA():
         
 if Test==3:
     AOA()
-# -
 
+# +
 #Fixed freq
 Motivation_Fig2=False
 #def Motivation_Fig2():
@@ -1162,6 +1167,11 @@ if Motivation_Fig2:
     Real_Evaluation(g="alex",_ord='L',_fs=[[[5]]*N],suffix="Motivation_Figure")
     Real_Evaluation(g="alex",_ord='B',_fs=[[[1]]*N],suffix="Motivation_Figure")
     Real_Evaluation(g="alex",_ord='G',_fs=[[[1,1]]*N],suffix="Motivation_Figure")
+    
+#Real_Evaluation(g="google",_ord='LLLLLLLLLLL',_fs=[[[5]]*11],suffix="ttt")
+# -
+
+[[[0]]*11]
 
 
 # +
@@ -1318,13 +1328,69 @@ def Fill_prediction(_FileName, dvfs_delay):
         order=row['order']
         #print(graph,freq,order,dvfs_delay)
         return Inference_Cost(_graph=graph,_freq=freq,_order=order,_dvfs_delay=dvfs_delay, _debug=False)
-    Evals_df[['Predicted_Time','Predicted_Energy']]=Evals_df.apply(prediction,axis=1, result_type='expand')
+    if pd.isna(Evals_df['Predicted_Time']).any():
+        Evals_df[['Predicted_Time','Predicted_Energy']]=Evals_df.apply(prediction,axis=1, result_type='expand')
+    #display(Evals_df)
+    def calc_EE(row):
+        Measured=1000.0/row['total_e']
+        Pred=1000.0/row['Predicted_Energy']
+        Err=abs(Pred-Measured)/Measured
+        return 100.0*Err
+    
+    def calc_Power(row):
+        measured=row['total_e']/row['total_time']
+        pred=row['Predicted_Energy']/row['Predicted_Time']
+        Err=100*abs(pred-measured)/measured
+        return Err
+    
+    def calc_FPS(row):
+        measured=1000/row['total_time']
+        pred=1000/row['Predicted_Time']
+        Err=100.0*abs(pred-measured)/measured
+        return Err
+    
+    if pd.isna(Evals_df['Error_Time']).any():
+        Evals_df['Error_Time']=Evals_df.apply(lambda x:100*abs(x['Predicted_Time']-x['total_time'])/x['total_time'],axis=1)
+    if pd.isna(Evals_df['Error_Energy']).any():
+        Evals_df['Error_Energy']=Evals_df.apply(lambda x:100*abs(x['Predicted_Energy']-x['total_e'])/x['total_e'],axis=1)
+    if pd.isna(Evals_df['Error_EE']).any():
+        Evals_df['Error_EE']=Evals_df.apply(calc_EE,axis=1)
+    #Evals_df['Error_Power']=Evals_df.apply(lambda x:100*abs( (x['Predicted_Energy']/x['Predicted_Time']) - (x['total_e']/x['total_time']) /(x['total_e']/x['total_time']) ),axis=1)
+    if pd.isna(Evals_df['Error_Power']).any():
+        Evals_df['Error_Power']=Evals_df.apply(calc_Power,axis=1)
+    if pd.isna(Evals_df['Error_FPS']).any():
+        Evals_df['Error_FPS']=Evals_df.apply(calc_FPS,axis=1)
     new_file=_FileName.with_name(_FileName.name.replace(".csv", "_prediction.csv"))
     Evals_df.to_csv(new_file)
 
-if Test==3:
-    fname=Path('test.csv')
-    Fill_prediction(fname, 'variable')
+if Test==2:
+    for g in graphs:
+        if g=='google' or True:
+            fname=Path('Evaluations_'+g+'.csv')
+            Fill_prediction(fname, 'variable')
+# -
+
+#def Anlze_Error():
+#if True:
+if Test==2:
+    for g in graphs:
+        print(f'Graph: {g}')
+        Evals_df=pd.read_csv('Evaluations_'+g+'_prediction.csv')
+        #error_time = abs(100.0*(Evals_df['Predicted_Time'] - Evals_df['total_time'])/Evals_df['total_time'])
+        #print(abs(error_time).describe())
+        #error_energy = abs(100.0*((1000.0/Evals_df['Predicted_Energy']) - (1000.0/Evals_df['total_e']))/(1000.0/Evals_df['total_e']))
+        #error_energy=Evals_df['Error_Time']
+        error_energy=Evals_df['Error_Energy']
+        #error_energy=Evals_df['Error_EE']
+        #plt.hist(error_energy, bins=50, density=True)
+        print(error_energy.describe())
+        # Add normal curve
+        mu, std = norm.fit(error_energy
+                          )
+        x = np.linspace(0, 100, 100)
+
+        y = norm.pdf(x, mu, std)
+        plt.plot(x, y)
 
 
 # +
@@ -1339,54 +1405,32 @@ def prediction(File,row_num,dvfs_delay):
         cases=Evals_df.shape[0]
         print(f'There are {cases}')
         #print(row)
+        Evals_df=Evals_df.sort_values('Error_Time',ascending=False)
         row=Evals_df.iloc[row_num]
         graph=row['graph']
         freq=format_to_list([row['freq']])
         order=row['order']
         #print(graph,freq,order,dvfs_delay)
         t,e=Inference_Cost(_graph=graph,_freq=freq[0],_order=order,_dvfs_delay=dvfs_delay, _debug=True)
-        run=False
+        print(f'total_time:{t}, total_e:{e}')
+        run=True
         if run:
             Real_Evaluation(g=graph,_ord=order,_fs=freq)
             
         return t,e
     
 
-if Test==2:
-    prediction("test.csv",-1,'variable')
-    
+if Test==3:
+    g='google'
+    prediction('Evaluations_'+g+'_prediction.csv',-1,'variable')
+
+
+# +
+#Layers_df[(Layers_df['Graph']=='google') & (Layers_df['Layer']==4) & (Layers_df['Component']=='B') &(Layers_df['Freq']==0)]
+
+# +
+#Value('google','L',[0],[3],'task','Time')
 # -
-
-def Anlze_Error():
-    Evals_df=pd.read_csv('test_prediction.csv')
-    error_time = (Evals_df['total_time'] - Evals_df['Predicted_Time'])/Evals_df['total_time']
-    error_energy = (Evals_df['total_e'] - Evals_df['Predicted_Energy'])/Evals_df['total_e']
-    plt.hist(error_time, bins=20, density=True)
-    # Add normal curve
-    mu, std = norm.fit(error_time)
-    x = np.linspace(-1.5, 1, 100)
-    y = norm.pdf(x, mu, std)
-    plt.plot(x, y)
-    # Add labels and title
-    plt.xlabel('Error')
-    plt.ylabel('Density')
-    plt.title(f'Distribution of Error Values for Time (mean={mu:.2f}, std={std:.2f})')
-    # Show plot
-    plt.show()
-    plt.hist(error_energy, bins=200, density=False)
-    # Add normal curve
-    mu, std = norm.fit(error_energy)
-    x = np.linspace(-10, 10, 100)
-    y = norm.pdf(x, mu, std)
-    plt.plot(x, y)
-    # Add labels and title
-    plt.xlabel('Error')
-    plt.ylabel('Density')
-    plt.title(f'Distribution of Error Values for Energy (mean={mu:.2f}, std={std:.2f})')
-    # Show plot
-    plt.show()
-
-
 
 def _Test():
     _fs=[ [ [0],[1],[2],[3],[4],[5],[6],[7] ],
@@ -1853,7 +1897,7 @@ def Gather_real_profile(_g,_num_evals):
             ab()
             time.sleep(5)
 #3
-if Test==1:
+if Test==3:
     for g in graphs:
             Gather_real_profile(g,200)
 

@@ -21,7 +21,7 @@ from scipy.stats import norm
 
 
 
-Test=0
+Test=1
 
 
 cnn_dir="/home/ehsan/UvA/ARMCL/Rock-Pi/ComputeLibrary_64_CPUGPULW/"
@@ -1322,10 +1322,31 @@ def Fill_prediction(_FileName, dvfs_delay):
     new_file=_FileName.with_name(_FileName.name.replace(".csv", "_prediction.csv"))
     Evals_df.to_csv(new_file)
 
-if Test==3:
-    fname=Path('test.csv')
-    Fill_prediction(fname, 'variable')
+if Test==1:
+    for g in graphs:
+        fname=Path('Evaluations_'+g+'.csv')
+        Fill_prediction(fname, 'variable')
+# -
 
+#def Anlze_Error():
+#if True:
+for g in graphs:
+    print(f'Graph: {g}')
+    Evals_df=pd.read_csv('Evaluations_'+g+'_prediction.csv')
+    #error_time = abs(100.0*(Evals_df['Predicted_Time'] - Evals_df['total_time'])/Evals_df['total_time'])
+    #print(abs(error_time).describe())
+    error_energy = abs(100.0*(1000.0/Evals_df['Predicted_Energy'] - 1000.0/Evals_df['total_e'])/(1000.0/Evals_df['total_e']))
+    plt.hist(error_energy, bins=50, density=True)
+    print(error_energy.describe())
+    #plt.hist(error_time, bins=40, density=True)
+    # Add normal curve
+    mu, std = norm.fit(error_energy
+                      )
+    x = np.linspace(-1.5, 40, 100)
+    
+    y = norm.pdf(x, mu, std)
+    plt.plot(x, y)
+    
 
 # +
 def prediction(File,row_num,dvfs_delay):
@@ -1358,38 +1379,40 @@ if Test==2:
 
 # +
 #Layers_df[(Layers_df['Graph']=='alex') & (Layers_df['Component']=='L') & (Layers_df['Layer']==0)]
+
+# +
+import seaborn as sns
+
+plt.hist(error_time)
+plt.show()
+sns.kdeplot(error_time)
+plt.show()
+import numpy as np
+print("Mean:", np.mean(error_time))
+print("Standard deviation:", np.std(error_time))
+print("25th percentile:", np.percentile(error_time, 25))
+print("50th percentile (median):", np.percentile(error_time, 50))
+print("75th percentile:", np.percentile(error_time, 75))
+
+
+# +
+import matplotlib.pyplot as plt
+import seaborn as sns
+from scipy.stats import norm, gamma, beta, lognorm, chi2, expon, kstest
+plt.clf()
+loc, scale = norm.fit(error_time)
+print("Normal distribution parameters: loc={}, scale={}".format(loc, scale))
+kstest_result = kstest(error_time, 'norm', args=(loc, scale))
+print("Kolmogorov-Smirnov test result:", kstest_result)
+sns.histplot(error_time, kde=True, stat="density")
+x = np.linspace(min(error_time), max(error_time), 100)
+sns.lineplot(x=x, y=norm.pdf(x, loc, scale), label="Normal distribution")
+sns.lineplot(x=x, y=gamma.pdf(x, a=kstest_result[0]), label="Gamma distribution")
+plt.legend()
+plt.show()
+
+
 # -
-
-def Anlze_Error():
-    Evals_df=pd.read_csv('test_prediction.csv')
-    error_time = (Evals_df['total_time'] - Evals_df['Predicted_Time'])/Evals_df['total_time']
-    error_energy = (Evals_df['total_e'] - Evals_df['Predicted_Energy'])/Evals_df['total_e']
-    plt.hist(error_time, bins=20, density=True)
-    # Add normal curve
-    mu, std = norm.fit(error_time)
-    x = np.linspace(-1.5, 1, 100)
-    y = norm.pdf(x, mu, std)
-    plt.plot(x, y)
-    # Add labels and title
-    plt.xlabel('Error')
-    plt.ylabel('Density')
-    plt.title(f'Distribution of Error Values for Time (mean={mu:.2f}, std={std:.2f})')
-    # Show plot
-    plt.show()
-    plt.hist(error_energy, bins=200, density=False)
-    # Add normal curve
-    mu, std = norm.fit(error_energy)
-    x = np.linspace(-10, 10, 100)
-    y = norm.pdf(x, mu, std)
-    plt.plot(x, y)
-    # Add labels and title
-    plt.xlabel('Error')
-    plt.ylabel('Density')
-    plt.title(f'Distribution of Error Values for Energy (mean={mu:.2f}, std={std:.2f})')
-    # Show plot
-    plt.show()
-
-
 
 def _Test():
     _fs=[ [ [0],[1],[2],[3],[4],[5],[6],[7] ],

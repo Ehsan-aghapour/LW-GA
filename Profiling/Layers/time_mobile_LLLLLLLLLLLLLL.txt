@@ -11,6 +11,7 @@ NPU host: 4
 Little Cores host: 3
 Big Cores host: 5
 GPU host: 4
+Number of Layers: 14
 Threads : 2
 Small Cores Threads : 4
 Target : CL
@@ -36,64 +37,14 @@ Number of little cores is : 4
 Run network for 100 times.
 Layer timing: 1
 
-Number of Layers: 14
 start creating graph
 creating image accessor
-std::string task_names[] = { "Conv2d_0+Conv2d_0/BatchNorm", "Conv2d_1_depthwise/depthwise+Conv2d_1_depthwise/BatchNorm", "Conv2d_1_pointwise/Conv2D+Conv2d_1_pointwise/BatchNorm", "Conv2d_2_depthwise/depthwise+Conv2d_2_depthwise/BatchNorm", "Conv2d_2_pointwise/Conv2D+Conv2d_2_pointwise/BatchNorm", "Conv2d_3_depthwise/depthwise+Conv2d_3_depthwise/BatchNorm", "Conv2d_3_pointwise/Conv2D+Conv2d_3_pointwise/BatchNorm", "Conv2d_4_depthwise/depthwise+Conv2d_4_depthwise/BatchNorm", "Conv2d_4_pointwise/Conv2D+Conv2d_4_pointwise/BatchNorm", "Conv2d_5_depthwise/depthwise+Conv2d_5_depthwise/BatchNorm", "Conv2d_5_pointwise/Conv2D+Conv2d_5_pointwise/BatchNorm", "Conv2d_6_depthwise/depthwise+Conv2d_6_depthwise/BatchNorm", "Conv2d_6_pointwise/Conv2D+Conv2d_6_pointwise/BatchNorm", "Conv2d_7_depthwise/depthwise+Conv2d_7_depthwise/BatchNorm", "Conv2d_7_pointwise/Conv2D+Conv2d_7_pointwise/BatchNorm", "Conv2d_8_depthwise/depthwise+Conv2d_8_depthwise/BatchNorm", "Conv2d_8_pointwise/Conv2D+Conv2d_8_pointwise/BatchNorm", "Conv2d_9_depthwise/depthwise+Conv2d_9_depthwise/BatchNorm", "Conv2d_9_pointwise/Conv2D+Conv2d_9_pointwise/BatchNorm", "Conv2d_10_depthwise/depthwise+Conv2d_10_depthwise/BatchNorm", "Conv2d_10_pointwise/Conv2D+Conv2d_10_pointwise/BatchNorm", "Conv2d_11_depthwise/depthwise+Conv2d_11_depthwise/BatchNorm", "Conv2d_11_pointwise/Conv2D+Conv2d_11_pointwise/BatchNorm", "Conv2d_12_depthwise/depthwise+Conv2d_12_depthwise/BatchNorm", "Conv2d_12_pointwise/Conv2D+Conv2d_12_pointwise/BatchNorm", "Conv2d_13_depthwise/depthwise+Conv2d_13_depthwise/BatchNorm", "Conv2d_13_pointwise/Conv2D+Conv2d_13_pointwise/BatchNorm", "Logits/AvgPool_1a", "Logits/Conv2d_1c_1x1", "Reshape", "Softmax" };
 number of tasks: 31
-std::set<std::string> end_task_names = { "Conv2d_0+Conv2d_0/BatchNorm", "Conv2d_1_pointwise/Conv2D+Conv2d_1_pointwise/BatchNorm", "Conv2d_2_pointwise/Conv2D+Conv2d_2_pointwise/BatchNorm", "Conv2d_3_pointwise/Conv2D+Conv2d_3_pointwise/BatchNorm", "Conv2d_4_pointwise/Conv2D+Conv2d_4_pointwise/BatchNorm", "Conv2d_5_pointwise/Conv2D+Conv2d_5_pointwise/BatchNorm", "Conv2d_6_pointwise/Conv2D+Conv2d_6_pointwise/BatchNorm", "Conv2d_7_pointwise/Conv2D+Conv2d_7_pointwise/BatchNorm", "Conv2d_8_pointwise/Conv2D+Conv2d_8_pointwise/BatchNorm", "Conv2d_9_pointwise/Conv2D+Conv2d_9_pointwise/BatchNorm", "Conv2d_10_pointwise/Conv2D+Conv2d_10_pointwise/BatchNorm", "Conv2d_11_pointwise/Conv2D+Conv2d_11_pointwise/BatchNorm", "Conv2d_12_pointwise/Conv2D+Conv2d_12_pointwise/BatchNorm", "Softmax" };
 number of end tasks: 14
-std::set<std::string> start_task_names = { "Conv2d_0+Conv2d_0/BatchNorm", "Conv2d_1_depthwise/depthwise+Conv2d_1_depthwise/BatchNorm", "Conv2d_2_depthwise/depthwise+Conv2d_2_depthwise/BatchNorm", "Conv2d_3_depthwise/depthwise+Conv2d_3_depthwise/BatchNorm", "Conv2d_4_depthwise/depthwise+Conv2d_4_depthwise/BatchNorm", "Conv2d_5_depthwise/depthwise+Conv2d_5_depthwise/BatchNorm", "Conv2d_6_depthwise/depthwise+Conv2d_6_depthwise/BatchNorm", "Conv2d_7_depthwise/depthwise+Conv2d_7_depthwise/BatchNorm", "Conv2d_8_depthwise/depthwise+Conv2d_8_depthwise/BatchNorm", "Conv2d_9_depthwise/depthwise+Conv2d_9_depthwise/BatchNorm", "Conv2d_10_depthwise/depthwise+Conv2d_10_depthwise/BatchNorm", "Conv2d_11_depthwise/depthwise+Conv2d_11_depthwise/BatchNorm", "Conv2d_12_depthwise/depthwise+Conv2d_12_depthwise/BatchNorm", "Conv2d_13_depthwise/depthwise+Conv2d_13_depthwise/BatchNorm" };
 number of start tasks: 14
-after pass graph 0
 Total layers:14
 
 0 Running Graph with 0-0-0-0-0-0-0-0-0-0-0-0-0-0 LW DVFS
-layer:Conv2d_0+Conv2d_0/BatchNorm	Little:0	big:0	GPU:0
-layer:Conv2d_1_pointwise/Conv2D+Conv2d_1_pointwise/BatchNorm	Little:0	big:0	GPU:0
-layer:Conv2d_2_pointwise/Conv2D+Conv2d_2_pointwise/BatchNorm	Little:0	big:0	GPU:0
-layer:Conv2d_3_pointwise/Conv2D+Conv2d_3_pointwise/BatchNorm	Little:0	big:0	GPU:0
-layer:Conv2d_4_pointwise/Conv2D+Conv2d_4_pointwise/BatchNorm	Little:0	big:0	GPU:0
-layer:Conv2d_5_pointwise/Conv2D+Conv2d_5_pointwise/BatchNorm	Little:0	big:0	GPU:0
-layer:Conv2d_6_pointwise/Conv2D+Conv2d_6_pointwise/BatchNorm	Little:0	big:0	GPU:0
-layer:Conv2d_7_pointwise/Conv2D+Conv2d_7_pointwise/BatchNorm	Little:0	big:0	GPU:0
-layer:Conv2d_8_pointwise/Conv2D+Conv2d_8_pointwise/BatchNorm	Little:0	big:0	GPU:0
-layer:Conv2d_9_pointwise/Conv2D+Conv2d_9_pointwise/BatchNorm	Little:0	big:0	GPU:0
-layer:Conv2d_10_pointwise/Conv2D+Conv2d_10_pointwise/BatchNorm	Little:0	big:0	GPU:0
-layer:Conv2d_11_pointwise/Conv2D+Conv2d_11_pointwise/BatchNorm	Little:0	big:0	GPU:0
-layer:Conv2d_12_pointwise/Conv2D+Conv2d_12_pointwise/BatchNorm	Little:0	big:0	GPU:0
-layer:Softmax	Little:0	big:0	GPU:0
-task: Conv2d_0+Conv2d_0/BatchNorm set freq for next task to 0, 0, 0
-task: Conv2d_1_depthwise/depthwise+Conv2d_1_depthwise/BatchNorm set freq for next task to -1, -1, -1
-task: Conv2d_1_pointwise/Conv2D+Conv2d_1_pointwise/BatchNorm set freq for next task to 0, 0, 0
-task: Conv2d_2_depthwise/depthwise+Conv2d_2_depthwise/BatchNorm set freq for next task to -1, -1, -1
-task: Conv2d_2_pointwise/Conv2D+Conv2d_2_pointwise/BatchNorm set freq for next task to 0, 0, 0
-task: Conv2d_3_depthwise/depthwise+Conv2d_3_depthwise/BatchNorm set freq for next task to -1, -1, -1
-task: Conv2d_3_pointwise/Conv2D+Conv2d_3_pointwise/BatchNorm set freq for next task to 0, 0, 0
-task: Conv2d_4_depthwise/depthwise+Conv2d_4_depthwise/BatchNorm set freq for next task to -1, -1, -1
-task: Conv2d_4_pointwise/Conv2D+Conv2d_4_pointwise/BatchNorm set freq for next task to 0, 0, 0
-task: Conv2d_5_depthwise/depthwise+Conv2d_5_depthwise/BatchNorm set freq for next task to -1, -1, -1
-task: Conv2d_5_pointwise/Conv2D+Conv2d_5_pointwise/BatchNorm set freq for next task to 0, 0, 0
-task: Conv2d_6_depthwise/depthwise+Conv2d_6_depthwise/BatchNorm set freq for next task to -1, -1, -1
-task: Conv2d_6_pointwise/Conv2D+Conv2d_6_pointwise/BatchNorm set freq for next task to 0, 0, 0
-task: Conv2d_7_depthwise/depthwise+Conv2d_7_depthwise/BatchNorm set freq for next task to -1, -1, -1
-task: Conv2d_7_pointwise/Conv2D+Conv2d_7_pointwise/BatchNorm set freq for next task to 0, 0, 0
-task: Conv2d_8_depthwise/depthwise+Conv2d_8_depthwise/BatchNorm set freq for next task to -1, -1, -1
-task: Conv2d_8_pointwise/Conv2D+Conv2d_8_pointwise/BatchNorm set freq for next task to 0, 0, 0
-task: Conv2d_9_depthwise/depthwise+Conv2d_9_depthwise/BatchNorm set freq for next task to -1, -1, -1
-task: Conv2d_9_pointwise/Conv2D+Conv2d_9_pointwise/BatchNorm set freq for next task to 0, 0, 0
-task: Conv2d_10_depthwise/depthwise+Conv2d_10_depthwise/BatchNorm set freq for next task to -1, -1, -1
-task: Conv2d_10_pointwise/Conv2D+Conv2d_10_pointwise/BatchNorm set freq for next task to 0, 0, 0
-task: Conv2d_11_depthwise/depthwise+Conv2d_11_depthwise/BatchNorm set freq for next task to -1, -1, -1
-task: Conv2d_11_pointwise/Conv2D+Conv2d_11_pointwise/BatchNorm set freq for next task to 0, 0, 0
-task: Conv2d_12_depthwise/depthwise+Conv2d_12_depthwise/BatchNorm set freq for next task to -1, -1, -1
-task: Conv2d_12_pointwise/Conv2D+Conv2d_12_pointwise/BatchNorm set freq for next task to 0, 0, 0
-task: Conv2d_13_depthwise/depthwise+Conv2d_13_depthwise/BatchNorm set freq for next task to -1, -1, -1
-task: Conv2d_13_pointwise/Conv2D+Conv2d_13_pointwise/BatchNorm set freq for next task to -1, -1, -1
-task: Logits/AvgPool_1a set freq for next task to -1, -1, -1
-task: Logits/Conv2d_1c_1x1 set freq for next task to -1, -1, -1
-task: Reshape set freq for next task to -1, -1, -1
-task: Softmax set freq for next task to 0, 0, 0
 
 
 WarmUp: First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gold_fish.ppm
@@ -1120,132 +1071,87 @@ First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/a
 0.0000 - [id = 615], n03623198 knee pad
 0.0000 - [id = 621], n03649909 lawn mower, mower
 Finishing power measurement with first subgraph0
-0	Layer Name: Conv2d_0+Conv2d_0/BatchNorm 	 Layer time: 13.4757 	 number of inputs: 7 	 input shape: 3x224x224 	 output shape: 32x112x112
-Layer Number: 0 	 time: 13.4757
+0	Layer Name: Conv2d_0+Conv2d_0/BatchNorm 	 Layer time: 11.3436 	 number of inputs: 7 	 input shape: 3x224x224 	 output shape: 32x112x112
+Layer Number: 0 	 time: 11.3436
 ----------------------------
-1	Layer Name: Conv2d_1_depthwise/depthwise+Conv2d_1_depthwise/BatchNorm 	 Layer time: 7.3495 	 number of inputs: 7 	 input shape: 32x112x112 	 output shape: 32x112x112
-2	Layer Name: Conv2d_1_pointwise/Conv2D+Conv2d_1_pointwise/BatchNorm 	 Layer time: 16.8860 	 number of inputs: 7 	 input shape: 32x112x112 	 output shape: 64x112x112
-Layer Number: 1 	 time: 24.2356
+1	Layer Name: Conv2d_1_depthwise/depthwise+Conv2d_1_depthwise/BatchNorm 	 Layer time: 12.9248 	 number of inputs: 7 	 input shape: 32x112x112 	 output shape: 32x112x112
+2	Layer Name: Conv2d_1_pointwise/Conv2D+Conv2d_1_pointwise/BatchNorm 	 Layer time: 13.0233 	 number of inputs: 7 	 input shape: 32x112x112 	 output shape: 64x112x112
+Layer Number: 1 	 time: 25.9481
 ----------------------------
-3	Layer Name: Conv2d_2_depthwise/depthwise+Conv2d_2_depthwise/BatchNorm 	 Layer time: 9.7347 	 number of inputs: 7 	 input shape: 64x112x112 	 output shape: 64x56x56
-4	Layer Name: Conv2d_2_pointwise/Conv2D+Conv2d_2_pointwise/BatchNorm 	 Layer time: 13.3738 	 number of inputs: 7 	 input shape: 64x56x56 	 output shape: 128x56x56
-Layer Number: 2 	 time: 23.1085
+3	Layer Name: Conv2d_2_depthwise/depthwise+Conv2d_2_depthwise/BatchNorm 	 Layer time: 6.4322 	 number of inputs: 7 	 input shape: 64x112x112 	 output shape: 64x56x56
+4	Layer Name: Conv2d_2_pointwise/Conv2D+Conv2d_2_pointwise/BatchNorm 	 Layer time: 8.7939 	 number of inputs: 7 	 input shape: 64x56x56 	 output shape: 128x56x56
+Layer Number: 2 	 time: 15.2261
 ----------------------------
-5	Layer Name: Conv2d_3_depthwise/depthwise+Conv2d_3_depthwise/BatchNorm 	 Layer time: 8.4495 	 number of inputs: 7 	 input shape: 128x56x56 	 output shape: 128x56x56
-6	Layer Name: Conv2d_3_pointwise/Conv2D+Conv2d_3_pointwise/BatchNorm 	 Layer time: 23.4434 	 number of inputs: 7 	 input shape: 128x56x56 	 output shape: 128x56x56
-Layer Number: 3 	 time: 31.8929
+5	Layer Name: Conv2d_3_depthwise/depthwise+Conv2d_3_depthwise/BatchNorm 	 Layer time: 5.2717 	 number of inputs: 7 	 input shape: 128x56x56 	 output shape: 128x56x56
+6	Layer Name: Conv2d_3_pointwise/Conv2D+Conv2d_3_pointwise/BatchNorm 	 Layer time: 14.4639 	 number of inputs: 7 	 input shape: 128x56x56 	 output shape: 128x56x56
+Layer Number: 3 	 time: 19.7356
 ----------------------------
-7	Layer Name: Conv2d_4_depthwise/depthwise+Conv2d_4_depthwise/BatchNorm 	 Layer time: 7.1011 	 number of inputs: 7 	 input shape: 128x56x56 	 output shape: 128x28x28
-8	Layer Name: Conv2d_4_pointwise/Conv2D+Conv2d_4_pointwise/BatchNorm 	 Layer time: 11.5561 	 number of inputs: 7 	 input shape: 128x28x28 	 output shape: 256x28x28
-Layer Number: 4 	 time: 18.6573
+7	Layer Name: Conv2d_4_depthwise/depthwise+Conv2d_4_depthwise/BatchNorm 	 Layer time: 4.1443 	 number of inputs: 7 	 input shape: 128x56x56 	 output shape: 128x28x28
+8	Layer Name: Conv2d_4_pointwise/Conv2D+Conv2d_4_pointwise/BatchNorm 	 Layer time: 7.1944 	 number of inputs: 7 	 input shape: 128x28x28 	 output shape: 256x28x28
+Layer Number: 4 	 time: 11.3388
 ----------------------------
-9	Layer Name: Conv2d_5_depthwise/depthwise+Conv2d_5_depthwise/BatchNorm 	 Layer time: 5.7024 	 number of inputs: 7 	 input shape: 256x28x28 	 output shape: 256x28x28
-10	Layer Name: Conv2d_5_pointwise/Conv2D+Conv2d_5_pointwise/BatchNorm 	 Layer time: 21.3383 	 number of inputs: 7 	 input shape: 256x28x28 	 output shape: 256x28x28
-Layer Number: 5 	 time: 27.0406
+9	Layer Name: Conv2d_5_depthwise/depthwise+Conv2d_5_depthwise/BatchNorm 	 Layer time: 3.6402 	 number of inputs: 7 	 input shape: 256x28x28 	 output shape: 256x28x28
+10	Layer Name: Conv2d_5_pointwise/Conv2D+Conv2d_5_pointwise/BatchNorm 	 Layer time: 13.3245 	 number of inputs: 7 	 input shape: 256x28x28 	 output shape: 256x28x28
+Layer Number: 5 	 time: 16.9648
 ----------------------------
-11	Layer Name: Conv2d_6_depthwise/depthwise+Conv2d_6_depthwise/BatchNorm 	 Layer time: 4.0397 	 number of inputs: 7 	 input shape: 256x28x28 	 output shape: 256x14x14
-12	Layer Name: Conv2d_6_pointwise/Conv2D+Conv2d_6_pointwise/BatchNorm 	 Layer time: 10.8433 	 number of inputs: 7 	 input shape: 256x14x14 	 output shape: 512x14x14
-Layer Number: 6 	 time: 14.8829
+11	Layer Name: Conv2d_6_depthwise/depthwise+Conv2d_6_depthwise/BatchNorm 	 Layer time: 2.4558 	 number of inputs: 7 	 input shape: 256x28x28 	 output shape: 256x14x14
+12	Layer Name: Conv2d_6_pointwise/Conv2D+Conv2d_6_pointwise/BatchNorm 	 Layer time: 6.9877 	 number of inputs: 7 	 input shape: 256x14x14 	 output shape: 512x14x14
+Layer Number: 6 	 time: 9.4435
 ----------------------------
-13	Layer Name: Conv2d_7_depthwise/depthwise+Conv2d_7_depthwise/BatchNorm 	 Layer time: 4.1020 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x14x14
-14	Layer Name: Conv2d_7_pointwise/Conv2D+Conv2d_7_pointwise/BatchNorm 	 Layer time: 21.5202 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x14x14
-Layer Number: 7 	 time: 25.6222
+13	Layer Name: Conv2d_7_depthwise/depthwise+Conv2d_7_depthwise/BatchNorm 	 Layer time: 2.7829 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x14x14
+14	Layer Name: Conv2d_7_pointwise/Conv2D+Conv2d_7_pointwise/BatchNorm 	 Layer time: 13.8917 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x14x14
+Layer Number: 7 	 time: 16.6746
 ----------------------------
-15	Layer Name: Conv2d_8_depthwise/depthwise+Conv2d_8_depthwise/BatchNorm 	 Layer time: 4.1097 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x14x14
-16	Layer Name: Conv2d_8_pointwise/Conv2D+Conv2d_8_pointwise/BatchNorm 	 Layer time: 21.6570 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x14x14
-Layer Number: 8 	 time: 25.7667
+15	Layer Name: Conv2d_8_depthwise/depthwise+Conv2d_8_depthwise/BatchNorm 	 Layer time: 2.6526 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x14x14
+16	Layer Name: Conv2d_8_pointwise/Conv2D+Conv2d_8_pointwise/BatchNorm 	 Layer time: 13.8558 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x14x14
+Layer Number: 8 	 time: 16.5084
 ----------------------------
-17	Layer Name: Conv2d_9_depthwise/depthwise+Conv2d_9_depthwise/BatchNorm 	 Layer time: 4.1127 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x14x14
-18	Layer Name: Conv2d_9_pointwise/Conv2D+Conv2d_9_pointwise/BatchNorm 	 Layer time: 21.5583 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x14x14
-Layer Number: 9 	 time: 25.6710
+17	Layer Name: Conv2d_9_depthwise/depthwise+Conv2d_9_depthwise/BatchNorm 	 Layer time: 2.7292 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x14x14
+18	Layer Name: Conv2d_9_pointwise/Conv2D+Conv2d_9_pointwise/BatchNorm 	 Layer time: 13.9037 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x14x14
+Layer Number: 9 	 time: 16.6329
 ----------------------------
-19	Layer Name: Conv2d_10_depthwise/depthwise+Conv2d_10_depthwise/BatchNorm 	 Layer time: 4.1051 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x14x14
-20	Layer Name: Conv2d_10_pointwise/Conv2D+Conv2d_10_pointwise/BatchNorm 	 Layer time: 21.5582 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x14x14
-Layer Number: 10 	 time: 25.6633
+19	Layer Name: Conv2d_10_depthwise/depthwise+Conv2d_10_depthwise/BatchNorm 	 Layer time: 2.7092 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x14x14
+20	Layer Name: Conv2d_10_pointwise/Conv2D+Conv2d_10_pointwise/BatchNorm 	 Layer time: 13.8903 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x14x14
+Layer Number: 10 	 time: 16.5995
 ----------------------------
-21	Layer Name: Conv2d_11_depthwise/depthwise+Conv2d_11_depthwise/BatchNorm 	 Layer time: 4.1207 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x14x14
-22	Layer Name: Conv2d_11_pointwise/Conv2D+Conv2d_11_pointwise/BatchNorm 	 Layer time: 21.4681 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x14x14
-Layer Number: 11 	 time: 25.5888
+21	Layer Name: Conv2d_11_depthwise/depthwise+Conv2d_11_depthwise/BatchNorm 	 Layer time: 2.6707 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x14x14
+22	Layer Name: Conv2d_11_pointwise/Conv2D+Conv2d_11_pointwise/BatchNorm 	 Layer time: 13.8804 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x14x14
+Layer Number: 11 	 time: 16.5511
 ----------------------------
-23	Layer Name: Conv2d_12_depthwise/depthwise+Conv2d_12_depthwise/BatchNorm 	 Layer time: 2.7059 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x7x7
-24	Layer Name: Conv2d_12_pointwise/Conv2D+Conv2d_12_pointwise/BatchNorm 	 Layer time: 11.8449 	 number of inputs: 7 	 input shape: 512x7x7 	 output shape: 1024x7x7
-Layer Number: 12 	 time: 14.5508
+23	Layer Name: Conv2d_12_depthwise/depthwise+Conv2d_12_depthwise/BatchNorm 	 Layer time: 1.7614 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x7x7
+24	Layer Name: Conv2d_12_pointwise/Conv2D+Conv2d_12_pointwise/BatchNorm 	 Layer time: 8.1057 	 number of inputs: 7 	 input shape: 512x7x7 	 output shape: 1024x7x7
+Layer Number: 12 	 time: 9.8671
 ----------------------------
-25	Layer Name: Conv2d_13_depthwise/depthwise+Conv2d_13_depthwise/BatchNorm 	 Layer time: 2.7078 	 number of inputs: 7 	 input shape: 1024x7x7 	 output shape: 1024x7x7
-26	Layer Name: Conv2d_13_pointwise/Conv2D+Conv2d_13_pointwise/BatchNorm 	 Layer time: 23.4786 	 number of inputs: 7 	 input shape: 1024x7x7 	 output shape: 1024x7x7
-27	Layer Name: Logits/AvgPool_1a 	 Layer time: 0.8197 	 number of inputs: 1 	 input shape: 1024x7x7 	 output shape: 1024
-28	Layer Name: Logits/Conv2d_1c_1x1 	 Layer time: 1.7005 	 number of inputs: 3 	 input shape: 1024 	 output shape: 1000
-29	Layer Name: Reshape 	 Layer time: 0.4206 	 number of inputs: 1 	 input shape: 1000 	 output shape: 1001
-30	Layer Name: Softmax 	 Layer time: 0.2001 	 number of inputs: 1 	 input shape: 1001 	 output shape: 1001
-Layer Number: 13 	 time: 29.3274
+25	Layer Name: Conv2d_13_depthwise/depthwise+Conv2d_13_depthwise/BatchNorm 	 Layer time: 1.6506 	 number of inputs: 7 	 input shape: 1024x7x7 	 output shape: 1024x7x7
+26	Layer Name: Conv2d_13_pointwise/Conv2D+Conv2d_13_pointwise/BatchNorm 	 Layer time: 15.7807 	 number of inputs: 7 	 input shape: 1024x7x7 	 output shape: 1024x7x7
+27	Layer Name: Logits/AvgPool_1a 	 Layer time: 0.8378 	 number of inputs: 1 	 input shape: 1024x7x7 	 output shape: 1024
+28	Layer Name: Logits/Conv2d_1c_1x1 	 Layer time: 1.7667 	 number of inputs: 3 	 input shape: 1024 	 output shape: 1000
+29	Layer Name: Reshape 	 Layer time: 0.4418 	 number of inputs: 1 	 input shape: 1000 	 output shape: 1001
+30	Layer Name: Softmax 	 Layer time: 0.1982 	 number of inputs: 1 	 input shape: 1001 	 output shape: 1001
+Layer Number: 13 	 time: 20.6760
 ----------------------------
 
- Sum of Layers time: 325.4836
+ Sum of Layers time: 223.5100
 
- input time of layer 0 : 163.7669
+ input time of layer 0 : 118.0010
 
  transfer_time of layer 0 : 0.0000
 
- output time of layer 13 : 0.9092
+ output time of layer 13 : 0.8709
 
- this part task time: 441.2083
+ this part task time: 338.2822
 
 
-Cost0:561.819
-input0_time:163.767
-task0_time:441.208
-output0_time:0.909163
-total0_time:605.884
+Cost0:459.166
+input0_time:118.001
+task0_time:338.282
+output0_time:0.87094
+total0_time:457.154
 ***************************************
 
-Frame Latency: 560.135
+Frame Latency: 454.439
 Profiling these DVFS settings finised
 1 Running Graph with 1-1-1-1-1-1-1-1-1-1-1-1-1-1 LW DVFS
-layer:Conv2d_0+Conv2d_0/BatchNorm	Little:1	big:0	GPU:0
-layer:Conv2d_1_pointwise/Conv2D+Conv2d_1_pointwise/BatchNorm	Little:1	big:0	GPU:0
-layer:Conv2d_2_pointwise/Conv2D+Conv2d_2_pointwise/BatchNorm	Little:1	big:0	GPU:0
-layer:Conv2d_3_pointwise/Conv2D+Conv2d_3_pointwise/BatchNorm	Little:1	big:0	GPU:0
-layer:Conv2d_4_pointwise/Conv2D+Conv2d_4_pointwise/BatchNorm	Little:1	big:0	GPU:0
-layer:Conv2d_5_pointwise/Conv2D+Conv2d_5_pointwise/BatchNorm	Little:1	big:0	GPU:0
-layer:Conv2d_6_pointwise/Conv2D+Conv2d_6_pointwise/BatchNorm	Little:1	big:0	GPU:0
-layer:Conv2d_7_pointwise/Conv2D+Conv2d_7_pointwise/BatchNorm	Little:1	big:0	GPU:0
-layer:Conv2d_8_pointwise/Conv2D+Conv2d_8_pointwise/BatchNorm	Little:1	big:0	GPU:0
-layer:Conv2d_9_pointwise/Conv2D+Conv2d_9_pointwise/BatchNorm	Little:1	big:0	GPU:0
-layer:Conv2d_10_pointwise/Conv2D+Conv2d_10_pointwise/BatchNorm	Little:1	big:0	GPU:0
-layer:Conv2d_11_pointwise/Conv2D+Conv2d_11_pointwise/BatchNorm	Little:1	big:0	GPU:0
-layer:Conv2d_12_pointwise/Conv2D+Conv2d_12_pointwise/BatchNorm	Little:1	big:0	GPU:0
-layer:Softmax	Little:1	big:0	GPU:0
-task: Conv2d_0+Conv2d_0/BatchNorm set freq for next task to 1, 0, 0
-task: Conv2d_1_depthwise/depthwise+Conv2d_1_depthwise/BatchNorm set freq for next task to -1, -1, -1
-task: Conv2d_1_pointwise/Conv2D+Conv2d_1_pointwise/BatchNorm set freq for next task to 1, 0, 0
-task: Conv2d_2_depthwise/depthwise+Conv2d_2_depthwise/BatchNorm set freq for next task to -1, -1, -1
-task: Conv2d_2_pointwise/Conv2D+Conv2d_2_pointwise/BatchNorm set freq for next task to 1, 0, 0
-task: Conv2d_3_depthwise/depthwise+Conv2d_3_depthwise/BatchNorm set freq for next task to -1, -1, -1
-task: Conv2d_3_pointwise/Conv2D+Conv2d_3_pointwise/BatchNorm set freq for next task to 1, 0, 0
-task: Conv2d_4_depthwise/depthwise+Conv2d_4_depthwise/BatchNorm set freq for next task to -1, -1, -1
-task: Conv2d_4_pointwise/Conv2D+Conv2d_4_pointwise/BatchNorm set freq for next task to 1, 0, 0
-task: Conv2d_5_depthwise/depthwise+Conv2d_5_depthwise/BatchNorm set freq for next task to -1, -1, -1
-task: Conv2d_5_pointwise/Conv2D+Conv2d_5_pointwise/BatchNorm set freq for next task to 1, 0, 0
-task: Conv2d_6_depthwise/depthwise+Conv2d_6_depthwise/BatchNorm set freq for next task to -1, -1, -1
-task: Conv2d_6_pointwise/Conv2D+Conv2d_6_pointwise/BatchNorm set freq for next task to 1, 0, 0
-task: Conv2d_7_depthwise/depthwise+Conv2d_7_depthwise/BatchNorm set freq for next task to -1, -1, -1
-task: Conv2d_7_pointwise/Conv2D+Conv2d_7_pointwise/BatchNorm set freq for next task to 1, 0, 0
-task: Conv2d_8_depthwise/depthwise+Conv2d_8_depthwise/BatchNorm set freq for next task to -1, -1, -1
-task: Conv2d_8_pointwise/Conv2D+Conv2d_8_pointwise/BatchNorm set freq for next task to 1, 0, 0
-task: Conv2d_9_depthwise/depthwise+Conv2d_9_depthwise/BatchNorm set freq for next task to -1, -1, -1
-task: Conv2d_9_pointwise/Conv2D+Conv2d_9_pointwise/BatchNorm set freq for next task to 1, 0, 0
-task: Conv2d_10_depthwise/depthwise+Conv2d_10_depthwise/BatchNorm set freq for next task to -1, -1, -1
-task: Conv2d_10_pointwise/Conv2D+Conv2d_10_pointwise/BatchNorm set freq for next task to 1, 0, 0
-task: Conv2d_11_depthwise/depthwise+Conv2d_11_depthwise/BatchNorm set freq for next task to -1, -1, -1
-task: Conv2d_11_pointwise/Conv2D+Conv2d_11_pointwise/BatchNorm set freq for next task to 1, 0, 0
-task: Conv2d_12_depthwise/depthwise+Conv2d_12_depthwise/BatchNorm set freq for next task to -1, -1, -1
-task: Conv2d_12_pointwise/Conv2D+Conv2d_12_pointwise/BatchNorm set freq for next task to 1, 0, 0
-task: Conv2d_13_depthwise/depthwise+Conv2d_13_depthwise/BatchNorm set freq for next task to -1, -1, -1
-task: Conv2d_13_pointwise/Conv2D+Conv2d_13_pointwise/BatchNorm set freq for next task to -1, -1, -1
-task: Logits/AvgPool_1a set freq for next task to -1, -1, -1
-task: Logits/Conv2d_1c_1x1 set freq for next task to -1, -1, -1
-task: Reshape set freq for next task to -1, -1, -1
-task: Softmax set freq for next task to 1, 0, 0
 
 
 WarmUp: First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gold_fish.ppm
@@ -1257,6 +1163,19 @@ WarmUp: First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-
 0.0000 - [id = 8], n01514859 hen
 0.0000 - [id = 46], n01693334 green lizard, Lacerta viridis
 Subgraph0 Ready to trigger Start Running
+
+
+
+
+
+
+
+================================================
+Start Running All Subgraphs ...
+====================================================
+
+
+
 
 
 First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gold_fish.ppm
@@ -1350,19 +1269,6 @@ First graph inferencing image: 3:/data/data/com.termux/files/home/ARMCL-RockPi/a
 
 
 First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/go_kart.ppm
-
-
-
-
-
-
-
-================================================
-Start Running All Subgraphs ...
-====================================================
-
-
-
 ---------- Top 5 predictions ----------
 
 0.9916 - [id = 573], n03444034 go-kart
@@ -2272,132 +2178,87 @@ First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/a
 0.0000 - [id = 615], n03623198 knee pad
 0.0000 - [id = 621], n03649909 lawn mower, mower
 Finishing power measurement with first subgraph0
-0	Layer Name: Conv2d_0+Conv2d_0/BatchNorm 	 Layer time: 9.5324 	 number of inputs: 7 	 input shape: 3x224x224 	 output shape: 32x112x112
-Layer Number: 0 	 time: 9.5324
+0	Layer Name: Conv2d_0+Conv2d_0/BatchNorm 	 Layer time: 7.9992 	 number of inputs: 7 	 input shape: 3x224x224 	 output shape: 32x112x112
+Layer Number: 0 	 time: 7.9992
 ----------------------------
-1	Layer Name: Conv2d_1_depthwise/depthwise+Conv2d_1_depthwise/BatchNorm 	 Layer time: 5.5963 	 number of inputs: 7 	 input shape: 32x112x112 	 output shape: 32x112x112
-2	Layer Name: Conv2d_1_pointwise/Conv2D+Conv2d_1_pointwise/BatchNorm 	 Layer time: 13.8932 	 number of inputs: 7 	 input shape: 32x112x112 	 output shape: 64x112x112
-Layer Number: 1 	 time: 19.4895
+1	Layer Name: Conv2d_1_depthwise/depthwise+Conv2d_1_depthwise/BatchNorm 	 Layer time: 8.2713 	 number of inputs: 7 	 input shape: 32x112x112 	 output shape: 32x112x112
+2	Layer Name: Conv2d_1_pointwise/Conv2D+Conv2d_1_pointwise/BatchNorm 	 Layer time: 7.9735 	 number of inputs: 7 	 input shape: 32x112x112 	 output shape: 64x112x112
+Layer Number: 1 	 time: 16.2448
 ----------------------------
-3	Layer Name: Conv2d_2_depthwise/depthwise+Conv2d_2_depthwise/BatchNorm 	 Layer time: 7.1000 	 number of inputs: 7 	 input shape: 64x112x112 	 output shape: 64x56x56
-4	Layer Name: Conv2d_2_pointwise/Conv2D+Conv2d_2_pointwise/BatchNorm 	 Layer time: 11.2438 	 number of inputs: 7 	 input shape: 64x56x56 	 output shape: 128x56x56
-Layer Number: 2 	 time: 18.3439
+3	Layer Name: Conv2d_2_depthwise/depthwise+Conv2d_2_depthwise/BatchNorm 	 Layer time: 4.3313 	 number of inputs: 7 	 input shape: 64x112x112 	 output shape: 64x56x56
+4	Layer Name: Conv2d_2_pointwise/Conv2D+Conv2d_2_pointwise/BatchNorm 	 Layer time: 5.8688 	 number of inputs: 7 	 input shape: 64x56x56 	 output shape: 128x56x56
+Layer Number: 2 	 time: 10.2001
 ----------------------------
-5	Layer Name: Conv2d_3_depthwise/depthwise+Conv2d_3_depthwise/BatchNorm 	 Layer time: 6.6531 	 number of inputs: 7 	 input shape: 128x56x56 	 output shape: 128x56x56
-6	Layer Name: Conv2d_3_pointwise/Conv2D+Conv2d_3_pointwise/BatchNorm 	 Layer time: 19.6991 	 number of inputs: 7 	 input shape: 128x56x56 	 output shape: 128x56x56
-Layer Number: 3 	 time: 26.3522
+5	Layer Name: Conv2d_3_depthwise/depthwise+Conv2d_3_depthwise/BatchNorm 	 Layer time: 3.7296 	 number of inputs: 7 	 input shape: 128x56x56 	 output shape: 128x56x56
+6	Layer Name: Conv2d_3_pointwise/Conv2D+Conv2d_3_pointwise/BatchNorm 	 Layer time: 9.9415 	 number of inputs: 7 	 input shape: 128x56x56 	 output shape: 128x56x56
+Layer Number: 3 	 time: 13.6711
 ----------------------------
-7	Layer Name: Conv2d_4_depthwise/depthwise+Conv2d_4_depthwise/BatchNorm 	 Layer time: 5.5036 	 number of inputs: 7 	 input shape: 128x56x56 	 output shape: 128x28x28
-8	Layer Name: Conv2d_4_pointwise/Conv2D+Conv2d_4_pointwise/BatchNorm 	 Layer time: 9.5245 	 number of inputs: 7 	 input shape: 128x28x28 	 output shape: 256x28x28
-Layer Number: 4 	 time: 15.0281
+7	Layer Name: Conv2d_4_depthwise/depthwise+Conv2d_4_depthwise/BatchNorm 	 Layer time: 3.2845 	 number of inputs: 7 	 input shape: 128x56x56 	 output shape: 128x28x28
+8	Layer Name: Conv2d_4_pointwise/Conv2D+Conv2d_4_pointwise/BatchNorm 	 Layer time: 4.9693 	 number of inputs: 7 	 input shape: 128x28x28 	 output shape: 256x28x28
+Layer Number: 4 	 time: 8.2538
 ----------------------------
-9	Layer Name: Conv2d_5_depthwise/depthwise+Conv2d_5_depthwise/BatchNorm 	 Layer time: 5.1045 	 number of inputs: 7 	 input shape: 256x28x28 	 output shape: 256x28x28
-10	Layer Name: Conv2d_5_pointwise/Conv2D+Conv2d_5_pointwise/BatchNorm 	 Layer time: 18.1957 	 number of inputs: 7 	 input shape: 256x28x28 	 output shape: 256x28x28
-Layer Number: 5 	 time: 23.3002
+9	Layer Name: Conv2d_5_depthwise/depthwise+Conv2d_5_depthwise/BatchNorm 	 Layer time: 2.5613 	 number of inputs: 7 	 input shape: 256x28x28 	 output shape: 256x28x28
+10	Layer Name: Conv2d_5_pointwise/Conv2D+Conv2d_5_pointwise/BatchNorm 	 Layer time: 9.1632 	 number of inputs: 7 	 input shape: 256x28x28 	 output shape: 256x28x28
+Layer Number: 5 	 time: 11.7244
 ----------------------------
-11	Layer Name: Conv2d_6_depthwise/depthwise+Conv2d_6_depthwise/BatchNorm 	 Layer time: 3.0943 	 number of inputs: 7 	 input shape: 256x28x28 	 output shape: 256x14x14
-12	Layer Name: Conv2d_6_pointwise/Conv2D+Conv2d_6_pointwise/BatchNorm 	 Layer time: 9.1309 	 number of inputs: 7 	 input shape: 256x14x14 	 output shape: 512x14x14
-Layer Number: 6 	 time: 12.2252
+11	Layer Name: Conv2d_6_depthwise/depthwise+Conv2d_6_depthwise/BatchNorm 	 Layer time: 1.9508 	 number of inputs: 7 	 input shape: 256x28x28 	 output shape: 256x14x14
+12	Layer Name: Conv2d_6_pointwise/Conv2D+Conv2d_6_pointwise/BatchNorm 	 Layer time: 4.8191 	 number of inputs: 7 	 input shape: 256x14x14 	 output shape: 512x14x14
+Layer Number: 6 	 time: 6.7700
 ----------------------------
-13	Layer Name: Conv2d_7_depthwise/depthwise+Conv2d_7_depthwise/BatchNorm 	 Layer time: 3.8618 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x14x14
-14	Layer Name: Conv2d_7_pointwise/Conv2D+Conv2d_7_pointwise/BatchNorm 	 Layer time: 17.6683 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x14x14
-Layer Number: 7 	 time: 21.5301
+13	Layer Name: Conv2d_7_depthwise/depthwise+Conv2d_7_depthwise/BatchNorm 	 Layer time: 1.9831 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x14x14
+14	Layer Name: Conv2d_7_pointwise/Conv2D+Conv2d_7_pointwise/BatchNorm 	 Layer time: 9.5555 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x14x14
+Layer Number: 7 	 time: 11.5386
 ----------------------------
-15	Layer Name: Conv2d_8_depthwise/depthwise+Conv2d_8_depthwise/BatchNorm 	 Layer time: 3.8932 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x14x14
-16	Layer Name: Conv2d_8_pointwise/Conv2D+Conv2d_8_pointwise/BatchNorm 	 Layer time: 17.5382 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x14x14
-Layer Number: 8 	 time: 21.4314
+15	Layer Name: Conv2d_8_depthwise/depthwise+Conv2d_8_depthwise/BatchNorm 	 Layer time: 1.9395 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x14x14
+16	Layer Name: Conv2d_8_pointwise/Conv2D+Conv2d_8_pointwise/BatchNorm 	 Layer time: 9.5305 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x14x14
+Layer Number: 8 	 time: 11.4701
 ----------------------------
-17	Layer Name: Conv2d_9_depthwise/depthwise+Conv2d_9_depthwise/BatchNorm 	 Layer time: 3.8419 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x14x14
-18	Layer Name: Conv2d_9_pointwise/Conv2D+Conv2d_9_pointwise/BatchNorm 	 Layer time: 17.7032 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x14x14
-Layer Number: 9 	 time: 21.5451
+17	Layer Name: Conv2d_9_depthwise/depthwise+Conv2d_9_depthwise/BatchNorm 	 Layer time: 1.9075 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x14x14
+18	Layer Name: Conv2d_9_pointwise/Conv2D+Conv2d_9_pointwise/BatchNorm 	 Layer time: 9.5288 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x14x14
+Layer Number: 9 	 time: 11.4363
 ----------------------------
-19	Layer Name: Conv2d_10_depthwise/depthwise+Conv2d_10_depthwise/BatchNorm 	 Layer time: 3.8394 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x14x14
-20	Layer Name: Conv2d_10_pointwise/Conv2D+Conv2d_10_pointwise/BatchNorm 	 Layer time: 17.6526 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x14x14
-Layer Number: 10 	 time: 21.4920
+19	Layer Name: Conv2d_10_depthwise/depthwise+Conv2d_10_depthwise/BatchNorm 	 Layer time: 1.9112 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x14x14
+20	Layer Name: Conv2d_10_pointwise/Conv2D+Conv2d_10_pointwise/BatchNorm 	 Layer time: 9.5229 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x14x14
+Layer Number: 10 	 time: 11.4341
 ----------------------------
-21	Layer Name: Conv2d_11_depthwise/depthwise+Conv2d_11_depthwise/BatchNorm 	 Layer time: 3.8456 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x14x14
-22	Layer Name: Conv2d_11_pointwise/Conv2D+Conv2d_11_pointwise/BatchNorm 	 Layer time: 17.6883 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x14x14
-Layer Number: 11 	 time: 21.5339
+21	Layer Name: Conv2d_11_depthwise/depthwise+Conv2d_11_depthwise/BatchNorm 	 Layer time: 1.8820 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x14x14
+22	Layer Name: Conv2d_11_pointwise/Conv2D+Conv2d_11_pointwise/BatchNorm 	 Layer time: 9.5246 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x14x14
+Layer Number: 11 	 time: 11.4066
 ----------------------------
-23	Layer Name: Conv2d_12_depthwise/depthwise+Conv2d_12_depthwise/BatchNorm 	 Layer time: 2.0163 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x7x7
-24	Layer Name: Conv2d_12_pointwise/Conv2D+Conv2d_12_pointwise/BatchNorm 	 Layer time: 10.6555 	 number of inputs: 7 	 input shape: 512x7x7 	 output shape: 1024x7x7
-Layer Number: 12 	 time: 12.6718
+23	Layer Name: Conv2d_12_depthwise/depthwise+Conv2d_12_depthwise/BatchNorm 	 Layer time: 1.3973 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x7x7
+24	Layer Name: Conv2d_12_pointwise/Conv2D+Conv2d_12_pointwise/BatchNorm 	 Layer time: 5.5266 	 number of inputs: 7 	 input shape: 512x7x7 	 output shape: 1024x7x7
+Layer Number: 12 	 time: 6.9239
 ----------------------------
-25	Layer Name: Conv2d_13_depthwise/depthwise+Conv2d_13_depthwise/BatchNorm 	 Layer time: 2.7262 	 number of inputs: 7 	 input shape: 1024x7x7 	 output shape: 1024x7x7
-26	Layer Name: Conv2d_13_pointwise/Conv2D+Conv2d_13_pointwise/BatchNorm 	 Layer time: 21.0906 	 number of inputs: 7 	 input shape: 1024x7x7 	 output shape: 1024x7x7
-27	Layer Name: Logits/AvgPool_1a 	 Layer time: 0.8022 	 number of inputs: 1 	 input shape: 1024x7x7 	 output shape: 1024
-28	Layer Name: Logits/Conv2d_1c_1x1 	 Layer time: 2.1605 	 number of inputs: 3 	 input shape: 1024 	 output shape: 1000
-29	Layer Name: Reshape 	 Layer time: 0.2996 	 number of inputs: 1 	 input shape: 1000 	 output shape: 1001
-30	Layer Name: Softmax 	 Layer time: 0.1429 	 number of inputs: 1 	 input shape: 1001 	 output shape: 1001
-Layer Number: 13 	 time: 27.2219
+25	Layer Name: Conv2d_13_depthwise/depthwise+Conv2d_13_depthwise/BatchNorm 	 Layer time: 1.3787 	 number of inputs: 7 	 input shape: 1024x7x7 	 output shape: 1024x7x7
+26	Layer Name: Conv2d_13_pointwise/Conv2D+Conv2d_13_pointwise/BatchNorm 	 Layer time: 10.7627 	 number of inputs: 7 	 input shape: 1024x7x7 	 output shape: 1024x7x7
+27	Layer Name: Logits/AvgPool_1a 	 Layer time: 0.7305 	 number of inputs: 1 	 input shape: 1024x7x7 	 output shape: 1024
+28	Layer Name: Logits/Conv2d_1c_1x1 	 Layer time: 1.4375 	 number of inputs: 3 	 input shape: 1024 	 output shape: 1000
+29	Layer Name: Reshape 	 Layer time: 0.2963 	 number of inputs: 1 	 input shape: 1000 	 output shape: 1001
+30	Layer Name: Softmax 	 Layer time: 0.1427 	 number of inputs: 1 	 input shape: 1001 	 output shape: 1001
+Layer Number: 13 	 time: 14.7483
 ----------------------------
 
- Sum of Layers time: 271.6975
+ Sum of Layers time: 153.8213
 
- input time of layer 0 : 81.3490
+ input time of layer 0 : 80.2531
 
  transfer_time of layer 0 : 0.0000
 
- output time of layer 13 : 0.6559
+ output time of layer 13 : 0.6271
 
- this part task time: 385.5987
+ this part task time: 266.6815
 
 
-Cost0:467.65
-input0_time:81.349
-task0_time:385.599
-output0_time:0.655947
-total0_time:467.604
+Cost0:349.573
+input0_time:80.2531
+task0_time:266.682
+output0_time:0.627098
+total0_time:347.562
 ***************************************
 
-Frame Latency: 467.107
+Frame Latency: 350.451
 Profiling these DVFS settings finised
 2 Running Graph with 2-2-2-2-2-2-2-2-2-2-2-2-2-2 LW DVFS
-layer:Conv2d_0+Conv2d_0/BatchNorm	Little:2	big:0	GPU:0
-layer:Conv2d_1_pointwise/Conv2D+Conv2d_1_pointwise/BatchNorm	Little:2	big:0	GPU:0
-layer:Conv2d_2_pointwise/Conv2D+Conv2d_2_pointwise/BatchNorm	Little:2	big:0	GPU:0
-layer:Conv2d_3_pointwise/Conv2D+Conv2d_3_pointwise/BatchNorm	Little:2	big:0	GPU:0
-layer:Conv2d_4_pointwise/Conv2D+Conv2d_4_pointwise/BatchNorm	Little:2	big:0	GPU:0
-layer:Conv2d_5_pointwise/Conv2D+Conv2d_5_pointwise/BatchNorm	Little:2	big:0	GPU:0
-layer:Conv2d_6_pointwise/Conv2D+Conv2d_6_pointwise/BatchNorm	Little:2	big:0	GPU:0
-layer:Conv2d_7_pointwise/Conv2D+Conv2d_7_pointwise/BatchNorm	Little:2	big:0	GPU:0
-layer:Conv2d_8_pointwise/Conv2D+Conv2d_8_pointwise/BatchNorm	Little:2	big:0	GPU:0
-layer:Conv2d_9_pointwise/Conv2D+Conv2d_9_pointwise/BatchNorm	Little:2	big:0	GPU:0
-layer:Conv2d_10_pointwise/Conv2D+Conv2d_10_pointwise/BatchNorm	Little:2	big:0	GPU:0
-layer:Conv2d_11_pointwise/Conv2D+Conv2d_11_pointwise/BatchNorm	Little:2	big:0	GPU:0
-layer:Conv2d_12_pointwise/Conv2D+Conv2d_12_pointwise/BatchNorm	Little:2	big:0	GPU:0
-layer:Softmax	Little:2	big:0	GPU:0
-task: Conv2d_0+Conv2d_0/BatchNorm set freq for next task to 2, 0, 0
-task: Conv2d_1_depthwise/depthwise+Conv2d_1_depthwise/BatchNorm set freq for next task to -1, -1, -1
-task: Conv2d_1_pointwise/Conv2D+Conv2d_1_pointwise/BatchNorm set freq for next task to 2, 0, 0
-task: Conv2d_2_depthwise/depthwise+Conv2d_2_depthwise/BatchNorm set freq for next task to -1, -1, -1
-task: Conv2d_2_pointwise/Conv2D+Conv2d_2_pointwise/BatchNorm set freq for next task to 2, 0, 0
-task: Conv2d_3_depthwise/depthwise+Conv2d_3_depthwise/BatchNorm set freq for next task to -1, -1, -1
-task: Conv2d_3_pointwise/Conv2D+Conv2d_3_pointwise/BatchNorm set freq for next task to 2, 0, 0
-task: Conv2d_4_depthwise/depthwise+Conv2d_4_depthwise/BatchNorm set freq for next task to -1, -1, -1
-task: Conv2d_4_pointwise/Conv2D+Conv2d_4_pointwise/BatchNorm set freq for next task to 2, 0, 0
-task: Conv2d_5_depthwise/depthwise+Conv2d_5_depthwise/BatchNorm set freq for next task to -1, -1, -1
-task: Conv2d_5_pointwise/Conv2D+Conv2d_5_pointwise/BatchNorm set freq for next task to 2, 0, 0
-task: Conv2d_6_depthwise/depthwise+Conv2d_6_depthwise/BatchNorm set freq for next task to -1, -1, -1
-task: Conv2d_6_pointwise/Conv2D+Conv2d_6_pointwise/BatchNorm set freq for next task to 2, 0, 0
-task: Conv2d_7_depthwise/depthwise+Conv2d_7_depthwise/BatchNorm set freq for next task to -1, -1, -1
-task: Conv2d_7_pointwise/Conv2D+Conv2d_7_pointwise/BatchNorm set freq for next task to 2, 0, 0
-task: Conv2d_8_depthwise/depthwise+Conv2d_8_depthwise/BatchNorm set freq for next task to -1, -1, -1
-task: Conv2d_8_pointwise/Conv2D+Conv2d_8_pointwise/BatchNorm set freq for next task to 2, 0, 0
-task: Conv2d_9_depthwise/depthwise+Conv2d_9_depthwise/BatchNorm set freq for next task to -1, -1, -1
-task: Conv2d_9_pointwise/Conv2D+Conv2d_9_pointwise/BatchNorm set freq for next task to 2, 0, 0
-task: Conv2d_10_depthwise/depthwise+Conv2d_10_depthwise/BatchNorm set freq for next task to -1, -1, -1
-task: Conv2d_10_pointwise/Conv2D+Conv2d_10_pointwise/BatchNorm set freq for next task to 2, 0, 0
-task: Conv2d_11_depthwise/depthwise+Conv2d_11_depthwise/BatchNorm set freq for next task to -1, -1, -1
-task: Conv2d_11_pointwise/Conv2D+Conv2d_11_pointwise/BatchNorm set freq for next task to 2, 0, 0
-task: Conv2d_12_depthwise/depthwise+Conv2d_12_depthwise/BatchNorm set freq for next task to -1, -1, -1
-task: Conv2d_12_pointwise/Conv2D+Conv2d_12_pointwise/BatchNorm set freq for next task to 2, 0, 0
-task: Conv2d_13_depthwise/depthwise+Conv2d_13_depthwise/BatchNorm set freq for next task to -1, -1, -1
-task: Conv2d_13_pointwise/Conv2D+Conv2d_13_pointwise/BatchNorm set freq for next task to -1, -1, -1
-task: Logits/AvgPool_1a set freq for next task to -1, -1, -1
-task: Logits/Conv2d_1c_1x1 set freq for next task to -1, -1, -1
-task: Reshape set freq for next task to -1, -1, -1
-task: Softmax set freq for next task to 2, 0, 0
 
 
 WarmUp: First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gold_fish.ppm
@@ -2411,119 +2272,6 @@ WarmUp: First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-
 Subgraph0 Ready to trigger Start Running
 
 
-First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gold_fish.ppm
----------- Top 5 predictions ----------
-
-1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
-0.0000 - [id = 130], n02007558 flamingo
-0.0000 - [id = 7], n01514668 cock
-0.0000 - [id = 8], n01514859 hen
-0.0000 - [id = 46], n01693334 green lizard, Lacerta viridis
-
-
-First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gondola.ppm
----------- Top 5 predictions ----------
-
-0.9999 - [id = 576], n03447447 gondola
-0.0000 - [id = 780], n04147183 schooner
-0.0000 - [id = 914], n04612504 yawl
-0.0000 - [id = 536], n03216828 dock, dockage, docking facility
-0.0000 - [id = 449], n02859443 boathouse
-
-
-First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/space_shuttle_224.jpg
----------- Top 5 predictions ----------
-
-1.0000 - [id = 812], n04266014 space shuttle
-0.0000 - [id = 833], n04347754 submarine, pigboat, sub, U-boat
-0.0000 - [id = 404], n02690373 airliner
-0.0000 - [id = 484], n02981792 catamaran
-0.0000 - [id = 657], n03773504 missile
-
-
-First graph inferencing image: 3:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/school_bus.ppm
----------- Top 5 predictions ----------
-
-1.0000 - [id = 779], n04146614 school bus
-0.0000 - [id = 705], n03895866 passenger car, coach, carriage
-0.0000 - [id = 874], n04487081 trolleybus, trolley coach, trackless trolley
-0.0000 - [id = 864], n04461696 tow truck, tow car, wrecker
-0.0000 - [id = 555], n03345487 fire engine, fire truck
-
-
-First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/go_kart.ppm
----------- Top 5 predictions ----------
-
-0.9916 - [id = 573], n03444034 go-kart
-0.0083 - [id = 518], n03127747 crash helmet
-0.0000 - [id = 560], n03379051 football helmet
-0.0000 - [id = 615], n03623198 knee pad
-0.0000 - [id = 621], n03649909 lawn mower, mower
-
-
-First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gold_fish.ppm
----------- Top 5 predictions ----------
-
-1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
-0.0000 - [id = 130], n02007558 flamingo
-0.0000 - [id = 7], n01514668 cock
-0.0000 - [id = 8], n01514859 hen
-0.0000 - [id = 46], n01693334 green lizard, Lacerta viridis
-
-
-First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gondola.ppm
----------- Top 5 predictions ----------
-
-0.9999 - [id = 576], n03447447 gondola
-0.0000 - [id = 780], n04147183 schooner
-0.0000 - [id = 914], n04612504 yawl
-0.0000 - [id = 536], n03216828 dock, dockage, docking facility
-0.0000 - [id = 449], n02859443 boathouse
-
-
-First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/space_shuttle_224.jpg
----------- Top 5 predictions ----------
-
-1.0000 - [id = 812], n04266014 space shuttle
-0.0000 - [id = 833], n04347754 submarine, pigboat, sub, U-boat
-0.0000 - [id = 404], n02690373 airliner
-0.0000 - [id = 484], n02981792 catamaran
-0.0000 - [id = 657], n03773504 missile
-
-
-First graph inferencing image: 3:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/school_bus.ppm
----------- Top 5 predictions ----------
-
-1.0000 - [id = 779], n04146614 school bus
-0.0000 - [id = 705], n03895866 passenger car, coach, carriage
-0.0000 - [id = 874], n04487081 trolleybus, trolley coach, trackless trolley
-0.0000 - [id = 864], n04461696 tow truck, tow car, wrecker
-0.0000 - [id = 555], n03345487 fire engine, fire truck
-
-
-First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/go_kart.ppm
----------- Top 5 predictions ----------
-
-0.9916 - [id = 573], n03444034 go-kart
-0.0083 - [id = 518], n03127747 crash helmet
-0.0000 - [id = 560], n03379051 football helmet
-0.0000 - [id = 615], n03623198 knee pad
-0.0000 - [id = 621], n03649909 lawn mower, mower
-
-
-First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gold_fish.ppm
----------- Top 5 predictions ----------
-
-1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
-0.0000 - [id = 130], n02007558 flamingo
-0.0000 - [id = 7], n01514668 cock
-0.0000 - [id = 8], n01514859 hen
-0.0000 - [id = 46], n01693334 green lizard, Lacerta viridis
-
-
-First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gondola.ppm
-
-
 
 
 
@@ -2535,6 +2283,119 @@ Start Running All Subgraphs ...
 
 
 
+
+
+First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gold_fish.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 130], n02007558 flamingo
+0.0000 - [id = 7], n01514668 cock
+0.0000 - [id = 8], n01514859 hen
+0.0000 - [id = 46], n01693334 green lizard, Lacerta viridis
+
+
+First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gondola.ppm
+---------- Top 5 predictions ----------
+
+0.9999 - [id = 576], n03447447 gondola
+0.0000 - [id = 780], n04147183 schooner
+0.0000 - [id = 914], n04612504 yawl
+0.0000 - [id = 536], n03216828 dock, dockage, docking facility
+0.0000 - [id = 449], n02859443 boathouse
+
+
+First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/space_shuttle_224.jpg
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 812], n04266014 space shuttle
+0.0000 - [id = 833], n04347754 submarine, pigboat, sub, U-boat
+0.0000 - [id = 404], n02690373 airliner
+0.0000 - [id = 484], n02981792 catamaran
+0.0000 - [id = 657], n03773504 missile
+
+
+First graph inferencing image: 3:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/school_bus.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 779], n04146614 school bus
+0.0000 - [id = 705], n03895866 passenger car, coach, carriage
+0.0000 - [id = 874], n04487081 trolleybus, trolley coach, trackless trolley
+0.0000 - [id = 864], n04461696 tow truck, tow car, wrecker
+0.0000 - [id = 555], n03345487 fire engine, fire truck
+
+
+First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/go_kart.ppm
+---------- Top 5 predictions ----------
+
+0.9916 - [id = 573], n03444034 go-kart
+0.0083 - [id = 518], n03127747 crash helmet
+0.0000 - [id = 560], n03379051 football helmet
+0.0000 - [id = 615], n03623198 knee pad
+0.0000 - [id = 621], n03649909 lawn mower, mower
+
+
+First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gold_fish.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 130], n02007558 flamingo
+0.0000 - [id = 7], n01514668 cock
+0.0000 - [id = 8], n01514859 hen
+0.0000 - [id = 46], n01693334 green lizard, Lacerta viridis
+
+
+First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gondola.ppm
+---------- Top 5 predictions ----------
+
+0.9999 - [id = 576], n03447447 gondola
+0.0000 - [id = 780], n04147183 schooner
+0.0000 - [id = 914], n04612504 yawl
+0.0000 - [id = 536], n03216828 dock, dockage, docking facility
+0.0000 - [id = 449], n02859443 boathouse
+
+
+First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/space_shuttle_224.jpg
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 812], n04266014 space shuttle
+0.0000 - [id = 833], n04347754 submarine, pigboat, sub, U-boat
+0.0000 - [id = 404], n02690373 airliner
+0.0000 - [id = 484], n02981792 catamaran
+0.0000 - [id = 657], n03773504 missile
+
+
+First graph inferencing image: 3:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/school_bus.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 779], n04146614 school bus
+0.0000 - [id = 705], n03895866 passenger car, coach, carriage
+0.0000 - [id = 874], n04487081 trolleybus, trolley coach, trackless trolley
+0.0000 - [id = 864], n04461696 tow truck, tow car, wrecker
+0.0000 - [id = 555], n03345487 fire engine, fire truck
+
+
+First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/go_kart.ppm
+---------- Top 5 predictions ----------
+
+0.9916 - [id = 573], n03444034 go-kart
+0.0083 - [id = 518], n03127747 crash helmet
+0.0000 - [id = 560], n03379051 football helmet
+0.0000 - [id = 615], n03623198 knee pad
+0.0000 - [id = 621], n03649909 lawn mower, mower
+
+
+First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gold_fish.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 130], n02007558 flamingo
+0.0000 - [id = 7], n01514668 cock
+0.0000 - [id = 8], n01514859 hen
+0.0000 - [id = 46], n01693334 green lizard, Lacerta viridis
+
+
+First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gondola.ppm
 ---------- Top 5 predictions ----------
 
 0.9999 - [id = 576], n03447447 gondola
@@ -3424,132 +3285,87 @@ First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/a
 0.0000 - [id = 615], n03623198 knee pad
 0.0000 - [id = 621], n03649909 lawn mower, mower
 Finishing power measurement with first subgraph0
-0	Layer Name: Conv2d_0+Conv2d_0/BatchNorm 	 Layer time: 7.8863 	 number of inputs: 7 	 input shape: 3x224x224 	 output shape: 32x112x112
-Layer Number: 0 	 time: 7.8863
+0	Layer Name: Conv2d_0+Conv2d_0/BatchNorm 	 Layer time: 5.4298 	 number of inputs: 7 	 input shape: 3x224x224 	 output shape: 32x112x112
+Layer Number: 0 	 time: 5.4298
 ----------------------------
-1	Layer Name: Conv2d_1_depthwise/depthwise+Conv2d_1_depthwise/BatchNorm 	 Layer time: 4.9039 	 number of inputs: 7 	 input shape: 32x112x112 	 output shape: 32x112x112
-2	Layer Name: Conv2d_1_pointwise/Conv2D+Conv2d_1_pointwise/BatchNorm 	 Layer time: 11.9419 	 number of inputs: 7 	 input shape: 32x112x112 	 output shape: 64x112x112
-Layer Number: 1 	 time: 16.8458
+1	Layer Name: Conv2d_1_depthwise/depthwise+Conv2d_1_depthwise/BatchNorm 	 Layer time: 3.8534 	 number of inputs: 7 	 input shape: 32x112x112 	 output shape: 32x112x112
+2	Layer Name: Conv2d_1_pointwise/Conv2D+Conv2d_1_pointwise/BatchNorm 	 Layer time: 5.6152 	 number of inputs: 7 	 input shape: 32x112x112 	 output shape: 64x112x112
+Layer Number: 1 	 time: 9.4686
 ----------------------------
-3	Layer Name: Conv2d_2_depthwise/depthwise+Conv2d_2_depthwise/BatchNorm 	 Layer time: 6.7086 	 number of inputs: 7 	 input shape: 64x112x112 	 output shape: 64x56x56
-4	Layer Name: Conv2d_2_pointwise/Conv2D+Conv2d_2_pointwise/BatchNorm 	 Layer time: 9.4930 	 number of inputs: 7 	 input shape: 64x56x56 	 output shape: 128x56x56
-Layer Number: 2 	 time: 16.2015
+3	Layer Name: Conv2d_2_depthwise/depthwise+Conv2d_2_depthwise/BatchNorm 	 Layer time: 3.3244 	 number of inputs: 7 	 input shape: 64x112x112 	 output shape: 64x56x56
+4	Layer Name: Conv2d_2_pointwise/Conv2D+Conv2d_2_pointwise/BatchNorm 	 Layer time: 4.4010 	 number of inputs: 7 	 input shape: 64x56x56 	 output shape: 128x56x56
+Layer Number: 2 	 time: 7.7254
 ----------------------------
-5	Layer Name: Conv2d_3_depthwise/depthwise+Conv2d_3_depthwise/BatchNorm 	 Layer time: 6.6504 	 number of inputs: 7 	 input shape: 128x56x56 	 output shape: 128x56x56
-6	Layer Name: Conv2d_3_pointwise/Conv2D+Conv2d_3_pointwise/BatchNorm 	 Layer time: 16.7651 	 number of inputs: 7 	 input shape: 128x56x56 	 output shape: 128x56x56
-Layer Number: 3 	 time: 23.4155
+5	Layer Name: Conv2d_3_depthwise/depthwise+Conv2d_3_depthwise/BatchNorm 	 Layer time: 3.0051 	 number of inputs: 7 	 input shape: 128x56x56 	 output shape: 128x56x56
+6	Layer Name: Conv2d_3_pointwise/Conv2D+Conv2d_3_pointwise/BatchNorm 	 Layer time: 7.5237 	 number of inputs: 7 	 input shape: 128x56x56 	 output shape: 128x56x56
+Layer Number: 3 	 time: 10.5288
 ----------------------------
-7	Layer Name: Conv2d_4_depthwise/depthwise+Conv2d_4_depthwise/BatchNorm 	 Layer time: 4.6209 	 number of inputs: 7 	 input shape: 128x56x56 	 output shape: 128x28x28
-8	Layer Name: Conv2d_4_pointwise/Conv2D+Conv2d_4_pointwise/BatchNorm 	 Layer time: 8.3044 	 number of inputs: 7 	 input shape: 128x28x28 	 output shape: 256x28x28
-Layer Number: 4 	 time: 12.9253
+7	Layer Name: Conv2d_4_depthwise/depthwise+Conv2d_4_depthwise/BatchNorm 	 Layer time: 2.7176 	 number of inputs: 7 	 input shape: 128x56x56 	 output shape: 128x28x28
+8	Layer Name: Conv2d_4_pointwise/Conv2D+Conv2d_4_pointwise/BatchNorm 	 Layer time: 3.7916 	 number of inputs: 7 	 input shape: 128x28x28 	 output shape: 256x28x28
+Layer Number: 4 	 time: 6.5092
 ----------------------------
-9	Layer Name: Conv2d_5_depthwise/depthwise+Conv2d_5_depthwise/BatchNorm 	 Layer time: 5.1530 	 number of inputs: 7 	 input shape: 256x28x28 	 output shape: 256x28x28
-10	Layer Name: Conv2d_5_pointwise/Conv2D+Conv2d_5_pointwise/BatchNorm 	 Layer time: 15.1257 	 number of inputs: 7 	 input shape: 256x28x28 	 output shape: 256x28x28
-Layer Number: 5 	 time: 20.2787
+9	Layer Name: Conv2d_5_depthwise/depthwise+Conv2d_5_depthwise/BatchNorm 	 Layer time: 2.0027 	 number of inputs: 7 	 input shape: 256x28x28 	 output shape: 256x28x28
+10	Layer Name: Conv2d_5_pointwise/Conv2D+Conv2d_5_pointwise/BatchNorm 	 Layer time: 6.8199 	 number of inputs: 7 	 input shape: 256x28x28 	 output shape: 256x28x28
+Layer Number: 5 	 time: 8.8226
 ----------------------------
-11	Layer Name: Conv2d_6_depthwise/depthwise+Conv2d_6_depthwise/BatchNorm 	 Layer time: 3.0234 	 number of inputs: 7 	 input shape: 256x28x28 	 output shape: 256x14x14
-12	Layer Name: Conv2d_6_pointwise/Conv2D+Conv2d_6_pointwise/BatchNorm 	 Layer time: 7.7880 	 number of inputs: 7 	 input shape: 256x14x14 	 output shape: 512x14x14
-Layer Number: 6 	 time: 10.8114
+11	Layer Name: Conv2d_6_depthwise/depthwise+Conv2d_6_depthwise/BatchNorm 	 Layer time: 1.6651 	 number of inputs: 7 	 input shape: 256x28x28 	 output shape: 256x14x14
+12	Layer Name: Conv2d_6_pointwise/Conv2D+Conv2d_6_pointwise/BatchNorm 	 Layer time: 3.6046 	 number of inputs: 7 	 input shape: 256x14x14 	 output shape: 512x14x14
+Layer Number: 6 	 time: 5.2697
 ----------------------------
-13	Layer Name: Conv2d_7_depthwise/depthwise+Conv2d_7_depthwise/BatchNorm 	 Layer time: 3.8249 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x14x14
-14	Layer Name: Conv2d_7_pointwise/Conv2D+Conv2d_7_pointwise/BatchNorm 	 Layer time: 14.8593 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x14x14
-Layer Number: 7 	 time: 18.6842
+13	Layer Name: Conv2d_7_depthwise/depthwise+Conv2d_7_depthwise/BatchNorm 	 Layer time: 1.5750 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x14x14
+14	Layer Name: Conv2d_7_pointwise/Conv2D+Conv2d_7_pointwise/BatchNorm 	 Layer time: 7.1330 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x14x14
+Layer Number: 7 	 time: 8.7080
 ----------------------------
-15	Layer Name: Conv2d_8_depthwise/depthwise+Conv2d_8_depthwise/BatchNorm 	 Layer time: 3.7918 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x14x14
-16	Layer Name: Conv2d_8_pointwise/Conv2D+Conv2d_8_pointwise/BatchNorm 	 Layer time: 14.9598 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x14x14
-Layer Number: 8 	 time: 18.7517
+15	Layer Name: Conv2d_8_depthwise/depthwise+Conv2d_8_depthwise/BatchNorm 	 Layer time: 1.5786 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x14x14
+16	Layer Name: Conv2d_8_pointwise/Conv2D+Conv2d_8_pointwise/BatchNorm 	 Layer time: 7.1287 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x14x14
+Layer Number: 8 	 time: 8.7073
 ----------------------------
-17	Layer Name: Conv2d_9_depthwise/depthwise+Conv2d_9_depthwise/BatchNorm 	 Layer time: 3.8169 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x14x14
-18	Layer Name: Conv2d_9_pointwise/Conv2D+Conv2d_9_pointwise/BatchNorm 	 Layer time: 14.8946 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x14x14
-Layer Number: 9 	 time: 18.7115
+17	Layer Name: Conv2d_9_depthwise/depthwise+Conv2d_9_depthwise/BatchNorm 	 Layer time: 1.5401 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x14x14
+18	Layer Name: Conv2d_9_pointwise/Conv2D+Conv2d_9_pointwise/BatchNorm 	 Layer time: 7.1385 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x14x14
+Layer Number: 9 	 time: 8.6787
 ----------------------------
-19	Layer Name: Conv2d_10_depthwise/depthwise+Conv2d_10_depthwise/BatchNorm 	 Layer time: 3.8659 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x14x14
-20	Layer Name: Conv2d_10_pointwise/Conv2D+Conv2d_10_pointwise/BatchNorm 	 Layer time: 14.8764 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x14x14
-Layer Number: 10 	 time: 18.7423
+19	Layer Name: Conv2d_10_depthwise/depthwise+Conv2d_10_depthwise/BatchNorm 	 Layer time: 1.5894 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x14x14
+20	Layer Name: Conv2d_10_pointwise/Conv2D+Conv2d_10_pointwise/BatchNorm 	 Layer time: 7.1449 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x14x14
+Layer Number: 10 	 time: 8.7343
 ----------------------------
-21	Layer Name: Conv2d_11_depthwise/depthwise+Conv2d_11_depthwise/BatchNorm 	 Layer time: 3.7990 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x14x14
-22	Layer Name: Conv2d_11_pointwise/Conv2D+Conv2d_11_pointwise/BatchNorm 	 Layer time: 14.8252 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x14x14
-Layer Number: 11 	 time: 18.6243
+21	Layer Name: Conv2d_11_depthwise/depthwise+Conv2d_11_depthwise/BatchNorm 	 Layer time: 1.6074 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x14x14
+22	Layer Name: Conv2d_11_pointwise/Conv2D+Conv2d_11_pointwise/BatchNorm 	 Layer time: 7.1566 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x14x14
+Layer Number: 11 	 time: 8.7640
 ----------------------------
-23	Layer Name: Conv2d_12_depthwise/depthwise+Conv2d_12_depthwise/BatchNorm 	 Layer time: 2.0921 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x7x7
-24	Layer Name: Conv2d_12_pointwise/Conv2D+Conv2d_12_pointwise/BatchNorm 	 Layer time: 9.0785 	 number of inputs: 7 	 input shape: 512x7x7 	 output shape: 1024x7x7
-Layer Number: 12 	 time: 11.1706
+23	Layer Name: Conv2d_12_depthwise/depthwise+Conv2d_12_depthwise/BatchNorm 	 Layer time: 1.1652 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x7x7
+24	Layer Name: Conv2d_12_pointwise/Conv2D+Conv2d_12_pointwise/BatchNorm 	 Layer time: 4.1250 	 number of inputs: 7 	 input shape: 512x7x7 	 output shape: 1024x7x7
+Layer Number: 12 	 time: 5.2902
 ----------------------------
-25	Layer Name: Conv2d_13_depthwise/depthwise+Conv2d_13_depthwise/BatchNorm 	 Layer time: 2.6656 	 number of inputs: 7 	 input shape: 1024x7x7 	 output shape: 1024x7x7
-26	Layer Name: Conv2d_13_pointwise/Conv2D+Conv2d_13_pointwise/BatchNorm 	 Layer time: 17.6189 	 number of inputs: 7 	 input shape: 1024x7x7 	 output shape: 1024x7x7
-27	Layer Name: Logits/AvgPool_1a 	 Layer time: 0.7365 	 number of inputs: 1 	 input shape: 1024x7x7 	 output shape: 1024
-28	Layer Name: Logits/Conv2d_1c_1x1 	 Layer time: 1.7557 	 number of inputs: 3 	 input shape: 1024 	 output shape: 1000
-29	Layer Name: Reshape 	 Layer time: 0.2261 	 number of inputs: 1 	 input shape: 1000 	 output shape: 1001
-30	Layer Name: Softmax 	 Layer time: 0.1124 	 number of inputs: 1 	 input shape: 1001 	 output shape: 1001
-Layer Number: 13 	 time: 23.1152
+25	Layer Name: Conv2d_13_depthwise/depthwise+Conv2d_13_depthwise/BatchNorm 	 Layer time: 1.0418 	 number of inputs: 7 	 input shape: 1024x7x7 	 output shape: 1024x7x7
+26	Layer Name: Conv2d_13_pointwise/Conv2D+Conv2d_13_pointwise/BatchNorm 	 Layer time: 7.9938 	 number of inputs: 7 	 input shape: 1024x7x7 	 output shape: 1024x7x7
+27	Layer Name: Logits/AvgPool_1a 	 Layer time: 0.6985 	 number of inputs: 1 	 input shape: 1024x7x7 	 output shape: 1024
+28	Layer Name: Logits/Conv2d_1c_1x1 	 Layer time: 1.2526 	 number of inputs: 3 	 input shape: 1024 	 output shape: 1000
+29	Layer Name: Reshape 	 Layer time: 0.2191 	 number of inputs: 1 	 input shape: 1000 	 output shape: 1001
+30	Layer Name: Softmax 	 Layer time: 0.1133 	 number of inputs: 1 	 input shape: 1001 	 output shape: 1001
+Layer Number: 13 	 time: 11.3191
 ----------------------------
 
- Sum of Layers time: 236.1645
+ Sum of Layers time: 113.9555
 
- input time of layer 0 : 59.9140
+ input time of layer 0 : 59.0642
 
  transfer_time of layer 0 : 0.0000
 
- output time of layer 13 : 0.5011
+ output time of layer 13 : 0.5014
 
- this part task time: 348.9656
+ this part task time: 225.8677
 
 
-Cost0:409.425
-input0_time:59.914
-task0_time:348.966
-output0_time:0.501083
-total0_time:409.381
+Cost0:287.446
+input0_time:59.0642
+task0_time:225.868
+output0_time:0.50141
+total0_time:285.433
 ***************************************
 
-Frame Latency: 408.921
+Frame Latency: 282.698
 Profiling these DVFS settings finised
 3 Running Graph with 3-3-3-3-3-3-3-3-3-3-3-3-3-3 LW DVFS
-layer:Conv2d_0+Conv2d_0/BatchNorm	Little:3	big:0	GPU:0
-layer:Conv2d_1_pointwise/Conv2D+Conv2d_1_pointwise/BatchNorm	Little:3	big:0	GPU:0
-layer:Conv2d_2_pointwise/Conv2D+Conv2d_2_pointwise/BatchNorm	Little:3	big:0	GPU:0
-layer:Conv2d_3_pointwise/Conv2D+Conv2d_3_pointwise/BatchNorm	Little:3	big:0	GPU:0
-layer:Conv2d_4_pointwise/Conv2D+Conv2d_4_pointwise/BatchNorm	Little:3	big:0	GPU:0
-layer:Conv2d_5_pointwise/Conv2D+Conv2d_5_pointwise/BatchNorm	Little:3	big:0	GPU:0
-layer:Conv2d_6_pointwise/Conv2D+Conv2d_6_pointwise/BatchNorm	Little:3	big:0	GPU:0
-layer:Conv2d_7_pointwise/Conv2D+Conv2d_7_pointwise/BatchNorm	Little:3	big:0	GPU:0
-layer:Conv2d_8_pointwise/Conv2D+Conv2d_8_pointwise/BatchNorm	Little:3	big:0	GPU:0
-layer:Conv2d_9_pointwise/Conv2D+Conv2d_9_pointwise/BatchNorm	Little:3	big:0	GPU:0
-layer:Conv2d_10_pointwise/Conv2D+Conv2d_10_pointwise/BatchNorm	Little:3	big:0	GPU:0
-layer:Conv2d_11_pointwise/Conv2D+Conv2d_11_pointwise/BatchNorm	Little:3	big:0	GPU:0
-layer:Conv2d_12_pointwise/Conv2D+Conv2d_12_pointwise/BatchNorm	Little:3	big:0	GPU:0
-layer:Softmax	Little:3	big:0	GPU:0
-task: Conv2d_0+Conv2d_0/BatchNorm set freq for next task to 3, 0, 0
-task: Conv2d_1_depthwise/depthwise+Conv2d_1_depthwise/BatchNorm set freq for next task to -1, -1, -1
-task: Conv2d_1_pointwise/Conv2D+Conv2d_1_pointwise/BatchNorm set freq for next task to 3, 0, 0
-task: Conv2d_2_depthwise/depthwise+Conv2d_2_depthwise/BatchNorm set freq for next task to -1, -1, -1
-task: Conv2d_2_pointwise/Conv2D+Conv2d_2_pointwise/BatchNorm set freq for next task to 3, 0, 0
-task: Conv2d_3_depthwise/depthwise+Conv2d_3_depthwise/BatchNorm set freq for next task to -1, -1, -1
-task: Conv2d_3_pointwise/Conv2D+Conv2d_3_pointwise/BatchNorm set freq for next task to 3, 0, 0
-task: Conv2d_4_depthwise/depthwise+Conv2d_4_depthwise/BatchNorm set freq for next task to -1, -1, -1
-task: Conv2d_4_pointwise/Conv2D+Conv2d_4_pointwise/BatchNorm set freq for next task to 3, 0, 0
-task: Conv2d_5_depthwise/depthwise+Conv2d_5_depthwise/BatchNorm set freq for next task to -1, -1, -1
-task: Conv2d_5_pointwise/Conv2D+Conv2d_5_pointwise/BatchNorm set freq for next task to 3, 0, 0
-task: Conv2d_6_depthwise/depthwise+Conv2d_6_depthwise/BatchNorm set freq for next task to -1, -1, -1
-task: Conv2d_6_pointwise/Conv2D+Conv2d_6_pointwise/BatchNorm set freq for next task to 3, 0, 0
-task: Conv2d_7_depthwise/depthwise+Conv2d_7_depthwise/BatchNorm set freq for next task to -1, -1, -1
-task: Conv2d_7_pointwise/Conv2D+Conv2d_7_pointwise/BatchNorm set freq for next task to 3, 0, 0
-task: Conv2d_8_depthwise/depthwise+Conv2d_8_depthwise/BatchNorm set freq for next task to -1, -1, -1
-task: Conv2d_8_pointwise/Conv2D+Conv2d_8_pointwise/BatchNorm set freq for next task to 3, 0, 0
-task: Conv2d_9_depthwise/depthwise+Conv2d_9_depthwise/BatchNorm set freq for next task to -1, -1, -1
-task: Conv2d_9_pointwise/Conv2D+Conv2d_9_pointwise/BatchNorm set freq for next task to 3, 0, 0
-task: Conv2d_10_depthwise/depthwise+Conv2d_10_depthwise/BatchNorm set freq for next task to -1, -1, -1
-task: Conv2d_10_pointwise/Conv2D+Conv2d_10_pointwise/BatchNorm set freq for next task to 3, 0, 0
-task: Conv2d_11_depthwise/depthwise+Conv2d_11_depthwise/BatchNorm set freq for next task to -1, -1, -1
-task: Conv2d_11_pointwise/Conv2D+Conv2d_11_pointwise/BatchNorm set freq for next task to 3, 0, 0
-task: Conv2d_12_depthwise/depthwise+Conv2d_12_depthwise/BatchNorm set freq for next task to -1, -1, -1
-task: Conv2d_12_pointwise/Conv2D+Conv2d_12_pointwise/BatchNorm set freq for next task to 3, 0, 0
-task: Conv2d_13_depthwise/depthwise+Conv2d_13_depthwise/BatchNorm set freq for next task to -1, -1, -1
-task: Conv2d_13_pointwise/Conv2D+Conv2d_13_pointwise/BatchNorm set freq for next task to -1, -1, -1
-task: Logits/AvgPool_1a set freq for next task to -1, -1, -1
-task: Logits/Conv2d_1c_1x1 set freq for next task to -1, -1, -1
-task: Reshape set freq for next task to -1, -1, -1
-task: Softmax set freq for next task to 3, 0, 0
 
 
 WarmUp: First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gold_fish.ppm
@@ -3563,129 +3379,6 @@ WarmUp: First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-
 Subgraph0 Ready to trigger Start Running
 
 
-First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gold_fish.ppm
----------- Top 5 predictions ----------
-
-1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
-0.0000 - [id = 130], n02007558 flamingo
-0.0000 - [id = 7], n01514668 cock
-0.0000 - [id = 8], n01514859 hen
-0.0000 - [id = 46], n01693334 green lizard, Lacerta viridis
-
-
-First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gondola.ppm
----------- Top 5 predictions ----------
-
-0.9999 - [id = 576], n03447447 gondola
-0.0000 - [id = 780], n04147183 schooner
-0.0000 - [id = 914], n04612504 yawl
-0.0000 - [id = 536], n03216828 dock, dockage, docking facility
-0.0000 - [id = 449], n02859443 boathouse
-
-
-First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/space_shuttle_224.jpg
----------- Top 5 predictions ----------
-
-1.0000 - [id = 812], n04266014 space shuttle
-0.0000 - [id = 833], n04347754 submarine, pigboat, sub, U-boat
-0.0000 - [id = 404], n02690373 airliner
-0.0000 - [id = 484], n02981792 catamaran
-0.0000 - [id = 657], n03773504 missile
-
-
-First graph inferencing image: 3:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/school_bus.ppm
----------- Top 5 predictions ----------
-
-1.0000 - [id = 779], n04146614 school bus
-0.0000 - [id = 705], n03895866 passenger car, coach, carriage
-0.0000 - [id = 874], n04487081 trolleybus, trolley coach, trackless trolley
-0.0000 - [id = 864], n04461696 tow truck, tow car, wrecker
-0.0000 - [id = 555], n03345487 fire engine, fire truck
-
-
-First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/go_kart.ppm
----------- Top 5 predictions ----------
-
-0.9916 - [id = 573], n03444034 go-kart
-0.0083 - [id = 518], n03127747 crash helmet
-0.0000 - [id = 560], n03379051 football helmet
-0.0000 - [id = 615], n03623198 knee pad
-0.0000 - [id = 621], n03649909 lawn mower, mower
-
-
-First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gold_fish.ppm
----------- Top 5 predictions ----------
-
-1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
-0.0000 - [id = 130], n02007558 flamingo
-0.0000 - [id = 7], n01514668 cock
-0.0000 - [id = 8], n01514859 hen
-0.0000 - [id = 46], n01693334 green lizard, Lacerta viridis
-
-
-First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gondola.ppm
----------- Top 5 predictions ----------
-
-0.9999 - [id = 576], n03447447 gondola
-0.0000 - [id = 780], n04147183 schooner
-0.0000 - [id = 914], n04612504 yawl
-0.0000 - [id = 536], n03216828 dock, dockage, docking facility
-0.0000 - [id = 449], n02859443 boathouse
-
-
-First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/space_shuttle_224.jpg
----------- Top 5 predictions ----------
-
-1.0000 - [id = 812], n04266014 space shuttle
-0.0000 - [id = 833], n04347754 submarine, pigboat, sub, U-boat
-0.0000 - [id = 404], n02690373 airliner
-0.0000 - [id = 484], n02981792 catamaran
-0.0000 - [id = 657], n03773504 missile
-
-
-First graph inferencing image: 3:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/school_bus.ppm
----------- Top 5 predictions ----------
-
-1.0000 - [id = 779], n04146614 school bus
-0.0000 - [id = 705], n03895866 passenger car, coach, carriage
-0.0000 - [id = 874], n04487081 trolleybus, trolley coach, trackless trolley
-0.0000 - [id = 864], n04461696 tow truck, tow car, wrecker
-0.0000 - [id = 555], n03345487 fire engine, fire truck
-
-
-First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/go_kart.ppm
----------- Top 5 predictions ----------
-
-0.9916 - [id = 573], n03444034 go-kart
-0.0083 - [id = 518], n03127747 crash helmet
-0.0000 - [id = 560], n03379051 football helmet
-0.0000 - [id = 615], n03623198 knee pad
-0.0000 - [id = 621], n03649909 lawn mower, mower
-
-
-First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gold_fish.ppm
----------- Top 5 predictions ----------
-
-1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
-0.0000 - [id = 130], n02007558 flamingo
-0.0000 - [id = 7], n01514668 cock
-0.0000 - [id = 8], n01514859 hen
-0.0000 - [id = 46], n01693334 green lizard, Lacerta viridis
-
-
-First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gondola.ppm
----------- Top 5 predictions ----------
-
-0.9999 - [id = 576], n03447447 gondola
-0.0000 - [id = 780], n04147183 schooner
-0.0000 - [id = 914], n04612504 yawl
-0.0000 - [id = 536], n03216828 dock, dockage, docking facility
-0.0000 - [id = 449], n02859443 boathouse
-
-
-First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/space_shuttle_224.jpg
-
-
 
 
 
@@ -3697,6 +3390,129 @@ Start Running All Subgraphs ...
 
 
 
+
+
+First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gold_fish.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 130], n02007558 flamingo
+0.0000 - [id = 7], n01514668 cock
+0.0000 - [id = 8], n01514859 hen
+0.0000 - [id = 46], n01693334 green lizard, Lacerta viridis
+
+
+First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gondola.ppm
+---------- Top 5 predictions ----------
+
+0.9999 - [id = 576], n03447447 gondola
+0.0000 - [id = 780], n04147183 schooner
+0.0000 - [id = 914], n04612504 yawl
+0.0000 - [id = 536], n03216828 dock, dockage, docking facility
+0.0000 - [id = 449], n02859443 boathouse
+
+
+First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/space_shuttle_224.jpg
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 812], n04266014 space shuttle
+0.0000 - [id = 833], n04347754 submarine, pigboat, sub, U-boat
+0.0000 - [id = 404], n02690373 airliner
+0.0000 - [id = 484], n02981792 catamaran
+0.0000 - [id = 657], n03773504 missile
+
+
+First graph inferencing image: 3:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/school_bus.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 779], n04146614 school bus
+0.0000 - [id = 705], n03895866 passenger car, coach, carriage
+0.0000 - [id = 874], n04487081 trolleybus, trolley coach, trackless trolley
+0.0000 - [id = 864], n04461696 tow truck, tow car, wrecker
+0.0000 - [id = 555], n03345487 fire engine, fire truck
+
+
+First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/go_kart.ppm
+---------- Top 5 predictions ----------
+
+0.9916 - [id = 573], n03444034 go-kart
+0.0083 - [id = 518], n03127747 crash helmet
+0.0000 - [id = 560], n03379051 football helmet
+0.0000 - [id = 615], n03623198 knee pad
+0.0000 - [id = 621], n03649909 lawn mower, mower
+
+
+First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gold_fish.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 130], n02007558 flamingo
+0.0000 - [id = 7], n01514668 cock
+0.0000 - [id = 8], n01514859 hen
+0.0000 - [id = 46], n01693334 green lizard, Lacerta viridis
+
+
+First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gondola.ppm
+---------- Top 5 predictions ----------
+
+0.9999 - [id = 576], n03447447 gondola
+0.0000 - [id = 780], n04147183 schooner
+0.0000 - [id = 914], n04612504 yawl
+0.0000 - [id = 536], n03216828 dock, dockage, docking facility
+0.0000 - [id = 449], n02859443 boathouse
+
+
+First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/space_shuttle_224.jpg
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 812], n04266014 space shuttle
+0.0000 - [id = 833], n04347754 submarine, pigboat, sub, U-boat
+0.0000 - [id = 404], n02690373 airliner
+0.0000 - [id = 484], n02981792 catamaran
+0.0000 - [id = 657], n03773504 missile
+
+
+First graph inferencing image: 3:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/school_bus.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 779], n04146614 school bus
+0.0000 - [id = 705], n03895866 passenger car, coach, carriage
+0.0000 - [id = 874], n04487081 trolleybus, trolley coach, trackless trolley
+0.0000 - [id = 864], n04461696 tow truck, tow car, wrecker
+0.0000 - [id = 555], n03345487 fire engine, fire truck
+
+
+First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/go_kart.ppm
+---------- Top 5 predictions ----------
+
+0.9916 - [id = 573], n03444034 go-kart
+0.0083 - [id = 518], n03127747 crash helmet
+0.0000 - [id = 560], n03379051 football helmet
+0.0000 - [id = 615], n03623198 knee pad
+0.0000 - [id = 621], n03649909 lawn mower, mower
+
+
+First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gold_fish.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 130], n02007558 flamingo
+0.0000 - [id = 7], n01514668 cock
+0.0000 - [id = 8], n01514859 hen
+0.0000 - [id = 46], n01693334 green lizard, Lacerta viridis
+
+
+First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gondola.ppm
+---------- Top 5 predictions ----------
+
+0.9999 - [id = 576], n03447447 gondola
+0.0000 - [id = 780], n04147183 schooner
+0.0000 - [id = 914], n04612504 yawl
+0.0000 - [id = 536], n03216828 dock, dockage, docking facility
+0.0000 - [id = 449], n02859443 boathouse
+
+
+First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/space_shuttle_224.jpg
 ---------- Top 5 predictions ----------
 
 1.0000 - [id = 812], n04266014 space shuttle
@@ -4576,132 +4392,87 @@ First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/a
 0.0000 - [id = 615], n03623198 knee pad
 0.0000 - [id = 621], n03649909 lawn mower, mower
 Finishing power measurement with first subgraph0
-0	Layer Name: Conv2d_0+Conv2d_0/BatchNorm 	 Layer time: 7.8204 	 number of inputs: 7 	 input shape: 3x224x224 	 output shape: 32x112x112
-Layer Number: 0 	 time: 7.8204
+0	Layer Name: Conv2d_0+Conv2d_0/BatchNorm 	 Layer time: 3.8831 	 number of inputs: 7 	 input shape: 3x224x224 	 output shape: 32x112x112
+Layer Number: 0 	 time: 3.8831
 ----------------------------
-1	Layer Name: Conv2d_1_depthwise/depthwise+Conv2d_1_depthwise/BatchNorm 	 Layer time: 4.8513 	 number of inputs: 7 	 input shape: 32x112x112 	 output shape: 32x112x112
-2	Layer Name: Conv2d_1_pointwise/Conv2D+Conv2d_1_pointwise/BatchNorm 	 Layer time: 10.6779 	 number of inputs: 7 	 input shape: 32x112x112 	 output shape: 64x112x112
-Layer Number: 1 	 time: 15.5292
+1	Layer Name: Conv2d_1_depthwise/depthwise+Conv2d_1_depthwise/BatchNorm 	 Layer time: 3.0422 	 number of inputs: 7 	 input shape: 32x112x112 	 output shape: 32x112x112
+2	Layer Name: Conv2d_1_pointwise/Conv2D+Conv2d_1_pointwise/BatchNorm 	 Layer time: 4.6482 	 number of inputs: 7 	 input shape: 32x112x112 	 output shape: 64x112x112
+Layer Number: 1 	 time: 7.6904
 ----------------------------
-3	Layer Name: Conv2d_2_depthwise/depthwise+Conv2d_2_depthwise/BatchNorm 	 Layer time: 6.7272 	 number of inputs: 7 	 input shape: 64x112x112 	 output shape: 64x56x56
-4	Layer Name: Conv2d_2_pointwise/Conv2D+Conv2d_2_pointwise/BatchNorm 	 Layer time: 8.3352 	 number of inputs: 7 	 input shape: 64x56x56 	 output shape: 128x56x56
-Layer Number: 2 	 time: 15.0624
+3	Layer Name: Conv2d_2_depthwise/depthwise+Conv2d_2_depthwise/BatchNorm 	 Layer time: 2.8614 	 number of inputs: 7 	 input shape: 64x112x112 	 output shape: 64x56x56
+4	Layer Name: Conv2d_2_pointwise/Conv2D+Conv2d_2_pointwise/BatchNorm 	 Layer time: 3.6370 	 number of inputs: 7 	 input shape: 64x56x56 	 output shape: 128x56x56
+Layer Number: 2 	 time: 6.4984
 ----------------------------
-5	Layer Name: Conv2d_3_depthwise/depthwise+Conv2d_3_depthwise/BatchNorm 	 Layer time: 6.6095 	 number of inputs: 7 	 input shape: 128x56x56 	 output shape: 128x56x56
-6	Layer Name: Conv2d_3_pointwise/Conv2D+Conv2d_3_pointwise/BatchNorm 	 Layer time: 14.5738 	 number of inputs: 7 	 input shape: 128x56x56 	 output shape: 128x56x56
-Layer Number: 3 	 time: 21.1833
+5	Layer Name: Conv2d_3_depthwise/depthwise+Conv2d_3_depthwise/BatchNorm 	 Layer time: 2.6086 	 number of inputs: 7 	 input shape: 128x56x56 	 output shape: 128x56x56
+6	Layer Name: Conv2d_3_pointwise/Conv2D+Conv2d_3_pointwise/BatchNorm 	 Layer time: 6.2157 	 number of inputs: 7 	 input shape: 128x56x56 	 output shape: 128x56x56
+Layer Number: 3 	 time: 8.8243
 ----------------------------
-7	Layer Name: Conv2d_4_depthwise/depthwise+Conv2d_4_depthwise/BatchNorm 	 Layer time: 4.1573 	 number of inputs: 7 	 input shape: 128x56x56 	 output shape: 128x28x28
-8	Layer Name: Conv2d_4_pointwise/Conv2D+Conv2d_4_pointwise/BatchNorm 	 Layer time: 7.1001 	 number of inputs: 7 	 input shape: 128x28x28 	 output shape: 256x28x28
-Layer Number: 4 	 time: 11.2573
+7	Layer Name: Conv2d_4_depthwise/depthwise+Conv2d_4_depthwise/BatchNorm 	 Layer time: 2.4473 	 number of inputs: 7 	 input shape: 128x56x56 	 output shape: 128x28x28
+8	Layer Name: Conv2d_4_pointwise/Conv2D+Conv2d_4_pointwise/BatchNorm 	 Layer time: 3.1729 	 number of inputs: 7 	 input shape: 128x28x28 	 output shape: 256x28x28
+Layer Number: 4 	 time: 5.6202
 ----------------------------
-9	Layer Name: Conv2d_5_depthwise/depthwise+Conv2d_5_depthwise/BatchNorm 	 Layer time: 5.0759 	 number of inputs: 7 	 input shape: 256x28x28 	 output shape: 256x28x28
-10	Layer Name: Conv2d_5_pointwise/Conv2D+Conv2d_5_pointwise/BatchNorm 	 Layer time: 13.4504 	 number of inputs: 7 	 input shape: 256x28x28 	 output shape: 256x28x28
-Layer Number: 5 	 time: 18.5263
+9	Layer Name: Conv2d_5_depthwise/depthwise+Conv2d_5_depthwise/BatchNorm 	 Layer time: 1.7651 	 number of inputs: 7 	 input shape: 256x28x28 	 output shape: 256x28x28
+10	Layer Name: Conv2d_5_pointwise/Conv2D+Conv2d_5_pointwise/BatchNorm 	 Layer time: 5.6165 	 number of inputs: 7 	 input shape: 256x28x28 	 output shape: 256x28x28
+Layer Number: 5 	 time: 7.3816
 ----------------------------
-11	Layer Name: Conv2d_6_depthwise/depthwise+Conv2d_6_depthwise/BatchNorm 	 Layer time: 3.0094 	 number of inputs: 7 	 input shape: 256x28x28 	 output shape: 256x14x14
-12	Layer Name: Conv2d_6_pointwise/Conv2D+Conv2d_6_pointwise/BatchNorm 	 Layer time: 6.9629 	 number of inputs: 7 	 input shape: 256x14x14 	 output shape: 512x14x14
-Layer Number: 6 	 time: 9.9722
+11	Layer Name: Conv2d_6_depthwise/depthwise+Conv2d_6_depthwise/BatchNorm 	 Layer time: 1.5260 	 number of inputs: 7 	 input shape: 256x28x28 	 output shape: 256x14x14
+12	Layer Name: Conv2d_6_pointwise/Conv2D+Conv2d_6_pointwise/BatchNorm 	 Layer time: 2.9955 	 number of inputs: 7 	 input shape: 256x14x14 	 output shape: 512x14x14
+Layer Number: 6 	 time: 4.5215
 ----------------------------
-13	Layer Name: Conv2d_7_depthwise/depthwise+Conv2d_7_depthwise/BatchNorm 	 Layer time: 3.7904 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x14x14
-14	Layer Name: Conv2d_7_pointwise/Conv2D+Conv2d_7_pointwise/BatchNorm 	 Layer time: 13.3560 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x14x14
-Layer Number: 7 	 time: 17.1465
+13	Layer Name: Conv2d_7_depthwise/depthwise+Conv2d_7_depthwise/BatchNorm 	 Layer time: 1.4132 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x14x14
+14	Layer Name: Conv2d_7_pointwise/Conv2D+Conv2d_7_pointwise/BatchNorm 	 Layer time: 5.9366 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x14x14
+Layer Number: 7 	 time: 7.3498
 ----------------------------
-15	Layer Name: Conv2d_8_depthwise/depthwise+Conv2d_8_depthwise/BatchNorm 	 Layer time: 3.7975 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x14x14
-16	Layer Name: Conv2d_8_pointwise/Conv2D+Conv2d_8_pointwise/BatchNorm 	 Layer time: 13.4739 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x14x14
-Layer Number: 8 	 time: 17.2714
+15	Layer Name: Conv2d_8_depthwise/depthwise+Conv2d_8_depthwise/BatchNorm 	 Layer time: 1.3617 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x14x14
+16	Layer Name: Conv2d_8_pointwise/Conv2D+Conv2d_8_pointwise/BatchNorm 	 Layer time: 5.9493 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x14x14
+Layer Number: 8 	 time: 7.3110
 ----------------------------
-17	Layer Name: Conv2d_9_depthwise/depthwise+Conv2d_9_depthwise/BatchNorm 	 Layer time: 3.7966 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x14x14
-18	Layer Name: Conv2d_9_pointwise/Conv2D+Conv2d_9_pointwise/BatchNorm 	 Layer time: 13.3410 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x14x14
-Layer Number: 9 	 time: 17.1376
+17	Layer Name: Conv2d_9_depthwise/depthwise+Conv2d_9_depthwise/BatchNorm 	 Layer time: 1.3909 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x14x14
+18	Layer Name: Conv2d_9_pointwise/Conv2D+Conv2d_9_pointwise/BatchNorm 	 Layer time: 5.9424 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x14x14
+Layer Number: 9 	 time: 7.3333
 ----------------------------
-19	Layer Name: Conv2d_10_depthwise/depthwise+Conv2d_10_depthwise/BatchNorm 	 Layer time: 3.8057 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x14x14
-20	Layer Name: Conv2d_10_pointwise/Conv2D+Conv2d_10_pointwise/BatchNorm 	 Layer time: 13.3201 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x14x14
-Layer Number: 10 	 time: 17.1258
+19	Layer Name: Conv2d_10_depthwise/depthwise+Conv2d_10_depthwise/BatchNorm 	 Layer time: 1.3874 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x14x14
+20	Layer Name: Conv2d_10_pointwise/Conv2D+Conv2d_10_pointwise/BatchNorm 	 Layer time: 5.9640 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x14x14
+Layer Number: 10 	 time: 7.3513
 ----------------------------
-21	Layer Name: Conv2d_11_depthwise/depthwise+Conv2d_11_depthwise/BatchNorm 	 Layer time: 3.8021 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x14x14
-22	Layer Name: Conv2d_11_pointwise/Conv2D+Conv2d_11_pointwise/BatchNorm 	 Layer time: 13.3816 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x14x14
-Layer Number: 11 	 time: 17.1837
+21	Layer Name: Conv2d_11_depthwise/depthwise+Conv2d_11_depthwise/BatchNorm 	 Layer time: 1.4048 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x14x14
+22	Layer Name: Conv2d_11_pointwise/Conv2D+Conv2d_11_pointwise/BatchNorm 	 Layer time: 5.9346 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x14x14
+Layer Number: 11 	 time: 7.3393
 ----------------------------
-23	Layer Name: Conv2d_12_depthwise/depthwise+Conv2d_12_depthwise/BatchNorm 	 Layer time: 2.0614 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x7x7
-24	Layer Name: Conv2d_12_pointwise/Conv2D+Conv2d_12_pointwise/BatchNorm 	 Layer time: 9.0116 	 number of inputs: 7 	 input shape: 512x7x7 	 output shape: 1024x7x7
-Layer Number: 12 	 time: 11.0730
+23	Layer Name: Conv2d_12_depthwise/depthwise+Conv2d_12_depthwise/BatchNorm 	 Layer time: 1.0563 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x7x7
+24	Layer Name: Conv2d_12_pointwise/Conv2D+Conv2d_12_pointwise/BatchNorm 	 Layer time: 3.3581 	 number of inputs: 7 	 input shape: 512x7x7 	 output shape: 1024x7x7
+Layer Number: 12 	 time: 4.4144
 ----------------------------
-25	Layer Name: Conv2d_13_depthwise/depthwise+Conv2d_13_depthwise/BatchNorm 	 Layer time: 2.6205 	 number of inputs: 7 	 input shape: 1024x7x7 	 output shape: 1024x7x7
-26	Layer Name: Conv2d_13_pointwise/Conv2D+Conv2d_13_pointwise/BatchNorm 	 Layer time: 17.2412 	 number of inputs: 7 	 input shape: 1024x7x7 	 output shape: 1024x7x7
-27	Layer Name: Logits/AvgPool_1a 	 Layer time: 0.7197 	 number of inputs: 1 	 input shape: 1024x7x7 	 output shape: 1024
-28	Layer Name: Logits/Conv2d_1c_1x1 	 Layer time: 1.7149 	 number of inputs: 3 	 input shape: 1024 	 output shape: 1000
-29	Layer Name: Reshape 	 Layer time: 0.1859 	 number of inputs: 1 	 input shape: 1000 	 output shape: 1001
-30	Layer Name: Softmax 	 Layer time: 0.0980 	 number of inputs: 1 	 input shape: 1001 	 output shape: 1001
-Layer Number: 13 	 time: 22.5802
+25	Layer Name: Conv2d_13_depthwise/depthwise+Conv2d_13_depthwise/BatchNorm 	 Layer time: 0.9624 	 number of inputs: 7 	 input shape: 1024x7x7 	 output shape: 1024x7x7
+26	Layer Name: Conv2d_13_pointwise/Conv2D+Conv2d_13_pointwise/BatchNorm 	 Layer time: 6.5522 	 number of inputs: 7 	 input shape: 1024x7x7 	 output shape: 1024x7x7
+27	Layer Name: Logits/AvgPool_1a 	 Layer time: 0.6552 	 number of inputs: 1 	 input shape: 1024x7x7 	 output shape: 1024
+28	Layer Name: Logits/Conv2d_1c_1x1 	 Layer time: 1.2429 	 number of inputs: 3 	 input shape: 1024 	 output shape: 1000
+29	Layer Name: Reshape 	 Layer time: 0.1861 	 number of inputs: 1 	 input shape: 1000 	 output shape: 1001
+30	Layer Name: Softmax 	 Layer time: 0.1007 	 number of inputs: 1 	 input shape: 1001 	 output shape: 1001
+Layer Number: 13 	 time: 9.6994
 ----------------------------
 
- Sum of Layers time: 218.8692
+ Sum of Layers time: 95.2180
 
- input time of layer 0 : 48.6172
+ input time of layer 0 : 47.8788
 
  transfer_time of layer 0 : 0.0000
 
- output time of layer 13 : 0.4287
+ output time of layer 13 : 0.4229
 
- this part task time: 330.8192
+ this part task time: 206.4790
 
 
-Cost0:379.91
-input0_time:48.6172
-task0_time:330.819
-output0_time:0.428686
-total0_time:379.865
+Cost0:256.792
+input0_time:47.8788
+task0_time:206.479
+output0_time:0.422908
+total0_time:254.781
 ***************************************
 
-Frame Latency: 383.75
+Frame Latency: 254.769
 Profiling these DVFS settings finised
 4 Running Graph with 4-4-4-4-4-4-4-4-4-4-4-4-4-4 LW DVFS
-layer:Conv2d_0+Conv2d_0/BatchNorm	Little:4	big:0	GPU:0
-layer:Conv2d_1_pointwise/Conv2D+Conv2d_1_pointwise/BatchNorm	Little:4	big:0	GPU:0
-layer:Conv2d_2_pointwise/Conv2D+Conv2d_2_pointwise/BatchNorm	Little:4	big:0	GPU:0
-layer:Conv2d_3_pointwise/Conv2D+Conv2d_3_pointwise/BatchNorm	Little:4	big:0	GPU:0
-layer:Conv2d_4_pointwise/Conv2D+Conv2d_4_pointwise/BatchNorm	Little:4	big:0	GPU:0
-layer:Conv2d_5_pointwise/Conv2D+Conv2d_5_pointwise/BatchNorm	Little:4	big:0	GPU:0
-layer:Conv2d_6_pointwise/Conv2D+Conv2d_6_pointwise/BatchNorm	Little:4	big:0	GPU:0
-layer:Conv2d_7_pointwise/Conv2D+Conv2d_7_pointwise/BatchNorm	Little:4	big:0	GPU:0
-layer:Conv2d_8_pointwise/Conv2D+Conv2d_8_pointwise/BatchNorm	Little:4	big:0	GPU:0
-layer:Conv2d_9_pointwise/Conv2D+Conv2d_9_pointwise/BatchNorm	Little:4	big:0	GPU:0
-layer:Conv2d_10_pointwise/Conv2D+Conv2d_10_pointwise/BatchNorm	Little:4	big:0	GPU:0
-layer:Conv2d_11_pointwise/Conv2D+Conv2d_11_pointwise/BatchNorm	Little:4	big:0	GPU:0
-layer:Conv2d_12_pointwise/Conv2D+Conv2d_12_pointwise/BatchNorm	Little:4	big:0	GPU:0
-layer:Softmax	Little:4	big:0	GPU:0
-task: Conv2d_0+Conv2d_0/BatchNorm set freq for next task to 4, 0, 0
-task: Conv2d_1_depthwise/depthwise+Conv2d_1_depthwise/BatchNorm set freq for next task to -1, -1, -1
-task: Conv2d_1_pointwise/Conv2D+Conv2d_1_pointwise/BatchNorm set freq for next task to 4, 0, 0
-task: Conv2d_2_depthwise/depthwise+Conv2d_2_depthwise/BatchNorm set freq for next task to -1, -1, -1
-task: Conv2d_2_pointwise/Conv2D+Conv2d_2_pointwise/BatchNorm set freq for next task to 4, 0, 0
-task: Conv2d_3_depthwise/depthwise+Conv2d_3_depthwise/BatchNorm set freq for next task to -1, -1, -1
-task: Conv2d_3_pointwise/Conv2D+Conv2d_3_pointwise/BatchNorm set freq for next task to 4, 0, 0
-task: Conv2d_4_depthwise/depthwise+Conv2d_4_depthwise/BatchNorm set freq for next task to -1, -1, -1
-task: Conv2d_4_pointwise/Conv2D+Conv2d_4_pointwise/BatchNorm set freq for next task to 4, 0, 0
-task: Conv2d_5_depthwise/depthwise+Conv2d_5_depthwise/BatchNorm set freq for next task to -1, -1, -1
-task: Conv2d_5_pointwise/Conv2D+Conv2d_5_pointwise/BatchNorm set freq for next task to 4, 0, 0
-task: Conv2d_6_depthwise/depthwise+Conv2d_6_depthwise/BatchNorm set freq for next task to -1, -1, -1
-task: Conv2d_6_pointwise/Conv2D+Conv2d_6_pointwise/BatchNorm set freq for next task to 4, 0, 0
-task: Conv2d_7_depthwise/depthwise+Conv2d_7_depthwise/BatchNorm set freq for next task to -1, -1, -1
-task: Conv2d_7_pointwise/Conv2D+Conv2d_7_pointwise/BatchNorm set freq for next task to 4, 0, 0
-task: Conv2d_8_depthwise/depthwise+Conv2d_8_depthwise/BatchNorm set freq for next task to -1, -1, -1
-task: Conv2d_8_pointwise/Conv2D+Conv2d_8_pointwise/BatchNorm set freq for next task to 4, 0, 0
-task: Conv2d_9_depthwise/depthwise+Conv2d_9_depthwise/BatchNorm set freq for next task to -1, -1, -1
-task: Conv2d_9_pointwise/Conv2D+Conv2d_9_pointwise/BatchNorm set freq for next task to 4, 0, 0
-task: Conv2d_10_depthwise/depthwise+Conv2d_10_depthwise/BatchNorm set freq for next task to -1, -1, -1
-task: Conv2d_10_pointwise/Conv2D+Conv2d_10_pointwise/BatchNorm set freq for next task to 4, 0, 0
-task: Conv2d_11_depthwise/depthwise+Conv2d_11_depthwise/BatchNorm set freq for next task to -1, -1, -1
-task: Conv2d_11_pointwise/Conv2D+Conv2d_11_pointwise/BatchNorm set freq for next task to 4, 0, 0
-task: Conv2d_12_depthwise/depthwise+Conv2d_12_depthwise/BatchNorm set freq for next task to -1, -1, -1
-task: Conv2d_12_pointwise/Conv2D+Conv2d_12_pointwise/BatchNorm set freq for next task to 4, 0, 0
-task: Conv2d_13_depthwise/depthwise+Conv2d_13_depthwise/BatchNorm set freq for next task to -1, -1, -1
-task: Conv2d_13_pointwise/Conv2D+Conv2d_13_pointwise/BatchNorm set freq for next task to -1, -1, -1
-task: Logits/AvgPool_1a set freq for next task to -1, -1, -1
-task: Logits/Conv2d_1c_1x1 set freq for next task to -1, -1, -1
-task: Reshape set freq for next task to -1, -1, -1
-task: Softmax set freq for next task to 4, 0, 0
 
 
 WarmUp: First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gold_fish.ppm
@@ -4715,139 +4486,6 @@ WarmUp: First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-
 Subgraph0 Ready to trigger Start Running
 
 
-First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gold_fish.ppm
----------- Top 5 predictions ----------
-
-1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
-0.0000 - [id = 130], n02007558 flamingo
-0.0000 - [id = 7], n01514668 cock
-0.0000 - [id = 8], n01514859 hen
-0.0000 - [id = 46], n01693334 green lizard, Lacerta viridis
-
-
-First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gondola.ppm
----------- Top 5 predictions ----------
-
-0.9999 - [id = 576], n03447447 gondola
-0.0000 - [id = 780], n04147183 schooner
-0.0000 - [id = 914], n04612504 yawl
-0.0000 - [id = 536], n03216828 dock, dockage, docking facility
-0.0000 - [id = 449], n02859443 boathouse
-
-
-First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/space_shuttle_224.jpg
----------- Top 5 predictions ----------
-
-1.0000 - [id = 812], n04266014 space shuttle
-0.0000 - [id = 833], n04347754 submarine, pigboat, sub, U-boat
-0.0000 - [id = 404], n02690373 airliner
-0.0000 - [id = 484], n02981792 catamaran
-0.0000 - [id = 657], n03773504 missile
-
-
-First graph inferencing image: 3:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/school_bus.ppm
----------- Top 5 predictions ----------
-
-1.0000 - [id = 779], n04146614 school bus
-0.0000 - [id = 705], n03895866 passenger car, coach, carriage
-0.0000 - [id = 874], n04487081 trolleybus, trolley coach, trackless trolley
-0.0000 - [id = 864], n04461696 tow truck, tow car, wrecker
-0.0000 - [id = 555], n03345487 fire engine, fire truck
-
-
-First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/go_kart.ppm
----------- Top 5 predictions ----------
-
-0.9916 - [id = 573], n03444034 go-kart
-0.0083 - [id = 518], n03127747 crash helmet
-0.0000 - [id = 560], n03379051 football helmet
-0.0000 - [id = 615], n03623198 knee pad
-0.0000 - [id = 621], n03649909 lawn mower, mower
-
-
-First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gold_fish.ppm
----------- Top 5 predictions ----------
-
-1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
-0.0000 - [id = 130], n02007558 flamingo
-0.0000 - [id = 7], n01514668 cock
-0.0000 - [id = 8], n01514859 hen
-0.0000 - [id = 46], n01693334 green lizard, Lacerta viridis
-
-
-First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gondola.ppm
----------- Top 5 predictions ----------
-
-0.9999 - [id = 576], n03447447 gondola
-0.0000 - [id = 780], n04147183 schooner
-0.0000 - [id = 914], n04612504 yawl
-0.0000 - [id = 536], n03216828 dock, dockage, docking facility
-0.0000 - [id = 449], n02859443 boathouse
-
-
-First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/space_shuttle_224.jpg
----------- Top 5 predictions ----------
-
-1.0000 - [id = 812], n04266014 space shuttle
-0.0000 - [id = 833], n04347754 submarine, pigboat, sub, U-boat
-0.0000 - [id = 404], n02690373 airliner
-0.0000 - [id = 484], n02981792 catamaran
-0.0000 - [id = 657], n03773504 missile
-
-
-First graph inferencing image: 3:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/school_bus.ppm
----------- Top 5 predictions ----------
-
-1.0000 - [id = 779], n04146614 school bus
-0.0000 - [id = 705], n03895866 passenger car, coach, carriage
-0.0000 - [id = 874], n04487081 trolleybus, trolley coach, trackless trolley
-0.0000 - [id = 864], n04461696 tow truck, tow car, wrecker
-0.0000 - [id = 555], n03345487 fire engine, fire truck
-
-
-First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/go_kart.ppm
----------- Top 5 predictions ----------
-
-0.9916 - [id = 573], n03444034 go-kart
-0.0083 - [id = 518], n03127747 crash helmet
-0.0000 - [id = 560], n03379051 football helmet
-0.0000 - [id = 615], n03623198 knee pad
-0.0000 - [id = 621], n03649909 lawn mower, mower
-
-
-First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gold_fish.ppm
----------- Top 5 predictions ----------
-
-1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
-0.0000 - [id = 130], n02007558 flamingo
-0.0000 - [id = 7], n01514668 cock
-0.0000 - [id = 8], n01514859 hen
-0.0000 - [id = 46], n01693334 green lizard, Lacerta viridis
-
-
-First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gondola.ppm
----------- Top 5 predictions ----------
-
-0.9999 - [id = 576], n03447447 gondola
-0.0000 - [id = 780], n04147183 schooner
-0.0000 - [id = 914], n04612504 yawl
-0.0000 - [id = 536], n03216828 dock, dockage, docking facility
-0.0000 - [id = 449], n02859443 boathouse
-
-
-First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/space_shuttle_224.jpg
----------- Top 5 predictions ----------
-
-1.0000 - [id = 812], n04266014 space shuttle
-0.0000 - [id = 833], n04347754 submarine, pigboat, sub, U-boat
-0.0000 - [id = 404], n02690373 airliner
-0.0000 - [id = 484], n02981792 catamaran
-0.0000 - [id = 657], n03773504 missile
-
-
-First graph inferencing image: 3:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/school_bus.ppm
-
-
 
 
 
@@ -4859,6 +4497,139 @@ Start Running All Subgraphs ...
 
 
 
+
+
+First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gold_fish.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 130], n02007558 flamingo
+0.0000 - [id = 7], n01514668 cock
+0.0000 - [id = 8], n01514859 hen
+0.0000 - [id = 46], n01693334 green lizard, Lacerta viridis
+
+
+First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gondola.ppm
+---------- Top 5 predictions ----------
+
+0.9999 - [id = 576], n03447447 gondola
+0.0000 - [id = 780], n04147183 schooner
+0.0000 - [id = 914], n04612504 yawl
+0.0000 - [id = 536], n03216828 dock, dockage, docking facility
+0.0000 - [id = 449], n02859443 boathouse
+
+
+First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/space_shuttle_224.jpg
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 812], n04266014 space shuttle
+0.0000 - [id = 833], n04347754 submarine, pigboat, sub, U-boat
+0.0000 - [id = 404], n02690373 airliner
+0.0000 - [id = 484], n02981792 catamaran
+0.0000 - [id = 657], n03773504 missile
+
+
+First graph inferencing image: 3:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/school_bus.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 779], n04146614 school bus
+0.0000 - [id = 705], n03895866 passenger car, coach, carriage
+0.0000 - [id = 874], n04487081 trolleybus, trolley coach, trackless trolley
+0.0000 - [id = 864], n04461696 tow truck, tow car, wrecker
+0.0000 - [id = 555], n03345487 fire engine, fire truck
+
+
+First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/go_kart.ppm
+---------- Top 5 predictions ----------
+
+0.9916 - [id = 573], n03444034 go-kart
+0.0083 - [id = 518], n03127747 crash helmet
+0.0000 - [id = 560], n03379051 football helmet
+0.0000 - [id = 615], n03623198 knee pad
+0.0000 - [id = 621], n03649909 lawn mower, mower
+
+
+First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gold_fish.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 130], n02007558 flamingo
+0.0000 - [id = 7], n01514668 cock
+0.0000 - [id = 8], n01514859 hen
+0.0000 - [id = 46], n01693334 green lizard, Lacerta viridis
+
+
+First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gondola.ppm
+---------- Top 5 predictions ----------
+
+0.9999 - [id = 576], n03447447 gondola
+0.0000 - [id = 780], n04147183 schooner
+0.0000 - [id = 914], n04612504 yawl
+0.0000 - [id = 536], n03216828 dock, dockage, docking facility
+0.0000 - [id = 449], n02859443 boathouse
+
+
+First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/space_shuttle_224.jpg
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 812], n04266014 space shuttle
+0.0000 - [id = 833], n04347754 submarine, pigboat, sub, U-boat
+0.0000 - [id = 404], n02690373 airliner
+0.0000 - [id = 484], n02981792 catamaran
+0.0000 - [id = 657], n03773504 missile
+
+
+First graph inferencing image: 3:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/school_bus.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 779], n04146614 school bus
+0.0000 - [id = 705], n03895866 passenger car, coach, carriage
+0.0000 - [id = 874], n04487081 trolleybus, trolley coach, trackless trolley
+0.0000 - [id = 864], n04461696 tow truck, tow car, wrecker
+0.0000 - [id = 555], n03345487 fire engine, fire truck
+
+
+First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/go_kart.ppm
+---------- Top 5 predictions ----------
+
+0.9916 - [id = 573], n03444034 go-kart
+0.0083 - [id = 518], n03127747 crash helmet
+0.0000 - [id = 560], n03379051 football helmet
+0.0000 - [id = 615], n03623198 knee pad
+0.0000 - [id = 621], n03649909 lawn mower, mower
+
+
+First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gold_fish.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 130], n02007558 flamingo
+0.0000 - [id = 7], n01514668 cock
+0.0000 - [id = 8], n01514859 hen
+0.0000 - [id = 46], n01693334 green lizard, Lacerta viridis
+
+
+First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gondola.ppm
+---------- Top 5 predictions ----------
+
+0.9999 - [id = 576], n03447447 gondola
+0.0000 - [id = 780], n04147183 schooner
+0.0000 - [id = 914], n04612504 yawl
+0.0000 - [id = 536], n03216828 dock, dockage, docking facility
+0.0000 - [id = 449], n02859443 boathouse
+
+
+First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/space_shuttle_224.jpg
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 812], n04266014 space shuttle
+0.0000 - [id = 833], n04347754 submarine, pigboat, sub, U-boat
+0.0000 - [id = 404], n02690373 airliner
+0.0000 - [id = 484], n02981792 catamaran
+0.0000 - [id = 657], n03773504 missile
+
+
+First graph inferencing image: 3:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/school_bus.ppm
 ---------- Top 5 predictions ----------
 
 1.0000 - [id = 779], n04146614 school bus
@@ -5728,132 +5499,87 @@ First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/a
 0.0000 - [id = 615], n03623198 knee pad
 0.0000 - [id = 621], n03649909 lawn mower, mower
 Finishing power measurement with first subgraph0
-0	Layer Name: Conv2d_0+Conv2d_0/BatchNorm 	 Layer time: 7.8979 	 number of inputs: 7 	 input shape: 3x224x224 	 output shape: 32x112x112
-Layer Number: 0 	 time: 7.8979
+0	Layer Name: Conv2d_0+Conv2d_0/BatchNorm 	 Layer time: 3.5133 	 number of inputs: 7 	 input shape: 3x224x224 	 output shape: 32x112x112
+Layer Number: 0 	 time: 3.5133
 ----------------------------
-1	Layer Name: Conv2d_1_depthwise/depthwise+Conv2d_1_depthwise/BatchNorm 	 Layer time: 5.0028 	 number of inputs: 7 	 input shape: 32x112x112 	 output shape: 32x112x112
-2	Layer Name: Conv2d_1_pointwise/Conv2D+Conv2d_1_pointwise/BatchNorm 	 Layer time: 9.9425 	 number of inputs: 7 	 input shape: 32x112x112 	 output shape: 64x112x112
-Layer Number: 1 	 time: 14.9453
+1	Layer Name: Conv2d_1_depthwise/depthwise+Conv2d_1_depthwise/BatchNorm 	 Layer time: 2.6821 	 number of inputs: 7 	 input shape: 32x112x112 	 output shape: 32x112x112
+2	Layer Name: Conv2d_1_pointwise/Conv2D+Conv2d_1_pointwise/BatchNorm 	 Layer time: 4.0815 	 number of inputs: 7 	 input shape: 32x112x112 	 output shape: 64x112x112
+Layer Number: 1 	 time: 6.7636
 ----------------------------
-3	Layer Name: Conv2d_2_depthwise/depthwise+Conv2d_2_depthwise/BatchNorm 	 Layer time: 6.7840 	 number of inputs: 7 	 input shape: 64x112x112 	 output shape: 64x56x56
-4	Layer Name: Conv2d_2_pointwise/Conv2D+Conv2d_2_pointwise/BatchNorm 	 Layer time: 7.7276 	 number of inputs: 7 	 input shape: 64x56x56 	 output shape: 128x56x56
-Layer Number: 2 	 time: 14.5116
+3	Layer Name: Conv2d_2_depthwise/depthwise+Conv2d_2_depthwise/BatchNorm 	 Layer time: 2.6322 	 number of inputs: 7 	 input shape: 64x112x112 	 output shape: 64x56x56
+4	Layer Name: Conv2d_2_pointwise/Conv2D+Conv2d_2_pointwise/BatchNorm 	 Layer time: 3.1713 	 number of inputs: 7 	 input shape: 64x56x56 	 output shape: 128x56x56
+Layer Number: 2 	 time: 5.8035
 ----------------------------
-5	Layer Name: Conv2d_3_depthwise/depthwise+Conv2d_3_depthwise/BatchNorm 	 Layer time: 6.6983 	 number of inputs: 7 	 input shape: 128x56x56 	 output shape: 128x56x56
-6	Layer Name: Conv2d_3_pointwise/Conv2D+Conv2d_3_pointwise/BatchNorm 	 Layer time: 13.5498 	 number of inputs: 7 	 input shape: 128x56x56 	 output shape: 128x56x56
-Layer Number: 3 	 time: 20.2481
+5	Layer Name: Conv2d_3_depthwise/depthwise+Conv2d_3_depthwise/BatchNorm 	 Layer time: 2.4014 	 number of inputs: 7 	 input shape: 128x56x56 	 output shape: 128x56x56
+6	Layer Name: Conv2d_3_pointwise/Conv2D+Conv2d_3_pointwise/BatchNorm 	 Layer time: 5.3201 	 number of inputs: 7 	 input shape: 128x56x56 	 output shape: 128x56x56
+Layer Number: 3 	 time: 7.7214
 ----------------------------
-7	Layer Name: Conv2d_4_depthwise/depthwise+Conv2d_4_depthwise/BatchNorm 	 Layer time: 3.8757 	 number of inputs: 7 	 input shape: 128x56x56 	 output shape: 128x28x28
-8	Layer Name: Conv2d_4_pointwise/Conv2D+Conv2d_4_pointwise/BatchNorm 	 Layer time: 6.5823 	 number of inputs: 7 	 input shape: 128x28x28 	 output shape: 256x28x28
-Layer Number: 4 	 time: 10.4580
+7	Layer Name: Conv2d_4_depthwise/depthwise+Conv2d_4_depthwise/BatchNorm 	 Layer time: 2.2221 	 number of inputs: 7 	 input shape: 128x56x56 	 output shape: 128x28x28
+8	Layer Name: Conv2d_4_pointwise/Conv2D+Conv2d_4_pointwise/BatchNorm 	 Layer time: 2.7736 	 number of inputs: 7 	 input shape: 128x28x28 	 output shape: 256x28x28
+Layer Number: 4 	 time: 4.9957
 ----------------------------
-9	Layer Name: Conv2d_5_depthwise/depthwise+Conv2d_5_depthwise/BatchNorm 	 Layer time: 5.1151 	 number of inputs: 7 	 input shape: 256x28x28 	 output shape: 256x28x28
-10	Layer Name: Conv2d_5_pointwise/Conv2D+Conv2d_5_pointwise/BatchNorm 	 Layer time: 12.3139 	 number of inputs: 7 	 input shape: 256x28x28 	 output shape: 256x28x28
-Layer Number: 5 	 time: 17.4290
+9	Layer Name: Conv2d_5_depthwise/depthwise+Conv2d_5_depthwise/BatchNorm 	 Layer time: 1.6491 	 number of inputs: 7 	 input shape: 256x28x28 	 output shape: 256x28x28
+10	Layer Name: Conv2d_5_pointwise/Conv2D+Conv2d_5_pointwise/BatchNorm 	 Layer time: 4.7766 	 number of inputs: 7 	 input shape: 256x28x28 	 output shape: 256x28x28
+Layer Number: 5 	 time: 6.4257
 ----------------------------
-11	Layer Name: Conv2d_6_depthwise/depthwise+Conv2d_6_depthwise/BatchNorm 	 Layer time: 2.9823 	 number of inputs: 7 	 input shape: 256x28x28 	 output shape: 256x14x14
-12	Layer Name: Conv2d_6_pointwise/Conv2D+Conv2d_6_pointwise/BatchNorm 	 Layer time: 6.2549 	 number of inputs: 7 	 input shape: 256x14x14 	 output shape: 512x14x14
-Layer Number: 6 	 time: 9.2372
+11	Layer Name: Conv2d_6_depthwise/depthwise+Conv2d_6_depthwise/BatchNorm 	 Layer time: 1.3175 	 number of inputs: 7 	 input shape: 256x28x28 	 output shape: 256x14x14
+12	Layer Name: Conv2d_6_pointwise/Conv2D+Conv2d_6_pointwise/BatchNorm 	 Layer time: 2.5874 	 number of inputs: 7 	 input shape: 256x14x14 	 output shape: 512x14x14
+Layer Number: 6 	 time: 3.9050
 ----------------------------
-13	Layer Name: Conv2d_7_depthwise/depthwise+Conv2d_7_depthwise/BatchNorm 	 Layer time: 3.8254 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x14x14
-14	Layer Name: Conv2d_7_pointwise/Conv2D+Conv2d_7_pointwise/BatchNorm 	 Layer time: 12.0519 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x14x14
-Layer Number: 7 	 time: 15.8772
+13	Layer Name: Conv2d_7_depthwise/depthwise+Conv2d_7_depthwise/BatchNorm 	 Layer time: 1.2241 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x14x14
+14	Layer Name: Conv2d_7_pointwise/Conv2D+Conv2d_7_pointwise/BatchNorm 	 Layer time: 5.2459 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x14x14
+Layer Number: 7 	 time: 6.4701
 ----------------------------
-15	Layer Name: Conv2d_8_depthwise/depthwise+Conv2d_8_depthwise/BatchNorm 	 Layer time: 3.7774 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x14x14
-16	Layer Name: Conv2d_8_pointwise/Conv2D+Conv2d_8_pointwise/BatchNorm 	 Layer time: 12.0729 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x14x14
-Layer Number: 8 	 time: 15.8503
+15	Layer Name: Conv2d_8_depthwise/depthwise+Conv2d_8_depthwise/BatchNorm 	 Layer time: 1.3016 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x14x14
+16	Layer Name: Conv2d_8_pointwise/Conv2D+Conv2d_8_pointwise/BatchNorm 	 Layer time: 5.2368 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x14x14
+Layer Number: 8 	 time: 6.5384
 ----------------------------
-17	Layer Name: Conv2d_9_depthwise/depthwise+Conv2d_9_depthwise/BatchNorm 	 Layer time: 3.7706 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x14x14
-18	Layer Name: Conv2d_9_pointwise/Conv2D+Conv2d_9_pointwise/BatchNorm 	 Layer time: 12.0720 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x14x14
-Layer Number: 9 	 time: 15.8425
+17	Layer Name: Conv2d_9_depthwise/depthwise+Conv2d_9_depthwise/BatchNorm 	 Layer time: 1.2279 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x14x14
+18	Layer Name: Conv2d_9_pointwise/Conv2D+Conv2d_9_pointwise/BatchNorm 	 Layer time: 5.2543 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x14x14
+Layer Number: 9 	 time: 6.4822
 ----------------------------
-19	Layer Name: Conv2d_10_depthwise/depthwise+Conv2d_10_depthwise/BatchNorm 	 Layer time: 3.8027 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x14x14
-20	Layer Name: Conv2d_10_pointwise/Conv2D+Conv2d_10_pointwise/BatchNorm 	 Layer time: 11.9944 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x14x14
-Layer Number: 10 	 time: 15.7971
+19	Layer Name: Conv2d_10_depthwise/depthwise+Conv2d_10_depthwise/BatchNorm 	 Layer time: 1.2913 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x14x14
+20	Layer Name: Conv2d_10_pointwise/Conv2D+Conv2d_10_pointwise/BatchNorm 	 Layer time: 5.2429 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x14x14
+Layer Number: 10 	 time: 6.5341
 ----------------------------
-21	Layer Name: Conv2d_11_depthwise/depthwise+Conv2d_11_depthwise/BatchNorm 	 Layer time: 3.7861 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x14x14
-22	Layer Name: Conv2d_11_pointwise/Conv2D+Conv2d_11_pointwise/BatchNorm 	 Layer time: 12.0292 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x14x14
-Layer Number: 11 	 time: 15.8153
+21	Layer Name: Conv2d_11_depthwise/depthwise+Conv2d_11_depthwise/BatchNorm 	 Layer time: 1.2179 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x14x14
+22	Layer Name: Conv2d_11_pointwise/Conv2D+Conv2d_11_pointwise/BatchNorm 	 Layer time: 5.2505 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x14x14
+Layer Number: 11 	 time: 6.4684
 ----------------------------
-23	Layer Name: Conv2d_12_depthwise/depthwise+Conv2d_12_depthwise/BatchNorm 	 Layer time: 2.0647 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x7x7
-24	Layer Name: Conv2d_12_pointwise/Conv2D+Conv2d_12_pointwise/BatchNorm 	 Layer time: 7.2107 	 number of inputs: 7 	 input shape: 512x7x7 	 output shape: 1024x7x7
-Layer Number: 12 	 time: 9.2754
+23	Layer Name: Conv2d_12_depthwise/depthwise+Conv2d_12_depthwise/BatchNorm 	 Layer time: 0.9795 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x7x7
+24	Layer Name: Conv2d_12_pointwise/Conv2D+Conv2d_12_pointwise/BatchNorm 	 Layer time: 2.9488 	 number of inputs: 7 	 input shape: 512x7x7 	 output shape: 1024x7x7
+Layer Number: 12 	 time: 3.9283
 ----------------------------
-25	Layer Name: Conv2d_13_depthwise/depthwise+Conv2d_13_depthwise/BatchNorm 	 Layer time: 2.6740 	 number of inputs: 7 	 input shape: 1024x7x7 	 output shape: 1024x7x7
-26	Layer Name: Conv2d_13_pointwise/Conv2D+Conv2d_13_pointwise/BatchNorm 	 Layer time: 14.0621 	 number of inputs: 7 	 input shape: 1024x7x7 	 output shape: 1024x7x7
-27	Layer Name: Logits/AvgPool_1a 	 Layer time: 0.6753 	 number of inputs: 1 	 input shape: 1024x7x7 	 output shape: 1024
-28	Layer Name: Logits/Conv2d_1c_1x1 	 Layer time: 1.7158 	 number of inputs: 3 	 input shape: 1024 	 output shape: 1000
-29	Layer Name: Reshape 	 Layer time: 0.1563 	 number of inputs: 1 	 input shape: 1000 	 output shape: 1001
+25	Layer Name: Conv2d_13_depthwise/depthwise+Conv2d_13_depthwise/BatchNorm 	 Layer time: 0.8293 	 number of inputs: 7 	 input shape: 1024x7x7 	 output shape: 1024x7x7
+26	Layer Name: Conv2d_13_pointwise/Conv2D+Conv2d_13_pointwise/BatchNorm 	 Layer time: 5.6593 	 number of inputs: 7 	 input shape: 1024x7x7 	 output shape: 1024x7x7
+27	Layer Name: Logits/AvgPool_1a 	 Layer time: 0.6517 	 number of inputs: 1 	 input shape: 1024x7x7 	 output shape: 1024
+28	Layer Name: Logits/Conv2d_1c_1x1 	 Layer time: 1.2524 	 number of inputs: 3 	 input shape: 1024 	 output shape: 1000
+29	Layer Name: Reshape 	 Layer time: 0.1542 	 number of inputs: 1 	 input shape: 1000 	 output shape: 1001
 30	Layer Name: Softmax 	 Layer time: 0.0860 	 number of inputs: 1 	 input shape: 1001 	 output shape: 1001
-Layer Number: 13 	 time: 19.3695
+Layer Number: 13 	 time: 8.6328
 ----------------------------
 
- Sum of Layers time: 202.5545
+ Sum of Layers time: 84.1825
 
- input time of layer 0 : 40.9678
+ input time of layer 0 : 40.3277
 
  transfer_time of layer 0 : 0.0000
 
- output time of layer 13 : 0.3947
+ output time of layer 13 : 0.3851
 
- this part task time: 314.2934
+ this part task time: 194.8472
 
 
-Cost0:355.7
-input0_time:40.9678
-task0_time:314.293
-output0_time:0.394695
-total0_time:355.656
+Cost0:237.57
+input0_time:40.3277
+task0_time:194.847
+output0_time:0.385143
+total0_time:235.56
 ***************************************
 
-Frame Latency: 354.602
+Frame Latency: 234.937
 Profiling these DVFS settings finised
 5 Running Graph with 5-5-5-5-5-5-5-5-5-5-5-5-5-5 LW DVFS
-layer:Conv2d_0+Conv2d_0/BatchNorm	Little:5	big:0	GPU:0
-layer:Conv2d_1_pointwise/Conv2D+Conv2d_1_pointwise/BatchNorm	Little:5	big:0	GPU:0
-layer:Conv2d_2_pointwise/Conv2D+Conv2d_2_pointwise/BatchNorm	Little:5	big:0	GPU:0
-layer:Conv2d_3_pointwise/Conv2D+Conv2d_3_pointwise/BatchNorm	Little:5	big:0	GPU:0
-layer:Conv2d_4_pointwise/Conv2D+Conv2d_4_pointwise/BatchNorm	Little:5	big:0	GPU:0
-layer:Conv2d_5_pointwise/Conv2D+Conv2d_5_pointwise/BatchNorm	Little:5	big:0	GPU:0
-layer:Conv2d_6_pointwise/Conv2D+Conv2d_6_pointwise/BatchNorm	Little:5	big:0	GPU:0
-layer:Conv2d_7_pointwise/Conv2D+Conv2d_7_pointwise/BatchNorm	Little:5	big:0	GPU:0
-layer:Conv2d_8_pointwise/Conv2D+Conv2d_8_pointwise/BatchNorm	Little:5	big:0	GPU:0
-layer:Conv2d_9_pointwise/Conv2D+Conv2d_9_pointwise/BatchNorm	Little:5	big:0	GPU:0
-layer:Conv2d_10_pointwise/Conv2D+Conv2d_10_pointwise/BatchNorm	Little:5	big:0	GPU:0
-layer:Conv2d_11_pointwise/Conv2D+Conv2d_11_pointwise/BatchNorm	Little:5	big:0	GPU:0
-layer:Conv2d_12_pointwise/Conv2D+Conv2d_12_pointwise/BatchNorm	Little:5	big:0	GPU:0
-layer:Softmax	Little:5	big:0	GPU:0
-task: Conv2d_0+Conv2d_0/BatchNorm set freq for next task to 5, 0, 0
-task: Conv2d_1_depthwise/depthwise+Conv2d_1_depthwise/BatchNorm set freq for next task to -1, -1, -1
-task: Conv2d_1_pointwise/Conv2D+Conv2d_1_pointwise/BatchNorm set freq for next task to 5, 0, 0
-task: Conv2d_2_depthwise/depthwise+Conv2d_2_depthwise/BatchNorm set freq for next task to -1, -1, -1
-task: Conv2d_2_pointwise/Conv2D+Conv2d_2_pointwise/BatchNorm set freq for next task to 5, 0, 0
-task: Conv2d_3_depthwise/depthwise+Conv2d_3_depthwise/BatchNorm set freq for next task to -1, -1, -1
-task: Conv2d_3_pointwise/Conv2D+Conv2d_3_pointwise/BatchNorm set freq for next task to 5, 0, 0
-task: Conv2d_4_depthwise/depthwise+Conv2d_4_depthwise/BatchNorm set freq for next task to -1, -1, -1
-task: Conv2d_4_pointwise/Conv2D+Conv2d_4_pointwise/BatchNorm set freq for next task to 5, 0, 0
-task: Conv2d_5_depthwise/depthwise+Conv2d_5_depthwise/BatchNorm set freq for next task to -1, -1, -1
-task: Conv2d_5_pointwise/Conv2D+Conv2d_5_pointwise/BatchNorm set freq for next task to 5, 0, 0
-task: Conv2d_6_depthwise/depthwise+Conv2d_6_depthwise/BatchNorm set freq for next task to -1, -1, -1
-task: Conv2d_6_pointwise/Conv2D+Conv2d_6_pointwise/BatchNorm set freq for next task to 5, 0, 0
-task: Conv2d_7_depthwise/depthwise+Conv2d_7_depthwise/BatchNorm set freq for next task to -1, -1, -1
-task: Conv2d_7_pointwise/Conv2D+Conv2d_7_pointwise/BatchNorm set freq for next task to 5, 0, 0
-task: Conv2d_8_depthwise/depthwise+Conv2d_8_depthwise/BatchNorm set freq for next task to -1, -1, -1
-task: Conv2d_8_pointwise/Conv2D+Conv2d_8_pointwise/BatchNorm set freq for next task to 5, 0, 0
-task: Conv2d_9_depthwise/depthwise+Conv2d_9_depthwise/BatchNorm set freq for next task to -1, -1, -1
-task: Conv2d_9_pointwise/Conv2D+Conv2d_9_pointwise/BatchNorm set freq for next task to 5, 0, 0
-task: Conv2d_10_depthwise/depthwise+Conv2d_10_depthwise/BatchNorm set freq for next task to -1, -1, -1
-task: Conv2d_10_pointwise/Conv2D+Conv2d_10_pointwise/BatchNorm set freq for next task to 5, 0, 0
-task: Conv2d_11_depthwise/depthwise+Conv2d_11_depthwise/BatchNorm set freq for next task to -1, -1, -1
-task: Conv2d_11_pointwise/Conv2D+Conv2d_11_pointwise/BatchNorm set freq for next task to 5, 0, 0
-task: Conv2d_12_depthwise/depthwise+Conv2d_12_depthwise/BatchNorm set freq for next task to -1, -1, -1
-task: Conv2d_12_pointwise/Conv2D+Conv2d_12_pointwise/BatchNorm set freq for next task to 5, 0, 0
-task: Conv2d_13_depthwise/depthwise+Conv2d_13_depthwise/BatchNorm set freq for next task to -1, -1, -1
-task: Conv2d_13_pointwise/Conv2D+Conv2d_13_pointwise/BatchNorm set freq for next task to -1, -1, -1
-task: Logits/AvgPool_1a set freq for next task to -1, -1, -1
-task: Logits/Conv2d_1c_1x1 set freq for next task to -1, -1, -1
-task: Reshape set freq for next task to -1, -1, -1
-task: Softmax set freq for next task to 5, 0, 0
 
 
 WarmUp: First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gold_fish.ppm
@@ -5867,149 +5593,6 @@ WarmUp: First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-
 Subgraph0 Ready to trigger Start Running
 
 
-First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gold_fish.ppm
----------- Top 5 predictions ----------
-
-1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
-0.0000 - [id = 130], n02007558 flamingo
-0.0000 - [id = 7], n01514668 cock
-0.0000 - [id = 8], n01514859 hen
-0.0000 - [id = 46], n01693334 green lizard, Lacerta viridis
-
-
-First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gondola.ppm
----------- Top 5 predictions ----------
-
-0.9999 - [id = 576], n03447447 gondola
-0.0000 - [id = 780], n04147183 schooner
-0.0000 - [id = 914], n04612504 yawl
-0.0000 - [id = 536], n03216828 dock, dockage, docking facility
-0.0000 - [id = 449], n02859443 boathouse
-
-
-First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/space_shuttle_224.jpg
----------- Top 5 predictions ----------
-
-1.0000 - [id = 812], n04266014 space shuttle
-0.0000 - [id = 833], n04347754 submarine, pigboat, sub, U-boat
-0.0000 - [id = 404], n02690373 airliner
-0.0000 - [id = 484], n02981792 catamaran
-0.0000 - [id = 657], n03773504 missile
-
-
-First graph inferencing image: 3:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/school_bus.ppm
----------- Top 5 predictions ----------
-
-1.0000 - [id = 779], n04146614 school bus
-0.0000 - [id = 705], n03895866 passenger car, coach, carriage
-0.0000 - [id = 874], n04487081 trolleybus, trolley coach, trackless trolley
-0.0000 - [id = 864], n04461696 tow truck, tow car, wrecker
-0.0000 - [id = 555], n03345487 fire engine, fire truck
-
-
-First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/go_kart.ppm
----------- Top 5 predictions ----------
-
-0.9916 - [id = 573], n03444034 go-kart
-0.0083 - [id = 518], n03127747 crash helmet
-0.0000 - [id = 560], n03379051 football helmet
-0.0000 - [id = 615], n03623198 knee pad
-0.0000 - [id = 621], n03649909 lawn mower, mower
-
-
-First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gold_fish.ppm
----------- Top 5 predictions ----------
-
-1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
-0.0000 - [id = 130], n02007558 flamingo
-0.0000 - [id = 7], n01514668 cock
-0.0000 - [id = 8], n01514859 hen
-0.0000 - [id = 46], n01693334 green lizard, Lacerta viridis
-
-
-First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gondola.ppm
----------- Top 5 predictions ----------
-
-0.9999 - [id = 576], n03447447 gondola
-0.0000 - [id = 780], n04147183 schooner
-0.0000 - [id = 914], n04612504 yawl
-0.0000 - [id = 536], n03216828 dock, dockage, docking facility
-0.0000 - [id = 449], n02859443 boathouse
-
-
-First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/space_shuttle_224.jpg
----------- Top 5 predictions ----------
-
-1.0000 - [id = 812], n04266014 space shuttle
-0.0000 - [id = 833], n04347754 submarine, pigboat, sub, U-boat
-0.0000 - [id = 404], n02690373 airliner
-0.0000 - [id = 484], n02981792 catamaran
-0.0000 - [id = 657], n03773504 missile
-
-
-First graph inferencing image: 3:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/school_bus.ppm
----------- Top 5 predictions ----------
-
-1.0000 - [id = 779], n04146614 school bus
-0.0000 - [id = 705], n03895866 passenger car, coach, carriage
-0.0000 - [id = 874], n04487081 trolleybus, trolley coach, trackless trolley
-0.0000 - [id = 864], n04461696 tow truck, tow car, wrecker
-0.0000 - [id = 555], n03345487 fire engine, fire truck
-
-
-First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/go_kart.ppm
----------- Top 5 predictions ----------
-
-0.9916 - [id = 573], n03444034 go-kart
-0.0083 - [id = 518], n03127747 crash helmet
-0.0000 - [id = 560], n03379051 football helmet
-0.0000 - [id = 615], n03623198 knee pad
-0.0000 - [id = 621], n03649909 lawn mower, mower
-
-
-First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gold_fish.ppm
----------- Top 5 predictions ----------
-
-1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
-0.0000 - [id = 130], n02007558 flamingo
-0.0000 - [id = 7], n01514668 cock
-0.0000 - [id = 8], n01514859 hen
-0.0000 - [id = 46], n01693334 green lizard, Lacerta viridis
-
-
-First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gondola.ppm
----------- Top 5 predictions ----------
-
-0.9999 - [id = 576], n03447447 gondola
-0.0000 - [id = 780], n04147183 schooner
-0.0000 - [id = 914], n04612504 yawl
-0.0000 - [id = 536], n03216828 dock, dockage, docking facility
-0.0000 - [id = 449], n02859443 boathouse
-
-
-First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/space_shuttle_224.jpg
----------- Top 5 predictions ----------
-
-1.0000 - [id = 812], n04266014 space shuttle
-0.0000 - [id = 833], n04347754 submarine, pigboat, sub, U-boat
-0.0000 - [id = 404], n02690373 airliner
-0.0000 - [id = 484], n02981792 catamaran
-0.0000 - [id = 657], n03773504 missile
-
-
-First graph inferencing image: 3:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/school_bus.ppm
----------- Top 5 predictions ----------
-
-1.0000 - [id = 779], n04146614 school bus
-0.0000 - [id = 705], n03895866 passenger car, coach, carriage
-0.0000 - [id = 874], n04487081 trolleybus, trolley coach, trackless trolley
-0.0000 - [id = 864], n04461696 tow truck, tow car, wrecker
-0.0000 - [id = 555], n03345487 fire engine, fire truck
-
-
-First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/go_kart.ppm
-
-
 
 
 
@@ -6021,6 +5604,149 @@ Start Running All Subgraphs ...
 
 
 
+
+
+First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gold_fish.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 130], n02007558 flamingo
+0.0000 - [id = 7], n01514668 cock
+0.0000 - [id = 8], n01514859 hen
+0.0000 - [id = 46], n01693334 green lizard, Lacerta viridis
+
+
+First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gondola.ppm
+---------- Top 5 predictions ----------
+
+0.9999 - [id = 576], n03447447 gondola
+0.0000 - [id = 780], n04147183 schooner
+0.0000 - [id = 914], n04612504 yawl
+0.0000 - [id = 536], n03216828 dock, dockage, docking facility
+0.0000 - [id = 449], n02859443 boathouse
+
+
+First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/space_shuttle_224.jpg
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 812], n04266014 space shuttle
+0.0000 - [id = 833], n04347754 submarine, pigboat, sub, U-boat
+0.0000 - [id = 404], n02690373 airliner
+0.0000 - [id = 484], n02981792 catamaran
+0.0000 - [id = 657], n03773504 missile
+
+
+First graph inferencing image: 3:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/school_bus.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 779], n04146614 school bus
+0.0000 - [id = 705], n03895866 passenger car, coach, carriage
+0.0000 - [id = 874], n04487081 trolleybus, trolley coach, trackless trolley
+0.0000 - [id = 864], n04461696 tow truck, tow car, wrecker
+0.0000 - [id = 555], n03345487 fire engine, fire truck
+
+
+First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/go_kart.ppm
+---------- Top 5 predictions ----------
+
+0.9916 - [id = 573], n03444034 go-kart
+0.0083 - [id = 518], n03127747 crash helmet
+0.0000 - [id = 560], n03379051 football helmet
+0.0000 - [id = 615], n03623198 knee pad
+0.0000 - [id = 621], n03649909 lawn mower, mower
+
+
+First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gold_fish.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 130], n02007558 flamingo
+0.0000 - [id = 7], n01514668 cock
+0.0000 - [id = 8], n01514859 hen
+0.0000 - [id = 46], n01693334 green lizard, Lacerta viridis
+
+
+First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gondola.ppm
+---------- Top 5 predictions ----------
+
+0.9999 - [id = 576], n03447447 gondola
+0.0000 - [id = 780], n04147183 schooner
+0.0000 - [id = 914], n04612504 yawl
+0.0000 - [id = 536], n03216828 dock, dockage, docking facility
+0.0000 - [id = 449], n02859443 boathouse
+
+
+First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/space_shuttle_224.jpg
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 812], n04266014 space shuttle
+0.0000 - [id = 833], n04347754 submarine, pigboat, sub, U-boat
+0.0000 - [id = 404], n02690373 airliner
+0.0000 - [id = 484], n02981792 catamaran
+0.0000 - [id = 657], n03773504 missile
+
+
+First graph inferencing image: 3:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/school_bus.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 779], n04146614 school bus
+0.0000 - [id = 705], n03895866 passenger car, coach, carriage
+0.0000 - [id = 874], n04487081 trolleybus, trolley coach, trackless trolley
+0.0000 - [id = 864], n04461696 tow truck, tow car, wrecker
+0.0000 - [id = 555], n03345487 fire engine, fire truck
+
+
+First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/go_kart.ppm
+---------- Top 5 predictions ----------
+
+0.9916 - [id = 573], n03444034 go-kart
+0.0083 - [id = 518], n03127747 crash helmet
+0.0000 - [id = 560], n03379051 football helmet
+0.0000 - [id = 615], n03623198 knee pad
+0.0000 - [id = 621], n03649909 lawn mower, mower
+
+
+First graph inferencing image: 0:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gold_fish.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 130], n02007558 flamingo
+0.0000 - [id = 7], n01514668 cock
+0.0000 - [id = 8], n01514859 hen
+0.0000 - [id = 46], n01693334 green lizard, Lacerta viridis
+
+
+First graph inferencing image: 1:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/gondola.ppm
+---------- Top 5 predictions ----------
+
+0.9999 - [id = 576], n03447447 gondola
+0.0000 - [id = 780], n04147183 schooner
+0.0000 - [id = 914], n04612504 yawl
+0.0000 - [id = 536], n03216828 dock, dockage, docking facility
+0.0000 - [id = 449], n02859443 boathouse
+
+
+First graph inferencing image: 2:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/space_shuttle_224.jpg
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 812], n04266014 space shuttle
+0.0000 - [id = 833], n04347754 submarine, pigboat, sub, U-boat
+0.0000 - [id = 404], n02690373 airliner
+0.0000 - [id = 484], n02981792 catamaran
+0.0000 - [id = 657], n03773504 missile
+
+
+First graph inferencing image: 3:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/school_bus.ppm
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 779], n04146614 school bus
+0.0000 - [id = 705], n03895866 passenger car, coach, carriage
+0.0000 - [id = 874], n04487081 trolleybus, trolley coach, trackless trolley
+0.0000 - [id = 864], n04461696 tow truck, tow car, wrecker
+0.0000 - [id = 555], n03345487 fire engine, fire truck
+
+
+First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/assets/./ppm_images_224/go_kart.ppm
 ---------- Top 5 predictions ----------
 
 0.9916 - [id = 573], n03444034 go-kart
@@ -6880,85 +6606,85 @@ First graph inferencing image: 4:/data/data/com.termux/files/home/ARMCL-RockPi/a
 0.0000 - [id = 615], n03623198 knee pad
 0.0000 - [id = 621], n03649909 lawn mower, mower
 Finishing power measurement with first subgraph0
-0	Layer Name: Conv2d_0+Conv2d_0/BatchNorm 	 Layer time: 7.8776 	 number of inputs: 7 	 input shape: 3x224x224 	 output shape: 32x112x112
-Layer Number: 0 	 time: 7.8776
+0	Layer Name: Conv2d_0+Conv2d_0/BatchNorm 	 Layer time: 3.2262 	 number of inputs: 7 	 input shape: 3x224x224 	 output shape: 32x112x112
+Layer Number: 0 	 time: 3.2262
 ----------------------------
-1	Layer Name: Conv2d_1_depthwise/depthwise+Conv2d_1_depthwise/BatchNorm 	 Layer time: 5.0255 	 number of inputs: 7 	 input shape: 32x112x112 	 output shape: 32x112x112
-2	Layer Name: Conv2d_1_pointwise/Conv2D+Conv2d_1_pointwise/BatchNorm 	 Layer time: 8.8890 	 number of inputs: 7 	 input shape: 32x112x112 	 output shape: 64x112x112
-Layer Number: 1 	 time: 13.9145
+1	Layer Name: Conv2d_1_depthwise/depthwise+Conv2d_1_depthwise/BatchNorm 	 Layer time: 2.4064 	 number of inputs: 7 	 input shape: 32x112x112 	 output shape: 32x112x112
+2	Layer Name: Conv2d_1_pointwise/Conv2D+Conv2d_1_pointwise/BatchNorm 	 Layer time: 3.6539 	 number of inputs: 7 	 input shape: 32x112x112 	 output shape: 64x112x112
+Layer Number: 1 	 time: 6.0603
 ----------------------------
-3	Layer Name: Conv2d_2_depthwise/depthwise+Conv2d_2_depthwise/BatchNorm 	 Layer time: 6.7564 	 number of inputs: 7 	 input shape: 64x112x112 	 output shape: 64x56x56
-4	Layer Name: Conv2d_2_pointwise/Conv2D+Conv2d_2_pointwise/BatchNorm 	 Layer time: 6.9748 	 number of inputs: 7 	 input shape: 64x56x56 	 output shape: 128x56x56
-Layer Number: 2 	 time: 13.7312
+3	Layer Name: Conv2d_2_depthwise/depthwise+Conv2d_2_depthwise/BatchNorm 	 Layer time: 2.4110 	 number of inputs: 7 	 input shape: 64x112x112 	 output shape: 64x56x56
+4	Layer Name: Conv2d_2_pointwise/Conv2D+Conv2d_2_pointwise/BatchNorm 	 Layer time: 2.8183 	 number of inputs: 7 	 input shape: 64x56x56 	 output shape: 128x56x56
+Layer Number: 2 	 time: 5.2293
 ----------------------------
-5	Layer Name: Conv2d_3_depthwise/depthwise+Conv2d_3_depthwise/BatchNorm 	 Layer time: 6.7076 	 number of inputs: 7 	 input shape: 128x56x56 	 output shape: 128x56x56
-6	Layer Name: Conv2d_3_pointwise/Conv2D+Conv2d_3_pointwise/BatchNorm 	 Layer time: 12.0201 	 number of inputs: 7 	 input shape: 128x56x56 	 output shape: 128x56x56
-Layer Number: 3 	 time: 18.7278
+5	Layer Name: Conv2d_3_depthwise/depthwise+Conv2d_3_depthwise/BatchNorm 	 Layer time: 2.1661 	 number of inputs: 7 	 input shape: 128x56x56 	 output shape: 128x56x56
+6	Layer Name: Conv2d_3_pointwise/Conv2D+Conv2d_3_pointwise/BatchNorm 	 Layer time: 4.6045 	 number of inputs: 7 	 input shape: 128x56x56 	 output shape: 128x56x56
+Layer Number: 3 	 time: 6.7706
 ----------------------------
-7	Layer Name: Conv2d_4_depthwise/depthwise+Conv2d_4_depthwise/BatchNorm 	 Layer time: 3.8616 	 number of inputs: 7 	 input shape: 128x56x56 	 output shape: 128x28x28
-8	Layer Name: Conv2d_4_pointwise/Conv2D+Conv2d_4_pointwise/BatchNorm 	 Layer time: 5.9405 	 number of inputs: 7 	 input shape: 128x28x28 	 output shape: 256x28x28
-Layer Number: 4 	 time: 9.8021
+7	Layer Name: Conv2d_4_depthwise/depthwise+Conv2d_4_depthwise/BatchNorm 	 Layer time: 2.1635 	 number of inputs: 7 	 input shape: 128x56x56 	 output shape: 128x28x28
+8	Layer Name: Conv2d_4_pointwise/Conv2D+Conv2d_4_pointwise/BatchNorm 	 Layer time: 2.3976 	 number of inputs: 7 	 input shape: 128x28x28 	 output shape: 256x28x28
+Layer Number: 4 	 time: 4.5611
 ----------------------------
-9	Layer Name: Conv2d_5_depthwise/depthwise+Conv2d_5_depthwise/BatchNorm 	 Layer time: 5.1382 	 number of inputs: 7 	 input shape: 256x28x28 	 output shape: 256x28x28
-10	Layer Name: Conv2d_5_pointwise/Conv2D+Conv2d_5_pointwise/BatchNorm 	 Layer time: 11.0356 	 number of inputs: 7 	 input shape: 256x28x28 	 output shape: 256x28x28
-Layer Number: 5 	 time: 16.1738
+9	Layer Name: Conv2d_5_depthwise/depthwise+Conv2d_5_depthwise/BatchNorm 	 Layer time: 1.5021 	 number of inputs: 7 	 input shape: 256x28x28 	 output shape: 256x28x28
+10	Layer Name: Conv2d_5_pointwise/Conv2D+Conv2d_5_pointwise/BatchNorm 	 Layer time: 4.1534 	 number of inputs: 7 	 input shape: 256x28x28 	 output shape: 256x28x28
+Layer Number: 5 	 time: 5.6555
 ----------------------------
-11	Layer Name: Conv2d_6_depthwise/depthwise+Conv2d_6_depthwise/BatchNorm 	 Layer time: 3.0391 	 number of inputs: 7 	 input shape: 256x28x28 	 output shape: 256x14x14
-12	Layer Name: Conv2d_6_pointwise/Conv2D+Conv2d_6_pointwise/BatchNorm 	 Layer time: 5.5994 	 number of inputs: 7 	 input shape: 256x14x14 	 output shape: 512x14x14
-Layer Number: 6 	 time: 8.6385
+11	Layer Name: Conv2d_6_depthwise/depthwise+Conv2d_6_depthwise/BatchNorm 	 Layer time: 1.3016 	 number of inputs: 7 	 input shape: 256x28x28 	 output shape: 256x14x14
+12	Layer Name: Conv2d_6_pointwise/Conv2D+Conv2d_6_pointwise/BatchNorm 	 Layer time: 2.3716 	 number of inputs: 7 	 input shape: 256x14x14 	 output shape: 512x14x14
+Layer Number: 6 	 time: 3.6732
 ----------------------------
-13	Layer Name: Conv2d_7_depthwise/depthwise+Conv2d_7_depthwise/BatchNorm 	 Layer time: 3.8148 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x14x14
-14	Layer Name: Conv2d_7_pointwise/Conv2D+Conv2d_7_pointwise/BatchNorm 	 Layer time: 12.0283 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x14x14
-Layer Number: 7 	 time: 15.8431
+13	Layer Name: Conv2d_7_depthwise/depthwise+Conv2d_7_depthwise/BatchNorm 	 Layer time: 1.1426 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x14x14
+14	Layer Name: Conv2d_7_pointwise/Conv2D+Conv2d_7_pointwise/BatchNorm 	 Layer time: 4.7242 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x14x14
+Layer Number: 7 	 time: 5.8668
 ----------------------------
-15	Layer Name: Conv2d_8_depthwise/depthwise+Conv2d_8_depthwise/BatchNorm 	 Layer time: 3.8106 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x14x14
-16	Layer Name: Conv2d_8_pointwise/Conv2D+Conv2d_8_pointwise/BatchNorm 	 Layer time: 11.9791 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x14x14
-Layer Number: 8 	 time: 15.7897
+15	Layer Name: Conv2d_8_depthwise/depthwise+Conv2d_8_depthwise/BatchNorm 	 Layer time: 1.1856 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x14x14
+16	Layer Name: Conv2d_8_pointwise/Conv2D+Conv2d_8_pointwise/BatchNorm 	 Layer time: 4.7680 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x14x14
+Layer Number: 8 	 time: 5.9536
 ----------------------------
-17	Layer Name: Conv2d_9_depthwise/depthwise+Conv2d_9_depthwise/BatchNorm 	 Layer time: 3.8341 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x14x14
-18	Layer Name: Conv2d_9_pointwise/Conv2D+Conv2d_9_pointwise/BatchNorm 	 Layer time: 11.9703 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x14x14
-Layer Number: 9 	 time: 15.8044
+17	Layer Name: Conv2d_9_depthwise/depthwise+Conv2d_9_depthwise/BatchNorm 	 Layer time: 1.1714 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x14x14
+18	Layer Name: Conv2d_9_pointwise/Conv2D+Conv2d_9_pointwise/BatchNorm 	 Layer time: 4.7493 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x14x14
+Layer Number: 9 	 time: 5.9207
 ----------------------------
-19	Layer Name: Conv2d_10_depthwise/depthwise+Conv2d_10_depthwise/BatchNorm 	 Layer time: 3.8083 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x14x14
-20	Layer Name: Conv2d_10_pointwise/Conv2D+Conv2d_10_pointwise/BatchNorm 	 Layer time: 12.0356 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x14x14
-Layer Number: 10 	 time: 15.8438
+19	Layer Name: Conv2d_10_depthwise/depthwise+Conv2d_10_depthwise/BatchNorm 	 Layer time: 1.1488 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x14x14
+20	Layer Name: Conv2d_10_pointwise/Conv2D+Conv2d_10_pointwise/BatchNorm 	 Layer time: 4.7501 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x14x14
+Layer Number: 10 	 time: 5.8989
 ----------------------------
-21	Layer Name: Conv2d_11_depthwise/depthwise+Conv2d_11_depthwise/BatchNorm 	 Layer time: 3.7967 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x14x14
-22	Layer Name: Conv2d_11_pointwise/Conv2D+Conv2d_11_pointwise/BatchNorm 	 Layer time: 11.9957 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x14x14
-Layer Number: 11 	 time: 15.7924
+21	Layer Name: Conv2d_11_depthwise/depthwise+Conv2d_11_depthwise/BatchNorm 	 Layer time: 1.2005 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x14x14
+22	Layer Name: Conv2d_11_pointwise/Conv2D+Conv2d_11_pointwise/BatchNorm 	 Layer time: 4.7402 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x14x14
+Layer Number: 11 	 time: 5.9407
 ----------------------------
-23	Layer Name: Conv2d_12_depthwise/depthwise+Conv2d_12_depthwise/BatchNorm 	 Layer time: 2.0432 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x7x7
-24	Layer Name: Conv2d_12_pointwise/Conv2D+Conv2d_12_pointwise/BatchNorm 	 Layer time: 6.6163 	 number of inputs: 7 	 input shape: 512x7x7 	 output shape: 1024x7x7
-Layer Number: 12 	 time: 8.6595
+23	Layer Name: Conv2d_12_depthwise/depthwise+Conv2d_12_depthwise/BatchNorm 	 Layer time: 0.9028 	 number of inputs: 7 	 input shape: 512x14x14 	 output shape: 512x7x7
+24	Layer Name: Conv2d_12_pointwise/Conv2D+Conv2d_12_pointwise/BatchNorm 	 Layer time: 2.6017 	 number of inputs: 7 	 input shape: 512x7x7 	 output shape: 1024x7x7
+Layer Number: 12 	 time: 3.5045
 ----------------------------
-25	Layer Name: Conv2d_13_depthwise/depthwise+Conv2d_13_depthwise/BatchNorm 	 Layer time: 2.6452 	 number of inputs: 7 	 input shape: 1024x7x7 	 output shape: 1024x7x7
-26	Layer Name: Conv2d_13_pointwise/Conv2D+Conv2d_13_pointwise/BatchNorm 	 Layer time: 12.7140 	 number of inputs: 7 	 input shape: 1024x7x7 	 output shape: 1024x7x7
-27	Layer Name: Logits/AvgPool_1a 	 Layer time: 0.6670 	 number of inputs: 1 	 input shape: 1024x7x7 	 output shape: 1024
-28	Layer Name: Logits/Conv2d_1c_1x1 	 Layer time: 1.7286 	 number of inputs: 3 	 input shape: 1024 	 output shape: 1000
+25	Layer Name: Conv2d_13_depthwise/depthwise+Conv2d_13_depthwise/BatchNorm 	 Layer time: 0.7872 	 number of inputs: 7 	 input shape: 1024x7x7 	 output shape: 1024x7x7
+26	Layer Name: Conv2d_13_pointwise/Conv2D+Conv2d_13_pointwise/BatchNorm 	 Layer time: 5.0935 	 number of inputs: 7 	 input shape: 1024x7x7 	 output shape: 1024x7x7
+27	Layer Name: Logits/AvgPool_1a 	 Layer time: 0.6424 	 number of inputs: 1 	 input shape: 1024x7x7 	 output shape: 1024
+28	Layer Name: Logits/Conv2d_1c_1x1 	 Layer time: 1.2608 	 number of inputs: 3 	 input shape: 1024 	 output shape: 1000
 29	Layer Name: Reshape 	 Layer time: 0.1358 	 number of inputs: 1 	 input shape: 1000 	 output shape: 1001
 30	Layer Name: Softmax 	 Layer time: 0.0774 	 number of inputs: 1 	 input shape: 1001 	 output shape: 1001
-Layer Number: 13 	 time: 17.9680
+Layer Number: 13 	 time: 7.9970
 ----------------------------
 
- Sum of Layers time: 194.5665
+ Sum of Layers time: 76.2584
 
- input time of layer 0 : 34.7739
+ input time of layer 0 : 34.2402
 
  transfer_time of layer 0 : 0.0000
 
- output time of layer 13 : 0.3483
+ output time of layer 13 : 0.3383
 
- this part task time: 306.0112
+ this part task time: 186.9810
 
 
-Cost0:341.177
-input0_time:34.7739
-task0_time:306.011
-output0_time:0.348268
-total0_time:341.133
+Cost0:223.57
+input0_time:34.2402
+task0_time:186.981
+output0_time:0.33829
+total0_time:221.56
 ***************************************
 
-Frame Latency: 339.91
+Frame Latency: 220.397
 Profiling these DVFS settings finised
 
 Test passed
