@@ -1,0 +1,2 @@
+,graph,order,freq,input_time,task_time,total_time,input_power,task_power,input_e,task_e,total_e,Predicted_Time,Predicted_Energy,Error_Time,Error_Energy,Error_EE,Error_Power,Error_FPS
+0,google,GBGLLBBBBLG,"((2, 1), (3,), (3, 6), (5,), (5,), (3,), (2,), (3,), (3,), (3,), (1, 2))",131.107,251.6957,382.8027,3468.1585639726154,4348.370858719995,454.6998648467577,1094.46624714513,1549.1661119918876,322.8200967532242,1293.6520443462846,15.669326064517255,16.493652014958425,19.751375090565467,0.9774924259135227,18.580814469127898

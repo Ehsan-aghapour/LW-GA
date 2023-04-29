@@ -1897,9 +1897,9 @@ def Gather_real_profile(_g,_num_evals):
             ab()
             time.sleep(5)
 #3
-if Test==3:
+if Test==1:
     for g in graphs:
-            Gather_real_profile(g,200)
+            Gather_real_profile(g,100)
 
 
 def main():
