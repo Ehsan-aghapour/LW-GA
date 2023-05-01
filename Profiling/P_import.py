@@ -1154,7 +1154,7 @@ def AOA():
     for _g in graphs:
         Real_Evaluation(g=_g,_ord='G',_fs=[[["min"]]],suffix="AOA")
         
-if Test==3:
+if Test==2:
     AOA()
 
 # +
@@ -1162,17 +1162,13 @@ if Test==3:
 Motivation_Fig2=False
 #def Motivation_Fig2():
 if Motivation_Fig2:
-    _g='alex'
-    N=NLayers[g]
-    Real_Evaluation(g="alex",_ord='L',_fs=[[[5]]*N],suffix="Motivation_Figure")
-    Real_Evaluation(g="alex",_ord='B',_fs=[[[1]]*N],suffix="Motivation_Figure")
-    Real_Evaluation(g="alex",_ord='G',_fs=[[[1,1]]*N],suffix="Motivation_Figure")
+    _g='mobile'
+    N=NLayers[_g]
+    Real_Evaluation(g=_g,_ord='L',_fs=[[[5]]*N,[[4]]*N,[[3]]*N,[[2]]*N,[[1]]*N,[[0]]*N],suffix="Motivation_Figure")
+    Real_Evaluation(g=_g,_ord='B',_fs=[[[0]]*N,[[1]]*N,[[2]]*N,[[3]]*N,[[4]]*N,[[5]]*N,[[6]]*N,[[7]]*N],suffix="Motivation_Figure")
+    Real_Evaluation(g=_g,_ord='G',_fs=[[[0,0]]*N,[[1,1]]*N,[[2,2]]*N,[[3,3]]*N,[[4,4]]*N],suffix="Motivation_Figure")
     
 #Real_Evaluation(g="google",_ord='LLLLLLLLLLL',_fs=[[[5]]*11],suffix="ttt")
-# -
-
-[[[0]]*11]
-
 
 # +
 #This version of Real_Evalutaion is for evaluating GA results, so it get the df instead of using global one
@@ -1328,8 +1324,12 @@ def Fill_prediction(_FileName, dvfs_delay):
         order=row['order']
         #print(graph,freq,order,dvfs_delay)
         return Inference_Cost(_graph=graph,_freq=freq,_order=order,_dvfs_delay=dvfs_delay, _debug=False)
-    if pd.isna(Evals_df['Predicted_Time']).any():
+    if 'Predicted_Time' not in Evals_df:
         Evals_df[['Predicted_Time','Predicted_Energy']]=Evals_df.apply(prediction,axis=1, result_type='expand')
+    if 'Predicted_Time' in Evals_df:
+        if pd.isna(Evals_df['Predicted_Time']).any():
+            Evals_df[['Predicted_Time','Predicted_Energy']]=Evals_df.apply(prediction,axis=1, result_type='expand')
+    
     #display(Evals_df)
     def calc_EE(row):
         Measured=1000.0/row['total_e']
@@ -1349,25 +1349,24 @@ def Fill_prediction(_FileName, dvfs_delay):
         Err=100.0*abs(pred-measured)/measured
         return Err
     
-    if pd.isna(Evals_df['Error_Time']).any():
+    if 'Error_Time' not in Evals_df:
         Evals_df['Error_Time']=Evals_df.apply(lambda x:100*abs(x['Predicted_Time']-x['total_time'])/x['total_time'],axis=1)
-    if pd.isna(Evals_df['Error_Energy']).any():
+    if 'Error_Energy' not in Evals_df:
         Evals_df['Error_Energy']=Evals_df.apply(lambda x:100*abs(x['Predicted_Energy']-x['total_e'])/x['total_e'],axis=1)
-    if pd.isna(Evals_df['Error_EE']).any():
+    if 'Error_EE' not in Evals_df:
         Evals_df['Error_EE']=Evals_df.apply(calc_EE,axis=1)
     #Evals_df['Error_Power']=Evals_df.apply(lambda x:100*abs( (x['Predicted_Energy']/x['Predicted_Time']) - (x['total_e']/x['total_time']) /(x['total_e']/x['total_time']) ),axis=1)
-    if pd.isna(Evals_df['Error_Power']).any():
+    if 'Error_Power' not in Evals_df:
         Evals_df['Error_Power']=Evals_df.apply(calc_Power,axis=1)
-    if pd.isna(Evals_df['Error_FPS']).any():
+    if 'Error_FPS' not in Evals_df:
         Evals_df['Error_FPS']=Evals_df.apply(calc_FPS,axis=1)
     new_file=_FileName.with_name(_FileName.name.replace(".csv", "_prediction.csv"))
     Evals_df.to_csv(new_file)
 
 if Test==2:
     for g in graphs:
-        if g=='google' or True:
-            fname=Path('Evaluations_'+g+'.csv')
-            Fill_prediction(fname, 'variable')
+        fname=Path('Evaluations_'+g+'.csv')
+        Fill_prediction(fname, 'variable')
 # -
 
 #def Anlze_Error():
@@ -1375,6 +1374,8 @@ if Test==2:
 if Test==2:
     for g in graphs:
         print(f'Graph: {g}')
+        if not Path('Evaluations_'+g+'_prediction.csv').exists():
+            continue
         Evals_df=pd.read_csv('Evaluations_'+g+'_prediction.csv')
         #error_time = abs(100.0*(Evals_df['Predicted_Time'] - Evals_df['total_time'])/Evals_df['total_time'])
         #print(abs(error_time).describe())
@@ -1423,7 +1424,7 @@ def prediction(File,row_num,dvfs_delay):
 if Test==3:
     g='google'
     prediction('Evaluations_'+g+'_prediction.csv',-1,'variable')
-    
+
 
 # +
 #Layers_df[(Layers_df['Graph']=='google') & (Layers_df['Layer']==4) & (Layers_df['Component']=='B') &(Layers_df['Freq']==0)]
@@ -1860,7 +1861,7 @@ def Run_Eval(g='alex',num_evals=1000,num_freqs=10):
             if row.shape[0]==0:
                 Evaluations_df.loc[len(Evaluations_df)]={"graph":g,"order":order,"freq":f}
             
-    Evaluations_df.to_csv(Evaluations_csv,index=False)
+    Evaluations_df.to_csv(EvalFile,index=False)
     
     grouped = Evaluations_df.groupby('order')
     unique_values_order = Evaluations_df['order'].unique()
@@ -1897,9 +1898,9 @@ def Gather_real_profile(_g,_num_evals):
             ab()
             time.sleep(5)
 #3
-if Test==3:
+if Test==2:
     for g in graphs:
-            Gather_real_profile(g,200)
+            Gather_real_profile(g,100)
 
 
 def main():
@@ -1979,7 +1980,7 @@ def main():
     _n = 8  # replace with desired length of the random strings
     num_strings = 1000  # replace with desired number of random strings
     random_strings = generate_random_strings(_n, num_strings)
-if Test==2:
+if Test==4:
     main()
 
 
