@@ -642,14 +642,14 @@ def Analyze(graph_name=graphs,metric=['task','in','out','trans'],comp=['G','B','
                     (Layers_df['Freq_Host'].isin(freq_h))&
                     (Layers_df['Layer'].isin(layers)) ].groupby(index+columns)['Time','Power'].sum().reset_index()
     grouped_df['Energy']=grouped_df['Power']*grouped_df['Time']/1000.0
-    grouped_df['Energy-Efficiency']=1000.0/(grouped_df['Energy'])
+    grouped_df['Power-Efficiency']=1000.0/(grouped_df['Energy'])
     # Create a pivot table to rearrange the data for plotting
     pivot_table = pd.pivot_table(grouped_df, values=parameter, index=index, columns=columns)
     try:
         display(pivot_table)
     except:
         pprint.pprint(pivot_table)
-    pivot_table.plot(kind='bar', stacked=False, figsize=(30, 6))
+    pivot_table.plot(kind='bar', stacked=False, figsize=(30, 12))
     plt.title(f'{metric} {parameter} vs {columns} for {graph_name}')
     plt.xlabel(f'{index}')
     plt.ylabel(f'{metric} {parameter}')
@@ -658,9 +658,9 @@ def Analyze(graph_name=graphs,metric=['task','in','out','trans'],comp=['G','B','
 
 if Test==2:
     g='alex'
-    Analyze(graph_name=[g],metric=['task'],comp=['L'],index=['Layer'],columns=['Freq'],parameter='Energy-Efficiency')
-    Analyze(graph_name=[g],metric=['task'],comp=['B'],index=['Layer'],columns=['Freq'],parameter='Energy-Efficiency')
-    Analyze(graph_name=[g],metric=['task'],comp=['G'],freq_h=[0],index=['Layer'],columns=['Freq'],parameter='Energy-Efficiency')
+    Analyze(graph_name=[g],metric=['task'],comp=['L'],index=['Layer'],columns=['Freq'],parameter='Power-Efficiency')
+    Analyze(graph_name=[g],metric=['task'],comp=['B'],index=['Layer'],columns=['Freq'],parameter='Power-Efficiency')
+    Analyze(graph_name=[g],metric=['task'],comp=['G'],freq_h=[0],index=['Layer'],columns=['Freq'],parameter='Power-Efficiency')
     
 # -
 
@@ -1356,25 +1356,25 @@ def Fill_prediction(_FileName, dvfs_delay):
     def calc_EE(row):
         Measured=1000.0/row['total_e']
         Pred=1000.0/row['Predicted_Energy']
-        Err=abs(Pred-Measured)/Measured
+        Err=(Pred-Measured)/Measured
         return 100.0*Err
     
     def calc_Power(row):
         measured=row['total_e']/row['total_time']
         pred=row['Predicted_Energy']/row['Predicted_Time']
-        Err=100*abs(pred-measured)/measured
+        Err=100*(pred-measured)/measured
         return Err
     
     def calc_FPS(row):
         measured=1000/row['total_time']
         pred=1000/row['Predicted_Time']
-        Err=100.0*abs(pred-measured)/measured
+        Err=100.0*(pred-measured)/measured
         return Err
     
     if 'Error_Time' not in Evals_df or Regenerate_Errors:
-        Evals_df['Error_Time']=Evals_df.apply(lambda x:100*abs(x['Predicted_Time']-x['total_time'])/x['total_time'],axis=1)
+        Evals_df['Error_Time']=Evals_df.apply(lambda x:100*(x['Predicted_Time']-x['total_time'])/x['total_time'],axis=1)
     if 'Error_Energy' not in Evals_df or Regenerate_Errors:
-        Evals_df['Error_Energy']=Evals_df.apply(lambda x:100*abs(x['Predicted_Energy']-x['total_e'])/x['total_e'],axis=1)
+        Evals_df['Error_Energy']=Evals_df.apply(lambda x:100*(x['Predicted_Energy']-x['total_e'])/x['total_e'],axis=1)
     if 'Error_EE' not in Evals_df or Regenerate_Errors:
         Evals_df['Error_EE']=Evals_df.apply(calc_EE,axis=1)
     #Evals_df['Error_Power']=Evals_df.apply(lambda x:100*abs( (x['Predicted_Energy']/x['Predicted_Time']) - (x['total_e']/x['total_time']) /(x['total_e']/x['total_time']) ),axis=1)
@@ -1403,17 +1403,21 @@ if Test==2:
         #print(abs(error_time).describe())
         #error_energy = abs(100.0*((1000.0/Evals_df['Predicted_Energy']) - (1000.0/Evals_df['total_e']))/(1000.0/Evals_df['total_e']))
         #error_energy=Evals_df['Error_Time']
-        error_energy=Evals_df['Error_Energy']
+        error_energy=Evals_df['Error_Time']
         #error_energy=Evals_df['Error_EE']
         #plt.hist(error_energy, bins=50, density=True)
         print(error_energy.describe())
         # Add normal curve
-        mu, std = norm.fit(error_energy
-                          )
+        mu, std = norm.fit(error_energy)
         x = np.linspace(-30, 30, 200)
 
         y = norm.pdf(x, mu, std)
-        plt.plot(x, y)
+        plt.plot(x, y, label=g)
+        plt.xlabel('Error%')
+        plt.ylabel('Pdf')
+        
+    plt.legend()
+    plt.show()
 
 
 # +
@@ -1428,7 +1432,7 @@ def prediction(File,row_num,dvfs_delay):
         cases=Evals_df.shape[0]
         print(f'There are {cases}')
         #print(row)
-        Evals_df=Evals_df.sort_values('Error_Time',ascending=False)
+        #Evals_df=Evals_df.sort_values('Error_Time',ascending=False)
         row=Evals_df.iloc[row_num]
         graph=row['graph']
         freq=format_to_list([row['freq']])
@@ -1436,16 +1440,16 @@ def prediction(File,row_num,dvfs_delay):
         #print(graph,freq,order,dvfs_delay)
         t,e=Inference_Cost(_graph=graph,_freq=freq[0],_order=order,_dvfs_delay=dvfs_delay, _debug=True)
         print(f'total_time:{t}, total_e:{e}')
-        run=True
+        run=False
         if run:
             Real_Evaluation(g=graph,_ord=order,_fs=freq)
             
         return t,e
     
 
-if Test==3:
+if Test==2:
     g='google'
-    prediction('Evaluations_'+g+'_prediction.csv',-1,'variable')
+    prediction('Evaluations_'+g+'_prediction.csv',0,'variable')
 
 
 # +
@@ -1538,7 +1542,8 @@ def Explore_Freq_on_Transfering():
     Transfer_Freq_df['time_ratio'] = Transfer_Freq_df['transfer_time'] / Transfer_Freq_df['order'].map(first_transfer_time)
     Transfer_Freq_df['power_ratio'] = Transfer_Freq_df['transfer_power'] / Transfer_Freq_df['order'].map(first_transfer_power)   
     Transfer_Freq_df.to_csv(Transfer_Freq_csv,index=False)
-if Test==3:
+    plt.plot(Transfer_Freq_df['freq'],Transfer_Freq_df['time_ratio'])
+if Test==2:
     Explore_Freq_on_Transfering()
 
 
@@ -1564,6 +1569,8 @@ def Plot_Transfer_VS_Data_size(order,freq_mode):
     plt.xlabel('# Kernels')
     plt.ylabel('Power (mW)')
     plt.show()
+if Test==2:
+    Plot_Transfer_VS_Data_size("BG","min")
 
 
 # set sleep time between tasks to 0 in ARMCL src/graph/detail/ExecuionHelpers.cpp 
@@ -1645,7 +1652,7 @@ def Run_Explore_Data_Size_on_Transfering(_freq_mode="max"):
     for i in orders:
         Plot_Transfer_VS_Data_size(order=orders[i],freq_mode=_freq_mode)
         
-if Test==3:
+if Test==2:
     Run_Explore_Data_Size_on_Transfering(_freq_mode="max")
     Run_Explore_Data_Size_on_Transfering(_freq_mode="min")
 
@@ -1703,14 +1710,22 @@ def _Analyze_Components(g=['alex']):
     }
     grouped_df = grouped_df.groupby(['Component', 'Layer']).agg(aggregations).reset_index()
     #display(grouped_df)
+    grouped_df['Power-Efficiency']=1000.0/grouped_df['Energy']
 
-    pivot_df = grouped_df.pivot_table(index=['Layer'], columns='Component', values=['Time', 'Energy'])
+    pivot_df = grouped_df.pivot_table(index=['Layer'], columns='Component', values=['Time', 'Energy', 'Power-Efficiency'])
     pivot_df.columns = ['{}_{}'.format(col[0], col[1]) for col in pivot_df.columns]
     pivot_df = pivot_df.reset_index()
     try:
         display(pivot_df)
     except:
         pprint.pprint(pivot_df)
+        
+    PE_cols = ['Power-Efficiency_G', 'Power-Efficiency_B', 'Power-Efficiency_L']
+    energy_plot = pivot_df.plot(x='Layer', y=PE_cols, kind='bar', title='Power-Efficiency for Average Freqs {}'.format(g))
+    energy_plot.set_xlabel('Layer')
+    energy_plot.set_ylabel('Power-Efficiency FPS/Watt')
+    plt.show()
+        
     energy_cols = ['Energy_G', 'Energy_B', 'Energy_L']
     energy_plot = pivot_df.plot(x='Layer', y=energy_cols, kind='bar', title='{} Energy for Average Freqs'.format(g))
     energy_plot.set_xlabel('Layer')
@@ -1755,9 +1770,9 @@ def Analyze_Components(g=['alex']):
     grouped_df = grouped_df.groupby(['Freq','Component', 'Layer']).agg(aggregations).reset_index()
     #print(grouped_df)
 
-    grouped_df['Energy-Efficiency']=1000.0/grouped_df['Energy']
+    grouped_df['Power-Efficiency']=1000.0/grouped_df['Energy']
     
-    pivot_df = grouped_df.pivot_table(index=['Layer','Freq'], columns='Component', values=['Time', 'Energy','Energy-Efficiency'])
+    pivot_df = grouped_df.pivot_table(index=['Layer','Freq'], columns='Component', values=['Time', 'Energy','Power-Efficiency'])
     pivot_df.columns = ['{}_{}'.format(col[0], col[1]) for col in pivot_df.columns]
     #pivot_df = grouped_df.pivot_table(index=['Layer','Freq'], columns='Component', values='Energy')
     #pivot_df.columns = ['Energy_{}'.format(col) for col in pivot_df.columns]
@@ -1779,9 +1794,9 @@ def Analyze_Components(g=['alex']):
         'Time_G_MaxFreq': pivot_df[pivot_df['Freq'].isin(max_freq_G.values)]['Time_G'].values,
         'Energy_L_MaxFreq': pivot_df[pivot_df['Freq'].isin(max_freq_L.values)]['Energy_L'].values,
         'Time_L_MaxFreq': pivot_df[pivot_df['Freq'].isin(max_freq_L.values)]['Time_L'].values,
-        'Energy-Efficiency_L_MaxFreq': pivot_df[pivot_df['Freq'].isin(max_freq_L.values)]['Energy-Efficiency_L'].values,
-        'Energy-Efficiency_B_MaxFreq': pivot_df[pivot_df['Freq'].isin(max_freq_B.values)]['Energy-Efficiency_B'].values,
-        'Energy-Efficiency_G_MaxFreq': pivot_df[pivot_df['Freq'].isin(max_freq_G.values)]['Energy-Efficiency_G'].values,
+        'Power-Efficiency_L_MaxFreq': pivot_df[pivot_df['Freq'].isin(max_freq_L.values)]['Power-Efficiency_L'].values,
+        'Power-Efficiency_B_MaxFreq': pivot_df[pivot_df['Freq'].isin(max_freq_B.values)]['Power-Efficiency_B'].values,
+        'Power-Efficiency_G_MaxFreq': pivot_df[pivot_df['Freq'].isin(max_freq_G.values)]['Power-Efficiency_G'].values,
     })
     try:
         display(freq_df)
@@ -1793,8 +1808,8 @@ def Analyze_Components(g=['alex']):
     energy_plot.set_ylabel('Energy')
     plt.show()
     
-    energy_cols = ['Energy-Efficiency_G_MaxFreq', 'Energy-Efficiency_B_MaxFreq', 'Energy-Efficiency_L_MaxFreq']
-    energy_plot = freq_df.plot(x='Layer', y=energy_cols, kind='bar', title='Energy-Efficiency for Freq Max')
+    energy_cols = ['Power-Efficiency_G_MaxFreq', 'Power-Efficiency_B_MaxFreq', 'Power-Efficiency_L_MaxFreq']
+    energy_plot = freq_df.plot(x='Layer', y=energy_cols, kind='bar', title='Power-Efficiency for Freq Max')
     energy_plot.set_xlabel('Layer')
     energy_plot.set_ylabel('Energy')
     plt.show()
@@ -1815,10 +1830,10 @@ def Analyze_Components(g=['alex']):
             pprint.pprint(freq_df)
         
         # Plot Energy-Efficiency columns
-        energy_efficiency_cols = ['Energy-Efficiency_G', 'Energy-Efficiency_B', 'Energy-Efficiency_L']
-        energy_plot = freq_df.plot(x='Layer', y=energy_efficiency_cols, kind='bar', title='Energy-Efficiency for Freq {}'.format(freq))
+        energy_efficiency_cols = ['Power-Efficiency_G', 'Power-Efficiency_B', 'Power-Efficiency_L']
+        energy_plot = freq_df.plot(x='Layer', y=energy_efficiency_cols, kind='bar', title='Power-Efficiency for Freq {}'.format(freq))
         energy_plot.set_xlabel('Layer')
-        energy_plot.set_ylabel('Energy-Efficiency')
+        energy_plot.set_ylabel('Power-Efficiency FPS/Watt')
         plt.show()
 
         # Plot Energy columns
