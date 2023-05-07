@@ -1393,7 +1393,7 @@ if Test==2:
 
 #def Anlze_Error():
 #if True:
-if Test==2:
+if Test==3:
     for g in graphs:
         print(f'Graph: {g}')
         if not Path('Evaluations_'+g+'_prediction.csv').exists():
@@ -1937,7 +1937,7 @@ def Gather_real_profile(_g,_num_evals):
 #3
 if Test==2:
     for g in graphs:
-            Gather_real_profile(g,300)
+            Gather_real_profile(g,1000)
 
 
 def main():

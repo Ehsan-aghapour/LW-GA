@@ -642,14 +642,14 @@ def Analyze(graph_name=graphs,metric=['task','in','out','trans'],comp=['G','B','
                     (Layers_df['Freq_Host'].isin(freq_h))&
                     (Layers_df['Layer'].isin(layers)) ].groupby(index+columns)['Time','Power'].sum().reset_index()
     grouped_df['Energy']=grouped_df['Power']*grouped_df['Time']/1000.0
-    grouped_df['Energy-Efficiency']=1000.0/(grouped_df['Energy'])
+    grouped_df['Power-Efficiency']=1000.0/(grouped_df['Energy'])
     # Create a pivot table to rearrange the data for plotting
     pivot_table = pd.pivot_table(grouped_df, values=parameter, index=index, columns=columns)
     try:
         display(pivot_table)
     except:
         pprint.pprint(pivot_table)
-    pivot_table.plot(kind='bar', stacked=False, figsize=(30, 6))
+    pivot_table.plot(kind='bar', stacked=False, figsize=(30, 12))
     plt.title(f'{metric} {parameter} vs {columns} for {graph_name}')
     plt.xlabel(f'{index}')
     plt.ylabel(f'{metric} {parameter}')
@@ -658,9 +658,9 @@ def Analyze(graph_name=graphs,metric=['task','in','out','trans'],comp=['G','B','
 
 if Test==2:
     g='alex'
-    Analyze(graph_name=[g],metric=['task'],comp=['L'],index=['Layer'],columns=['Freq'],parameter='Energy-Efficiency')
-    Analyze(graph_name=[g],metric=['task'],comp=['B'],index=['Layer'],columns=['Freq'],parameter='Energy-Efficiency')
-    Analyze(graph_name=[g],metric=['task'],comp=['G'],freq_h=[0],index=['Layer'],columns=['Freq'],parameter='Energy-Efficiency')
+    Analyze(graph_name=[g],metric=['task'],comp=['L'],index=['Layer'],columns=['Freq'],parameter='Power-Efficiency')
+    Analyze(graph_name=[g],metric=['task'],comp=['B'],index=['Layer'],columns=['Freq'],parameter='Power-Efficiency')
+    Analyze(graph_name=[g],metric=['task'],comp=['G'],freq_h=[0],index=['Layer'],columns=['Freq'],parameter='Power-Efficiency')
     
 # -
 
@@ -1393,7 +1393,7 @@ if Test==2:
 
 #def Anlze_Error():
 #if True:
-if Test==2:
+if Test==3:
     for g in graphs:
         print(f'Graph: {g}')
         if not Path('Evaluations_'+g+'_prediction.csv').exists():
@@ -1542,7 +1542,8 @@ def Explore_Freq_on_Transfering():
     Transfer_Freq_df['time_ratio'] = Transfer_Freq_df['transfer_time'] / Transfer_Freq_df['order'].map(first_transfer_time)
     Transfer_Freq_df['power_ratio'] = Transfer_Freq_df['transfer_power'] / Transfer_Freq_df['order'].map(first_transfer_power)   
     Transfer_Freq_df.to_csv(Transfer_Freq_csv,index=False)
-if Test==3:
+    plt.plot(Transfer_Freq_df['freq'],Transfer_Freq_df['time_ratio'])
+if Test==2:
     Explore_Freq_on_Transfering()
 
 
@@ -1568,6 +1569,8 @@ def Plot_Transfer_VS_Data_size(order,freq_mode):
     plt.xlabel('# Kernels')
     plt.ylabel('Power (mW)')
     plt.show()
+if Test==2:
+    Plot_Transfer_VS_Data_size("BG","min")
 
 
 # set sleep time between tasks to 0 in ARMCL src/graph/detail/ExecuionHelpers.cpp 
@@ -1649,7 +1652,7 @@ def Run_Explore_Data_Size_on_Transfering(_freq_mode="max"):
     for i in orders:
         Plot_Transfer_VS_Data_size(order=orders[i],freq_mode=_freq_mode)
         
-if Test==3:
+if Test==2:
     Run_Explore_Data_Size_on_Transfering(_freq_mode="max")
     Run_Explore_Data_Size_on_Transfering(_freq_mode="min")
 
@@ -1934,7 +1937,7 @@ def Gather_real_profile(_g,_num_evals):
 #3
 if Test==2:
     for g in graphs:
-            Gather_real_profile(g,300)
+            Gather_real_profile(g,1000)
 
 
 def main():
