@@ -1,0 +1,3003 @@
+List of devices attached
+4UB7RRTHY8	device
+
+disconnected everything
+adbd is already running as root
+remount succeeded
+/home/ehsan/UvA/ARMCL/Rock-Pi/ComputeLibrary_64_Yolov3/utils/DVFS/governor_pandoon.ko: 1 file pushed, 0 skipped. 990.0 MB/s (260080 bytes in 0.000s)
+Module is already inserted, removing and reinserting...
+
+WARNING: linker: Warning: unable to normalize "build/"
+4 Input images are read from /data/local/ARM-CO-UP/assets//ppm_images_224/
+[UtilsPipeline.h] image directory is: /data/local/ARM-CO-UP/assets//ppm_images_224//
+Threads : 1
+Small Cores Threads : 1
+Target : Neon
+Data type : F32
+Data layout : NHWC
+Tuner enabled? : false
+Cache enabled? : false
+Tuner mode : Normal
+Tuner file : 
+MLGO file : 
+Fast math enabled? : false
+Data path : /data/local/ARM-CO-UP/assets//mobilenet/
+Image file : /data/local/ARM-CO-UP/assets//ppm_images_224//
+Labels file : /data/local/ARM-CO-UP/assets//labels.txt
+Partition point is : 0
+Second partition point is : 0
+Order is : LLLLLLLLLLLLLL
+freqs of layers : 
+power_profile_mode : layers
+GPU host is: B
+NPU host is: B
+Number of totla cores is : 6
+Number of little cores is : 4
+Print task names : 0
+Run network for 10 times.
+Layer timing: 0
+
+Adding Graph0 target 1 PE: L Host PE: L Layers: 0-13
+pandoon
+pandoon
+pandoon
+Pandoon opened at 3
+Threads : 1
+Small Cores Threads : 1
+Target : Neon
+Data type : F32
+Data layout : NHWC
+Tuner enabled? : false
+Cache enabled? : false
+Tuner mode : Normal
+Tuner file : 
+MLGO file : 
+Fast math enabled? : false
+Data path : /data/local/ARM-CO-UP/assets//mobilenet/
+Image file : /data/local/ARM-CO-UP/assets//ppm_images_224//
+Labels file : /data/local/ARM-CO-UP/assets//labels.txt
+Partition point is : 0
+Second partition point is : 0
+Order is : LLLLLLLLLLLLLL
+freqs of layers : 
+power_profile_mode : layers
+GPU host is: B
+NPU host is: B
+Number of totla cores is : 6
+Number of little cores is : 4
+Print task names : 0
+Run network for 10 times.
+Layer timing: 0
+
+****************************
+GraphUtils.cpp- reading images: /data/local/ARM-CO-UP/assets//ppm_images_224//
+/data/local/ARM-CO-UP/assets//ppm_images_224//gold_fish.ppm
+/data/local/ARM-CO-UP/assets//ppm_images_224//gondola.ppm
+/data/local/ARM-CO-UP/assets//ppm_images_224//school_bus.ppm
+/data/local/ARM-CO-UP/assets//ppm_images_224//go_kart.ppm
+*****************************
+
+
+
+			0 skipping layer: 
+current layer number: 0 layer name: 
+			0 skipping layer: Conv2d_0
+current layer number: 0 layer name: Conv2d_0
+			0 skipping layer: Conv2d_0/BatchNorm
+current layer number: 0 layer name: Conv2d_0/BatchNorm
+			0 skipping layer: Conv2d_0/Relu6
+current layer number: 0 layer name: Conv2d_0/Relu6
+new sub stream with tail node: 8 and tail graph: 0
+1 layer: Conv2d_1_depthwise/depthwise
+current layer number: 1 layer name: Conv2d_1_depthwise/depthwise
+1 skipping layer: Conv2d_1_depthwise/BatchNorm
+current layer number: 1 layer name: Conv2d_1_depthwise/BatchNorm
+1 skipping layer: Conv2d_1_depthwise/Relu6
+current layer number: 1 layer name: Conv2d_1_depthwise/Relu6
+1 skipping layer: Conv2d_1_pointwise/Conv2D
+current layer number: 1 layer name: Conv2d_1_pointwise/Conv2D
+1 skipping layer: Conv2d_1_pointwise/BatchNorm
+current layer number: 1 layer name: Conv2d_1_pointwise/BatchNorm
+1 skipping layer: Conv2d_1_pointwise/Relu6
+current layer number: 1 layer name: Conv2d_1_pointwise/Relu6
+1 skipping layer: concat
+current layer number: 1 layer name: concat
+new sub stream with tail node: 24 and tail graph: 0
+			2 layer: Conv2d_2_depthwise/depthwise
+current layer number: 2 layer name: Conv2d_2_depthwise/depthwise
+			2 skipping layer: Conv2d_2_depthwise/BatchNorm
+current layer number: 2 layer name: Conv2d_2_depthwise/BatchNorm
+			2 skipping layer: Conv2d_2_depthwise/Relu6
+current layer number: 2 layer name: Conv2d_2_depthwise/Relu6
+			2 skipping layer: Conv2d_2_pointwise/Conv2D
+current layer number: 2 layer name: Conv2d_2_pointwise/Conv2D
+			2 skipping layer: Conv2d_2_pointwise/BatchNorm
+current layer number: 2 layer name: Conv2d_2_pointwise/BatchNorm
+			2 skipping layer: Conv2d_2_pointwise/Relu6
+current layer number: 2 layer name: Conv2d_2_pointwise/Relu6
+			2 skipping layer: concat
+current layer number: 2 layer name: concat
+new sub stream with tail node: 40 and tail graph: 0
+3 layer: Conv2d_3_depthwise/depthwise
+current layer number: 3 layer name: Conv2d_3_depthwise/depthwise
+3 skipping layer: Conv2d_3_depthwise/BatchNorm
+current layer number: 3 layer name: Conv2d_3_depthwise/BatchNorm
+3 skipping layer: Conv2d_3_depthwise/Relu6
+current layer number: 3 layer name: Conv2d_3_depthwise/Relu6
+3 skipping layer: Conv2d_3_pointwise/Conv2D
+current layer number: 3 layer name: Conv2d_3_pointwise/Conv2D
+3 skipping layer: Conv2d_3_pointwise/BatchNorm
+current layer number: 3 layer name: Conv2d_3_pointwise/BatchNorm
+3 skipping layer: Conv2d_3_pointwise/Relu6
+current layer number: 3 layer name: Conv2d_3_pointwise/Relu6
+3 skipping layer: concat
+current layer number: 3 layer name: concat
+new sub stream with tail node: 56 and tail graph: 0
+			4 layer: Conv2d_4_depthwise/depthwise
+current layer number: 4 layer name: Conv2d_4_depthwise/depthwise
+			4 skipping layer: Conv2d_4_depthwise/BatchNorm
+current layer number: 4 layer name: Conv2d_4_depthwise/BatchNorm
+			4 skipping layer: Conv2d_4_depthwise/Relu6
+current layer number: 4 layer name: Conv2d_4_depthwise/Relu6
+			4 skipping layer: Conv2d_4_pointwise/Conv2D
+current layer number: 4 layer name: Conv2d_4_pointwise/Conv2D
+			4 skipping layer: Conv2d_4_pointwise/BatchNorm
+current layer number: 4 layer name: Conv2d_4_pointwise/BatchNorm
+			4 skipping layer: Conv2d_4_pointwise/Relu6
+current layer number: 4 layer name: Conv2d_4_pointwise/Relu6
+			4 skipping layer: concat
+current layer number: 4 layer name: concat
+new sub stream with tail node: 72 and tail graph: 0
+5 layer: Conv2d_5_depthwise/depthwise
+current layer number: 5 layer name: Conv2d_5_depthwise/depthwise
+5 skipping layer: Conv2d_5_depthwise/BatchNorm
+current layer number: 5 layer name: Conv2d_5_depthwise/BatchNorm
+5 skipping layer: Conv2d_5_depthwise/Relu6
+current layer number: 5 layer name: Conv2d_5_depthwise/Relu6
+5 skipping layer: Conv2d_5_pointwise/Conv2D
+current layer number: 5 layer name: Conv2d_5_pointwise/Conv2D
+5 skipping layer: Conv2d_5_pointwise/BatchNorm
+current layer number: 5 layer name: Conv2d_5_pointwise/BatchNorm
+5 skipping layer: Conv2d_5_pointwise/Relu6
+current layer number: 5 layer name: Conv2d_5_pointwise/Relu6
+5 skipping layer: concat
+current layer number: 5 layer name: concat
+new sub stream with tail node: 88 and tail graph: 0
+			6 layer: Conv2d_6_depthwise/depthwise
+current layer number: 6 layer name: Conv2d_6_depthwise/depthwise
+			6 skipping layer: Conv2d_6_depthwise/BatchNorm
+current layer number: 6 layer name: Conv2d_6_depthwise/BatchNorm
+			6 skipping layer: Conv2d_6_depthwise/Relu6
+current layer number: 6 layer name: Conv2d_6_depthwise/Relu6
+			6 skipping layer: Conv2d_6_pointwise/Conv2D
+current layer number: 6 layer name: Conv2d_6_pointwise/Conv2D
+			6 skipping layer: Conv2d_6_pointwise/BatchNorm
+current layer number: 6 layer name: Conv2d_6_pointwise/BatchNorm
+			6 skipping layer: Conv2d_6_pointwise/Relu6
+current layer number: 6 layer name: Conv2d_6_pointwise/Relu6
+			6 skipping layer: concat
+current layer number: 6 layer name: concat
+new sub stream with tail node: 104 and tail graph: 0
+7 layer: Conv2d_7_depthwise/depthwise
+current layer number: 7 layer name: Conv2d_7_depthwise/depthwise
+7 skipping layer: Conv2d_7_depthwise/BatchNorm
+current layer number: 7 layer name: Conv2d_7_depthwise/BatchNorm
+7 skipping layer: Conv2d_7_depthwise/Relu6
+current layer number: 7 layer name: Conv2d_7_depthwise/Relu6
+7 skipping layer: Conv2d_7_pointwise/Conv2D
+current layer number: 7 layer name: Conv2d_7_pointwise/Conv2D
+7 skipping layer: Conv2d_7_pointwise/BatchNorm
+current layer number: 7 layer name: Conv2d_7_pointwise/BatchNorm
+7 skipping layer: Conv2d_7_pointwise/Relu6
+current layer number: 7 layer name: Conv2d_7_pointwise/Relu6
+7 skipping layer: concat
+current layer number: 7 layer name: concat
+new sub stream with tail node: 120 and tail graph: 0
+			8 layer: Conv2d_8_depthwise/depthwise
+current layer number: 8 layer name: Conv2d_8_depthwise/depthwise
+			8 skipping layer: Conv2d_8_depthwise/BatchNorm
+current layer number: 8 layer name: Conv2d_8_depthwise/BatchNorm
+			8 skipping layer: Conv2d_8_depthwise/Relu6
+current layer number: 8 layer name: Conv2d_8_depthwise/Relu6
+			8 skipping layer: Conv2d_8_pointwise/Conv2D
+current layer number: 8 layer name: Conv2d_8_pointwise/Conv2D
+			8 skipping layer: Conv2d_8_pointwise/BatchNorm
+current layer number: 8 layer name: Conv2d_8_pointwise/BatchNorm
+			8 skipping layer: Conv2d_8_pointwise/Relu6
+current layer number: 8 layer name: Conv2d_8_pointwise/Relu6
+			8 skipping layer: concat
+current layer number: 8 layer name: concat
+new sub stream with tail node: 136 and tail graph: 0
+9 layer: Conv2d_9_depthwise/depthwise
+current layer number: 9 layer name: Conv2d_9_depthwise/depthwise
+9 skipping layer: Conv2d_9_depthwise/BatchNorm
+current layer number: 9 layer name: Conv2d_9_depthwise/BatchNorm
+9 skipping layer: Conv2d_9_depthwise/Relu6
+current layer number: 9 layer name: Conv2d_9_depthwise/Relu6
+9 skipping layer: Conv2d_9_pointwise/Conv2D
+current layer number: 9 layer name: Conv2d_9_pointwise/Conv2D
+9 skipping layer: Conv2d_9_pointwise/BatchNorm
+current layer number: 9 layer name: Conv2d_9_pointwise/BatchNorm
+9 skipping layer: Conv2d_9_pointwise/Relu6
+current layer number: 9 layer name: Conv2d_9_pointwise/Relu6
+9 skipping layer: concat
+current layer number: 9 layer name: concat
+new sub stream with tail node: 152 and tail graph: 0
+			10 layer: Conv2d_10_depthwise/depthwise
+current layer number: 10 layer name: Conv2d_10_depthwise/depthwise
+			10 skipping layer: Conv2d_10_depthwise/BatchNorm
+current layer number: 10 layer name: Conv2d_10_depthwise/BatchNorm
+			10 skipping layer: Conv2d_10_depthwise/Relu6
+current layer number: 10 layer name: Conv2d_10_depthwise/Relu6
+			10 skipping layer: Conv2d_10_pointwise/Conv2D
+current layer number: 10 layer name: Conv2d_10_pointwise/Conv2D
+			10 skipping layer: Conv2d_10_pointwise/BatchNorm
+current layer number: 10 layer name: Conv2d_10_pointwise/BatchNorm
+			10 skipping layer: Conv2d_10_pointwise/Relu6
+current layer number: 10 layer name: Conv2d_10_pointwise/Relu6
+			10 skipping layer: concat
+current layer number: 10 layer name: concat
+new sub stream with tail node: 168 and tail graph: 0
+11 layer: Conv2d_11_depthwise/depthwise
+current layer number: 11 layer name: Conv2d_11_depthwise/depthwise
+11 skipping layer: Conv2d_11_depthwise/BatchNorm
+current layer number: 11 layer name: Conv2d_11_depthwise/BatchNorm
+11 skipping layer: Conv2d_11_depthwise/Relu6
+current layer number: 11 layer name: Conv2d_11_depthwise/Relu6
+11 skipping layer: Conv2d_11_pointwise/Conv2D
+current layer number: 11 layer name: Conv2d_11_pointwise/Conv2D
+11 skipping layer: Conv2d_11_pointwise/BatchNorm
+current layer number: 11 layer name: Conv2d_11_pointwise/BatchNorm
+11 skipping layer: Conv2d_11_pointwise/Relu6
+current layer number: 11 layer name: Conv2d_11_pointwise/Relu6
+11 skipping layer: concat
+current layer number: 11 layer name: concat
+new sub stream with tail node: 184 and tail graph: 0
+			12 layer: Conv2d_12_depthwise/depthwise
+current layer number: 12 layer name: Conv2d_12_depthwise/depthwise
+			12 skipping layer: Conv2d_12_depthwise/BatchNorm
+current layer number: 12 layer name: Conv2d_12_depthwise/BatchNorm
+			12 skipping layer: Conv2d_12_depthwise/Relu6
+current layer number: 12 layer name: Conv2d_12_depthwise/Relu6
+			12 skipping layer: Conv2d_12_pointwise/Conv2D
+current layer number: 12 layer name: Conv2d_12_pointwise/Conv2D
+			12 skipping layer: Conv2d_12_pointwise/BatchNorm
+current layer number: 12 layer name: Conv2d_12_pointwise/BatchNorm
+			12 skipping layer: Conv2d_12_pointwise/Relu6
+current layer number: 12 layer name: Conv2d_12_pointwise/Relu6
+			12 skipping layer: concat
+current layer number: 12 layer name: concat
+new sub stream with tail node: 200 and tail graph: 0
+13 layer: Conv2d_13_depthwise/depthwise
+current layer number: 13 layer name: Conv2d_13_depthwise/depthwise
+13 skipping layer: Conv2d_13_depthwise/BatchNorm
+current layer number: 13 layer name: Conv2d_13_depthwise/BatchNorm
+13 skipping layer: Conv2d_13_depthwise/Relu6
+current layer number: 13 layer name: Conv2d_13_depthwise/Relu6
+13 skipping layer: Conv2d_13_pointwise/Conv2D
+current layer number: 13 layer name: Conv2d_13_pointwise/Conv2D
+13 skipping layer: Conv2d_13_pointwise/BatchNorm
+current layer number: 13 layer name: Conv2d_13_pointwise/BatchNorm
+13 skipping layer: Conv2d_13_pointwise/Relu6
+current layer number: 13 layer name: Conv2d_13_pointwise/Relu6
+13 skipping layer: concat
+current layer number: 13 layer name: concat
+			14 layer: Logits/AvgPool_1a
+current layer number: 14 layer name: Logits/AvgPool_1a
+			14 skipping layer: Logits/Conv2d_1c_1x1
+current layer number: 14 layer name: Logits/Conv2d_1c_1x1
+			14 skipping layer: Reshape
+current layer number: 14 layer name: Reshape
+			14 skipping layer: Softmax
+current layer number: 14 layer name: Softmax
+output accessor reading label file /data/local/ARM-CO-UP/assets//labels.txt
+15 layer: 
+current layer number: 15 layer name: 
+
+
+*********************
+Start finalizing Graphs
+*******************
+
+Graph id: 0 Target is: Neon
+Graph (0) Task 0: Conv2d_0
+Graph (0) Task 1: Conv2d_0/BatchNorm
+Graph (0) Task 2: Conv2d_0/Relu6
+Graph (0) Task 3: Conv2d_1_depthwise/depthwise
+Graph (0) Task 4: Conv2d_1_depthwise/BatchNorm
+Graph (0) Task 5: Conv2d_1_depthwise/Relu6
+Graph (0) Task 6: Conv2d_1_pointwise/Conv2D
+Graph (0) Task 7: Conv2d_1_pointwise/BatchNorm
+Graph (0) Task 8: Conv2d_1_pointwise/Relu6
+Graph (0) Task 9: Conv2d_2_depthwise/depthwise
+Graph (0) Task 10: Conv2d_2_depthwise/BatchNorm
+Graph (0) Task 11: Conv2d_2_depthwise/Relu6
+Graph (0) Task 12: Conv2d_2_pointwise/Conv2D
+Graph (0) Task 13: Conv2d_2_pointwise/BatchNorm
+Graph (0) Task 14: Conv2d_2_pointwise/Relu6
+Graph (0) Task 15: Conv2d_3_depthwise/depthwise
+Graph (0) Task 16: Conv2d_3_depthwise/BatchNorm
+Graph (0) Task 17: Conv2d_3_depthwise/Relu6
+Graph (0) Task 18: Conv2d_3_pointwise/Conv2D
+Graph (0) Task 19: Conv2d_3_pointwise/BatchNorm
+Graph (0) Task 20: Conv2d_3_pointwise/Relu6
+Graph (0) Task 21: Conv2d_4_depthwise/depthwise
+Graph (0) Task 22: Conv2d_4_depthwise/BatchNorm
+Graph (0) Task 23: Conv2d_4_depthwise/Relu6
+Graph (0) Task 24: Conv2d_4_pointwise/Conv2D
+Graph (0) Task 25: Conv2d_4_pointwise/BatchNorm
+Graph (0) Task 26: Conv2d_4_pointwise/Relu6
+Graph (0) Task 27: Conv2d_5_depthwise/depthwise
+Graph (0) Task 28: Conv2d_5_depthwise/BatchNorm
+Graph (0) Task 29: Conv2d_5_depthwise/Relu6
+Graph (0) Task 30: Conv2d_5_pointwise/Conv2D
+Graph (0) Task 31: Conv2d_5_pointwise/BatchNorm
+Graph (0) Task 32: Conv2d_5_pointwise/Relu6
+Graph (0) Task 33: Conv2d_6_depthwise/depthwise
+Graph (0) Task 34: Conv2d_6_depthwise/BatchNorm
+Graph (0) Task 35: Conv2d_6_depthwise/Relu6
+Graph (0) Task 36: Conv2d_6_pointwise/Conv2D
+Graph (0) Task 37: Conv2d_6_pointwise/BatchNorm
+Graph (0) Task 38: Conv2d_6_pointwise/Relu6
+Graph (0) Task 39: Conv2d_7_depthwise/depthwise
+Graph (0) Task 40: Conv2d_7_depthwise/BatchNorm
+Graph (0) Task 41: Conv2d_7_depthwise/Relu6
+Graph (0) Task 42: Conv2d_7_pointwise/Conv2D
+Graph (0) Task 43: Conv2d_7_pointwise/BatchNorm
+Graph (0) Task 44: Conv2d_7_pointwise/Relu6
+Graph (0) Task 45: Conv2d_8_depthwise/depthwise
+Graph (0) Task 46: Conv2d_8_depthwise/BatchNorm
+Graph (0) Task 47: Conv2d_8_depthwise/Relu6
+Graph (0) Task 48: Conv2d_8_pointwise/Conv2D
+Graph (0) Task 49: Conv2d_8_pointwise/BatchNorm
+Graph (0) Task 50: Conv2d_8_pointwise/Relu6
+Graph (0) Task 51: Conv2d_9_depthwise/depthwise
+Graph (0) Task 52: Conv2d_9_depthwise/BatchNorm
+Graph (0) Task 53: Conv2d_9_depthwise/Relu6
+Graph (0) Task 54: Conv2d_9_pointwise/Conv2D
+Graph (0) Task 55: Conv2d_9_pointwise/BatchNorm
+Graph (0) Task 56: Conv2d_9_pointwise/Relu6
+Graph (0) Task 57: Conv2d_10_depthwise/depthwise
+Graph (0) Task 58: Conv2d_10_depthwise/BatchNorm
+Graph (0) Task 59: Conv2d_10_depthwise/Relu6
+Graph (0) Task 60: Conv2d_10_pointwise/Conv2D
+Graph (0) Task 61: Conv2d_10_pointwise/BatchNorm
+Graph (0) Task 62: Conv2d_10_pointwise/Relu6
+Graph (0) Task 63: Conv2d_11_depthwise/depthwise
+Graph (0) Task 64: Conv2d_11_depthwise/BatchNorm
+Graph (0) Task 65: Conv2d_11_depthwise/Relu6
+Graph (0) Task 66: Conv2d_11_pointwise/Conv2D
+Graph (0) Task 67: Conv2d_11_pointwise/BatchNorm
+Graph (0) Task 68: Conv2d_11_pointwise/Relu6
+Graph (0) Task 69: Conv2d_12_depthwise/depthwise
+Graph (0) Task 70: Conv2d_12_depthwise/BatchNorm
+Graph (0) Task 71: Conv2d_12_depthwise/Relu6
+Graph (0) Task 72: Conv2d_12_pointwise/Conv2D
+Graph (0) Task 73: Conv2d_12_pointwise/BatchNorm
+Graph (0) Task 74: Conv2d_12_pointwise/Relu6
+Graph (0) Task 75: Conv2d_13_depthwise/depthwise
+Graph (0) Task 76: Conv2d_13_depthwise/BatchNorm
+Graph (0) Task 77: Conv2d_13_depthwise/Relu6
+Graph (0) Task 78: Conv2d_13_pointwise/Conv2D
+Graph (0) Task 79: Conv2d_13_pointwise/BatchNorm
+Graph (0) Task 80: Conv2d_13_pointwise/Relu6
+Graph (0) Task 81: Logits/AvgPool_1a
+Graph (0) Task 82: Logits/Conv2d_1c_1x1
+Graph (0) Task 83: Reshape
+Graph (0) Task 84: Softmax
+Graph 0 input size: 1 receiver size: 0 tasks size: 85 senders size: 0 output size: 1
+
+setting ending for layer: Conv2d_0/Relu6
+setting ending for layer: Conv2d_1_pointwise/Relu6
+setting ending for layer: Conv2d_2_pointwise/Relu6
+setting ending for layer: Conv2d_3_pointwise/Relu6
+setting ending for layer: Conv2d_4_pointwise/Relu6
+setting ending for layer: Conv2d_5_pointwise/Relu6
+setting ending for layer: Conv2d_6_pointwise/Relu6
+setting ending for layer: Conv2d_7_pointwise/Relu6
+setting ending for layer: Conv2d_8_pointwise/Relu6
+setting ending for layer: Conv2d_9_pointwise/Relu6
+setting ending for layer: Conv2d_10_pointwise/Relu6
+setting ending for layer: Conv2d_11_pointwise/Relu6
+setting ending for layer: Conv2d_12_pointwise/Relu6
+setting ending for layer: Softmax
+Finish finalizing graph 0
+
+
+
+setup finished
+
+Please Enter the desired Frequency setttings: 0 Running Graph with 0-0-0-0-0-0-0-0-0-0-0-0-0-0 LW DVFS
+governor 0 task:Conv2d_0/Relu6 freqs:0,0,0
+governor 1 task:Conv2d_10_pointwise/Relu6 freqs:0,0,0
+governor 2 task:Conv2d_11_pointwise/Relu6 freqs:0,0,0
+governor 3 task:Conv2d_12_pointwise/Relu6 freqs:0,0,0
+governor 4 task:Conv2d_1_pointwise/Relu6 freqs:0,0,0
+governor 5 task:Conv2d_2_pointwise/Relu6 freqs:0,0,0
+governor 6 task:Conv2d_3_pointwise/Relu6 freqs:0,0,0
+governor 7 task:Conv2d_4_pointwise/Relu6 freqs:0,0,0
+governor 8 task:Conv2d_5_pointwise/Relu6 freqs:0,0,0
+governor 9 task:Conv2d_6_pointwise/Relu6 freqs:0,0,0
+governor 10 task:Conv2d_7_pointwise/Relu6 freqs:0,0,0
+governor 11 task:Conv2d_8_pointwise/Relu6 freqs:0,0,0
+governor 12 task:Conv2d_9_pointwise/Relu6 freqs:0,0,0
+governor 13 task:Softmax freqs:0,0,0
+set_GPIOs with mode: layers
+tass name: Conv2d_0	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_0/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_0/Relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_1_depthwise/depthwise	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_1_depthwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_1_depthwise/Relu6	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_1_pointwise/Conv2D	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_1_pointwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_1_pointwise/Relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_2_depthwise/depthwise	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_2_depthwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_2_depthwise/Relu6	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_2_pointwise/Conv2D	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_2_pointwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_2_pointwise/Relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_3_depthwise/depthwise	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_3_depthwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_3_depthwise/Relu6	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_3_pointwise/Conv2D	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_3_pointwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_3_pointwise/Relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_4_depthwise/depthwise	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_4_depthwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_4_depthwise/Relu6	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_4_pointwise/Conv2D	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_4_pointwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_4_pointwise/Relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_5_depthwise/depthwise	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_5_depthwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_5_depthwise/Relu6	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_5_pointwise/Conv2D	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_5_pointwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_5_pointwise/Relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_6_depthwise/depthwise	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_6_depthwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_6_depthwise/Relu6	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_6_pointwise/Conv2D	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_6_pointwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_6_pointwise/Relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_7_depthwise/depthwise	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_7_depthwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_7_depthwise/Relu6	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_7_pointwise/Conv2D	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_7_pointwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_7_pointwise/Relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_8_depthwise/depthwise	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_8_depthwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_8_depthwise/Relu6	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_8_pointwise/Conv2D	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_8_pointwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_8_pointwise/Relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_9_depthwise/depthwise	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_9_depthwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_9_depthwise/Relu6	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_9_pointwise/Conv2D	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_9_pointwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_9_pointwise/Relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_10_depthwise/depthwise	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_10_depthwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_10_depthwise/Relu6	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_10_pointwise/Conv2D	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_10_pointwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_10_pointwise/Relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_11_depthwise/depthwise	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_11_depthwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_11_depthwise/Relu6	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_11_pointwise/Conv2D	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_11_pointwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_11_pointwise/Relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_12_depthwise/depthwise	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_12_depthwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_12_depthwise/Relu6	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_12_pointwise/Conv2D	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_12_pointwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_12_pointwise/Relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_13_depthwise/depthwise	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_13_depthwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_13_depthwise/Relu6	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_13_pointwise/Conv2D	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_13_pointwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_13_pointwise/Relu6	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Logits/AvgPool_1a	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Logits/Conv2d_1c_1x1	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Reshape	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Softmax	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+
+
+
+*********************************************
+start running graphs
+*************************************************
+
+
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//gold_fish.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 130], n02007558 flamingo
+0.0000 - [id = 7], n01514668 cock
+0.0000 - [id = 8], n01514859 hen
+0.0000 - [id = 46], n01693334 green lizard, Lacerta viridis
+
+
+************
+Photo_index:1
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//gondola.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.9999 - [id = 576], n03447447 gondola
+0.0000 - [id = 780], n04147183 schooner
+0.0000 - [id = 914], n04612504 yawl
+0.0000 - [id = 536], n03216828 dock, dockage, docking facility
+0.0000 - [id = 449], n02859443 boathouse
+
+
+************
+Photo_index:2
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//school_bus.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 779], n04146614 school bus
+0.0000 - [id = 705], n03895866 passenger car, coach, carriage
+0.0000 - [id = 874], n04487081 trolleybus, trolley coach, trackless trolley
+0.0000 - [id = 864], n04461696 tow truck, tow car, wrecker
+0.0000 - [id = 555], n03345487 fire engine, fire truck
+
+
+************
+Photo_index:3
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//go_kart.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.9916 - [id = 573], n03444034 go-kart
+0.0083 - [id = 518], n03127747 crash helmet
+0.0000 - [id = 560], n03379051 football helmet
+0.0000 - [id = 615], n03623198 knee pad
+0.0000 - [id = 621], n03649909 lawn mower, mower
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//gold_fish.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 130], n02007558 flamingo
+0.0000 - [id = 7], n01514668 cock
+0.0000 - [id = 8], n01514859 hen
+0.0000 - [id = 46], n01693334 green lizard, Lacerta viridis
+
+
+************
+Photo_index:1
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//gondola.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.9999 - [id = 576], n03447447 gondola
+0.0000 - [id = 780], n04147183 schooner
+0.0000 - [id = 914], n04612504 yawl
+0.0000 - [id = 536], n03216828 dock, dockage, docking facility
+0.0000 - [id = 449], n02859443 boathouse
+
+
+************
+Photo_index:2
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//school_bus.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 779], n04146614 school bus
+0.0000 - [id = 705], n03895866 passenger car, coach, carriage
+0.0000 - [id = 874], n04487081 trolleybus, trolley coach, trackless trolley
+0.0000 - [id = 864], n04461696 tow truck, tow car, wrecker
+0.0000 - [id = 555], n03345487 fire engine, fire truck
+
+
+************
+Photo_index:3
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//go_kart.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.9916 - [id = 573], n03444034 go-kart
+0.0083 - [id = 518], n03127747 crash helmet
+0.0000 - [id = 560], n03379051 football helmet
+0.0000 - [id = 615], n03623198 knee pad
+0.0000 - [id = 621], n03649909 lawn mower, mower
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//gold_fish.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 130], n02007558 flamingo
+0.0000 - [id = 7], n01514668 cock
+0.0000 - [id = 8], n01514859 hen
+0.0000 - [id = 46], n01693334 green lizard, Lacerta viridis
+
+
+************
+Photo_index:1
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//gondola.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.9999 - [id = 576], n03447447 gondola
+0.0000 - [id = 780], n04147183 schooner
+0.0000 - [id = 914], n04612504 yawl
+0.0000 - [id = 536], n03216828 dock, dockage, docking facility
+0.0000 - [id = 449], n02859443 boathouse
+
+
+************
+Photo_index:2
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//school_bus.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 779], n04146614 school bus
+0.0000 - [id = 705], n03895866 passenger car, coach, carriage
+0.0000 - [id = 874], n04487081 trolleybus, trolley coach, trackless trolley
+0.0000 - [id = 864], n04461696 tow truck, tow car, wrecker
+0.0000 - [id = 555], n03345487 fire engine, fire truck
+
+
+************
+Photo_index:3
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//go_kart.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.9916 - [id = 573], n03444034 go-kart
+0.0083 - [id = 518], n03127747 crash helmet
+0.0000 - [id = 560], n03379051 football helmet
+0.0000 - [id = 615], n03623198 knee pad
+0.0000 - [id = 621], n03649909 lawn mower, mower
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//gold_fish.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 130], n02007558 flamingo
+0.0000 - [id = 7], n01514668 cock
+0.0000 - [id = 8], n01514859 hen
+0.0000 - [id = 46], n01693334 green lizard, Lacerta viridis
+0	Layer Name: Conv2d_0 	 Layer time: 13.4237 	 number of inputs: 3 	 input shape: 3x224x224 	 output shape: 32x112x112
+1	Layer Name: Conv2d_0/BatchNorm 	 Layer time: 9.27841 	 number of inputs: 5 	 input shape: 32x112x112 	 output shape: 32x112x112
+2	Layer Name: Conv2d_0/Relu6 	 Layer time: 3.72525 	 number of inputs: 1 	 input shape: 32x112x112 	 output shape: 32x112x112
+Layer Number: 0 	 time: 26.4274
+----------------------------
+3	Layer Name: Conv2d_1_depthwise/depthwise 	 Layer time: 6.70361 	 number of inputs: 3 	 input shape: 32x112x112 	 output shape: 32x112x112
+4	Layer Name: Conv2d_1_depthwise/BatchNorm 	 Layer time: 9.27675 	 number of inputs: 5 	 input shape: 32x112x112 	 output shape: 32x112x112
+5	Layer Name: Conv2d_1_depthwise/Relu6 	 Layer time: 3.74214 	 number of inputs: 1 	 input shape: 32x112x112 	 output shape: 32x112x112
+6	Layer Name: Conv2d_1_pointwise/Conv2D 	 Layer time: 19.8082 	 number of inputs: 3 	 input shape: 32x112x112 	 output shape: 64x112x112
+7	Layer Name: Conv2d_1_pointwise/BatchNorm 	 Layer time: 17.5528 	 number of inputs: 5 	 input shape: 64x112x112 	 output shape: 64x112x112
+8	Layer Name: Conv2d_1_pointwise/Relu6 	 Layer time: 6.4416 	 number of inputs: 1 	 input shape: 64x112x112 	 output shape: 64x112x112
+Layer Number: 1 	 time: 63.5251
+----------------------------
+9	Layer Name: Conv2d_2_depthwise/depthwise 	 Layer time: 6.73333 	 number of inputs: 3 	 input shape: 64x112x112 	 output shape: 64x56x56
+10	Layer Name: Conv2d_2_depthwise/BatchNorm 	 Layer time: 4.5306 	 number of inputs: 5 	 input shape: 64x56x56 	 output shape: 64x56x56
+11	Layer Name: Conv2d_2_depthwise/Relu6 	 Layer time: 1.71555 	 number of inputs: 1 	 input shape: 64x56x56 	 output shape: 64x56x56
+12	Layer Name: Conv2d_2_pointwise/Conv2D 	 Layer time: 16.916 	 number of inputs: 3 	 input shape: 64x56x56 	 output shape: 128x56x56
+13	Layer Name: Conv2d_2_pointwise/BatchNorm 	 Layer time: 8.68697 	 number of inputs: 5 	 input shape: 128x56x56 	 output shape: 128x56x56
+14	Layer Name: Conv2d_2_pointwise/Relu6 	 Layer time: 3.08942 	 number of inputs: 1 	 input shape: 128x56x56 	 output shape: 128x56x56
+Layer Number: 2 	 time: 41.6719
+----------------------------
+15	Layer Name: Conv2d_3_depthwise/depthwise 	 Layer time: 6.83311 	 number of inputs: 3 	 input shape: 128x56x56 	 output shape: 128x56x56
+16	Layer Name: Conv2d_3_depthwise/BatchNorm 	 Layer time: 8.65973 	 number of inputs: 5 	 input shape: 128x56x56 	 output shape: 128x56x56
+17	Layer Name: Conv2d_3_depthwise/Relu6 	 Layer time: 3.06443 	 number of inputs: 1 	 input shape: 128x56x56 	 output shape: 128x56x56
+18	Layer Name: Conv2d_3_pointwise/Conv2D 	 Layer time: 33.3067 	 number of inputs: 3 	 input shape: 128x56x56 	 output shape: 128x56x56
+19	Layer Name: Conv2d_3_pointwise/BatchNorm 	 Layer time: 8.68056 	 number of inputs: 5 	 input shape: 128x56x56 	 output shape: 128x56x56
+20	Layer Name: Conv2d_3_pointwise/Relu6 	 Layer time: 3.06784 	 number of inputs: 1 	 input shape: 128x56x56 	 output shape: 128x56x56
+Layer Number: 3 	 time: 63.6124
+----------------------------
+21	Layer Name: Conv2d_4_depthwise/depthwise 	 Layer time: 4.86532 	 number of inputs: 3 	 input shape: 128x56x56 	 output shape: 128x28x28
+22	Layer Name: Conv2d_4_depthwise/BatchNorm 	 Layer time: 2.24986 	 number of inputs: 5 	 input shape: 128x28x28 	 output shape: 128x28x28
+23	Layer Name: Conv2d_4_depthwise/Relu6 	 Layer time: 0.824746 	 number of inputs: 1 	 input shape: 128x28x28 	 output shape: 128x28x28
+24	Layer Name: Conv2d_4_pointwise/Conv2D 	 Layer time: 16.6654 	 number of inputs: 3 	 input shape: 128x28x28 	 output shape: 256x28x28
+25	Layer Name: Conv2d_4_pointwise/BatchNorm 	 Layer time: 4.4002 	 number of inputs: 5 	 input shape: 256x28x28 	 output shape: 256x28x28
+26	Layer Name: Conv2d_4_pointwise/Relu6 	 Layer time: 1.52985 	 number of inputs: 1 	 input shape: 256x28x28 	 output shape: 256x28x28
+Layer Number: 4 	 time: 30.5354
+----------------------------
+27	Layer Name: Conv2d_5_depthwise/depthwise 	 Layer time: 4.24608 	 number of inputs: 3 	 input shape: 256x28x28 	 output shape: 256x28x28
+28	Layer Name: Conv2d_5_depthwise/BatchNorm 	 Layer time: 4.36812 	 number of inputs: 5 	 input shape: 256x28x28 	 output shape: 256x28x28
+29	Layer Name: Conv2d_5_depthwise/Relu6 	 Layer time: 1.5146 	 number of inputs: 1 	 input shape: 256x28x28 	 output shape: 256x28x28
+30	Layer Name: Conv2d_5_pointwise/Conv2D 	 Layer time: 38.1982 	 number of inputs: 3 	 input shape: 256x28x28 	 output shape: 256x28x28
+31	Layer Name: Conv2d_5_pointwise/BatchNorm 	 Layer time: 4.39921 	 number of inputs: 5 	 input shape: 256x28x28 	 output shape: 256x28x28
+32	Layer Name: Conv2d_5_pointwise/Relu6 	 Layer time: 1.53417 	 number of inputs: 1 	 input shape: 256x28x28 	 output shape: 256x28x28
+Layer Number: 5 	 time: 54.2604
+----------------------------
+33	Layer Name: Conv2d_6_depthwise/depthwise 	 Layer time: 3.12098 	 number of inputs: 3 	 input shape: 256x28x28 	 output shape: 256x14x14
+34	Layer Name: Conv2d_6_depthwise/BatchNorm 	 Layer time: 1.14981 	 number of inputs: 5 	 input shape: 256x14x14 	 output shape: 256x14x14
+35	Layer Name: Conv2d_6_depthwise/Relu6 	 Layer time: 0.506483 	 number of inputs: 1 	 input shape: 256x14x14 	 output shape: 256x14x14
+36	Layer Name: Conv2d_6_pointwise/Conv2D 	 Layer time: 10.8126 	 number of inputs: 3 	 input shape: 256x14x14 	 output shape: 512x14x14
+37	Layer Name: Conv2d_6_pointwise/BatchNorm 	 Layer time: 2.31292 	 number of inputs: 5 	 input shape: 512x14x14 	 output shape: 512x14x14
+38	Layer Name: Conv2d_6_pointwise/Relu6 	 Layer time: 0.798846 	 number of inputs: 1 	 input shape: 512x14x14 	 output shape: 512x14x14
+Layer Number: 6 	 time: 18.7016
+----------------------------
+39	Layer Name: Conv2d_7_depthwise/depthwise 	 Layer time: 2.8012 	 number of inputs: 3 	 input shape: 512x14x14 	 output shape: 512x14x14
+40	Layer Name: Conv2d_7_depthwise/BatchNorm 	 Layer time: 2.59006 	 number of inputs: 5 	 input shape: 512x14x14 	 output shape: 512x14x14
+41	Layer Name: Conv2d_7_depthwise/Relu6 	 Layer time: 0.797067 	 number of inputs: 1 	 input shape: 512x14x14 	 output shape: 512x14x14
+42	Layer Name: Conv2d_7_pointwise/Conv2D 	 Layer time: 21.4652 	 number of inputs: 3 	 input shape: 512x14x14 	 output shape: 512x14x14
+43	Layer Name: Conv2d_7_pointwise/BatchNorm 	 Layer time: 2.28629 	 number of inputs: 5 	 input shape: 512x14x14 	 output shape: 512x14x14
+44	Layer Name: Conv2d_7_pointwise/Relu6 	 Layer time: 0.805117 	 number of inputs: 1 	 input shape: 512x14x14 	 output shape: 512x14x14
+Layer Number: 7 	 time: 30.7449
+----------------------------
+45	Layer Name: Conv2d_8_depthwise/depthwise 	 Layer time: 2.76666 	 number of inputs: 3 	 input shape: 512x14x14 	 output shape: 512x14x14
+46	Layer Name: Conv2d_8_depthwise/BatchNorm 	 Layer time: 2.25082 	 number of inputs: 5 	 input shape: 512x14x14 	 output shape: 512x14x14
+47	Layer Name: Conv2d_8_depthwise/Relu6 	 Layer time: 0.776854 	 number of inputs: 1 	 input shape: 512x14x14 	 output shape: 512x14x14
+48	Layer Name: Conv2d_8_pointwise/Conv2D 	 Layer time: 21.6984 	 number of inputs: 3 	 input shape: 512x14x14 	 output shape: 512x14x14
+49	Layer Name: Conv2d_8_pointwise/BatchNorm 	 Layer time: 2.25925 	 number of inputs: 5 	 input shape: 512x14x14 	 output shape: 512x14x14
+50	Layer Name: Conv2d_8_pointwise/Relu6 	 Layer time: 0.775513 	 number of inputs: 1 	 input shape: 512x14x14 	 output shape: 512x14x14
+Layer Number: 8 	 time: 30.5275
+----------------------------
+51	Layer Name: Conv2d_9_depthwise/depthwise 	 Layer time: 2.7925 	 number of inputs: 3 	 input shape: 512x14x14 	 output shape: 512x14x14
+52	Layer Name: Conv2d_9_depthwise/BatchNorm 	 Layer time: 2.29043 	 number of inputs: 5 	 input shape: 512x14x14 	 output shape: 512x14x14
+53	Layer Name: Conv2d_9_depthwise/Relu6 	 Layer time: 0.807625 	 number of inputs: 1 	 input shape: 512x14x14 	 output shape: 512x14x14
+54	Layer Name: Conv2d_9_pointwise/Conv2D 	 Layer time: 21.4735 	 number of inputs: 3 	 input shape: 512x14x14 	 output shape: 512x14x14
+55	Layer Name: Conv2d_9_pointwise/BatchNorm 	 Layer time: 2.27296 	 number of inputs: 5 	 input shape: 512x14x14 	 output shape: 512x14x14
+56	Layer Name: Conv2d_9_pointwise/Relu6 	 Layer time: 0.773384 	 number of inputs: 1 	 input shape: 512x14x14 	 output shape: 512x14x14
+Layer Number: 9 	 time: 30.4104
+----------------------------
+57	Layer Name: Conv2d_10_depthwise/depthwise 	 Layer time: 2.81091 	 number of inputs: 3 	 input shape: 512x14x14 	 output shape: 512x14x14
+58	Layer Name: Conv2d_10_depthwise/BatchNorm 	 Layer time: 2.3065 	 number of inputs: 5 	 input shape: 512x14x14 	 output shape: 512x14x14
+59	Layer Name: Conv2d_10_depthwise/Relu6 	 Layer time: 0.803046 	 number of inputs: 1 	 input shape: 512x14x14 	 output shape: 512x14x14
+60	Layer Name: Conv2d_10_pointwise/Conv2D 	 Layer time: 21.6631 	 number of inputs: 3 	 input shape: 512x14x14 	 output shape: 512x14x14
+61	Layer Name: Conv2d_10_pointwise/BatchNorm 	 Layer time: 2.29171 	 number of inputs: 5 	 input shape: 512x14x14 	 output shape: 512x14x14
+62	Layer Name: Conv2d_10_pointwise/Relu6 	 Layer time: 0.792196 	 number of inputs: 1 	 input shape: 512x14x14 	 output shape: 512x14x14
+Layer Number: 10 	 time: 30.6674
+----------------------------
+63	Layer Name: Conv2d_11_depthwise/depthwise 	 Layer time: 2.79134 	 number of inputs: 3 	 input shape: 512x14x14 	 output shape: 512x14x14
+64	Layer Name: Conv2d_11_depthwise/BatchNorm 	 Layer time: 2.2349 	 number of inputs: 5 	 input shape: 512x14x14 	 output shape: 512x14x14
+65	Layer Name: Conv2d_11_depthwise/Relu6 	 Layer time: 0.791262 	 number of inputs: 1 	 input shape: 512x14x14 	 output shape: 512x14x14
+66	Layer Name: Conv2d_11_pointwise/Conv2D 	 Layer time: 21.4563 	 number of inputs: 3 	 input shape: 512x14x14 	 output shape: 512x14x14
+67	Layer Name: Conv2d_11_pointwise/BatchNorm 	 Layer time: 2.27252 	 number of inputs: 5 	 input shape: 512x14x14 	 output shape: 512x14x14
+68	Layer Name: Conv2d_11_pointwise/Relu6 	 Layer time: 0.790533 	 number of inputs: 1 	 input shape: 512x14x14 	 output shape: 512x14x14
+Layer Number: 11 	 time: 30.3369
+----------------------------
+69	Layer Name: Conv2d_12_depthwise/depthwise 	 Layer time: 2.13672 	 number of inputs: 3 	 input shape: 512x14x14 	 output shape: 512x7x7
+70	Layer Name: Conv2d_12_depthwise/BatchNorm 	 Layer time: 0.636038 	 number of inputs: 5 	 input shape: 512x7x7 	 output shape: 512x7x7
+71	Layer Name: Conv2d_12_depthwise/Relu6 	 Layer time: 0.736958 	 number of inputs: 1 	 input shape: 512x7x7 	 output shape: 512x7x7
+72	Layer Name: Conv2d_12_pointwise/Conv2D 	 Layer time: 19.0451 	 number of inputs: 3 	 input shape: 512x7x7 	 output shape: 1024x7x7
+73	Layer Name: Conv2d_12_pointwise/BatchNorm 	 Layer time: 1.08453 	 number of inputs: 5 	 input shape: 1024x7x7 	 output shape: 1024x7x7
+74	Layer Name: Conv2d_12_pointwise/Relu6 	 Layer time: 1.13035 	 number of inputs: 1 	 input shape: 1024x7x7 	 output shape: 1024x7x7
+Layer Number: 12 	 time: 24.7697
+----------------------------
+75	Layer Name: Conv2d_13_depthwise/depthwise 	 Layer time: 1.64733 	 number of inputs: 3 	 input shape: 1024x7x7 	 output shape: 1024x7x7
+76	Layer Name: Conv2d_13_depthwise/BatchNorm 	 Layer time: 1.16427 	 number of inputs: 5 	 input shape: 1024x7x7 	 output shape: 1024x7x7
+77	Layer Name: Conv2d_13_depthwise/Relu6 	 Layer time: 0.985042 	 number of inputs: 1 	 input shape: 1024x7x7 	 output shape: 1024x7x7
+78	Layer Name: Conv2d_13_pointwise/Conv2D 	 Layer time: 38.7287 	 number of inputs: 3 	 input shape: 1024x7x7 	 output shape: 1024x7x7
+79	Layer Name: Conv2d_13_pointwise/BatchNorm 	 Layer time: 1.07797 	 number of inputs: 5 	 input shape: 1024x7x7 	 output shape: 1024x7x7
+80	Layer Name: Conv2d_13_pointwise/Relu6 	 Layer time: 1.0542 	 number of inputs: 1 	 input shape: 1024x7x7 	 output shape: 1024x7x7
+81	Layer Name: Logits/AvgPool_1a 	 Layer time: 0.903175 	 number of inputs: 1 	 input shape: 1024x7x7 	 output shape: 1024
+82	Layer Name: Logits/Conv2d_1c_1x1 	 Layer time: 1.68872 	 number of inputs: 3 	 input shape: 1024 	 output shape: 1000
+83	Layer Name: Reshape 	 Layer time: 0.440008 	 number of inputs: 1 	 input shape: 1000 	 output shape: 1000
+84	Layer Name: Softmax 	 Layer time: 0.248646 	 number of inputs: 1 	 input shape: 1000 	 output shape: 1000
+Layer Number: 13 	 time: 47.9381
+----------------------------
+
+ Sum of Layers time: 524.129
+
+
+Graph0   Input: 118.809   Task: 1238.29   send: 0.0019539   Out: 0.861904   Process: 1357.97
+
+
+
+********
+
+
+
+AVG Latency: 1357.98
+
+Profiling these DVFS settings finised
+Please Enter the desired Frequency setttings: 1 Running Graph with 1-1-1-1-1-1-1-1-1-1-1-1-1-1 LW DVFS
+governor 0 task:Conv2d_0/Relu6 freqs:1,0,0
+governor 1 task:Conv2d_10_pointwise/Relu6 freqs:1,0,0
+governor 2 task:Conv2d_11_pointwise/Relu6 freqs:1,0,0
+governor 3 task:Conv2d_12_pointwise/Relu6 freqs:1,0,0
+governor 4 task:Conv2d_1_pointwise/Relu6 freqs:1,0,0
+governor 5 task:Conv2d_2_pointwise/Relu6 freqs:1,0,0
+governor 6 task:Conv2d_3_pointwise/Relu6 freqs:1,0,0
+governor 7 task:Conv2d_4_pointwise/Relu6 freqs:1,0,0
+governor 8 task:Conv2d_5_pointwise/Relu6 freqs:1,0,0
+governor 9 task:Conv2d_6_pointwise/Relu6 freqs:1,0,0
+governor 10 task:Conv2d_7_pointwise/Relu6 freqs:1,0,0
+governor 11 task:Conv2d_8_pointwise/Relu6 freqs:1,0,0
+governor 12 task:Conv2d_9_pointwise/Relu6 freqs:1,0,0
+governor 13 task:Softmax freqs:1,0,0
+set_GPIOs with mode: layers
+tass name: Conv2d_0	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_0/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_0/Relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_1_depthwise/depthwise	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_1_depthwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_1_depthwise/Relu6	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_1_pointwise/Conv2D	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_1_pointwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_1_pointwise/Relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_2_depthwise/depthwise	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_2_depthwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_2_depthwise/Relu6	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_2_pointwise/Conv2D	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_2_pointwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_2_pointwise/Relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_3_depthwise/depthwise	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_3_depthwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_3_depthwise/Relu6	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_3_pointwise/Conv2D	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_3_pointwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_3_pointwise/Relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_4_depthwise/depthwise	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_4_depthwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_4_depthwise/Relu6	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_4_pointwise/Conv2D	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_4_pointwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_4_pointwise/Relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_5_depthwise/depthwise	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_5_depthwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_5_depthwise/Relu6	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_5_pointwise/Conv2D	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_5_pointwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_5_pointwise/Relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_6_depthwise/depthwise	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_6_depthwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_6_depthwise/Relu6	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_6_pointwise/Conv2D	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_6_pointwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_6_pointwise/Relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_7_depthwise/depthwise	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_7_depthwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_7_depthwise/Relu6	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_7_pointwise/Conv2D	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_7_pointwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_7_pointwise/Relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_8_depthwise/depthwise	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_8_depthwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_8_depthwise/Relu6	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_8_pointwise/Conv2D	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_8_pointwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_8_pointwise/Relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_9_depthwise/depthwise	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_9_depthwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_9_depthwise/Relu6	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_9_pointwise/Conv2D	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_9_pointwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_9_pointwise/Relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_10_depthwise/depthwise	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_10_depthwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_10_depthwise/Relu6	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_10_pointwise/Conv2D	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_10_pointwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_10_pointwise/Relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_11_depthwise/depthwise	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_11_depthwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_11_depthwise/Relu6	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_11_pointwise/Conv2D	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_11_pointwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_11_pointwise/Relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_12_depthwise/depthwise	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_12_depthwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_12_depthwise/Relu6	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_12_pointwise/Conv2D	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_12_pointwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_12_pointwise/Relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_13_depthwise/depthwise	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_13_depthwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_13_depthwise/Relu6	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_13_pointwise/Conv2D	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_13_pointwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_13_pointwise/Relu6	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Logits/AvgPool_1a	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Logits/Conv2d_1c_1x1	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Reshape	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Softmax	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+
+
+
+*********************************************
+start running graphs
+*************************************************
+
+
+
+
+************
+Photo_index:1
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//gondola.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.9999 - [id = 576], n03447447 gondola
+0.0000 - [id = 780], n04147183 schooner
+0.0000 - [id = 914], n04612504 yawl
+0.0000 - [id = 536], n03216828 dock, dockage, docking facility
+0.0000 - [id = 449], n02859443 boathouse
+
+
+************
+Photo_index:2
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//school_bus.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 779], n04146614 school bus
+0.0000 - [id = 705], n03895866 passenger car, coach, carriage
+0.0000 - [id = 874], n04487081 trolleybus, trolley coach, trackless trolley
+0.0000 - [id = 864], n04461696 tow truck, tow car, wrecker
+0.0000 - [id = 555], n03345487 fire engine, fire truck
+
+
+************
+Photo_index:3
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//go_kart.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.9916 - [id = 573], n03444034 go-kart
+0.0083 - [id = 518], n03127747 crash helmet
+0.0000 - [id = 560], n03379051 football helmet
+0.0000 - [id = 615], n03623198 knee pad
+0.0000 - [id = 621], n03649909 lawn mower, mower
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//gold_fish.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 130], n02007558 flamingo
+0.0000 - [id = 7], n01514668 cock
+0.0000 - [id = 8], n01514859 hen
+0.0000 - [id = 46], n01693334 green lizard, Lacerta viridis
+
+
+************
+Photo_index:1
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//gondola.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.9999 - [id = 576], n03447447 gondola
+0.0000 - [id = 780], n04147183 schooner
+0.0000 - [id = 914], n04612504 yawl
+0.0000 - [id = 536], n03216828 dock, dockage, docking facility
+0.0000 - [id = 449], n02859443 boathouse
+
+
+************
+Photo_index:2
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//school_bus.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 779], n04146614 school bus
+0.0000 - [id = 705], n03895866 passenger car, coach, carriage
+0.0000 - [id = 874], n04487081 trolleybus, trolley coach, trackless trolley
+0.0000 - [id = 864], n04461696 tow truck, tow car, wrecker
+0.0000 - [id = 555], n03345487 fire engine, fire truck
+
+
+************
+Photo_index:3
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//go_kart.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.9916 - [id = 573], n03444034 go-kart
+0.0083 - [id = 518], n03127747 crash helmet
+0.0000 - [id = 560], n03379051 football helmet
+0.0000 - [id = 615], n03623198 knee pad
+0.0000 - [id = 621], n03649909 lawn mower, mower
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//gold_fish.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 130], n02007558 flamingo
+0.0000 - [id = 7], n01514668 cock
+0.0000 - [id = 8], n01514859 hen
+0.0000 - [id = 46], n01693334 green lizard, Lacerta viridis
+
+
+************
+Photo_index:1
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//gondola.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.9999 - [id = 576], n03447447 gondola
+0.0000 - [id = 780], n04147183 schooner
+0.0000 - [id = 914], n04612504 yawl
+0.0000 - [id = 536], n03216828 dock, dockage, docking facility
+0.0000 - [id = 449], n02859443 boathouse
+
+
+************
+Photo_index:2
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//school_bus.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 779], n04146614 school bus
+0.0000 - [id = 705], n03895866 passenger car, coach, carriage
+0.0000 - [id = 874], n04487081 trolleybus, trolley coach, trackless trolley
+0.0000 - [id = 864], n04461696 tow truck, tow car, wrecker
+0.0000 - [id = 555], n03345487 fire engine, fire truck
+
+
+************
+Photo_index:3
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//go_kart.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.9916 - [id = 573], n03444034 go-kart
+0.0083 - [id = 518], n03127747 crash helmet
+0.0000 - [id = 560], n03379051 football helmet
+0.0000 - [id = 615], n03623198 knee pad
+0.0000 - [id = 621], n03649909 lawn mower, mower
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//gold_fish.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 130], n02007558 flamingo
+0.0000 - [id = 7], n01514668 cock
+0.0000 - [id = 8], n01514859 hen
+0.0000 - [id = 46], n01693334 green lizard, Lacerta viridis
+
+
+************
+Photo_index:1
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//gondola.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.9999 - [id = 576], n03447447 gondola
+0.0000 - [id = 780], n04147183 schooner
+0.0000 - [id = 914], n04612504 yawl
+0.0000 - [id = 536], n03216828 dock, dockage, docking facility
+0.0000 - [id = 449], n02859443 boathouse
+0	Layer Name: Conv2d_0 	 Layer time: 9.51741 	 number of inputs: 3 	 input shape: 3x224x224 	 output shape: 32x112x112
+1	Layer Name: Conv2d_0/BatchNorm 	 Layer time: 6.44181 	 number of inputs: 5 	 input shape: 32x112x112 	 output shape: 32x112x112
+2	Layer Name: Conv2d_0/Relu6 	 Layer time: 2.6318 	 number of inputs: 1 	 input shape: 32x112x112 	 output shape: 32x112x112
+Layer Number: 0 	 time: 18.591
+----------------------------
+3	Layer Name: Conv2d_1_depthwise/depthwise 	 Layer time: 5.39322 	 number of inputs: 3 	 input shape: 32x112x112 	 output shape: 32x112x112
+4	Layer Name: Conv2d_1_depthwise/BatchNorm 	 Layer time: 6.4283 	 number of inputs: 5 	 input shape: 32x112x112 	 output shape: 32x112x112
+5	Layer Name: Conv2d_1_depthwise/Relu6 	 Layer time: 2.579 	 number of inputs: 1 	 input shape: 32x112x112 	 output shape: 32x112x112
+6	Layer Name: Conv2d_1_pointwise/Conv2D 	 Layer time: 13.7903 	 number of inputs: 3 	 input shape: 32x112x112 	 output shape: 64x112x112
+7	Layer Name: Conv2d_1_pointwise/BatchNorm 	 Layer time: 12.1706 	 number of inputs: 5 	 input shape: 64x112x112 	 output shape: 64x112x112
+8	Layer Name: Conv2d_1_pointwise/Relu6 	 Layer time: 4.43911 	 number of inputs: 1 	 input shape: 64x112x112 	 output shape: 64x112x112
+Layer Number: 1 	 time: 44.8005
+----------------------------
+9	Layer Name: Conv2d_2_depthwise/depthwise 	 Layer time: 5.33587 	 number of inputs: 3 	 input shape: 64x112x112 	 output shape: 64x56x56
+10	Layer Name: Conv2d_2_depthwise/BatchNorm 	 Layer time: 3.15872 	 number of inputs: 5 	 input shape: 64x56x56 	 output shape: 64x56x56
+11	Layer Name: Conv2d_2_depthwise/Relu6 	 Layer time: 1.19735 	 number of inputs: 1 	 input shape: 64x56x56 	 output shape: 64x56x56
+12	Layer Name: Conv2d_2_pointwise/Conv2D 	 Layer time: 11.8185 	 number of inputs: 3 	 input shape: 64x56x56 	 output shape: 128x56x56
+13	Layer Name: Conv2d_2_pointwise/BatchNorm 	 Layer time: 6.05783 	 number of inputs: 5 	 input shape: 128x56x56 	 output shape: 128x56x56
+14	Layer Name: Conv2d_2_pointwise/Relu6 	 Layer time: 2.121 	 number of inputs: 1 	 input shape: 128x56x56 	 output shape: 128x56x56
+Layer Number: 2 	 time: 29.6892
+----------------------------
+15	Layer Name: Conv2d_3_depthwise/depthwise 	 Layer time: 5.77331 	 number of inputs: 3 	 input shape: 128x56x56 	 output shape: 128x56x56
+16	Layer Name: Conv2d_3_depthwise/BatchNorm 	 Layer time: 6.03091 	 number of inputs: 5 	 input shape: 128x56x56 	 output shape: 128x56x56
+17	Layer Name: Conv2d_3_depthwise/Relu6 	 Layer time: 2.14197 	 number of inputs: 1 	 input shape: 128x56x56 	 output shape: 128x56x56
+18	Layer Name: Conv2d_3_pointwise/Conv2D 	 Layer time: 23.0112 	 number of inputs: 3 	 input shape: 128x56x56 	 output shape: 128x56x56
+19	Layer Name: Conv2d_3_pointwise/BatchNorm 	 Layer time: 6.02755 	 number of inputs: 5 	 input shape: 128x56x56 	 output shape: 128x56x56
+20	Layer Name: Conv2d_3_pointwise/Relu6 	 Layer time: 2.15273 	 number of inputs: 1 	 input shape: 128x56x56 	 output shape: 128x56x56
+Layer Number: 3 	 time: 45.1377
+----------------------------
+21	Layer Name: Conv2d_4_depthwise/depthwise 	 Layer time: 3.94648 	 number of inputs: 3 	 input shape: 128x56x56 	 output shape: 128x28x28
+22	Layer Name: Conv2d_4_depthwise/BatchNorm 	 Layer time: 1.56669 	 number of inputs: 5 	 input shape: 128x28x28 	 output shape: 128x28x28
+23	Layer Name: Conv2d_4_depthwise/Relu6 	 Layer time: 0.593688 	 number of inputs: 1 	 input shape: 128x28x28 	 output shape: 128x28x28
+24	Layer Name: Conv2d_4_pointwise/Conv2D 	 Layer time: 11.4839 	 number of inputs: 3 	 input shape: 128x28x28 	 output shape: 256x28x28
+25	Layer Name: Conv2d_4_pointwise/BatchNorm 	 Layer time: 3.05999 	 number of inputs: 5 	 input shape: 256x28x28 	 output shape: 256x28x28
+26	Layer Name: Conv2d_4_pointwise/Relu6 	 Layer time: 1.19273 	 number of inputs: 1 	 input shape: 256x28x28 	 output shape: 256x28x28
+Layer Number: 4 	 time: 21.8434
+----------------------------
+27	Layer Name: Conv2d_5_depthwise/depthwise 	 Layer time: 3.36526 	 number of inputs: 3 	 input shape: 256x28x28 	 output shape: 256x28x28
+28	Layer Name: Conv2d_5_depthwise/BatchNorm 	 Layer time: 3.06367 	 number of inputs: 5 	 input shape: 256x28x28 	 output shape: 256x28x28
+29	Layer Name: Conv2d_5_depthwise/Relu6 	 Layer time: 1.05017 	 number of inputs: 1 	 input shape: 256x28x28 	 output shape: 256x28x28
+30	Layer Name: Conv2d_5_pointwise/Conv2D 	 Layer time: 26.4158 	 number of inputs: 3 	 input shape: 256x28x28 	 output shape: 256x28x28
+31	Layer Name: Conv2d_5_pointwise/BatchNorm 	 Layer time: 3.0688 	 number of inputs: 5 	 input shape: 256x28x28 	 output shape: 256x28x28
+32	Layer Name: Conv2d_5_pointwise/Relu6 	 Layer time: 1.25445 	 number of inputs: 1 	 input shape: 256x28x28 	 output shape: 256x28x28
+Layer Number: 5 	 time: 38.2181
+----------------------------
+33	Layer Name: Conv2d_6_depthwise/depthwise 	 Layer time: 2.48375 	 number of inputs: 3 	 input shape: 256x28x28 	 output shape: 256x14x14
+34	Layer Name: Conv2d_6_depthwise/BatchNorm 	 Layer time: 0.845804 	 number of inputs: 5 	 input shape: 256x14x14 	 output shape: 256x14x14
+35	Layer Name: Conv2d_6_depthwise/Relu6 	 Layer time: 0.729617 	 number of inputs: 1 	 input shape: 256x14x14 	 output shape: 256x14x14
+36	Layer Name: Conv2d_6_pointwise/Conv2D 	 Layer time: 9.40187 	 number of inputs: 3 	 input shape: 256x14x14 	 output shape: 512x14x14
+37	Layer Name: Conv2d_6_pointwise/BatchNorm 	 Layer time: 1.60291 	 number of inputs: 5 	 input shape: 512x14x14 	 output shape: 512x14x14
+38	Layer Name: Conv2d_6_pointwise/Relu6 	 Layer time: 0.965833 	 number of inputs: 1 	 input shape: 512x14x14 	 output shape: 512x14x14
+Layer Number: 6 	 time: 16.0298
+----------------------------
+39	Layer Name: Conv2d_7_depthwise/depthwise 	 Layer time: 2.12377 	 number of inputs: 3 	 input shape: 512x14x14 	 output shape: 512x14x14
+40	Layer Name: Conv2d_7_depthwise/BatchNorm 	 Layer time: 1.57561 	 number of inputs: 5 	 input shape: 512x14x14 	 output shape: 512x14x14
+41	Layer Name: Conv2d_7_depthwise/Relu6 	 Layer time: 0.603342 	 number of inputs: 1 	 input shape: 512x14x14 	 output shape: 512x14x14
+42	Layer Name: Conv2d_7_pointwise/Conv2D 	 Layer time: 17.3999 	 number of inputs: 3 	 input shape: 512x14x14 	 output shape: 512x14x14
+43	Layer Name: Conv2d_7_pointwise/BatchNorm 	 Layer time: 1.61531 	 number of inputs: 5 	 input shape: 512x14x14 	 output shape: 512x14x14
+44	Layer Name: Conv2d_7_pointwise/Relu6 	 Layer time: 0.950138 	 number of inputs: 1 	 input shape: 512x14x14 	 output shape: 512x14x14
+Layer Number: 7 	 time: 24.268
+----------------------------
+45	Layer Name: Conv2d_8_depthwise/depthwise 	 Layer time: 2.08224 	 number of inputs: 3 	 input shape: 512x14x14 	 output shape: 512x14x14
+46	Layer Name: Conv2d_8_depthwise/BatchNorm 	 Layer time: 1.60268 	 number of inputs: 5 	 input shape: 512x14x14 	 output shape: 512x14x14
+47	Layer Name: Conv2d_8_depthwise/Relu6 	 Layer time: 0.612588 	 number of inputs: 1 	 input shape: 512x14x14 	 output shape: 512x14x14
+48	Layer Name: Conv2d_8_pointwise/Conv2D 	 Layer time: 17.497 	 number of inputs: 3 	 input shape: 512x14x14 	 output shape: 512x14x14
+49	Layer Name: Conv2d_8_pointwise/BatchNorm 	 Layer time: 1.59469 	 number of inputs: 5 	 input shape: 512x14x14 	 output shape: 512x14x14
+50	Layer Name: Conv2d_8_pointwise/Relu6 	 Layer time: 0.835646 	 number of inputs: 1 	 input shape: 512x14x14 	 output shape: 512x14x14
+Layer Number: 8 	 time: 24.2248
+----------------------------
+51	Layer Name: Conv2d_9_depthwise/depthwise 	 Layer time: 2.07611 	 number of inputs: 3 	 input shape: 512x14x14 	 output shape: 512x14x14
+52	Layer Name: Conv2d_9_depthwise/BatchNorm 	 Layer time: 1.61636 	 number of inputs: 5 	 input shape: 512x14x14 	 output shape: 512x14x14
+53	Layer Name: Conv2d_9_depthwise/Relu6 	 Layer time: 0.725075 	 number of inputs: 1 	 input shape: 512x14x14 	 output shape: 512x14x14
+54	Layer Name: Conv2d_9_pointwise/Conv2D 	 Layer time: 17.3673 	 number of inputs: 3 	 input shape: 512x14x14 	 output shape: 512x14x14
+55	Layer Name: Conv2d_9_pointwise/BatchNorm 	 Layer time: 1.59845 	 number of inputs: 5 	 input shape: 512x14x14 	 output shape: 512x14x14
+56	Layer Name: Conv2d_9_pointwise/Relu6 	 Layer time: 0.905221 	 number of inputs: 1 	 input shape: 512x14x14 	 output shape: 512x14x14
+Layer Number: 9 	 time: 24.2885
+----------------------------
+57	Layer Name: Conv2d_10_depthwise/depthwise 	 Layer time: 2.08443 	 number of inputs: 3 	 input shape: 512x14x14 	 output shape: 512x14x14
+58	Layer Name: Conv2d_10_depthwise/BatchNorm 	 Layer time: 1.59556 	 number of inputs: 5 	 input shape: 512x14x14 	 output shape: 512x14x14
+59	Layer Name: Conv2d_10_depthwise/Relu6 	 Layer time: 0.779321 	 number of inputs: 1 	 input shape: 512x14x14 	 output shape: 512x14x14
+60	Layer Name: Conv2d_10_pointwise/Conv2D 	 Layer time: 17.5169 	 number of inputs: 3 	 input shape: 512x14x14 	 output shape: 512x14x14
+61	Layer Name: Conv2d_10_pointwise/BatchNorm 	 Layer time: 1.61335 	 number of inputs: 5 	 input shape: 512x14x14 	 output shape: 512x14x14
+62	Layer Name: Conv2d_10_pointwise/Relu6 	 Layer time: 0.859271 	 number of inputs: 1 	 input shape: 512x14x14 	 output shape: 512x14x14
+Layer Number: 10 	 time: 24.4489
+----------------------------
+63	Layer Name: Conv2d_11_depthwise/depthwise 	 Layer time: 2.06827 	 number of inputs: 3 	 input shape: 512x14x14 	 output shape: 512x14x14
+64	Layer Name: Conv2d_11_depthwise/BatchNorm 	 Layer time: 1.60049 	 number of inputs: 5 	 input shape: 512x14x14 	 output shape: 512x14x14
+65	Layer Name: Conv2d_11_depthwise/Relu6 	 Layer time: 0.703458 	 number of inputs: 1 	 input shape: 512x14x14 	 output shape: 512x14x14
+66	Layer Name: Conv2d_11_pointwise/Conv2D 	 Layer time: 17.3393 	 number of inputs: 3 	 input shape: 512x14x14 	 output shape: 512x14x14
+67	Layer Name: Conv2d_11_pointwise/BatchNorm 	 Layer time: 1.61055 	 number of inputs: 5 	 input shape: 512x14x14 	 output shape: 512x14x14
+68	Layer Name: Conv2d_11_pointwise/Relu6 	 Layer time: 1.04899 	 number of inputs: 1 	 input shape: 512x14x14 	 output shape: 512x14x14
+Layer Number: 11 	 time: 24.3711
+----------------------------
+69	Layer Name: Conv2d_12_depthwise/depthwise 	 Layer time: 1.6767 	 number of inputs: 3 	 input shape: 512x14x14 	 output shape: 512x7x7
+70	Layer Name: Conv2d_12_depthwise/BatchNorm 	 Layer time: 0.667479 	 number of inputs: 5 	 input shape: 512x7x7 	 output shape: 512x7x7
+71	Layer Name: Conv2d_12_depthwise/Relu6 	 Layer time: 0.643233 	 number of inputs: 1 	 input shape: 512x7x7 	 output shape: 512x7x7
+72	Layer Name: Conv2d_12_pointwise/Conv2D 	 Layer time: 13.2609 	 number of inputs: 3 	 input shape: 512x7x7 	 output shape: 1024x7x7
+73	Layer Name: Conv2d_12_pointwise/BatchNorm 	 Layer time: 1.06891 	 number of inputs: 5 	 input shape: 1024x7x7 	 output shape: 1024x7x7
+74	Layer Name: Conv2d_12_pointwise/Relu6 	 Layer time: 0.695471 	 number of inputs: 1 	 input shape: 1024x7x7 	 output shape: 1024x7x7
+Layer Number: 12 	 time: 18.0127
+----------------------------
+75	Layer Name: Conv2d_13_depthwise/depthwise 	 Layer time: 1.29961 	 number of inputs: 3 	 input shape: 1024x7x7 	 output shape: 1024x7x7
+76	Layer Name: Conv2d_13_depthwise/BatchNorm 	 Layer time: 0.930592 	 number of inputs: 5 	 input shape: 1024x7x7 	 output shape: 1024x7x7
+77	Layer Name: Conv2d_13_depthwise/Relu6 	 Layer time: 0.508167 	 number of inputs: 1 	 input shape: 1024x7x7 	 output shape: 1024x7x7
+78	Layer Name: Conv2d_13_pointwise/Conv2D 	 Layer time: 27.2517 	 number of inputs: 3 	 input shape: 1024x7x7 	 output shape: 1024x7x7
+79	Layer Name: Conv2d_13_pointwise/BatchNorm 	 Layer time: 0.945534 	 number of inputs: 5 	 input shape: 1024x7x7 	 output shape: 1024x7x7
+80	Layer Name: Conv2d_13_pointwise/Relu6 	 Layer time: 0.68205 	 number of inputs: 1 	 input shape: 1024x7x7 	 output shape: 1024x7x7
+81	Layer Name: Logits/AvgPool_1a 	 Layer time: 0.823171 	 number of inputs: 1 	 input shape: 1024x7x7 	 output shape: 1024
+82	Layer Name: Logits/Conv2d_1c_1x1 	 Layer time: 2.01426 	 number of inputs: 3 	 input shape: 1024 	 output shape: 1000
+83	Layer Name: Reshape 	 Layer time: 0.304529 	 number of inputs: 1 	 input shape: 1000 	 output shape: 1000
+84	Layer Name: Softmax 	 Layer time: 0.186258 	 number of inputs: 1 	 input shape: 1000 	 output shape: 1000
+Layer Number: 13 	 time: 34.9458
+----------------------------
+
+ Sum of Layers time: 388.87
+
+
+Graph0   Input: 80.7393   Task: 1098.71   send: 0.0016916   Out: 0.6279   Process: 1180.07
+
+
+
+********
+
+
+
+AVG Latency: 1180.08
+
+Profiling these DVFS settings finised
+Please Enter the desired Frequency setttings: 2 Running Graph with 2-2-2-2-2-2-2-2-2-2-2-2-2-2 LW DVFS
+governor 0 task:Conv2d_0/Relu6 freqs:2,0,0
+governor 1 task:Conv2d_10_pointwise/Relu6 freqs:2,0,0
+governor 2 task:Conv2d_11_pointwise/Relu6 freqs:2,0,0
+governor 3 task:Conv2d_12_pointwise/Relu6 freqs:2,0,0
+governor 4 task:Conv2d_1_pointwise/Relu6 freqs:2,0,0
+governor 5 task:Conv2d_2_pointwise/Relu6 freqs:2,0,0
+governor 6 task:Conv2d_3_pointwise/Relu6 freqs:2,0,0
+governor 7 task:Conv2d_4_pointwise/Relu6 freqs:2,0,0
+governor 8 task:Conv2d_5_pointwise/Relu6 freqs:2,0,0
+governor 9 task:Conv2d_6_pointwise/Relu6 freqs:2,0,0
+governor 10 task:Conv2d_7_pointwise/Relu6 freqs:2,0,0
+governor 11 task:Conv2d_8_pointwise/Relu6 freqs:2,0,0
+governor 12 task:Conv2d_9_pointwise/Relu6 freqs:2,0,0
+governor 13 task:Softmax freqs:2,0,0
+set_GPIOs with mode: layers
+tass name: Conv2d_0	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_0/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_0/Relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_1_depthwise/depthwise	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_1_depthwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_1_depthwise/Relu6	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_1_pointwise/Conv2D	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_1_pointwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_1_pointwise/Relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_2_depthwise/depthwise	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_2_depthwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_2_depthwise/Relu6	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_2_pointwise/Conv2D	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_2_pointwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_2_pointwise/Relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_3_depthwise/depthwise	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_3_depthwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_3_depthwise/Relu6	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_3_pointwise/Conv2D	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_3_pointwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_3_pointwise/Relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_4_depthwise/depthwise	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_4_depthwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_4_depthwise/Relu6	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_4_pointwise/Conv2D	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_4_pointwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_4_pointwise/Relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_5_depthwise/depthwise	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_5_depthwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_5_depthwise/Relu6	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_5_pointwise/Conv2D	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_5_pointwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_5_pointwise/Relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_6_depthwise/depthwise	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_6_depthwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_6_depthwise/Relu6	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_6_pointwise/Conv2D	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_6_pointwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_6_pointwise/Relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_7_depthwise/depthwise	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_7_depthwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_7_depthwise/Relu6	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_7_pointwise/Conv2D	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_7_pointwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_7_pointwise/Relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_8_depthwise/depthwise	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_8_depthwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_8_depthwise/Relu6	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_8_pointwise/Conv2D	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_8_pointwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_8_pointwise/Relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_9_depthwise/depthwise	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_9_depthwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_9_depthwise/Relu6	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_9_pointwise/Conv2D	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_9_pointwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_9_pointwise/Relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_10_depthwise/depthwise	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_10_depthwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_10_depthwise/Relu6	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_10_pointwise/Conv2D	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_10_pointwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_10_pointwise/Relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_11_depthwise/depthwise	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_11_depthwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_11_depthwise/Relu6	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_11_pointwise/Conv2D	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_11_pointwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_11_pointwise/Relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_12_depthwise/depthwise	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_12_depthwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_12_depthwise/Relu6	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_12_pointwise/Conv2D	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_12_pointwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_12_pointwise/Relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_13_depthwise/depthwise	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_13_depthwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_13_depthwise/Relu6	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_13_pointwise/Conv2D	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_13_pointwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_13_pointwise/Relu6	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Logits/AvgPool_1a	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Logits/Conv2d_1c_1x1	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Reshape	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Softmax	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+
+
+
+*********************************************
+start running graphs
+*************************************************
+
+
+
+
+************
+Photo_index:2
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//school_bus.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 779], n04146614 school bus
+0.0000 - [id = 705], n03895866 passenger car, coach, carriage
+0.0000 - [id = 874], n04487081 trolleybus, trolley coach, trackless trolley
+0.0000 - [id = 864], n04461696 tow truck, tow car, wrecker
+0.0000 - [id = 555], n03345487 fire engine, fire truck
+
+
+************
+Photo_index:3
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//go_kart.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.9916 - [id = 573], n03444034 go-kart
+0.0083 - [id = 518], n03127747 crash helmet
+0.0000 - [id = 560], n03379051 football helmet
+0.0000 - [id = 615], n03623198 knee pad
+0.0000 - [id = 621], n03649909 lawn mower, mower
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//gold_fish.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 130], n02007558 flamingo
+0.0000 - [id = 7], n01514668 cock
+0.0000 - [id = 8], n01514859 hen
+0.0000 - [id = 46], n01693334 green lizard, Lacerta viridis
+
+
+************
+Photo_index:1
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//gondola.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.9999 - [id = 576], n03447447 gondola
+0.0000 - [id = 780], n04147183 schooner
+0.0000 - [id = 914], n04612504 yawl
+0.0000 - [id = 536], n03216828 dock, dockage, docking facility
+0.0000 - [id = 449], n02859443 boathouse
+
+
+************
+Photo_index:2
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//school_bus.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 779], n04146614 school bus
+0.0000 - [id = 705], n03895866 passenger car, coach, carriage
+0.0000 - [id = 874], n04487081 trolleybus, trolley coach, trackless trolley
+0.0000 - [id = 864], n04461696 tow truck, tow car, wrecker
+0.0000 - [id = 555], n03345487 fire engine, fire truck
+
+
+************
+Photo_index:3
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//go_kart.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.9916 - [id = 573], n03444034 go-kart
+0.0083 - [id = 518], n03127747 crash helmet
+0.0000 - [id = 560], n03379051 football helmet
+0.0000 - [id = 615], n03623198 knee pad
+0.0000 - [id = 621], n03649909 lawn mower, mower
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//gold_fish.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 130], n02007558 flamingo
+0.0000 - [id = 7], n01514668 cock
+0.0000 - [id = 8], n01514859 hen
+0.0000 - [id = 46], n01693334 green lizard, Lacerta viridis
+
+
+************
+Photo_index:1
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//gondola.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.9999 - [id = 576], n03447447 gondola
+0.0000 - [id = 780], n04147183 schooner
+0.0000 - [id = 914], n04612504 yawl
+0.0000 - [id = 536], n03216828 dock, dockage, docking facility
+0.0000 - [id = 449], n02859443 boathouse
+
+
+************
+Photo_index:2
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//school_bus.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 779], n04146614 school bus
+0.0000 - [id = 705], n03895866 passenger car, coach, carriage
+0.0000 - [id = 874], n04487081 trolleybus, trolley coach, trackless trolley
+0.0000 - [id = 864], n04461696 tow truck, tow car, wrecker
+0.0000 - [id = 555], n03345487 fire engine, fire truck
+
+
+************
+Photo_index:3
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//go_kart.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.9916 - [id = 573], n03444034 go-kart
+0.0083 - [id = 518], n03127747 crash helmet
+0.0000 - [id = 560], n03379051 football helmet
+0.0000 - [id = 615], n03623198 knee pad
+0.0000 - [id = 621], n03649909 lawn mower, mower
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//gold_fish.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 130], n02007558 flamingo
+0.0000 - [id = 7], n01514668 cock
+0.0000 - [id = 8], n01514859 hen
+0.0000 - [id = 46], n01693334 green lizard, Lacerta viridis
+
+
+************
+Photo_index:1
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//gondola.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.9999 - [id = 576], n03447447 gondola
+0.0000 - [id = 780], n04147183 schooner
+0.0000 - [id = 914], n04612504 yawl
+0.0000 - [id = 536], n03216828 dock, dockage, docking facility
+0.0000 - [id = 449], n02859443 boathouse
+
+
+************
+Photo_index:2
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//school_bus.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 779], n04146614 school bus
+0.0000 - [id = 705], n03895866 passenger car, coach, carriage
+0.0000 - [id = 874], n04487081 trolleybus, trolley coach, trackless trolley
+0.0000 - [id = 864], n04461696 tow truck, tow car, wrecker
+0.0000 - [id = 555], n03345487 fire engine, fire truck
+0	Layer Name: Conv2d_0 	 Layer time: 7.83987 	 number of inputs: 3 	 input shape: 3x224x224 	 output shape: 32x112x112
+1	Layer Name: Conv2d_0/BatchNorm 	 Layer time: 4.79693 	 number of inputs: 5 	 input shape: 32x112x112 	 output shape: 32x112x112
+2	Layer Name: Conv2d_0/Relu6 	 Layer time: 2.16853 	 number of inputs: 1 	 input shape: 32x112x112 	 output shape: 32x112x112
+Layer Number: 0 	 time: 14.8053
+----------------------------
+3	Layer Name: Conv2d_1_depthwise/depthwise 	 Layer time: 5.34472 	 number of inputs: 3 	 input shape: 32x112x112 	 output shape: 32x112x112
+4	Layer Name: Conv2d_1_depthwise/BatchNorm 	 Layer time: 4.80355 	 number of inputs: 5 	 input shape: 32x112x112 	 output shape: 32x112x112
+5	Layer Name: Conv2d_1_depthwise/Relu6 	 Layer time: 1.94559 	 number of inputs: 1 	 input shape: 32x112x112 	 output shape: 32x112x112
+6	Layer Name: Conv2d_1_pointwise/Conv2D 	 Layer time: 10.494 	 number of inputs: 3 	 input shape: 32x112x112 	 output shape: 64x112x112
+7	Layer Name: Conv2d_1_pointwise/BatchNorm 	 Layer time: 9.12573 	 number of inputs: 5 	 input shape: 64x112x112 	 output shape: 64x112x112
+8	Layer Name: Conv2d_1_pointwise/Relu6 	 Layer time: 3.46437 	 number of inputs: 1 	 input shape: 64x112x112 	 output shape: 64x112x112
+Layer Number: 1 	 time: 35.1779
+----------------------------
+9	Layer Name: Conv2d_2_depthwise/depthwise 	 Layer time: 4.55586 	 number of inputs: 3 	 input shape: 64x112x112 	 output shape: 64x56x56
+10	Layer Name: Conv2d_2_depthwise/BatchNorm 	 Layer time: 2.35197 	 number of inputs: 5 	 input shape: 64x56x56 	 output shape: 64x56x56
+11	Layer Name: Conv2d_2_depthwise/Relu6 	 Layer time: 1.17185 	 number of inputs: 1 	 input shape: 64x56x56 	 output shape: 64x56x56
+12	Layer Name: Conv2d_2_pointwise/Conv2D 	 Layer time: 11.6026 	 number of inputs: 3 	 input shape: 64x56x56 	 output shape: 128x56x56
+13	Layer Name: Conv2d_2_pointwise/BatchNorm 	 Layer time: 4.53944 	 number of inputs: 5 	 input shape: 128x56x56 	 output shape: 128x56x56
+14	Layer Name: Conv2d_2_pointwise/Relu6 	 Layer time: 1.74283 	 number of inputs: 1 	 input shape: 128x56x56 	 output shape: 128x56x56
+Layer Number: 2 	 time: 25.9646
+----------------------------
+15	Layer Name: Conv2d_3_depthwise/depthwise 	 Layer time: 5.72154 	 number of inputs: 3 	 input shape: 128x56x56 	 output shape: 128x56x56
+16	Layer Name: Conv2d_3_depthwise/BatchNorm 	 Layer time: 4.51964 	 number of inputs: 5 	 input shape: 128x56x56 	 output shape: 128x56x56
+17	Layer Name: Conv2d_3_depthwise/Relu6 	 Layer time: 1.62403 	 number of inputs: 1 	 input shape: 128x56x56 	 output shape: 128x56x56
+18	Layer Name: Conv2d_3_pointwise/Conv2D 	 Layer time: 22.4344 	 number of inputs: 3 	 input shape: 128x56x56 	 output shape: 128x56x56
+19	Layer Name: Conv2d_3_pointwise/BatchNorm 	 Layer time: 4.75778 	 number of inputs: 5 	 input shape: 128x56x56 	 output shape: 128x56x56
+20	Layer Name: Conv2d_3_pointwise/Relu6 	 Layer time: 1.90329 	 number of inputs: 1 	 input shape: 128x56x56 	 output shape: 128x56x56
+Layer Number: 3 	 time: 40.9607
+----------------------------
+21	Layer Name: Conv2d_4_depthwise/depthwise 	 Layer time: 3.4323 	 number of inputs: 3 	 input shape: 128x56x56 	 output shape: 128x28x28
+22	Layer Name: Conv2d_4_depthwise/BatchNorm 	 Layer time: 1.52273 	 number of inputs: 5 	 input shape: 128x28x28 	 output shape: 128x28x28
+23	Layer Name: Conv2d_4_depthwise/Relu6 	 Layer time: 0.719767 	 number of inputs: 1 	 input shape: 128x28x28 	 output shape: 128x28x28
+24	Layer Name: Conv2d_4_pointwise/Conv2D 	 Layer time: 11.2841 	 number of inputs: 3 	 input shape: 128x28x28 	 output shape: 256x28x28
+25	Layer Name: Conv2d_4_pointwise/BatchNorm 	 Layer time: 2.30186 	 number of inputs: 5 	 input shape: 256x28x28 	 output shape: 256x28x28
+26	Layer Name: Conv2d_4_pointwise/Relu6 	 Layer time: 1.30914 	 number of inputs: 1 	 input shape: 256x28x28 	 output shape: 256x28x28
+Layer Number: 4 	 time: 20.5699
+----------------------------
+27	Layer Name: Conv2d_5_depthwise/depthwise 	 Layer time: 3.37703 	 number of inputs: 3 	 input shape: 256x28x28 	 output shape: 256x28x28
+28	Layer Name: Conv2d_5_depthwise/BatchNorm 	 Layer time: 2.30227 	 number of inputs: 5 	 input shape: 256x28x28 	 output shape: 256x28x28
+29	Layer Name: Conv2d_5_depthwise/Relu6 	 Layer time: 1.30427 	 number of inputs: 1 	 input shape: 256x28x28 	 output shape: 256x28x28
+30	Layer Name: Conv2d_5_pointwise/Conv2D 	 Layer time: 21.8933 	 number of inputs: 3 	 input shape: 256x28x28 	 output shape: 256x28x28
+31	Layer Name: Conv2d_5_pointwise/BatchNorm 	 Layer time: 2.84028 	 number of inputs: 5 	 input shape: 256x28x28 	 output shape: 256x28x28
+32	Layer Name: Conv2d_5_pointwise/Relu6 	 Layer time: 1.29581 	 number of inputs: 1 	 input shape: 256x28x28 	 output shape: 256x28x28
+Layer Number: 5 	 time: 33.013
+----------------------------
+33	Layer Name: Conv2d_6_depthwise/depthwise 	 Layer time: 2.10093 	 number of inputs: 3 	 input shape: 256x28x28 	 output shape: 256x14x14
+34	Layer Name: Conv2d_6_depthwise/BatchNorm 	 Layer time: 0.881171 	 number of inputs: 5 	 input shape: 256x14x14 	 output shape: 256x14x14
+35	Layer Name: Conv2d_6_depthwise/Relu6 	 Layer time: 0.65605 	 number of inputs: 1 	 input shape: 256x14x14 	 output shape: 256x14x14
+36	Layer Name: Conv2d_6_pointwise/Conv2D 	 Layer time: 7.61606 	 number of inputs: 3 	 input shape: 256x14x14 	 output shape: 512x14x14
+37	Layer Name: Conv2d_6_pointwise/BatchNorm 	 Layer time: 1.22544 	 number of inputs: 5 	 input shape: 512x14x14 	 output shape: 512x14x14
+38	Layer Name: Conv2d_6_pointwise/Relu6 	 Layer time: 0.858804 	 number of inputs: 1 	 input shape: 512x14x14 	 output shape: 512x14x14
+Layer Number: 6 	 time: 13.3385
+----------------------------
+39	Layer Name: Conv2d_7_depthwise/depthwise 	 Layer time: 2.09478 	 number of inputs: 3 	 input shape: 512x14x14 	 output shape: 512x14x14
+40	Layer Name: Conv2d_7_depthwise/BatchNorm 	 Layer time: 1.19834 	 number of inputs: 5 	 input shape: 512x14x14 	 output shape: 512x14x14
+41	Layer Name: Conv2d_7_depthwise/Relu6 	 Layer time: 0.981429 	 number of inputs: 1 	 input shape: 512x14x14 	 output shape: 512x14x14
+42	Layer Name: Conv2d_7_pointwise/Conv2D 	 Layer time: 14.8088 	 number of inputs: 3 	 input shape: 512x14x14 	 output shape: 512x14x14
+43	Layer Name: Conv2d_7_pointwise/BatchNorm 	 Layer time: 1.23731 	 number of inputs: 5 	 input shape: 512x14x14 	 output shape: 512x14x14
+44	Layer Name: Conv2d_7_pointwise/Relu6 	 Layer time: 0.86123 	 number of inputs: 1 	 input shape: 512x14x14 	 output shape: 512x14x14
+Layer Number: 7 	 time: 21.1819
+----------------------------
+45	Layer Name: Conv2d_8_depthwise/depthwise 	 Layer time: 2.14412 	 number of inputs: 3 	 input shape: 512x14x14 	 output shape: 512x14x14
+46	Layer Name: Conv2d_8_depthwise/BatchNorm 	 Layer time: 1.21228 	 number of inputs: 5 	 input shape: 512x14x14 	 output shape: 512x14x14
+47	Layer Name: Conv2d_8_depthwise/Relu6 	 Layer time: 0.732633 	 number of inputs: 1 	 input shape: 512x14x14 	 output shape: 512x14x14
+48	Layer Name: Conv2d_8_pointwise/Conv2D 	 Layer time: 14.9399 	 number of inputs: 3 	 input shape: 512x14x14 	 output shape: 512x14x14
+49	Layer Name: Conv2d_8_pointwise/BatchNorm 	 Layer time: 1.31155 	 number of inputs: 5 	 input shape: 512x14x14 	 output shape: 512x14x14
+50	Layer Name: Conv2d_8_pointwise/Relu6 	 Layer time: 0.831633 	 number of inputs: 1 	 input shape: 512x14x14 	 output shape: 512x14x14
+Layer Number: 8 	 time: 21.1721
+----------------------------
+51	Layer Name: Conv2d_9_depthwise/depthwise 	 Layer time: 2.19651 	 number of inputs: 3 	 input shape: 512x14x14 	 output shape: 512x14x14
+52	Layer Name: Conv2d_9_depthwise/BatchNorm 	 Layer time: 1.42384 	 number of inputs: 5 	 input shape: 512x14x14 	 output shape: 512x14x14
+53	Layer Name: Conv2d_9_depthwise/Relu6 	 Layer time: 0.743975 	 number of inputs: 1 	 input shape: 512x14x14 	 output shape: 512x14x14
+54	Layer Name: Conv2d_9_pointwise/Conv2D 	 Layer time: 15.1043 	 number of inputs: 3 	 input shape: 512x14x14 	 output shape: 512x14x14
+55	Layer Name: Conv2d_9_pointwise/BatchNorm 	 Layer time: 1.21301 	 number of inputs: 5 	 input shape: 512x14x14 	 output shape: 512x14x14
+56	Layer Name: Conv2d_9_pointwise/Relu6 	 Layer time: 0.891533 	 number of inputs: 1 	 input shape: 512x14x14 	 output shape: 512x14x14
+Layer Number: 9 	 time: 21.5732
+----------------------------
+57	Layer Name: Conv2d_10_depthwise/depthwise 	 Layer time: 2.1115 	 number of inputs: 3 	 input shape: 512x14x14 	 output shape: 512x14x14
+58	Layer Name: Conv2d_10_depthwise/BatchNorm 	 Layer time: 1.24116 	 number of inputs: 5 	 input shape: 512x14x14 	 output shape: 512x14x14
+59	Layer Name: Conv2d_10_depthwise/Relu6 	 Layer time: 0.848054 	 number of inputs: 1 	 input shape: 512x14x14 	 output shape: 512x14x14
+60	Layer Name: Conv2d_10_pointwise/Conv2D 	 Layer time: 14.9359 	 number of inputs: 3 	 input shape: 512x14x14 	 output shape: 512x14x14
+61	Layer Name: Conv2d_10_pointwise/BatchNorm 	 Layer time: 1.21406 	 number of inputs: 5 	 input shape: 512x14x14 	 output shape: 512x14x14
+62	Layer Name: Conv2d_10_pointwise/Relu6 	 Layer time: 0.876704 	 number of inputs: 1 	 input shape: 512x14x14 	 output shape: 512x14x14
+Layer Number: 10 	 time: 21.2274
+----------------------------
+63	Layer Name: Conv2d_11_depthwise/depthwise 	 Layer time: 2.21399 	 number of inputs: 3 	 input shape: 512x14x14 	 output shape: 512x14x14
+64	Layer Name: Conv2d_11_depthwise/BatchNorm 	 Layer time: 1.33487 	 number of inputs: 5 	 input shape: 512x14x14 	 output shape: 512x14x14
+65	Layer Name: Conv2d_11_depthwise/Relu6 	 Layer time: 0.791954 	 number of inputs: 1 	 input shape: 512x14x14 	 output shape: 512x14x14
+66	Layer Name: Conv2d_11_pointwise/Conv2D 	 Layer time: 14.8282 	 number of inputs: 3 	 input shape: 512x14x14 	 output shape: 512x14x14
+67	Layer Name: Conv2d_11_pointwise/BatchNorm 	 Layer time: 1.2124 	 number of inputs: 5 	 input shape: 512x14x14 	 output shape: 512x14x14
+68	Layer Name: Conv2d_11_pointwise/Relu6 	 Layer time: 0.872884 	 number of inputs: 1 	 input shape: 512x14x14 	 output shape: 512x14x14
+Layer Number: 11 	 time: 21.2543
+----------------------------
+69	Layer Name: Conv2d_12_depthwise/depthwise 	 Layer time: 1.43063 	 number of inputs: 3 	 input shape: 512x14x14 	 output shape: 512x7x7
+70	Layer Name: Conv2d_12_depthwise/BatchNorm 	 Layer time: 0.665137 	 number of inputs: 5 	 input shape: 512x7x7 	 output shape: 512x7x7
+71	Layer Name: Conv2d_12_depthwise/Relu6 	 Layer time: 0.482859 	 number of inputs: 1 	 input shape: 512x7x7 	 output shape: 512x7x7
+72	Layer Name: Conv2d_12_pointwise/Conv2D 	 Layer time: 13.3278 	 number of inputs: 3 	 input shape: 512x7x7 	 output shape: 1024x7x7
+73	Layer Name: Conv2d_12_pointwise/BatchNorm 	 Layer time: 1.01202 	 number of inputs: 5 	 input shape: 1024x7x7 	 output shape: 1024x7x7
+74	Layer Name: Conv2d_12_pointwise/Relu6 	 Layer time: 0.640258 	 number of inputs: 1 	 input shape: 1024x7x7 	 output shape: 1024x7x7
+Layer Number: 12 	 time: 17.5587
+----------------------------
+75	Layer Name: Conv2d_13_depthwise/depthwise 	 Layer time: 1.19178 	 number of inputs: 3 	 input shape: 1024x7x7 	 output shape: 1024x7x7
+76	Layer Name: Conv2d_13_depthwise/BatchNorm 	 Layer time: 0.896238 	 number of inputs: 5 	 input shape: 1024x7x7 	 output shape: 1024x7x7
+77	Layer Name: Conv2d_13_depthwise/Relu6 	 Layer time: 0.634283 	 number of inputs: 1 	 input shape: 1024x7x7 	 output shape: 1024x7x7
+78	Layer Name: Conv2d_13_pointwise/Conv2D 	 Layer time: 27.0863 	 number of inputs: 3 	 input shape: 1024x7x7 	 output shape: 1024x7x7
+79	Layer Name: Conv2d_13_pointwise/BatchNorm 	 Layer time: 0.992525 	 number of inputs: 5 	 input shape: 1024x7x7 	 output shape: 1024x7x7
+80	Layer Name: Conv2d_13_pointwise/Relu6 	 Layer time: 0.665825 	 number of inputs: 1 	 input shape: 1024x7x7 	 output shape: 1024x7x7
+81	Layer Name: Logits/AvgPool_1a 	 Layer time: 0.7567 	 number of inputs: 1 	 input shape: 1024x7x7 	 output shape: 1024
+82	Layer Name: Logits/Conv2d_1c_1x1 	 Layer time: 1.7472 	 number of inputs: 3 	 input shape: 1024 	 output shape: 1000
+83	Layer Name: Reshape 	 Layer time: 0.230767 	 number of inputs: 1 	 input shape: 1000 	 output shape: 1000
+84	Layer Name: Softmax 	 Layer time: 0.158579 	 number of inputs: 1 	 input shape: 1000 	 output shape: 1000
+Layer Number: 13 	 time: 34.3601
+----------------------------
+
+ Sum of Layers time: 342.158
+
+
+Graph0   Input: 59.3648   Task: 1049.6   send: 0.0015167   Out: 0.482913   Process: 1109.45
+
+
+
+********
+
+
+
+AVG Latency: 1109.46
+
+Profiling these DVFS settings finised
+Please Enter the desired Frequency setttings: 3 Running Graph with 3-3-3-3-3-3-3-3-3-3-3-3-3-3 LW DVFS
+governor 0 task:Conv2d_0/Relu6 freqs:3,0,0
+governor 1 task:Conv2d_10_pointwise/Relu6 freqs:3,0,0
+governor 2 task:Conv2d_11_pointwise/Relu6 freqs:3,0,0
+governor 3 task:Conv2d_12_pointwise/Relu6 freqs:3,0,0
+governor 4 task:Conv2d_1_pointwise/Relu6 freqs:3,0,0
+governor 5 task:Conv2d_2_pointwise/Relu6 freqs:3,0,0
+governor 6 task:Conv2d_3_pointwise/Relu6 freqs:3,0,0
+governor 7 task:Conv2d_4_pointwise/Relu6 freqs:3,0,0
+governor 8 task:Conv2d_5_pointwise/Relu6 freqs:3,0,0
+governor 9 task:Conv2d_6_pointwise/Relu6 freqs:3,0,0
+governor 10 task:Conv2d_7_pointwise/Relu6 freqs:3,0,0
+governor 11 task:Conv2d_8_pointwise/Relu6 freqs:3,0,0
+governor 12 task:Conv2d_9_pointwise/Relu6 freqs:3,0,0
+governor 13 task:Softmax freqs:3,0,0
+set_GPIOs with mode: layers
+tass name: Conv2d_0	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_0/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_0/Relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_1_depthwise/depthwise	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_1_depthwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_1_depthwise/Relu6	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_1_pointwise/Conv2D	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_1_pointwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_1_pointwise/Relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_2_depthwise/depthwise	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_2_depthwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_2_depthwise/Relu6	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_2_pointwise/Conv2D	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_2_pointwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_2_pointwise/Relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_3_depthwise/depthwise	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_3_depthwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_3_depthwise/Relu6	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_3_pointwise/Conv2D	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_3_pointwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_3_pointwise/Relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_4_depthwise/depthwise	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_4_depthwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_4_depthwise/Relu6	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_4_pointwise/Conv2D	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_4_pointwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_4_pointwise/Relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_5_depthwise/depthwise	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_5_depthwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_5_depthwise/Relu6	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_5_pointwise/Conv2D	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_5_pointwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_5_pointwise/Relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_6_depthwise/depthwise	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_6_depthwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_6_depthwise/Relu6	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_6_pointwise/Conv2D	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_6_pointwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_6_pointwise/Relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_7_depthwise/depthwise	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_7_depthwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_7_depthwise/Relu6	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_7_pointwise/Conv2D	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_7_pointwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_7_pointwise/Relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_8_depthwise/depthwise	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_8_depthwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_8_depthwise/Relu6	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_8_pointwise/Conv2D	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_8_pointwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_8_pointwise/Relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_9_depthwise/depthwise	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_9_depthwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_9_depthwise/Relu6	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_9_pointwise/Conv2D	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_9_pointwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_9_pointwise/Relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_10_depthwise/depthwise	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_10_depthwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_10_depthwise/Relu6	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_10_pointwise/Conv2D	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_10_pointwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_10_pointwise/Relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_11_depthwise/depthwise	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_11_depthwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_11_depthwise/Relu6	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_11_pointwise/Conv2D	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_11_pointwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_11_pointwise/Relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_12_depthwise/depthwise	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_12_depthwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_12_depthwise/Relu6	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_12_pointwise/Conv2D	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_12_pointwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_12_pointwise/Relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_13_depthwise/depthwise	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_13_depthwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_13_depthwise/Relu6	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_13_pointwise/Conv2D	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_13_pointwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_13_pointwise/Relu6	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Logits/AvgPool_1a	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Logits/Conv2d_1c_1x1	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Reshape	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Softmax	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+
+
+
+*********************************************
+start running graphs
+*************************************************
+
+
+
+
+************
+Photo_index:3
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//go_kart.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.9916 - [id = 573], n03444034 go-kart
+0.0083 - [id = 518], n03127747 crash helmet
+0.0000 - [id = 560], n03379051 football helmet
+0.0000 - [id = 615], n03623198 knee pad
+0.0000 - [id = 621], n03649909 lawn mower, mower
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//gold_fish.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 130], n02007558 flamingo
+0.0000 - [id = 7], n01514668 cock
+0.0000 - [id = 8], n01514859 hen
+0.0000 - [id = 46], n01693334 green lizard, Lacerta viridis
+
+
+************
+Photo_index:1
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//gondola.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.9999 - [id = 576], n03447447 gondola
+0.0000 - [id = 780], n04147183 schooner
+0.0000 - [id = 914], n04612504 yawl
+0.0000 - [id = 536], n03216828 dock, dockage, docking facility
+0.0000 - [id = 449], n02859443 boathouse
+
+
+************
+Photo_index:2
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//school_bus.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 779], n04146614 school bus
+0.0000 - [id = 705], n03895866 passenger car, coach, carriage
+0.0000 - [id = 874], n04487081 trolleybus, trolley coach, trackless trolley
+0.0000 - [id = 864], n04461696 tow truck, tow car, wrecker
+0.0000 - [id = 555], n03345487 fire engine, fire truck
+
+
+************
+Photo_index:3
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//go_kart.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.9916 - [id = 573], n03444034 go-kart
+0.0083 - [id = 518], n03127747 crash helmet
+0.0000 - [id = 560], n03379051 football helmet
+0.0000 - [id = 615], n03623198 knee pad
+0.0000 - [id = 621], n03649909 lawn mower, mower
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//gold_fish.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 130], n02007558 flamingo
+0.0000 - [id = 7], n01514668 cock
+0.0000 - [id = 8], n01514859 hen
+0.0000 - [id = 46], n01693334 green lizard, Lacerta viridis
+
+
+************
+Photo_index:1
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//gondola.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.9999 - [id = 576], n03447447 gondola
+0.0000 - [id = 780], n04147183 schooner
+0.0000 - [id = 914], n04612504 yawl
+0.0000 - [id = 536], n03216828 dock, dockage, docking facility
+0.0000 - [id = 449], n02859443 boathouse
+
+
+************
+Photo_index:2
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//school_bus.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 779], n04146614 school bus
+0.0000 - [id = 705], n03895866 passenger car, coach, carriage
+0.0000 - [id = 874], n04487081 trolleybus, trolley coach, trackless trolley
+0.0000 - [id = 864], n04461696 tow truck, tow car, wrecker
+0.0000 - [id = 555], n03345487 fire engine, fire truck
+
+
+************
+Photo_index:3
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//go_kart.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.9916 - [id = 573], n03444034 go-kart
+0.0083 - [id = 518], n03127747 crash helmet
+0.0000 - [id = 560], n03379051 football helmet
+0.0000 - [id = 615], n03623198 knee pad
+0.0000 - [id = 621], n03649909 lawn mower, mower
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//gold_fish.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 130], n02007558 flamingo
+0.0000 - [id = 7], n01514668 cock
+0.0000 - [id = 8], n01514859 hen
+0.0000 - [id = 46], n01693334 green lizard, Lacerta viridis
+
+
+************
+Photo_index:1
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//gondola.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.9999 - [id = 576], n03447447 gondola
+0.0000 - [id = 780], n04147183 schooner
+0.0000 - [id = 914], n04612504 yawl
+0.0000 - [id = 536], n03216828 dock, dockage, docking facility
+0.0000 - [id = 449], n02859443 boathouse
+
+
+************
+Photo_index:2
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//school_bus.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 779], n04146614 school bus
+0.0000 - [id = 705], n03895866 passenger car, coach, carriage
+0.0000 - [id = 874], n04487081 trolleybus, trolley coach, trackless trolley
+0.0000 - [id = 864], n04461696 tow truck, tow car, wrecker
+0.0000 - [id = 555], n03345487 fire engine, fire truck
+
+
+************
+Photo_index:3
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//go_kart.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.9916 - [id = 573], n03444034 go-kart
+0.0083 - [id = 518], n03127747 crash helmet
+0.0000 - [id = 560], n03379051 football helmet
+0.0000 - [id = 615], n03623198 knee pad
+0.0000 - [id = 621], n03649909 lawn mower, mower
+0	Layer Name: Conv2d_0 	 Layer time: 7.77631 	 number of inputs: 3 	 input shape: 3x224x224 	 output shape: 32x112x112
+1	Layer Name: Conv2d_0/BatchNorm 	 Layer time: 4.59245 	 number of inputs: 5 	 input shape: 32x112x112 	 output shape: 32x112x112
+2	Layer Name: Conv2d_0/Relu6 	 Layer time: 2.24689 	 number of inputs: 1 	 input shape: 32x112x112 	 output shape: 32x112x112
+Layer Number: 0 	 time: 14.6156
+----------------------------
+3	Layer Name: Conv2d_1_depthwise/depthwise 	 Layer time: 5.31064 	 number of inputs: 3 	 input shape: 32x112x112 	 output shape: 32x112x112
+4	Layer Name: Conv2d_1_depthwise/BatchNorm 	 Layer time: 4.5305 	 number of inputs: 5 	 input shape: 32x112x112 	 output shape: 32x112x112
+5	Layer Name: Conv2d_1_depthwise/Relu6 	 Layer time: 2.23083 	 number of inputs: 1 	 input shape: 32x112x112 	 output shape: 32x112x112
+6	Layer Name: Conv2d_1_pointwise/Conv2D 	 Layer time: 10.2717 	 number of inputs: 3 	 input shape: 32x112x112 	 output shape: 64x112x112
+7	Layer Name: Conv2d_1_pointwise/BatchNorm 	 Layer time: 8.58776 	 number of inputs: 5 	 input shape: 64x112x112 	 output shape: 64x112x112
+8	Layer Name: Conv2d_1_pointwise/Relu6 	 Layer time: 3.21497 	 number of inputs: 1 	 input shape: 64x112x112 	 output shape: 64x112x112
+Layer Number: 1 	 time: 34.1464
+----------------------------
+9	Layer Name: Conv2d_2_depthwise/depthwise 	 Layer time: 4.52475 	 number of inputs: 3 	 input shape: 64x112x112 	 output shape: 64x56x56
+10	Layer Name: Conv2d_2_depthwise/BatchNorm 	 Layer time: 2.26406 	 number of inputs: 5 	 input shape: 64x56x56 	 output shape: 64x56x56
+11	Layer Name: Conv2d_2_depthwise/Relu6 	 Layer time: 1.16633 	 number of inputs: 1 	 input shape: 64x56x56 	 output shape: 64x56x56
+12	Layer Name: Conv2d_2_pointwise/Conv2D 	 Layer time: 11.6485 	 number of inputs: 3 	 input shape: 64x56x56 	 output shape: 128x56x56
+13	Layer Name: Conv2d_2_pointwise/BatchNorm 	 Layer time: 4.17873 	 number of inputs: 5 	 input shape: 128x56x56 	 output shape: 128x56x56
+14	Layer Name: Conv2d_2_pointwise/Relu6 	 Layer time: 1.99532 	 number of inputs: 1 	 input shape: 128x56x56 	 output shape: 128x56x56
+Layer Number: 2 	 time: 25.7777
+----------------------------
+15	Layer Name: Conv2d_3_depthwise/depthwise 	 Layer time: 5.76652 	 number of inputs: 3 	 input shape: 128x56x56 	 output shape: 128x56x56
+16	Layer Name: Conv2d_3_depthwise/BatchNorm 	 Layer time: 4.16303 	 number of inputs: 5 	 input shape: 128x56x56 	 output shape: 128x56x56
+17	Layer Name: Conv2d_3_depthwise/Relu6 	 Layer time: 1.88403 	 number of inputs: 1 	 input shape: 128x56x56 	 output shape: 128x56x56
+18	Layer Name: Conv2d_3_pointwise/Conv2D 	 Layer time: 22.4583 	 number of inputs: 3 	 input shape: 128x56x56 	 output shape: 128x56x56
+19	Layer Name: Conv2d_3_pointwise/BatchNorm 	 Layer time: 4.76741 	 number of inputs: 5 	 input shape: 128x56x56 	 output shape: 128x56x56
+20	Layer Name: Conv2d_3_pointwise/Relu6 	 Layer time: 1.97123 	 number of inputs: 1 	 input shape: 128x56x56 	 output shape: 128x56x56
+Layer Number: 3 	 time: 41.0105
+----------------------------
+21	Layer Name: Conv2d_4_depthwise/depthwise 	 Layer time: 3.14994 	 number of inputs: 3 	 input shape: 128x56x56 	 output shape: 128x28x28
+22	Layer Name: Conv2d_4_depthwise/BatchNorm 	 Layer time: 1.29186 	 number of inputs: 5 	 input shape: 128x28x28 	 output shape: 128x28x28
+23	Layer Name: Conv2d_4_depthwise/Relu6 	 Layer time: 0.766158 	 number of inputs: 1 	 input shape: 128x28x28 	 output shape: 128x28x28
+24	Layer Name: Conv2d_4_pointwise/Conv2D 	 Layer time: 11.2934 	 number of inputs: 3 	 input shape: 128x28x28 	 output shape: 256x28x28
+25	Layer Name: Conv2d_4_pointwise/BatchNorm 	 Layer time: 2.3298 	 number of inputs: 5 	 input shape: 256x28x28 	 output shape: 256x28x28
+26	Layer Name: Conv2d_4_pointwise/Relu6 	 Layer time: 1.18741 	 number of inputs: 1 	 input shape: 256x28x28 	 output shape: 256x28x28
+Layer Number: 4 	 time: 20.0185
+----------------------------
+27	Layer Name: Conv2d_5_depthwise/depthwise 	 Layer time: 3.37012 	 number of inputs: 3 	 input shape: 256x28x28 	 output shape: 256x28x28
+28	Layer Name: Conv2d_5_depthwise/BatchNorm 	 Layer time: 2.21625 	 number of inputs: 5 	 input shape: 256x28x28 	 output shape: 256x28x28
+29	Layer Name: Conv2d_5_depthwise/Relu6 	 Layer time: 1.0739 	 number of inputs: 1 	 input shape: 256x28x28 	 output shape: 256x28x28
+30	Layer Name: Conv2d_5_pointwise/Conv2D 	 Layer time: 19.7927 	 number of inputs: 3 	 input shape: 256x28x28 	 output shape: 256x28x28
+31	Layer Name: Conv2d_5_pointwise/BatchNorm 	 Layer time: 2.30849 	 number of inputs: 5 	 input shape: 256x28x28 	 output shape: 256x28x28
+32	Layer Name: Conv2d_5_pointwise/Relu6 	 Layer time: 1.20852 	 number of inputs: 1 	 input shape: 256x28x28 	 output shape: 256x28x28
+Layer Number: 5 	 time: 29.97
+----------------------------
+33	Layer Name: Conv2d_6_depthwise/depthwise 	 Layer time: 1.89948 	 number of inputs: 3 	 input shape: 256x28x28 	 output shape: 256x14x14
+34	Layer Name: Conv2d_6_depthwise/BatchNorm 	 Layer time: 0.833738 	 number of inputs: 5 	 input shape: 256x14x14 	 output shape: 256x14x14
+35	Layer Name: Conv2d_6_depthwise/Relu6 	 Layer time: 0.564833 	 number of inputs: 1 	 input shape: 256x14x14 	 output shape: 256x14x14
+36	Layer Name: Conv2d_6_pointwise/Conv2D 	 Layer time: 6.9654 	 number of inputs: 3 	 input shape: 256x14x14 	 output shape: 512x14x14
+37	Layer Name: Conv2d_6_pointwise/BatchNorm 	 Layer time: 1.35469 	 number of inputs: 5 	 input shape: 512x14x14 	 output shape: 512x14x14
+38	Layer Name: Conv2d_6_pointwise/Relu6 	 Layer time: 0.7134 	 number of inputs: 1 	 input shape: 512x14x14 	 output shape: 512x14x14
+Layer Number: 6 	 time: 12.3315
+----------------------------
+39	Layer Name: Conv2d_7_depthwise/depthwise 	 Layer time: 2.20175 	 number of inputs: 3 	 input shape: 512x14x14 	 output shape: 512x14x14
+40	Layer Name: Conv2d_7_depthwise/BatchNorm 	 Layer time: 1.33223 	 number of inputs: 5 	 input shape: 512x14x14 	 output shape: 512x14x14
+41	Layer Name: Conv2d_7_depthwise/Relu6 	 Layer time: 0.69235 	 number of inputs: 1 	 input shape: 512x14x14 	 output shape: 512x14x14
+42	Layer Name: Conv2d_7_pointwise/Conv2D 	 Layer time: 13.3058 	 number of inputs: 3 	 input shape: 512x14x14 	 output shape: 512x14x14
+43	Layer Name: Conv2d_7_pointwise/BatchNorm 	 Layer time: 1.31424 	 number of inputs: 5 	 input shape: 512x14x14 	 output shape: 512x14x14
+44	Layer Name: Conv2d_7_pointwise/Relu6 	 Layer time: 0.757675 	 number of inputs: 1 	 input shape: 512x14x14 	 output shape: 512x14x14
+Layer Number: 7 	 time: 19.6041
+----------------------------
+45	Layer Name: Conv2d_8_depthwise/depthwise 	 Layer time: 2.12539 	 number of inputs: 3 	 input shape: 512x14x14 	 output shape: 512x14x14
+46	Layer Name: Conv2d_8_depthwise/BatchNorm 	 Layer time: 1.30611 	 number of inputs: 5 	 input shape: 512x14x14 	 output shape: 512x14x14
+47	Layer Name: Conv2d_8_depthwise/Relu6 	 Layer time: 0.6716 	 number of inputs: 1 	 input shape: 512x14x14 	 output shape: 512x14x14
+48	Layer Name: Conv2d_8_pointwise/Conv2D 	 Layer time: 13.4298 	 number of inputs: 3 	 input shape: 512x14x14 	 output shape: 512x14x14
+49	Layer Name: Conv2d_8_pointwise/BatchNorm 	 Layer time: 1.36942 	 number of inputs: 5 	 input shape: 512x14x14 	 output shape: 512x14x14
+50	Layer Name: Conv2d_8_pointwise/Relu6 	 Layer time: 0.80375 	 number of inputs: 1 	 input shape: 512x14x14 	 output shape: 512x14x14
+Layer Number: 8 	 time: 19.706
+----------------------------
+51	Layer Name: Conv2d_9_depthwise/depthwise 	 Layer time: 2.1095 	 number of inputs: 3 	 input shape: 512x14x14 	 output shape: 512x14x14
+52	Layer Name: Conv2d_9_depthwise/BatchNorm 	 Layer time: 1.3532 	 number of inputs: 5 	 input shape: 512x14x14 	 output shape: 512x14x14
+53	Layer Name: Conv2d_9_depthwise/Relu6 	 Layer time: 0.713933 	 number of inputs: 1 	 input shape: 512x14x14 	 output shape: 512x14x14
+54	Layer Name: Conv2d_9_pointwise/Conv2D 	 Layer time: 13.3349 	 number of inputs: 3 	 input shape: 512x14x14 	 output shape: 512x14x14
+55	Layer Name: Conv2d_9_pointwise/BatchNorm 	 Layer time: 1.32053 	 number of inputs: 5 	 input shape: 512x14x14 	 output shape: 512x14x14
+56	Layer Name: Conv2d_9_pointwise/Relu6 	 Layer time: 0.786408 	 number of inputs: 1 	 input shape: 512x14x14 	 output shape: 512x14x14
+Layer Number: 9 	 time: 19.6185
+----------------------------
+57	Layer Name: Conv2d_10_depthwise/depthwise 	 Layer time: 2.20723 	 number of inputs: 3 	 input shape: 512x14x14 	 output shape: 512x14x14
+58	Layer Name: Conv2d_10_depthwise/BatchNorm 	 Layer time: 1.40523 	 number of inputs: 5 	 input shape: 512x14x14 	 output shape: 512x14x14
+59	Layer Name: Conv2d_10_depthwise/Relu6 	 Layer time: 0.653746 	 number of inputs: 1 	 input shape: 512x14x14 	 output shape: 512x14x14
+60	Layer Name: Conv2d_10_pointwise/Conv2D 	 Layer time: 13.5191 	 number of inputs: 3 	 input shape: 512x14x14 	 output shape: 512x14x14
+61	Layer Name: Conv2d_10_pointwise/BatchNorm 	 Layer time: 1.33713 	 number of inputs: 5 	 input shape: 512x14x14 	 output shape: 512x14x14
+62	Layer Name: Conv2d_10_pointwise/Relu6 	 Layer time: 0.794234 	 number of inputs: 1 	 input shape: 512x14x14 	 output shape: 512x14x14
+Layer Number: 10 	 time: 19.9167
+----------------------------
+63	Layer Name: Conv2d_11_depthwise/depthwise 	 Layer time: 2.16668 	 number of inputs: 3 	 input shape: 512x14x14 	 output shape: 512x14x14
+64	Layer Name: Conv2d_11_depthwise/BatchNorm 	 Layer time: 1.35096 	 number of inputs: 5 	 input shape: 512x14x14 	 output shape: 512x14x14
+65	Layer Name: Conv2d_11_depthwise/Relu6 	 Layer time: 0.642562 	 number of inputs: 1 	 input shape: 512x14x14 	 output shape: 512x14x14
+66	Layer Name: Conv2d_11_pointwise/Conv2D 	 Layer time: 13.2585 	 number of inputs: 3 	 input shape: 512x14x14 	 output shape: 512x14x14
+67	Layer Name: Conv2d_11_pointwise/BatchNorm 	 Layer time: 1.38302 	 number of inputs: 5 	 input shape: 512x14x14 	 output shape: 512x14x14
+68	Layer Name: Conv2d_11_pointwise/Relu6 	 Layer time: 0.770946 	 number of inputs: 1 	 input shape: 512x14x14 	 output shape: 512x14x14
+Layer Number: 11 	 time: 19.5727
+----------------------------
+69	Layer Name: Conv2d_12_depthwise/depthwise 	 Layer time: 1.55067 	 number of inputs: 3 	 input shape: 512x14x14 	 output shape: 512x7x7
+70	Layer Name: Conv2d_12_depthwise/BatchNorm 	 Layer time: 0.658692 	 number of inputs: 5 	 input shape: 512x7x7 	 output shape: 512x7x7
+71	Layer Name: Conv2d_12_depthwise/Relu6 	 Layer time: 0.451121 	 number of inputs: 1 	 input shape: 512x7x7 	 output shape: 512x7x7
+72	Layer Name: Conv2d_12_pointwise/Conv2D 	 Layer time: 13.344 	 number of inputs: 3 	 input shape: 512x7x7 	 output shape: 1024x7x7
+73	Layer Name: Conv2d_12_pointwise/BatchNorm 	 Layer time: 0.919083 	 number of inputs: 5 	 input shape: 1024x7x7 	 output shape: 1024x7x7
+74	Layer Name: Conv2d_12_pointwise/Relu6 	 Layer time: 0.559313 	 number of inputs: 1 	 input shape: 1024x7x7 	 output shape: 1024x7x7
+Layer Number: 12 	 time: 17.4829
+----------------------------
+75	Layer Name: Conv2d_13_depthwise/depthwise 	 Layer time: 1.72749 	 number of inputs: 3 	 input shape: 1024x7x7 	 output shape: 1024x7x7
+76	Layer Name: Conv2d_13_depthwise/BatchNorm 	 Layer time: 0.873842 	 number of inputs: 5 	 input shape: 1024x7x7 	 output shape: 1024x7x7
+77	Layer Name: Conv2d_13_depthwise/Relu6 	 Layer time: 0.510929 	 number of inputs: 1 	 input shape: 1024x7x7 	 output shape: 1024x7x7
+78	Layer Name: Conv2d_13_pointwise/Conv2D 	 Layer time: 27.0511 	 number of inputs: 3 	 input shape: 1024x7x7 	 output shape: 1024x7x7
+79	Layer Name: Conv2d_13_pointwise/BatchNorm 	 Layer time: 0.972179 	 number of inputs: 5 	 input shape: 1024x7x7 	 output shape: 1024x7x7
+80	Layer Name: Conv2d_13_pointwise/Relu6 	 Layer time: 0.6408 	 number of inputs: 1 	 input shape: 1024x7x7 	 output shape: 1024x7x7
+81	Layer Name: Logits/AvgPool_1a 	 Layer time: 0.722925 	 number of inputs: 1 	 input shape: 1024x7x7 	 output shape: 1024
+82	Layer Name: Logits/Conv2d_1c_1x1 	 Layer time: 1.72906 	 number of inputs: 3 	 input shape: 1024 	 output shape: 1000
+83	Layer Name: Reshape 	 Layer time: 0.192413 	 number of inputs: 1 	 input shape: 1000 	 output shape: 1000
+84	Layer Name: Softmax 	 Layer time: 0.137871 	 number of inputs: 1 	 input shape: 1000 	 output shape: 1000
+Layer Number: 13 	 time: 34.5586
+----------------------------
+
+ Sum of Layers time: 328.33
+
+
+Graph0   Input: 48.1624   Task: 1034.78   send: 0.0012833   Out: 0.411104   Process: 1083.35
+
+
+
+********
+
+
+
+AVG Latency: 1083.36
+
+Profiling these DVFS settings finised
+Please Enter the desired Frequency setttings: 4 Running Graph with 4-4-4-4-4-4-4-4-4-4-4-4-4-4 LW DVFS
+governor 0 task:Conv2d_0/Relu6 freqs:4,0,0
+governor 1 task:Conv2d_10_pointwise/Relu6 freqs:4,0,0
+governor 2 task:Conv2d_11_pointwise/Relu6 freqs:4,0,0
+governor 3 task:Conv2d_12_pointwise/Relu6 freqs:4,0,0
+governor 4 task:Conv2d_1_pointwise/Relu6 freqs:4,0,0
+governor 5 task:Conv2d_2_pointwise/Relu6 freqs:4,0,0
+governor 6 task:Conv2d_3_pointwise/Relu6 freqs:4,0,0
+governor 7 task:Conv2d_4_pointwise/Relu6 freqs:4,0,0
+governor 8 task:Conv2d_5_pointwise/Relu6 freqs:4,0,0
+governor 9 task:Conv2d_6_pointwise/Relu6 freqs:4,0,0
+governor 10 task:Conv2d_7_pointwise/Relu6 freqs:4,0,0
+governor 11 task:Conv2d_8_pointwise/Relu6 freqs:4,0,0
+governor 12 task:Conv2d_9_pointwise/Relu6 freqs:4,0,0
+governor 13 task:Softmax freqs:4,0,0
+set_GPIOs with mode: layers
+tass name: Conv2d_0	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_0/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_0/Relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_1_depthwise/depthwise	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_1_depthwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_1_depthwise/Relu6	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_1_pointwise/Conv2D	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_1_pointwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_1_pointwise/Relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_2_depthwise/depthwise	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_2_depthwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_2_depthwise/Relu6	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_2_pointwise/Conv2D	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_2_pointwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_2_pointwise/Relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_3_depthwise/depthwise	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_3_depthwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_3_depthwise/Relu6	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_3_pointwise/Conv2D	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_3_pointwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_3_pointwise/Relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_4_depthwise/depthwise	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_4_depthwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_4_depthwise/Relu6	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_4_pointwise/Conv2D	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_4_pointwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_4_pointwise/Relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_5_depthwise/depthwise	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_5_depthwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_5_depthwise/Relu6	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_5_pointwise/Conv2D	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_5_pointwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_5_pointwise/Relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_6_depthwise/depthwise	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_6_depthwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_6_depthwise/Relu6	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_6_pointwise/Conv2D	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_6_pointwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_6_pointwise/Relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_7_depthwise/depthwise	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_7_depthwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_7_depthwise/Relu6	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_7_pointwise/Conv2D	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_7_pointwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_7_pointwise/Relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_8_depthwise/depthwise	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_8_depthwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_8_depthwise/Relu6	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_8_pointwise/Conv2D	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_8_pointwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_8_pointwise/Relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_9_depthwise/depthwise	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_9_depthwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_9_depthwise/Relu6	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_9_pointwise/Conv2D	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_9_pointwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_9_pointwise/Relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_10_depthwise/depthwise	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_10_depthwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_10_depthwise/Relu6	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_10_pointwise/Conv2D	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_10_pointwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_10_pointwise/Relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_11_depthwise/depthwise	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_11_depthwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_11_depthwise/Relu6	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_11_pointwise/Conv2D	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_11_pointwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_11_pointwise/Relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_12_depthwise/depthwise	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_12_depthwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_12_depthwise/Relu6	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_12_pointwise/Conv2D	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_12_pointwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_12_pointwise/Relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_13_depthwise/depthwise	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_13_depthwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_13_depthwise/Relu6	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_13_pointwise/Conv2D	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_13_pointwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_13_pointwise/Relu6	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Logits/AvgPool_1a	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Logits/Conv2d_1c_1x1	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Reshape	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Softmax	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+
+
+
+*********************************************
+start running graphs
+*************************************************
+
+
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//gold_fish.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 130], n02007558 flamingo
+0.0000 - [id = 7], n01514668 cock
+0.0000 - [id = 8], n01514859 hen
+0.0000 - [id = 46], n01693334 green lizard, Lacerta viridis
+
+
+************
+Photo_index:1
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//gondola.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.9999 - [id = 576], n03447447 gondola
+0.0000 - [id = 780], n04147183 schooner
+0.0000 - [id = 914], n04612504 yawl
+0.0000 - [id = 536], n03216828 dock, dockage, docking facility
+0.0000 - [id = 449], n02859443 boathouse
+
+
+************
+Photo_index:2
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//school_bus.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 779], n04146614 school bus
+0.0000 - [id = 705], n03895866 passenger car, coach, carriage
+0.0000 - [id = 874], n04487081 trolleybus, trolley coach, trackless trolley
+0.0000 - [id = 864], n04461696 tow truck, tow car, wrecker
+0.0000 - [id = 555], n03345487 fire engine, fire truck
+
+
+************
+Photo_index:3
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//go_kart.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.9916 - [id = 573], n03444034 go-kart
+0.0083 - [id = 518], n03127747 crash helmet
+0.0000 - [id = 560], n03379051 football helmet
+0.0000 - [id = 615], n03623198 knee pad
+0.0000 - [id = 621], n03649909 lawn mower, mower
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//gold_fish.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 130], n02007558 flamingo
+0.0000 - [id = 7], n01514668 cock
+0.0000 - [id = 8], n01514859 hen
+0.0000 - [id = 46], n01693334 green lizard, Lacerta viridis
+
+
+************
+Photo_index:1
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//gondola.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.9999 - [id = 576], n03447447 gondola
+0.0000 - [id = 780], n04147183 schooner
+0.0000 - [id = 914], n04612504 yawl
+0.0000 - [id = 536], n03216828 dock, dockage, docking facility
+0.0000 - [id = 449], n02859443 boathouse
+
+
+************
+Photo_index:2
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//school_bus.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 779], n04146614 school bus
+0.0000 - [id = 705], n03895866 passenger car, coach, carriage
+0.0000 - [id = 874], n04487081 trolleybus, trolley coach, trackless trolley
+0.0000 - [id = 864], n04461696 tow truck, tow car, wrecker
+0.0000 - [id = 555], n03345487 fire engine, fire truck
+
+
+************
+Photo_index:3
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//go_kart.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.9916 - [id = 573], n03444034 go-kart
+0.0083 - [id = 518], n03127747 crash helmet
+0.0000 - [id = 560], n03379051 football helmet
+0.0000 - [id = 615], n03623198 knee pad
+0.0000 - [id = 621], n03649909 lawn mower, mower
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//gold_fish.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 130], n02007558 flamingo
+0.0000 - [id = 7], n01514668 cock
+0.0000 - [id = 8], n01514859 hen
+0.0000 - [id = 46], n01693334 green lizard, Lacerta viridis
+
+
+************
+Photo_index:1
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//gondola.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.9999 - [id = 576], n03447447 gondola
+0.0000 - [id = 780], n04147183 schooner
+0.0000 - [id = 914], n04612504 yawl
+0.0000 - [id = 536], n03216828 dock, dockage, docking facility
+0.0000 - [id = 449], n02859443 boathouse
+
+
+************
+Photo_index:2
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//school_bus.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 779], n04146614 school bus
+0.0000 - [id = 705], n03895866 passenger car, coach, carriage
+0.0000 - [id = 874], n04487081 trolleybus, trolley coach, trackless trolley
+0.0000 - [id = 864], n04461696 tow truck, tow car, wrecker
+0.0000 - [id = 555], n03345487 fire engine, fire truck
+
+
+************
+Photo_index:3
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//go_kart.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.9916 - [id = 573], n03444034 go-kart
+0.0083 - [id = 518], n03127747 crash helmet
+0.0000 - [id = 560], n03379051 football helmet
+0.0000 - [id = 615], n03623198 knee pad
+0.0000 - [id = 621], n03649909 lawn mower, mower
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//gold_fish.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 130], n02007558 flamingo
+0.0000 - [id = 7], n01514668 cock
+0.0000 - [id = 8], n01514859 hen
+0.0000 - [id = 46], n01693334 green lizard, Lacerta viridis
+0	Layer Name: Conv2d_0 	 Layer time: 7.86183 	 number of inputs: 3 	 input shape: 3x224x224 	 output shape: 32x112x112
+1	Layer Name: Conv2d_0/BatchNorm 	 Layer time: 4.5754 	 number of inputs: 5 	 input shape: 32x112x112 	 output shape: 32x112x112
+2	Layer Name: Conv2d_0/Relu6 	 Layer time: 2.40892 	 number of inputs: 1 	 input shape: 32x112x112 	 output shape: 32x112x112
+Layer Number: 0 	 time: 14.8462
+----------------------------
+3	Layer Name: Conv2d_1_depthwise/depthwise 	 Layer time: 5.3007 	 number of inputs: 3 	 input shape: 32x112x112 	 output shape: 32x112x112
+4	Layer Name: Conv2d_1_depthwise/BatchNorm 	 Layer time: 4.63185 	 number of inputs: 5 	 input shape: 32x112x112 	 output shape: 32x112x112
+5	Layer Name: Conv2d_1_depthwise/Relu6 	 Layer time: 1.9139 	 number of inputs: 1 	 input shape: 32x112x112 	 output shape: 32x112x112
+6	Layer Name: Conv2d_1_pointwise/Conv2D 	 Layer time: 10.249 	 number of inputs: 3 	 input shape: 32x112x112 	 output shape: 64x112x112
+7	Layer Name: Conv2d_1_pointwise/BatchNorm 	 Layer time: 8.06748 	 number of inputs: 5 	 input shape: 64x112x112 	 output shape: 64x112x112
+8	Layer Name: Conv2d_1_pointwise/Relu6 	 Layer time: 3.41017 	 number of inputs: 1 	 input shape: 64x112x112 	 output shape: 64x112x112
+Layer Number: 1 	 time: 33.5731
+----------------------------
+9	Layer Name: Conv2d_2_depthwise/depthwise 	 Layer time: 4.45879 	 number of inputs: 3 	 input shape: 64x112x112 	 output shape: 64x56x56
+10	Layer Name: Conv2d_2_depthwise/BatchNorm 	 Layer time: 2.36075 	 number of inputs: 5 	 input shape: 64x56x56 	 output shape: 64x56x56
+11	Layer Name: Conv2d_2_depthwise/Relu6 	 Layer time: 1.11395 	 number of inputs: 1 	 input shape: 64x56x56 	 output shape: 64x56x56
+12	Layer Name: Conv2d_2_pointwise/Conv2D 	 Layer time: 11.597 	 number of inputs: 3 	 input shape: 64x56x56 	 output shape: 128x56x56
+13	Layer Name: Conv2d_2_pointwise/BatchNorm 	 Layer time: 4.16482 	 number of inputs: 5 	 input shape: 128x56x56 	 output shape: 128x56x56
+14	Layer Name: Conv2d_2_pointwise/Relu6 	 Layer time: 1.99223 	 number of inputs: 1 	 input shape: 128x56x56 	 output shape: 128x56x56
+Layer Number: 2 	 time: 25.6876
+----------------------------
+15	Layer Name: Conv2d_3_depthwise/depthwise 	 Layer time: 5.75293 	 number of inputs: 3 	 input shape: 128x56x56 	 output shape: 128x56x56
+16	Layer Name: Conv2d_3_depthwise/BatchNorm 	 Layer time: 4.12347 	 number of inputs: 5 	 input shape: 128x56x56 	 output shape: 128x56x56
+17	Layer Name: Conv2d_3_depthwise/Relu6 	 Layer time: 1.6504 	 number of inputs: 1 	 input shape: 128x56x56 	 output shape: 128x56x56
+18	Layer Name: Conv2d_3_pointwise/Conv2D 	 Layer time: 22.3982 	 number of inputs: 3 	 input shape: 128x56x56 	 output shape: 128x56x56
+19	Layer Name: Conv2d_3_pointwise/BatchNorm 	 Layer time: 4.59051 	 number of inputs: 5 	 input shape: 128x56x56 	 output shape: 128x56x56
+20	Layer Name: Conv2d_3_pointwise/Relu6 	 Layer time: 1.81723 	 number of inputs: 1 	 input shape: 128x56x56 	 output shape: 128x56x56
+Layer Number: 3 	 time: 40.3328
+----------------------------
+21	Layer Name: Conv2d_4_depthwise/depthwise 	 Layer time: 3.00122 	 number of inputs: 3 	 input shape: 128x56x56 	 output shape: 128x28x28
+22	Layer Name: Conv2d_4_depthwise/BatchNorm 	 Layer time: 1.30797 	 number of inputs: 5 	 input shape: 128x28x28 	 output shape: 128x28x28
+23	Layer Name: Conv2d_4_depthwise/Relu6 	 Layer time: 0.757821 	 number of inputs: 1 	 input shape: 128x28x28 	 output shape: 128x28x28
+24	Layer Name: Conv2d_4_pointwise/Conv2D 	 Layer time: 11.2822 	 number of inputs: 3 	 input shape: 128x28x28 	 output shape: 256x28x28
+25	Layer Name: Conv2d_4_pointwise/BatchNorm 	 Layer time: 2.33036 	 number of inputs: 5 	 input shape: 256x28x28 	 output shape: 256x28x28
+26	Layer Name: Conv2d_4_pointwise/Relu6 	 Layer time: 1.15895 	 number of inputs: 1 	 input shape: 256x28x28 	 output shape: 256x28x28
+Layer Number: 4 	 time: 19.8385
+----------------------------
+27	Layer Name: Conv2d_5_depthwise/depthwise 	 Layer time: 3.35126 	 number of inputs: 3 	 input shape: 256x28x28 	 output shape: 256x28x28
+28	Layer Name: Conv2d_5_depthwise/BatchNorm 	 Layer time: 2.24775 	 number of inputs: 5 	 input shape: 256x28x28 	 output shape: 256x28x28
+29	Layer Name: Conv2d_5_depthwise/Relu6 	 Layer time: 1.0419 	 number of inputs: 1 	 input shape: 256x28x28 	 output shape: 256x28x28
+30	Layer Name: Conv2d_5_pointwise/Conv2D 	 Layer time: 19.7841 	 number of inputs: 3 	 input shape: 256x28x28 	 output shape: 256x28x28
+31	Layer Name: Conv2d_5_pointwise/BatchNorm 	 Layer time: 2.27812 	 number of inputs: 5 	 input shape: 256x28x28 	 output shape: 256x28x28
+32	Layer Name: Conv2d_5_pointwise/Relu6 	 Layer time: 1.41021 	 number of inputs: 1 	 input shape: 256x28x28 	 output shape: 256x28x28
+Layer Number: 5 	 time: 30.1133
+----------------------------
+33	Layer Name: Conv2d_6_depthwise/depthwise 	 Layer time: 1.95043 	 number of inputs: 3 	 input shape: 256x28x28 	 output shape: 256x14x14
+34	Layer Name: Conv2d_6_depthwise/BatchNorm 	 Layer time: 0.823838 	 number of inputs: 5 	 input shape: 256x14x14 	 output shape: 256x14x14
+35	Layer Name: Conv2d_6_depthwise/Relu6 	 Layer time: 0.610754 	 number of inputs: 1 	 input shape: 256x14x14 	 output shape: 256x14x14
+36	Layer Name: Conv2d_6_pointwise/Conv2D 	 Layer time: 6.27564 	 number of inputs: 3 	 input shape: 256x14x14 	 output shape: 512x14x14
+37	Layer Name: Conv2d_6_pointwise/BatchNorm 	 Layer time: 1.39185 	 number of inputs: 5 	 input shape: 512x14x14 	 output shape: 512x14x14
+38	Layer Name: Conv2d_6_pointwise/Relu6 	 Layer time: 0.755658 	 number of inputs: 1 	 input shape: 512x14x14 	 output shape: 512x14x14
+Layer Number: 6 	 time: 11.8082
+----------------------------
+39	Layer Name: Conv2d_7_depthwise/depthwise 	 Layer time: 2.18059 	 number of inputs: 3 	 input shape: 512x14x14 	 output shape: 512x14x14
+40	Layer Name: Conv2d_7_depthwise/BatchNorm 	 Layer time: 1.29743 	 number of inputs: 5 	 input shape: 512x14x14 	 output shape: 512x14x14
+41	Layer Name: Conv2d_7_depthwise/Relu6 	 Layer time: 0.709754 	 number of inputs: 1 	 input shape: 512x14x14 	 output shape: 512x14x14
+42	Layer Name: Conv2d_7_pointwise/Conv2D 	 Layer time: 11.7772 	 number of inputs: 3 	 input shape: 512x14x14 	 output shape: 512x14x14
+43	Layer Name: Conv2d_7_pointwise/BatchNorm 	 Layer time: 1.31179 	 number of inputs: 5 	 input shape: 512x14x14 	 output shape: 512x14x14
+44	Layer Name: Conv2d_7_pointwise/Relu6 	 Layer time: 0.816609 	 number of inputs: 1 	 input shape: 512x14x14 	 output shape: 512x14x14
+Layer Number: 7 	 time: 18.0934
+----------------------------
+45	Layer Name: Conv2d_8_depthwise/depthwise 	 Layer time: 2.17765 	 number of inputs: 3 	 input shape: 512x14x14 	 output shape: 512x14x14
+46	Layer Name: Conv2d_8_depthwise/BatchNorm 	 Layer time: 1.3699 	 number of inputs: 5 	 input shape: 512x14x14 	 output shape: 512x14x14
+47	Layer Name: Conv2d_8_depthwise/Relu6 	 Layer time: 0.762696 	 number of inputs: 1 	 input shape: 512x14x14 	 output shape: 512x14x14
+48	Layer Name: Conv2d_8_pointwise/Conv2D 	 Layer time: 11.8845 	 number of inputs: 3 	 input shape: 512x14x14 	 output shape: 512x14x14
+49	Layer Name: Conv2d_8_pointwise/BatchNorm 	 Layer time: 1.4086 	 number of inputs: 5 	 input shape: 512x14x14 	 output shape: 512x14x14
+50	Layer Name: Conv2d_8_pointwise/Relu6 	 Layer time: 0.824121 	 number of inputs: 1 	 input shape: 512x14x14 	 output shape: 512x14x14
+Layer Number: 8 	 time: 18.4274
+----------------------------
+51	Layer Name: Conv2d_9_depthwise/depthwise 	 Layer time: 2.12472 	 number of inputs: 3 	 input shape: 512x14x14 	 output shape: 512x14x14
+52	Layer Name: Conv2d_9_depthwise/BatchNorm 	 Layer time: 1.35116 	 number of inputs: 5 	 input shape: 512x14x14 	 output shape: 512x14x14
+53	Layer Name: Conv2d_9_depthwise/Relu6 	 Layer time: 0.756687 	 number of inputs: 1 	 input shape: 512x14x14 	 output shape: 512x14x14
+54	Layer Name: Conv2d_9_pointwise/Conv2D 	 Layer time: 11.787 	 number of inputs: 3 	 input shape: 512x14x14 	 output shape: 512x14x14
+55	Layer Name: Conv2d_9_pointwise/BatchNorm 	 Layer time: 1.3154 	 number of inputs: 5 	 input shape: 512x14x14 	 output shape: 512x14x14
+56	Layer Name: Conv2d_9_pointwise/Relu6 	 Layer time: 0.767088 	 number of inputs: 1 	 input shape: 512x14x14 	 output shape: 512x14x14
+Layer Number: 9 	 time: 18.102
+----------------------------
+57	Layer Name: Conv2d_10_depthwise/depthwise 	 Layer time: 2.1253 	 number of inputs: 3 	 input shape: 512x14x14 	 output shape: 512x14x14
+58	Layer Name: Conv2d_10_depthwise/BatchNorm 	 Layer time: 1.33234 	 number of inputs: 5 	 input shape: 512x14x14 	 output shape: 512x14x14
+59	Layer Name: Conv2d_10_depthwise/Relu6 	 Layer time: 0.811538 	 number of inputs: 1 	 input shape: 512x14x14 	 output shape: 512x14x14
+60	Layer Name: Conv2d_10_pointwise/Conv2D 	 Layer time: 11.8908 	 number of inputs: 3 	 input shape: 512x14x14 	 output shape: 512x14x14
+61	Layer Name: Conv2d_10_pointwise/BatchNorm 	 Layer time: 1.31185 	 number of inputs: 5 	 input shape: 512x14x14 	 output shape: 512x14x14
+62	Layer Name: Conv2d_10_pointwise/Relu6 	 Layer time: 0.796717 	 number of inputs: 1 	 input shape: 512x14x14 	 output shape: 512x14x14
+Layer Number: 10 	 time: 18.2685
+----------------------------
+63	Layer Name: Conv2d_11_depthwise/depthwise 	 Layer time: 2.21057 	 number of inputs: 3 	 input shape: 512x14x14 	 output shape: 512x14x14
+64	Layer Name: Conv2d_11_depthwise/BatchNorm 	 Layer time: 1.32894 	 number of inputs: 5 	 input shape: 512x14x14 	 output shape: 512x14x14
+65	Layer Name: Conv2d_11_depthwise/Relu6 	 Layer time: 0.769529 	 number of inputs: 1 	 input shape: 512x14x14 	 output shape: 512x14x14
+66	Layer Name: Conv2d_11_pointwise/Conv2D 	 Layer time: 11.9536 	 number of inputs: 3 	 input shape: 512x14x14 	 output shape: 512x14x14
+67	Layer Name: Conv2d_11_pointwise/BatchNorm 	 Layer time: 1.30288 	 number of inputs: 5 	 input shape: 512x14x14 	 output shape: 512x14x14
+68	Layer Name: Conv2d_11_pointwise/Relu6 	 Layer time: 0.746758 	 number of inputs: 1 	 input shape: 512x14x14 	 output shape: 512x14x14
+Layer Number: 11 	 time: 18.3122
+----------------------------
+69	Layer Name: Conv2d_12_depthwise/depthwise 	 Layer time: 1.4586 	 number of inputs: 3 	 input shape: 512x14x14 	 output shape: 512x7x7
+70	Layer Name: Conv2d_12_depthwise/BatchNorm 	 Layer time: 0.649642 	 number of inputs: 5 	 input shape: 512x7x7 	 output shape: 512x7x7
+71	Layer Name: Conv2d_12_depthwise/Relu6 	 Layer time: 0.4849 	 number of inputs: 1 	 input shape: 512x7x7 	 output shape: 512x7x7
+72	Layer Name: Conv2d_12_pointwise/Conv2D 	 Layer time: 13.4001 	 number of inputs: 3 	 input shape: 512x7x7 	 output shape: 1024x7x7
+73	Layer Name: Conv2d_12_pointwise/BatchNorm 	 Layer time: 0.968571 	 number of inputs: 5 	 input shape: 1024x7x7 	 output shape: 1024x7x7
+74	Layer Name: Conv2d_12_pointwise/Relu6 	 Layer time: 0.602929 	 number of inputs: 1 	 input shape: 1024x7x7 	 output shape: 1024x7x7
+Layer Number: 12 	 time: 17.5648
+----------------------------
+75	Layer Name: Conv2d_13_depthwise/depthwise 	 Layer time: 1.30101 	 number of inputs: 3 	 input shape: 1024x7x7 	 output shape: 1024x7x7
+76	Layer Name: Conv2d_13_depthwise/BatchNorm 	 Layer time: 0.917542 	 number of inputs: 5 	 input shape: 1024x7x7 	 output shape: 1024x7x7
+77	Layer Name: Conv2d_13_depthwise/Relu6 	 Layer time: 0.547862 	 number of inputs: 1 	 input shape: 1024x7x7 	 output shape: 1024x7x7
+78	Layer Name: Conv2d_13_pointwise/Conv2D 	 Layer time: 27.2278 	 number of inputs: 3 	 input shape: 1024x7x7 	 output shape: 1024x7x7
+79	Layer Name: Conv2d_13_pointwise/BatchNorm 	 Layer time: 0.975871 	 number of inputs: 5 	 input shape: 1024x7x7 	 output shape: 1024x7x7
+80	Layer Name: Conv2d_13_pointwise/Relu6 	 Layer time: 0.649517 	 number of inputs: 1 	 input shape: 1024x7x7 	 output shape: 1024x7x7
+81	Layer Name: Logits/AvgPool_1a 	 Layer time: 0.701633 	 number of inputs: 1 	 input shape: 1024x7x7 	 output shape: 1024
+82	Layer Name: Logits/Conv2d_1c_1x1 	 Layer time: 1.70424 	 number of inputs: 3 	 input shape: 1024 	 output shape: 1000
+83	Layer Name: Reshape 	 Layer time: 0.166046 	 number of inputs: 1 	 input shape: 1000 	 output shape: 1000
+84	Layer Name: Softmax 	 Layer time: 0.126758 	 number of inputs: 1 	 input shape: 1000 	 output shape: 1000
+Layer Number: 13 	 time: 34.3183
+----------------------------
+
+ Sum of Layers time: 319.286
+
+
+Graph0   Input: 40.4569   Task: 1025.29   send: 0.0011958   Out: 0.3675   Process: 1066.11
+
+
+
+********
+
+
+
+AVG Latency: 1066.12
+
+Profiling these DVFS settings finised
+Please Enter the desired Frequency setttings: 5 Running Graph with 5-5-5-5-5-5-5-5-5-5-5-5-5-5 LW DVFS
+governor 0 task:Conv2d_0/Relu6 freqs:5,0,0
+governor 1 task:Conv2d_10_pointwise/Relu6 freqs:5,0,0
+governor 2 task:Conv2d_11_pointwise/Relu6 freqs:5,0,0
+governor 3 task:Conv2d_12_pointwise/Relu6 freqs:5,0,0
+governor 4 task:Conv2d_1_pointwise/Relu6 freqs:5,0,0
+governor 5 task:Conv2d_2_pointwise/Relu6 freqs:5,0,0
+governor 6 task:Conv2d_3_pointwise/Relu6 freqs:5,0,0
+governor 7 task:Conv2d_4_pointwise/Relu6 freqs:5,0,0
+governor 8 task:Conv2d_5_pointwise/Relu6 freqs:5,0,0
+governor 9 task:Conv2d_6_pointwise/Relu6 freqs:5,0,0
+governor 10 task:Conv2d_7_pointwise/Relu6 freqs:5,0,0
+governor 11 task:Conv2d_8_pointwise/Relu6 freqs:5,0,0
+governor 12 task:Conv2d_9_pointwise/Relu6 freqs:5,0,0
+governor 13 task:Softmax freqs:5,0,0
+set_GPIOs with mode: layers
+tass name: Conv2d_0	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_0/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_0/Relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_1_depthwise/depthwise	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_1_depthwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_1_depthwise/Relu6	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_1_pointwise/Conv2D	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_1_pointwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_1_pointwise/Relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_2_depthwise/depthwise	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_2_depthwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_2_depthwise/Relu6	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_2_pointwise/Conv2D	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_2_pointwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_2_pointwise/Relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_3_depthwise/depthwise	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_3_depthwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_3_depthwise/Relu6	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_3_pointwise/Conv2D	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_3_pointwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_3_pointwise/Relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_4_depthwise/depthwise	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_4_depthwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_4_depthwise/Relu6	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_4_pointwise/Conv2D	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_4_pointwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_4_pointwise/Relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_5_depthwise/depthwise	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_5_depthwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_5_depthwise/Relu6	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_5_pointwise/Conv2D	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_5_pointwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_5_pointwise/Relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_6_depthwise/depthwise	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_6_depthwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_6_depthwise/Relu6	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_6_pointwise/Conv2D	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_6_pointwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_6_pointwise/Relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_7_depthwise/depthwise	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_7_depthwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_7_depthwise/Relu6	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_7_pointwise/Conv2D	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_7_pointwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_7_pointwise/Relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_8_depthwise/depthwise	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_8_depthwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_8_depthwise/Relu6	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_8_pointwise/Conv2D	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_8_pointwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_8_pointwise/Relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_9_depthwise/depthwise	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_9_depthwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_9_depthwise/Relu6	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_9_pointwise/Conv2D	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_9_pointwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_9_pointwise/Relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_10_depthwise/depthwise	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_10_depthwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_10_depthwise/Relu6	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_10_pointwise/Conv2D	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_10_pointwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_10_pointwise/Relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_11_depthwise/depthwise	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_11_depthwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_11_depthwise/Relu6	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_11_pointwise/Conv2D	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_11_pointwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_11_pointwise/Relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_12_depthwise/depthwise	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_12_depthwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_12_depthwise/Relu6	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_12_pointwise/Conv2D	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_12_pointwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_12_pointwise/Relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_13_depthwise/depthwise	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_13_depthwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_13_depthwise/Relu6	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_13_pointwise/Conv2D	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_13_pointwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_13_pointwise/Relu6	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Logits/AvgPool_1a	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Logits/Conv2d_1c_1x1	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Reshape	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Softmax	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+
+
+
+*********************************************
+start running graphs
+*************************************************
+
+
+
+
+************
+Photo_index:1
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//gondola.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.9999 - [id = 576], n03447447 gondola
+0.0000 - [id = 780], n04147183 schooner
+0.0000 - [id = 914], n04612504 yawl
+0.0000 - [id = 536], n03216828 dock, dockage, docking facility
+0.0000 - [id = 449], n02859443 boathouse
+
+
+************
+Photo_index:2
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//school_bus.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 779], n04146614 school bus
+0.0000 - [id = 705], n03895866 passenger car, coach, carriage
+0.0000 - [id = 874], n04487081 trolleybus, trolley coach, trackless trolley
+0.0000 - [id = 864], n04461696 tow truck, tow car, wrecker
+0.0000 - [id = 555], n03345487 fire engine, fire truck
+
+
+************
+Photo_index:3
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//go_kart.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.9916 - [id = 573], n03444034 go-kart
+0.0083 - [id = 518], n03127747 crash helmet
+0.0000 - [id = 560], n03379051 football helmet
+0.0000 - [id = 615], n03623198 knee pad
+0.0000 - [id = 621], n03649909 lawn mower, mower
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//gold_fish.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 130], n02007558 flamingo
+0.0000 - [id = 7], n01514668 cock
+0.0000 - [id = 8], n01514859 hen
+0.0000 - [id = 46], n01693334 green lizard, Lacerta viridis
+
+
+************
+Photo_index:1
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//gondola.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.9999 - [id = 576], n03447447 gondola
+0.0000 - [id = 780], n04147183 schooner
+0.0000 - [id = 914], n04612504 yawl
+0.0000 - [id = 536], n03216828 dock, dockage, docking facility
+0.0000 - [id = 449], n02859443 boathouse
+
+
+************
+Photo_index:2
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//school_bus.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 779], n04146614 school bus
+0.0000 - [id = 705], n03895866 passenger car, coach, carriage
+0.0000 - [id = 874], n04487081 trolleybus, trolley coach, trackless trolley
+0.0000 - [id = 864], n04461696 tow truck, tow car, wrecker
+0.0000 - [id = 555], n03345487 fire engine, fire truck
+
+
+************
+Photo_index:3
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//go_kart.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.9916 - [id = 573], n03444034 go-kart
+0.0083 - [id = 518], n03127747 crash helmet
+0.0000 - [id = 560], n03379051 football helmet
+0.0000 - [id = 615], n03623198 knee pad
+0.0000 - [id = 621], n03649909 lawn mower, mower
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//gold_fish.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 130], n02007558 flamingo
+0.0000 - [id = 7], n01514668 cock
+0.0000 - [id = 8], n01514859 hen
+0.0000 - [id = 46], n01693334 green lizard, Lacerta viridis
+
+
+************
+Photo_index:1
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//gondola.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.9999 - [id = 576], n03447447 gondola
+0.0000 - [id = 780], n04147183 schooner
+0.0000 - [id = 914], n04612504 yawl
+0.0000 - [id = 536], n03216828 dock, dockage, docking facility
+0.0000 - [id = 449], n02859443 boathouse
+
+
+************
+Photo_index:2
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//school_bus.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 779], n04146614 school bus
+0.0000 - [id = 705], n03895866 passenger car, coach, carriage
+0.0000 - [id = 874], n04487081 trolleybus, trolley coach, trackless trolley
+0.0000 - [id = 864], n04461696 tow truck, tow car, wrecker
+0.0000 - [id = 555], n03345487 fire engine, fire truck
+
+
+************
+Photo_index:3
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//go_kart.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.9916 - [id = 573], n03444034 go-kart
+0.0083 - [id = 518], n03127747 crash helmet
+0.0000 - [id = 560], n03379051 football helmet
+0.0000 - [id = 615], n03623198 knee pad
+0.0000 - [id = 621], n03649909 lawn mower, mower
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//gold_fish.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 130], n02007558 flamingo
+0.0000 - [id = 7], n01514668 cock
+0.0000 - [id = 8], n01514859 hen
+0.0000 - [id = 46], n01693334 green lizard, Lacerta viridis
+
+
+************
+Photo_index:1
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//gondola.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.9999 - [id = 576], n03447447 gondola
+0.0000 - [id = 780], n04147183 schooner
+0.0000 - [id = 914], n04612504 yawl
+0.0000 - [id = 536], n03216828 dock, dockage, docking facility
+0.0000 - [id = 449], n02859443 boathouse
+0	Layer Name: Conv2d_0 	 Layer time: 7.88753 	 number of inputs: 3 	 input shape: 3x224x224 	 output shape: 32x112x112
+1	Layer Name: Conv2d_0/BatchNorm 	 Layer time: 4.58917 	 number of inputs: 5 	 input shape: 32x112x112 	 output shape: 32x112x112
+2	Layer Name: Conv2d_0/Relu6 	 Layer time: 2.18945 	 number of inputs: 1 	 input shape: 32x112x112 	 output shape: 32x112x112
+Layer Number: 0 	 time: 14.6661
+----------------------------
+3	Layer Name: Conv2d_1_depthwise/depthwise 	 Layer time: 5.30617 	 number of inputs: 3 	 input shape: 32x112x112 	 output shape: 32x112x112
+4	Layer Name: Conv2d_1_depthwise/BatchNorm 	 Layer time: 4.5726 	 number of inputs: 5 	 input shape: 32x112x112 	 output shape: 32x112x112
+5	Layer Name: Conv2d_1_depthwise/Relu6 	 Layer time: 1.92611 	 number of inputs: 1 	 input shape: 32x112x112 	 output shape: 32x112x112
+6	Layer Name: Conv2d_1_pointwise/Conv2D 	 Layer time: 10.24 	 number of inputs: 3 	 input shape: 32x112x112 	 output shape: 64x112x112
+7	Layer Name: Conv2d_1_pointwise/BatchNorm 	 Layer time: 8.08195 	 number of inputs: 5 	 input shape: 64x112x112 	 output shape: 64x112x112
+8	Layer Name: Conv2d_1_pointwise/Relu6 	 Layer time: 3.27671 	 number of inputs: 1 	 input shape: 64x112x112 	 output shape: 64x112x112
+Layer Number: 1 	 time: 33.4035
+----------------------------
+9	Layer Name: Conv2d_2_depthwise/depthwise 	 Layer time: 4.42874 	 number of inputs: 3 	 input shape: 64x112x112 	 output shape: 64x56x56
+10	Layer Name: Conv2d_2_depthwise/BatchNorm 	 Layer time: 2.3314 	 number of inputs: 5 	 input shape: 64x56x56 	 output shape: 64x56x56
+11	Layer Name: Conv2d_2_depthwise/Relu6 	 Layer time: 1.099 	 number of inputs: 1 	 input shape: 64x56x56 	 output shape: 64x56x56
+12	Layer Name: Conv2d_2_pointwise/Conv2D 	 Layer time: 11.617 	 number of inputs: 3 	 input shape: 64x56x56 	 output shape: 128x56x56
+13	Layer Name: Conv2d_2_pointwise/BatchNorm 	 Layer time: 4.17493 	 number of inputs: 5 	 input shape: 128x56x56 	 output shape: 128x56x56
+14	Layer Name: Conv2d_2_pointwise/Relu6 	 Layer time: 1.83659 	 number of inputs: 1 	 input shape: 128x56x56 	 output shape: 128x56x56
+Layer Number: 2 	 time: 25.4876
+----------------------------
+15	Layer Name: Conv2d_3_depthwise/depthwise 	 Layer time: 5.80498 	 number of inputs: 3 	 input shape: 128x56x56 	 output shape: 128x56x56
+16	Layer Name: Conv2d_3_depthwise/BatchNorm 	 Layer time: 4.17147 	 number of inputs: 5 	 input shape: 128x56x56 	 output shape: 128x56x56
+17	Layer Name: Conv2d_3_depthwise/Relu6 	 Layer time: 1.69417 	 number of inputs: 1 	 input shape: 128x56x56 	 output shape: 128x56x56
+18	Layer Name: Conv2d_3_pointwise/Conv2D 	 Layer time: 22.4187 	 number of inputs: 3 	 input shape: 128x56x56 	 output shape: 128x56x56
+19	Layer Name: Conv2d_3_pointwise/BatchNorm 	 Layer time: 4.58242 	 number of inputs: 5 	 input shape: 128x56x56 	 output shape: 128x56x56
+20	Layer Name: Conv2d_3_pointwise/Relu6 	 Layer time: 1.90143 	 number of inputs: 1 	 input shape: 128x56x56 	 output shape: 128x56x56
+Layer Number: 3 	 time: 40.5732
+----------------------------
+21	Layer Name: Conv2d_4_depthwise/depthwise 	 Layer time: 2.83077 	 number of inputs: 3 	 input shape: 128x56x56 	 output shape: 128x28x28
+22	Layer Name: Conv2d_4_depthwise/BatchNorm 	 Layer time: 1.3075 	 number of inputs: 5 	 input shape: 128x28x28 	 output shape: 128x28x28
+23	Layer Name: Conv2d_4_depthwise/Relu6 	 Layer time: 0.753084 	 number of inputs: 1 	 input shape: 128x28x28 	 output shape: 128x28x28
+24	Layer Name: Conv2d_4_pointwise/Conv2D 	 Layer time: 11.2807 	 number of inputs: 3 	 input shape: 128x28x28 	 output shape: 256x28x28
+25	Layer Name: Conv2d_4_pointwise/BatchNorm 	 Layer time: 2.34223 	 number of inputs: 5 	 input shape: 256x28x28 	 output shape: 256x28x28
+26	Layer Name: Conv2d_4_pointwise/Relu6 	 Layer time: 1.15341 	 number of inputs: 1 	 input shape: 256x28x28 	 output shape: 256x28x28
+Layer Number: 4 	 time: 19.6676
+----------------------------
+27	Layer Name: Conv2d_5_depthwise/depthwise 	 Layer time: 3.36813 	 number of inputs: 3 	 input shape: 256x28x28 	 output shape: 256x28x28
+28	Layer Name: Conv2d_5_depthwise/BatchNorm 	 Layer time: 2.23294 	 number of inputs: 5 	 input shape: 256x28x28 	 output shape: 256x28x28
+29	Layer Name: Conv2d_5_depthwise/Relu6 	 Layer time: 1.04021 	 number of inputs: 1 	 input shape: 256x28x28 	 output shape: 256x28x28
+30	Layer Name: Conv2d_5_pointwise/Conv2D 	 Layer time: 19.8253 	 number of inputs: 3 	 input shape: 256x28x28 	 output shape: 256x28x28
+31	Layer Name: Conv2d_5_pointwise/BatchNorm 	 Layer time: 2.35149 	 number of inputs: 5 	 input shape: 256x28x28 	 output shape: 256x28x28
+32	Layer Name: Conv2d_5_pointwise/Relu6 	 Layer time: 1.16664 	 number of inputs: 1 	 input shape: 256x28x28 	 output shape: 256x28x28
+Layer Number: 5 	 time: 29.9847
+----------------------------
+33	Layer Name: Conv2d_6_depthwise/depthwise 	 Layer time: 2.02196 	 number of inputs: 3 	 input shape: 256x28x28 	 output shape: 256x14x14
+34	Layer Name: Conv2d_6_depthwise/BatchNorm 	 Layer time: 0.798196 	 number of inputs: 5 	 input shape: 256x14x14 	 output shape: 256x14x14
+35	Layer Name: Conv2d_6_depthwise/Relu6 	 Layer time: 0.647017 	 number of inputs: 1 	 input shape: 256x14x14 	 output shape: 256x14x14
+36	Layer Name: Conv2d_6_pointwise/Conv2D 	 Layer time: 5.48793 	 number of inputs: 3 	 input shape: 256x14x14 	 output shape: 512x14x14
+37	Layer Name: Conv2d_6_pointwise/BatchNorm 	 Layer time: 1.41795 	 number of inputs: 5 	 input shape: 512x14x14 	 output shape: 512x14x14
+38	Layer Name: Conv2d_6_pointwise/Relu6 	 Layer time: 0.831308 	 number of inputs: 1 	 input shape: 512x14x14 	 output shape: 512x14x14
+Layer Number: 6 	 time: 11.2044
+----------------------------
+39	Layer Name: Conv2d_7_depthwise/depthwise 	 Layer time: 2.18297 	 number of inputs: 3 	 input shape: 512x14x14 	 output shape: 512x14x14
+40	Layer Name: Conv2d_7_depthwise/BatchNorm 	 Layer time: 1.34692 	 number of inputs: 5 	 input shape: 512x14x14 	 output shape: 512x14x14
+41	Layer Name: Conv2d_7_depthwise/Relu6 	 Layer time: 0.700363 	 number of inputs: 1 	 input shape: 512x14x14 	 output shape: 512x14x14
+42	Layer Name: Conv2d_7_pointwise/Conv2D 	 Layer time: 11.8757 	 number of inputs: 3 	 input shape: 512x14x14 	 output shape: 512x14x14
+43	Layer Name: Conv2d_7_pointwise/BatchNorm 	 Layer time: 1.3197 	 number of inputs: 5 	 input shape: 512x14x14 	 output shape: 512x14x14
+44	Layer Name: Conv2d_7_pointwise/Relu6 	 Layer time: 0.731679 	 number of inputs: 1 	 input shape: 512x14x14 	 output shape: 512x14x14
+Layer Number: 7 	 time: 18.1574
+----------------------------
+45	Layer Name: Conv2d_8_depthwise/depthwise 	 Layer time: 2.02697 	 number of inputs: 3 	 input shape: 512x14x14 	 output shape: 512x14x14
+46	Layer Name: Conv2d_8_depthwise/BatchNorm 	 Layer time: 1.24113 	 number of inputs: 5 	 input shape: 512x14x14 	 output shape: 512x14x14
+47	Layer Name: Conv2d_8_depthwise/Relu6 	 Layer time: 0.743375 	 number of inputs: 1 	 input shape: 512x14x14 	 output shape: 512x14x14
+48	Layer Name: Conv2d_8_pointwise/Conv2D 	 Layer time: 11.8646 	 number of inputs: 3 	 input shape: 512x14x14 	 output shape: 512x14x14
+49	Layer Name: Conv2d_8_pointwise/BatchNorm 	 Layer time: 1.41108 	 number of inputs: 5 	 input shape: 512x14x14 	 output shape: 512x14x14
+50	Layer Name: Conv2d_8_pointwise/Relu6 	 Layer time: 0.726479 	 number of inputs: 1 	 input shape: 512x14x14 	 output shape: 512x14x14
+Layer Number: 8 	 time: 18.0136
+----------------------------
+51	Layer Name: Conv2d_9_depthwise/depthwise 	 Layer time: 2.14759 	 number of inputs: 3 	 input shape: 512x14x14 	 output shape: 512x14x14
+52	Layer Name: Conv2d_9_depthwise/BatchNorm 	 Layer time: 1.34809 	 number of inputs: 5 	 input shape: 512x14x14 	 output shape: 512x14x14
+53	Layer Name: Conv2d_9_depthwise/Relu6 	 Layer time: 0.694937 	 number of inputs: 1 	 input shape: 512x14x14 	 output shape: 512x14x14
+54	Layer Name: Conv2d_9_pointwise/Conv2D 	 Layer time: 11.8501 	 number of inputs: 3 	 input shape: 512x14x14 	 output shape: 512x14x14
+55	Layer Name: Conv2d_9_pointwise/BatchNorm 	 Layer time: 1.3384 	 number of inputs: 5 	 input shape: 512x14x14 	 output shape: 512x14x14
+56	Layer Name: Conv2d_9_pointwise/Relu6 	 Layer time: 0.824646 	 number of inputs: 1 	 input shape: 512x14x14 	 output shape: 512x14x14
+Layer Number: 9 	 time: 18.2038
+----------------------------
+57	Layer Name: Conv2d_10_depthwise/depthwise 	 Layer time: 2.19066 	 number of inputs: 3 	 input shape: 512x14x14 	 output shape: 512x14x14
+58	Layer Name: Conv2d_10_depthwise/BatchNorm 	 Layer time: 1.35736 	 number of inputs: 5 	 input shape: 512x14x14 	 output shape: 512x14x14
+59	Layer Name: Conv2d_10_depthwise/Relu6 	 Layer time: 0.835688 	 number of inputs: 1 	 input shape: 512x14x14 	 output shape: 512x14x14
+60	Layer Name: Conv2d_10_pointwise/Conv2D 	 Layer time: 11.9493 	 number of inputs: 3 	 input shape: 512x14x14 	 output shape: 512x14x14
+61	Layer Name: Conv2d_10_pointwise/BatchNorm 	 Layer time: 1.2872 	 number of inputs: 5 	 input shape: 512x14x14 	 output shape: 512x14x14
+62	Layer Name: Conv2d_10_pointwise/Relu6 	 Layer time: 0.741604 	 number of inputs: 1 	 input shape: 512x14x14 	 output shape: 512x14x14
+Layer Number: 10 	 time: 18.3618
+----------------------------
+63	Layer Name: Conv2d_11_depthwise/depthwise 	 Layer time: 2.11775 	 number of inputs: 3 	 input shape: 512x14x14 	 output shape: 512x14x14
+64	Layer Name: Conv2d_11_depthwise/BatchNorm 	 Layer time: 1.26103 	 number of inputs: 5 	 input shape: 512x14x14 	 output shape: 512x14x14
+65	Layer Name: Conv2d_11_depthwise/Relu6 	 Layer time: 0.729908 	 number of inputs: 1 	 input shape: 512x14x14 	 output shape: 512x14x14
+66	Layer Name: Conv2d_11_pointwise/Conv2D 	 Layer time: 12.385 	 number of inputs: 3 	 input shape: 512x14x14 	 output shape: 512x14x14
+67	Layer Name: Conv2d_11_pointwise/BatchNorm 	 Layer time: 1.37192 	 number of inputs: 5 	 input shape: 512x14x14 	 output shape: 512x14x14
+68	Layer Name: Conv2d_11_pointwise/Relu6 	 Layer time: 0.79 	 number of inputs: 1 	 input shape: 512x14x14 	 output shape: 512x14x14
+Layer Number: 11 	 time: 18.6556
+----------------------------
+69	Layer Name: Conv2d_12_depthwise/depthwise 	 Layer time: 1.46255 	 number of inputs: 3 	 input shape: 512x14x14 	 output shape: 512x7x7
+70	Layer Name: Conv2d_12_depthwise/BatchNorm 	 Layer time: 0.615825 	 number of inputs: 5 	 input shape: 512x7x7 	 output shape: 512x7x7
+71	Layer Name: Conv2d_12_depthwise/Relu6 	 Layer time: 0.487188 	 number of inputs: 1 	 input shape: 512x7x7 	 output shape: 512x7x7
+72	Layer Name: Conv2d_12_pointwise/Conv2D 	 Layer time: 13.3588 	 number of inputs: 3 	 input shape: 512x7x7 	 output shape: 1024x7x7
+73	Layer Name: Conv2d_12_pointwise/BatchNorm 	 Layer time: 0.985775 	 number of inputs: 5 	 input shape: 1024x7x7 	 output shape: 1024x7x7
+74	Layer Name: Conv2d_12_pointwise/Relu6 	 Layer time: 0.645483 	 number of inputs: 1 	 input shape: 1024x7x7 	 output shape: 1024x7x7
+Layer Number: 12 	 time: 17.5557
+----------------------------
+75	Layer Name: Conv2d_13_depthwise/depthwise 	 Layer time: 1.18417 	 number of inputs: 3 	 input shape: 1024x7x7 	 output shape: 1024x7x7
+76	Layer Name: Conv2d_13_depthwise/BatchNorm 	 Layer time: 0.87795 	 number of inputs: 5 	 input shape: 1024x7x7 	 output shape: 1024x7x7
+77	Layer Name: Conv2d_13_depthwise/Relu6 	 Layer time: 0.523521 	 number of inputs: 1 	 input shape: 1024x7x7 	 output shape: 1024x7x7
+78	Layer Name: Conv2d_13_pointwise/Conv2D 	 Layer time: 27.1027 	 number of inputs: 3 	 input shape: 1024x7x7 	 output shape: 1024x7x7
+79	Layer Name: Conv2d_13_pointwise/BatchNorm 	 Layer time: 1.0199 	 number of inputs: 5 	 input shape: 1024x7x7 	 output shape: 1024x7x7
+80	Layer Name: Conv2d_13_pointwise/Relu6 	 Layer time: 0.675013 	 number of inputs: 1 	 input shape: 1024x7x7 	 output shape: 1024x7x7
+81	Layer Name: Logits/AvgPool_1a 	 Layer time: 0.683288 	 number of inputs: 1 	 input shape: 1024x7x7 	 output shape: 1024
+82	Layer Name: Logits/Conv2d_1c_1x1 	 Layer time: 1.70996 	 number of inputs: 3 	 input shape: 1024 	 output shape: 1000
+83	Layer Name: Reshape 	 Layer time: 0.149596 	 number of inputs: 1 	 input shape: 1000 	 output shape: 1000
+84	Layer Name: Softmax 	 Layer time: 0.117921 	 number of inputs: 1 	 input shape: 1000 	 output shape: 1000
+Layer Number: 13 	 time: 34.044
+----------------------------
+
+ Sum of Layers time: 317.979
+
+
+Graph0   Input: 34.3219   Task: 1022.97   send: 0.001108   Out: 0.337196   Process: 1057.63
+
+
+
+********
+
+
+
+AVG Latency: 1057.64
+
+Profiling these DVFS settings finised
+Please Enter the desired Frequency setttings: 
+Test passed

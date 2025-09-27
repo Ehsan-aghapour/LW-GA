@@ -1,0 +1,3158 @@
+List of devices attached
+4UB7RRTHY8	device
+
+disconnected everything
+adbd is already running as root
+remount succeeded
+/home/ehsan/UvA/ARMCL/Rock-Pi/ComputeLibrary_64_Yolov3/utils/DVFS/governor_pandoon.ko: 1 file pushed, 0 skipped. 1034.5 MB/s (260080 bytes in 0.000s)
+Module is already inserted, removing and reinserting...
+start=1, end=1
+file /data/local/ARM-CO-UP/graphs/Alex_1_1.rknn exist on board
+start=3, end=3
+file /data/local/ARM-CO-UP/graphs/Alex_3_3.rknn exist on board
+start=5, end=5
+file /data/local/ARM-CO-UP/graphs/Alex_5_5.rknn exist on board
+start=7, end=7
+file /data/local/ARM-CO-UP/graphs/Alex_7_7.rknn exist on board
+
+WARNING: linker: Warning: unable to normalize "build/"
+4 Input images are read from /data/local/ARM-CO-UP/assets//ppm_images_227/
+[UtilsPipeline.h] image directory is: /data/local/ARM-CO-UP/assets//ppm_images_227//
+Threads : 1
+Small Cores Threads : 1
+Target : Neon
+Data type : F32
+Data layout : NHWC
+Tuner enabled? : false
+Cache enabled? : false
+Tuner mode : Normal
+Tuner file : 
+MLGO file : 
+Fast math enabled? : false
+Data path : /data/local/ARM-CO-UP/assets//alexnet/
+Image file : /data/local/ARM-CO-UP/assets//ppm_images_227//
+Labels file : /data/local/ARM-CO-UP/assets//labels.txt
+Partition point is : 0
+Second partition point is : 0
+Order is : BNBNBNBN
+freqs of layers : 
+power_profile_mode : layers
+GPU host is: B
+NPU host is: B
+Number of totla cores is : 6
+Number of little cores is : 4
+Print task names : 0
+Run network for 10 times.
+Layer timing: 0
+
+Adding Graph0 target 1 PE: B Host PE: B Layers: 0-0
+Adding Graph1 target 4 PE: N Host PE: B Layers: 1-1
+Adding Graph2 target 1 PE: B Host PE: B Layers: 2-2
+Adding Graph3 target 4 PE: N Host PE: B Layers: 3-3
+Adding Graph4 target 1 PE: B Host PE: B Layers: 4-4
+Adding Graph5 target 4 PE: N Host PE: B Layers: 5-5
+Adding Graph6 target 1 PE: B Host PE: B Layers: 6-6
+Adding Graph7 target 4 PE: N Host PE: B Layers: 7-7
+pandoon
+pandoon
+pandoon
+Pandoon opened at 3
+****************************
+GraphUtils.cpp- reading images: /data/local/ARM-CO-UP/assets//ppm_images_227//
+/data/local/ARM-CO-UP/assets//ppm_images_227//gold_fish.ppm
+/data/local/ARM-CO-UP/assets//ppm_images_227//gondola.ppm
+/data/local/ARM-CO-UP/assets//ppm_images_227//school_bus.ppm
+/data/local/ARM-CO-UP/assets//ppm_images_227//go_kart.ppm
+*****************************
+
+
+
+-1 skipping layer: 
+			0 layer: conv1
+			0 skipping layer: relu1
+			0 skipping layer: norm1
+			0 skipping layer: pool1
+1 layer: conv2
+Input node for the layer 1 is in graph: 0 Adding Transmitter to that graph
+Adding Sender_pool1 to graph 0 with target 1
+Adding Receiver_pool1 to graph 1 with target 4
+1 skipping layer: relu2
+1 skipping layer: norm2
+1 skipping layer: pool2
+			2 layer: conv3
+Input node for the layer 2 is in graph: 1 Adding Transmitter to that graph
+Adding Sender_pool2 to graph 1 with target 4
+Adding Receiver_pool2 to graph 2 with target 1
+			2 skipping layer: relu3
+3 layer: conv4
+Input node for the layer 3 is in graph: 2 Adding Transmitter to that graph
+Adding Sender_relu3 to graph 2 with target 1
+Adding Receiver_relu3 to graph 3 with target 4
+3 skipping layer: relu4
+			4 layer: conv5
+Input node for the layer 4 is in graph: 3 Adding Transmitter to that graph
+Adding Sender_relu4 to graph 3 with target 4
+Adding Receiver_relu4 to graph 4 with target 1
+			4 skipping layer: relu5
+			4 skipping layer: pool5
+5 layer: fc6
+Input node for the layer 5 is in graph: 4 Adding Transmitter to that graph
+Adding Sender_pool5 to graph 4 with target 1
+Adding Receiver_pool5 to graph 5 with target 4
+5 skipping layer: relu6
+			6 layer: fc7
+Input node for the layer 6 is in graph: 5 Adding Transmitter to that graph
+Adding Sender_relu6 to graph 5 with target 4
+Adding Receiver_relu6 to graph 6 with target 1
+			6 skipping layer: relu7
+7 layer: fc8
+Input node for the layer 7 is in graph: 6 Adding Transmitter to that graph
+Adding Sender_relu7 to graph 6 with target 1
+Adding Receiver_relu7 to graph 7 with target 4
+7 skipping layer: prob
+output accessor reading label file /data/local/ARM-CO-UP/assets//labels.txt
+7 skipping layer: output
+graph 1 target is NPU, merging nodes into one NPU Node ...
+Adding NPU Node NPU_Alex_1_1 to graph 1 with target 4
+re-struct output node Sender_pool2 to the npu node
+producer is pool2
+removing edge between producer and the output
+adding edge between NPU node and the output
+re-struct input node Receiver_pool1 to the npu node
+consumer is conv2
+removing edge between input and the consumer
+adding edge between input and NPU node
+npu node created
+
+graph 3 target is NPU, merging nodes into one NPU Node ...
+Adding NPU Node NPU_Alex_3_3 to graph 3 with target 4
+re-struct output node Sender_relu4 to the npu node
+producer is relu4
+removing edge between producer and the output
+adding edge between NPU node and the output
+re-struct input node Receiver_relu3 to the npu node
+consumer is conv4
+removing edge between input and the consumer
+adding edge between input and NPU node
+npu node created
+
+graph 5 target is NPU, merging nodes into one NPU Node ...
+Adding NPU Node NPU_Alex_5_5 to graph 5 with target 4
+re-struct output node Sender_relu6 to the npu node
+producer is relu6
+removing edge between producer and the output
+adding edge between NPU node and the output
+re-struct input node Receiver_pool5 to the npu node
+consumer is fc6
+removing edge between input and the consumer
+adding edge between input and NPU node
+npu node created
+
+graph 7 target is NPU, merging nodes into one NPU Node ...
+Adding NPU Node NPU_Alex_7_7 to graph 7 with target 4
+re-struct output node output to the npu node
+producer is prob
+removing edge between producer and the output
+adding edge between NPU node and the output
+re-struct input node Receiver_relu7 to the npu node
+consumer is fc8
+removing edge between input and the consumer
+adding edge between input and NPU node
+npu node created
+
+
+
+*********************
+Start finalizing Graphs
+*******************
+
+Graph id: 0 Target is: Neon
+Graph id: Graph id: 1 Target is: NPU
+6 Target is: Neon
+Graph id: 7 Target is: NPU
+Graph id: 5 Target is: NPU
+Graph id: 3 Target is: NPU
+Graph id: 4 Target is: Neon
+Graph id: 2 Target is: Neon
+Creating a RockPi NPU node...
+NPU Alex_1_1 Number of inputs: 1 and number of outputs: 1
+Model name: /data/local/ARM-CO-UP/graphs/Alex_1_1.rknn
+Graph (0) Task 0: conv1
+Graph (0) Task 1: relu1
+Graph (0) Task 2: norm1
+Graph (0) Task 3: pool1
+Graph 0 input size: 1 receiver size: 0 tasks size: 4 senders size: 1 output size: 0
+
+NPU /data/local/ARM-CO-UP/graphs/Alex_1_1.rknn Reading model...
+Creating a RockPi NPU node...
+NPU Alex_5_5 Number of inputs: 1 and number of outputs: 1
+Model name: /data/local/ARM-CO-UP/graphs/Alex_5_5.rknn
+Graph (6) Task 0: fc7
+Graph (6) Task Creating a RockPi NPU node...
+NPU Alex_7_7 Number of inputs: 11 and number of outputs: 1: Creating a RockPi NPU node...
+relu7
+
+Model name: /data/local/ARM-CO-UP/graphs/Alex_7_7.rknn
+Graph 6 input size: 0 receiver size: 1 tasks size: 2 senders size: 1 output size: 0
+
+NPU Alex_3_3 Number of inputs: 1 and number of outputs: 1
+Model name: /data/local/ARM-CO-UP/graphs/Alex_3_3.rknn
+Graph (4) Task 0: conv5_g0
+Graph (4) Task 1: conv5_g1
+Graph (4) Task 2: conv5
+Graph (4) Task 3: relu5
+Graph (4) Task 4: pool5
+Graph 4 input size: 0 receiver size: 1 tasks size: 5 senders size: 1 output size: 0
+
+NPU /data/local/ARM-CO-UP/graphs/Alex_3_3.rknn Reading model...
+Graph (2) Task 0: conv3
+Graph (2) Task 1: relu3
+Graph 2 input size: 0 receiver size: 1 tasks size: 2 senders size: 1 output size: 0
+
+NPU /data/local/ARM-CO-UP/graphs/Alex_7_7.rknn Reading model...
+setting ending for layer: pool1
+Finish finalizing graph 0
+
+
+
+setting ending for layer: pool5
+Finish finalizing graph 4
+
+
+
+NPU /data/local/ARM-CO-UP/graphs/Alex_5_5.rknn Reading model...
+setting ending for layer: relu3
+Finish finalizing graph 2
+
+
+
+NPU /data/local/ARM-CO-UP/graphs/Alex_1_1.rknn Initialized
+model input num: 1, output num: 1
+
+Number of NPU model outputs: 1 number of NPU subgraph outputs: 1
+Number of NPU model inputs: 1 number of NPU subgraph inputs: 1
+NPU Model Alex_1_1 Input:0	Num elements:69984	Size:69984	Name:	Fmt:0	Qnt type:2	Type:3
+Explre input 0 n_elements: 69984
+Is match with sub graph input: 0
+
+NPU Model Alex_1_1 Output:0	Num elements:43264	Size:86528	Name:	Fmt:0	Qnt type:0	Type:1
+Explore output 0 n_elements: 43264
+Is match with sub graph output: 0
+Graph (1) Task 0: NPU_Alex_1_1
+Graph 1 input size: 0 receiver size: 1 tasks size: 1 senders size: 1 output size: 0
+
+
+NPU Model Alex_1_1 Output:0	Num elements:43264	Size:86528	Name:	Fmt:0	Qnt type:0	Type:1
+Explore output 0 n_elements: 43264
+Is match with sub graph output: 0
+setting ending for layer: NPU_Alex_1_1
+Finish finalizing graph 1
+
+
+
+setting ending for layer: relu7
+Finish finalizing graph 6
+
+
+
+NPU /data/local/ARM-CO-UP/graphs/Alex_3_3.rknn Initialized
+NPU /data/local/ARM-CO-UP/graphs/Alex_7_7.rknn Initialized
+model input num: 1, output num: 1
+model input num: 1, output num: 1
+
+Number of NPU model outputs: 1 number of NPU subgraph outputs: 1
+Number of NPU model inputs: 1 number of NPU subgraph inputs: 1
+NPU Model Alex_3_3 Input:0	Num elements:64896	Size:64896	Name:
+Number of NPU model outputs: NPU /data/local/ARM-CO-UP/graphs/Alex_5_5.rknn1 number of NPU subgraph outputs: 1
+Number of NPU model inputs: 1 number of NPU subgraph inputs: 1
+NPU Model Alex_7_7 Input:0	Num elements:4096	Size:4096	Name:	Fmt:0	Qnt type:2	Type:3
+Explre input 0 n_elements: 4096
+Is match with sub graph input: 0
+
+NPU Model Alex_7_7 Output:0	Num elements:1000	Size:2000	Name:	Fmt:0	Qnt type:0	Type:1
+Explore output 0 n_elements: 1000
+Is match with sub graph output: 0
+Graph (7) Task  Initialized
+	Fmt:0	Qnt type:2	Type:3
+Explre input 0 n_elements: 64896
+Is match with sub graph input: 0
+
+NPU Model Alex_3_3 Output:0	Num elements:64896	Size:64896	Name:	Fmt:0	Qnt type:2	Type:3
+Explore output 0 n_elements: 64896
+Is match with sub graph output: 0
+Graph (3) Task 0: NPU_Alex_3_3
+Graph 3 input size: 0 receiver size: 1 tasks size: 1 senders size: 1 output size: 0
+
+0: NPU_Alex_7_7
+Graph 7 input size: 0 receiver size: 1 tasks size: 1 senders size: 0 output size: 1
+
+
+NPU Model Alex_7_7 Output:0	Num elements:1000	Size:2000	Name:	Fmt:0	Qnt type:0	Type:1
+Explore output 0 n_elements: 1000
+Is match with sub graph output: 0
+setting ending for layer: NPU_Alex_7_7
+Finish finalizing graph 7
+
+
+
+model input num: 1, output num: 1
+
+Number of NPU model outputs: 1 number of NPU subgraph outputs: 1
+Number of NPU model inputs: 1 number of NPU subgraph inputs: 1
+NPU Model Alex_5_5 Input:0	Num elements:9216
+NPU Model Alex_3_3 Output:0	Num elements:64896	Size:64896	Name:	Fmt:0	Qnt type:2	Type:3
+Explore output 0 n_elements: 64896
+Is match with sub graph output: 0
+setting ending for layer: NPU_Alex_3_3
+Finish finalizing graph 3
+
+
+
+	Size:9216	Name:	Fmt:0	Qnt type:2	Type:3
+Explre input 0 n_elements: 9216
+Is match with sub graph input: 0
+
+NPU Model Alex_5_5 Output:0	Num elements:4096	Size:4096	Name:	Fmt:0	Qnt type:2	Type:3
+Explore output 0 n_elements: 4096
+Is match with sub graph output: 0
+Graph (5) Task 0: NPU_Alex_5_5
+Graph 5 input size: 0 receiver size: 1 tasks size: 1 senders size: 1 output size: 0
+
+
+NPU Model Alex_5_5 Output:0	Num elements:4096	Size:4096	Name:	Fmt:0	Qnt type:2	Type:3
+Explore output 0 n_elements: 4096
+Is match with sub graph output: 0
+setting ending for layer: NPU_Alex_5_5
+Finish finalizing graph 5
+
+
+
+setup finished
+
+Please Enter the desired Frequency setttings: 
+0 Running Graph with 0-0-0-0-0-0-0-0 LW DVFS
+governor 0 task:NPU_Alex_1_1 freqs:0,0,0
+governor 1 task:NPU_Alex_3_3 freqs:0,0,0
+governor 2 task:NPU_Alex_5_5 freqs:0,0,0
+governor 3 task:NPU_Alex_7_7 freqs:0,0,0
+governor 4 task:pool1 freqs:0,0,0
+governor 5 task:pool5 freqs:0,0,0
+governor 6 task:relu3 freqs:0,0,0
+governor 7 task:relu7 freqs:0,0,0
+set_GPIOs with mode: layers
+tass name: conv1	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: relu1	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: norm1	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: pool1	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: NPU_Alex_1_1	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: conv3	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: relu3	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: NPU_Alex_3_3	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: conv5_g0	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: conv5_g1	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: conv5	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: relu5	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: pool5	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: NPU_Alex_5_5	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: fc7	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: relu7	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: NPU_Alex_7_7	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+
+
+
+*********************************************
+start running graphs
+*************************************************
+
+
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gold_fish.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0035 - [id = 845], n04376876 syringe
+0.0034 - [id = 428], n02797295 barrow, garden cart, lawn cart, wheelbarrow
+0.0032 - [id = 50], n01698640 American alligator, Alligator mississipiensis
+0.0032 - [id = 791], n04204347 shopping cart
+0.0032 - [id = 124], n01985128 crayfish, crawfish, crawdad, crawdaddy
+
+
+************
+Photo_index:1
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gondola.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0035 - [id = 428], n02797295 barrow, garden cart, lawn cart, wheelbarrow
+0.0033 - [id = 491], n03000684 chain saw, chainsaw
+0.0033 - [id = 791], n04204347 shopping cart
+0.0032 - [id = 124], n01985128 crayfish, crawfish, crawdad, crawdaddy
+0.0032 - [id = 50], n01698640 American alligator, Alligator mississipiensis
+
+
+************
+Photo_index:2
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//school_bus.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0035 - [id = 50], n01698640 American alligator, Alligator mississipiensis
+0.0034 - [id = 428], n02797295 barrow, garden cart, lawn cart, wheelbarrow
+0.0033 - [id = 845], n04376876 syringe
+0.0032 - [id = 491], n03000684 chain saw, chainsaw
+0.0032 - [id = 791], n04204347 shopping cart
+
+
+************
+Photo_index:3
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//go_kart.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0035 - [id = 845], n04376876 syringe
+0.0035 - [id = 428], n02797295 barrow, garden cart, lawn cart, wheelbarrow
+0.0032 - [id = 50], n01698640 American alligator, Alligator mississipiensis
+0.0031 - [id = 791], n04204347 shopping cart
+0.0031 - [id = 491], n03000684 chain saw, chainsaw
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gold_fish.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0035 - [id = 845], n04376876 syringe
+0.0034 - [id = 428], n02797295 barrow, garden cart, lawn cart, wheelbarrow
+0.0032 - [id = 50], n01698640 American alligator, Alligator mississipiensis
+0.0032 - [id = 791], n04204347 shopping cart
+0.0032 - [id = 124], n01985128 crayfish, crawfish, crawdad, crawdaddy
+
+
+************
+Photo_index:1
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gondola.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0035 - [id = 428], n02797295 barrow, garden cart, lawn cart, wheelbarrow
+0.0033 - [id = 491], n03000684 chain saw, chainsaw
+0.0033 - [id = 791], n04204347 shopping cart
+0.0032 - [id = 124], n01985128 crayfish, crawfish, crawdad, crawdaddy
+0.0032 - [id = 50], n01698640 American alligator, Alligator mississipiensis
+
+
+************
+Photo_index:2
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//school_bus.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0035 - [id = 50], n01698640 American alligator, Alligator mississipiensis
+0.0034 - [id = 428], n02797295 barrow, garden cart, lawn cart, wheelbarrow
+0.0033 - [id = 845], n04376876 syringe
+0.0032 - [id = 491], n03000684 chain saw, chainsaw
+0.0032 - [id = 791], n04204347 shopping cart
+
+
+************
+Photo_index:3
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//go_kart.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0035 - [id = 845], n04376876 syringe
+0.0035 - [id = 428], n02797295 barrow, garden cart, lawn cart, wheelbarrow
+0.0032 - [id = 50], n01698640 American alligator, Alligator mississipiensis
+0.0031 - [id = 791], n04204347 shopping cart
+0.0031 - [id = 491], n03000684 chain saw, chainsaw
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gold_fish.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0035 - [id = 845], n04376876 syringe
+0.0034 - [id = 428], n02797295 barrow, garden cart, lawn cart, wheelbarrow
+0.0032 - [id = 50], n01698640 American alligator, Alligator mississipiensis
+0.0032 - [id = 791], n04204347 shopping cart
+0.0032 - [id = 124], n01985128 crayfish, crawfish, crawdad, crawdaddy
+
+
+************
+Photo_index:1
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gondola.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0035 - [id = 428], n02797295 barrow, garden cart, lawn cart, wheelbarrow
+0.0033 - [id = 491], n03000684 chain saw, chainsaw
+0.0033 - [id = 791], n04204347 shopping cart
+0.0032 - [id = 124], n01985128 crayfish, crawfish, crawdad, crawdaddy
+0.0032 - [id = 50], n01698640 American alligator, Alligator mississipiensis
+
+
+************
+Photo_index:2
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//school_bus.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0035 - [id = 50], n01698640 American alligator, Alligator mississipiensis
+0.0034 - [id = 428], n02797295 barrow, garden cart, lawn cart, wheelbarrow
+0.0033 - [id = 845], n04376876 syringe
+0.0032 - [id = 491], n03000684 chain saw, chainsaw
+0.0032 - [id = 791], n04204347 shopping cart
+
+
+************
+Photo_index:3
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//go_kart.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0035 - [id = 845], n04376876 syringe
+0.0035 - [id = 428], n02797295 barrow, garden cart, lawn cart, wheelbarrow
+0.0032 - [id = 50], n01698640 American alligator, Alligator mississipiensis
+0.0031 - [id = 791], n04204347 shopping cart
+0.0031 - [id = 491], n03000684 chain saw, chainsaw
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gold_fish.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0035 - [id = 845], n04376876 syringe
+0.0034 - [id = 428], n02797295 barrow, garden cart, lawn cart, wheelbarrow
+0.0032 - [id = 50], n01698640 American alligator, Alligator mississipiensis
+0.0032 - [id = 791], n04204347 shopping cart
+0.0032 - [id = 124], n01985128 crayfish, crawfish, crawdad, crawdaddy
+0	Layer Name: conv1 	 Layer time: 60.4414 	 number of inputs: 3 	 input shape: 3x227x227 	 output shape: 96x55x55
+1	Layer Name: relu1 	 Layer time: 1.6640 	 number of inputs: 1 	 input shape: 96x55x55 	 output shape: 96x55x55
+2	Layer Name: norm1 	 Layer time: 30.4226 	 number of inputs: 1 	 input shape: 96x55x55 	 output shape: 96x55x55
+3	Layer Name: pool1 	 Layer time: 1.3087 	 number of inputs: 1 	 input shape: 96x55x55 	 output shape: 96x27x27
+Layer Number: 0 	 time: 93.8368
+----------------------------
+
+ Sum of Layers time: 93.8368
+
+
+Graph0   Input: 63.4946   Task: 127.026   send: 0.606783   Out: 0.002217   Process: 191.13
+
+
+
+********
+
+0	Layer Name: NPU_Alex_1_1 	 Layer time: 16.4116 	 number of inputs: 1 	 input shape: 96x27x27 	 output shape: 256x13x13
+Layer Number: 0 	 time: 16.4116
+----------------------------
+
+ Sum of Layers time: 16.4116
+
+
+Graph1   Input: 0.0101208   Task: 24.9134   send: 1.24507   Out: 0.311763   Process: 26.4803
+
+NPU NPU_Alex_1_1	AVG_input_time:5.0999	AVG_run_time:6.2807	AVG_prof_run_time:0.7926	AVG_output_time:2.3485
+
+
+********
+
+0	Layer Name: conv3 	 Layer time: 53.3651 	 number of inputs: 3 	 input shape: 256x13x13 	 output shape: 384x13x13
+1	Layer Name: relu3 	 Layer time: 0.4722 	 number of inputs: 1 	 input shape: 384x13x13 	 output shape: 384x13x13
+Layer Number: 0 	 time: 53.8373
+----------------------------
+
+ Sum of Layers time: 53.8373
+
+
+Graph2   Input: 0.0096251   Task: 70.5249   send: 1.6308   Out: 0.0022165   Process: 72.1675
+
+
+
+********
+
+0	Layer Name: NPU_Alex_3_3 	 Layer time: 16.6210 	 number of inputs: 1 	 input shape: 384x13x13 	 output shape: 384x13x13
+Layer Number: 0 	 time: 16.6210
+----------------------------
+
+ Sum of Layers time: 16.6210
+
+
+Graph3   Input: 0.0085169   Task: 25.1692   send: 0.422888   Out: 0.002246   Process: 25.6029
+
+NPU NPU_Alex_3_3	AVG_input_time:4.8147	AVG_run_time:5.6491	AVG_prof_run_time:0.4260	AVG_output_time:3.5834
+
+
+********
+
+0	Layer Name: conv5_g0 	 Layer time: 16.8735 	 number of inputs: 3 	 input shape: 192x13x13 	 output shape: 128x13x13
+1	Layer Name: conv5_g1 	 Layer time: 16.5536 	 number of inputs: 3 	 input shape: 192x13x13 	 output shape: 128x13x13
+2	Layer Name: conv5 	 Layer time: 0.4016 	 number of inputs: 2 	 input shape: 128x13x13 	 output shape: 256x13x13
+3	Layer Name: relu5 	 Layer time: 0.3486 	 number of inputs: 1 	 input shape: 256x13x13 	 output shape: 256x13x13
+4	Layer Name: pool5 	 Layer time: 0.2969 	 number of inputs: 1 	 input shape: 256x13x13 	 output shape: 256x6x6
+Layer Number: 0 	 time: 34.4742
+----------------------------
+
+ Sum of Layers time: 34.4742
+
+
+Graph4   Input: 0.0083707   Task: 75.7755   send: 0.474104   Out: 0.0022753   Process: 76.2603
+
+
+
+********
+
+0	Layer Name: NPU_Alex_5_5 	 Layer time: 11.5350 	 number of inputs: 1 	 input shape: 256x6x6 	 output shape: 4096
+Layer Number: 0 	 time: 11.5350
+----------------------------
+
+ Sum of Layers time: 11.5350
+
+
+Graph5   Input: 0.0067961   Task: 19.9818   send: 0.0535212   Out: 0.002421   Process: 20.0445
+
+NPU NPU_Alex_5_5	AVG_input_time:0.7511	AVG_run_time:8.5574	AVG_prof_run_time:5.1848	AVG_output_time:0.2109
+
+
+********
+
+0	Layer Name: fc7 	 Layer time: 38.0830 	 number of inputs: 3 	 input shape: 4096 	 output shape: 4096
+1	Layer Name: relu7 	 Layer time: 0.0716 	 number of inputs: 1 	 input shape: 4096 	 output shape: 4096
+Layer Number: 0 	 time: 38.1546
+----------------------------
+
+ Sum of Layers time: 38.1546
+
+
+Graph6   Input: 0.0081083   Task: 54.846   send: 0.535296   Out: 0.0022456   Process: 55.3916
+
+
+
+********
+
+0	Layer Name: NPU_Alex_7_7 	 Layer time: 7.2553 	 number of inputs: 1 	 input shape: 4096 	 output shape: 1000
+Layer Number: 0 	 time: 7.2553
+----------------------------
+
+ Sum of Layers time: 7.2553
+
+
+Graph7   Input: 0.0090124   Task: 15.6983   send: 0.0026541   Out: 0.624313   Process: 16.3343
+
+NPU NPU_Alex_7_7	AVG_input_time:0.4559	AVG_run_time:4.4540	AVG_prof_run_time:1.2645	AVG_output_time:0.0594
+
+
+********
+
+
+
+AVG Latency: 479.751
+
+Profiling these DVFS settings finised
+Please Enter the desired Frequency setttings: 
+1 Running Graph with 1-1-1-1-1-1-1-1 LW DVFS
+governor 0 task:NPU_Alex_1_1 freqs:0,1,0
+governor 1 task:NPU_Alex_3_3 freqs:0,1,0
+governor 2 task:NPU_Alex_5_5 freqs:0,1,0
+governor 3 task:NPU_Alex_7_7 freqs:0,1,0
+governor 4 task:pool1 freqs:0,1,0
+governor 5 task:pool5 freqs:0,1,0
+governor 6 task:relu3 freqs:0,1,0
+governor 7 task:relu7 freqs:0,1,0
+set_GPIOs with mode: layers
+tass name: conv1	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: relu1	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: norm1	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: pool1	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: NPU_Alex_1_1	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: conv3	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: relu3	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: NPU_Alex_3_3	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: conv5_g0	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: conv5_g1	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: conv5	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: relu5	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: pool5	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: NPU_Alex_5_5	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: fc7	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: relu7	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: NPU_Alex_7_7	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+
+
+
+*********************************************
+start running graphs
+*************************************************
+
+
+
+
+************
+Photo_index:1
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gondola.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0035 - [id = 428], n02797295 barrow, garden cart, lawn cart, wheelbarrow
+0.0033 - [id = 491], n03000684 chain saw, chainsaw
+0.0033 - [id = 791], n04204347 shopping cart
+0.0032 - [id = 124], n01985128 crayfish, crawfish, crawdad, crawdaddy
+0.0032 - [id = 50], n01698640 American alligator, Alligator mississipiensis
+
+
+************
+Photo_index:2
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//school_bus.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0035 - [id = 50], n01698640 American alligator, Alligator mississipiensis
+0.0034 - [id = 428], n02797295 barrow, garden cart, lawn cart, wheelbarrow
+0.0033 - [id = 845], n04376876 syringe
+0.0032 - [id = 491], n03000684 chain saw, chainsaw
+0.0032 - [id = 791], n04204347 shopping cart
+
+
+************
+Photo_index:3
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//go_kart.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0035 - [id = 845], n04376876 syringe
+0.0035 - [id = 428], n02797295 barrow, garden cart, lawn cart, wheelbarrow
+0.0032 - [id = 50], n01698640 American alligator, Alligator mississipiensis
+0.0031 - [id = 791], n04204347 shopping cart
+0.0031 - [id = 491], n03000684 chain saw, chainsaw
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gold_fish.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0035 - [id = 845], n04376876 syringe
+0.0034 - [id = 428], n02797295 barrow, garden cart, lawn cart, wheelbarrow
+0.0032 - [id = 50], n01698640 American alligator, Alligator mississipiensis
+0.0032 - [id = 791], n04204347 shopping cart
+0.0032 - [id = 124], n01985128 crayfish, crawfish, crawdad, crawdaddy
+
+
+************
+Photo_index:1
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gondola.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0035 - [id = 428], n02797295 barrow, garden cart, lawn cart, wheelbarrow
+0.0033 - [id = 491], n03000684 chain saw, chainsaw
+0.0033 - [id = 791], n04204347 shopping cart
+0.0032 - [id = 124], n01985128 crayfish, crawfish, crawdad, crawdaddy
+0.0032 - [id = 50], n01698640 American alligator, Alligator mississipiensis
+
+
+************
+Photo_index:2
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//school_bus.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0035 - [id = 50], n01698640 American alligator, Alligator mississipiensis
+0.0034 - [id = 428], n02797295 barrow, garden cart, lawn cart, wheelbarrow
+0.0033 - [id = 845], n04376876 syringe
+0.0032 - [id = 491], n03000684 chain saw, chainsaw
+0.0032 - [id = 791], n04204347 shopping cart
+
+
+************
+Photo_index:3
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//go_kart.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0035 - [id = 845], n04376876 syringe
+0.0035 - [id = 428], n02797295 barrow, garden cart, lawn cart, wheelbarrow
+0.0032 - [id = 50], n01698640 American alligator, Alligator mississipiensis
+0.0031 - [id = 791], n04204347 shopping cart
+0.0031 - [id = 491], n03000684 chain saw, chainsaw
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gold_fish.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0035 - [id = 845], n04376876 syringe
+0.0034 - [id = 428], n02797295 barrow, garden cart, lawn cart, wheelbarrow
+0.0032 - [id = 50], n01698640 American alligator, Alligator mississipiensis
+0.0032 - [id = 791], n04204347 shopping cart
+0.0032 - [id = 124], n01985128 crayfish, crawfish, crawdad, crawdaddy
+
+
+************
+Photo_index:1
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gondola.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0035 - [id = 428], n02797295 barrow, garden cart, lawn cart, wheelbarrow
+0.0033 - [id = 491], n03000684 chain saw, chainsaw
+0.0033 - [id = 791], n04204347 shopping cart
+0.0032 - [id = 124], n01985128 crayfish, crawfish, crawdad, crawdaddy
+0.0032 - [id = 50], n01698640 American alligator, Alligator mississipiensis
+
+
+************
+Photo_index:2
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//school_bus.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0035 - [id = 50], n01698640 American alligator, Alligator mississipiensis
+0.0034 - [id = 428], n02797295 barrow, garden cart, lawn cart, wheelbarrow
+0.0033 - [id = 845], n04376876 syringe
+0.0032 - [id = 491], n03000684 chain saw, chainsaw
+0.0032 - [id = 791], n04204347 shopping cart
+
+
+************
+Photo_index:3
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//go_kart.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0035 - [id = 845], n04376876 syringe
+0.0035 - [id = 428], n02797295 barrow, garden cart, lawn cart, wheelbarrow
+0.0032 - [id = 50], n01698640 American alligator, Alligator mississipiensis
+0.0031 - [id = 791], n04204347 shopping cart
+0.0031 - [id = 491], n03000684 chain saw, chainsaw
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gold_fish.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0035 - [id = 845], n04376876 syringe
+0.0034 - [id = 428], n02797295 barrow, garden cart, lawn cart, wheelbarrow
+0.0032 - [id = 50], n01698640 American alligator, Alligator mississipiensis
+0.0032 - [id = 791], n04204347 shopping cart
+0.0032 - [id = 124], n01985128 crayfish, crawfish, crawdad, crawdaddy
+
+
+************
+Photo_index:1
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gondola.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0035 - [id = 428], n02797295 barrow, garden cart, lawn cart, wheelbarrow
+0.0033 - [id = 491], n03000684 chain saw, chainsaw
+0.0033 - [id = 791], n04204347 shopping cart
+0.0032 - [id = 124], n01985128 crayfish, crawfish, crawdad, crawdaddy
+0.0032 - [id = 50], n01698640 American alligator, Alligator mississipiensis
+0	Layer Name: conv1 	 Layer time: 39.0986 	 number of inputs: 3 	 input shape: 3x227x227 	 output shape: 96x55x55
+1	Layer Name: relu1 	 Layer time: 1.1437 	 number of inputs: 1 	 input shape: 96x55x55 	 output shape: 96x55x55
+2	Layer Name: norm1 	 Layer time: 19.2511 	 number of inputs: 1 	 input shape: 96x55x55 	 output shape: 96x55x55
+3	Layer Name: pool1 	 Layer time: 0.9191 	 number of inputs: 1 	 input shape: 96x55x55 	 output shape: 96x27x27
+Layer Number: 0 	 time: 60.4126
+----------------------------
+
+ Sum of Layers time: 60.4126
+
+
+Graph0   Input: 43.1072   Task: 93.4003   send: 0.832854   Out: 0.0014582   Process: 137.342
+
+
+
+********
+
+0	Layer Name: NPU_Alex_1_1 	 Layer time: 12.9011 	 number of inputs: 1 	 input shape: 96x27x27 	 output shape: 256x13x13
+Layer Number: 0 	 time: 12.9011
+----------------------------
+
+ Sum of Layers time: 12.9011
+
+
+Graph1   Input: 0.0078459   Task: 21.3037   send: 1.58439   Out: 0.0016332   Process: 22.8976
+
+NPU NPU_Alex_1_1	AVG_input_time:3.3655	AVG_run_time:5.9390	AVG_prof_run_time:0.8045	AVG_output_time:1.5653
+
+
+********
+
+0	Layer Name: conv3 	 Layer time: 34.4940 	 number of inputs: 3 	 input shape: 256x13x13 	 output shape: 384x13x13
+1	Layer Name: relu3 	 Layer time: 0.3372 	 number of inputs: 1 	 input shape: 384x13x13 	 output shape: 384x13x13
+Layer Number: 0 	 time: 34.8311
+----------------------------
+
+ Sum of Layers time: 34.8311
+
+
+Graph2   Input: 0.0072334   Task: 51.3659   send: 1.33554   Out: 0.0014582   Process: 52.7101
+
+
+
+********
+
+0	Layer Name: NPU_Alex_3_3 	 Layer time: 13.1119 	 number of inputs: 1 	 input shape: 384x13x13 	 output shape: 384x13x13
+Layer Number: 0 	 time: 13.1119
+----------------------------
+
+ Sum of Layers time: 13.1119
+
+
+Graph3   Input: 0.0083124   Task: 21.52   send: 2.18765   Out: 0.0017209   Process: 23.7177
+
+NPU NPU_Alex_3_3	AVG_input_time:3.1328	AVG_run_time:5.2612	AVG_prof_run_time:0.4273	AVG_output_time:2.3981
+
+
+********
+
+0	Layer Name: conv5_g0 	 Layer time: 10.8331 	 number of inputs: 3 	 input shape: 192x13x13 	 output shape: 128x13x13
+1	Layer Name: conv5_g1 	 Layer time: 10.3953 	 number of inputs: 3 	 input shape: 192x13x13 	 output shape: 128x13x13
+2	Layer Name: conv5 	 Layer time: 0.3000 	 number of inputs: 2 	 input shape: 128x13x13 	 output shape: 256x13x13
+3	Layer Name: relu5 	 Layer time: 0.2427 	 number of inputs: 1 	 input shape: 256x13x13 	 output shape: 256x13x13
+4	Layer Name: pool5 	 Layer time: 0.2026 	 number of inputs: 1 	 input shape: 256x13x13 	 output shape: 256x6x6
+Layer Number: 0 	 time: 21.9736
+----------------------------
+
+ Sum of Layers time: 21.9736
+
+
+Graph4   Input: 0.0060667   Task: 62.852   send: 0.474804   Out: 0.0014584   Process: 63.3343
+
+
+
+********
+
+0	Layer Name: NPU_Alex_5_5 	 Layer time: 10.6795 	 number of inputs: 1 	 input shape: 256x6x6 	 output shape: 4096
+Layer Number: 0 	 time: 10.6795
+----------------------------
+
+ Sum of Layers time: 10.6795
+
+
+Graph5   Input: 0.0049876   Task: 19.0165   send: 0.0378291   Out: 0.0015749   Process: 19.0609
+
+NPU NPU_Alex_5_5	AVG_input_time:0.5232	AVG_run_time:8.0791	AVG_prof_run_time:5.1808	AVG_output_time:0.1397
+
+
+********
+
+0	Layer Name: fc7 	 Layer time: 25.4266 	 number of inputs: 3 	 input shape: 4096 	 output shape: 4096
+1	Layer Name: relu7 	 Layer time: 0.0542 	 number of inputs: 1 	 input shape: 4096 	 output shape: 4096
+Layer Number: 0 	 time: 25.4809
+----------------------------
+
+ Sum of Layers time: 25.4809
+
+
+Graph6   Input: 0.0060083   Task: 41.9845   send: 0.355396   Out: 0.0014582   Process: 42.3474
+
+
+
+********
+
+0	Layer Name: NPU_Alex_7_7 	 Layer time: 6.2111 	 number of inputs: 1 	 input shape: 4096 	 output shape: 1000
+Layer Number: 0 	 time: 6.2111
+----------------------------
+
+ Sum of Layers time: 6.2111
+
+
+Graph7   Input: 0.0053666   Task: 14.5429   send: 0.001925   Out: 0.430209   Process: 14.9804
+
+NPU NPU_Alex_7_7	AVG_input_time:0.3060	AVG_run_time:4.1650	AVG_prof_run_time:1.2676	AVG_output_time:0.0402
+
+
+********
+
+
+
+AVG Latency: 370.733
+
+Profiling these DVFS settings finised
+Please Enter the desired Frequency setttings: 
+2 Running Graph with 2-2-2-2-2-2-2-2 LW DVFS
+governor 0 task:NPU_Alex_1_1 freqs:0,2,0
+governor 1 task:NPU_Alex_3_3 freqs:0,2,0
+governor 2 task:NPU_Alex_5_5 freqs:0,2,0
+governor 3 task:NPU_Alex_7_7 freqs:0,2,0
+governor 4 task:pool1 freqs:0,2,0
+governor 5 task:pool5 freqs:0,2,0
+governor 6 task:relu3 freqs:0,2,0
+governor 7 task:relu7 freqs:0,2,0
+set_GPIOs with mode: layers
+tass name: conv1	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: relu1	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: norm1	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: pool1	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: NPU_Alex_1_1	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: conv3	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: relu3	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: NPU_Alex_3_3	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: conv5_g0	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: conv5_g1	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: conv5	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: relu5	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: pool5	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: NPU_Alex_5_5	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: fc7	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: relu7	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: NPU_Alex_7_7	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+
+
+
+*********************************************
+start running graphs
+*************************************************
+
+
+
+
+************
+Photo_index:2
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//school_bus.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0035 - [id = 50], n01698640 American alligator, Alligator mississipiensis
+0.0034 - [id = 428], n02797295 barrow, garden cart, lawn cart, wheelbarrow
+0.0033 - [id = 845], n04376876 syringe
+0.0032 - [id = 491], n03000684 chain saw, chainsaw
+0.0032 - [id = 791], n04204347 shopping cart
+
+
+************
+Photo_index:3
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//go_kart.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0035 - [id = 845], n04376876 syringe
+0.0035 - [id = 428], n02797295 barrow, garden cart, lawn cart, wheelbarrow
+0.0032 - [id = 50], n01698640 American alligator, Alligator mississipiensis
+0.0031 - [id = 791], n04204347 shopping cart
+0.0031 - [id = 491], n03000684 chain saw, chainsaw
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gold_fish.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0035 - [id = 845], n04376876 syringe
+0.0034 - [id = 428], n02797295 barrow, garden cart, lawn cart, wheelbarrow
+0.0032 - [id = 50], n01698640 American alligator, Alligator mississipiensis
+0.0032 - [id = 791], n04204347 shopping cart
+0.0032 - [id = 124], n01985128 crayfish, crawfish, crawdad, crawdaddy
+
+
+************
+Photo_index:1
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gondola.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0035 - [id = 428], n02797295 barrow, garden cart, lawn cart, wheelbarrow
+0.0033 - [id = 491], n03000684 chain saw, chainsaw
+0.0033 - [id = 791], n04204347 shopping cart
+0.0032 - [id = 124], n01985128 crayfish, crawfish, crawdad, crawdaddy
+0.0032 - [id = 50], n01698640 American alligator, Alligator mississipiensis
+
+
+************
+Photo_index:2
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//school_bus.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0035 - [id = 50], n01698640 American alligator, Alligator mississipiensis
+0.0034 - [id = 428], n02797295 barrow, garden cart, lawn cart, wheelbarrow
+0.0033 - [id = 845], n04376876 syringe
+0.0032 - [id = 491], n03000684 chain saw, chainsaw
+0.0032 - [id = 791], n04204347 shopping cart
+
+
+************
+Photo_index:3
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//go_kart.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0035 - [id = 845], n04376876 syringe
+0.0035 - [id = 428], n02797295 barrow, garden cart, lawn cart, wheelbarrow
+0.0032 - [id = 50], n01698640 American alligator, Alligator mississipiensis
+0.0031 - [id = 791], n04204347 shopping cart
+0.0031 - [id = 491], n03000684 chain saw, chainsaw
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gold_fish.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0035 - [id = 845], n04376876 syringe
+0.0034 - [id = 428], n02797295 barrow, garden cart, lawn cart, wheelbarrow
+0.0032 - [id = 50], n01698640 American alligator, Alligator mississipiensis
+0.0032 - [id = 791], n04204347 shopping cart
+0.0032 - [id = 124], n01985128 crayfish, crawfish, crawdad, crawdaddy
+
+
+************
+Photo_index:1
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gondola.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0035 - [id = 428], n02797295 barrow, garden cart, lawn cart, wheelbarrow
+0.0033 - [id = 491], n03000684 chain saw, chainsaw
+0.0033 - [id = 791], n04204347 shopping cart
+0.0032 - [id = 124], n01985128 crayfish, crawfish, crawdad, crawdaddy
+0.0032 - [id = 50], n01698640 American alligator, Alligator mississipiensis
+
+
+************
+Photo_index:2
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//school_bus.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0035 - [id = 50], n01698640 American alligator, Alligator mississipiensis
+0.0034 - [id = 428], n02797295 barrow, garden cart, lawn cart, wheelbarrow
+0.0033 - [id = 845], n04376876 syringe
+0.0032 - [id = 491], n03000684 chain saw, chainsaw
+0.0032 - [id = 791], n04204347 shopping cart
+
+
+************
+Photo_index:3
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//go_kart.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0035 - [id = 845], n04376876 syringe
+0.0035 - [id = 428], n02797295 barrow, garden cart, lawn cart, wheelbarrow
+0.0032 - [id = 50], n01698640 American alligator, Alligator mississipiensis
+0.0031 - [id = 791], n04204347 shopping cart
+0.0031 - [id = 491], n03000684 chain saw, chainsaw
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gold_fish.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0035 - [id = 845], n04376876 syringe
+0.0034 - [id = 428], n02797295 barrow, garden cart, lawn cart, wheelbarrow
+0.0032 - [id = 50], n01698640 American alligator, Alligator mississipiensis
+0.0032 - [id = 791], n04204347 shopping cart
+0.0032 - [id = 124], n01985128 crayfish, crawfish, crawdad, crawdaddy
+
+
+************
+Photo_index:1
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gondola.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0035 - [id = 428], n02797295 barrow, garden cart, lawn cart, wheelbarrow
+0.0033 - [id = 491], n03000684 chain saw, chainsaw
+0.0033 - [id = 791], n04204347 shopping cart
+0.0032 - [id = 124], n01985128 crayfish, crawfish, crawdad, crawdaddy
+0.0032 - [id = 50], n01698640 American alligator, Alligator mississipiensis
+
+
+************
+Photo_index:2
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//school_bus.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0035 - [id = 50], n01698640 American alligator, Alligator mississipiensis
+0.0034 - [id = 428], n02797295 barrow, garden cart, lawn cart, wheelbarrow
+0.0033 - [id = 845], n04376876 syringe
+0.0032 - [id = 491], n03000684 chain saw, chainsaw
+0.0032 - [id = 791], n04204347 shopping cart
+0	Layer Name: conv1 	 Layer time: 29.6776 	 number of inputs: 3 	 input shape: 3x227x227 	 output shape: 96x55x55
+1	Layer Name: relu1 	 Layer time: 0.9627 	 number of inputs: 1 	 input shape: 96x55x55 	 output shape: 96x55x55
+2	Layer Name: norm1 	 Layer time: 13.5412 	 number of inputs: 1 	 input shape: 96x55x55 	 output shape: 96x55x55
+3	Layer Name: pool1 	 Layer time: 0.7237 	 number of inputs: 1 	 input shape: 96x55x55 	 output shape: 96x27x27
+Layer Number: 0 	 time: 44.9052
+----------------------------
+
+ Sum of Layers time: 44.9052
+
+
+Graph0   Input: 31.5478   Task: 77.8019   send: 0.946867   Out: 0.0011958   Process: 110.298
+
+
+
+********
+
+0	Layer Name: NPU_Alex_1_1 	 Layer time: 10.5622 	 number of inputs: 1 	 input shape: 96x27x27 	 output shape: 256x13x13
+Layer Number: 0 	 time: 10.5622
+----------------------------
+
+ Sum of Layers time: 10.5622
+
+
+Graph1   Input: 0.0093915   Task: 18.8915   send: 1.32175   Out: 0.0012253   Process: 20.2238
+
+NPU NPU_Alex_1_1	AVG_input_time:2.5313	AVG_run_time:4.9559	AVG_prof_run_time:0.8023	AVG_output_time:1.2081
+
+
+********
+
+0	Layer Name: conv3 	 Layer time: 28.6090 	 number of inputs: 3 	 input shape: 256x13x13 	 output shape: 384x13x13
+1	Layer Name: relu3 	 Layer time: 0.2296 	 number of inputs: 1 	 input shape: 384x13x13 	 output shape: 384x13x13
+Layer Number: 0 	 time: 28.8385
+----------------------------
+
+ Sum of Layers time: 28.8385
+
+
+Graph2   Input: 0.0069124   Task: 45.2803   send: 1.40718   Out: 0.0012542   Process: 46.6956
+
+
+
+********
+
+0	Layer Name: NPU_Alex_3_3 	 Layer time: 11.0334 	 number of inputs: 1 	 input shape: 384x13x13 	 output shape: 384x13x13
+Layer Number: 0 	 time: 11.0334
+----------------------------
+
+ Sum of Layers time: 11.0334
+
+
+Graph3   Input: 0.006446   Task: 19.3704   send: 0.566737   Out: 0.0011667   Process: 19.9448
+
+NPU NPU_Alex_3_3	AVG_input_time:2.3671	AVG_run_time:4.6720	AVG_prof_run_time:0.4236	AVG_output_time:1.8502
+
+
+********
+
+0	Layer Name: conv5_g0 	 Layer time: 7.4294 	 number of inputs: 3 	 input shape: 192x13x13 	 output shape: 128x13x13
+1	Layer Name: conv5_g1 	 Layer time: 8.0794 	 number of inputs: 3 	 input shape: 192x13x13 	 output shape: 128x13x13
+2	Layer Name: conv5 	 Layer time: 0.2552 	 number of inputs: 2 	 input shape: 128x13x13 	 output shape: 256x13x13
+3	Layer Name: relu5 	 Layer time: 0.2001 	 number of inputs: 1 	 input shape: 256x13x13 	 output shape: 256x13x13
+4	Layer Name: pool5 	 Layer time: 0.1553 	 number of inputs: 1 	 input shape: 256x13x13 	 output shape: 256x6x6
+Layer Number: 0 	 time: 16.1194
+----------------------------
+
+ Sum of Layers time: 16.1194
+
+
+Graph4   Input: 0.0049875   Task: 56.8462   send: 0.425921   Out: 0.0011374   Process: 57.2782
+
+
+
+********
+
+0	Layer Name: NPU_Alex_5_5 	 Layer time: 9.8487 	 number of inputs: 1 	 input shape: 256x6x6 	 output shape: 4096
+Layer Number: 0 	 time: 9.8487
+----------------------------
+
+ Sum of Layers time: 9.8487
+
+
+Graph5   Input: 0.0038501   Task: 18.0954   send: 0.0294001   Out: 0.0012833   Process: 18.1299
+
+NPU NPU_Alex_5_5	AVG_input_time:0.3810	AVG_run_time:7.7526	AVG_prof_run_time:5.1513	AVG_output_time:0.1054
+
+
+********
+
+0	Layer Name: fc7 	 Layer time: 19.5208 	 number of inputs: 3 	 input shape: 4096 	 output shape: 4096
+1	Layer Name: relu7 	 Layer time: 0.0410 	 number of inputs: 1 	 input shape: 4096 	 output shape: 4096
+Layer Number: 0 	 time: 19.5618
+----------------------------
+
+ Sum of Layers time: 19.5618
+
+
+Graph6   Input: 0.0047831   Task: 35.9958   send: 0.395238   Out: 0.0011665   Process: 36.397
+
+
+
+********
+
+0	Layer Name: NPU_Alex_7_7 	 Layer time: 5.9997 	 number of inputs: 1 	 input shape: 4096 	 output shape: 1000
+Layer Number: 0 	 time: 5.9997
+----------------------------
+
+ Sum of Layers time: 5.9997
+
+
+Graph7   Input: 0.0037917   Task: 14.2414   send: 0.0013417   Out: 0.321183   Process: 14.5677
+
+NPU NPU_Alex_7_7	AVG_input_time:0.2336	AVG_run_time:3.7782	AVG_prof_run_time:1.2701	AVG_output_time:0.0295
+
+
+********
+
+
+
+AVG Latency: 319.313
+
+Profiling these DVFS settings finised
+Please Enter the desired Frequency setttings: 
+3 Running Graph with 3-3-3-3-3-3-3-3 LW DVFS
+governor 0 task:NPU_Alex_1_1 freqs:0,3,0
+governor 1 task:NPU_Alex_3_3 freqs:0,3,0
+governor 2 task:NPU_Alex_5_5 freqs:0,3,0
+governor 3 task:NPU_Alex_7_7 freqs:0,3,0
+governor 4 task:pool1 freqs:0,3,0
+governor 5 task:pool5 freqs:0,3,0
+governor 6 task:relu3 freqs:0,3,0
+governor 7 task:relu7 freqs:0,3,0
+set_GPIOs with mode: layers
+tass name: conv1	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: relu1	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: norm1	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: pool1	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: NPU_Alex_1_1	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: conv3	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: relu3	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: NPU_Alex_3_3	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: conv5_g0	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: conv5_g1	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: conv5	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: relu5	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: pool5	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: NPU_Alex_5_5	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: fc7	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: relu7	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: NPU_Alex_7_7	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+
+
+
+*********************************************
+start running graphs
+*************************************************
+
+
+
+
+************
+Photo_index:3
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//go_kart.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0035 - [id = 845], n04376876 syringe
+0.0035 - [id = 428], n02797295 barrow, garden cart, lawn cart, wheelbarrow
+0.0032 - [id = 50], n01698640 American alligator, Alligator mississipiensis
+0.0031 - [id = 791], n04204347 shopping cart
+0.0031 - [id = 491], n03000684 chain saw, chainsaw
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gold_fish.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0035 - [id = 845], n04376876 syringe
+0.0034 - [id = 428], n02797295 barrow, garden cart, lawn cart, wheelbarrow
+0.0032 - [id = 50], n01698640 American alligator, Alligator mississipiensis
+0.0032 - [id = 791], n04204347 shopping cart
+0.0032 - [id = 124], n01985128 crayfish, crawfish, crawdad, crawdaddy
+
+
+************
+Photo_index:1
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gondola.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0035 - [id = 428], n02797295 barrow, garden cart, lawn cart, wheelbarrow
+0.0033 - [id = 491], n03000684 chain saw, chainsaw
+0.0033 - [id = 791], n04204347 shopping cart
+0.0032 - [id = 124], n01985128 crayfish, crawfish, crawdad, crawdaddy
+0.0032 - [id = 50], n01698640 American alligator, Alligator mississipiensis
+
+
+************
+Photo_index:2
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//school_bus.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0035 - [id = 50], n01698640 American alligator, Alligator mississipiensis
+0.0034 - [id = 428], n02797295 barrow, garden cart, lawn cart, wheelbarrow
+0.0033 - [id = 845], n04376876 syringe
+0.0032 - [id = 491], n03000684 chain saw, chainsaw
+0.0032 - [id = 791], n04204347 shopping cart
+
+
+************
+Photo_index:3
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//go_kart.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0035 - [id = 845], n04376876 syringe
+0.0035 - [id = 428], n02797295 barrow, garden cart, lawn cart, wheelbarrow
+0.0032 - [id = 50], n01698640 American alligator, Alligator mississipiensis
+0.0031 - [id = 791], n04204347 shopping cart
+0.0031 - [id = 491], n03000684 chain saw, chainsaw
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gold_fish.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0035 - [id = 845], n04376876 syringe
+0.0034 - [id = 428], n02797295 barrow, garden cart, lawn cart, wheelbarrow
+0.0032 - [id = 50], n01698640 American alligator, Alligator mississipiensis
+0.0032 - [id = 791], n04204347 shopping cart
+0.0032 - [id = 124], n01985128 crayfish, crawfish, crawdad, crawdaddy
+
+
+************
+Photo_index:1
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gondola.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0035 - [id = 428], n02797295 barrow, garden cart, lawn cart, wheelbarrow
+0.0033 - [id = 491], n03000684 chain saw, chainsaw
+0.0033 - [id = 791], n04204347 shopping cart
+0.0032 - [id = 124], n01985128 crayfish, crawfish, crawdad, crawdaddy
+0.0032 - [id = 50], n01698640 American alligator, Alligator mississipiensis
+
+
+************
+Photo_index:2
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//school_bus.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0035 - [id = 50], n01698640 American alligator, Alligator mississipiensis
+0.0034 - [id = 428], n02797295 barrow, garden cart, lawn cart, wheelbarrow
+0.0033 - [id = 845], n04376876 syringe
+0.0032 - [id = 491], n03000684 chain saw, chainsaw
+0.0032 - [id = 791], n04204347 shopping cart
+
+
+************
+Photo_index:3
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//go_kart.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0035 - [id = 845], n04376876 syringe
+0.0035 - [id = 428], n02797295 barrow, garden cart, lawn cart, wheelbarrow
+0.0032 - [id = 50], n01698640 American alligator, Alligator mississipiensis
+0.0031 - [id = 791], n04204347 shopping cart
+0.0031 - [id = 491], n03000684 chain saw, chainsaw
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gold_fish.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0035 - [id = 845], n04376876 syringe
+0.0034 - [id = 428], n02797295 barrow, garden cart, lawn cart, wheelbarrow
+0.0032 - [id = 50], n01698640 American alligator, Alligator mississipiensis
+0.0032 - [id = 791], n04204347 shopping cart
+0.0032 - [id = 124], n01985128 crayfish, crawfish, crawdad, crawdaddy
+
+
+************
+Photo_index:1
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gondola.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0035 - [id = 428], n02797295 barrow, garden cart, lawn cart, wheelbarrow
+0.0033 - [id = 491], n03000684 chain saw, chainsaw
+0.0033 - [id = 791], n04204347 shopping cart
+0.0032 - [id = 124], n01985128 crayfish, crawfish, crawdad, crawdaddy
+0.0032 - [id = 50], n01698640 American alligator, Alligator mississipiensis
+
+
+************
+Photo_index:2
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//school_bus.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0035 - [id = 50], n01698640 American alligator, Alligator mississipiensis
+0.0034 - [id = 428], n02797295 barrow, garden cart, lawn cart, wheelbarrow
+0.0033 - [id = 845], n04376876 syringe
+0.0032 - [id = 491], n03000684 chain saw, chainsaw
+0.0032 - [id = 791], n04204347 shopping cart
+
+
+************
+Photo_index:3
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//go_kart.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0035 - [id = 845], n04376876 syringe
+0.0035 - [id = 428], n02797295 barrow, garden cart, lawn cart, wheelbarrow
+0.0032 - [id = 50], n01698640 American alligator, Alligator mississipiensis
+0.0031 - [id = 791], n04204347 shopping cart
+0.0031 - [id = 491], n03000684 chain saw, chainsaw
+0	Layer Name: conv1 	 Layer time: 26.4011 	 number of inputs: 3 	 input shape: 3x227x227 	 output shape: 96x55x55
+1	Layer Name: relu1 	 Layer time: 0.8969 	 number of inputs: 1 	 input shape: 96x55x55 	 output shape: 96x55x55
+2	Layer Name: norm1 	 Layer time: 11.0120 	 number of inputs: 1 	 input shape: 96x55x55 	 output shape: 96x55x55
+3	Layer Name: pool1 	 Layer time: 0.5937 	 number of inputs: 1 	 input shape: 96x55x55 	 output shape: 96x27x27
+Layer Number: 0 	 time: 38.9036
+----------------------------
+
+ Sum of Layers time: 38.9036
+
+
+Graph0   Input: 25.5301   Task: 71.7302   send: 0.820312   Out: 0.0009332   Process: 98.0816
+
+
+
+********
+
+0	Layer Name: NPU_Alex_1_1 	 Layer time: 10.0052 	 number of inputs: 1 	 input shape: 96x27x27 	 output shape: 256x13x13
+Layer Number: 0 	 time: 10.0052
+----------------------------
+
+ Sum of Layers time: 10.0052
+
+
+Graph1   Input: 0.0056875   Task: 18.3198   send: 0.595729   Out: 0.0009917   Process: 18.9222
+
+NPU NPU_Alex_1_1	AVG_input_time:2.0184	AVG_run_time:5.1484	AVG_prof_run_time:0.7922	AVG_output_time:0.9788
+
+
+********
+
+0	Layer Name: conv3 	 Layer time: 28.2174 	 number of inputs: 3 	 input shape: 256x13x13 	 output shape: 384x13x13
+1	Layer Name: relu3 	 Layer time: 0.2194 	 number of inputs: 1 	 input shape: 384x13x13 	 output shape: 384x13x13
+Layer Number: 0 	 time: 28.4368
+----------------------------
+
+ Sum of Layers time: 28.4368
+
+
+Graph2   Input: 0.005279   Task: 44.8458   send: 1.40312   Out: 0.0010499   Process: 46.2552
+
+
+
+********
+
+0	Layer Name: NPU_Alex_3_3 	 Layer time: 10.1084 	 number of inputs: 1 	 input shape: 384x13x13 	 output shape: 384x13x13
+Layer Number: 0 	 time: 10.1084
+----------------------------
+
+ Sum of Layers time: 10.1084
+
+
+Graph3   Input: 0.0048417   Task: 18.3949   send: 0.207638   Out: 0.0010208   Process: 18.6084
+
+NPU NPU_Alex_3_3	AVG_input_time:1.8841	AVG_run_time:4.4827	AVG_prof_run_time:0.4341	AVG_output_time:1.5165
+
+
+********
+
+0	Layer Name: conv5_g0 	 Layer time: 8.8125 	 number of inputs: 3 	 input shape: 192x13x13 	 output shape: 128x13x13
+1	Layer Name: conv5_g1 	 Layer time: 8.8883 	 number of inputs: 3 	 input shape: 192x13x13 	 output shape: 128x13x13
+2	Layer Name: conv5 	 Layer time: 0.2076 	 number of inputs: 2 	 input shape: 128x13x13 	 output shape: 256x13x13
+3	Layer Name: relu5 	 Layer time: 0.1582 	 number of inputs: 1 	 input shape: 256x13x13 	 output shape: 256x13x13
+4	Layer Name: pool5 	 Layer time: 0.1384 	 number of inputs: 1 	 input shape: 256x13x13 	 output shape: 256x6x6
+Layer Number: 0 	 time: 18.2050
+----------------------------
+
+ Sum of Layers time: 18.2050
+
+
+Graph4   Input: 0.0062125   Task: 58.9495   send: 0.171937   Out: 0.0009042   Process: 59.1285
+
+
+
+********
+
+0	Layer Name: NPU_Alex_5_5 	 Layer time: 9.9827 	 number of inputs: 1 	 input shape: 256x6x6 	 output shape: 4096
+Layer Number: 0 	 time: 9.9827
+----------------------------
+
+ Sum of Layers time: 9.9827
+
+
+Graph5   Input: 0.0036167   Task: 18.2016   send: 0.025171   Out: 0.00105   Process: 18.2315
+
+NPU NPU_Alex_5_5	AVG_input_time:0.3099	AVG_run_time:7.6510	AVG_prof_run_time:5.1571	AVG_output_time:0.0911
+
+
+********
+
+0	Layer Name: fc7 	 Layer time: 16.5882 	 number of inputs: 3 	 input shape: 4096 	 output shape: 4096
+1	Layer Name: relu7 	 Layer time: 0.0372 	 number of inputs: 1 	 input shape: 4096 	 output shape: 4096
+Layer Number: 0 	 time: 16.6255
+----------------------------
+
+ Sum of Layers time: 16.6255
+
+
+Graph6   Input: 0.0041125   Task: 33.0053   send: 0.224233   Out: 0.0009334   Process: 33.2345
+
+
+
+********
+
+0	Layer Name: NPU_Alex_7_7 	 Layer time: 5.8026 	 number of inputs: 1 	 input shape: 4096 	 output shape: 1000
+Layer Number: 0 	 time: 5.8026
+----------------------------
+
+ Sum of Layers time: 5.8026
+
+
+Graph7   Input: 0.0034708   Task: 14.0262   send: 0.0012834   Out: 0.267487   Process: 14.2984
+
+NPU NPU_Alex_7_7	AVG_input_time:0.1907	AVG_run_time:3.6981	AVG_prof_run_time:1.2789	AVG_output_time:0.0254
+
+
+********
+
+
+
+AVG Latency: 304.117
+
+Profiling these DVFS settings finised
+Please Enter the desired Frequency setttings: 
+4 Running Graph with 4-4-4-4-4-4-4-4 LW DVFS
+governor 0 task:NPU_Alex_1_1 freqs:0,4,0
+governor 1 task:NPU_Alex_3_3 freqs:0,4,0
+governor 2 task:NPU_Alex_5_5 freqs:0,4,0
+governor 3 task:NPU_Alex_7_7 freqs:0,4,0
+governor 4 task:pool1 freqs:0,4,0
+governor 5 task:pool5 freqs:0,4,0
+governor 6 task:relu3 freqs:0,4,0
+governor 7 task:relu7 freqs:0,4,0
+set_GPIOs with mode: layers
+tass name: conv1	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: relu1	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: norm1	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: pool1	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: NPU_Alex_1_1	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: conv3	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: relu3	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: NPU_Alex_3_3	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: conv5_g0	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: conv5_g1	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: conv5	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: relu5	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: pool5	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: NPU_Alex_5_5	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: fc7	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: relu7	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: NPU_Alex_7_7	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+
+
+
+*********************************************
+start running graphs
+*************************************************
+
+
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gold_fish.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0035 - [id = 845], n04376876 syringe
+0.0034 - [id = 428], n02797295 barrow, garden cart, lawn cart, wheelbarrow
+0.0032 - [id = 50], n01698640 American alligator, Alligator mississipiensis
+0.0032 - [id = 791], n04204347 shopping cart
+0.0032 - [id = 124], n01985128 crayfish, crawfish, crawdad, crawdaddy
+
+
+************
+Photo_index:1
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gondola.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0035 - [id = 428], n02797295 barrow, garden cart, lawn cart, wheelbarrow
+0.0033 - [id = 491], n03000684 chain saw, chainsaw
+0.0033 - [id = 791], n04204347 shopping cart
+0.0032 - [id = 124], n01985128 crayfish, crawfish, crawdad, crawdaddy
+0.0032 - [id = 50], n01698640 American alligator, Alligator mississipiensis
+
+
+************
+Photo_index:2
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//school_bus.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0035 - [id = 50], n01698640 American alligator, Alligator mississipiensis
+0.0034 - [id = 428], n02797295 barrow, garden cart, lawn cart, wheelbarrow
+0.0033 - [id = 845], n04376876 syringe
+0.0032 - [id = 491], n03000684 chain saw, chainsaw
+0.0032 - [id = 791], n04204347 shopping cart
+
+
+************
+Photo_index:3
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//go_kart.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0035 - [id = 845], n04376876 syringe
+0.0035 - [id = 428], n02797295 barrow, garden cart, lawn cart, wheelbarrow
+0.0032 - [id = 50], n01698640 American alligator, Alligator mississipiensis
+0.0031 - [id = 791], n04204347 shopping cart
+0.0031 - [id = 491], n03000684 chain saw, chainsaw
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gold_fish.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0035 - [id = 845], n04376876 syringe
+0.0034 - [id = 428], n02797295 barrow, garden cart, lawn cart, wheelbarrow
+0.0032 - [id = 50], n01698640 American alligator, Alligator mississipiensis
+0.0032 - [id = 791], n04204347 shopping cart
+0.0032 - [id = 124], n01985128 crayfish, crawfish, crawdad, crawdaddy
+
+
+************
+Photo_index:1
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gondola.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0035 - [id = 428], n02797295 barrow, garden cart, lawn cart, wheelbarrow
+0.0033 - [id = 491], n03000684 chain saw, chainsaw
+0.0033 - [id = 791], n04204347 shopping cart
+0.0032 - [id = 124], n01985128 crayfish, crawfish, crawdad, crawdaddy
+0.0032 - [id = 50], n01698640 American alligator, Alligator mississipiensis
+
+
+************
+Photo_index:2
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//school_bus.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0035 - [id = 50], n01698640 American alligator, Alligator mississipiensis
+0.0034 - [id = 428], n02797295 barrow, garden cart, lawn cart, wheelbarrow
+0.0033 - [id = 845], n04376876 syringe
+0.0032 - [id = 491], n03000684 chain saw, chainsaw
+0.0032 - [id = 791], n04204347 shopping cart
+
+
+************
+Photo_index:3
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//go_kart.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0035 - [id = 845], n04376876 syringe
+0.0035 - [id = 428], n02797295 barrow, garden cart, lawn cart, wheelbarrow
+0.0032 - [id = 50], n01698640 American alligator, Alligator mississipiensis
+0.0031 - [id = 791], n04204347 shopping cart
+0.0031 - [id = 491], n03000684 chain saw, chainsaw
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gold_fish.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0035 - [id = 845], n04376876 syringe
+0.0034 - [id = 428], n02797295 barrow, garden cart, lawn cart, wheelbarrow
+0.0032 - [id = 50], n01698640 American alligator, Alligator mississipiensis
+0.0032 - [id = 791], n04204347 shopping cart
+0.0032 - [id = 124], n01985128 crayfish, crawfish, crawdad, crawdaddy
+
+
+************
+Photo_index:1
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gondola.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0035 - [id = 428], n02797295 barrow, garden cart, lawn cart, wheelbarrow
+0.0033 - [id = 491], n03000684 chain saw, chainsaw
+0.0033 - [id = 791], n04204347 shopping cart
+0.0032 - [id = 124], n01985128 crayfish, crawfish, crawdad, crawdaddy
+0.0032 - [id = 50], n01698640 American alligator, Alligator mississipiensis
+
+
+************
+Photo_index:2
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//school_bus.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0035 - [id = 50], n01698640 American alligator, Alligator mississipiensis
+0.0034 - [id = 428], n02797295 barrow, garden cart, lawn cart, wheelbarrow
+0.0033 - [id = 845], n04376876 syringe
+0.0032 - [id = 491], n03000684 chain saw, chainsaw
+0.0032 - [id = 791], n04204347 shopping cart
+
+
+************
+Photo_index:3
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//go_kart.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0035 - [id = 845], n04376876 syringe
+0.0035 - [id = 428], n02797295 barrow, garden cart, lawn cart, wheelbarrow
+0.0032 - [id = 50], n01698640 American alligator, Alligator mississipiensis
+0.0031 - [id = 791], n04204347 shopping cart
+0.0031 - [id = 491], n03000684 chain saw, chainsaw
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gold_fish.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0035 - [id = 845], n04376876 syringe
+0.0034 - [id = 428], n02797295 barrow, garden cart, lawn cart, wheelbarrow
+0.0032 - [id = 50], n01698640 American alligator, Alligator mississipiensis
+0.0032 - [id = 791], n04204347 shopping cart
+0.0032 - [id = 124], n01985128 crayfish, crawfish, crawdad, crawdaddy
+0	Layer Name: conv1 	 Layer time: 22.6815 	 number of inputs: 3 	 input shape: 3x227x227 	 output shape: 96x55x55
+1	Layer Name: relu1 	 Layer time: 0.8387 	 number of inputs: 1 	 input shape: 96x55x55 	 output shape: 96x55x55
+2	Layer Name: norm1 	 Layer time: 10.0884 	 number of inputs: 1 	 input shape: 96x55x55 	 output shape: 96x55x55
+3	Layer Name: pool1 	 Layer time: 0.5365 	 number of inputs: 1 	 input shape: 96x55x55 	 output shape: 96x27x27
+Layer Number: 0 	 time: 34.1451
+----------------------------
+
+ Sum of Layers time: 34.1451
+
+
+Graph0   Input: 21.5565   Task: 66.9256   send: 0.279708   Out: 0.0008166   Process: 88.7627
+
+
+
+********
+
+0	Layer Name: NPU_Alex_1_1 	 Layer time: 9.9430 	 number of inputs: 1 	 input shape: 96x27x27 	 output shape: 256x13x13
+Layer Number: 0 	 time: 9.9430
+----------------------------
+
+ Sum of Layers time: 9.9430
+
+
+Graph1   Input: 0.0058918   Task: 18.2231   send: 1.14015   Out: 0.0008169   Process: 19.37
+
+NPU NPU_Alex_1_1	AVG_input_time:1.6958	AVG_run_time:5.2504	AVG_prof_run_time:0.7931	AVG_output_time:0.8470
+
+
+********
+
+0	Layer Name: conv3 	 Layer time: 23.6538 	 number of inputs: 3 	 input shape: 256x13x13 	 output shape: 384x13x13
+1	Layer Name: relu3 	 Layer time: 0.2082 	 number of inputs: 1 	 input shape: 384x13x13 	 output shape: 384x13x13
+Layer Number: 0 	 time: 23.8620
+----------------------------
+
+ Sum of Layers time: 23.8620
+
+
+Graph2   Input: 0.0050457   Task: 40.2347   send: 1.52629   Out: 0.0007874   Process: 41.7669
+
+
+
+********
+
+0	Layer Name: NPU_Alex_3_3 	 Layer time: 9.2747 	 number of inputs: 1 	 input shape: 384x13x13 	 output shape: 384x13x13
+Layer Number: 0 	 time: 9.2747
+----------------------------
+
+ Sum of Layers time: 9.2747
+
+
+Graph3   Input: 0.0061832   Task: 17.5529   send: 0.257454   Out: 0.0007292   Process: 17.8173
+
+NPU NPU_Alex_3_3	AVG_input_time:1.5743	AVG_run_time:4.3110	AVG_prof_run_time:0.4200	AVG_output_time:1.3014
+
+
+********
+
+0	Layer Name: conv5_g0 	 Layer time: 6.4180 	 number of inputs: 3 	 input shape: 192x13x13 	 output shape: 128x13x13
+1	Layer Name: conv5_g1 	 Layer time: 6.4691 	 number of inputs: 3 	 input shape: 192x13x13 	 output shape: 128x13x13
+2	Layer Name: conv5 	 Layer time: 0.1881 	 number of inputs: 2 	 input shape: 128x13x13 	 output shape: 256x13x13
+3	Layer Name: relu5 	 Layer time: 0.1415 	 number of inputs: 1 	 input shape: 256x13x13 	 output shape: 256x13x13
+4	Layer Name: pool5 	 Layer time: 0.1230 	 number of inputs: 1 	 input shape: 256x13x13 	 output shape: 256x6x6
+Layer Number: 0 	 time: 13.3398
+----------------------------
+
+ Sum of Layers time: 13.3398
+
+
+Graph4   Input: 0.0038208   Task: 53.9321   send: 0.333754   Out: 0.0007001   Process: 54.2704
+
+
+
+********
+
+0	Layer Name: NPU_Alex_5_5 	 Layer time: 9.4643 	 number of inputs: 1 	 input shape: 256x6x6 	 output shape: 4096
+Layer Number: 0 	 time: 9.4643
+----------------------------
+
+ Sum of Layers time: 9.4643
+
+
+Graph5   Input: 0.0030042   Task: 17.681   send: 0.0227502   Out: 0.0008166   Process: 17.7076
+
+NPU NPU_Alex_5_5	AVG_input_time:0.2646	AVG_run_time:7.5499	AVG_prof_run_time:5.1956	AVG_output_time:0.0717
+
+
+********
+
+0	Layer Name: fc7 	 Layer time: 15.1968 	 number of inputs: 3 	 input shape: 4096 	 output shape: 4096
+1	Layer Name: relu7 	 Layer time: 0.0324 	 number of inputs: 1 	 input shape: 4096 	 output shape: 4096
+Layer Number: 0 	 time: 15.2292
+----------------------------
+
+ Sum of Layers time: 15.2292
+
+
+Graph6   Input: 0.0037332   Task: 31.5685   send: 0.240421   Out: 0.0007582   Process: 31.8134
+
+
+
+********
+
+0	Layer Name: NPU_Alex_7_7 	 Layer time: 5.4102 	 number of inputs: 1 	 input shape: 4096 	 output shape: 1000
+Layer Number: 0 	 time: 5.4102
+----------------------------
+
+ Sum of Layers time: 5.4102
+
+
+Graph7   Input: 0.0028584   Task: 13.6113   send: 0.0011667   Out: 0.232254   Process: 13.8476
+
+NPU NPU_Alex_7_7	AVG_input_time:0.1625	AVG_run_time:3.7077	AVG_prof_run_time:1.2691	AVG_output_time:0.0238
+
+
+********
+
+
+
+AVG Latency: 282.267
+
+Profiling these DVFS settings finised
+Please Enter the desired Frequency setttings: 
+5 Running Graph with 5-5-5-5-5-5-5-5 LW DVFS
+governor 0 task:NPU_Alex_1_1 freqs:0,5,0
+governor 1 task:NPU_Alex_3_3 freqs:0,5,0
+governor 2 task:NPU_Alex_5_5 freqs:0,5,0
+governor 3 task:NPU_Alex_7_7 freqs:0,5,0
+governor 4 task:pool1 freqs:0,5,0
+governor 5 task:pool5 freqs:0,5,0
+governor 6 task:relu3 freqs:0,5,0
+governor 7 task:relu7 freqs:0,5,0
+set_GPIOs with mode: layers
+tass name: conv1	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: relu1	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: norm1	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: pool1	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: NPU_Alex_1_1	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: conv3	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: relu3	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: NPU_Alex_3_3	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: conv5_g0	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: conv5_g1	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: conv5	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: relu5	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: pool5	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: NPU_Alex_5_5	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: fc7	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: relu7	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: NPU_Alex_7_7	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+
+
+
+*********************************************
+start running graphs
+*************************************************
+
+
+
+
+************
+Photo_index:1
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gondola.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0035 - [id = 428], n02797295 barrow, garden cart, lawn cart, wheelbarrow
+0.0033 - [id = 491], n03000684 chain saw, chainsaw
+0.0033 - [id = 791], n04204347 shopping cart
+0.0032 - [id = 124], n01985128 crayfish, crawfish, crawdad, crawdaddy
+0.0032 - [id = 50], n01698640 American alligator, Alligator mississipiensis
+
+
+************
+Photo_index:2
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//school_bus.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0035 - [id = 50], n01698640 American alligator, Alligator mississipiensis
+0.0034 - [id = 428], n02797295 barrow, garden cart, lawn cart, wheelbarrow
+0.0033 - [id = 845], n04376876 syringe
+0.0032 - [id = 491], n03000684 chain saw, chainsaw
+0.0032 - [id = 791], n04204347 shopping cart
+
+
+************
+Photo_index:3
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//go_kart.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0035 - [id = 845], n04376876 syringe
+0.0035 - [id = 428], n02797295 barrow, garden cart, lawn cart, wheelbarrow
+0.0032 - [id = 50], n01698640 American alligator, Alligator mississipiensis
+0.0031 - [id = 791], n04204347 shopping cart
+0.0031 - [id = 491], n03000684 chain saw, chainsaw
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gold_fish.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0035 - [id = 845], n04376876 syringe
+0.0034 - [id = 428], n02797295 barrow, garden cart, lawn cart, wheelbarrow
+0.0032 - [id = 50], n01698640 American alligator, Alligator mississipiensis
+0.0032 - [id = 791], n04204347 shopping cart
+0.0032 - [id = 124], n01985128 crayfish, crawfish, crawdad, crawdaddy
+
+
+************
+Photo_index:1
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gondola.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0035 - [id = 428], n02797295 barrow, garden cart, lawn cart, wheelbarrow
+0.0033 - [id = 491], n03000684 chain saw, chainsaw
+0.0033 - [id = 791], n04204347 shopping cart
+0.0032 - [id = 124], n01985128 crayfish, crawfish, crawdad, crawdaddy
+0.0032 - [id = 50], n01698640 American alligator, Alligator mississipiensis
+
+
+************
+Photo_index:2
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//school_bus.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0035 - [id = 50], n01698640 American alligator, Alligator mississipiensis
+0.0034 - [id = 428], n02797295 barrow, garden cart, lawn cart, wheelbarrow
+0.0033 - [id = 845], n04376876 syringe
+0.0032 - [id = 491], n03000684 chain saw, chainsaw
+0.0032 - [id = 791], n04204347 shopping cart
+
+
+************
+Photo_index:3
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//go_kart.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0035 - [id = 845], n04376876 syringe
+0.0035 - [id = 428], n02797295 barrow, garden cart, lawn cart, wheelbarrow
+0.0032 - [id = 50], n01698640 American alligator, Alligator mississipiensis
+0.0031 - [id = 791], n04204347 shopping cart
+0.0031 - [id = 491], n03000684 chain saw, chainsaw
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gold_fish.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0035 - [id = 845], n04376876 syringe
+0.0034 - [id = 428], n02797295 barrow, garden cart, lawn cart, wheelbarrow
+0.0032 - [id = 50], n01698640 American alligator, Alligator mississipiensis
+0.0032 - [id = 791], n04204347 shopping cart
+0.0032 - [id = 124], n01985128 crayfish, crawfish, crawdad, crawdaddy
+
+
+************
+Photo_index:1
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gondola.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0035 - [id = 428], n02797295 barrow, garden cart, lawn cart, wheelbarrow
+0.0033 - [id = 491], n03000684 chain saw, chainsaw
+0.0033 - [id = 791], n04204347 shopping cart
+0.0032 - [id = 124], n01985128 crayfish, crawfish, crawdad, crawdaddy
+0.0032 - [id = 50], n01698640 American alligator, Alligator mississipiensis
+
+
+************
+Photo_index:2
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//school_bus.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0035 - [id = 50], n01698640 American alligator, Alligator mississipiensis
+0.0034 - [id = 428], n02797295 barrow, garden cart, lawn cart, wheelbarrow
+0.0033 - [id = 845], n04376876 syringe
+0.0032 - [id = 491], n03000684 chain saw, chainsaw
+0.0032 - [id = 791], n04204347 shopping cart
+
+
+************
+Photo_index:3
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//go_kart.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0035 - [id = 845], n04376876 syringe
+0.0035 - [id = 428], n02797295 barrow, garden cart, lawn cart, wheelbarrow
+0.0032 - [id = 50], n01698640 American alligator, Alligator mississipiensis
+0.0031 - [id = 791], n04204347 shopping cart
+0.0031 - [id = 491], n03000684 chain saw, chainsaw
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gold_fish.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0035 - [id = 845], n04376876 syringe
+0.0034 - [id = 428], n02797295 barrow, garden cart, lawn cart, wheelbarrow
+0.0032 - [id = 50], n01698640 American alligator, Alligator mississipiensis
+0.0032 - [id = 791], n04204347 shopping cart
+0.0032 - [id = 124], n01985128 crayfish, crawfish, crawdad, crawdaddy
+
+
+************
+Photo_index:1
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gondola.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0035 - [id = 428], n02797295 barrow, garden cart, lawn cart, wheelbarrow
+0.0033 - [id = 491], n03000684 chain saw, chainsaw
+0.0033 - [id = 791], n04204347 shopping cart
+0.0032 - [id = 124], n01985128 crayfish, crawfish, crawdad, crawdaddy
+0.0032 - [id = 50], n01698640 American alligator, Alligator mississipiensis
+0	Layer Name: conv1 	 Layer time: 19.3392 	 number of inputs: 3 	 input shape: 3x227x227 	 output shape: 96x55x55
+1	Layer Name: relu1 	 Layer time: 0.7992 	 number of inputs: 1 	 input shape: 96x55x55 	 output shape: 96x55x55
+2	Layer Name: norm1 	 Layer time: 8.0059 	 number of inputs: 1 	 input shape: 96x55x55 	 output shape: 96x55x55
+3	Layer Name: pool1 	 Layer time: 0.4947 	 number of inputs: 1 	 input shape: 96x55x55 	 output shape: 96x27x27
+Layer Number: 0 	 time: 28.6389
+----------------------------
+
+ Sum of Layers time: 28.6389
+
+
+Graph0   Input: 18.3268   Task: 61.3443   send: 1.01453   Out: 0.0007874   Process: 80.6864
+
+
+
+********
+
+0	Layer Name: NPU_Alex_1_1 	 Layer time: 8.9568 	 number of inputs: 1 	 input shape: 96x27x27 	 output shape: 256x13x13
+Layer Number: 0 	 time: 8.9568
+----------------------------
+
+ Sum of Layers time: 8.9568
+
+
+Graph1   Input: 0.0056585   Task: 17.2161   send: 0.904225   Out: 0.000671   Process: 18.1267
+
+NPU NPU_Alex_1_1	AVG_input_time:1.4470	AVG_run_time:4.7462	AVG_prof_run_time:0.8015	AVG_output_time:0.7276
+
+
+********
+
+0	Layer Name: conv3 	 Layer time: 21.7479 	 number of inputs: 3 	 input shape: 256x13x13 	 output shape: 384x13x13
+1	Layer Name: relu3 	 Layer time: 0.1887 	 number of inputs: 1 	 input shape: 384x13x13 	 output shape: 384x13x13
+Layer Number: 0 	 time: 21.9366
+----------------------------
+
+ Sum of Layers time: 21.9366
+
+
+Graph2   Input: 0.0056294   Task: 38.3003   send: 0.995108   Out: 0.0007294   Process: 39.3018
+
+
+
+********
+
+0	Layer Name: NPU_Alex_3_3 	 Layer time: 8.5041 	 number of inputs: 1 	 input shape: 384x13x13 	 output shape: 384x13x13
+Layer Number: 0 	 time: 8.5041
+----------------------------
+
+ Sum of Layers time: 8.5041
+
+
+Graph3   Input: 0.0040251   Task: 16.7484   send: 0.19005   Out: 0.0006708   Process: 16.9432
+
+NPU NPU_Alex_3_3	AVG_input_time:1.3439	AVG_run_time:4.2417	AVG_prof_run_time:0.4228	AVG_output_time:1.1157
+
+
+********
+
+0	Layer Name: conv5_g0 	 Layer time: 6.7735 	 number of inputs: 3 	 input shape: 192x13x13 	 output shape: 128x13x13
+1	Layer Name: conv5_g1 	 Layer time: 5.6854 	 number of inputs: 3 	 input shape: 192x13x13 	 output shape: 128x13x13
+2	Layer Name: conv5 	 Layer time: 0.1997 	 number of inputs: 2 	 input shape: 128x13x13 	 output shape: 256x13x13
+3	Layer Name: relu5 	 Layer time: 0.1277 	 number of inputs: 1 	 input shape: 256x13x13 	 output shape: 256x13x13
+4	Layer Name: pool5 	 Layer time: 0.1034 	 number of inputs: 1 	 input shape: 256x13x13 	 output shape: 256x6x6
+Layer Number: 0 	 time: 12.8897
+----------------------------
+
+ Sum of Layers time: 12.8897
+
+
+Graph4   Input: 0.0035873   Task: 53.461   send: 0.259525   Out: 0.0005835   Process: 53.7247
+
+
+
+********
+
+0	Layer Name: NPU_Alex_5_5 	 Layer time: 9.3366 	 number of inputs: 1 	 input shape: 256x6x6 	 output shape: 4096
+Layer Number: 0 	 time: 9.3366
+----------------------------
+
+ Sum of Layers time: 9.3366
+
+
+Graph5   Input: 0.0029168   Task: 17.5288   send: 0.0218166   Out: 0.0007293   Process: 17.5542
+
+NPU NPU_Alex_5_5	AVG_input_time:0.2333	AVG_run_time:7.5561	AVG_prof_run_time:5.1841	AVG_output_time:0.0608
+
+
+********
+
+0	Layer Name: fc7 	 Layer time: 15.3106 	 number of inputs: 3 	 input shape: 4096 	 output shape: 4096
+1	Layer Name: relu7 	 Layer time: 0.0328 	 number of inputs: 1 	 input shape: 4096 	 output shape: 4096
+Layer Number: 0 	 time: 15.3435
+----------------------------
+
+ Sum of Layers time: 15.3435
+
+
+Graph6   Input: 0.0034123   Task: 31.6938   send: 0.242404   Out: 0.0007584   Process: 31.9403
+
+
+
+********
+
+0	Layer Name: NPU_Alex_7_7 	 Layer time: 4.6774 	 number of inputs: 1 	 input shape: 4096 	 output shape: 1000
+Layer Number: 0 	 time: 4.6774
+----------------------------
+
+ Sum of Layers time: 4.6774
+
+
+Graph7   Input: 0.002596   Task: 12.8542   send: 0.00105   Out: 0.201221   Process: 13.059
+
+NPU NPU_Alex_7_7	AVG_input_time:0.1437	AVG_run_time:3.2500	AVG_prof_run_time:1.2726	AVG_output_time:0.0178
+
+
+********
+
+
+
+AVG Latency: 268.426
+
+Profiling these DVFS settings finised
+Please Enter the desired Frequency setttings: 
+6 Running Graph with 6-6-6-6-6-6-6-6 LW DVFS
+governor 0 task:NPU_Alex_1_1 freqs:0,6,0
+governor 1 task:NPU_Alex_3_3 freqs:0,6,0
+governor 2 task:NPU_Alex_5_5 freqs:0,6,0
+governor 3 task:NPU_Alex_7_7 freqs:0,6,0
+governor 4 task:pool1 freqs:0,6,0
+governor 5 task:pool5 freqs:0,6,0
+governor 6 task:relu3 freqs:0,6,0
+governor 7 task:relu7 freqs:0,6,0
+set_GPIOs with mode: layers
+tass name: conv1	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: relu1	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: norm1	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: pool1	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: NPU_Alex_1_1	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: conv3	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: relu3	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: NPU_Alex_3_3	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: conv5_g0	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: conv5_g1	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: conv5	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: relu5	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: pool5	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: NPU_Alex_5_5	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: fc7	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: relu7	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: NPU_Alex_7_7	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+
+
+
+*********************************************
+start running graphs
+*************************************************
+
+
+
+
+************
+Photo_index:2
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//school_bus.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0035 - [id = 50], n01698640 American alligator, Alligator mississipiensis
+0.0034 - [id = 428], n02797295 barrow, garden cart, lawn cart, wheelbarrow
+0.0033 - [id = 845], n04376876 syringe
+0.0032 - [id = 491], n03000684 chain saw, chainsaw
+0.0032 - [id = 791], n04204347 shopping cart
+
+
+************
+Photo_index:3
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//go_kart.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0035 - [id = 845], n04376876 syringe
+0.0035 - [id = 428], n02797295 barrow, garden cart, lawn cart, wheelbarrow
+0.0032 - [id = 50], n01698640 American alligator, Alligator mississipiensis
+0.0031 - [id = 791], n04204347 shopping cart
+0.0031 - [id = 491], n03000684 chain saw, chainsaw
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gold_fish.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0035 - [id = 845], n04376876 syringe
+0.0034 - [id = 428], n02797295 barrow, garden cart, lawn cart, wheelbarrow
+0.0032 - [id = 50], n01698640 American alligator, Alligator mississipiensis
+0.0032 - [id = 791], n04204347 shopping cart
+0.0032 - [id = 124], n01985128 crayfish, crawfish, crawdad, crawdaddy
+
+
+************
+Photo_index:1
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gondola.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0035 - [id = 428], n02797295 barrow, garden cart, lawn cart, wheelbarrow
+0.0033 - [id = 491], n03000684 chain saw, chainsaw
+0.0033 - [id = 791], n04204347 shopping cart
+0.0032 - [id = 124], n01985128 crayfish, crawfish, crawdad, crawdaddy
+0.0032 - [id = 50], n01698640 American alligator, Alligator mississipiensis
+
+
+************
+Photo_index:2
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//school_bus.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0035 - [id = 50], n01698640 American alligator, Alligator mississipiensis
+0.0034 - [id = 428], n02797295 barrow, garden cart, lawn cart, wheelbarrow
+0.0033 - [id = 845], n04376876 syringe
+0.0032 - [id = 491], n03000684 chain saw, chainsaw
+0.0032 - [id = 791], n04204347 shopping cart
+
+
+************
+Photo_index:3
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//go_kart.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0035 - [id = 845], n04376876 syringe
+0.0035 - [id = 428], n02797295 barrow, garden cart, lawn cart, wheelbarrow
+0.0032 - [id = 50], n01698640 American alligator, Alligator mississipiensis
+0.0031 - [id = 791], n04204347 shopping cart
+0.0031 - [id = 491], n03000684 chain saw, chainsaw
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gold_fish.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0035 - [id = 845], n04376876 syringe
+0.0034 - [id = 428], n02797295 barrow, garden cart, lawn cart, wheelbarrow
+0.0032 - [id = 50], n01698640 American alligator, Alligator mississipiensis
+0.0032 - [id = 791], n04204347 shopping cart
+0.0032 - [id = 124], n01985128 crayfish, crawfish, crawdad, crawdaddy
+
+
+************
+Photo_index:1
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gondola.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0035 - [id = 428], n02797295 barrow, garden cart, lawn cart, wheelbarrow
+0.0033 - [id = 491], n03000684 chain saw, chainsaw
+0.0033 - [id = 791], n04204347 shopping cart
+0.0032 - [id = 124], n01985128 crayfish, crawfish, crawdad, crawdaddy
+0.0032 - [id = 50], n01698640 American alligator, Alligator mississipiensis
+
+
+************
+Photo_index:2
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//school_bus.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0035 - [id = 50], n01698640 American alligator, Alligator mississipiensis
+0.0034 - [id = 428], n02797295 barrow, garden cart, lawn cart, wheelbarrow
+0.0033 - [id = 845], n04376876 syringe
+0.0032 - [id = 491], n03000684 chain saw, chainsaw
+0.0032 - [id = 791], n04204347 shopping cart
+
+
+************
+Photo_index:3
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//go_kart.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0035 - [id = 845], n04376876 syringe
+0.0035 - [id = 428], n02797295 barrow, garden cart, lawn cart, wheelbarrow
+0.0032 - [id = 50], n01698640 American alligator, Alligator mississipiensis
+0.0031 - [id = 791], n04204347 shopping cart
+0.0031 - [id = 491], n03000684 chain saw, chainsaw
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gold_fish.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0035 - [id = 845], n04376876 syringe
+0.0034 - [id = 428], n02797295 barrow, garden cart, lawn cart, wheelbarrow
+0.0032 - [id = 50], n01698640 American alligator, Alligator mississipiensis
+0.0032 - [id = 791], n04204347 shopping cart
+0.0032 - [id = 124], n01985128 crayfish, crawfish, crawdad, crawdaddy
+
+
+************
+Photo_index:1
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gondola.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0035 - [id = 428], n02797295 barrow, garden cart, lawn cart, wheelbarrow
+0.0033 - [id = 491], n03000684 chain saw, chainsaw
+0.0033 - [id = 791], n04204347 shopping cart
+0.0032 - [id = 124], n01985128 crayfish, crawfish, crawdad, crawdaddy
+0.0032 - [id = 50], n01698640 American alligator, Alligator mississipiensis
+
+
+************
+Photo_index:2
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//school_bus.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0035 - [id = 50], n01698640 American alligator, Alligator mississipiensis
+0.0034 - [id = 428], n02797295 barrow, garden cart, lawn cart, wheelbarrow
+0.0033 - [id = 845], n04376876 syringe
+0.0032 - [id = 491], n03000684 chain saw, chainsaw
+0.0032 - [id = 791], n04204347 shopping cart
+0	Layer Name: conv1 	 Layer time: 19.4769 	 number of inputs: 3 	 input shape: 3x227x227 	 output shape: 96x55x55
+1	Layer Name: relu1 	 Layer time: 0.8634 	 number of inputs: 1 	 input shape: 96x55x55 	 output shape: 96x55x55
+2	Layer Name: norm1 	 Layer time: 7.9599 	 number of inputs: 1 	 input shape: 96x55x55 	 output shape: 96x55x55
+3	Layer Name: pool1 	 Layer time: 0.5414 	 number of inputs: 1 	 input shape: 96x55x55 	 output shape: 96x27x27
+Layer Number: 0 	 time: 28.8416
+----------------------------
+
+ Sum of Layers time: 28.8416
+
+
+Graph0   Input: 16.0222   Task: 61.5432   send: 0.444267   Out: 0.0006416   Process: 78.0103
+
+
+
+********
+
+0	Layer Name: NPU_Alex_1_1 	 Layer time: 9.0118 	 number of inputs: 1 	 input shape: 96x27x27 	 output shape: 256x13x13
+Layer Number: 0 	 time: 9.0118
+----------------------------
+
+ Sum of Layers time: 9.0118
+
+
+Graph1   Input: 0.0042002   Task: 17.2572   send: 0.411775   Out: 0.0006417   Process: 17.6739
+
+NPU NPU_Alex_1_1	AVG_input_time:1.2651	AVG_run_time:5.2665	AVG_prof_run_time:0.8097	AVG_output_time:0.6374
+
+
+********
+
+0	Layer Name: conv3 	 Layer time: 22.2500 	 number of inputs: 3 	 input shape: 256x13x13 	 output shape: 384x13x13
+1	Layer Name: relu3 	 Layer time: 0.1973 	 number of inputs: 1 	 input shape: 384x13x13 	 output shape: 384x13x13
+Layer Number: 0 	 time: 22.4473
+----------------------------
+
+ Sum of Layers time: 22.4473
+
+
+Graph2   Input: 0.0042585   Task: 38.8384   send: 0.655579   Out: 0.0005545   Process: 39.4988
+
+
+
+********
+
+0	Layer Name: NPU_Alex_3_3 	 Layer time: 8.1399 	 number of inputs: 1 	 input shape: 384x13x13 	 output shape: 384x13x13
+Layer Number: 0 	 time: 8.1399
+----------------------------
+
+ Sum of Layers time: 8.1399
+
+
+Graph3   Input: 0.0045502   Task: 16.3808   send: 0.379167   Out: 0.0006125   Process: 16.7652
+
+NPU NPU_Alex_3_3	AVG_input_time:1.1785	AVG_run_time:4.2787	AVG_prof_run_time:0.4202	AVG_output_time:1.0278
+
+
+********
+
+0	Layer Name: conv5_g0 	 Layer time: 6.0051 	 number of inputs: 3 	 input shape: 192x13x13 	 output shape: 128x13x13
+1	Layer Name: conv5_g1 	 Layer time: 5.0866 	 number of inputs: 3 	 input shape: 192x13x13 	 output shape: 128x13x13
+2	Layer Name: conv5 	 Layer time: 0.1910 	 number of inputs: 2 	 input shape: 128x13x13 	 output shape: 256x13x13
+3	Layer Name: relu5 	 Layer time: 0.1176 	 number of inputs: 1 	 input shape: 256x13x13 	 output shape: 256x13x13
+4	Layer Name: pool5 	 Layer time: 0.1003 	 number of inputs: 1 	 input shape: 256x13x13 	 output shape: 256x6x6
+Layer Number: 0 	 time: 11.5007
+----------------------------
+
+ Sum of Layers time: 11.5007
+
+
+Graph4   Input: 0.0031792   Task: 52.0432   send: 0.274371   Out: 0.0005831   Process: 52.3214
+
+
+
+********
+
+0	Layer Name: NPU_Alex_5_5 	 Layer time: 9.2814 	 number of inputs: 1 	 input shape: 256x6x6 	 output shape: 4096
+Layer Number: 0 	 time: 9.2814
+----------------------------
+
+ Sum of Layers time: 9.2814
+
+
+Graph5   Input: 0.0023331   Task: 17.4733   send: 0.0202126   Out: 0.0007   Process: 17.4966
+
+NPU NPU_Alex_5_5	AVG_input_time:0.2022	AVG_run_time:7.1818	AVG_prof_run_time:5.1597	AVG_output_time:0.0563
+
+
+********
+
+0	Layer Name: fc7 	 Layer time: 15.0114 	 number of inputs: 3 	 input shape: 4096 	 output shape: 4096
+1	Layer Name: relu7 	 Layer time: 0.0284 	 number of inputs: 1 	 input shape: 4096 	 output shape: 4096
+Layer Number: 0 	 time: 15.0398
+----------------------------
+
+ Sum of Layers time: 15.0398
+
+
+Graph6   Input: 0.0034708   Task: 31.3536   send: 0.132825   Out: 0.0005249   Process: 31.4904
+
+
+
+********
+
+0	Layer Name: NPU_Alex_7_7 	 Layer time: 5.4413 	 number of inputs: 1 	 input shape: 4096 	 output shape: 1000
+Layer Number: 0 	 time: 5.4413
+----------------------------
+
+ Sum of Layers time: 5.4413
+
+
+Graph7   Input: 0.0023333   Task: 13.606   send: 0.0008749   Out: 0.181533   Process: 13.7908
+
+NPU NPU_Alex_7_7	AVG_input_time:0.1292	AVG_run_time:3.7043	AVG_prof_run_time:1.2884	AVG_output_time:0.0167
+
+
+********
+
+
+
+AVG Latency: 265.414
+
+Profiling these DVFS settings finised
+Please Enter the desired Frequency setttings: 
+7 Running Graph with 7-7-7-7-7-7-7-7 LW DVFS
+governor 0 task:NPU_Alex_1_1 freqs:0,7,0
+governor 1 task:NPU_Alex_3_3 freqs:0,7,0
+governor 2 task:NPU_Alex_5_5 freqs:0,7,0
+governor 3 task:NPU_Alex_7_7 freqs:0,7,0
+governor 4 task:pool1 freqs:0,7,0
+governor 5 task:pool5 freqs:0,7,0
+governor 6 task:relu3 freqs:0,7,0
+governor 7 task:relu7 freqs:0,7,0
+set_GPIOs with mode: layers
+tass name: conv1	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: relu1	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: norm1	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: pool1	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: NPU_Alex_1_1	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: conv3	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: relu3	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: NPU_Alex_3_3	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: conv5_g0	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: conv5_g1	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: conv5	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: relu5	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: pool5	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: NPU_Alex_5_5	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: fc7	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: relu7	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: NPU_Alex_7_7	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+
+
+
+*********************************************
+start running graphs
+*************************************************
+
+
+
+
+************
+Photo_index:3
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//go_kart.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0035 - [id = 845], n04376876 syringe
+0.0035 - [id = 428], n02797295 barrow, garden cart, lawn cart, wheelbarrow
+0.0032 - [id = 50], n01698640 American alligator, Alligator mississipiensis
+0.0031 - [id = 791], n04204347 shopping cart
+0.0031 - [id = 491], n03000684 chain saw, chainsaw
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gold_fish.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0035 - [id = 845], n04376876 syringe
+0.0034 - [id = 428], n02797295 barrow, garden cart, lawn cart, wheelbarrow
+0.0032 - [id = 50], n01698640 American alligator, Alligator mississipiensis
+0.0032 - [id = 791], n04204347 shopping cart
+0.0032 - [id = 124], n01985128 crayfish, crawfish, crawdad, crawdaddy
+
+
+************
+Photo_index:1
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gondola.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0035 - [id = 428], n02797295 barrow, garden cart, lawn cart, wheelbarrow
+0.0033 - [id = 491], n03000684 chain saw, chainsaw
+0.0033 - [id = 791], n04204347 shopping cart
+0.0032 - [id = 124], n01985128 crayfish, crawfish, crawdad, crawdaddy
+0.0032 - [id = 50], n01698640 American alligator, Alligator mississipiensis
+
+
+************
+Photo_index:2
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//school_bus.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0035 - [id = 50], n01698640 American alligator, Alligator mississipiensis
+0.0034 - [id = 428], n02797295 barrow, garden cart, lawn cart, wheelbarrow
+0.0033 - [id = 845], n04376876 syringe
+0.0032 - [id = 491], n03000684 chain saw, chainsaw
+0.0032 - [id = 791], n04204347 shopping cart
+
+
+************
+Photo_index:3
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//go_kart.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0035 - [id = 845], n04376876 syringe
+0.0035 - [id = 428], n02797295 barrow, garden cart, lawn cart, wheelbarrow
+0.0032 - [id = 50], n01698640 American alligator, Alligator mississipiensis
+0.0031 - [id = 791], n04204347 shopping cart
+0.0031 - [id = 491], n03000684 chain saw, chainsaw
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gold_fish.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0035 - [id = 845], n04376876 syringe
+0.0034 - [id = 428], n02797295 barrow, garden cart, lawn cart, wheelbarrow
+0.0032 - [id = 50], n01698640 American alligator, Alligator mississipiensis
+0.0032 - [id = 791], n04204347 shopping cart
+0.0032 - [id = 124], n01985128 crayfish, crawfish, crawdad, crawdaddy
+
+
+************
+Photo_index:1
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gondola.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0035 - [id = 428], n02797295 barrow, garden cart, lawn cart, wheelbarrow
+0.0033 - [id = 491], n03000684 chain saw, chainsaw
+0.0033 - [id = 791], n04204347 shopping cart
+0.0032 - [id = 124], n01985128 crayfish, crawfish, crawdad, crawdaddy
+0.0032 - [id = 50], n01698640 American alligator, Alligator mississipiensis
+
+
+************
+Photo_index:2
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//school_bus.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0035 - [id = 50], n01698640 American alligator, Alligator mississipiensis
+0.0034 - [id = 428], n02797295 barrow, garden cart, lawn cart, wheelbarrow
+0.0033 - [id = 845], n04376876 syringe
+0.0032 - [id = 491], n03000684 chain saw, chainsaw
+0.0032 - [id = 791], n04204347 shopping cart
+
+
+************
+Photo_index:3
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//go_kart.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0035 - [id = 845], n04376876 syringe
+0.0035 - [id = 428], n02797295 barrow, garden cart, lawn cart, wheelbarrow
+0.0032 - [id = 50], n01698640 American alligator, Alligator mississipiensis
+0.0031 - [id = 791], n04204347 shopping cart
+0.0031 - [id = 491], n03000684 chain saw, chainsaw
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gold_fish.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0035 - [id = 845], n04376876 syringe
+0.0034 - [id = 428], n02797295 barrow, garden cart, lawn cart, wheelbarrow
+0.0032 - [id = 50], n01698640 American alligator, Alligator mississipiensis
+0.0032 - [id = 791], n04204347 shopping cart
+0.0032 - [id = 124], n01985128 crayfish, crawfish, crawdad, crawdaddy
+
+
+************
+Photo_index:1
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gondola.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0035 - [id = 428], n02797295 barrow, garden cart, lawn cart, wheelbarrow
+0.0033 - [id = 491], n03000684 chain saw, chainsaw
+0.0033 - [id = 791], n04204347 shopping cart
+0.0032 - [id = 124], n01985128 crayfish, crawfish, crawdad, crawdaddy
+0.0032 - [id = 50], n01698640 American alligator, Alligator mississipiensis
+
+
+************
+Photo_index:2
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//school_bus.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0035 - [id = 50], n01698640 American alligator, Alligator mississipiensis
+0.0034 - [id = 428], n02797295 barrow, garden cart, lawn cart, wheelbarrow
+0.0033 - [id = 845], n04376876 syringe
+0.0032 - [id = 491], n03000684 chain saw, chainsaw
+0.0032 - [id = 791], n04204347 shopping cart
+
+
+************
+Photo_index:3
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//go_kart.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0035 - [id = 845], n04376876 syringe
+0.0035 - [id = 428], n02797295 barrow, garden cart, lawn cart, wheelbarrow
+0.0032 - [id = 50], n01698640 American alligator, Alligator mississipiensis
+0.0031 - [id = 791], n04204347 shopping cart
+0.0031 - [id = 491], n03000684 chain saw, chainsaw
+0	Layer Name: conv1 	 Layer time: 17.9904 	 number of inputs: 3 	 input shape: 3x227x227 	 output shape: 96x55x55
+1	Layer Name: relu1 	 Layer time: 0.8707 	 number of inputs: 1 	 input shape: 96x55x55 	 output shape: 96x55x55
+2	Layer Name: norm1 	 Layer time: 7.5643 	 number of inputs: 1 	 input shape: 96x55x55 	 output shape: 96x55x55
+3	Layer Name: pool1 	 Layer time: 0.4906 	 number of inputs: 1 	 input shape: 96x55x55 	 output shape: 96x27x27
+Layer Number: 0 	 time: 26.9159
+----------------------------
+
+ Sum of Layers time: 26.9159
+
+
+Graph0   Input: 14.4419   Task: 59.5752   send: 0.553204   Out: 0.0005541   Process: 74.5709
+
+
+
+********
+
+0	Layer Name: NPU_Alex_1_1 	 Layer time: 8.4835 	 number of inputs: 1 	 input shape: 96x27x27 	 output shape: 256x13x13
+Layer Number: 0 	 time: 8.4835
+----------------------------
+
+ Sum of Layers time: 8.4835
+
+
+Graph1   Input: 0.004346   Task: 16.7202   send: 0.499567   Out: 0.0004957   Process: 17.2246
+
+NPU NPU_Alex_1_1	AVG_input_time:1.1399	AVG_run_time:4.5651	AVG_prof_run_time:0.7986	AVG_output_time:0.6027
+
+
+********
+
+0	Layer Name: conv3 	 Layer time: 25.5637 	 number of inputs: 3 	 input shape: 256x13x13 	 output shape: 384x13x13
+1	Layer Name: relu3 	 Layer time: 0.1801 	 number of inputs: 1 	 input shape: 384x13x13 	 output shape: 384x13x13
+Layer Number: 0 	 time: 25.7438
+----------------------------
+
+ Sum of Layers time: 25.7438
+
+
+Graph2   Input: 0.0040833   Task: 42.0849   send: 0.845308   Out: 0.0006125   Process: 42.9349
+
+
+
+********
+
+0	Layer Name: NPU_Alex_3_3 	 Layer time: 8.3090 	 number of inputs: 1 	 input shape: 384x13x13 	 output shape: 384x13x13
+Layer Number: 0 	 time: 8.3090
+----------------------------
+
+ Sum of Layers time: 8.3090
+
+
+Graph3   Input: 0.00385   Task: 16.5456   send: 0.268888   Out: 0.0005836   Process: 16.8189
+
+NPU NPU_Alex_3_3	AVG_input_time:1.0791	AVG_run_time:4.4081	AVG_prof_run_time:0.4316	AVG_output_time:0.8858
+
+
+********
+
+0	Layer Name: conv5_g0 	 Layer time: 6.7311 	 number of inputs: 3 	 input shape: 192x13x13 	 output shape: 128x13x13
+1	Layer Name: conv5_g1 	 Layer time: 5.7896 	 number of inputs: 3 	 input shape: 192x13x13 	 output shape: 128x13x13
+2	Layer Name: conv5 	 Layer time: 0.1594 	 number of inputs: 2 	 input shape: 128x13x13 	 output shape: 256x13x13
+3	Layer Name: relu5 	 Layer time: 0.1144 	 number of inputs: 1 	 input shape: 256x13x13 	 output shape: 256x13x13
+4	Layer Name: pool5 	 Layer time: 0.0944 	 number of inputs: 1 	 input shape: 256x13x13 	 output shape: 256x6x6
+Layer Number: 0 	 time: 12.8890
+----------------------------
+
+ Sum of Layers time: 12.8890
+
+
+Graph4   Input: 0.0033539   Task: 53.4363   send: 0.226917   Out: 0.0005252   Process: 53.6671
+
+
+
+********
+
+0	Layer Name: NPU_Alex_5_5 	 Layer time: 9.3210 	 number of inputs: 1 	 input shape: 256x6x6 	 output shape: 4096
+Layer Number: 0 	 time: 9.3210
+----------------------------
+
+ Sum of Layers time: 9.3210
+
+
+Graph5   Input: 0.0024208   Task: 17.4885   send: 0.0190458   Out: 0.0005833   Process: 17.5106
+
+NPU NPU_Alex_5_5	AVG_input_time:0.1877	AVG_run_time:7.5935	AVG_prof_run_time:5.1572	AVG_output_time:0.0508
+
+
+********
+
+0	Layer Name: fc7 	 Layer time: 14.9885 	 number of inputs: 3 	 input shape: 4096 	 output shape: 4096
+1	Layer Name: relu7 	 Layer time: 0.0303 	 number of inputs: 1 	 input shape: 4096 	 output shape: 4096
+Layer Number: 0 	 time: 15.0188
+----------------------------
+
+ Sum of Layers time: 15.0188
+
+
+Graph6   Input: 0.003325   Task: 31.3303   send: 0.0940919   Out: 0.0004956   Process: 31.4283
+
+
+
+********
+
+0	Layer Name: NPU_Alex_7_7 	 Layer time: 5.4902 	 number of inputs: 1 	 input shape: 4096 	 output shape: 1000
+Layer Number: 0 	 time: 5.4902
+----------------------------
+
+ Sum of Layers time: 5.4902
+
+
+Graph7   Input: 0.0024209   Task: 13.6525   send: 0.0007875   Out: 0.166338   Process: 13.822
+
+NPU NPU_Alex_7_7	AVG_input_time:0.1163	AVG_run_time:3.4371	AVG_prof_run_time:1.2729	AVG_output_time:0.0144
+
+
+********
+
+
+
+AVG Latency: 266.139
+
+Profiling these DVFS settings finised
+Please Enter the desired Frequency setttings: 
+
+Test passed

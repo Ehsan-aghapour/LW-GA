@@ -1,0 +1,3174 @@
+List of devices attached
+4UB7RRTHY8	device
+
+disconnected everything
+adbd is already running as root
+remount succeeded
+/home/ehsan/UvA/ARMCL/Rock-Pi/ComputeLibrary_64_Yolov3/utils/DVFS/governor_pandoon.ko: 1 file pushed, 0 skipped. 840.7 MB/s (260080 bytes in 0.000s)
+start=0, end=0
+file /data/local/ARM-CO-UP/graphs/Alex_0_0.rknn exist on board
+start=2, end=2
+file /data/local/ARM-CO-UP/graphs/Alex_2_2.rknn exist on board
+start=4, end=4
+file /data/local/ARM-CO-UP/graphs/Alex_4_4.rknn exist on board
+start=6, end=6
+file /data/local/ARM-CO-UP/graphs/Alex_6_6.rknn exist on board
+
+WARNING: linker: Warning: unable to normalize "build/"
+4 Input images are read from /data/local/ARM-CO-UP/assets//ppm_images_227/
+[UtilsPipeline.h] image directory is: /data/local/ARM-CO-UP/assets//ppm_images_227//
+Threads : 1
+Small Cores Threads : 1
+Target : Neon
+Data type : F32
+Data layout : NHWC
+Tuner enabled? : false
+Cache enabled? : false
+Tuner mode : Normal
+Tuner file : 
+MLGO file : 
+Fast math enabled? : false
+Data path : /data/local/ARM-CO-UP/assets//alexnet/
+Image file : /data/local/ARM-CO-UP/assets//ppm_images_227//
+Labels file : /data/local/ARM-CO-UP/assets//labels.txt
+Partition point is : 0
+Second partition point is : 0
+Order is : NBNBNBNB
+freqs of layers : 
+power_profile_mode : layers
+GPU host is: B
+NPU host is: B
+Number of totla cores is : 6
+Number of little cores is : 4
+Print task names : 0
+Run network for 10 times.
+Layer timing: 0
+
+Adding Graph0 target 4 PE: N Host PE: B Layers: 0-0
+Adding Graph1 target 1 PE: B Host PE: B Layers: 1-1
+Adding Graph2 target 4 PE: N Host PE: B Layers: 2-2
+Adding Graph3 target 1 PE: B Host PE: B Layers: 3-3
+Adding Graph4 target 4 PE: N Host PE: B Layers: 4-4
+Adding Graph5 target 1 PE: B Host PE: B Layers: 5-5
+Adding Graph6 target 4 PE: N Host PE: B Layers: 6-6
+Adding Graph7 target 1 PE: B Host PE: B Layers: 7-7
+pandoon
+pandoon
+pandoon
+Pandoon opened at 3
+****************************
+GraphUtils.cpp- reading images: /data/local/ARM-CO-UP/assets//ppm_images_227//
+/data/local/ARM-CO-UP/assets//ppm_images_227//gold_fish.ppm
+/data/local/ARM-CO-UP/assets//ppm_images_227//gondola.ppm
+/data/local/ARM-CO-UP/assets//ppm_images_227//school_bus.ppm
+/data/local/ARM-CO-UP/assets//ppm_images_227//go_kart.ppm
+*****************************
+
+
+
+-1 skipping layer: 
+			0 layer: conv1
+			0 skipping layer: relu1
+			0 skipping layer: norm1
+			0 skipping layer: pool1
+1 layer: conv2
+Input node for the layer 1 is in graph: 0 Adding Transmitter to that graph
+Adding Sender_pool1 to graph 0 with target 4
+Adding Receiver_pool1 to graph 1 with target 1
+1 skipping layer: relu2
+1 skipping layer: norm2
+1 skipping layer: pool2
+			2 layer: conv3
+Input node for the layer 2 is in graph: 1 Adding Transmitter to that graph
+Adding Sender_pool2 to graph 1 with target 1
+Adding Receiver_pool2 to graph 2 with target 4
+			2 skipping layer: relu3
+3 layer: conv4
+Input node for the layer 3 is in graph: 2 Adding Transmitter to that graph
+Adding Sender_relu3 to graph 2 with target 4
+Adding Receiver_relu3 to graph 3 with target 1
+3 skipping layer: relu4
+			4 layer: conv5
+Input node for the layer 4 is in graph: 3 Adding Transmitter to that graph
+Adding Sender_relu4 to graph 3 with target 1
+Adding Receiver_relu4 to graph 4 with target 4
+			4 skipping layer: relu5
+			4 skipping layer: pool5
+5 layer: fc6
+Input node for the layer 5 is in graph: 4 Adding Transmitter to that graph
+Adding Sender_pool5 to graph 4 with target 4
+Adding Receiver_pool5 to graph 5 with target 1
+5 skipping layer: relu6
+			6 layer: fc7
+Input node for the layer 6 is in graph: 5 Adding Transmitter to that graph
+Adding Sender_relu6 to graph 5 with target 1
+Adding Receiver_relu6 to graph 6 with target 4
+			6 skipping layer: relu7
+7 layer: fc8
+Input node for the layer 7 is in graph: 6 Adding Transmitter to that graph
+Adding Sender_relu7 to graph 6 with target 4
+Adding Receiver_relu7 to graph 7 with target 1
+7 skipping layer: prob
+output accessor reading label file /data/local/ARM-CO-UP/assets//labels.txt
+7 skipping layer: output
+graph 0 target is NPU, merging nodes into one NPU Node ...
+Adding NPU Node NPU_Alex_0_0 to graph 0 with target 4
+re-struct output node Sender_pool1 to the npu node
+producer is pool1
+removing edge between producer and the output
+adding edge between NPU node and the output
+re-struct input node  to the npu node
+consumer is conv1
+removing edge between input and the consumer
+adding edge between input and NPU node
+npu node created
+
+graph 2 target is NPU, merging nodes into one NPU Node ...
+Adding NPU Node NPU_Alex_2_2 to graph 2 with target 4
+re-struct output node Sender_relu3 to the npu node
+producer is relu3
+removing edge between producer and the output
+adding edge between NPU node and the output
+re-struct input node Receiver_pool2 to the npu node
+consumer is conv3
+removing edge between input and the consumer
+adding edge between input and NPU node
+npu node created
+
+graph 4 target is NPU, merging nodes into one NPU Node ...
+Adding NPU Node NPU_Alex_4_4 to graph 4 with target 4
+re-struct output node Sender_pool5 to the npu node
+producer is pool5
+removing edge between producer and the output
+adding edge between NPU node and the output
+re-struct input node Receiver_relu4 to the npu node
+consumer is conv5
+removing edge between input and the consumer
+adding edge between input and NPU node
+npu node created
+
+graph 6 target is NPU, merging nodes into one NPU Node ...
+Adding NPU Node NPU_Alex_6_6 to graph 6 with target 4
+re-struct output node Sender_relu7 to the npu node
+producer is relu7
+removing edge between producer and the output
+adding edge between NPU node and the output
+re-struct input node Receiver_relu6 to the npu node
+consumer is fc7
+removing edge between input and the consumer
+adding edge between input and NPU node
+npu node created
+
+
+
+*********************
+Start finalizing Graphs
+*******************
+
+Graph id: 1 Target is: Neon
+Graph id: Graph id: Graph id: Graph id: 2 Target is: NPU
+0 Target is: NPU
+3 Target is: Neon
+4 Target is: NPU
+Graph id: 6 Target is: NPU
+Graph id: 5 Target is: Neon
+Graph id: 7 Target is: Neon
+Creating a RockPi NPU node...
+NPU Alex_2_2 Number of inputs: 1 and number of outputs: 1
+Model name: /data/local/ARM-CO-UP/graphs/Alex_2_2.rknn
+Creating a RockPi NPU node...
+NPU Alex_0_0 Number of inputs: 1 and number of outputs: 1
+Model name: /data/local/ARM-CO-UP/graphs/Alex_0_0.rknn
+Graph (1) Task 0: conv2_g0
+Graph (1) Task 1: conv2_g1
+Graph (1) Task 2: conv2
+Graph (1) Task 3: relu2
+Graph (1) Task 4: norm2
+Graph (1NPU /data/local/ARM-CO-UP/graphs/Alex_0_0.rknn Reading model...
+) Task 5: pool2
+Graph 1 input size: 0 receiver size: 1 tasks size: 6 senders size: 1 output size: 0
+
+Creating a RockPi NPU node...
+NPU Alex_4_4 Number of inputs: 1 and number of outputs: 1
+Model name: /data/local/ARM-CO-UP/graphs/Alex_4_4.rknn
+Creating a RockPi NPU node...
+NPU Alex_6_6 Number of inputs: 1 and number of outputs: 1
+Model name: /data/local/ARM-CO-UP/graphs/Alex_6_6.rknn
+Graph (3) Task 0: conv4_g0
+Graph (3) Task 1: conv4_g1
+Graph (3) Task 2: conv4
+Graph (3) Task 3: relu4
+Graph 3 input size: 0 receiver size: 1 tasks size: 4 senders size: 1 output size: 0
+
+Graph (5) Task 0: fc6
+Graph (5) Task 1: relu6
+Graph 5 input size: 0 receiver size: 1 tasks size: 2 senders size: 1 output size: 0
+
+NPU /data/local/ARM-CO-UP/graphs/Alex_4_4.rknn Reading model...
+NPU /data/local/ARM-CO-UP/graphs/Alex_2_2.rknn Reading model...
+Graph (7) Task 0: fc8
+Graph (7) Task 1: prob
+Graph 7 input size: 0 receiver size: 1 tasks size: 2 senders size: 0 output size: 1
+
+NPU /data/local/ARM-CO-UP/graphs/Alex_6_6.rknn Reading model...
+setting ending for layer: pool2
+Finish finalizing graph 1
+
+
+
+setting ending for layer: relu4
+Finish finalizing graph 3
+
+
+
+model input num: 1, output num: 1
+NPU /data/local/ARM-CO-UP/graphs/Alex_0_0.rknn Initialized
+
+Number of NPU model outputs: 1 number of NPU subgraph outputs: 1
+Number of NPU model inputs: 1 number of NPU subgraph inputs: 1
+NPU Model Alex_0_0 Input:0	Num elements:154587	Size:154587	Name:	Fmt:0	Qnt type:2	Type:3
+Explre input 0 n_elements: 154587
+Is match with sub graph input: 0
+
+NPU Model Alex_0_0 Output:0	Num elements:69984	Size:139968	Name:	Fmt:0	Qnt type:0	Type:1
+Explore output 0 n_elements: 69984
+Is match with sub graph output: 0
+Graph (0) Task 0: NPU_Alex_0_0
+Graph 0 input size: 1 receiver size: 0 tasks size: 1 senders size: 1 output size: 0
+
+
+NPU Model Alex_0_0 Output:0	Num elements:69984	Size:139968	Name:	Fmt:0	Qnt type:0	Type:1
+Explore output 0 n_elements: 69984
+Is match with sub graph output: 0
+setting ending for layer: NPU_Alex_0_0
+Finish finalizing graph 0
+
+
+
+NPU /data/local/ARM-CO-UP/graphs/Alex_4_4.rknn Initialized
+setting ending for layer: prob
+Finish finalizing graph 7
+
+
+
+NPU /data/local/ARM-CO-UP/graphs/Alex_2_2.rknn Initialized
+model input num: 1, output num: 1
+
+Number of NPU model outputs: 1 number of NPU subgraph outputs: 1
+Number of NPU model inputs: 1 number of NPU subgraph inputs: 1
+NPU Model Alex_2_2 Input:0	Num elements:43264	Size:43264	Name:	Fmt:0	Qnt type:2	Type:3
+Explre input 0 n_elements: 43264
+Is match with sub graph input: 0
+
+NPU Model Alex_2_2 Output:0	Num elements:64896	Size:64896	Name:	Fmt:0	Qnt type:2	Type:3
+Explore output 0 n_elements: 64896
+Is match with sub graph output: 0
+Graph (2) Task 0: NPU_Alex_2_2
+Graph 2 input size: 0 receiver size: 1 tasks size: 1 senders size: 1 output size: 0
+
+model input num: 1, output num: 1
+
+Number of NPU model outputs: 1 number of NPU subgraph outputs: 1
+Number of NPU model inputs: 1 number of NPU subgraph inputs: 1
+NPU Model Alex_4_4 Input:0	Num elements:64896	Size:64896	Name:	Fmt:0	Qnt type:2	Type:3
+Explre input 0 n_elements: 64896
+Is match with sub graph input: 0
+
+NPU Model Alex_4_4 Output:0	Num elements:9216	Size:9216	Name:	Fmt:0	Qnt type:2	Type:3
+Explore output 0 n_elements: 9216
+Is match with sub graph output: 0
+Graph (4) Task 0: NPU_Alex_4_4
+Graph 4 input size: 0 receiver size: 1 tasks size: 1 senders size: 1 output size: 0
+
+
+NPU Model Alex_2_2 Output:0	Num elements:64896	Size:64896	Name:	Fmt:0	Qnt type:2	Type:3
+Explore output 0 n_elements: 64896
+Is match with sub graph output: 0
+setting ending for layer: NPU_Alex_2_2
+Finish finalizing graph 2
+
+
+
+setting ending for layer: relu6
+Finish finalizing graph 5
+
+
+
+
+NPU Model Alex_4_4 Output:0	Num elements:9216NPU /data/local/ARM-CO-UP/graphs/Alex_6_6.rknn	Size:9216	Name:	Fmt:0	Qnt type:2	Type:3
+Explore output 0 n_elements: 9216
+Is match with sub graph output: 0
+setting ending for layer: NPU_Alex_4_4
+Finish finalizing graph 4
+
+
+
+ Initialized
+model input num: 1, output num: 1
+
+Number of NPU model outputs: 1 number of NPU subgraph outputs: 1
+Number of NPU model inputs: 1 number of NPU subgraph inputs: 1
+NPU Model Alex_6_6 Input:0	Num elements:4096	Size:4096	Name:	Fmt:0	Qnt type:2	Type:3
+Explre input 0 n_elements: 4096
+Is match with sub graph input: 0
+
+NPU Model Alex_6_6 Output:0	Num elements:4096	Size:4096	Name:	Fmt:0	Qnt type:2	Type:3
+Explore output 0 n_elements: 4096
+Is match with sub graph output: 0
+Graph (6) Task 0: NPU_Alex_6_6
+Graph 6 input size: 0 receiver size: 1 tasks size: 1 senders size: 1 output size: 0
+
+
+NPU Model Alex_6_6 Output:0	Num elements:4096	Size:4096	Name:	Fmt:0	Qnt type:2	Type:3
+Explore output 0 n_elements: 4096
+Is match with sub graph output: 0
+setting ending for layer: NPU_Alex_6_6
+Finish finalizing graph 6
+
+
+
+setup finished
+
+Please Enter the desired Frequency setttings: 
+0 Running Graph with 0-0-0-0-0-0-0-0 LW DVFS
+governor 0 task:NPU_Alex_0_0 freqs:0,0,0
+governor 1 task:NPU_Alex_2_2 freqs:0,0,0
+governor 2 task:NPU_Alex_4_4 freqs:0,0,0
+governor 3 task:NPU_Alex_6_6 freqs:0,0,0
+governor 4 task:pool2 freqs:0,0,0
+governor 5 task:prob freqs:0,0,0
+governor 6 task:relu4 freqs:0,0,0
+governor 7 task:relu6 freqs:0,0,0
+set_GPIOs with mode: layers
+tass name: NPU_Alex_0_0	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: conv2_g0	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: conv2_g1	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: conv2	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: relu2	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: norm2	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: pool2	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: NPU_Alex_2_2	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: conv4_g0	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: conv4_g1	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: conv4	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: relu4	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: NPU_Alex_4_4	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: fc6	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: NPU_Alex_6_6	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: fc8	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: prob	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+
+
+
+*********************************************
+start running graphs
+*************************************************
+
+
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gold_fish.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0015 - [id = 788], n04200800 shoe shop, shoe-shop, shoe store
+0.0014 - [id = 475], n02965783 car mirror
+0.0014 - [id = 982], n10148035 groom, bridegroom
+0.0014 - [id = 918], n06785654 crossword puzzle, crossword
+0.0014 - [id = 424], n02791270 barbershop
+
+
+************
+Photo_index:1
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gondola.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0015 - [id = 788], n04200800 shoe shop, shoe-shop, shoe store
+0.0014 - [id = 475], n02965783 car mirror
+0.0014 - [id = 982], n10148035 groom, bridegroom
+0.0014 - [id = 918], n06785654 crossword puzzle, crossword
+0.0014 - [id = 424], n02791270 barbershop
+
+
+************
+Photo_index:2
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//school_bus.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0015 - [id = 788], n04200800 shoe shop, shoe-shop, shoe store
+0.0014 - [id = 475], n02965783 car mirror
+0.0014 - [id = 982], n10148035 groom, bridegroom
+0.0014 - [id = 918], n06785654 crossword puzzle, crossword
+0.0014 - [id = 424], n02791270 barbershop
+
+
+************
+Photo_index:3
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//go_kart.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0015 - [id = 788], n04200800 shoe shop, shoe-shop, shoe store
+0.0014 - [id = 475], n02965783 car mirror
+0.0014 - [id = 982], n10148035 groom, bridegroom
+0.0014 - [id = 918], n06785654 crossword puzzle, crossword
+0.0014 - [id = 424], n02791270 barbershop
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gold_fish.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0015 - [id = 788], n04200800 shoe shop, shoe-shop, shoe store
+0.0014 - [id = 475], n02965783 car mirror
+0.0014 - [id = 982], n10148035 groom, bridegroom
+0.0014 - [id = 918], n06785654 crossword puzzle, crossword
+0.0014 - [id = 424], n02791270 barbershop
+
+
+************
+Photo_index:1
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gondola.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0015 - [id = 788], n04200800 shoe shop, shoe-shop, shoe store
+0.0014 - [id = 475], n02965783 car mirror
+0.0014 - [id = 982], n10148035 groom, bridegroom
+0.0014 - [id = 918], n06785654 crossword puzzle, crossword
+0.0014 - [id = 424], n02791270 barbershop
+
+
+************
+Photo_index:2
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//school_bus.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0015 - [id = 788], n04200800 shoe shop, shoe-shop, shoe store
+0.0014 - [id = 475], n02965783 car mirror
+0.0014 - [id = 982], n10148035 groom, bridegroom
+0.0014 - [id = 918], n06785654 crossword puzzle, crossword
+0.0014 - [id = 424], n02791270 barbershop
+
+
+************
+Photo_index:3
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//go_kart.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0015 - [id = 788], n04200800 shoe shop, shoe-shop, shoe store
+0.0014 - [id = 475], n02965783 car mirror
+0.0014 - [id = 982], n10148035 groom, bridegroom
+0.0014 - [id = 918], n06785654 crossword puzzle, crossword
+0.0014 - [id = 424], n02791270 barbershop
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gold_fish.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0015 - [id = 788], n04200800 shoe shop, shoe-shop, shoe store
+0.0014 - [id = 475], n02965783 car mirror
+0.0014 - [id = 982], n10148035 groom, bridegroom
+0.0014 - [id = 918], n06785654 crossword puzzle, crossword
+0.0014 - [id = 424], n02791270 barbershop
+
+
+************
+Photo_index:1
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gondola.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0015 - [id = 788], n04200800 shoe shop, shoe-shop, shoe store
+0.0014 - [id = 475], n02965783 car mirror
+0.0014 - [id = 982], n10148035 groom, bridegroom
+0.0014 - [id = 918], n06785654 crossword puzzle, crossword
+0.0014 - [id = 424], n02791270 barbershop
+
+
+************
+Photo_index:2
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//school_bus.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0015 - [id = 788], n04200800 shoe shop, shoe-shop, shoe store
+0.0014 - [id = 475], n02965783 car mirror
+0.0014 - [id = 982], n10148035 groom, bridegroom
+0.0014 - [id = 918], n06785654 crossword puzzle, crossword
+0.0014 - [id = 424], n02791270 barbershop
+
+
+************
+Photo_index:3
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//go_kart.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0015 - [id = 788], n04200800 shoe shop, shoe-shop, shoe store
+0.0014 - [id = 475], n02965783 car mirror
+0.0014 - [id = 982], n10148035 groom, bridegroom
+0.0014 - [id = 918], n06785654 crossword puzzle, crossword
+0.0014 - [id = 424], n02791270 barbershop
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gold_fish.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0015 - [id = 788], n04200800 shoe shop, shoe-shop, shoe store
+0.0014 - [id = 475], n02965783 car mirror
+0.0014 - [id = 982], n10148035 groom, bridegroom
+0.0014 - [id = 918], n06785654 crossword puzzle, crossword
+0.0014 - [id = 424], n02791270 barbershop
+0	Layer Name: NPU_Alex_0_0 	 Layer time: 24.5470 	 number of inputs: 1 	 input shape: 3x227x227 	 output shape: 96x27x27
+Layer Number: 0 	 time: 24.5470
+----------------------------
+
+ Sum of Layers time: 24.5470
+
+
+Graph0   Input: 64.7091   Task: 33.1698   send: 0.576567   Out: 0.0022751   Process: 98.4577
+
+NPU NPU_Alex_0_0	AVG_input_time:10.0352	AVG_run_time:7.8133	AVG_prof_run_time:0.7948	AVG_output_time:4.0659
+
+
+********
+
+0	Layer Name: conv2_g0 	 Layer time: 71.3794 	 number of inputs: 3 	 input shape: 48x27x27 	 output shape: 128x27x27
+1	Layer Name: conv2_g1 	 Layer time: 52.5657 	 number of inputs: 3 	 input shape: 48x27x27 	 output shape: 128x27x27
+2	Layer Name: conv2 	 Layer time: 1.1665 	 number of inputs: 2 	 input shape: 128x27x27 	 output shape: 256x27x27
+3	Layer Name: relu2 	 Layer time: 0.8896 	 number of inputs: 1 	 input shape: 256x27x27 	 output shape: 256x27x27
+4	Layer Name: norm2 	 Layer time: 15.3131 	 number of inputs: 1 	 input shape: 256x27x27 	 output shape: 256x27x27
+5	Layer Name: pool2 	 Layer time: 1.0628 	 number of inputs: 1 	 input shape: 256x27x27 	 output shape: 256x13x13
+Layer Number: 0 	 time: 142.3771
+----------------------------
+
+ Sum of Layers time: 142.3771
+
+
+Graph1   Input: 0.0093333   Task: 191.58   send: 1.69038   Out: 0.0022459   Process: 193.282
+
+
+
+********
+
+0	Layer Name: NPU_Alex_2_2 	 Layer time: 14.7450 	 number of inputs: 1 	 input shape: 256x13x13 	 output shape: 384x13x13
+Layer Number: 0 	 time: 14.7450
+----------------------------
+
+ Sum of Layers time: 14.7450
+
+
+Graph2   Input: 0.011054   Task: 23.2546   send: 1.64229   Out: 0.0023622   Process: 24.9103
+
+NPU NPU_Alex_2_2	AVG_input_time:3.2397	AVG_run_time:5.4615	AVG_prof_run_time:0.3590	AVG_output_time:3.7317
+
+
+********
+
+0	Layer Name: conv4_g0 	 Layer time: 20.3137 	 number of inputs: 3 	 input shape: 192x13x13 	 output shape: 192x13x13
+1	Layer Name: conv4_g1 	 Layer time: 18.0062 	 number of inputs: 3 	 input shape: 192x13x13 	 output shape: 192x13x13
+2	Layer Name: conv4 	 Layer time: 0.5095 	 number of inputs: 2 	 input shape: 192x13x13 	 output shape: 384x13x13
+3	Layer Name: relu4 	 Layer time: 0.3896 	 number of inputs: 1 	 input shape: 384x13x13 	 output shape: 384x13x13
+Layer Number: 0 	 time: 39.2190
+----------------------------
+
+ Sum of Layers time: 39.2190
+
+
+Graph3   Input: 0.00945   Task: 72.1244   send: 1.44451   Out: 0.0023625   Process: 73.5807
+
+
+
+********
+
+0	Layer Name: NPU_Alex_4_4 	 Layer time: 11.1314 	 number of inputs: 1 	 input shape: 384x13x13 	 output shape: 256x6x6
+Layer Number: 0 	 time: 11.1314
+----------------------------
+
+ Sum of Layers time: 11.1314
+
+
+Graph4   Input: 0.5089   Task: 19.6262   send: 1.84581   Out: 0.0022167   Process: 21.9832
+
+NPU NPU_Alex_4_4	AVG_input_time:4.9333	AVG_run_time:3.7374	AVG_prof_run_time:0.3641	AVG_output_time:0.5104
+
+
+********
+
+0	Layer Name: fc6 	 Layer time: 88.2492 	 number of inputs: 3 	 input shape: 256x6x6 	 output shape: 4096
+1	Layer Name: relu6 	 Layer time: 0.0619 	 number of inputs: 1 	 input shape: 4096 	 output shape: 4096
+Layer Number: 0 	 time: 88.3110
+----------------------------
+
+ Sum of Layers time: 88.3110
+
+
+Graph5   Input: 0.0081959   Task: 104.991   send: 0.827254   Out: 0.0022169   Process: 105.829
+
+
+
+********
+
+0	Layer Name: NPU_Alex_6_6 	 Layer time: 7.5783 	 number of inputs: 1 	 input shape: 4096 	 output shape: 4096
+Layer Number: 0 	 time: 7.5783
+----------------------------
+
+ Sum of Layers time: 7.5783
+
+
+Graph6   Input: 0.0065623   Task: 16.0275   send: 0.0562916   Out: 0.0023042   Process: 16.0927
+
+NPU NPU_Alex_6_6	AVG_input_time:0.4577	AVG_run_time:4.8158	AVG_prof_run_time:1.5480	AVG_output_time:0.2180
+
+
+********
+
+0	Layer Name: fc8 	 Layer time: 11.2704 	 number of inputs: 3 	 input shape: 4096 	 output shape: 1000
+1	Layer Name: prob 	 Layer time: 0.1864 	 number of inputs: 1 	 input shape: 1000 	 output shape: 1000
+Layer Number: 0 	 time: 11.4569
+----------------------------
+
+ Sum of Layers time: 11.4569
+
+
+Graph7   Input: 0.008429   Task: 28.1115   send: 0.002975   Out: 1.08281   Process: 29.2057
+
+
+
+********
+
+
+
+AVG Latency: 556.305
+
+Profiling these DVFS settings finised
+Please Enter the desired Frequency setttings: 
+1 Running Graph with 1-1-1-1-1-1-1-1 LW DVFS
+governor 0 task:NPU_Alex_0_0 freqs:0,1,0
+governor 1 task:NPU_Alex_2_2 freqs:0,1,0
+governor 2 task:NPU_Alex_4_4 freqs:0,1,0
+governor 3 task:NPU_Alex_6_6 freqs:0,1,0
+governor 4 task:pool2 freqs:0,1,0
+governor 5 task:prob freqs:0,1,0
+governor 6 task:relu4 freqs:0,1,0
+governor 7 task:relu6 freqs:0,1,0
+set_GPIOs with mode: layers
+tass name: NPU_Alex_0_0	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: conv2_g0	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: conv2_g1	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: conv2	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: relu2	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: norm2	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: pool2	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: NPU_Alex_2_2	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: conv4_g0	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: conv4_g1	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: conv4	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: relu4	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: NPU_Alex_4_4	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: fc6	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: NPU_Alex_6_6	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: fc8	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: prob	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+
+
+
+*********************************************
+start running graphs
+*************************************************
+
+
+
+
+************
+Photo_index:1
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gondola.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0015 - [id = 788], n04200800 shoe shop, shoe-shop, shoe store
+0.0014 - [id = 475], n02965783 car mirror
+0.0014 - [id = 982], n10148035 groom, bridegroom
+0.0014 - [id = 918], n06785654 crossword puzzle, crossword
+0.0014 - [id = 424], n02791270 barbershop
+
+
+************
+Photo_index:2
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//school_bus.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0015 - [id = 788], n04200800 shoe shop, shoe-shop, shoe store
+0.0014 - [id = 475], n02965783 car mirror
+0.0014 - [id = 982], n10148035 groom, bridegroom
+0.0014 - [id = 918], n06785654 crossword puzzle, crossword
+0.0014 - [id = 424], n02791270 barbershop
+
+
+************
+Photo_index:3
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//go_kart.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0015 - [id = 788], n04200800 shoe shop, shoe-shop, shoe store
+0.0014 - [id = 475], n02965783 car mirror
+0.0014 - [id = 982], n10148035 groom, bridegroom
+0.0014 - [id = 918], n06785654 crossword puzzle, crossword
+0.0014 - [id = 424], n02791270 barbershop
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gold_fish.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0015 - [id = 788], n04200800 shoe shop, shoe-shop, shoe store
+0.0014 - [id = 475], n02965783 car mirror
+0.0014 - [id = 982], n10148035 groom, bridegroom
+0.0014 - [id = 918], n06785654 crossword puzzle, crossword
+0.0014 - [id = 424], n02791270 barbershop
+
+
+************
+Photo_index:1
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gondola.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0015 - [id = 788], n04200800 shoe shop, shoe-shop, shoe store
+0.0014 - [id = 475], n02965783 car mirror
+0.0014 - [id = 982], n10148035 groom, bridegroom
+0.0014 - [id = 918], n06785654 crossword puzzle, crossword
+0.0014 - [id = 424], n02791270 barbershop
+
+
+************
+Photo_index:2
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//school_bus.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0015 - [id = 788], n04200800 shoe shop, shoe-shop, shoe store
+0.0014 - [id = 475], n02965783 car mirror
+0.0014 - [id = 982], n10148035 groom, bridegroom
+0.0014 - [id = 918], n06785654 crossword puzzle, crossword
+0.0014 - [id = 424], n02791270 barbershop
+
+
+************
+Photo_index:3
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//go_kart.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0015 - [id = 788], n04200800 shoe shop, shoe-shop, shoe store
+0.0014 - [id = 475], n02965783 car mirror
+0.0014 - [id = 982], n10148035 groom, bridegroom
+0.0014 - [id = 918], n06785654 crossword puzzle, crossword
+0.0014 - [id = 424], n02791270 barbershop
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gold_fish.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0015 - [id = 788], n04200800 shoe shop, shoe-shop, shoe store
+0.0014 - [id = 475], n02965783 car mirror
+0.0014 - [id = 982], n10148035 groom, bridegroom
+0.0014 - [id = 918], n06785654 crossword puzzle, crossword
+0.0014 - [id = 424], n02791270 barbershop
+
+
+************
+Photo_index:1
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gondola.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0015 - [id = 788], n04200800 shoe shop, shoe-shop, shoe store
+0.0014 - [id = 475], n02965783 car mirror
+0.0014 - [id = 982], n10148035 groom, bridegroom
+0.0014 - [id = 918], n06785654 crossword puzzle, crossword
+0.0014 - [id = 424], n02791270 barbershop
+
+
+************
+Photo_index:2
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//school_bus.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0015 - [id = 788], n04200800 shoe shop, shoe-shop, shoe store
+0.0014 - [id = 475], n02965783 car mirror
+0.0014 - [id = 982], n10148035 groom, bridegroom
+0.0014 - [id = 918], n06785654 crossword puzzle, crossword
+0.0014 - [id = 424], n02791270 barbershop
+
+
+************
+Photo_index:3
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//go_kart.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0015 - [id = 788], n04200800 shoe shop, shoe-shop, shoe store
+0.0014 - [id = 475], n02965783 car mirror
+0.0014 - [id = 982], n10148035 groom, bridegroom
+0.0014 - [id = 918], n06785654 crossword puzzle, crossword
+0.0014 - [id = 424], n02791270 barbershop
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gold_fish.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0015 - [id = 788], n04200800 shoe shop, shoe-shop, shoe store
+0.0014 - [id = 475], n02965783 car mirror
+0.0014 - [id = 982], n10148035 groom, bridegroom
+0.0014 - [id = 918], n06785654 crossword puzzle, crossword
+0.0014 - [id = 424], n02791270 barbershop
+
+
+************
+Photo_index:1
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gondola.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0015 - [id = 788], n04200800 shoe shop, shoe-shop, shoe store
+0.0014 - [id = 475], n02965783 car mirror
+0.0014 - [id = 982], n10148035 groom, bridegroom
+0.0014 - [id = 918], n06785654 crossword puzzle, crossword
+0.0014 - [id = 424], n02791270 barbershop
+0	Layer Name: NPU_Alex_0_0 	 Layer time: 18.5129 	 number of inputs: 1 	 input shape: 3x227x227 	 output shape: 96x27x27
+Layer Number: 0 	 time: 18.5129
+----------------------------
+
+ Sum of Layers time: 18.5129
+
+
+Graph0   Input: 42.9707   Task: 26.9445   send: 0.203292   Out: 0.0014874   Process: 70.12
+
+NPU NPU_Alex_0_0	AVG_input_time:6.7318	AVG_run_time:6.6979	AVG_prof_run_time:0.7755	AVG_output_time:2.8039
+
+
+********
+
+0	Layer Name: conv2_g0 	 Layer time: 46.3004 	 number of inputs: 3 	 input shape: 48x27x27 	 output shape: 128x27x27
+1	Layer Name: conv2_g1 	 Layer time: 34.7744 	 number of inputs: 3 	 input shape: 48x27x27 	 output shape: 128x27x27
+2	Layer Name: conv2 	 Layer time: 0.8180 	 number of inputs: 2 	 input shape: 128x27x27 	 output shape: 256x27x27
+3	Layer Name: relu2 	 Layer time: 0.6509 	 number of inputs: 1 	 input shape: 256x27x27 	 output shape: 256x27x27
+4	Layer Name: norm2 	 Layer time: 10.6075 	 number of inputs: 1 	 input shape: 256x27x27 	 output shape: 256x27x27
+5	Layer Name: pool2 	 Layer time: 0.7869 	 number of inputs: 1 	 input shape: 256x27x27 	 output shape: 256x13x13
+Layer Number: 0 	 time: 93.9381
+----------------------------
+
+ Sum of Layers time: 93.9381
+
+
+Graph1   Input: 0.0072335   Task: 142.894   send: 1.68741   Out: 0.0016043   Process: 144.59
+
+
+
+********
+
+0	Layer Name: NPU_Alex_2_2 	 Layer time: 11.7857 	 number of inputs: 1 	 input shape: 256x13x13 	 output shape: 384x13x13
+Layer Number: 0 	 time: 11.7857
+----------------------------
+
+ Sum of Layers time: 11.7857
+
+
+Graph2   Input: 0.0126001   Task: 20.162   send: 2.26453   Out: 0.0017208   Process: 22.4408
+
+NPU NPU_Alex_2_2	AVG_input_time:2.1937	AVG_run_time:5.0168	AVG_prof_run_time:0.3569	AVG_output_time:2.5015
+
+
+********
+
+0	Layer Name: conv4_g0 	 Layer time: 13.6082 	 number of inputs: 3 	 input shape: 192x13x13 	 output shape: 192x13x13
+1	Layer Name: conv4_g1 	 Layer time: 12.8807 	 number of inputs: 3 	 input shape: 192x13x13 	 output shape: 192x13x13
+2	Layer Name: conv4 	 Layer time: 0.3662 	 number of inputs: 2 	 input shape: 192x13x13 	 output shape: 384x13x13
+3	Layer Name: relu4 	 Layer time: 0.3163 	 number of inputs: 1 	 input shape: 384x13x13 	 output shape: 384x13x13
+Layer Number: 0 	 time: 27.1714
+----------------------------
+
+ Sum of Layers time: 27.1714
+
+
+Graph3   Input: 0.0080211   Task: 59.8759   send: 2.82118   Out: 0.0016918   Process: 62.7068
+
+
+
+********
+
+0	Layer Name: NPU_Alex_4_4 	 Layer time: 9.0723 	 number of inputs: 1 	 input shape: 384x13x13 	 output shape: 256x6x6
+Layer Number: 0 	 time: 9.0723
+----------------------------
+
+ Sum of Layers time: 9.0723
+
+
+Graph4   Input: 0.0053083   Task: 17.4362   send: 0.744567   Out: 0.373246   Process: 18.5593
+
+NPU NPU_Alex_4_4	AVG_input_time:3.1963	AVG_run_time:3.4595	AVG_prof_run_time:0.3574	AVG_output_time:0.3312
+
+
+********
+
+0	Layer Name: fc6 	 Layer time: 61.1789 	 number of inputs: 3 	 input shape: 256x6x6 	 output shape: 4096
+1	Layer Name: relu6 	 Layer time: 0.0481 	 number of inputs: 1 	 input shape: 4096 	 output shape: 4096
+Layer Number: 0 	 time: 61.2269
+----------------------------
+
+ Sum of Layers time: 61.2269
+
+
+Graph5   Input: 0.0056294   Task: 77.7135   send: 0.548654   Out: 0.0015168   Process: 78.2693
+
+
+
+********
+
+0	Layer Name: NPU_Alex_6_6 	 Layer time: 6.8587 	 number of inputs: 1 	 input shape: 4096 	 output shape: 4096
+Layer Number: 0 	 time: 6.8587
+----------------------------
+
+ Sum of Layers time: 6.8587
+
+
+Graph6   Input: 0.0047833   Task: 15.1561   send: 0.0376833   Out: 0.0015459   Process: 15.2001
+
+NPU NPU_Alex_6_6	AVG_input_time:0.3159	AVG_run_time:4.4084	AVG_prof_run_time:1.5367	AVG_output_time:0.1389
+
+
+********
+
+0	Layer Name: fc8 	 Layer time: 7.7840 	 number of inputs: 3 	 input shape: 4096 	 output shape: 1000
+1	Layer Name: prob 	 Layer time: 0.1287 	 number of inputs: 1 	 input shape: 1000 	 output shape: 1000
+Layer Number: 0 	 time: 7.9127
+----------------------------
+
+ Sum of Layers time: 7.9127
+
+
+Graph7   Input: 0.0061833   Task: 24.4349   send: 0.0022459   Out: 0.614425   Process: 25.0578
+
+
+
+********
+
+
+
+AVG Latency: 429.495
+
+Profiling these DVFS settings finised
+Please Enter the desired Frequency setttings: 
+2 Running Graph with 2-2-2-2-2-2-2-2 LW DVFS
+governor 0 task:NPU_Alex_0_0 freqs:0,2,0
+governor 1 task:NPU_Alex_2_2 freqs:0,2,0
+governor 2 task:NPU_Alex_4_4 freqs:0,2,0
+governor 3 task:NPU_Alex_6_6 freqs:0,2,0
+governor 4 task:pool2 freqs:0,2,0
+governor 5 task:prob freqs:0,2,0
+governor 6 task:relu4 freqs:0,2,0
+governor 7 task:relu6 freqs:0,2,0
+set_GPIOs with mode: layers
+tass name: NPU_Alex_0_0	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: conv2_g0	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: conv2_g1	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: conv2	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: relu2	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: norm2	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: pool2	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: NPU_Alex_2_2	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: conv4_g0	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: conv4_g1	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: conv4	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: relu4	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: NPU_Alex_4_4	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: fc6	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: NPU_Alex_6_6	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: fc8	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: prob	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+
+
+
+*********************************************
+start running graphs
+*************************************************
+
+
+
+
+************
+Photo_index:2
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//school_bus.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0015 - [id = 788], n04200800 shoe shop, shoe-shop, shoe store
+0.0014 - [id = 475], n02965783 car mirror
+0.0014 - [id = 982], n10148035 groom, bridegroom
+0.0014 - [id = 918], n06785654 crossword puzzle, crossword
+0.0014 - [id = 424], n02791270 barbershop
+
+
+************
+Photo_index:3
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//go_kart.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0015 - [id = 788], n04200800 shoe shop, shoe-shop, shoe store
+0.0014 - [id = 475], n02965783 car mirror
+0.0014 - [id = 982], n10148035 groom, bridegroom
+0.0014 - [id = 918], n06785654 crossword puzzle, crossword
+0.0014 - [id = 424], n02791270 barbershop
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gold_fish.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0015 - [id = 788], n04200800 shoe shop, shoe-shop, shoe store
+0.0014 - [id = 475], n02965783 car mirror
+0.0014 - [id = 982], n10148035 groom, bridegroom
+0.0014 - [id = 918], n06785654 crossword puzzle, crossword
+0.0014 - [id = 424], n02791270 barbershop
+
+
+************
+Photo_index:1
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gondola.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0015 - [id = 788], n04200800 shoe shop, shoe-shop, shoe store
+0.0014 - [id = 475], n02965783 car mirror
+0.0014 - [id = 982], n10148035 groom, bridegroom
+0.0014 - [id = 918], n06785654 crossword puzzle, crossword
+0.0014 - [id = 424], n02791270 barbershop
+
+
+************
+Photo_index:2
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//school_bus.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0015 - [id = 788], n04200800 shoe shop, shoe-shop, shoe store
+0.0014 - [id = 475], n02965783 car mirror
+0.0014 - [id = 982], n10148035 groom, bridegroom
+0.0014 - [id = 918], n06785654 crossword puzzle, crossword
+0.0014 - [id = 424], n02791270 barbershop
+
+
+************
+Photo_index:3
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//go_kart.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0015 - [id = 788], n04200800 shoe shop, shoe-shop, shoe store
+0.0014 - [id = 475], n02965783 car mirror
+0.0014 - [id = 982], n10148035 groom, bridegroom
+0.0014 - [id = 918], n06785654 crossword puzzle, crossword
+0.0014 - [id = 424], n02791270 barbershop
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gold_fish.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0015 - [id = 788], n04200800 shoe shop, shoe-shop, shoe store
+0.0014 - [id = 475], n02965783 car mirror
+0.0014 - [id = 982], n10148035 groom, bridegroom
+0.0014 - [id = 918], n06785654 crossword puzzle, crossword
+0.0014 - [id = 424], n02791270 barbershop
+
+
+************
+Photo_index:1
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gondola.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0015 - [id = 788], n04200800 shoe shop, shoe-shop, shoe store
+0.0014 - [id = 475], n02965783 car mirror
+0.0014 - [id = 982], n10148035 groom, bridegroom
+0.0014 - [id = 918], n06785654 crossword puzzle, crossword
+0.0014 - [id = 424], n02791270 barbershop
+
+
+************
+Photo_index:2
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//school_bus.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0015 - [id = 788], n04200800 shoe shop, shoe-shop, shoe store
+0.0014 - [id = 475], n02965783 car mirror
+0.0014 - [id = 982], n10148035 groom, bridegroom
+0.0014 - [id = 918], n06785654 crossword puzzle, crossword
+0.0014 - [id = 424], n02791270 barbershop
+
+
+************
+Photo_index:3
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//go_kart.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0015 - [id = 788], n04200800 shoe shop, shoe-shop, shoe store
+0.0014 - [id = 475], n02965783 car mirror
+0.0014 - [id = 982], n10148035 groom, bridegroom
+0.0014 - [id = 918], n06785654 crossword puzzle, crossword
+0.0014 - [id = 424], n02791270 barbershop
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gold_fish.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0015 - [id = 788], n04200800 shoe shop, shoe-shop, shoe store
+0.0014 - [id = 475], n02965783 car mirror
+0.0014 - [id = 982], n10148035 groom, bridegroom
+0.0014 - [id = 918], n06785654 crossword puzzle, crossword
+0.0014 - [id = 424], n02791270 barbershop
+
+
+************
+Photo_index:1
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gondola.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0015 - [id = 788], n04200800 shoe shop, shoe-shop, shoe store
+0.0014 - [id = 475], n02965783 car mirror
+0.0014 - [id = 982], n10148035 groom, bridegroom
+0.0014 - [id = 918], n06785654 crossword puzzle, crossword
+0.0014 - [id = 424], n02791270 barbershop
+
+
+************
+Photo_index:2
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//school_bus.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0015 - [id = 788], n04200800 shoe shop, shoe-shop, shoe store
+0.0014 - [id = 475], n02965783 car mirror
+0.0014 - [id = 982], n10148035 groom, bridegroom
+0.0014 - [id = 918], n06785654 crossword puzzle, crossword
+0.0014 - [id = 424], n02791270 barbershop
+0	Layer Name: NPU_Alex_0_0 	 Layer time: 15.5541 	 number of inputs: 1 	 input shape: 3x227x227 	 output shape: 96x27x27
+Layer Number: 0 	 time: 15.5541
+----------------------------
+
+ Sum of Layers time: 15.5541
+
+
+Graph0   Input: 31.7931   Task: 23.9376   send: 0.266787   Out: 0.0011959   Process: 55.9987
+
+NPU NPU_Alex_0_0	AVG_input_time:5.1073	AVG_run_time:6.3321	AVG_prof_run_time:0.7941	AVG_output_time:2.1964
+
+
+********
+
+0	Layer Name: conv2_g0 	 Layer time: 30.4782 	 number of inputs: 3 	 input shape: 48x27x27 	 output shape: 128x27x27
+1	Layer Name: conv2_g1 	 Layer time: 26.0662 	 number of inputs: 3 	 input shape: 48x27x27 	 output shape: 128x27x27
+2	Layer Name: conv2 	 Layer time: 0.6998 	 number of inputs: 2 	 input shape: 128x27x27 	 output shape: 256x27x27
+3	Layer Name: relu2 	 Layer time: 0.5314 	 number of inputs: 1 	 input shape: 256x27x27 	 output shape: 256x27x27
+4	Layer Name: norm2 	 Layer time: 7.5748 	 number of inputs: 1 	 input shape: 256x27x27 	 output shape: 256x27x27
+5	Layer Name: pool2 	 Layer time: 0.6789 	 number of inputs: 1 	 input shape: 256x27x27 	 output shape: 256x13x13
+Layer Number: 0 	 time: 66.0293
+----------------------------
+
+ Sum of Layers time: 66.0293
+
+
+Graph1   Input: 0.008546   Task: 114.807   send: 1.46379   Out: 0.0011376   Process: 116.28
+
+
+
+********
+
+0	Layer Name: NPU_Alex_2_2 	 Layer time: 9.7214 	 number of inputs: 1 	 input shape: 256x13x13 	 output shape: 384x13x13
+Layer Number: 0 	 time: 9.7214
+----------------------------
+
+ Sum of Layers time: 9.7214
+
+
+Graph2   Input: 0.0059793   Task: 18.0267   send: 0.761542   Out: 0.0011959   Process: 18.7954
+
+NPU NPU_Alex_2_2	AVG_input_time:1.5588	AVG_run_time:4.3655	AVG_prof_run_time:0.3707	AVG_output_time:1.8731
+
+
+********
+
+0	Layer Name: conv4_g0 	 Layer time: 11.7241 	 number of inputs: 3 	 input shape: 192x13x13 	 output shape: 192x13x13
+1	Layer Name: conv4_g1 	 Layer time: 10.1915 	 number of inputs: 3 	 input shape: 192x13x13 	 output shape: 192x13x13
+2	Layer Name: conv4 	 Layer time: 0.2927 	 number of inputs: 2 	 input shape: 192x13x13 	 output shape: 384x13x13
+3	Layer Name: relu4 	 Layer time: 0.2402 	 number of inputs: 1 	 input shape: 384x13x13 	 output shape: 384x13x13
+Layer Number: 0 	 time: 22.4485
+----------------------------
+
+ Sum of Layers time: 22.4485
+
+
+Graph3   Input: 0.0073499   Task: 55.0218   send: 2.34555   Out: 0.0011667   Process: 57.3758
+
+
+
+********
+
+0	Layer Name: NPU_Alex_4_4 	 Layer time: 7.6466 	 number of inputs: 1 	 input shape: 384x13x13 	 output shape: 256x6x6
+Layer Number: 0 	 time: 7.6466
+----------------------------
+
+ Sum of Layers time: 7.6466
+
+
+Graph4   Input: 0.339471   Task: 15.9374   send: 0.8918   Out: 0.0011668   Process: 17.1699
+
+NPU NPU_Alex_4_4	AVG_input_time:2.3243	AVG_run_time:3.1756	AVG_prof_run_time:0.3702	AVG_output_time:0.2574
+
+
+********
+
+0	Layer Name: fc6 	 Layer time: 49.7275 	 number of inputs: 3 	 input shape: 256x6x6 	 output shape: 4096
+1	Layer Name: relu6 	 Layer time: 0.0373 	 number of inputs: 1 	 input shape: 4096 	 output shape: 4096
+Layer Number: 0 	 time: 49.7648
+----------------------------
+
+ Sum of Layers time: 49.7648
+
+
+Graph5   Input: 0.0047543   Task: 66.1822   send: 0.391621   Out: 0.0011377   Process: 66.5797
+
+
+
+********
+
+0	Layer Name: NPU_Alex_6_6 	 Layer time: 6.1853 	 number of inputs: 1 	 input shape: 4096 	 output shape: 4096
+Layer Number: 0 	 time: 6.1853
+----------------------------
+
+ Sum of Layers time: 6.1853
+
+
+Graph6   Input: 0.0039667   Task: 14.4423   send: 0.0305958   Out: 0.0010792   Process: 14.478
+
+NPU NPU_Alex_6_6	AVG_input_time:0.2362	AVG_run_time:3.9110	AVG_prof_run_time:1.5369	AVG_output_time:0.1040
+
+
+********
+
+0	Layer Name: fc8 	 Layer time: 7.0884 	 number of inputs: 3 	 input shape: 4096 	 output shape: 1000
+1	Layer Name: prob 	 Layer time: 0.0995 	 number of inputs: 1 	 input shape: 1000 	 output shape: 1000
+Layer Number: 0 	 time: 7.1880
+----------------------------
+
+ Sum of Layers time: 7.1880
+
+
+Graph7   Input: 0.0048707   Task: 23.6239   send: 0.0016917   Out: 0.489533   Process: 24.12
+
+
+
+********
+
+
+
+AVG Latency: 365.175
+
+Profiling these DVFS settings finised
+Please Enter the desired Frequency setttings: 
+3 Running Graph with 3-3-3-3-3-3-3-3 LW DVFS
+governor 0 task:NPU_Alex_0_0 freqs:0,3,0
+governor 1 task:NPU_Alex_2_2 freqs:0,3,0
+governor 2 task:NPU_Alex_4_4 freqs:0,3,0
+governor 3 task:NPU_Alex_6_6 freqs:0,3,0
+governor 4 task:pool2 freqs:0,3,0
+governor 5 task:prob freqs:0,3,0
+governor 6 task:relu4 freqs:0,3,0
+governor 7 task:relu6 freqs:0,3,0
+set_GPIOs with mode: layers
+tass name: NPU_Alex_0_0	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: conv2_g0	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: conv2_g1	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: conv2	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: relu2	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: norm2	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: pool2	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: NPU_Alex_2_2	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: conv4_g0	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: conv4_g1	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: conv4	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: relu4	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: NPU_Alex_4_4	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: fc6	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: NPU_Alex_6_6	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: fc8	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: prob	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+
+
+
+*********************************************
+start running graphs
+*************************************************
+
+
+
+
+************
+Photo_index:3
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//go_kart.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0015 - [id = 788], n04200800 shoe shop, shoe-shop, shoe store
+0.0014 - [id = 475], n02965783 car mirror
+0.0014 - [id = 982], n10148035 groom, bridegroom
+0.0014 - [id = 918], n06785654 crossword puzzle, crossword
+0.0014 - [id = 424], n02791270 barbershop
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gold_fish.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0015 - [id = 788], n04200800 shoe shop, shoe-shop, shoe store
+0.0014 - [id = 475], n02965783 car mirror
+0.0014 - [id = 982], n10148035 groom, bridegroom
+0.0014 - [id = 918], n06785654 crossword puzzle, crossword
+0.0014 - [id = 424], n02791270 barbershop
+
+
+************
+Photo_index:1
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gondola.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0015 - [id = 788], n04200800 shoe shop, shoe-shop, shoe store
+0.0014 - [id = 475], n02965783 car mirror
+0.0014 - [id = 982], n10148035 groom, bridegroom
+0.0014 - [id = 918], n06785654 crossword puzzle, crossword
+0.0014 - [id = 424], n02791270 barbershop
+
+
+************
+Photo_index:2
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//school_bus.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0015 - [id = 788], n04200800 shoe shop, shoe-shop, shoe store
+0.0014 - [id = 475], n02965783 car mirror
+0.0014 - [id = 982], n10148035 groom, bridegroom
+0.0014 - [id = 918], n06785654 crossword puzzle, crossword
+0.0014 - [id = 424], n02791270 barbershop
+
+
+************
+Photo_index:3
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//go_kart.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0015 - [id = 788], n04200800 shoe shop, shoe-shop, shoe store
+0.0014 - [id = 475], n02965783 car mirror
+0.0014 - [id = 982], n10148035 groom, bridegroom
+0.0014 - [id = 918], n06785654 crossword puzzle, crossword
+0.0014 - [id = 424], n02791270 barbershop
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gold_fish.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0015 - [id = 788], n04200800 shoe shop, shoe-shop, shoe store
+0.0014 - [id = 475], n02965783 car mirror
+0.0014 - [id = 982], n10148035 groom, bridegroom
+0.0014 - [id = 918], n06785654 crossword puzzle, crossword
+0.0014 - [id = 424], n02791270 barbershop
+
+
+************
+Photo_index:1
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gondola.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0015 - [id = 788], n04200800 shoe shop, shoe-shop, shoe store
+0.0014 - [id = 475], n02965783 car mirror
+0.0014 - [id = 982], n10148035 groom, bridegroom
+0.0014 - [id = 918], n06785654 crossword puzzle, crossword
+0.0014 - [id = 424], n02791270 barbershop
+
+
+************
+Photo_index:2
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//school_bus.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0015 - [id = 788], n04200800 shoe shop, shoe-shop, shoe store
+0.0014 - [id = 475], n02965783 car mirror
+0.0014 - [id = 982], n10148035 groom, bridegroom
+0.0014 - [id = 918], n06785654 crossword puzzle, crossword
+0.0014 - [id = 424], n02791270 barbershop
+
+
+************
+Photo_index:3
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//go_kart.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0015 - [id = 788], n04200800 shoe shop, shoe-shop, shoe store
+0.0014 - [id = 475], n02965783 car mirror
+0.0014 - [id = 982], n10148035 groom, bridegroom
+0.0014 - [id = 918], n06785654 crossword puzzle, crossword
+0.0014 - [id = 424], n02791270 barbershop
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gold_fish.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0015 - [id = 788], n04200800 shoe shop, shoe-shop, shoe store
+0.0014 - [id = 475], n02965783 car mirror
+0.0014 - [id = 982], n10148035 groom, bridegroom
+0.0014 - [id = 918], n06785654 crossword puzzle, crossword
+0.0014 - [id = 424], n02791270 barbershop
+
+
+************
+Photo_index:1
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gondola.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0015 - [id = 788], n04200800 shoe shop, shoe-shop, shoe store
+0.0014 - [id = 475], n02965783 car mirror
+0.0014 - [id = 982], n10148035 groom, bridegroom
+0.0014 - [id = 918], n06785654 crossword puzzle, crossword
+0.0014 - [id = 424], n02791270 barbershop
+
+
+************
+Photo_index:2
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//school_bus.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0015 - [id = 788], n04200800 shoe shop, shoe-shop, shoe store
+0.0014 - [id = 475], n02965783 car mirror
+0.0014 - [id = 982], n10148035 groom, bridegroom
+0.0014 - [id = 918], n06785654 crossword puzzle, crossword
+0.0014 - [id = 424], n02791270 barbershop
+
+
+************
+Photo_index:3
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//go_kart.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0015 - [id = 788], n04200800 shoe shop, shoe-shop, shoe store
+0.0014 - [id = 475], n02965783 car mirror
+0.0014 - [id = 982], n10148035 groom, bridegroom
+0.0014 - [id = 918], n06785654 crossword puzzle, crossword
+0.0014 - [id = 424], n02791270 barbershop
+0	Layer Name: NPU_Alex_0_0 	 Layer time: 13.7745 	 number of inputs: 1 	 input shape: 3x227x227 	 output shape: 96x27x27
+Layer Number: 0 	 time: 13.7745
+----------------------------
+
+ Sum of Layers time: 13.7745
+
+
+Graph0   Input: 25.5727   Task: 22.1095   send: 0.245146   Out: 0.0009332   Process: 47.9282
+
+NPU NPU_Alex_0_0	AVG_input_time:4.0756	AVG_run_time:6.1805	AVG_prof_run_time:0.7811	AVG_output_time:1.8256
+
+
+********
+
+0	Layer Name: conv2_g0 	 Layer time: 27.8071 	 number of inputs: 3 	 input shape: 48x27x27 	 output shape: 128x27x27
+1	Layer Name: conv2_g1 	 Layer time: 22.6321 	 number of inputs: 3 	 input shape: 48x27x27 	 output shape: 128x27x27
+2	Layer Name: conv2 	 Layer time: 0.6143 	 number of inputs: 2 	 input shape: 128x27x27 	 output shape: 256x27x27
+3	Layer Name: relu2 	 Layer time: 0.5355 	 number of inputs: 1 	 input shape: 256x27x27 	 output shape: 256x27x27
+4	Layer Name: norm2 	 Layer time: 7.3005 	 number of inputs: 1 	 input shape: 256x27x27 	 output shape: 256x27x27
+5	Layer Name: pool2 	 Layer time: 0.6194 	 number of inputs: 1 	 input shape: 256x27x27 	 output shape: 256x13x13
+Layer Number: 0 	 time: 59.5089
+----------------------------
+
+ Sum of Layers time: 59.5089
+
+
+Graph1   Input: 0.0049   Task: 108.42   send: 0.927763   Out: 0.0009041   Process: 109.353
+
+
+
+********
+
+0	Layer Name: NPU_Alex_2_2 	 Layer time: 9.1274 	 number of inputs: 1 	 input shape: 256x13x13 	 output shape: 384x13x13
+Layer Number: 0 	 time: 9.1274
+----------------------------
+
+ Sum of Layers time: 9.1274
+
+
+Graph2   Input: 0.0053959   Task: 17.415   send: 0.780588   Out: 0.00105   Process: 18.202
+
+NPU NPU_Alex_2_2	AVG_input_time:1.2695	AVG_run_time:4.0376	AVG_prof_run_time:0.3594	AVG_output_time:1.5131
+
+
+********
+
+0	Layer Name: conv4_g0 	 Layer time: 11.1964 	 number of inputs: 3 	 input shape: 192x13x13 	 output shape: 192x13x13
+1	Layer Name: conv4_g1 	 Layer time: 9.6331 	 number of inputs: 3 	 input shape: 192x13x13 	 output shape: 192x13x13
+2	Layer Name: conv4 	 Layer time: 0.2755 	 number of inputs: 2 	 input shape: 192x13x13 	 output shape: 384x13x13
+3	Layer Name: relu4 	 Layer time: 0.2048 	 number of inputs: 1 	 input shape: 384x13x13 	 output shape: 384x13x13
+Layer Number: 0 	 time: 21.3098
+----------------------------
+
+ Sum of Layers time: 21.3098
+
+
+Graph3   Input: 0.0057169   Task: 53.8829   send: 1.90135   Out: 0.0009625   Process: 55.791
+
+
+
+********
+
+0	Layer Name: NPU_Alex_4_4 	 Layer time: 6.7998 	 number of inputs: 1 	 input shape: 384x13x13 	 output shape: 256x6x6
+Layer Number: 0 	 time: 6.7998
+----------------------------
+
+ Sum of Layers time: 6.7998
+
+
+Graph4   Input: 0.0035583   Task: 15.0918   send: 0.501754   Out: 0.0009625   Process: 15.5981
+
+NPU NPU_Alex_4_4	AVG_input_time:1.8860	AVG_run_time:3.2026	AVG_prof_run_time:0.3553	AVG_output_time:0.2072
+
+
+********
+
+0	Layer Name: fc6 	 Layer time: 53.8606 	 number of inputs: 3 	 input shape: 256x6x6 	 output shape: 4096
+1	Layer Name: relu6 	 Layer time: 0.0337 	 number of inputs: 1 	 input shape: 4096 	 output shape: 4096
+Layer Number: 0 	 time: 53.8943
+----------------------------
+
+ Sum of Layers time: 53.8943
+
+
+Graph5   Input: 0.0040251   Task: 70.2679   send: 0.341279   Out: 0.0009041   Process: 70.6141
+
+
+
+********
+
+0	Layer Name: NPU_Alex_6_6 	 Layer time: 6.2852 	 number of inputs: 1 	 input shape: 4096 	 output shape: 4096
+Layer Number: 0 	 time: 6.2852
+----------------------------
+
+ Sum of Layers time: 6.2852
+
+
+Graph6   Input: 0.0033251   Task: 14.5095   send: 0.0264541   Out: 0.0009917   Process: 14.5403
+
+NPU NPU_Alex_6_6	AVG_input_time:0.1987	AVG_run_time:4.2043	AVG_prof_run_time:1.5521	AVG_output_time:0.0890
+
+
+********
+
+0	Layer Name: fc8 	 Layer time: 6.5720 	 number of inputs: 3 	 input shape: 4096 	 output shape: 1000
+1	Layer Name: prob 	 Layer time: 0.0866 	 number of inputs: 1 	 input shape: 1000 	 output shape: 1000
+Layer Number: 0 	 time: 6.6586
+----------------------------
+
+ Sum of Layers time: 6.6586
+
+
+Graph7   Input: 0.0046082   Task: 23.0721   send: 0.0014585   Out: 0.313658   Process: 23.3918
+
+
+
+********
+
+
+
+AVG Latency: 351.461
+
+Profiling these DVFS settings finised
+Please Enter the desired Frequency setttings: 
+4 Running Graph with 4-4-4-4-4-4-4-4 LW DVFS
+governor 0 task:NPU_Alex_0_0 freqs:0,4,0
+governor 1 task:NPU_Alex_2_2 freqs:0,4,0
+governor 2 task:NPU_Alex_4_4 freqs:0,4,0
+governor 3 task:NPU_Alex_6_6 freqs:0,4,0
+governor 4 task:pool2 freqs:0,4,0
+governor 5 task:prob freqs:0,4,0
+governor 6 task:relu4 freqs:0,4,0
+governor 7 task:relu6 freqs:0,4,0
+set_GPIOs with mode: layers
+tass name: NPU_Alex_0_0	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: conv2_g0	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: conv2_g1	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: conv2	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: relu2	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: norm2	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: pool2	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: NPU_Alex_2_2	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: conv4_g0	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: conv4_g1	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: conv4	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: relu4	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: NPU_Alex_4_4	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: fc6	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: NPU_Alex_6_6	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: fc8	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: prob	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+
+
+
+*********************************************
+start running graphs
+*************************************************
+
+
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gold_fish.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0015 - [id = 788], n04200800 shoe shop, shoe-shop, shoe store
+0.0014 - [id = 475], n02965783 car mirror
+0.0014 - [id = 982], n10148035 groom, bridegroom
+0.0014 - [id = 918], n06785654 crossword puzzle, crossword
+0.0014 - [id = 424], n02791270 barbershop
+
+
+************
+Photo_index:1
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gondola.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0015 - [id = 788], n04200800 shoe shop, shoe-shop, shoe store
+0.0014 - [id = 475], n02965783 car mirror
+0.0014 - [id = 982], n10148035 groom, bridegroom
+0.0014 - [id = 918], n06785654 crossword puzzle, crossword
+0.0014 - [id = 424], n02791270 barbershop
+
+
+************
+Photo_index:2
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//school_bus.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0015 - [id = 788], n04200800 shoe shop, shoe-shop, shoe store
+0.0014 - [id = 475], n02965783 car mirror
+0.0014 - [id = 982], n10148035 groom, bridegroom
+0.0014 - [id = 918], n06785654 crossword puzzle, crossword
+0.0014 - [id = 424], n02791270 barbershop
+
+
+************
+Photo_index:3
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//go_kart.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0015 - [id = 788], n04200800 shoe shop, shoe-shop, shoe store
+0.0014 - [id = 475], n02965783 car mirror
+0.0014 - [id = 982], n10148035 groom, bridegroom
+0.0014 - [id = 918], n06785654 crossword puzzle, crossword
+0.0014 - [id = 424], n02791270 barbershop
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gold_fish.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0015 - [id = 788], n04200800 shoe shop, shoe-shop, shoe store
+0.0014 - [id = 475], n02965783 car mirror
+0.0014 - [id = 982], n10148035 groom, bridegroom
+0.0014 - [id = 918], n06785654 crossword puzzle, crossword
+0.0014 - [id = 424], n02791270 barbershop
+
+
+************
+Photo_index:1
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gondola.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0015 - [id = 788], n04200800 shoe shop, shoe-shop, shoe store
+0.0014 - [id = 475], n02965783 car mirror
+0.0014 - [id = 982], n10148035 groom, bridegroom
+0.0014 - [id = 918], n06785654 crossword puzzle, crossword
+0.0014 - [id = 424], n02791270 barbershop
+
+
+************
+Photo_index:2
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//school_bus.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0015 - [id = 788], n04200800 shoe shop, shoe-shop, shoe store
+0.0014 - [id = 475], n02965783 car mirror
+0.0014 - [id = 982], n10148035 groom, bridegroom
+0.0014 - [id = 918], n06785654 crossword puzzle, crossword
+0.0014 - [id = 424], n02791270 barbershop
+
+
+************
+Photo_index:3
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//go_kart.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0015 - [id = 788], n04200800 shoe shop, shoe-shop, shoe store
+0.0014 - [id = 475], n02965783 car mirror
+0.0014 - [id = 982], n10148035 groom, bridegroom
+0.0014 - [id = 918], n06785654 crossword puzzle, crossword
+0.0014 - [id = 424], n02791270 barbershop
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gold_fish.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0015 - [id = 788], n04200800 shoe shop, shoe-shop, shoe store
+0.0014 - [id = 475], n02965783 car mirror
+0.0014 - [id = 982], n10148035 groom, bridegroom
+0.0014 - [id = 918], n06785654 crossword puzzle, crossword
+0.0014 - [id = 424], n02791270 barbershop
+
+
+************
+Photo_index:1
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gondola.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0015 - [id = 788], n04200800 shoe shop, shoe-shop, shoe store
+0.0014 - [id = 475], n02965783 car mirror
+0.0014 - [id = 982], n10148035 groom, bridegroom
+0.0014 - [id = 918], n06785654 crossword puzzle, crossword
+0.0014 - [id = 424], n02791270 barbershop
+
+
+************
+Photo_index:2
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//school_bus.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0015 - [id = 788], n04200800 shoe shop, shoe-shop, shoe store
+0.0014 - [id = 475], n02965783 car mirror
+0.0014 - [id = 982], n10148035 groom, bridegroom
+0.0014 - [id = 918], n06785654 crossword puzzle, crossword
+0.0014 - [id = 424], n02791270 barbershop
+
+
+************
+Photo_index:3
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//go_kart.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0015 - [id = 788], n04200800 shoe shop, shoe-shop, shoe store
+0.0014 - [id = 475], n02965783 car mirror
+0.0014 - [id = 982], n10148035 groom, bridegroom
+0.0014 - [id = 918], n06785654 crossword puzzle, crossword
+0.0014 - [id = 424], n02791270 barbershop
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gold_fish.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0015 - [id = 788], n04200800 shoe shop, shoe-shop, shoe store
+0.0014 - [id = 475], n02965783 car mirror
+0.0014 - [id = 982], n10148035 groom, bridegroom
+0.0014 - [id = 918], n06785654 crossword puzzle, crossword
+0.0014 - [id = 424], n02791270 barbershop
+0	Layer Name: NPU_Alex_0_0 	 Layer time: 13.0929 	 number of inputs: 1 	 input shape: 3x227x227 	 output shape: 96x27x27
+Layer Number: 0 	 time: 13.0929
+----------------------------
+
+ Sum of Layers time: 13.0929
+
+
+Graph0   Input: 21.561   Task: 21.411   send: 0.136908   Out: 0.0007293   Process: 43.1097
+
+NPU NPU_Alex_0_0	AVG_input_time:3.4348	AVG_run_time:6.0543	AVG_prof_run_time:0.7964	AVG_output_time:1.6316
+
+
+********
+
+0	Layer Name: conv2_g0 	 Layer time: 21.9581 	 number of inputs: 3 	 input shape: 48x27x27 	 output shape: 128x27x27
+1	Layer Name: conv2_g1 	 Layer time: 19.7313 	 number of inputs: 3 	 input shape: 48x27x27 	 output shape: 128x27x27
+2	Layer Name: conv2 	 Layer time: 0.6499 	 number of inputs: 2 	 input shape: 128x27x27 	 output shape: 256x27x27
+3	Layer Name: relu2 	 Layer time: 0.5020 	 number of inputs: 1 	 input shape: 256x27x27 	 output shape: 256x27x27
+4	Layer Name: norm2 	 Layer time: 6.2600 	 number of inputs: 1 	 input shape: 256x27x27 	 output shape: 256x27x27
+5	Layer Name: pool2 	 Layer time: 0.5723 	 number of inputs: 1 	 input shape: 256x27x27 	 output shape: 256x13x13
+Layer Number: 0 	 time: 49.6737
+----------------------------
+
+ Sum of Layers time: 49.6737
+
+
+Graph1   Input: 0.0045208   Task: 98.4553   send: 1.11312   Out: 0.0006999   Process: 99.5736
+
+
+
+********
+
+0	Layer Name: NPU_Alex_2_2 	 Layer time: 8.9724 	 number of inputs: 1 	 input shape: 256x13x13 	 output shape: 384x13x13
+Layer Number: 0 	 time: 8.9724
+----------------------------
+
+ Sum of Layers time: 8.9724
+
+
+Graph2   Input: 0.0047834   Task: 17.2233   send: 0.710121   Out: 0.0009333   Process: 17.9391
+
+NPU NPU_Alex_2_2	AVG_input_time:1.0815	AVG_run_time:4.5965	AVG_prof_run_time:0.3592	AVG_output_time:1.3003
+
+
+********
+
+0	Layer Name: conv4_g0 	 Layer time: 11.5230 	 number of inputs: 3 	 input shape: 192x13x13 	 output shape: 192x13x13
+1	Layer Name: conv4_g1 	 Layer time: 10.0266 	 number of inputs: 3 	 input shape: 192x13x13 	 output shape: 192x13x13
+2	Layer Name: conv4 	 Layer time: 0.2300 	 number of inputs: 2 	 input shape: 192x13x13 	 output shape: 384x13x13
+3	Layer Name: relu4 	 Layer time: 0.1851 	 number of inputs: 1 	 input shape: 384x13x13 	 output shape: 384x13x13
+Layer Number: 0 	 time: 21.9647
+----------------------------
+
+ Sum of Layers time: 21.9647
+
+
+Graph3   Input: 0.0056001   Task: 54.5063   send: 1.51938   Out: 0.0008459   Process: 56.0321
+
+
+
+********
+
+0	Layer Name: NPU_Alex_4_4 	 Layer time: 7.0561 	 number of inputs: 1 	 input shape: 384x13x13 	 output shape: 256x6x6
+Layer Number: 0 	 time: 7.0561
+----------------------------
+
+ Sum of Layers time: 7.0561
+
+
+Graph4   Input: 0.0044044   Task: 15.294   send: 0.976384   Out: 0.0007582   Process: 16.2755
+
+NPU NPU_Alex_4_4	AVG_input_time:1.6015	AVG_run_time:3.4465	AVG_prof_run_time:0.3629	AVG_output_time:0.1845
+
+
+********
+
+0	Layer Name: fc6 	 Layer time: 42.4855 	 number of inputs: 3 	 input shape: 256x6x6 	 output shape: 4096
+1	Layer Name: relu6 	 Layer time: 0.0307 	 number of inputs: 1 	 input shape: 4096 	 output shape: 4096
+Layer Number: 0 	 time: 42.5161
+----------------------------
+
+ Sum of Layers time: 42.5161
+
+
+Graph5   Input: 0.0036458   Task: 58.8548   send: 0.328708   Out: 0.0008166   Process: 59.188
+
+
+
+********
+
+0	Layer Name: NPU_Alex_6_6 	 Layer time: 6.1649 	 number of inputs: 1 	 input shape: 4096 	 output shape: 4096
+Layer Number: 0 	 time: 6.1649
+----------------------------
+
+ Sum of Layers time: 6.1649
+
+
+Graph6   Input: 0.0027999   Task: 14.3604   send: 0.0227793   Out: 0.0008166   Process: 14.3868
+
+NPU NPU_Alex_6_6	AVG_input_time:0.1689	AVG_run_time:4.5216	AVG_prof_run_time:1.5638	AVG_output_time:0.0704
+
+
+********
+
+0	Layer Name: fc8 	 Layer time: 6.0321 	 number of inputs: 3 	 input shape: 4096 	 output shape: 1000
+1	Layer Name: prob 	 Layer time: 0.0802 	 number of inputs: 1 	 input shape: 1000 	 output shape: 1000
+Layer Number: 0 	 time: 6.1124
+----------------------------
+
+ Sum of Layers time: 6.1124
+
+
+Graph7   Input: 0.0039957   Task: 22.4641   send: 0.0013122   Out: 0.432396   Process: 22.9018
+
+
+
+********
+
+
+
+AVG Latency: 325.319
+
+Profiling these DVFS settings finised
+Please Enter the desired Frequency setttings: 
+5 Running Graph with 5-5-5-5-5-5-5-5 LW DVFS
+governor 0 task:NPU_Alex_0_0 freqs:0,5,0
+governor 1 task:NPU_Alex_2_2 freqs:0,5,0
+governor 2 task:NPU_Alex_4_4 freqs:0,5,0
+governor 3 task:NPU_Alex_6_6 freqs:0,5,0
+governor 4 task:pool2 freqs:0,5,0
+governor 5 task:prob freqs:0,5,0
+governor 6 task:relu4 freqs:0,5,0
+governor 7 task:relu6 freqs:0,5,0
+set_GPIOs with mode: layers
+tass name: NPU_Alex_0_0	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: conv2_g0	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: conv2_g1	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: conv2	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: relu2	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: norm2	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: pool2	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: NPU_Alex_2_2	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: conv4_g0	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: conv4_g1	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: conv4	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: relu4	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: NPU_Alex_4_4	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: fc6	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: NPU_Alex_6_6	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: fc8	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: prob	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+
+
+
+*********************************************
+start running graphs
+*************************************************
+
+
+
+
+************
+Photo_index:1
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gondola.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0015 - [id = 788], n04200800 shoe shop, shoe-shop, shoe store
+0.0014 - [id = 475], n02965783 car mirror
+0.0014 - [id = 982], n10148035 groom, bridegroom
+0.0014 - [id = 918], n06785654 crossword puzzle, crossword
+0.0014 - [id = 424], n02791270 barbershop
+
+
+************
+Photo_index:2
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//school_bus.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0015 - [id = 788], n04200800 shoe shop, shoe-shop, shoe store
+0.0014 - [id = 475], n02965783 car mirror
+0.0014 - [id = 982], n10148035 groom, bridegroom
+0.0014 - [id = 918], n06785654 crossword puzzle, crossword
+0.0014 - [id = 424], n02791270 barbershop
+
+
+************
+Photo_index:3
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//go_kart.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0015 - [id = 788], n04200800 shoe shop, shoe-shop, shoe store
+0.0014 - [id = 475], n02965783 car mirror
+0.0014 - [id = 982], n10148035 groom, bridegroom
+0.0014 - [id = 918], n06785654 crossword puzzle, crossword
+0.0014 - [id = 424], n02791270 barbershop
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gold_fish.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0015 - [id = 788], n04200800 shoe shop, shoe-shop, shoe store
+0.0014 - [id = 475], n02965783 car mirror
+0.0014 - [id = 982], n10148035 groom, bridegroom
+0.0014 - [id = 918], n06785654 crossword puzzle, crossword
+0.0014 - [id = 424], n02791270 barbershop
+
+
+************
+Photo_index:1
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gondola.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0015 - [id = 788], n04200800 shoe shop, shoe-shop, shoe store
+0.0014 - [id = 475], n02965783 car mirror
+0.0014 - [id = 982], n10148035 groom, bridegroom
+0.0014 - [id = 918], n06785654 crossword puzzle, crossword
+0.0014 - [id = 424], n02791270 barbershop
+
+
+************
+Photo_index:2
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//school_bus.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0015 - [id = 788], n04200800 shoe shop, shoe-shop, shoe store
+0.0014 - [id = 475], n02965783 car mirror
+0.0014 - [id = 982], n10148035 groom, bridegroom
+0.0014 - [id = 918], n06785654 crossword puzzle, crossword
+0.0014 - [id = 424], n02791270 barbershop
+
+
+************
+Photo_index:3
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//go_kart.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0015 - [id = 788], n04200800 shoe shop, shoe-shop, shoe store
+0.0014 - [id = 475], n02965783 car mirror
+0.0014 - [id = 982], n10148035 groom, bridegroom
+0.0014 - [id = 918], n06785654 crossword puzzle, crossword
+0.0014 - [id = 424], n02791270 barbershop
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gold_fish.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0015 - [id = 788], n04200800 shoe shop, shoe-shop, shoe store
+0.0014 - [id = 475], n02965783 car mirror
+0.0014 - [id = 982], n10148035 groom, bridegroom
+0.0014 - [id = 918], n06785654 crossword puzzle, crossword
+0.0014 - [id = 424], n02791270 barbershop
+
+
+************
+Photo_index:1
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gondola.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0015 - [id = 788], n04200800 shoe shop, shoe-shop, shoe store
+0.0014 - [id = 475], n02965783 car mirror
+0.0014 - [id = 982], n10148035 groom, bridegroom
+0.0014 - [id = 918], n06785654 crossword puzzle, crossword
+0.0014 - [id = 424], n02791270 barbershop
+
+
+************
+Photo_index:2
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//school_bus.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0015 - [id = 788], n04200800 shoe shop, shoe-shop, shoe store
+0.0014 - [id = 475], n02965783 car mirror
+0.0014 - [id = 982], n10148035 groom, bridegroom
+0.0014 - [id = 918], n06785654 crossword puzzle, crossword
+0.0014 - [id = 424], n02791270 barbershop
+
+
+************
+Photo_index:3
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//go_kart.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0015 - [id = 788], n04200800 shoe shop, shoe-shop, shoe store
+0.0014 - [id = 475], n02965783 car mirror
+0.0014 - [id = 982], n10148035 groom, bridegroom
+0.0014 - [id = 918], n06785654 crossword puzzle, crossword
+0.0014 - [id = 424], n02791270 barbershop
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gold_fish.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0015 - [id = 788], n04200800 shoe shop, shoe-shop, shoe store
+0.0014 - [id = 475], n02965783 car mirror
+0.0014 - [id = 982], n10148035 groom, bridegroom
+0.0014 - [id = 918], n06785654 crossword puzzle, crossword
+0.0014 - [id = 424], n02791270 barbershop
+
+
+************
+Photo_index:1
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gondola.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0015 - [id = 788], n04200800 shoe shop, shoe-shop, shoe store
+0.0014 - [id = 475], n02965783 car mirror
+0.0014 - [id = 982], n10148035 groom, bridegroom
+0.0014 - [id = 918], n06785654 crossword puzzle, crossword
+0.0014 - [id = 424], n02791270 barbershop
+0	Layer Name: NPU_Alex_0_0 	 Layer time: 12.1360 	 number of inputs: 1 	 input shape: 3x227x227 	 output shape: 96x27x27
+Layer Number: 0 	 time: 12.1360
+----------------------------
+
+ Sum of Layers time: 12.1360
+
+
+Graph0   Input: 18.2713   Task: 20.439   send: 0.221054   Out: 0.0006999   Process: 38.9321
+
+NPU NPU_Alex_0_0	AVG_input_time:2.9167	AVG_run_time:6.1898	AVG_prof_run_time:0.7800	AVG_output_time:1.4248
+
+
+********
+
+0	Layer Name: conv2_g0 	 Layer time: 19.8552 	 number of inputs: 3 	 input shape: 48x27x27 	 output shape: 128x27x27
+1	Layer Name: conv2_g1 	 Layer time: 15.2608 	 number of inputs: 3 	 input shape: 48x27x27 	 output shape: 128x27x27
+2	Layer Name: conv2 	 Layer time: 0.5450 	 number of inputs: 2 	 input shape: 128x27x27 	 output shape: 256x27x27
+3	Layer Name: relu2 	 Layer time: 0.4444 	 number of inputs: 1 	 input shape: 256x27x27 	 output shape: 256x27x27
+4	Layer Name: norm2 	 Layer time: 4.5991 	 number of inputs: 1 	 input shape: 256x27x27 	 output shape: 256x27x27
+5	Layer Name: pool2 	 Layer time: 0.5548 	 number of inputs: 1 	 input shape: 256x27x27 	 output shape: 256x13x13
+Layer Number: 0 	 time: 41.2594
+----------------------------
+
+ Sum of Layers time: 41.2594
+
+
+Graph1   Input: 0.0041416   Task: 90.0516   send: 1.09506   Out: 0.0007   Process: 91.1515
+
+
+
+********
+
+0	Layer Name: NPU_Alex_2_2 	 Layer time: 8.3233 	 number of inputs: 1 	 input shape: 256x13x13 	 output shape: 384x13x13
+Layer Number: 0 	 time: 8.3233
+----------------------------
+
+ Sum of Layers time: 8.3233
+
+
+Graph2   Input: 0.004171   Task: 16.5717   send: 0.522783   Out: 0.0007003   Process: 17.0994
+
+NPU NPU_Alex_2_2	AVG_input_time:0.9191	AVG_run_time:4.2484	AVG_prof_run_time:0.3560	AVG_output_time:1.0871
+
+
+********
+
+0	Layer Name: conv4_g0 	 Layer time: 11.6099 	 number of inputs: 3 	 input shape: 192x13x13 	 output shape: 192x13x13
+1	Layer Name: conv4_g1 	 Layer time: 8.1247 	 number of inputs: 3 	 input shape: 192x13x13 	 output shape: 192x13x13
+2	Layer Name: conv4 	 Layer time: 0.2442 	 number of inputs: 2 	 input shape: 192x13x13 	 output shape: 384x13x13
+3	Layer Name: relu4 	 Layer time: 0.1700 	 number of inputs: 1 	 input shape: 384x13x13 	 output shape: 384x13x13
+Layer Number: 0 	 time: 20.1487
+----------------------------
+
+ Sum of Layers time: 20.1487
+
+
+Graph3   Input: 0.0047539   Task: 52.6356   send: 1.38373   Out: 0.000729   Process: 54.0248
+
+
+
+********
+
+0	Layer Name: NPU_Alex_4_4 	 Layer time: 6.2612 	 number of inputs: 1 	 input shape: 384x13x13 	 output shape: 256x6x6
+Layer Number: 0 	 time: 6.2612
+----------------------------
+
+ Sum of Layers time: 6.2612
+
+
+Graph4   Input: 0.0032958   Task: 14.4831   send: 0.0311209   Out: 0.000671   Process: 14.5182
+
+NPU NPU_Alex_4_4	AVG_input_time:1.3630	AVG_run_time:3.2444	AVG_prof_run_time:0.3621	AVG_output_time:0.1546
+
+
+********
+
+0	Layer Name: fc6 	 Layer time: 45.1982 	 number of inputs: 3 	 input shape: 256x6x6 	 output shape: 4096
+1	Layer Name: relu6 	 Layer time: 0.0281 	 number of inputs: 1 	 input shape: 4096 	 output shape: 4096
+Layer Number: 0 	 time: 45.2264
+----------------------------
+
+ Sum of Layers time: 45.2264
+
+
+Graph5   Input: 0.003179   Task: 61.6064   send: 0.280554   Out: 0.0006125   Process: 61.8908
+
+
+
+********
+
+0	Layer Name: NPU_Alex_6_6 	 Layer time: 5.9768 	 number of inputs: 1 	 input shape: 4096 	 output shape: 4096
+Layer Number: 0 	 time: 5.9768
+----------------------------
+
+ Sum of Layers time: 5.9768
+
+
+Graph6   Input: 0.002829   Task: 14.1765   send: 0.0218457   Out: 0.0007584   Process: 14.2019
+
+NPU NPU_Alex_6_6	AVG_input_time:0.1467	AVG_run_time:3.9244	AVG_prof_run_time:1.5419	AVG_output_time:0.0601
+
+
+********
+
+0	Layer Name: fc8 	 Layer time: 5.8411 	 number of inputs: 3 	 input shape: 4096 	 output shape: 1000
+1	Layer Name: prob 	 Layer time: 0.0748 	 number of inputs: 1 	 input shape: 1000 	 output shape: 1000
+Layer Number: 0 	 time: 5.9159
+----------------------------
+
+ Sum of Layers time: 5.9159
+
+
+Graph7   Input: 0.0040541   Task: 22.3355   send: 0.0011666   Out: 0.278104   Process: 22.6188
+
+
+
+********
+
+
+
+AVG Latency: 311.561
+
+Profiling these DVFS settings finised
+Please Enter the desired Frequency setttings: 
+6 Running Graph with 6-6-6-6-6-6-6-6 LW DVFS
+governor 0 task:NPU_Alex_0_0 freqs:0,6,0
+governor 1 task:NPU_Alex_2_2 freqs:0,6,0
+governor 2 task:NPU_Alex_4_4 freqs:0,6,0
+governor 3 task:NPU_Alex_6_6 freqs:0,6,0
+governor 4 task:pool2 freqs:0,6,0
+governor 5 task:prob freqs:0,6,0
+governor 6 task:relu4 freqs:0,6,0
+governor 7 task:relu6 freqs:0,6,0
+set_GPIOs with mode: layers
+tass name: NPU_Alex_0_0	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: conv2_g0	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: conv2_g1	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: conv2	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: relu2	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: norm2	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: pool2	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: NPU_Alex_2_2	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: conv4_g0	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: conv4_g1	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: conv4	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: relu4	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: NPU_Alex_4_4	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: fc6	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: NPU_Alex_6_6	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: fc8	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: prob	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+
+
+
+*********************************************
+start running graphs
+*************************************************
+
+
+
+
+************
+Photo_index:2
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//school_bus.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0015 - [id = 788], n04200800 shoe shop, shoe-shop, shoe store
+0.0014 - [id = 475], n02965783 car mirror
+0.0014 - [id = 982], n10148035 groom, bridegroom
+0.0014 - [id = 918], n06785654 crossword puzzle, crossword
+0.0014 - [id = 424], n02791270 barbershop
+
+
+************
+Photo_index:3
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//go_kart.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0015 - [id = 788], n04200800 shoe shop, shoe-shop, shoe store
+0.0014 - [id = 475], n02965783 car mirror
+0.0014 - [id = 982], n10148035 groom, bridegroom
+0.0014 - [id = 918], n06785654 crossword puzzle, crossword
+0.0014 - [id = 424], n02791270 barbershop
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gold_fish.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0015 - [id = 788], n04200800 shoe shop, shoe-shop, shoe store
+0.0014 - [id = 475], n02965783 car mirror
+0.0014 - [id = 982], n10148035 groom, bridegroom
+0.0014 - [id = 918], n06785654 crossword puzzle, crossword
+0.0014 - [id = 424], n02791270 barbershop
+
+
+************
+Photo_index:1
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gondola.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0015 - [id = 788], n04200800 shoe shop, shoe-shop, shoe store
+0.0014 - [id = 475], n02965783 car mirror
+0.0014 - [id = 982], n10148035 groom, bridegroom
+0.0014 - [id = 918], n06785654 crossword puzzle, crossword
+0.0014 - [id = 424], n02791270 barbershop
+
+
+************
+Photo_index:2
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//school_bus.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0015 - [id = 788], n04200800 shoe shop, shoe-shop, shoe store
+0.0014 - [id = 475], n02965783 car mirror
+0.0014 - [id = 982], n10148035 groom, bridegroom
+0.0014 - [id = 918], n06785654 crossword puzzle, crossword
+0.0014 - [id = 424], n02791270 barbershop
+
+
+************
+Photo_index:3
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//go_kart.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0015 - [id = 788], n04200800 shoe shop, shoe-shop, shoe store
+0.0014 - [id = 475], n02965783 car mirror
+0.0014 - [id = 982], n10148035 groom, bridegroom
+0.0014 - [id = 918], n06785654 crossword puzzle, crossword
+0.0014 - [id = 424], n02791270 barbershop
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gold_fish.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0015 - [id = 788], n04200800 shoe shop, shoe-shop, shoe store
+0.0014 - [id = 475], n02965783 car mirror
+0.0014 - [id = 982], n10148035 groom, bridegroom
+0.0014 - [id = 918], n06785654 crossword puzzle, crossword
+0.0014 - [id = 424], n02791270 barbershop
+
+
+************
+Photo_index:1
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gondola.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0015 - [id = 788], n04200800 shoe shop, shoe-shop, shoe store
+0.0014 - [id = 475], n02965783 car mirror
+0.0014 - [id = 982], n10148035 groom, bridegroom
+0.0014 - [id = 918], n06785654 crossword puzzle, crossword
+0.0014 - [id = 424], n02791270 barbershop
+
+
+************
+Photo_index:2
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//school_bus.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0015 - [id = 788], n04200800 shoe shop, shoe-shop, shoe store
+0.0014 - [id = 475], n02965783 car mirror
+0.0014 - [id = 982], n10148035 groom, bridegroom
+0.0014 - [id = 918], n06785654 crossword puzzle, crossword
+0.0014 - [id = 424], n02791270 barbershop
+
+
+************
+Photo_index:3
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//go_kart.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0015 - [id = 788], n04200800 shoe shop, shoe-shop, shoe store
+0.0014 - [id = 475], n02965783 car mirror
+0.0014 - [id = 982], n10148035 groom, bridegroom
+0.0014 - [id = 918], n06785654 crossword puzzle, crossword
+0.0014 - [id = 424], n02791270 barbershop
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gold_fish.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0015 - [id = 788], n04200800 shoe shop, shoe-shop, shoe store
+0.0014 - [id = 475], n02965783 car mirror
+0.0014 - [id = 982], n10148035 groom, bridegroom
+0.0014 - [id = 918], n06785654 crossword puzzle, crossword
+0.0014 - [id = 424], n02791270 barbershop
+
+
+************
+Photo_index:1
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gondola.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0015 - [id = 788], n04200800 shoe shop, shoe-shop, shoe store
+0.0014 - [id = 475], n02965783 car mirror
+0.0014 - [id = 982], n10148035 groom, bridegroom
+0.0014 - [id = 918], n06785654 crossword puzzle, crossword
+0.0014 - [id = 424], n02791270 barbershop
+
+
+************
+Photo_index:2
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//school_bus.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0015 - [id = 788], n04200800 shoe shop, shoe-shop, shoe store
+0.0014 - [id = 475], n02965783 car mirror
+0.0014 - [id = 982], n10148035 groom, bridegroom
+0.0014 - [id = 918], n06785654 crossword puzzle, crossword
+0.0014 - [id = 424], n02791270 barbershop
+0	Layer Name: NPU_Alex_0_0 	 Layer time: 11.6602 	 number of inputs: 1 	 input shape: 3x227x227 	 output shape: 96x27x27
+Layer Number: 0 	 time: 11.6602
+----------------------------
+
+ Sum of Layers time: 11.6602
+
+
+Graph0   Input: 16.1356   Task: 19.9511   send: 0.129558   Out: 0.0005833   Process: 36.2168
+
+NPU NPU_Alex_0_0	AVG_input_time:2.5782	AVG_run_time:5.8569	AVG_prof_run_time:0.7856	AVG_output_time:1.2930
+
+
+********
+
+0	Layer Name: conv2_g0 	 Layer time: 24.8081 	 number of inputs: 3 	 input shape: 48x27x27 	 output shape: 128x27x27
+1	Layer Name: conv2_g1 	 Layer time: 14.2796 	 number of inputs: 3 	 input shape: 48x27x27 	 output shape: 128x27x27
+2	Layer Name: conv2 	 Layer time: 0.5663 	 number of inputs: 2 	 input shape: 128x27x27 	 output shape: 256x27x27
+3	Layer Name: relu2 	 Layer time: 0.4723 	 number of inputs: 1 	 input shape: 256x27x27 	 output shape: 256x27x27
+4	Layer Name: norm2 	 Layer time: 4.2013 	 number of inputs: 1 	 input shape: 256x27x27 	 output shape: 256x27x27
+5	Layer Name: pool2 	 Layer time: 0.5975 	 number of inputs: 1 	 input shape: 256x27x27 	 output shape: 256x13x13
+Layer Number: 0 	 time: 44.9252
+----------------------------
+
+ Sum of Layers time: 44.9252
+
+
+Graph1   Input: 0.0036167   Task: 93.7876   send: 0.764954   Out: 0.0005833   Process: 94.5568
+
+
+
+********
+
+0	Layer Name: NPU_Alex_2_2 	 Layer time: 7.8801 	 number of inputs: 1 	 input shape: 256x13x13 	 output shape: 384x13x13
+Layer Number: 0 	 time: 7.8801
+----------------------------
+
+ Sum of Layers time: 7.8801
+
+
+Graph2   Input: 0.0044917   Task: 16.114   send: 0.550783   Out: 0.0006708   Process: 16.67
+
+NPU NPU_Alex_2_2	AVG_input_time:0.8100	AVG_run_time:4.1453	AVG_prof_run_time:0.3592	AVG_output_time:0.9669
+
+
+********
+
+0	Layer Name: conv4_g0 	 Layer time: 11.1479 	 number of inputs: 3 	 input shape: 192x13x13 	 output shape: 192x13x13
+1	Layer Name: conv4_g1 	 Layer time: 10.1478 	 number of inputs: 3 	 input shape: 192x13x13 	 output shape: 192x13x13
+2	Layer Name: conv4 	 Layer time: 0.2432 	 number of inputs: 2 	 input shape: 192x13x13 	 output shape: 384x13x13
+3	Layer Name: relu4 	 Layer time: 0.1672 	 number of inputs: 1 	 input shape: 384x13x13 	 output shape: 384x13x13
+Layer Number: 0 	 time: 21.7061
+----------------------------
+
+ Sum of Layers time: 21.7061
+
+
+Graph3   Input: 0.0049002   Task: 54.1902   send: 1.16871   Out: 0.0005545   Process: 55.3644
+
+
+
+********
+
+0	Layer Name: NPU_Alex_4_4 	 Layer time: 6.5872 	 number of inputs: 1 	 input shape: 384x13x13 	 output shape: 256x6x6
+Layer Number: 0 	 time: 6.5872
+----------------------------
+
+ Sum of Layers time: 6.5872
+
+
+Graph4   Input: 0.0033542   Task: 14.8091   send: 0.0282041   Out: 0.0005543   Process: 14.8412
+
+NPU NPU_Alex_4_4	AVG_input_time:1.2089	AVG_run_time:3.4779	AVG_prof_run_time:0.3638	AVG_output_time:0.1346
+
+
+********
+
+0	Layer Name: fc6 	 Layer time: 43.8435 	 number of inputs: 3 	 input shape: 256x6x6 	 output shape: 4096
+1	Layer Name: relu6 	 Layer time: 0.0271 	 number of inputs: 1 	 input shape: 4096 	 output shape: 4096
+Layer Number: 0 	 time: 43.8706
+----------------------------
+
+ Sum of Layers time: 43.8706
+
+
+Graph5   Input: 0.0032959   Task: 60.2538   send: 0.202213   Out: 0.0005834   Process: 60.4599
+
+
+
+********
+
+0	Layer Name: NPU_Alex_6_6 	 Layer time: 5.7818 	 number of inputs: 1 	 input shape: 4096 	 output shape: 4096
+Layer Number: 0 	 time: 5.7818
+----------------------------
+
+ Sum of Layers time: 5.7818
+
+
+Graph6   Input: 0.0025959   Task: 13.9558   send: 0.0199793   Out: 0.0006708   Process: 13.979
+
+NPU NPU_Alex_6_6	AVG_input_time:0.1302	AVG_run_time:4.0556	AVG_prof_run_time:1.5331	AVG_output_time:0.0533
+
+
+********
+
+0	Layer Name: fc8 	 Layer time: 6.3597 	 number of inputs: 3 	 input shape: 4096 	 output shape: 1000
+1	Layer Name: prob 	 Layer time: 0.0655 	 number of inputs: 1 	 input shape: 1000 	 output shape: 1000
+Layer Number: 0 	 time: 6.4252
+----------------------------
+
+ Sum of Layers time: 6.4252
+
+
+Graph7   Input: 0.0033835   Task: 22.7777   send: 0.0011372   Out: 0.211079   Process: 22.9933
+
+
+
+********
+
+
+
+AVG Latency: 312.893
+
+Profiling these DVFS settings finised
+Please Enter the desired Frequency setttings: 
+7 Running Graph with 7-7-7-7-7-7-7-7 LW DVFS
+governor 0 task:NPU_Alex_0_0 freqs:0,7,0
+governor 1 task:NPU_Alex_2_2 freqs:0,7,0
+governor 2 task:NPU_Alex_4_4 freqs:0,7,0
+governor 3 task:NPU_Alex_6_6 freqs:0,7,0
+governor 4 task:pool2 freqs:0,7,0
+governor 5 task:prob freqs:0,7,0
+governor 6 task:relu4 freqs:0,7,0
+governor 7 task:relu6 freqs:0,7,0
+set_GPIOs with mode: layers
+tass name: NPU_Alex_0_0	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: conv2_g0	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: conv2_g1	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: conv2	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: relu2	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: norm2	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: pool2	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: NPU_Alex_2_2	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: conv4_g0	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: conv4_g1	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: conv4	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: relu4	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: NPU_Alex_4_4	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: fc6	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: NPU_Alex_6_6	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: fc8	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: prob	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+
+
+
+*********************************************
+start running graphs
+*************************************************
+
+
+
+
+************
+Photo_index:3
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//go_kart.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0015 - [id = 788], n04200800 shoe shop, shoe-shop, shoe store
+0.0014 - [id = 475], n02965783 car mirror
+0.0014 - [id = 982], n10148035 groom, bridegroom
+0.0014 - [id = 918], n06785654 crossword puzzle, crossword
+0.0014 - [id = 424], n02791270 barbershop
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gold_fish.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0015 - [id = 788], n04200800 shoe shop, shoe-shop, shoe store
+0.0014 - [id = 475], n02965783 car mirror
+0.0014 - [id = 982], n10148035 groom, bridegroom
+0.0014 - [id = 918], n06785654 crossword puzzle, crossword
+0.0014 - [id = 424], n02791270 barbershop
+
+
+************
+Photo_index:1
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gondola.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0015 - [id = 788], n04200800 shoe shop, shoe-shop, shoe store
+0.0014 - [id = 475], n02965783 car mirror
+0.0014 - [id = 982], n10148035 groom, bridegroom
+0.0014 - [id = 918], n06785654 crossword puzzle, crossword
+0.0014 - [id = 424], n02791270 barbershop
+
+
+************
+Photo_index:2
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//school_bus.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0015 - [id = 788], n04200800 shoe shop, shoe-shop, shoe store
+0.0014 - [id = 475], n02965783 car mirror
+0.0014 - [id = 982], n10148035 groom, bridegroom
+0.0014 - [id = 918], n06785654 crossword puzzle, crossword
+0.0014 - [id = 424], n02791270 barbershop
+
+
+************
+Photo_index:3
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//go_kart.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0015 - [id = 788], n04200800 shoe shop, shoe-shop, shoe store
+0.0014 - [id = 475], n02965783 car mirror
+0.0014 - [id = 982], n10148035 groom, bridegroom
+0.0014 - [id = 918], n06785654 crossword puzzle, crossword
+0.0014 - [id = 424], n02791270 barbershop
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gold_fish.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0015 - [id = 788], n04200800 shoe shop, shoe-shop, shoe store
+0.0014 - [id = 475], n02965783 car mirror
+0.0014 - [id = 982], n10148035 groom, bridegroom
+0.0014 - [id = 918], n06785654 crossword puzzle, crossword
+0.0014 - [id = 424], n02791270 barbershop
+
+
+************
+Photo_index:1
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gondola.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0015 - [id = 788], n04200800 shoe shop, shoe-shop, shoe store
+0.0014 - [id = 475], n02965783 car mirror
+0.0014 - [id = 982], n10148035 groom, bridegroom
+0.0014 - [id = 918], n06785654 crossword puzzle, crossword
+0.0014 - [id = 424], n02791270 barbershop
+
+
+************
+Photo_index:2
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//school_bus.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0015 - [id = 788], n04200800 shoe shop, shoe-shop, shoe store
+0.0014 - [id = 475], n02965783 car mirror
+0.0014 - [id = 982], n10148035 groom, bridegroom
+0.0014 - [id = 918], n06785654 crossword puzzle, crossword
+0.0014 - [id = 424], n02791270 barbershop
+
+
+************
+Photo_index:3
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//go_kart.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0015 - [id = 788], n04200800 shoe shop, shoe-shop, shoe store
+0.0014 - [id = 475], n02965783 car mirror
+0.0014 - [id = 982], n10148035 groom, bridegroom
+0.0014 - [id = 918], n06785654 crossword puzzle, crossword
+0.0014 - [id = 424], n02791270 barbershop
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gold_fish.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0015 - [id = 788], n04200800 shoe shop, shoe-shop, shoe store
+0.0014 - [id = 475], n02965783 car mirror
+0.0014 - [id = 982], n10148035 groom, bridegroom
+0.0014 - [id = 918], n06785654 crossword puzzle, crossword
+0.0014 - [id = 424], n02791270 barbershop
+
+
+************
+Photo_index:1
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gondola.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0015 - [id = 788], n04200800 shoe shop, shoe-shop, shoe store
+0.0014 - [id = 475], n02965783 car mirror
+0.0014 - [id = 982], n10148035 groom, bridegroom
+0.0014 - [id = 918], n06785654 crossword puzzle, crossword
+0.0014 - [id = 424], n02791270 barbershop
+
+
+************
+Photo_index:2
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//school_bus.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0015 - [id = 788], n04200800 shoe shop, shoe-shop, shoe store
+0.0014 - [id = 475], n02965783 car mirror
+0.0014 - [id = 982], n10148035 groom, bridegroom
+0.0014 - [id = 918], n06785654 crossword puzzle, crossword
+0.0014 - [id = 424], n02791270 barbershop
+
+
+************
+Photo_index:3
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//go_kart.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0015 - [id = 788], n04200800 shoe shop, shoe-shop, shoe store
+0.0014 - [id = 475], n02965783 car mirror
+0.0014 - [id = 982], n10148035 groom, bridegroom
+0.0014 - [id = 918], n06785654 crossword puzzle, crossword
+0.0014 - [id = 424], n02791270 barbershop
+0	Layer Name: NPU_Alex_0_0 	 Layer time: 11.0642 	 number of inputs: 1 	 input shape: 3x227x227 	 output shape: 96x27x27
+Layer Number: 0 	 time: 11.0642
+----------------------------
+
+ Sum of Layers time: 11.0642
+
+
+Graph0   Input: 14.4573   Task: 19.3546   send: 0.130492   Out: 0.0004085   Process: 33.9428
+
+NPU NPU_Alex_0_0	AVG_input_time:2.2949	AVG_run_time:5.7518	AVG_prof_run_time:0.7809	AVG_output_time:1.1738
+
+
+********
+
+0	Layer Name: conv2_g0 	 Layer time: 23.1757 	 number of inputs: 3 	 input shape: 48x27x27 	 output shape: 128x27x27
+1	Layer Name: conv2_g1 	 Layer time: 12.8591 	 number of inputs: 3 	 input shape: 48x27x27 	 output shape: 128x27x27
+2	Layer Name: conv2 	 Layer time: 0.5192 	 number of inputs: 2 	 input shape: 128x27x27 	 output shape: 256x27x27
+3	Layer Name: relu2 	 Layer time: 0.4529 	 number of inputs: 1 	 input shape: 256x27x27 	 output shape: 256x27x27
+4	Layer Name: norm2 	 Layer time: 4.0805 	 number of inputs: 1 	 input shape: 256x27x27 	 output shape: 256x27x27
+5	Layer Name: pool2 	 Layer time: 0.6114 	 number of inputs: 1 	 input shape: 256x27x27 	 output shape: 256x13x13
+Layer Number: 0 	 time: 41.6987
+----------------------------
+
+ Sum of Layers time: 41.6987
+
+
+Graph1   Input: 0.0037335   Task: 90.5857   send: 0.799284   Out: 0.000554   Process: 91.3893
+
+
+
+********
+
+0	Layer Name: NPU_Alex_2_2 	 Layer time: 7.8197 	 number of inputs: 1 	 input shape: 256x13x13 	 output shape: 384x13x13
+Layer Number: 0 	 time: 7.8197
+----------------------------
+
+ Sum of Layers time: 7.8197
+
+
+Graph2   Input: 0.00455   Task: 16.0574   send: 0.538533   Out: 0.0006415   Process: 16.6012
+
+NPU NPU_Alex_2_2	AVG_input_time:0.7287	AVG_run_time:4.0996	AVG_prof_run_time:0.3561	AVG_output_time:0.8788
+
+
+********
+
+0	Layer Name: conv4_g0 	 Layer time: 11.6486 	 number of inputs: 3 	 input shape: 192x13x13 	 output shape: 192x13x13
+1	Layer Name: conv4_g1 	 Layer time: 8.2847 	 number of inputs: 3 	 input shape: 192x13x13 	 output shape: 192x13x13
+2	Layer Name: conv4 	 Layer time: 0.2069 	 number of inputs: 2 	 input shape: 192x13x13 	 output shape: 384x13x13
+3	Layer Name: relu4 	 Layer time: 0.1461 	 number of inputs: 1 	 input shape: 384x13x13 	 output shape: 384x13x13
+Layer Number: 0 	 time: 20.2863
+----------------------------
+
+ Sum of Layers time: 20.2863
+
+
+Graph3   Input: 0.0044915   Task: 52.7909   send: 1.10317   Out: 0.0006415   Process: 53.8992
+
+
+
+********
+
+0	Layer Name: NPU_Alex_4_4 	 Layer time: 5.8576 	 number of inputs: 1 	 input shape: 384x13x13 	 output shape: 256x6x6
+Layer Number: 0 	 time: 5.8576
+----------------------------
+
+ Sum of Layers time: 5.8576
+
+
+Graph4   Input: 0.0030624   Task: 14.0546   send: 0.0266585   Out: 0.0005251   Process: 14.0848
+
+NPU NPU_Alex_4_4	AVG_input_time:1.0907	AVG_run_time:3.1727	AVG_prof_run_time:0.3524	AVG_output_time:0.1249
+
+
+********
+
+0	Layer Name: fc6 	 Layer time: 46.1871 	 number of inputs: 3 	 input shape: 256x6x6 	 output shape: 4096
+1	Layer Name: relu6 	 Layer time: 0.0270 	 number of inputs: 1 	 input shape: 4096 	 output shape: 4096
+Layer Number: 0 	 time: 46.2142
+----------------------------
+
+ Sum of Layers time: 46.2142
+
+
+Graph5   Input: 0.0029166   Task: 62.534   send: 0.216213   Out: 0.0004666   Process: 62.7536
+
+
+
+********
+
+0	Layer Name: NPU_Alex_6_6 	 Layer time: 5.8092 	 number of inputs: 1 	 input shape: 4096 	 output shape: 4096
+Layer Number: 0 	 time: 5.8092
+----------------------------
+
+ Sum of Layers time: 5.8092
+
+
+Graph6   Input: 0.002421   Task: 13.9607   send: 0.0186667   Out: 0.0005249   Process: 13.9823
+
+NPU NPU_Alex_6_6	AVG_input_time:0.1211	AVG_run_time:4.0483	AVG_prof_run_time:1.5452	AVG_output_time:0.0479
+
+
+********
+
+0	Layer Name: fc8 	 Layer time: 5.3572 	 number of inputs: 3 	 input shape: 4096 	 output shape: 1000
+1	Layer Name: prob 	 Layer time: 0.0624 	 number of inputs: 1 	 input shape: 1000 	 output shape: 1000
+Layer Number: 0 	 time: 5.4196
+----------------------------
+
+ Sum of Layers time: 5.4196
+
+
+Graph7   Input: 0.0035293   Task: 21.708   send: 0.0009918   Out: 0.192617   Process: 21.9052
+
+
+
+********
+
+
+
+AVG Latency: 306.38
+
+Profiling these DVFS settings finised
+Please Enter the desired Frequency setttings: 
+
+Test passed

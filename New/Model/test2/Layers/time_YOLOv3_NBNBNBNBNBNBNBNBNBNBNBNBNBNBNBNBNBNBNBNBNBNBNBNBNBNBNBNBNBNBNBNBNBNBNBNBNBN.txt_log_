@@ -1,0 +1,85 @@
+List of devices attached
+4UB7RRTHY8	device
+
+disconnected everything
+adbd is already running as root
+remount succeeded
+/home/ehsan/UvA/ARMCL/Rock-Pi/ComputeLibrary_64_Yolov3/utils/DVFS/governor_pandoon.ko: 1 file pushed, 0 skipped. 2190.6 MB/s (260080 bytes in 0.000s)
+Module is already inserted, removing and reinserting...
+start=0, end=0
+file /data/local/ARM-CO-UP/graphs/YOLOv3_0_0.rknn exist on board
+start=2, end=2
+file /data/local/ARM-CO-UP/graphs/YOLOv3_2_2.rknn exist on board
+start=4, end=4
+file /data/local/ARM-CO-UP/graphs/YOLOv3_4_4.rknn exist on board
+start=6, end=6
+file /data/local/ARM-CO-UP/graphs/YOLOv3_6_6.rknn exist on board
+start=8, end=8
+file /data/local/ARM-CO-UP/graphs/YOLOv3_8_8.rknn exist on board
+start=10, end=10
+file /data/local/ARM-CO-UP/graphs/YOLOv3_10_10.rknn exist on board
+start=12, end=12
+file /data/local/ARM-CO-UP/graphs/YOLOv3_12_12.rknn exist on board
+start=14, end=14
+file /data/local/ARM-CO-UP/graphs/YOLOv3_14_14.rknn exist on board
+start=16, end=16
+file /data/local/ARM-CO-UP/graphs/YOLOv3_16_16.rknn exist on board
+start=18, end=18
+file /data/local/ARM-CO-UP/graphs/YOLOv3_18_18.rknn exist on board
+start=20, end=20
+file /data/local/ARM-CO-UP/graphs/YOLOv3_20_20.rknn exist on board
+start=22, end=22
+file /data/local/ARM-CO-UP/graphs/YOLOv3_22_22.rknn exist on board
+start=24, end=24
+file /data/local/ARM-CO-UP/graphs/YOLOv3_24_24.rknn exist on board
+start=26, end=26
+file /data/local/ARM-CO-UP/graphs/YOLOv3_26_26.rknn exist on board
+start=28, end=28
+file /data/local/ARM-CO-UP/graphs/YOLOv3_28_28.rknn exist on board
+start=30, end=30
+file /data/local/ARM-CO-UP/graphs/YOLOv3_30_30.rknn exist on board
+start=32, end=32
+file /data/local/ARM-CO-UP/graphs/YOLOv3_32_32.rknn exist on board
+start=34, end=34
+file /data/local/ARM-CO-UP/graphs/YOLOv3_34_34.rknn exist on board
+start=36, end=36
+file /data/local/ARM-CO-UP/graphs/YOLOv3_36_36.rknn exist on board
+start=38, end=38
+file /data/local/ARM-CO-UP/graphs/YOLOv3_38_38.rknn exist on board
+start=40, end=40
+file /data/local/ARM-CO-UP/graphs/YOLOv3_40_40.rknn exist on board
+start=42, end=42
+file /data/local/ARM-CO-UP/graphs/YOLOv3_42_42.rknn exist on board
+start=44, end=44
+file /data/local/ARM-CO-UP/graphs/YOLOv3_44_44.rknn exist on board
+start=46, end=46
+file /data/local/ARM-CO-UP/graphs/YOLOv3_46_46.rknn exist on board
+start=48, end=48
+file /data/local/ARM-CO-UP/graphs/YOLOv3_48_48.rknn exist on board
+start=50, end=50
+file /data/local/ARM-CO-UP/graphs/YOLOv3_50_50.rknn exist on board
+start=52, end=52
+file /data/local/ARM-CO-UP/graphs/YOLOv3_52_52.rknn exist on board
+start=54, end=54
+file /data/local/ARM-CO-UP/graphs/YOLOv3_54_54.rknn exist on board
+start=56, end=56
+file /data/local/ARM-CO-UP/graphs/YOLOv3_56_56.rknn exist on board
+start=58, end=58
+file /data/local/ARM-CO-UP/graphs/YOLOv3_58_58.rknn exist on board
+start=60, end=60
+file /data/local/ARM-CO-UP/graphs/YOLOv3_60_60.rknn exist on board
+start=62, end=62
+file /data/local/ARM-CO-UP/graphs/YOLOv3_62_62.rknn exist on board
+start=64, end=64
+file /data/local/ARM-CO-UP/graphs/YOLOv3_64_64.rknn exist on board
+start=66, end=66
+file /data/local/ARM-CO-UP/graphs/YOLOv3_66_66.rknn exist on board
+start=68, end=68
+file /data/local/ARM-CO-UP/graphs/YOLOv3_68_68.rknn exist on board
+start=70, end=70
+file /data/local/ARM-CO-UP/graphs/YOLOv3_70_70.rknn exist on board
+start=72, end=72
+file /data/local/ARM-CO-UP/graphs/YOLOv3_72_72.rknn exist on board
+start=74, end=74
+file /data/local/ARM-CO-UP/graphs/YOLOv3_74_74.rknn exist on board
+

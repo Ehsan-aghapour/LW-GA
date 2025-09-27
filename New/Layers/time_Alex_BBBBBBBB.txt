@@ -1,0 +1,2537 @@
+List of devices attached
+4UB7RRTHY8	device
+
+disconnected everything
+adbd is already running as root
+remount succeeded
+/home/ehsan/UvA/ARMCL/Rock-Pi/ComputeLibrary_64_Yolov3/utils/DVFS/governor_pandoon.ko: 1 file pushed, 0 skipped. 1177.1 MB/s (260080 bytes in 0.000s)
+Module is already inserted, removing and reinserting...
+
+WARNING: linker: Warning: unable to normalize "build/"
+4 Input images are read from /data/local/ARM-CO-UP/assets//ppm_images_227/
+[UtilsPipeline.h] image directory is: /data/local/ARM-CO-UP/assets//ppm_images_227//
+Threads : 1
+Small Cores Threads : 1
+Target : Neon
+Data type : F32
+Data layout : NHWC
+Tuner enabled? : false
+Cache enabled? : false
+Tuner mode : Normal
+Tuner file : 
+MLGO file : 
+Fast math enabled? : false
+Data path : /data/local/ARM-CO-UP/assets//alexnet/
+Image file : /data/local/ARM-CO-UP/assets//ppm_images_227//
+Labels file : /data/local/ARM-CO-UP/assets//labels.txt
+Partition point is : 0
+Second partition point is : 0
+Order is : BBBBBBBB
+freqs of layers : 
+power_profile_mode : layers
+GPU host is: B
+NPU host is: B
+Number of totla cores is : 6
+Number of little cores is : 4
+Print task names : 0
+Run network for 10 times.
+Layer timing: 0
+
+Adding Graph0 target 1 PE: B Host PE: B Layers: 0-7
+pandoon
+pandoon
+pandoon
+Pandoon opened at 3
+****************************
+GraphUtils.cpp- reading images: /data/local/ARM-CO-UP/assets//ppm_images_227//
+/data/local/ARM-CO-UP/assets//ppm_images_227//gold_fish.ppm
+/data/local/ARM-CO-UP/assets//ppm_images_227//gondola.ppm
+/data/local/ARM-CO-UP/assets//ppm_images_227//school_bus.ppm
+/data/local/ARM-CO-UP/assets//ppm_images_227//go_kart.ppm
+*****************************
+
+
+
+			0 skipping layer: 
+current layer number: 0 layer name: 
+			0 skipping layer: conv1
+current layer number: 0 layer name: conv1
+			0 skipping layer: relu1
+current layer number: 0 layer name: relu1
+			0 skipping layer: norm1
+current layer number: 0 layer name: norm1
+			0 skipping layer: pool1
+current layer number: 0 layer name: pool1
+1 layer: conv2
+current layer number: 1 layer name: conv2
+1 skipping layer: relu2
+current layer number: 1 layer name: relu2
+1 skipping layer: norm2
+current layer number: 1 layer name: norm2
+1 skipping layer: pool2
+current layer number: 1 layer name: pool2
+			2 layer: conv3
+current layer number: 2 layer name: conv3
+			2 skipping layer: relu3
+current layer number: 2 layer name: relu3
+3 layer: conv4
+current layer number: 3 layer name: conv4
+3 skipping layer: relu4
+current layer number: 3 layer name: relu4
+			4 layer: conv5
+current layer number: 4 layer name: conv5
+			4 skipping layer: relu5
+current layer number: 4 layer name: relu5
+			4 skipping layer: pool5
+current layer number: 4 layer name: pool5
+5 layer: fc6
+current layer number: 5 layer name: fc6
+5 skipping layer: relu6
+current layer number: 5 layer name: relu6
+			6 layer: fc7
+current layer number: 6 layer name: fc7
+			6 skipping layer: relu7
+current layer number: 6 layer name: relu7
+7 layer: fc8
+current layer number: 7 layer name: fc8
+7 skipping layer: prob
+current layer number: 7 layer name: prob
+output accessor reading label file /data/local/ARM-CO-UP/assets//labels.txt
+			8 layer: 
+current layer number: 8 layer name: 
+
+
+*********************
+Start finalizing Graphs
+*******************
+
+Graph id: 0 Target is: Neon
+Graph (0) Task 0: conv1
+Graph (0) Task 1: relu1
+Graph (0) Task 2: norm1
+Graph (0) Task 3: pool1
+Graph (0) Task 4: conv2_g0
+Graph (0) Task 5: conv2_g1
+Graph (0) Task 6: conv2
+Graph (0) Task 7: relu2
+Graph (0) Task 8: norm2
+Graph (0) Task 9: pool2
+Graph (0) Task 10: conv3
+Graph (0) Task 11: relu3
+Graph (0) Task 12: conv4_g0
+Graph (0) Task 13: conv4_g1
+Graph (0) Task 14: conv4
+Graph (0) Task 15: relu4
+Graph (0) Task 16: conv5_g0
+Graph (0) Task 17: conv5_g1
+Graph (0) Task 18: conv5
+Graph (0) Task 19: relu5
+Graph (0) Task 20: pool5
+Graph (0) Task 21: fc6
+Graph (0) Task 22: relu6
+Graph (0) Task 23: fc7
+Graph (0) Task 24: relu7
+Graph (0) Task 25: fc8
+Graph (0) Task 26: prob
+Graph 0 input size: 1 receiver size: 0 tasks size: 27 senders size: 0 output size: 1
+
+setting ending for layer: pool1
+setting ending for layer: pool2
+setting ending for layer: relu3
+setting ending for layer: relu4
+setting ending for layer: pool5
+setting ending for layer: relu6
+setting ending for layer: relu7
+setting ending for layer: prob
+Finish finalizing graph 0
+
+
+
+setup finished
+
+Please Enter the desired Frequency setttings: 0 Running Graph with 0-0-0-0-0-0-0-0 LW DVFS
+governor 0 task:pool1 freqs:0,0,0
+governor 1 task:pool2 freqs:0,0,0
+governor 2 task:pool5 freqs:0,0,0
+governor 3 task:prob freqs:0,0,0
+governor 4 task:relu3 freqs:0,0,0
+governor 5 task:relu4 freqs:0,0,0
+governor 6 task:relu6 freqs:0,0,0
+governor 7 task:relu7 freqs:0,0,0
+set_GPIOs with mode: layers
+tass name: conv1	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: relu1	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: norm1	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: pool1	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: conv2_g0	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: conv2_g1	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: conv2	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: relu2	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: norm2	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: pool2	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: conv3	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: relu3	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: conv4_g0	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: conv4_g1	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: conv4	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: relu4	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: conv5_g0	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: conv5_g1	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: conv5	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: relu5	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: pool5	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: fc6	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: fc7	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: relu7	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: fc8	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: prob	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+
+
+
+*********************************************
+start running graphs
+*************************************************
+
+
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gold_fish.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 27], n01631663 eft
+0.0000 - [id = 29], n01632777 axolotl, mud puppy, Ambystoma mexicanum
+0.0000 - [id = 124], n01985128 crayfish, crawfish, crawdad, crawdaddy
+0.0000 - [id = 310], n02219486 ant, emmet, pismire
+
+
+************
+Photo_index:1
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gondola.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 576], n03447447 gondola
+0.0000 - [id = 780], n04147183 schooner
+0.0000 - [id = 724], n03947888 pirate, pirate ship
+0.0000 - [id = 914], n04612504 yawl
+0.0000 - [id = 536], n03216828 dock, dockage, docking facility
+
+
+************
+Photo_index:2
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//school_bus.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 779], n04146614 school bus
+0.0000 - [id = 675], n03796401 moving van
+0.0000 - [id = 654], n03769881 minibus
+0.0000 - [id = 705], n03895866 passenger car, coach, carriage
+0.0000 - [id = 757], n04065272 recreational vehicle, RV, R.V.
+
+
+************
+Photo_index:3
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//go_kart.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.9736 - [id = 573], n03444034 go-kart
+0.0118 - [id = 518], n03127747 crash helmet
+0.0108 - [id = 751], n04037443 racer, race car, racing car
+0.0022 - [id = 817], n04285008 sports car, sport car
+0.0006 - [id = 670], n03791053 motor scooter, scooter
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gold_fish.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 27], n01631663 eft
+0.0000 - [id = 29], n01632777 axolotl, mud puppy, Ambystoma mexicanum
+0.0000 - [id = 124], n01985128 crayfish, crawfish, crawdad, crawdaddy
+0.0000 - [id = 310], n02219486 ant, emmet, pismire
+
+
+************
+Photo_index:1
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gondola.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 576], n03447447 gondola
+0.0000 - [id = 780], n04147183 schooner
+0.0000 - [id = 724], n03947888 pirate, pirate ship
+0.0000 - [id = 914], n04612504 yawl
+0.0000 - [id = 536], n03216828 dock, dockage, docking facility
+
+
+************
+Photo_index:2
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//school_bus.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 779], n04146614 school bus
+0.0000 - [id = 675], n03796401 moving van
+0.0000 - [id = 654], n03769881 minibus
+0.0000 - [id = 705], n03895866 passenger car, coach, carriage
+0.0000 - [id = 757], n04065272 recreational vehicle, RV, R.V.
+
+
+************
+Photo_index:3
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//go_kart.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.9736 - [id = 573], n03444034 go-kart
+0.0118 - [id = 518], n03127747 crash helmet
+0.0108 - [id = 751], n04037443 racer, race car, racing car
+0.0022 - [id = 817], n04285008 sports car, sport car
+0.0006 - [id = 670], n03791053 motor scooter, scooter
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gold_fish.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 27], n01631663 eft
+0.0000 - [id = 29], n01632777 axolotl, mud puppy, Ambystoma mexicanum
+0.0000 - [id = 124], n01985128 crayfish, crawfish, crawdad, crawdaddy
+0.0000 - [id = 310], n02219486 ant, emmet, pismire
+
+
+************
+Photo_index:1
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gondola.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 576], n03447447 gondola
+0.0000 - [id = 780], n04147183 schooner
+0.0000 - [id = 724], n03947888 pirate, pirate ship
+0.0000 - [id = 914], n04612504 yawl
+0.0000 - [id = 536], n03216828 dock, dockage, docking facility
+
+
+************
+Photo_index:2
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//school_bus.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 779], n04146614 school bus
+0.0000 - [id = 675], n03796401 moving van
+0.0000 - [id = 654], n03769881 minibus
+0.0000 - [id = 705], n03895866 passenger car, coach, carriage
+0.0000 - [id = 757], n04065272 recreational vehicle, RV, R.V.
+
+
+************
+Photo_index:3
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//go_kart.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.9736 - [id = 573], n03444034 go-kart
+0.0118 - [id = 518], n03127747 crash helmet
+0.0108 - [id = 751], n04037443 racer, race car, racing car
+0.0022 - [id = 817], n04285008 sports car, sport car
+0.0006 - [id = 670], n03791053 motor scooter, scooter
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gold_fish.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 27], n01631663 eft
+0.0000 - [id = 29], n01632777 axolotl, mud puppy, Ambystoma mexicanum
+0.0000 - [id = 124], n01985128 crayfish, crawfish, crawdad, crawdaddy
+0.0000 - [id = 310], n02219486 ant, emmet, pismire
+0	Layer Name: conv1 	 Layer time: 53.3453 	 number of inputs: 3 	 input shape: 3x227x227 	 output shape: 96x55x55
+1	Layer Name: relu1 	 Layer time: 1.64343 	 number of inputs: 1 	 input shape: 96x55x55 	 output shape: 96x55x55
+2	Layer Name: norm1 	 Layer time: 25.8601 	 number of inputs: 1 	 input shape: 96x55x55 	 output shape: 96x55x55
+3	Layer Name: pool1 	 Layer time: 1.31553 	 number of inputs: 1 	 input shape: 96x55x55 	 output shape: 96x27x27
+Layer Number: 0 	 time: 82.1644
+----------------------------
+4	Layer Name: conv2_g0 	 Layer time: 55.0337 	 number of inputs: 3 	 input shape: 48x27x27 	 output shape: 128x27x27
+5	Layer Name: conv2_g1 	 Layer time: 48.1154 	 number of inputs: 3 	 input shape: 48x27x27 	 output shape: 128x27x27
+6	Layer Name: conv2 	 Layer time: 1.51069 	 number of inputs: 2 	 input shape: 128x27x27 	 output shape: 256x27x27
+7	Layer Name: relu2 	 Layer time: 1.08179 	 number of inputs: 1 	 input shape: 256x27x27 	 output shape: 256x27x27
+8	Layer Name: norm2 	 Layer time: 16.1759 	 number of inputs: 1 	 input shape: 256x27x27 	 output shape: 256x27x27
+9	Layer Name: pool2 	 Layer time: 1.04148 	 number of inputs: 1 	 input shape: 256x27x27 	 output shape: 256x13x13
+Layer Number: 1 	 time: 122.959
+----------------------------
+10	Layer Name: conv3 	 Layer time: 43.3959 	 number of inputs: 3 	 input shape: 256x13x13 	 output shape: 384x13x13
+11	Layer Name: relu3 	 Layer time: 0.534275 	 number of inputs: 1 	 input shape: 384x13x13 	 output shape: 384x13x13
+Layer Number: 2 	 time: 43.9302
+----------------------------
+12	Layer Name: conv4_g0 	 Layer time: 16.385 	 number of inputs: 3 	 input shape: 192x13x13 	 output shape: 192x13x13
+13	Layer Name: conv4_g1 	 Layer time: 17.9851 	 number of inputs: 3 	 input shape: 192x13x13 	 output shape: 192x13x13
+14	Layer Name: conv4 	 Layer time: 0.708488 	 number of inputs: 2 	 input shape: 192x13x13 	 output shape: 384x13x13
+15	Layer Name: relu4 	 Layer time: 0.563237 	 number of inputs: 1 	 input shape: 384x13x13 	 output shape: 384x13x13
+Layer Number: 3 	 time: 35.6418
+----------------------------
+16	Layer Name: conv5_g0 	 Layer time: 12.4261 	 number of inputs: 3 	 input shape: 192x13x13 	 output shape: 128x13x13
+17	Layer Name: conv5_g1 	 Layer time: 12.5104 	 number of inputs: 3 	 input shape: 192x13x13 	 output shape: 128x13x13
+18	Layer Name: conv5 	 Layer time: 0.653829 	 number of inputs: 2 	 input shape: 128x13x13 	 output shape: 256x13x13
+19	Layer Name: relu5 	 Layer time: 0.449079 	 number of inputs: 1 	 input shape: 256x13x13 	 output shape: 256x13x13
+20	Layer Name: pool5 	 Layer time: 0.389842 	 number of inputs: 1 	 input shape: 256x13x13 	 output shape: 256x6x6
+Layer Number: 4 	 time: 26.4293
+----------------------------
+21	Layer Name: fc6 	 Layer time: 83.2745 	 number of inputs: 3 	 input shape: 256x6x6 	 output shape: 4096
+22	Layer Name: relu6 	 Layer time: 0.0686001 	 number of inputs: 1 	 input shape: 4096 	 output shape: 4096
+Layer Number: 5 	 time: 83.3431
+----------------------------
+23	Layer Name: fc7 	 Layer time: 35.9233 	 number of inputs: 3 	 input shape: 4096 	 output shape: 4096
+24	Layer Name: relu7 	 Layer time: 0.0692708 	 number of inputs: 1 	 input shape: 4096 	 output shape: 4096
+Layer Number: 6 	 time: 35.9925
+----------------------------
+25	Layer Name: fc8 	 Layer time: 9.33459 	 number of inputs: 3 	 input shape: 4096 	 output shape: 1000
+26	Layer Name: prob 	 Layer time: 0.177071 	 number of inputs: 1 	 input shape: 1000 	 output shape: 1000
+Layer Number: 7 	 time: 9.51166
+----------------------------
+
+ Sum of Layers time: 439.972
+
+
+Graph0   Input: 62.9054   Task: 667.635   send: 0.0030043   Out: 1.13604   Process: 731.68
+
+
+
+********
+
+
+
+AVG Latency: 731.699
+
+Profiling these DVFS settings finised
+Please Enter the desired Frequency setttings: 1 Running Graph with 1-1-1-1-1-1-1-1 LW DVFS
+governor 0 task:pool1 freqs:0,1,0
+governor 1 task:pool2 freqs:0,1,0
+governor 2 task:pool5 freqs:0,1,0
+governor 3 task:prob freqs:0,1,0
+governor 4 task:relu3 freqs:0,1,0
+governor 5 task:relu4 freqs:0,1,0
+governor 6 task:relu6 freqs:0,1,0
+governor 7 task:relu7 freqs:0,1,0
+set_GPIOs with mode: layers
+tass name: conv1	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: relu1	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: norm1	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: pool1	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: conv2_g0	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: conv2_g1	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: conv2	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: relu2	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: norm2	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: pool2	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: conv3	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: relu3	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: conv4_g0	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: conv4_g1	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: conv4	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: relu4	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: conv5_g0	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: conv5_g1	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: conv5	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: relu5	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: pool5	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: fc6	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: fc7	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: relu7	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: fc8	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: prob	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+
+
+
+*********************************************
+start running graphs
+*************************************************
+
+
+
+
+************
+Photo_index:1
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gondola.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 576], n03447447 gondola
+0.0000 - [id = 780], n04147183 schooner
+0.0000 - [id = 724], n03947888 pirate, pirate ship
+0.0000 - [id = 914], n04612504 yawl
+0.0000 - [id = 536], n03216828 dock, dockage, docking facility
+
+
+************
+Photo_index:2
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//school_bus.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 779], n04146614 school bus
+0.0000 - [id = 675], n03796401 moving van
+0.0000 - [id = 654], n03769881 minibus
+0.0000 - [id = 705], n03895866 passenger car, coach, carriage
+0.0000 - [id = 757], n04065272 recreational vehicle, RV, R.V.
+
+
+************
+Photo_index:3
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//go_kart.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.9736 - [id = 573], n03444034 go-kart
+0.0118 - [id = 518], n03127747 crash helmet
+0.0108 - [id = 751], n04037443 racer, race car, racing car
+0.0022 - [id = 817], n04285008 sports car, sport car
+0.0006 - [id = 670], n03791053 motor scooter, scooter
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gold_fish.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 27], n01631663 eft
+0.0000 - [id = 29], n01632777 axolotl, mud puppy, Ambystoma mexicanum
+0.0000 - [id = 124], n01985128 crayfish, crawfish, crawdad, crawdaddy
+0.0000 - [id = 310], n02219486 ant, emmet, pismire
+
+
+************
+Photo_index:1
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gondola.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 576], n03447447 gondola
+0.0000 - [id = 780], n04147183 schooner
+0.0000 - [id = 724], n03947888 pirate, pirate ship
+0.0000 - [id = 914], n04612504 yawl
+0.0000 - [id = 536], n03216828 dock, dockage, docking facility
+
+
+************
+Photo_index:2
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//school_bus.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 779], n04146614 school bus
+0.0000 - [id = 675], n03796401 moving van
+0.0000 - [id = 654], n03769881 minibus
+0.0000 - [id = 705], n03895866 passenger car, coach, carriage
+0.0000 - [id = 757], n04065272 recreational vehicle, RV, R.V.
+
+
+************
+Photo_index:3
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//go_kart.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.9736 - [id = 573], n03444034 go-kart
+0.0118 - [id = 518], n03127747 crash helmet
+0.0108 - [id = 751], n04037443 racer, race car, racing car
+0.0022 - [id = 817], n04285008 sports car, sport car
+0.0006 - [id = 670], n03791053 motor scooter, scooter
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gold_fish.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 27], n01631663 eft
+0.0000 - [id = 29], n01632777 axolotl, mud puppy, Ambystoma mexicanum
+0.0000 - [id = 124], n01985128 crayfish, crawfish, crawdad, crawdaddy
+0.0000 - [id = 310], n02219486 ant, emmet, pismire
+
+
+************
+Photo_index:1
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gondola.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 576], n03447447 gondola
+0.0000 - [id = 780], n04147183 schooner
+0.0000 - [id = 724], n03947888 pirate, pirate ship
+0.0000 - [id = 914], n04612504 yawl
+0.0000 - [id = 536], n03216828 dock, dockage, docking facility
+
+
+************
+Photo_index:2
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//school_bus.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 779], n04146614 school bus
+0.0000 - [id = 675], n03796401 moving van
+0.0000 - [id = 654], n03769881 minibus
+0.0000 - [id = 705], n03895866 passenger car, coach, carriage
+0.0000 - [id = 757], n04065272 recreational vehicle, RV, R.V.
+
+
+************
+Photo_index:3
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//go_kart.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.9736 - [id = 573], n03444034 go-kart
+0.0118 - [id = 518], n03127747 crash helmet
+0.0108 - [id = 751], n04037443 racer, race car, racing car
+0.0022 - [id = 817], n04285008 sports car, sport car
+0.0006 - [id = 670], n03791053 motor scooter, scooter
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gold_fish.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 27], n01631663 eft
+0.0000 - [id = 29], n01632777 axolotl, mud puppy, Ambystoma mexicanum
+0.0000 - [id = 124], n01985128 crayfish, crawfish, crawdad, crawdaddy
+0.0000 - [id = 310], n02219486 ant, emmet, pismire
+
+
+************
+Photo_index:1
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gondola.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 576], n03447447 gondola
+0.0000 - [id = 780], n04147183 schooner
+0.0000 - [id = 724], n03947888 pirate, pirate ship
+0.0000 - [id = 914], n04612504 yawl
+0.0000 - [id = 536], n03216828 dock, dockage, docking facility
+0	Layer Name: conv1 	 Layer time: 44.9925 	 number of inputs: 3 	 input shape: 3x227x227 	 output shape: 96x55x55
+1	Layer Name: relu1 	 Layer time: 1.15468 	 number of inputs: 1 	 input shape: 96x55x55 	 output shape: 96x55x55
+2	Layer Name: norm1 	 Layer time: 20.9146 	 number of inputs: 1 	 input shape: 96x55x55 	 output shape: 96x55x55
+3	Layer Name: pool1 	 Layer time: 0.939225 	 number of inputs: 1 	 input shape: 96x55x55 	 output shape: 96x27x27
+Layer Number: 0 	 time: 68.0011
+----------------------------
+4	Layer Name: conv2_g0 	 Layer time: 39.1071 	 number of inputs: 3 	 input shape: 48x27x27 	 output shape: 128x27x27
+5	Layer Name: conv2_g1 	 Layer time: 33.0575 	 number of inputs: 3 	 input shape: 48x27x27 	 output shape: 128x27x27
+6	Layer Name: conv2 	 Layer time: 1.0512 	 number of inputs: 2 	 input shape: 128x27x27 	 output shape: 256x27x27
+7	Layer Name: relu2 	 Layer time: 0.758946 	 number of inputs: 1 	 input shape: 256x27x27 	 output shape: 256x27x27
+8	Layer Name: norm2 	 Layer time: 10.181 	 number of inputs: 1 	 input shape: 256x27x27 	 output shape: 256x27x27
+9	Layer Name: pool2 	 Layer time: 0.804067 	 number of inputs: 1 	 input shape: 256x27x27 	 output shape: 256x13x13
+Layer Number: 1 	 time: 84.9598
+----------------------------
+10	Layer Name: conv3 	 Layer time: 31.9937 	 number of inputs: 3 	 input shape: 256x13x13 	 output shape: 384x13x13
+11	Layer Name: relu3 	 Layer time: 0.397746 	 number of inputs: 1 	 input shape: 384x13x13 	 output shape: 384x13x13
+Layer Number: 2 	 time: 32.3915
+----------------------------
+12	Layer Name: conv4_g0 	 Layer time: 12.5968 	 number of inputs: 3 	 input shape: 192x13x13 	 output shape: 192x13x13
+13	Layer Name: conv4_g1 	 Layer time: 12.8372 	 number of inputs: 3 	 input shape: 192x13x13 	 output shape: 192x13x13
+14	Layer Name: conv4 	 Layer time: 0.48965 	 number of inputs: 2 	 input shape: 192x13x13 	 output shape: 384x13x13
+15	Layer Name: relu4 	 Layer time: 0.389842 	 number of inputs: 1 	 input shape: 384x13x13 	 output shape: 384x13x13
+Layer Number: 3 	 time: 26.3135
+----------------------------
+16	Layer Name: conv5_g0 	 Layer time: 8.7661 	 number of inputs: 3 	 input shape: 192x13x13 	 output shape: 128x13x13
+17	Layer Name: conv5_g1 	 Layer time: 8.92742 	 number of inputs: 3 	 input shape: 192x13x13 	 output shape: 128x13x13
+18	Layer Name: conv5 	 Layer time: 0.988983 	 number of inputs: 2 	 input shape: 128x13x13 	 output shape: 256x13x13
+19	Layer Name: relu5 	 Layer time: 0.3423 	 number of inputs: 1 	 input shape: 256x13x13 	 output shape: 256x13x13
+20	Layer Name: pool5 	 Layer time: 0.300913 	 number of inputs: 1 	 input shape: 256x13x13 	 output shape: 256x6x6
+Layer Number: 4 	 time: 19.3257
+----------------------------
+21	Layer Name: fc6 	 Layer time: 56.5549 	 number of inputs: 3 	 input shape: 256x6x6 	 output shape: 4096
+22	Layer Name: relu6 	 Layer time: 0.0531418 	 number of inputs: 1 	 input shape: 4096 	 output shape: 4096
+Layer Number: 5 	 time: 56.6081
+----------------------------
+23	Layer Name: fc7 	 Layer time: 24.892 	 number of inputs: 3 	 input shape: 4096 	 output shape: 4096
+24	Layer Name: relu7 	 Layer time: 0.0535498 	 number of inputs: 1 	 input shape: 4096 	 output shape: 4096
+Layer Number: 6 	 time: 24.9456
+----------------------------
+25	Layer Name: fc8 	 Layer time: 6.37928 	 number of inputs: 3 	 input shape: 4096 	 output shape: 1000
+26	Layer Name: prob 	 Layer time: 0.130317 	 number of inputs: 1 	 input shape: 1000 	 output shape: 1000
+Layer Number: 7 	 time: 6.50959
+----------------------------
+
+ Sum of Layers time: 319.055
+
+
+Graph0   Input: 42.3323   Task: 544.446   send: 0.0021875   Out: 0.512283   Process: 587.293
+
+
+
+********
+
+
+
+AVG Latency: 587.306
+
+Profiling these DVFS settings finised
+Please Enter the desired Frequency setttings: 2 Running Graph with 2-2-2-2-2-2-2-2 LW DVFS
+governor 0 task:pool1 freqs:0,2,0
+governor 1 task:pool2 freqs:0,2,0
+governor 2 task:pool5 freqs:0,2,0
+governor 3 task:prob freqs:0,2,0
+governor 4 task:relu3 freqs:0,2,0
+governor 5 task:relu4 freqs:0,2,0
+governor 6 task:relu6 freqs:0,2,0
+governor 7 task:relu7 freqs:0,2,0
+set_GPIOs with mode: layers
+tass name: conv1	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: relu1	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: norm1	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: pool1	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: conv2_g0	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: conv2_g1	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: conv2	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: relu2	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: norm2	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: pool2	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: conv3	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: relu3	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: conv4_g0	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: conv4_g1	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: conv4	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: relu4	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: conv5_g0	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: conv5_g1	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: conv5	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: relu5	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: pool5	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: fc6	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: fc7	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: relu7	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: fc8	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: prob	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+
+
+
+*********************************************
+start running graphs
+*************************************************
+
+
+
+
+************
+Photo_index:2
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//school_bus.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 779], n04146614 school bus
+0.0000 - [id = 675], n03796401 moving van
+0.0000 - [id = 654], n03769881 minibus
+0.0000 - [id = 705], n03895866 passenger car, coach, carriage
+0.0000 - [id = 757], n04065272 recreational vehicle, RV, R.V.
+
+
+************
+Photo_index:3
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//go_kart.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.9736 - [id = 573], n03444034 go-kart
+0.0118 - [id = 518], n03127747 crash helmet
+0.0108 - [id = 751], n04037443 racer, race car, racing car
+0.0022 - [id = 817], n04285008 sports car, sport car
+0.0006 - [id = 670], n03791053 motor scooter, scooter
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gold_fish.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 27], n01631663 eft
+0.0000 - [id = 29], n01632777 axolotl, mud puppy, Ambystoma mexicanum
+0.0000 - [id = 124], n01985128 crayfish, crawfish, crawdad, crawdaddy
+0.0000 - [id = 310], n02219486 ant, emmet, pismire
+
+
+************
+Photo_index:1
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gondola.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 576], n03447447 gondola
+0.0000 - [id = 780], n04147183 schooner
+0.0000 - [id = 724], n03947888 pirate, pirate ship
+0.0000 - [id = 914], n04612504 yawl
+0.0000 - [id = 536], n03216828 dock, dockage, docking facility
+
+
+************
+Photo_index:2
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//school_bus.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 779], n04146614 school bus
+0.0000 - [id = 675], n03796401 moving van
+0.0000 - [id = 654], n03769881 minibus
+0.0000 - [id = 705], n03895866 passenger car, coach, carriage
+0.0000 - [id = 757], n04065272 recreational vehicle, RV, R.V.
+
+
+************
+Photo_index:3
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//go_kart.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.9736 - [id = 573], n03444034 go-kart
+0.0118 - [id = 518], n03127747 crash helmet
+0.0108 - [id = 751], n04037443 racer, race car, racing car
+0.0022 - [id = 817], n04285008 sports car, sport car
+0.0006 - [id = 670], n03791053 motor scooter, scooter
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gold_fish.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 27], n01631663 eft
+0.0000 - [id = 29], n01632777 axolotl, mud puppy, Ambystoma mexicanum
+0.0000 - [id = 124], n01985128 crayfish, crawfish, crawdad, crawdaddy
+0.0000 - [id = 310], n02219486 ant, emmet, pismire
+
+
+************
+Photo_index:1
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gondola.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 576], n03447447 gondola
+0.0000 - [id = 780], n04147183 schooner
+0.0000 - [id = 724], n03947888 pirate, pirate ship
+0.0000 - [id = 914], n04612504 yawl
+0.0000 - [id = 536], n03216828 dock, dockage, docking facility
+
+
+************
+Photo_index:2
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//school_bus.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 779], n04146614 school bus
+0.0000 - [id = 675], n03796401 moving van
+0.0000 - [id = 654], n03769881 minibus
+0.0000 - [id = 705], n03895866 passenger car, coach, carriage
+0.0000 - [id = 757], n04065272 recreational vehicle, RV, R.V.
+
+
+************
+Photo_index:3
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//go_kart.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.9736 - [id = 573], n03444034 go-kart
+0.0118 - [id = 518], n03127747 crash helmet
+0.0108 - [id = 751], n04037443 racer, race car, racing car
+0.0022 - [id = 817], n04285008 sports car, sport car
+0.0006 - [id = 670], n03791053 motor scooter, scooter
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gold_fish.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 27], n01631663 eft
+0.0000 - [id = 29], n01632777 axolotl, mud puppy, Ambystoma mexicanum
+0.0000 - [id = 124], n01985128 crayfish, crawfish, crawdad, crawdaddy
+0.0000 - [id = 310], n02219486 ant, emmet, pismire
+
+
+************
+Photo_index:1
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gondola.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 576], n03447447 gondola
+0.0000 - [id = 780], n04147183 schooner
+0.0000 - [id = 724], n03947888 pirate, pirate ship
+0.0000 - [id = 914], n04612504 yawl
+0.0000 - [id = 536], n03216828 dock, dockage, docking facility
+
+
+************
+Photo_index:2
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//school_bus.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 779], n04146614 school bus
+0.0000 - [id = 675], n03796401 moving van
+0.0000 - [id = 654], n03769881 minibus
+0.0000 - [id = 705], n03895866 passenger car, coach, carriage
+0.0000 - [id = 757], n04065272 recreational vehicle, RV, R.V.
+0	Layer Name: conv1 	 Layer time: 27.7983 	 number of inputs: 3 	 input shape: 3x227x227 	 output shape: 96x55x55
+1	Layer Name: relu1 	 Layer time: 0.916971 	 number of inputs: 1 	 input shape: 96x55x55 	 output shape: 96x55x55
+2	Layer Name: norm1 	 Layer time: 15.3602 	 number of inputs: 1 	 input shape: 96x55x55 	 output shape: 96x55x55
+3	Layer Name: pool1 	 Layer time: 0.720388 	 number of inputs: 1 	 input shape: 96x55x55 	 output shape: 96x27x27
+Layer Number: 0 	 time: 44.7959
+----------------------------
+4	Layer Name: conv2_g0 	 Layer time: 27.4702 	 number of inputs: 3 	 input shape: 48x27x27 	 output shape: 128x27x27
+5	Layer Name: conv2_g1 	 Layer time: 24.5619 	 number of inputs: 3 	 input shape: 48x27x27 	 output shape: 128x27x27
+6	Layer Name: conv2 	 Layer time: 0.803979 	 number of inputs: 2 	 input shape: 128x27x27 	 output shape: 256x27x27
+7	Layer Name: relu2 	 Layer time: 0.579658 	 number of inputs: 1 	 input shape: 256x27x27 	 output shape: 256x27x27
+8	Layer Name: norm2 	 Layer time: 7.57598 	 number of inputs: 1 	 input shape: 256x27x27 	 output shape: 256x27x27
+9	Layer Name: pool2 	 Layer time: 0.662171 	 number of inputs: 1 	 input shape: 256x27x27 	 output shape: 256x13x13
+Layer Number: 1 	 time: 61.6539
+----------------------------
+10	Layer Name: conv3 	 Layer time: 25.7552 	 number of inputs: 3 	 input shape: 256x13x13 	 output shape: 384x13x13
+11	Layer Name: relu3 	 Layer time: 0.300854 	 number of inputs: 1 	 input shape: 384x13x13 	 output shape: 384x13x13
+Layer Number: 2 	 time: 26.0561
+----------------------------
+12	Layer Name: conv4_g0 	 Layer time: 9.95911 	 number of inputs: 3 	 input shape: 192x13x13 	 output shape: 192x13x13
+13	Layer Name: conv4_g1 	 Layer time: 9.77699 	 number of inputs: 3 	 input shape: 192x13x13 	 output shape: 192x13x13
+14	Layer Name: conv4 	 Layer time: 0.356679 	 number of inputs: 2 	 input shape: 192x13x13 	 output shape: 384x13x13
+15	Layer Name: relu4 	 Layer time: 0.291929 	 number of inputs: 1 	 input shape: 384x13x13 	 output shape: 384x13x13
+Layer Number: 3 	 time: 20.3847
+----------------------------
+16	Layer Name: conv5_g0 	 Layer time: 6.76454 	 number of inputs: 3 	 input shape: 192x13x13 	 output shape: 128x13x13
+17	Layer Name: conv5_g1 	 Layer time: 6.85259 	 number of inputs: 3 	 input shape: 192x13x13 	 output shape: 128x13x13
+18	Layer Name: conv5 	 Layer time: 0.300154 	 number of inputs: 2 	 input shape: 128x13x13 	 output shape: 256x13x13
+19	Layer Name: relu5 	 Layer time: 0.299367 	 number of inputs: 1 	 input shape: 256x13x13 	 output shape: 256x13x13
+20	Layer Name: pool5 	 Layer time: 0.228521 	 number of inputs: 1 	 input shape: 256x13x13 	 output shape: 256x6x6
+Layer Number: 4 	 time: 14.4452
+----------------------------
+21	Layer Name: fc6 	 Layer time: 42.5829 	 number of inputs: 3 	 input shape: 256x6x6 	 output shape: 4096
+22	Layer Name: relu6 	 Layer time: 0.0444209 	 number of inputs: 1 	 input shape: 4096 	 output shape: 4096
+Layer Number: 5 	 time: 42.6273
+----------------------------
+23	Layer Name: fc7 	 Layer time: 18.5905 	 number of inputs: 3 	 input shape: 4096 	 output shape: 4096
+24	Layer Name: relu7 	 Layer time: 0.0443625 	 number of inputs: 1 	 input shape: 4096 	 output shape: 4096
+Layer Number: 6 	 time: 18.6349
+----------------------------
+25	Layer Name: fc8 	 Layer time: 5.17058 	 number of inputs: 3 	 input shape: 4096 	 output shape: 1000
+26	Layer Name: prob 	 Layer time: 0.109025 	 number of inputs: 1 	 input shape: 1000 	 output shape: 1000
+Layer Number: 7 	 time: 5.2796
+----------------------------
+
+ Sum of Layers time: 233.878
+
+
+Graph0   Input: 31.1584   Task: 457.946   send: 0.0017792   Out: 0.444879   Process: 489.551
+
+
+
+********
+
+
+
+AVG Latency: 489.561
+
+Profiling these DVFS settings finised
+Please Enter the desired Frequency setttings: 3 Running Graph with 3-3-3-3-3-3-3-3 LW DVFS
+governor 0 task:pool1 freqs:0,3,0
+governor 1 task:pool2 freqs:0,3,0
+governor 2 task:pool5 freqs:0,3,0
+governor 3 task:prob freqs:0,3,0
+governor 4 task:relu3 freqs:0,3,0
+governor 5 task:relu4 freqs:0,3,0
+governor 6 task:relu6 freqs:0,3,0
+governor 7 task:relu7 freqs:0,3,0
+set_GPIOs with mode: layers
+tass name: conv1	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: relu1	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: norm1	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: pool1	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: conv2_g0	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: conv2_g1	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: conv2	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: relu2	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: norm2	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: pool2	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: conv3	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: relu3	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: conv4_g0	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: conv4_g1	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: conv4	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: relu4	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: conv5_g0	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: conv5_g1	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: conv5	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: relu5	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: pool5	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: fc6	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: fc7	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: relu7	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: fc8	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: prob	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+
+
+
+*********************************************
+start running graphs
+*************************************************
+
+
+
+
+************
+Photo_index:3
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//go_kart.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.9736 - [id = 573], n03444034 go-kart
+0.0118 - [id = 518], n03127747 crash helmet
+0.0108 - [id = 751], n04037443 racer, race car, racing car
+0.0022 - [id = 817], n04285008 sports car, sport car
+0.0006 - [id = 670], n03791053 motor scooter, scooter
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gold_fish.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 27], n01631663 eft
+0.0000 - [id = 29], n01632777 axolotl, mud puppy, Ambystoma mexicanum
+0.0000 - [id = 124], n01985128 crayfish, crawfish, crawdad, crawdaddy
+0.0000 - [id = 310], n02219486 ant, emmet, pismire
+
+
+************
+Photo_index:1
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gondola.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 576], n03447447 gondola
+0.0000 - [id = 780], n04147183 schooner
+0.0000 - [id = 724], n03947888 pirate, pirate ship
+0.0000 - [id = 914], n04612504 yawl
+0.0000 - [id = 536], n03216828 dock, dockage, docking facility
+
+
+************
+Photo_index:2
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//school_bus.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 779], n04146614 school bus
+0.0000 - [id = 675], n03796401 moving van
+0.0000 - [id = 654], n03769881 minibus
+0.0000 - [id = 705], n03895866 passenger car, coach, carriage
+0.0000 - [id = 757], n04065272 recreational vehicle, RV, R.V.
+
+
+************
+Photo_index:3
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//go_kart.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.9736 - [id = 573], n03444034 go-kart
+0.0118 - [id = 518], n03127747 crash helmet
+0.0108 - [id = 751], n04037443 racer, race car, racing car
+0.0022 - [id = 817], n04285008 sports car, sport car
+0.0006 - [id = 670], n03791053 motor scooter, scooter
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gold_fish.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 27], n01631663 eft
+0.0000 - [id = 29], n01632777 axolotl, mud puppy, Ambystoma mexicanum
+0.0000 - [id = 124], n01985128 crayfish, crawfish, crawdad, crawdaddy
+0.0000 - [id = 310], n02219486 ant, emmet, pismire
+
+
+************
+Photo_index:1
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gondola.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 576], n03447447 gondola
+0.0000 - [id = 780], n04147183 schooner
+0.0000 - [id = 724], n03947888 pirate, pirate ship
+0.0000 - [id = 914], n04612504 yawl
+0.0000 - [id = 536], n03216828 dock, dockage, docking facility
+
+
+************
+Photo_index:2
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//school_bus.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 779], n04146614 school bus
+0.0000 - [id = 675], n03796401 moving van
+0.0000 - [id = 654], n03769881 minibus
+0.0000 - [id = 705], n03895866 passenger car, coach, carriage
+0.0000 - [id = 757], n04065272 recreational vehicle, RV, R.V.
+
+
+************
+Photo_index:3
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//go_kart.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.9736 - [id = 573], n03444034 go-kart
+0.0118 - [id = 518], n03127747 crash helmet
+0.0108 - [id = 751], n04037443 racer, race car, racing car
+0.0022 - [id = 817], n04285008 sports car, sport car
+0.0006 - [id = 670], n03791053 motor scooter, scooter
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gold_fish.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 27], n01631663 eft
+0.0000 - [id = 29], n01632777 axolotl, mud puppy, Ambystoma mexicanum
+0.0000 - [id = 124], n01985128 crayfish, crawfish, crawdad, crawdaddy
+0.0000 - [id = 310], n02219486 ant, emmet, pismire
+
+
+************
+Photo_index:1
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gondola.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 576], n03447447 gondola
+0.0000 - [id = 780], n04147183 schooner
+0.0000 - [id = 724], n03947888 pirate, pirate ship
+0.0000 - [id = 914], n04612504 yawl
+0.0000 - [id = 536], n03216828 dock, dockage, docking facility
+
+
+************
+Photo_index:2
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//school_bus.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 779], n04146614 school bus
+0.0000 - [id = 675], n03796401 moving van
+0.0000 - [id = 654], n03769881 minibus
+0.0000 - [id = 705], n03895866 passenger car, coach, carriage
+0.0000 - [id = 757], n04065272 recreational vehicle, RV, R.V.
+
+
+************
+Photo_index:3
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//go_kart.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.9736 - [id = 573], n03444034 go-kart
+0.0118 - [id = 518], n03127747 crash helmet
+0.0108 - [id = 751], n04037443 racer, race car, racing car
+0.0022 - [id = 817], n04285008 sports car, sport car
+0.0006 - [id = 670], n03791053 motor scooter, scooter
+0	Layer Name: conv1 	 Layer time: 20.8313 	 number of inputs: 3 	 input shape: 3x227x227 	 output shape: 96x55x55
+1	Layer Name: relu1 	 Layer time: 0.766442 	 number of inputs: 1 	 input shape: 96x55x55 	 output shape: 96x55x55
+2	Layer Name: norm1 	 Layer time: 10.7562 	 number of inputs: 1 	 input shape: 96x55x55 	 output shape: 96x55x55
+3	Layer Name: pool1 	 Layer time: 0.539904 	 number of inputs: 1 	 input shape: 96x55x55 	 output shape: 96x27x27
+Layer Number: 0 	 time: 32.8938
+----------------------------
+4	Layer Name: conv2_g0 	 Layer time: 22.724 	 number of inputs: 3 	 input shape: 48x27x27 	 output shape: 128x27x27
+5	Layer Name: conv2_g1 	 Layer time: 20.2467 	 number of inputs: 3 	 input shape: 48x27x27 	 output shape: 128x27x27
+6	Layer Name: conv2 	 Layer time: 0.712688 	 number of inputs: 2 	 input shape: 128x27x27 	 output shape: 256x27x27
+7	Layer Name: relu2 	 Layer time: 0.488279 	 number of inputs: 1 	 input shape: 256x27x27 	 output shape: 256x27x27
+8	Layer Name: norm2 	 Layer time: 6.1733 	 number of inputs: 1 	 input shape: 256x27x27 	 output shape: 256x27x27
+9	Layer Name: pool2 	 Layer time: 0.539642 	 number of inputs: 1 	 input shape: 256x27x27 	 output shape: 256x13x13
+Layer Number: 1 	 time: 50.8847
+----------------------------
+10	Layer Name: conv3 	 Layer time: 23.0536 	 number of inputs: 3 	 input shape: 256x13x13 	 output shape: 384x13x13
+11	Layer Name: relu3 	 Layer time: 0.881971 	 number of inputs: 1 	 input shape: 384x13x13 	 output shape: 384x13x13
+Layer Number: 2 	 time: 23.9355
+----------------------------
+12	Layer Name: conv4_g0 	 Layer time: 8.85903 	 number of inputs: 3 	 input shape: 192x13x13 	 output shape: 192x13x13
+13	Layer Name: conv4_g1 	 Layer time: 8.76187 	 number of inputs: 3 	 input shape: 192x13x13 	 output shape: 192x13x13
+14	Layer Name: conv4 	 Layer time: 0.277054 	 number of inputs: 2 	 input shape: 192x13x13 	 output shape: 384x13x13
+15	Layer Name: relu4 	 Layer time: 0.247304 	 number of inputs: 1 	 input shape: 384x13x13 	 output shape: 384x13x13
+Layer Number: 3 	 time: 18.1453
+----------------------------
+16	Layer Name: conv5_g0 	 Layer time: 6.07262 	 number of inputs: 3 	 input shape: 192x13x13 	 output shape: 128x13x13
+17	Layer Name: conv5_g1 	 Layer time: 6.10418 	 number of inputs: 3 	 input shape: 192x13x13 	 output shape: 128x13x13
+18	Layer Name: conv5 	 Layer time: 0.244679 	 number of inputs: 2 	 input shape: 128x13x13 	 output shape: 256x13x13
+19	Layer Name: relu5 	 Layer time: 0.215921 	 number of inputs: 1 	 input shape: 256x13x13 	 output shape: 256x13x13
+20	Layer Name: pool5 	 Layer time: 0.185879 	 number of inputs: 1 	 input shape: 256x13x13 	 output shape: 256x6x6
+Layer Number: 4 	 time: 12.8233
+----------------------------
+21	Layer Name: fc6 	 Layer time: 36.3002 	 number of inputs: 3 	 input shape: 256x6x6 	 output shape: 4096
+22	Layer Name: relu6 	 Layer time: 0.0385876 	 number of inputs: 1 	 input shape: 4096 	 output shape: 4096
+Layer Number: 5 	 time: 36.3388
+----------------------------
+23	Layer Name: fc7 	 Layer time: 15.9798 	 number of inputs: 3 	 input shape: 4096 	 output shape: 4096
+24	Layer Name: relu7 	 Layer time: 0.0398416 	 number of inputs: 1 	 input shape: 4096 	 output shape: 4096
+Layer Number: 6 	 time: 16.0197
+----------------------------
+25	Layer Name: fc8 	 Layer time: 4.26977 	 number of inputs: 3 	 input shape: 4096 	 output shape: 1000
+26	Layer Name: prob 	 Layer time: 0.0949373 	 number of inputs: 1 	 input shape: 1000 	 output shape: 1000
+Layer Number: 7 	 time: 4.3647
+----------------------------
+
+ Sum of Layers time: 195.406
+
+
+Graph0   Input: 25.2411   Task: 418.721   send: 0.0014584   Out: 0.350583   Process: 444.314
+
+
+
+********
+
+
+
+AVG Latency: 444.325
+
+Profiling these DVFS settings finised
+Please Enter the desired Frequency setttings: 4 Running Graph with 4-4-4-4-4-4-4-4 LW DVFS
+governor 0 task:pool1 freqs:0,4,0
+governor 1 task:pool2 freqs:0,4,0
+governor 2 task:pool5 freqs:0,4,0
+governor 3 task:prob freqs:0,4,0
+governor 4 task:relu3 freqs:0,4,0
+governor 5 task:relu4 freqs:0,4,0
+governor 6 task:relu6 freqs:0,4,0
+governor 7 task:relu7 freqs:0,4,0
+set_GPIOs with mode: layers
+tass name: conv1	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: relu1	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: norm1	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: pool1	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: conv2_g0	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: conv2_g1	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: conv2	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: relu2	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: norm2	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: pool2	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: conv3	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: relu3	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: conv4_g0	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: conv4_g1	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: conv4	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: relu4	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: conv5_g0	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: conv5_g1	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: conv5	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: relu5	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: pool5	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: fc6	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: fc7	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: relu7	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: fc8	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: prob	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+
+
+
+*********************************************
+start running graphs
+*************************************************
+
+
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gold_fish.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 27], n01631663 eft
+0.0000 - [id = 29], n01632777 axolotl, mud puppy, Ambystoma mexicanum
+0.0000 - [id = 124], n01985128 crayfish, crawfish, crawdad, crawdaddy
+0.0000 - [id = 310], n02219486 ant, emmet, pismire
+
+
+************
+Photo_index:1
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gondola.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 576], n03447447 gondola
+0.0000 - [id = 780], n04147183 schooner
+0.0000 - [id = 724], n03947888 pirate, pirate ship
+0.0000 - [id = 914], n04612504 yawl
+0.0000 - [id = 536], n03216828 dock, dockage, docking facility
+
+
+************
+Photo_index:2
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//school_bus.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 779], n04146614 school bus
+0.0000 - [id = 675], n03796401 moving van
+0.0000 - [id = 654], n03769881 minibus
+0.0000 - [id = 705], n03895866 passenger car, coach, carriage
+0.0000 - [id = 757], n04065272 recreational vehicle, RV, R.V.
+
+
+************
+Photo_index:3
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//go_kart.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.9736 - [id = 573], n03444034 go-kart
+0.0118 - [id = 518], n03127747 crash helmet
+0.0108 - [id = 751], n04037443 racer, race car, racing car
+0.0022 - [id = 817], n04285008 sports car, sport car
+0.0006 - [id = 670], n03791053 motor scooter, scooter
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gold_fish.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 27], n01631663 eft
+0.0000 - [id = 29], n01632777 axolotl, mud puppy, Ambystoma mexicanum
+0.0000 - [id = 124], n01985128 crayfish, crawfish, crawdad, crawdaddy
+0.0000 - [id = 310], n02219486 ant, emmet, pismire
+
+
+************
+Photo_index:1
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gondola.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 576], n03447447 gondola
+0.0000 - [id = 780], n04147183 schooner
+0.0000 - [id = 724], n03947888 pirate, pirate ship
+0.0000 - [id = 914], n04612504 yawl
+0.0000 - [id = 536], n03216828 dock, dockage, docking facility
+
+
+************
+Photo_index:2
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//school_bus.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 779], n04146614 school bus
+0.0000 - [id = 675], n03796401 moving van
+0.0000 - [id = 654], n03769881 minibus
+0.0000 - [id = 705], n03895866 passenger car, coach, carriage
+0.0000 - [id = 757], n04065272 recreational vehicle, RV, R.V.
+
+
+************
+Photo_index:3
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//go_kart.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.9736 - [id = 573], n03444034 go-kart
+0.0118 - [id = 518], n03127747 crash helmet
+0.0108 - [id = 751], n04037443 racer, race car, racing car
+0.0022 - [id = 817], n04285008 sports car, sport car
+0.0006 - [id = 670], n03791053 motor scooter, scooter
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gold_fish.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 27], n01631663 eft
+0.0000 - [id = 29], n01632777 axolotl, mud puppy, Ambystoma mexicanum
+0.0000 - [id = 124], n01985128 crayfish, crawfish, crawdad, crawdaddy
+0.0000 - [id = 310], n02219486 ant, emmet, pismire
+
+
+************
+Photo_index:1
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gondola.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 576], n03447447 gondola
+0.0000 - [id = 780], n04147183 schooner
+0.0000 - [id = 724], n03947888 pirate, pirate ship
+0.0000 - [id = 914], n04612504 yawl
+0.0000 - [id = 536], n03216828 dock, dockage, docking facility
+
+
+************
+Photo_index:2
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//school_bus.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 779], n04146614 school bus
+0.0000 - [id = 675], n03796401 moving van
+0.0000 - [id = 654], n03769881 minibus
+0.0000 - [id = 705], n03895866 passenger car, coach, carriage
+0.0000 - [id = 757], n04065272 recreational vehicle, RV, R.V.
+
+
+************
+Photo_index:3
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//go_kart.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.9736 - [id = 573], n03444034 go-kart
+0.0118 - [id = 518], n03127747 crash helmet
+0.0108 - [id = 751], n04037443 racer, race car, racing car
+0.0022 - [id = 817], n04285008 sports car, sport car
+0.0006 - [id = 670], n03791053 motor scooter, scooter
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gold_fish.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 27], n01631663 eft
+0.0000 - [id = 29], n01632777 axolotl, mud puppy, Ambystoma mexicanum
+0.0000 - [id = 124], n01985128 crayfish, crawfish, crawdad, crawdaddy
+0.0000 - [id = 310], n02219486 ant, emmet, pismire
+0	Layer Name: conv1 	 Layer time: 17.9414 	 number of inputs: 3 	 input shape: 3x227x227 	 output shape: 96x55x55
+1	Layer Name: relu1 	 Layer time: 0.768629 	 number of inputs: 1 	 input shape: 96x55x55 	 output shape: 96x55x55
+2	Layer Name: norm1 	 Layer time: 9.24834 	 number of inputs: 1 	 input shape: 96x55x55 	 output shape: 96x55x55
+3	Layer Name: pool1 	 Layer time: 0.5537 	 number of inputs: 1 	 input shape: 96x55x55 	 output shape: 96x27x27
+Layer Number: 0 	 time: 28.5121
+----------------------------
+4	Layer Name: conv2_g0 	 Layer time: 18.7234 	 number of inputs: 3 	 input shape: 48x27x27 	 output shape: 128x27x27
+5	Layer Name: conv2_g1 	 Layer time: 17.4173 	 number of inputs: 3 	 input shape: 48x27x27 	 output shape: 128x27x27
+6	Layer Name: conv2 	 Layer time: 0.692592 	 number of inputs: 2 	 input shape: 128x27x27 	 output shape: 256x27x27
+7	Layer Name: relu2 	 Layer time: 0.488571 	 number of inputs: 1 	 input shape: 256x27x27 	 output shape: 256x27x27
+8	Layer Name: norm2 	 Layer time: 5.96403 	 number of inputs: 1 	 input shape: 256x27x27 	 output shape: 256x27x27
+9	Layer Name: pool2 	 Layer time: 0.641054 	 number of inputs: 1 	 input shape: 256x27x27 	 output shape: 256x13x13
+Layer Number: 1 	 time: 43.9269
+----------------------------
+10	Layer Name: conv3 	 Layer time: 22.0356 	 number of inputs: 3 	 input shape: 256x13x13 	 output shape: 384x13x13
+11	Layer Name: relu3 	 Layer time: 0.244096 	 number of inputs: 1 	 input shape: 384x13x13 	 output shape: 384x13x13
+Layer Number: 2 	 time: 22.2797
+----------------------------
+12	Layer Name: conv4_g0 	 Layer time: 8.09801 	 number of inputs: 3 	 input shape: 192x13x13 	 output shape: 192x13x13
+13	Layer Name: conv4_g1 	 Layer time: 8.49199 	 number of inputs: 3 	 input shape: 192x13x13 	 output shape: 192x13x13
+14	Layer Name: conv4 	 Layer time: 0.304529 	 number of inputs: 2 	 input shape: 192x13x13 	 output shape: 384x13x13
+15	Layer Name: relu4 	 Layer time: 0.235754 	 number of inputs: 1 	 input shape: 384x13x13 	 output shape: 384x13x13
+Layer Number: 3 	 time: 17.1303
+----------------------------
+16	Layer Name: conv5_g0 	 Layer time: 5.88715 	 number of inputs: 3 	 input shape: 192x13x13 	 output shape: 128x13x13
+17	Layer Name: conv5_g1 	 Layer time: 5.7267 	 number of inputs: 3 	 input shape: 192x13x13 	 output shape: 128x13x13
+18	Layer Name: conv5 	 Layer time: 0.335096 	 number of inputs: 2 	 input shape: 128x13x13 	 output shape: 256x13x13
+19	Layer Name: relu5 	 Layer time: 0.217379 	 number of inputs: 1 	 input shape: 256x13x13 	 output shape: 256x13x13
+20	Layer Name: pool5 	 Layer time: 0.198975 	 number of inputs: 1 	 input shape: 256x13x13 	 output shape: 256x6x6
+Layer Number: 4 	 time: 12.3653
+----------------------------
+21	Layer Name: fc6 	 Layer time: 34.2816 	 number of inputs: 3 	 input shape: 256x6x6 	 output shape: 4096
+22	Layer Name: relu6 	 Layer time: 0.0364583 	 number of inputs: 1 	 input shape: 4096 	 output shape: 4096
+Layer Number: 5 	 time: 34.3181
+----------------------------
+23	Layer Name: fc7 	 Layer time: 14.9854 	 number of inputs: 3 	 input shape: 4096 	 output shape: 4096
+24	Layer Name: relu7 	 Layer time: 0.0369251 	 number of inputs: 1 	 input shape: 4096 	 output shape: 4096
+Layer Number: 6 	 time: 15.0223
+----------------------------
+25	Layer Name: fc8 	 Layer time: 4.29325 	 number of inputs: 3 	 input shape: 4096 	 output shape: 1000
+26	Layer Name: prob 	 Layer time: 0.0850498 	 number of inputs: 1 	 input shape: 1000 	 output shape: 1000
+Layer Number: 7 	 time: 4.3783
+----------------------------
+
+ Sum of Layers time: 177.933
+
+
+Graph0   Input: 21.1963   Task: 400.988   send: 0.0013999   Out: 0.283034   Process: 422.469
+
+
+
+********
+
+
+
+AVG Latency: 422.476
+
+Profiling these DVFS settings finised
+Please Enter the desired Frequency setttings: 5 Running Graph with 5-5-5-5-5-5-5-5 LW DVFS
+governor 0 task:pool1 freqs:0,5,0
+governor 1 task:pool2 freqs:0,5,0
+governor 2 task:pool5 freqs:0,5,0
+governor 3 task:prob freqs:0,5,0
+governor 4 task:relu3 freqs:0,5,0
+governor 5 task:relu4 freqs:0,5,0
+governor 6 task:relu6 freqs:0,5,0
+governor 7 task:relu7 freqs:0,5,0
+set_GPIOs with mode: layers
+tass name: conv1	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: relu1	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: norm1	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: pool1	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: conv2_g0	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: conv2_g1	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: conv2	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: relu2	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: norm2	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: pool2	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: conv3	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: relu3	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: conv4_g0	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: conv4_g1	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: conv4	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: relu4	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: conv5_g0	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: conv5_g1	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: conv5	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: relu5	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: pool5	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: fc6	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: fc7	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: relu7	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: fc8	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: prob	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+
+
+
+*********************************************
+start running graphs
+*************************************************
+
+
+
+
+************
+Photo_index:1
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gondola.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 576], n03447447 gondola
+0.0000 - [id = 780], n04147183 schooner
+0.0000 - [id = 724], n03947888 pirate, pirate ship
+0.0000 - [id = 914], n04612504 yawl
+0.0000 - [id = 536], n03216828 dock, dockage, docking facility
+
+
+************
+Photo_index:2
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//school_bus.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 779], n04146614 school bus
+0.0000 - [id = 675], n03796401 moving van
+0.0000 - [id = 654], n03769881 minibus
+0.0000 - [id = 705], n03895866 passenger car, coach, carriage
+0.0000 - [id = 757], n04065272 recreational vehicle, RV, R.V.
+
+
+************
+Photo_index:3
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//go_kart.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.9736 - [id = 573], n03444034 go-kart
+0.0118 - [id = 518], n03127747 crash helmet
+0.0108 - [id = 751], n04037443 racer, race car, racing car
+0.0022 - [id = 817], n04285008 sports car, sport car
+0.0006 - [id = 670], n03791053 motor scooter, scooter
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gold_fish.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 27], n01631663 eft
+0.0000 - [id = 29], n01632777 axolotl, mud puppy, Ambystoma mexicanum
+0.0000 - [id = 124], n01985128 crayfish, crawfish, crawdad, crawdaddy
+0.0000 - [id = 310], n02219486 ant, emmet, pismire
+
+
+************
+Photo_index:1
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gondola.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 576], n03447447 gondola
+0.0000 - [id = 780], n04147183 schooner
+0.0000 - [id = 724], n03947888 pirate, pirate ship
+0.0000 - [id = 914], n04612504 yawl
+0.0000 - [id = 536], n03216828 dock, dockage, docking facility
+
+
+************
+Photo_index:2
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//school_bus.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 779], n04146614 school bus
+0.0000 - [id = 675], n03796401 moving van
+0.0000 - [id = 654], n03769881 minibus
+0.0000 - [id = 705], n03895866 passenger car, coach, carriage
+0.0000 - [id = 757], n04065272 recreational vehicle, RV, R.V.
+
+
+************
+Photo_index:3
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//go_kart.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.9736 - [id = 573], n03444034 go-kart
+0.0118 - [id = 518], n03127747 crash helmet
+0.0108 - [id = 751], n04037443 racer, race car, racing car
+0.0022 - [id = 817], n04285008 sports car, sport car
+0.0006 - [id = 670], n03791053 motor scooter, scooter
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gold_fish.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 27], n01631663 eft
+0.0000 - [id = 29], n01632777 axolotl, mud puppy, Ambystoma mexicanum
+0.0000 - [id = 124], n01985128 crayfish, crawfish, crawdad, crawdaddy
+0.0000 - [id = 310], n02219486 ant, emmet, pismire
+
+
+************
+Photo_index:1
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gondola.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 576], n03447447 gondola
+0.0000 - [id = 780], n04147183 schooner
+0.0000 - [id = 724], n03947888 pirate, pirate ship
+0.0000 - [id = 914], n04612504 yawl
+0.0000 - [id = 536], n03216828 dock, dockage, docking facility
+
+
+************
+Photo_index:2
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//school_bus.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 779], n04146614 school bus
+0.0000 - [id = 675], n03796401 moving van
+0.0000 - [id = 654], n03769881 minibus
+0.0000 - [id = 705], n03895866 passenger car, coach, carriage
+0.0000 - [id = 757], n04065272 recreational vehicle, RV, R.V.
+
+
+************
+Photo_index:3
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//go_kart.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.9736 - [id = 573], n03444034 go-kart
+0.0118 - [id = 518], n03127747 crash helmet
+0.0108 - [id = 751], n04037443 racer, race car, racing car
+0.0022 - [id = 817], n04285008 sports car, sport car
+0.0006 - [id = 670], n03791053 motor scooter, scooter
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gold_fish.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 27], n01631663 eft
+0.0000 - [id = 29], n01632777 axolotl, mud puppy, Ambystoma mexicanum
+0.0000 - [id = 124], n01985128 crayfish, crawfish, crawdad, crawdaddy
+0.0000 - [id = 310], n02219486 ant, emmet, pismire
+
+
+************
+Photo_index:1
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gondola.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 576], n03447447 gondola
+0.0000 - [id = 780], n04147183 schooner
+0.0000 - [id = 724], n03947888 pirate, pirate ship
+0.0000 - [id = 914], n04612504 yawl
+0.0000 - [id = 536], n03216828 dock, dockage, docking facility
+0	Layer Name: conv1 	 Layer time: 15.7744 	 number of inputs: 3 	 input shape: 3x227x227 	 output shape: 96x55x55
+1	Layer Name: relu1 	 Layer time: 0.773034 	 number of inputs: 1 	 input shape: 96x55x55 	 output shape: 96x55x55
+2	Layer Name: norm1 	 Layer time: 9.22241 	 number of inputs: 1 	 input shape: 96x55x55 	 output shape: 96x55x55
+3	Layer Name: pool1 	 Layer time: 0.456371 	 number of inputs: 1 	 input shape: 96x55x55 	 output shape: 96x27x27
+Layer Number: 0 	 time: 26.2262
+----------------------------
+4	Layer Name: conv2_g0 	 Layer time: 16.1775 	 number of inputs: 3 	 input shape: 48x27x27 	 output shape: 128x27x27
+5	Layer Name: conv2_g1 	 Layer time: 15.0645 	 number of inputs: 3 	 input shape: 48x27x27 	 output shape: 128x27x27
+6	Layer Name: conv2 	 Layer time: 0.610867 	 number of inputs: 2 	 input shape: 128x27x27 	 output shape: 256x27x27
+7	Layer Name: relu2 	 Layer time: 0.43645 	 number of inputs: 1 	 input shape: 256x27x27 	 output shape: 256x27x27
+8	Layer Name: norm2 	 Layer time: 4.54382 	 number of inputs: 1 	 input shape: 256x27x27 	 output shape: 256x27x27
+9	Layer Name: pool2 	 Layer time: 0.478654 	 number of inputs: 1 	 input shape: 256x27x27 	 output shape: 256x13x13
+Layer Number: 1 	 time: 37.3118
+----------------------------
+10	Layer Name: conv3 	 Layer time: 20.4303 	 number of inputs: 3 	 input shape: 256x13x13 	 output shape: 384x13x13
+11	Layer Name: relu3 	 Layer time: 0.240275 	 number of inputs: 1 	 input shape: 384x13x13 	 output shape: 384x13x13
+Layer Number: 2 	 time: 20.6706
+----------------------------
+12	Layer Name: conv4_g0 	 Layer time: 7.4587 	 number of inputs: 3 	 input shape: 192x13x13 	 output shape: 192x13x13
+13	Layer Name: conv4_g1 	 Layer time: 7.33075 	 number of inputs: 3 	 input shape: 192x13x13 	 output shape: 192x13x13
+14	Layer Name: conv4 	 Layer time: 0.296129 	 number of inputs: 2 	 input shape: 192x13x13 	 output shape: 384x13x13
+15	Layer Name: relu4 	 Layer time: 0.247625 	 number of inputs: 1 	 input shape: 384x13x13 	 output shape: 384x13x13
+Layer Number: 3 	 time: 15.3332
+----------------------------
+16	Layer Name: conv5_g0 	 Layer time: 5.74968 	 number of inputs: 3 	 input shape: 192x13x13 	 output shape: 128x13x13
+17	Layer Name: conv5_g1 	 Layer time: 5.60916 	 number of inputs: 3 	 input shape: 192x13x13 	 output shape: 128x13x13
+18	Layer Name: conv5 	 Layer time: 0.23975 	 number of inputs: 2 	 input shape: 128x13x13 	 output shape: 256x13x13
+19	Layer Name: relu5 	 Layer time: 0.171413 	 number of inputs: 1 	 input shape: 256x13x13 	 output shape: 256x13x13
+20	Layer Name: pool5 	 Layer time: 0.168729 	 number of inputs: 1 	 input shape: 256x13x13 	 output shape: 256x6x6
+Layer Number: 4 	 time: 11.9387
+----------------------------
+21	Layer Name: fc6 	 Layer time: 34.4295 	 number of inputs: 3 	 input shape: 256x6x6 	 output shape: 4096
+22	Layer Name: relu6 	 Layer time: 0.0350874 	 number of inputs: 1 	 input shape: 4096 	 output shape: 4096
+Layer Number: 5 	 time: 34.4646
+----------------------------
+23	Layer Name: fc7 	 Layer time: 14.9706 	 number of inputs: 3 	 input shape: 4096 	 output shape: 4096
+24	Layer Name: relu7 	 Layer time: 0.034183 	 number of inputs: 1 	 input shape: 4096 	 output shape: 4096
+Layer Number: 6 	 time: 15.0047
+----------------------------
+25	Layer Name: fc8 	 Layer time: 3.90031 	 number of inputs: 3 	 input shape: 4096 	 output shape: 1000
+26	Layer Name: prob 	 Layer time: 0.0771459 	 number of inputs: 1 	 input shape: 1000 	 output shape: 1000
+Layer Number: 7 	 time: 3.97746
+----------------------------
+
+ Sum of Layers time: 164.927
+
+
+Graph0   Input: 17.9643   Task: 387.611   send: 0.0012542   Out: 0.25235   Process: 405.829
+
+
+
+********
+
+
+
+AVG Latency: 405.836
+
+Profiling these DVFS settings finised
+Please Enter the desired Frequency setttings: 6 Running Graph with 6-6-6-6-6-6-6-6 LW DVFS
+governor 0 task:pool1 freqs:0,6,0
+governor 1 task:pool2 freqs:0,6,0
+governor 2 task:pool5 freqs:0,6,0
+governor 3 task:prob freqs:0,6,0
+governor 4 task:relu3 freqs:0,6,0
+governor 5 task:relu4 freqs:0,6,0
+governor 6 task:relu6 freqs:0,6,0
+governor 7 task:relu7 freqs:0,6,0
+set_GPIOs with mode: layers
+tass name: conv1	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: relu1	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: norm1	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: pool1	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: conv2_g0	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: conv2_g1	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: conv2	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: relu2	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: norm2	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: pool2	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: conv3	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: relu3	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: conv4_g0	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: conv4_g1	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: conv4	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: relu4	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: conv5_g0	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: conv5_g1	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: conv5	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: relu5	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: pool5	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: fc6	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: fc7	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: relu7	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: fc8	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: prob	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+
+
+
+*********************************************
+start running graphs
+*************************************************
+
+
+
+
+************
+Photo_index:2
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//school_bus.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 779], n04146614 school bus
+0.0000 - [id = 675], n03796401 moving van
+0.0000 - [id = 654], n03769881 minibus
+0.0000 - [id = 705], n03895866 passenger car, coach, carriage
+0.0000 - [id = 757], n04065272 recreational vehicle, RV, R.V.
+
+
+************
+Photo_index:3
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//go_kart.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.9736 - [id = 573], n03444034 go-kart
+0.0118 - [id = 518], n03127747 crash helmet
+0.0108 - [id = 751], n04037443 racer, race car, racing car
+0.0022 - [id = 817], n04285008 sports car, sport car
+0.0006 - [id = 670], n03791053 motor scooter, scooter
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gold_fish.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 27], n01631663 eft
+0.0000 - [id = 29], n01632777 axolotl, mud puppy, Ambystoma mexicanum
+0.0000 - [id = 124], n01985128 crayfish, crawfish, crawdad, crawdaddy
+0.0000 - [id = 310], n02219486 ant, emmet, pismire
+
+
+************
+Photo_index:1
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gondola.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 576], n03447447 gondola
+0.0000 - [id = 780], n04147183 schooner
+0.0000 - [id = 724], n03947888 pirate, pirate ship
+0.0000 - [id = 914], n04612504 yawl
+0.0000 - [id = 536], n03216828 dock, dockage, docking facility
+
+
+************
+Photo_index:2
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//school_bus.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 779], n04146614 school bus
+0.0000 - [id = 675], n03796401 moving van
+0.0000 - [id = 654], n03769881 minibus
+0.0000 - [id = 705], n03895866 passenger car, coach, carriage
+0.0000 - [id = 757], n04065272 recreational vehicle, RV, R.V.
+
+
+************
+Photo_index:3
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//go_kart.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.9736 - [id = 573], n03444034 go-kart
+0.0118 - [id = 518], n03127747 crash helmet
+0.0108 - [id = 751], n04037443 racer, race car, racing car
+0.0022 - [id = 817], n04285008 sports car, sport car
+0.0006 - [id = 670], n03791053 motor scooter, scooter
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gold_fish.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 27], n01631663 eft
+0.0000 - [id = 29], n01632777 axolotl, mud puppy, Ambystoma mexicanum
+0.0000 - [id = 124], n01985128 crayfish, crawfish, crawdad, crawdaddy
+0.0000 - [id = 310], n02219486 ant, emmet, pismire
+
+
+************
+Photo_index:1
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gondola.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 576], n03447447 gondola
+0.0000 - [id = 780], n04147183 schooner
+0.0000 - [id = 724], n03947888 pirate, pirate ship
+0.0000 - [id = 914], n04612504 yawl
+0.0000 - [id = 536], n03216828 dock, dockage, docking facility
+
+
+************
+Photo_index:2
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//school_bus.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 779], n04146614 school bus
+0.0000 - [id = 675], n03796401 moving van
+0.0000 - [id = 654], n03769881 minibus
+0.0000 - [id = 705], n03895866 passenger car, coach, carriage
+0.0000 - [id = 757], n04065272 recreational vehicle, RV, R.V.
+
+
+************
+Photo_index:3
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//go_kart.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.9736 - [id = 573], n03444034 go-kart
+0.0118 - [id = 518], n03127747 crash helmet
+0.0108 - [id = 751], n04037443 racer, race car, racing car
+0.0022 - [id = 817], n04285008 sports car, sport car
+0.0006 - [id = 670], n03791053 motor scooter, scooter
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gold_fish.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 27], n01631663 eft
+0.0000 - [id = 29], n01632777 axolotl, mud puppy, Ambystoma mexicanum
+0.0000 - [id = 124], n01985128 crayfish, crawfish, crawdad, crawdaddy
+0.0000 - [id = 310], n02219486 ant, emmet, pismire
+
+
+************
+Photo_index:1
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gondola.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 576], n03447447 gondola
+0.0000 - [id = 780], n04147183 schooner
+0.0000 - [id = 724], n03947888 pirate, pirate ship
+0.0000 - [id = 914], n04612504 yawl
+0.0000 - [id = 536], n03216828 dock, dockage, docking facility
+
+
+************
+Photo_index:2
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//school_bus.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 779], n04146614 school bus
+0.0000 - [id = 675], n03796401 moving van
+0.0000 - [id = 654], n03769881 minibus
+0.0000 - [id = 705], n03895866 passenger car, coach, carriage
+0.0000 - [id = 757], n04065272 recreational vehicle, RV, R.V.
+0	Layer Name: conv1 	 Layer time: 14.2466 	 number of inputs: 3 	 input shape: 3x227x227 	 output shape: 96x55x55
+1	Layer Name: relu1 	 Layer time: 0.715283 	 number of inputs: 1 	 input shape: 96x55x55 	 output shape: 96x55x55
+2	Layer Name: norm1 	 Layer time: 7.07417 	 number of inputs: 1 	 input shape: 96x55x55 	 output shape: 96x55x55
+3	Layer Name: pool1 	 Layer time: 0.526663 	 number of inputs: 1 	 input shape: 96x55x55 	 output shape: 96x27x27
+Layer Number: 0 	 time: 22.5628
+----------------------------
+4	Layer Name: conv2_g0 	 Layer time: 14.8142 	 number of inputs: 3 	 input shape: 48x27x27 	 output shape: 128x27x27
+5	Layer Name: conv2_g1 	 Layer time: 13.5732 	 number of inputs: 3 	 input shape: 48x27x27 	 output shape: 128x27x27
+6	Layer Name: conv2 	 Layer time: 0.614309 	 number of inputs: 2 	 input shape: 128x27x27 	 output shape: 256x27x27
+7	Layer Name: relu2 	 Layer time: 0.445113 	 number of inputs: 1 	 input shape: 256x27x27 	 output shape: 256x27x27
+8	Layer Name: norm2 	 Layer time: 4.0864 	 number of inputs: 1 	 input shape: 256x27x27 	 output shape: 256x27x27
+9	Layer Name: pool2 	 Layer time: 0.489475 	 number of inputs: 1 	 input shape: 256x27x27 	 output shape: 256x13x13
+Layer Number: 1 	 time: 34.0227
+----------------------------
+10	Layer Name: conv3 	 Layer time: 19.7163 	 number of inputs: 3 	 input shape: 256x13x13 	 output shape: 384x13x13
+11	Layer Name: relu3 	 Layer time: 0.229484 	 number of inputs: 1 	 input shape: 384x13x13 	 output shape: 384x13x13
+Layer Number: 2 	 time: 19.9458
+----------------------------
+12	Layer Name: conv4_g0 	 Layer time: 7.18996 	 number of inputs: 3 	 input shape: 192x13x13 	 output shape: 192x13x13
+13	Layer Name: conv4_g1 	 Layer time: 7.07796 	 number of inputs: 3 	 input shape: 192x13x13 	 output shape: 192x13x13
+14	Layer Name: conv4 	 Layer time: 0.266817 	 number of inputs: 2 	 input shape: 192x13x13 	 output shape: 384x13x13
+15	Layer Name: relu4 	 Layer time: 0.22995 	 number of inputs: 1 	 input shape: 384x13x13 	 output shape: 384x13x13
+Layer Number: 3 	 time: 14.7647
+----------------------------
+16	Layer Name: conv5_g0 	 Layer time: 5.36533 	 number of inputs: 3 	 input shape: 192x13x13 	 output shape: 128x13x13
+17	Layer Name: conv5_g1 	 Layer time: 4.8911 	 number of inputs: 3 	 input shape: 192x13x13 	 output shape: 128x13x13
+18	Layer Name: conv5 	 Layer time: 0.240771 	 number of inputs: 2 	 input shape: 128x13x13 	 output shape: 256x13x13
+19	Layer Name: relu5 	 Layer time: 0.182438 	 number of inputs: 1 	 input shape: 256x13x13 	 output shape: 256x13x13
+20	Layer Name: pool5 	 Layer time: 0.166921 	 number of inputs: 1 	 input shape: 256x13x13 	 output shape: 256x6x6
+Layer Number: 4 	 time: 10.8466
+----------------------------
+21	Layer Name: fc6 	 Layer time: 34.1753 	 number of inputs: 3 	 input shape: 256x6x6 	 output shape: 4096
+22	Layer Name: relu6 	 Layer time: 0.0343291 	 number of inputs: 1 	 input shape: 4096 	 output shape: 4096
+Layer Number: 5 	 time: 34.2096
+----------------------------
+23	Layer Name: fc7 	 Layer time: 14.8386 	 number of inputs: 3 	 input shape: 4096 	 output shape: 4096
+24	Layer Name: relu7 	 Layer time: 0.0356127 	 number of inputs: 1 	 input shape: 4096 	 output shape: 4096
+Layer Number: 6 	 time: 14.8742
+----------------------------
+25	Layer Name: fc8 	 Layer time: 3.85149 	 number of inputs: 3 	 input shape: 4096 	 output shape: 1000
+26	Layer Name: prob 	 Layer time: 0.0726248 	 number of inputs: 1 	 input shape: 1000 	 output shape: 1000
+Layer Number: 7 	 time: 3.92411
+----------------------------
+
+ Sum of Layers time: 155.15
+
+
+Graph0   Input: 15.8814   Task: 377.702   send: 0.0011961   Out: 0.236571   Process: 393.821
+
+
+
+********
+
+
+
+AVG Latency: 393.827
+
+Profiling these DVFS settings finised
+Please Enter the desired Frequency setttings: 7 Running Graph with 7-7-7-7-7-7-7-7 LW DVFS
+governor 0 task:pool1 freqs:0,7,0
+governor 1 task:pool2 freqs:0,7,0
+governor 2 task:pool5 freqs:0,7,0
+governor 3 task:prob freqs:0,7,0
+governor 4 task:relu3 freqs:0,7,0
+governor 5 task:relu4 freqs:0,7,0
+governor 6 task:relu6 freqs:0,7,0
+governor 7 task:relu7 freqs:0,7,0
+set_GPIOs with mode: layers
+tass name: conv1	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: relu1	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: norm1	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: pool1	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: conv2_g0	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: conv2_g1	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: conv2	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: relu2	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: norm2	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: pool2	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: conv3	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: relu3	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: conv4_g0	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: conv4_g1	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: conv4	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: relu4	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: conv5_g0	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: conv5_g1	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: conv5	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: relu5	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: pool5	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: fc6	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: fc7	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: relu7	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: fc8	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: prob	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+
+
+
+*********************************************
+start running graphs
+*************************************************
+
+
+
+
+************
+Photo_index:3
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//go_kart.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.9736 - [id = 573], n03444034 go-kart
+0.0118 - [id = 518], n03127747 crash helmet
+0.0108 - [id = 751], n04037443 racer, race car, racing car
+0.0022 - [id = 817], n04285008 sports car, sport car
+0.0006 - [id = 670], n03791053 motor scooter, scooter
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gold_fish.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 27], n01631663 eft
+0.0000 - [id = 29], n01632777 axolotl, mud puppy, Ambystoma mexicanum
+0.0000 - [id = 124], n01985128 crayfish, crawfish, crawdad, crawdaddy
+0.0000 - [id = 310], n02219486 ant, emmet, pismire
+
+
+************
+Photo_index:1
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gondola.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 576], n03447447 gondola
+0.0000 - [id = 780], n04147183 schooner
+0.0000 - [id = 724], n03947888 pirate, pirate ship
+0.0000 - [id = 914], n04612504 yawl
+0.0000 - [id = 536], n03216828 dock, dockage, docking facility
+
+
+************
+Photo_index:2
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//school_bus.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 779], n04146614 school bus
+0.0000 - [id = 675], n03796401 moving van
+0.0000 - [id = 654], n03769881 minibus
+0.0000 - [id = 705], n03895866 passenger car, coach, carriage
+0.0000 - [id = 757], n04065272 recreational vehicle, RV, R.V.
+
+
+************
+Photo_index:3
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//go_kart.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.9736 - [id = 573], n03444034 go-kart
+0.0118 - [id = 518], n03127747 crash helmet
+0.0108 - [id = 751], n04037443 racer, race car, racing car
+0.0022 - [id = 817], n04285008 sports car, sport car
+0.0006 - [id = 670], n03791053 motor scooter, scooter
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gold_fish.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 27], n01631663 eft
+0.0000 - [id = 29], n01632777 axolotl, mud puppy, Ambystoma mexicanum
+0.0000 - [id = 124], n01985128 crayfish, crawfish, crawdad, crawdaddy
+0.0000 - [id = 310], n02219486 ant, emmet, pismire
+
+
+************
+Photo_index:1
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gondola.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 576], n03447447 gondola
+0.0000 - [id = 780], n04147183 schooner
+0.0000 - [id = 724], n03947888 pirate, pirate ship
+0.0000 - [id = 914], n04612504 yawl
+0.0000 - [id = 536], n03216828 dock, dockage, docking facility
+
+
+************
+Photo_index:2
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//school_bus.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 779], n04146614 school bus
+0.0000 - [id = 675], n03796401 moving van
+0.0000 - [id = 654], n03769881 minibus
+0.0000 - [id = 705], n03895866 passenger car, coach, carriage
+0.0000 - [id = 757], n04065272 recreational vehicle, RV, R.V.
+
+
+************
+Photo_index:3
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//go_kart.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.9736 - [id = 573], n03444034 go-kart
+0.0118 - [id = 518], n03127747 crash helmet
+0.0108 - [id = 751], n04037443 racer, race car, racing car
+0.0022 - [id = 817], n04285008 sports car, sport car
+0.0006 - [id = 670], n03791053 motor scooter, scooter
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gold_fish.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 27], n01631663 eft
+0.0000 - [id = 29], n01632777 axolotl, mud puppy, Ambystoma mexicanum
+0.0000 - [id = 124], n01985128 crayfish, crawfish, crawdad, crawdaddy
+0.0000 - [id = 310], n02219486 ant, emmet, pismire
+
+
+************
+Photo_index:1
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gondola.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 576], n03447447 gondola
+0.0000 - [id = 780], n04147183 schooner
+0.0000 - [id = 724], n03947888 pirate, pirate ship
+0.0000 - [id = 914], n04612504 yawl
+0.0000 - [id = 536], n03216828 dock, dockage, docking facility
+
+
+************
+Photo_index:2
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//school_bus.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+1.0000 - [id = 779], n04146614 school bus
+0.0000 - [id = 675], n03796401 moving van
+0.0000 - [id = 654], n03769881 minibus
+0.0000 - [id = 705], n03895866 passenger car, coach, carriage
+0.0000 - [id = 757], n04065272 recreational vehicle, RV, R.V.
+
+
+************
+Photo_index:3
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//go_kart.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.9736 - [id = 573], n03444034 go-kart
+0.0118 - [id = 518], n03127747 crash helmet
+0.0108 - [id = 751], n04037443 racer, race car, racing car
+0.0022 - [id = 817], n04285008 sports car, sport car
+0.0006 - [id = 670], n03791053 motor scooter, scooter
+0	Layer Name: conv1 	 Layer time: 13.2104 	 number of inputs: 3 	 input shape: 3x227x227 	 output shape: 96x55x55
+1	Layer Name: relu1 	 Layer time: 0.715312 	 number of inputs: 1 	 input shape: 96x55x55 	 output shape: 96x55x55
+2	Layer Name: norm1 	 Layer time: 7.05758 	 number of inputs: 1 	 input shape: 96x55x55 	 output shape: 96x55x55
+3	Layer Name: pool1 	 Layer time: 0.435283 	 number of inputs: 1 	 input shape: 96x55x55 	 output shape: 96x27x27
+Layer Number: 0 	 time: 21.4186
+----------------------------
+4	Layer Name: conv2_g0 	 Layer time: 13.1842 	 number of inputs: 3 	 input shape: 48x27x27 	 output shape: 128x27x27
+5	Layer Name: conv2_g1 	 Layer time: 12.3578 	 number of inputs: 3 	 input shape: 48x27x27 	 output shape: 128x27x27
+6	Layer Name: conv2 	 Layer time: 0.620638 	 number of inputs: 2 	 input shape: 128x27x27 	 output shape: 256x27x27
+7	Layer Name: relu2 	 Layer time: 0.443042 	 number of inputs: 1 	 input shape: 256x27x27 	 output shape: 256x27x27
+8	Layer Name: norm2 	 Layer time: 3.72928 	 number of inputs: 1 	 input shape: 256x27x27 	 output shape: 256x27x27
+9	Layer Name: pool2 	 Layer time: 0.500383 	 number of inputs: 1 	 input shape: 256x27x27 	 output shape: 256x13x13
+Layer Number: 1 	 time: 30.8353
+----------------------------
+10	Layer Name: conv3 	 Layer time: 18.4386 	 number of inputs: 3 	 input shape: 256x13x13 	 output shape: 384x13x13
+11	Layer Name: relu3 	 Layer time: 0.269092 	 number of inputs: 1 	 input shape: 384x13x13 	 output shape: 384x13x13
+Layer Number: 2 	 time: 18.7076
+----------------------------
+12	Layer Name: conv4_g0 	 Layer time: 6.98338 	 number of inputs: 3 	 input shape: 192x13x13 	 output shape: 192x13x13
+13	Layer Name: conv4_g1 	 Layer time: 6.84845 	 number of inputs: 3 	 input shape: 192x13x13 	 output shape: 192x13x13
+14	Layer Name: conv4 	 Layer time: 0.368667 	 number of inputs: 2 	 input shape: 192x13x13 	 output shape: 384x13x13
+15	Layer Name: relu4 	 Layer time: 0.262238 	 number of inputs: 1 	 input shape: 384x13x13 	 output shape: 384x13x13
+Layer Number: 3 	 time: 14.4627
+----------------------------
+16	Layer Name: conv5_g0 	 Layer time: 4.59194 	 number of inputs: 3 	 input shape: 192x13x13 	 output shape: 128x13x13
+17	Layer Name: conv5_g1 	 Layer time: 4.781 	 number of inputs: 3 	 input shape: 192x13x13 	 output shape: 128x13x13
+18	Layer Name: conv5 	 Layer time: 0.388529 	 number of inputs: 2 	 input shape: 128x13x13 	 output shape: 256x13x13
+19	Layer Name: relu5 	 Layer time: 0.212567 	 number of inputs: 1 	 input shape: 256x13x13 	 output shape: 256x13x13
+20	Layer Name: pool5 	 Layer time: 0.205509 	 number of inputs: 1 	 input shape: 256x13x13 	 output shape: 256x6x6
+Layer Number: 4 	 time: 10.1795
+----------------------------
+21	Layer Name: fc6 	 Layer time: 34.3517 	 number of inputs: 3 	 input shape: 256x6x6 	 output shape: 4096
+22	Layer Name: relu6 	 Layer time: 0.0329291 	 number of inputs: 1 	 input shape: 4096 	 output shape: 4096
+Layer Number: 5 	 time: 34.3846
+----------------------------
+23	Layer Name: fc7 	 Layer time: 14.8895 	 number of inputs: 3 	 input shape: 4096 	 output shape: 4096
+24	Layer Name: relu7 	 Layer time: 0.0321416 	 number of inputs: 1 	 input shape: 4096 	 output shape: 4096
+Layer Number: 6 	 time: 14.9216
+----------------------------
+25	Layer Name: fc8 	 Layer time: 3.86458 	 number of inputs: 3 	 input shape: 4096 	 output shape: 1000
+26	Layer Name: prob 	 Layer time: 0.0695042 	 number of inputs: 1 	 input shape: 1000 	 output shape: 1000
+Layer Number: 7 	 time: 3.93409
+----------------------------
+
+ Sum of Layers time: 148.844
+
+
+Graph0   Input: 14.165   Task: 371.225   send: 0.00105   Out: 0.215658   Process: 385.607
+
+
+
+********
+
+
+
+AVG Latency: 385.612
+
+Profiling these DVFS settings finised
+Please Enter the desired Frequency setttings: 
+Test passed

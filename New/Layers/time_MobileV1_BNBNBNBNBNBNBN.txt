@@ -1,0 +1,4554 @@
+WARNING: linker: Warning: unable to normalize "build/"
+4 Input images are read from /data/local/ARM-CO-UP/assets//ppm_images_224/
+[UtilsPipeline.h] image directory is: /data/local/ARM-CO-UP/assets//ppm_images_224//
+Threads : 1
+Small Cores Threads : 1
+Target : Neon
+Data type : F32
+Data layout : NHWC
+Tuner enabled? : false
+Cache enabled? : false
+Tuner mode : Normal
+Tuner file : 
+MLGO file : 
+Fast math enabled? : false
+Data path : /data/local/ARM-CO-UP/assets//mobilenet/
+Image file : /data/local/ARM-CO-UP/assets//ppm_images_224//
+Labels file : /data/local/ARM-CO-UP/assets//labels.txt
+Partition point is : 0
+Second partition point is : 0
+Order is : BNBNBNBNBNBNBN
+freqs of layers : 
+power_profile_mode : layers
+GPU host is: B
+NPU host is: B
+Number of totla cores is : 6
+Number of little cores is : 4
+Print task names : 0
+Run network for 10 times.
+Layer timing: 0
+
+Adding Graph0 target 1 PE: B Host PE: B Layers: 0-0
+Adding Graph1 target 4 PE: N Host PE: B Layers: 1-1
+Adding Graph2 target 1 PE: B Host PE: B Layers: 2-2
+Adding Graph3 target 4 PE: N Host PE: B Layers: 3-3
+Adding Graph4 target 1 PE: B Host PE: B Layers: 4-4
+Adding Graph5 target 4 PE: N Host PE: B Layers: 5-5
+Adding Graph6 target 1 PE: B Host PE: B Layers: 6-6
+Adding Graph7 target 4 PE: N Host PE: B Layers: 7-7
+Adding Graph8 target 1 PE: B Host PE: B Layers: 8-8
+Adding Graph9 target 4 PE: N Host PE: B Layers: 9-9
+Adding Graph10 target 1 PE: B Host PE: B Layers: 10-10
+Adding Graph11 target 4 PE: N Host PE: B Layers: 11-11
+Adding Graph12 target 1 PE: B Host PE: B Layers: 12-12
+Adding Graph13 target 4 PE: N Host PE: B Layers: 13-13
+pandoon
+pandoon
+pandoon
+Pandoon opened at 3
+Threads : 1
+Small Cores Threads : 1
+Target : Neon
+Data type : F32
+Data layout : NHWC
+Tuner enabled? : false
+Cache enabled? : false
+Tuner mode : Normal
+Tuner file : 
+MLGO file : 
+Fast math enabled? : false
+Data path : /data/local/ARM-CO-UP/assets//mobilenet/
+Image file : /data/local/ARM-CO-UP/assets//ppm_images_224//
+Labels file : /data/local/ARM-CO-UP/assets//labels.txt
+Partition point is : 0
+Second partition point is : 0
+Order is : BNBNBNBNBNBNBN
+freqs of layers : 
+power_profile_mode : layers
+GPU host is: B
+NPU host is: B
+Number of totla cores is : 6
+Number of little cores is : 4
+Print task names : 0
+Run network for 10 times.
+Layer timing: 0
+
+****************************
+GraphUtils.cpp- reading images: /data/local/ARM-CO-UP/assets//ppm_images_224//
+/data/local/ARM-CO-UP/assets//ppm_images_224//gold_fish.ppm
+/data/local/ARM-CO-UP/assets//ppm_images_224//gondola.ppm
+/data/local/ARM-CO-UP/assets//ppm_images_224//school_bus.ppm
+/data/local/ARM-CO-UP/assets//ppm_images_224//go_kart.ppm
+*****************************
+
+
+
+-1 skipping layer: 
+			0 layer: Conv2d_0
+			0 skipping layer: Conv2d_0/BatchNorm
+			0 skipping layer: Conv2d_0/Relu6
+1 layer: Conv2d_1_depthwise/depthwise
+Input node for the layer 1 is in graph: 0 Adding Transmitter to that graph
+Adding Sender_Conv2d_0/Relu6 to graph 0 with target 1
+Adding Receiver_Conv2d_0/Relu6 to graph 1 with target 4
+1 skipping layer: Conv2d_1_depthwise/BatchNorm
+1 skipping layer: Conv2d_1_depthwise/Relu6
+1 skipping layer: Conv2d_1_pointwise/Conv2D
+1 skipping layer: Conv2d_1_pointwise/BatchNorm
+1 skipping layer: Conv2d_1_pointwise/Relu6
+1 skipping layer: concat
+			2 layer: Conv2d_2_depthwise/depthwise
+Input node for the layer 2 is in graph: 1 Adding Transmitter to that graph
+Adding Sender_Conv2d_1_pointwise/Relu6 to graph 1 with target 4
+Adding Receiver_Conv2d_1_pointwise/Relu6 to graph 2 with target 1
+			2 skipping layer: Conv2d_2_depthwise/BatchNorm
+			2 skipping layer: Conv2d_2_depthwise/Relu6
+			2 skipping layer: Conv2d_2_pointwise/Conv2D
+			2 skipping layer: Conv2d_2_pointwise/BatchNorm
+			2 skipping layer: Conv2d_2_pointwise/Relu6
+			2 skipping layer: concat
+3 layer: Conv2d_3_depthwise/depthwise
+Input node for the layer 3 is in graph: 2 Adding Transmitter to that graph
+Adding Sender_Conv2d_2_pointwise/Relu6 to graph 2 with target 1
+Adding Receiver_Conv2d_2_pointwise/Relu6 to graph 3 with target 4
+3 skipping layer: Conv2d_3_depthwise/BatchNorm
+3 skipping layer: Conv2d_3_depthwise/Relu6
+3 skipping layer: Conv2d_3_pointwise/Conv2D
+3 skipping layer: Conv2d_3_pointwise/BatchNorm
+3 skipping layer: Conv2d_3_pointwise/Relu6
+3 skipping layer: concat
+			4 layer: Conv2d_4_depthwise/depthwise
+Input node for the layer 4 is in graph: 3 Adding Transmitter to that graph
+Adding Sender_Conv2d_3_pointwise/Relu6 to graph 3 with target 4
+Adding Receiver_Conv2d_3_pointwise/Relu6 to graph 4 with target 1
+			4 skipping layer: Conv2d_4_depthwise/BatchNorm
+			4 skipping layer: Conv2d_4_depthwise/Relu6
+			4 skipping layer: Conv2d_4_pointwise/Conv2D
+			4 skipping layer: Conv2d_4_pointwise/BatchNorm
+			4 skipping layer: Conv2d_4_pointwise/Relu6
+			4 skipping layer: concat
+5 layer: Conv2d_5_depthwise/depthwise
+Input node for the layer 5 is in graph: 4 Adding Transmitter to that graph
+Adding Sender_Conv2d_4_pointwise/Relu6 to graph 4 with target 1
+Adding Receiver_Conv2d_4_pointwise/Relu6 to graph 5 with target 4
+5 skipping layer: Conv2d_5_depthwise/BatchNorm
+5 skipping layer: Conv2d_5_depthwise/Relu6
+5 skipping layer: Conv2d_5_pointwise/Conv2D
+5 skipping layer: Conv2d_5_pointwise/BatchNorm
+5 skipping layer: Conv2d_5_pointwise/Relu6
+5 skipping layer: concat
+			6 layer: Conv2d_6_depthwise/depthwise
+Input node for the layer 6 is in graph: 5 Adding Transmitter to that graph
+Adding Sender_Conv2d_5_pointwise/Relu6 to graph 5 with target 4
+Adding Receiver_Conv2d_5_pointwise/Relu6 to graph 6 with target 1
+			6 skipping layer: Conv2d_6_depthwise/BatchNorm
+			6 skipping layer: Conv2d_6_depthwise/Relu6
+			6 skipping layer: Conv2d_6_pointwise/Conv2D
+			6 skipping layer: Conv2d_6_pointwise/BatchNorm
+			6 skipping layer: Conv2d_6_pointwise/Relu6
+			6 skipping layer: concat
+7 layer: Conv2d_7_depthwise/depthwise
+Input node for the layer 7 is in graph: 6 Adding Transmitter to that graph
+Adding Sender_Conv2d_6_pointwise/Relu6 to graph 6 with target 1
+Adding Receiver_Conv2d_6_pointwise/Relu6 to graph 7 with target 4
+7 skipping layer: Conv2d_7_depthwise/BatchNorm
+7 skipping layer: Conv2d_7_depthwise/Relu6
+7 skipping layer: Conv2d_7_pointwise/Conv2D
+7 skipping layer: Conv2d_7_pointwise/BatchNorm
+7 skipping layer: Conv2d_7_pointwise/Relu6
+7 skipping layer: concat
+			8 layer: Conv2d_8_depthwise/depthwise
+Input node for the layer 8 is in graph: 7 Adding Transmitter to that graph
+Adding Sender_Conv2d_7_pointwise/Relu6 to graph 7 with target 4
+Adding Receiver_Conv2d_7_pointwise/Relu6 to graph 8 with target 1
+			8 skipping layer: Conv2d_8_depthwise/BatchNorm
+			8 skipping layer: Conv2d_8_depthwise/Relu6
+			8 skipping layer: Conv2d_8_pointwise/Conv2D
+			8 skipping layer: Conv2d_8_pointwise/BatchNorm
+			8 skipping layer: Conv2d_8_pointwise/Relu6
+			8 skipping layer: concat
+9 layer: Conv2d_9_depthwise/depthwise
+Input node for the layer 9 is in graph: 8 Adding Transmitter to that graph
+Adding Sender_Conv2d_8_pointwise/Relu6 to graph 8 with target 1
+Adding Receiver_Conv2d_8_pointwise/Relu6 to graph 9 with target 4
+9 skipping layer: Conv2d_9_depthwise/BatchNorm
+9 skipping layer: Conv2d_9_depthwise/Relu6
+9 skipping layer: Conv2d_9_pointwise/Conv2D
+9 skipping layer: Conv2d_9_pointwise/BatchNorm
+9 skipping layer: Conv2d_9_pointwise/Relu6
+9 skipping layer: concat
+			10 layer: Conv2d_10_depthwise/depthwise
+Input node for the layer 10 is in graph: 9 Adding Transmitter to that graph
+Adding Sender_Conv2d_9_pointwise/Relu6 to graph 9 with target 4
+Adding Receiver_Conv2d_9_pointwise/Relu6 to graph 10 with target 1
+			10 skipping layer: Conv2d_10_depthwise/BatchNorm
+			10 skipping layer: Conv2d_10_depthwise/Relu6
+			10 skipping layer: Conv2d_10_pointwise/Conv2D
+			10 skipping layer: Conv2d_10_pointwise/BatchNorm
+			10 skipping layer: Conv2d_10_pointwise/Relu6
+			10 skipping layer: concat
+11 layer: Conv2d_11_depthwise/depthwise
+Input node for the layer 11 is in graph: 10 Adding Transmitter to that graph
+Adding Sender_Conv2d_10_pointwise/Relu6 to graph 10 with target 1
+Adding Receiver_Conv2d_10_pointwise/Relu6 to graph 11 with target 4
+11 skipping layer: Conv2d_11_depthwise/BatchNorm
+11 skipping layer: Conv2d_11_depthwise/Relu6
+11 skipping layer: Conv2d_11_pointwise/Conv2D
+11 skipping layer: Conv2d_11_pointwise/BatchNorm
+11 skipping layer: Conv2d_11_pointwise/Relu6
+11 skipping layer: concat
+			12 layer: Conv2d_12_depthwise/depthwise
+Input node for the layer 12 is in graph: 11 Adding Transmitter to that graph
+Adding Sender_Conv2d_11_pointwise/Relu6 to graph 11 with target 4
+Adding Receiver_Conv2d_11_pointwise/Relu6 to graph 12 with target 1
+			12 skipping layer: Conv2d_12_depthwise/BatchNorm
+			12 skipping layer: Conv2d_12_depthwise/Relu6
+			12 skipping layer: Conv2d_12_pointwise/Conv2D
+			12 skipping layer: Conv2d_12_pointwise/BatchNorm
+			12 skipping layer: Conv2d_12_pointwise/Relu6
+			12 skipping layer: concat
+13 layer: Conv2d_13_depthwise/depthwise
+Input node for the layer 13 is in graph: 12 Adding Transmitter to that graph
+Adding Sender_Conv2d_12_pointwise/Relu6 to graph 12 with target 1
+Adding Receiver_Conv2d_12_pointwise/Relu6 to graph 13 with target 4
+13 skipping layer: Conv2d_13_depthwise/BatchNorm
+13 skipping layer: Conv2d_13_depthwise/Relu6
+13 skipping layer: Conv2d_13_pointwise/Conv2D
+13 skipping layer: Conv2d_13_pointwise/BatchNorm
+13 skipping layer: Conv2d_13_pointwise/Relu6
+13 skipping layer: concat
+13 skipping layer: Logits/AvgPool_1a
+13 skipping layer: Logits/Conv2d_1c_1x1
+13 skipping layer: Reshape
+13 skipping layer: Softmax
+output accessor reading label file /data/local/ARM-CO-UP/assets//labels.txt
+13 skipping layer: output
+graph 1 target is NPU, merging nodes into one NPU Node ...
+Adding NPU Node NPU_MobileV1_1_1 to graph 1 with target 4
+re-struct output node Sender_Conv2d_1_pointwise/Relu6 to the npu node
+producer is Conv2d_1_pointwise/Relu6
+removing edge between producer and the output
+adding edge between NPU node and the output
+re-struct input node Receiver_Conv2d_0/Relu6 to the npu node
+consumer is Conv2d_1_depthwise/depthwise
+removing edge between input and the consumer
+adding edge between input and NPU node
+npu node created
+
+graph 3 target is NPU, merging nodes into one NPU Node ...
+Adding NPU Node NPU_MobileV1_3_3 to graph 3 with target 4
+re-struct output node Sender_Conv2d_3_pointwise/Relu6 to the npu node
+producer is Conv2d_3_pointwise/Relu6
+removing edge between producer and the output
+adding edge between NPU node and the output
+re-struct input node Receiver_Conv2d_2_pointwise/Relu6 to the npu node
+consumer is Conv2d_3_depthwise/depthwise
+removing edge between input and the consumer
+adding edge between input and NPU node
+npu node created
+
+graph 5 target is NPU, merging nodes into one NPU Node ...
+Adding NPU Node NPU_MobileV1_5_5 to graph 5 with target 4
+re-struct output node Sender_Conv2d_5_pointwise/Relu6 to the npu node
+producer is Conv2d_5_pointwise/Relu6
+removing edge between producer and the output
+adding edge between NPU node and the output
+re-struct input node Receiver_Conv2d_4_pointwise/Relu6 to the npu node
+consumer is Conv2d_5_depthwise/depthwise
+removing edge between input and the consumer
+adding edge between input and NPU node
+npu node created
+
+graph 7 target is NPU, merging nodes into one NPU Node ...
+Adding NPU Node NPU_MobileV1_7_7 to graph 7 with target 4
+re-struct output node Sender_Conv2d_7_pointwise/Relu6 to the npu node
+producer is Conv2d_7_pointwise/Relu6
+removing edge between producer and the output
+adding edge between NPU node and the output
+re-struct input node Receiver_Conv2d_6_pointwise/Relu6 to the npu node
+consumer is Conv2d_7_depthwise/depthwise
+removing edge between input and the consumer
+adding edge between input and NPU node
+npu node created
+
+graph 9 target is NPU, merging nodes into one NPU Node ...
+Adding NPU Node NPU_MobileV1_9_9 to graph 9 with target 4
+re-struct output node Sender_Conv2d_9_pointwise/Relu6 to the npu node
+producer is Conv2d_9_pointwise/Relu6
+removing edge between producer and the output
+adding edge between NPU node and the output
+re-struct input node Receiver_Conv2d_8_pointwise/Relu6 to the npu node
+consumer is Conv2d_9_depthwise/depthwise
+removing edge between input and the consumer
+adding edge between input and NPU node
+npu node created
+
+graph 11 target is NPU, merging nodes into one NPU Node ...
+Adding NPU Node NPU_MobileV1_11_11 to graph 11 with target 4
+re-struct output node Sender_Conv2d_11_pointwise/Relu6 to the npu node
+producer is Conv2d_11_pointwise/Relu6
+removing edge between producer and the output
+adding edge between NPU node and the output
+re-struct input node Receiver_Conv2d_10_pointwise/Relu6 to the npu node
+consumer is Conv2d_11_depthwise/depthwise
+removing edge between input and the consumer
+adding edge between input and NPU node
+npu node created
+
+graph 13 target is NPU, merging nodes into one NPU Node ...
+Adding NPU Node NPU_MobileV1_13_13 to graph 13 with target 4
+re-struct output node output to the npu node
+producer is Softmax
+removing edge between producer and the output
+adding edge between NPU node and the output
+re-struct input node Receiver_Conv2d_12_pointwise/Relu6 to the npu node
+consumer is Conv2d_13_depthwise/depthwise
+removing edge between input and the consumer
+adding edge between input and NPU node
+npu node created
+
+
+
+*********************
+Start finalizing Graphs
+*******************
+
+Graph id: 2 Target is: Neon
+Graph id: Graph id: 1 Target is: NPU
+0 Target is: Neon
+Graph id: Graph id: 3 Target is: NPU
+4 Target is: Neon
+Graph id: Graph id: 5 Target is: NPU
+6 Target is: Neon
+Graph id: 7 Target is: NPU
+Graph id: Graph id: 8 Target is: Neon
+Graph id: 9 Target is: NPU
+10 Target is: Neon
+Graph id: 11Creating a RockPi NPU node...
+NPU MobileV1_1_1 Number of inputs: 1 and number of outputs: 1
+Model name: /data/local/ARM-CO-UP/graphs/MobileV1_1_1.rknn
+NPU /data/local/ARM-CO-UP/graphs/MobileV1_1_1.rknn Reading model...
+Graph (2) Task 0: Conv2d_2_depthwise/depthwise
+Graph (2) Task 1: Conv2d_2_depthwise/BatchNorm
+Graph (2) Task 2: Conv2d_2_depthwise/Relu6
+Graph (2) Task 3: Conv2d_2_pointwise/Conv2D
+Graph (2) Task 4: Conv2d_2_pointwise/BatchNorm
+Graph (2) Task 5: Conv2d_2_pointwise/Relu6
+Graph 2 input size: 0 receiver size: 1 tasks size: 6 senders size: 1 output size: 0
+
+Graph id: 13 Target is: NPU
+ Target is: NPU
+Graph id: 12 Target is: Neon
+Creating a RockPi NPU node...
+NPU MobileV1_3_3 Number of inputs: 1 and number of outputs: 1
+Model name: /data/local/ARM-CO-UP/graphs/MobileV1_3_3.rknn
+Graph (NPU /data/local/ARM-CO-UP/graphs/MobileV1_3_3.rknn Reading model...
+0) Task 0: Conv2d_0
+Graph (0) Task 1: Conv2d_0/BatchNorm
+Graph (0) Task 2: Conv2d_0/Relu6
+Graph 0 input size: 1 receiver size: 0 tasks size: 3 senders size: 1 output size: 0
+
+Creating a RockPi NPU node...
+NPU MobileV1_5_5 Number of inputs: 1 and number of outputs: 1
+Model name: /data/local/ARM-CO-UP/graphs/MobileV1_5_5.rknn
+Graph (4) Task 0: Conv2d_4_depthwise/depthwise
+Graph (4) Task 1: Conv2d_4_depthwise/BatchNorm
+Graph (4) Task 2: Conv2d_4_depthwise/Relu6
+NPU /data/local/ARM-CO-UP/graphs/MobileV1_5_5.rknn Reading model...
+Graph (4) Task 3: Conv2d_4_pointwise/Conv2D
+Graph (4) Task 4: Conv2d_4_pointwise/BatchNorm
+Graph (4) Task 5: Conv2d_4_pointwise/Relu6
+Graph 4 input size: 0 receiver size: 1 tasks size: 6 senders size: 1 output size: 0
+
+Creating a RockPi NPU node...
+NPU MobileV1_7_7 Number of inputs: 1 and number of outputs: 1
+Graph (6) Task Model name: /data/local/ARM-CO-UP/graphs/MobileV1_7_7.rknn
+0: Conv2d_6_depthwise/depthwise
+Graph (6) Task 1: Conv2d_6_depthwise/BatchNorm
+Graph (6) Task 2: Conv2d_6_depthwise/Relu6
+NPU /data/local/ARM-CO-UP/graphs/MobileV1_7_7.rknn Reading model...
+Graph (6) Task 3: Conv2d_6_pointwise/Conv2D
+Graph (6) Task 4: Conv2d_6_pointwise/BatchNorm
+Graph (6) Task 5: Conv2d_6_pointwise/Relu6
+Graph 6 input size: 0 receiver size: 1 tasks size: 6 senders size: 1 output size: 0
+
+Creating a RockPi NPU node...
+NPU MobileV1_9_9 Number of inputs: 1 and number of outputs: 1
+Model name: /data/local/ARM-CO-UP/graphs/MobileV1_9_9.rknn
+Graph (8) Task 0: Conv2d_8_depthwise/depthwise
+Graph (8) Task 1: Conv2d_8_depthwise/BatchNorm
+Graph (8) Task 2: Conv2d_8_depthwise/Relu6
+Graph (8) Task 3: Conv2d_8_pointwise/Conv2D
+Graph (8) Task 4: Conv2d_8_pointwise/BatchNorm
+NPU /data/local/ARM-CO-UP/graphs/MobileV1_9_9.rknnGraph (8) Task 5: Conv2d_8_pointwise/Relu6
+ Reading model...
+Graph 8 input size: 0 receiver size: 1 tasks size: 6 senders size: 1 output size: 0
+
+Creating a RockPi NPU node...
+NPU MobileV1_13_13 Number of inputs: 1 and number of outputs: 1
+Model name: /data/local/ARM-CO-UP/graphs/MobileV1_13_13.rknn
+NPU /data/local/ARM-CO-UP/graphs/MobileV1_13_13.rknn Reading model...
+Creating a RockPi NPU node...
+NPU MobileV1_11_11 Number of inputs: 1 and number of outputs: 1
+Model name: /data/local/ARM-CO-UP/graphs/MobileV1_11_11.rknn
+Graph (10) Task 0: NPU /data/local/ARM-CO-UP/graphs/MobileV1_11_11.rknn Reading model...
+Conv2d_10_depthwise/depthwise
+Graph (10) Task 1: Conv2d_10_depthwise/BatchNorm
+Graph (10) Task 2: Conv2d_10_depthwise/Relu6
+Graph (10) Task 3: Conv2d_10_pointwise/Conv2D
+Graph (10) Task 4: Conv2d_10_pointwise/BatchNorm
+Graph (10) Task 5: Conv2d_10_pointwise/Relu6
+Graph 10 input size: 0 receiver size: 1 tasks size: 6 senders size: 1 output size: 0
+
+Graph (12) Task 0: Conv2d_12_depthwise/depthwise
+Graph (12) Task 1: Conv2d_12_depthwise/BatchNorm
+Graph (12) Task 2: Conv2d_12_depthwise/Relu6
+Graph (12) Task 3: Conv2d_12_pointwise/Conv2D
+Graph (12) Task 4: Conv2d_12_pointwise/BatchNorm
+Graph (12) Task 5: Conv2d_12_pointwise/Relu6
+Graph 12 input size: 0 receiver size: 1 tasks size: 6 senders size: 1 output size: 0
+
+setting ending for layer: Conv2d_2_pointwise/Relu6
+Finish finalizing graph 2
+
+
+
+setting ending for layer: Conv2d_0/Relu6
+Finish finalizing graph 0
+
+
+
+setting ending for layer: Conv2d_4_pointwise/Relu6
+Finish finalizing graph 4
+
+
+
+setting ending for layer: Conv2d_6_pointwise/Relu6
+Finish finalizing graph 6
+
+
+
+setting ending for layer: Conv2d_8_pointwise/Relu6
+Finish finalizing graph 8
+
+
+
+setting ending for layer: Conv2d_10_pointwise/Relu6
+Finish finalizing graph 10
+
+
+
+setting ending for layer: Conv2d_12_pointwise/Relu6
+Finish finalizing graph 12
+
+
+
+NPU /data/local/ARM-CO-UP/graphs/MobileV1_1_1.rknn Initialized
+NPU /data/local/ARM-CO-UP/graphs/MobileV1_3_3.rknn Initialized
+model input num: 1, output num: 1
+NPU /data/local/ARM-CO-UP/graphs/MobileV1_5_5.rknn Initialized
+
+Number of NPU model outputs: 1 number of NPU subgraph outputs: 1
+Number of NPU model inputs: 1 number of NPU subgraph inputs: 1
+NPU Model MobileV1_5_5 Input:0	Num elements:200704	Size:200704	Name:	Fmt:1	Qnt type:2	Type:3
+Explre input 0 n_elements: 200704
+Is match with sub graph input: 0
+
+NPU Model MobileV1_5_5 Output:0	Num elements:200704	Size:200704	Name:	Fmt:0	Qnt type:2	Type:3
+Explore output 0 n_elements: 200704
+Is match with sub graph output: 0
+Graph (5) Task 0: NPU_MobileV1_5_5
+Graph 5 input size: 0 receiver size: 1 tasks size: 1 senders size: 1 output size: 0
+
+
+NPU Model MobileV1_5_5 Output:0	Num elements:200704	Size:200704	Name:	Fmt:0	Qnt type:2	Type:3
+Explore output 0 n_elements: 200704
+Is match with sub graph output: 0
+setting ending for layer: NPU_MobileV1_5_5
+Finish finalizing graph 5
+
+
+
+NPU /data/local/ARM-CO-UP/graphs/MobileV1_7_7.rknn Initialized
+NPU /data/local/ARM-CO-UP/graphs/MobileV1_9_9.rknn Initialized
+model input num: 1, output num: 1
+
+Number of NPU model outputs: 1 number of NPU subgraph outputs: 1
+Number of NPU model inputs: 1 number of NPU subgraph inputs: 1
+NPU Model MobileV1_9_9 Input:0	Num elements:100352	Size:100352	Name:	Fmt:1	Qnt type:2	Type:3
+Explre input 0 n_elements: 100352
+Is match with sub graph input: 0
+
+NPU Model MobileV1_9_9 Output:0	Num elements:100352	Size:100352	Name:	Fmt:0	Qnt type:2	Type:3
+Explore output 0 n_elements: 100352
+Is match with sub graph output: 0
+Graph (9) Task 0: NPU_MobileV1_9_9
+Graph 9 input size: 0 receiver size: 1 tasks size: 1 senders size: 1 output size: 0
+
+
+NPU Model MobileV1_9_9 Output:0	Num elements:100352	Size:100352	Name:	Fmt:0	Qnt type:2	Type:3
+Explore output 0 n_elements: 100352
+Is match with sub graph output: 0
+setting ending for layer: NPU_MobileV1_9_9
+Finish finalizing graph 9
+
+
+
+NPU /data/local/ARM-CO-UP/graphs/MobileV1_13_13.rknn Initialized
+NPU /data/local/ARM-CO-UP/graphs/MobileV1_11_11.rknn Initialized
+model input num: 1, output num: 1
+
+Number of NPU model outputs: 1 number of NPU subgraph outputs: 1
+Number of NPU model inputs: 1 number of NPU subgraph inputs: 1
+NPU Model MobileV1_11_11 Input:0	Num elements:100352	Size:100352	Name:	Fmt:1	Qnt type:2	Type:3
+Explre input 0 n_elements: 100352
+Is match with sub graph input: 0
+
+NPU Model MobileV1_11_11 Output:0	Num elements:100352	Size:100352	Name:	Fmt:0	Qnt type:2	Type:3
+Explore output 0 n_elements: 100352
+Is match with sub graph output: 0
+Graph (11) Task 0: NPU_MobileV1_11_11
+Graph 11 input size: 0 receiver size: 1 tasks size: 1 senders size: 1 output size: 0
+
+
+NPU Model MobileV1_11_11 Output:0	Num elements:100352	Size:100352	Name:	Fmt:0	Qnt type:2	Type:3
+Explore output 0 n_elements: 100352
+Is match with sub graph output: 0
+setting ending for layer: NPU_MobileV1_11_11
+Finish finalizing graph 11
+
+
+
+model input num: 1, output num: 1
+model input num: 1, output num: 1
+model input num: 1, output num: 1
+model input num: 1, output num: 1
+
+Number of NPU model outputs: 1 number of NPU subgraph outputs: 1
+Number of NPU model inputs: 1 number of NPU subgraph inputs: 1
+NPU Model MobileV1_1_1 Input:
+Number of NPU model outputs: 1 number of NPU subgraph outputs: 1
+Number of NPU model inputs: 
+Number of NPU model outputs: 0
+Number of NPU model outputs: 1 number of NPU subgraph outputs: 1
+Number of NPU model inputs: 1 number of NPU subgraph inputs: 1
+NPU Model MobileV1_13_13 Input:0	Num elements:50176	Size:50176	Name:	Fmt:1	Qnt type:2	Type:3
+	Num elements:1 number of NPU subgraph inputs: 14014081
+NPU Model Explre input 	Size: number of NPU subgraph outputs: 1
+Number of NPU model inputs: 1 number of NPU subgraph inputs: 0MobileV1_3_34014081 Input: n_elements: 	Name:
+NPU Model MobileV1_7_7	Fmt:1 Input:0	Num elements:401408	Size:401408	Name:	Fmt:050176	Num elements:100352	Qnt type:1	Size:100352	Name:	Fmt:1	Qnt type:2	Type:3
+Explre input 0 n_elements: 100352
+Is match with sub graph input: 0
+
+NPU Model MobileV1_7_7 Output:0	Num elements:100352	Size:100352	Name:	Fmt:0	Qnt type:2	Type:3
+Explore output 0 n_elements: 100352
+Is match with sub graph output: 0
+Graph (7) Task 0: NPU_MobileV1_7_7
+Graph 7 input size: 0 receiver size: 1 tasks size: 1 senders size: 1 output size: 0
+
+	Qnt type:2	Type:3
+Explre input 0 n_elements: 401408
+Is match with sub graph input: 0
+
+NPU Model MobileV1_3_3 Output:0	Num elements:401408	Size:401408	Name:	Fmt:0	Qnt type:2	Type:3
+Explore output 0 n_elements: 401408
+Is match with sub graph output: 0
+Graph (3) Task 0: NPU_MobileV1_3_3
+Graph 3 input size: 0 receiver size: 1 tasks size: 1 senders size: 1 output size: 0
+
+
+Is match with sub graph input: 0
+
+NPU Model MobileV1_13_13 Output:0	Num elements:1000	Size:2000	Name:	Fmt:0	Qnt type:0	Type:1
+Explore output 0 n_elements: 1000
+Is match with sub graph output: 0
+Graph (13) Task 0: NPU_MobileV1_13_13
+Graph 13 input size: 0 receiver size: 1 tasks size: 1 senders size: 0 output size: 1
+
+
+NPU Model MobileV1_13_13 Output:0	Num elements:1000	Size:2000	Name:	Fmt:0	Qnt type:0	Type:1
+Explore output 0 n_elements: 1000
+Is match with sub graph output: 0
+setting ending for layer: NPU_MobileV1_13_13
+Finish finalizing graph 13
+
+
+
+2	Type:3
+Explre input 0 n_elements: 401408
+Is match with sub graph input: 0
+
+NPU Model MobileV1_1_1 Output:0	Num elements:802816	Size:802816	Name:	Fmt:0	Qnt type:2	Type:3
+Explore output 0 n_elements: 802816
+Is match with sub graph output: 0
+Graph (1) Task 0: NPU_MobileV1_1_1
+Graph 1 input size: 0 receiver size: 1 tasks size: 1 senders size: 1 output size: 0
+
+
+NPU Model MobileV1_7_7 Output:0	Num elements:100352	Size:100352	Name:	Fmt:0	Qnt type:2	Type:3
+Explore output 0 n_elements: 100352
+Is match with sub graph output: 0
+setting ending for layer: NPU_MobileV1_7_7
+Finish finalizing graph 7
+
+
+
+
+NPU Model MobileV1_3_3 Output:0	Num elements:401408	Size:401408	Name:	Fmt:0	Qnt type:2	Type:3
+Explore output 0 n_elements: 401408
+Is match with sub graph output: 0
+setting ending for layer: NPU_MobileV1_3_3
+Finish finalizing graph 3
+
+
+
+
+NPU Model MobileV1_1_1 Output:0	Num elements:802816	Size:802816	Name:	Fmt:0	Qnt type:2	Type:3
+Explore output 0 n_elements: 802816
+Is match with sub graph output: 0
+setting ending for layer: NPU_MobileV1_1_1
+Finish finalizing graph 1
+
+
+
+setup finished
+
+Please Enter the desired Frequency setttings: 
+0 Running Graph with 0-0-0-0-0-0-0-0-0-0-0-0-0-0 LW DVFS
+governor 0 task:Conv2d_0/Relu6 freqs:0,0,0
+governor 1 task:Conv2d_10_pointwise/Relu6 freqs:0,0,0
+governor 2 task:Conv2d_12_pointwise/Relu6 freqs:0,0,0
+governor 3 task:Conv2d_2_pointwise/Relu6 freqs:0,0,0
+governor 4 task:Conv2d_4_pointwise/Relu6 freqs:0,0,0
+governor 5 task:Conv2d_6_pointwise/Relu6 freqs:0,0,0
+governor 6 task:Conv2d_8_pointwise/Relu6 freqs:0,0,0
+governor 7 task:NPU_MobileV1_11_11 freqs:0,0,0
+governor 8 task:NPU_MobileV1_13_13 freqs:0,0,0
+governor 9 task:NPU_MobileV1_1_1 freqs:0,0,0
+governor 10 task:NPU_MobileV1_3_3 freqs:0,0,0
+governor 11 task:NPU_MobileV1_5_5 freqs:0,0,0
+governor 12 task:NPU_MobileV1_7_7 freqs:0,0,0
+governor 13 task:NPU_MobileV1_9_9 freqs:0,0,0
+set_GPIOs with mode: layers
+tass name: Conv2d_0	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_0/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_0/Relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: NPU_MobileV1_1_1	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_2_depthwise/depthwise	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_2_depthwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_2_depthwise/Relu6	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_2_pointwise/Conv2D	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_2_pointwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_2_pointwise/Relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: NPU_MobileV1_3_3	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_4_depthwise/depthwise	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_4_depthwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_4_depthwise/Relu6	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_4_pointwise/Conv2D	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_4_pointwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_4_pointwise/Relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: NPU_MobileV1_5_5	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_6_depthwise/depthwise	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_6_depthwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_6_depthwise/Relu6	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_6_pointwise/Conv2D	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_6_pointwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_6_pointwise/Relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: NPU_MobileV1_7_7	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_8_depthwise/depthwise	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_8_depthwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_8_depthwise/Relu6	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_8_pointwise/Conv2D	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_8_pointwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_8_pointwise/Relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: NPU_MobileV1_9_9	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_10_depthwise/depthwise	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_10_depthwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_10_depthwise/Relu6	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_10_pointwise/Conv2D	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_10_pointwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_10_pointwise/Relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: NPU_MobileV1_11_11	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_12_depthwise/depthwise	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_12_depthwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_12_depthwise/Relu6	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_12_pointwise/Conv2D	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_12_pointwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_12_pointwise/Relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: NPU_MobileV1_13_13	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+
+
+
+*********************************************
+start running graphs
+*************************************************
+
+
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//gold_fish.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0140 - [id = 885], n04525038 velvet
+0.0088 - [id = 904], n04589890 window screen
+0.0086 - [id = 911], n04599235 wool, woolen, woollen
+0.0067 - [id = 794], n04209239 shower curtain
+0.0061 - [id = 845], n04376876 syringe
+
+
+************
+Photo_index:1
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//gondola.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0138 - [id = 885], n04525038 velvet
+0.0097 - [id = 904], n04589890 window screen
+0.0093 - [id = 911], n04599235 wool, woolen, woollen
+0.0081 - [id = 794], n04209239 shower curtain
+0.0067 - [id = 418], n02783161 ballpoint, ballpoint pen, ballpen, Biro
+
+
+************
+Photo_index:2
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//school_bus.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0127 - [id = 885], n04525038 velvet
+0.0088 - [id = 904], n04589890 window screen
+0.0084 - [id = 911], n04599235 wool, woolen, woollen
+0.0068 - [id = 794], n04209239 shower curtain
+0.0060 - [id = 845], n04376876 syringe
+
+
+************
+Photo_index:3
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//go_kart.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0131 - [id = 885], n04525038 velvet
+0.0089 - [id = 911], n04599235 wool, woolen, woollen
+0.0087 - [id = 904], n04589890 window screen
+0.0076 - [id = 794], n04209239 shower curtain
+0.0067 - [id = 879], n04507155 umbrella
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//gold_fish.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0140 - [id = 885], n04525038 velvet
+0.0088 - [id = 904], n04589890 window screen
+0.0086 - [id = 911], n04599235 wool, woolen, woollen
+0.0067 - [id = 794], n04209239 shower curtain
+0.0061 - [id = 845], n04376876 syringe
+
+
+************
+Photo_index:1
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//gondola.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0138 - [id = 885], n04525038 velvet
+0.0097 - [id = 904], n04589890 window screen
+0.0093 - [id = 911], n04599235 wool, woolen, woollen
+0.0081 - [id = 794], n04209239 shower curtain
+0.0067 - [id = 418], n02783161 ballpoint, ballpoint pen, ballpen, Biro
+
+
+************
+Photo_index:2
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//school_bus.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0127 - [id = 885], n04525038 velvet
+0.0088 - [id = 904], n04589890 window screen
+0.0084 - [id = 911], n04599235 wool, woolen, woollen
+0.0068 - [id = 794], n04209239 shower curtain
+0.0060 - [id = 845], n04376876 syringe
+
+
+************
+Photo_index:3
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//go_kart.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0131 - [id = 885], n04525038 velvet
+0.0089 - [id = 911], n04599235 wool, woolen, woollen
+0.0087 - [id = 904], n04589890 window screen
+0.0076 - [id = 794], n04209239 shower curtain
+0.0067 - [id = 879], n04507155 umbrella
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//gold_fish.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0140 - [id = 885], n04525038 velvet
+0.0088 - [id = 904], n04589890 window screen
+0.0086 - [id = 911], n04599235 wool, woolen, woollen
+0.0067 - [id = 794], n04209239 shower curtain
+0.0061 - [id = 845], n04376876 syringe
+
+
+************
+Photo_index:1
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//gondola.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0138 - [id = 885], n04525038 velvet
+0.0097 - [id = 904], n04589890 window screen
+0.0093 - [id = 911], n04599235 wool, woolen, woollen
+0.0081 - [id = 794], n04209239 shower curtain
+0.0067 - [id = 418], n02783161 ballpoint, ballpoint pen, ballpen, Biro
+
+
+************
+Photo_index:2
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//school_bus.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0127 - [id = 885], n04525038 velvet
+0.0088 - [id = 904], n04589890 window screen
+0.0084 - [id = 911], n04599235 wool, woolen, woollen
+0.0068 - [id = 794], n04209239 shower curtain
+0.0060 - [id = 845], n04376876 syringe
+
+
+************
+Photo_index:3
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//go_kart.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0131 - [id = 885], n04525038 velvet
+0.0089 - [id = 911], n04599235 wool, woolen, woollen
+0.0087 - [id = 904], n04589890 window screen
+0.0076 - [id = 794], n04209239 shower curtain
+0.0067 - [id = 879], n04507155 umbrella
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//gold_fish.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0140 - [id = 885], n04525038 velvet
+0.0088 - [id = 904], n04589890 window screen
+0.0086 - [id = 911], n04599235 wool, woolen, woollen
+0.0067 - [id = 794], n04209239 shower curtain
+0.0061 - [id = 845], n04376876 syringe
+0	Layer Name: Conv2d_0 	 Layer time: 13.1018 	 number of inputs: 3 	 input shape: 3x224x224 	 output shape: 32x112x112
+1	Layer Name: Conv2d_0/BatchNorm 	 Layer time: 8.4012 	 number of inputs: 5 	 input shape: 32x112x112 	 output shape: 32x112x112
+2	Layer Name: Conv2d_0/Relu6 	 Layer time: 3.1029 	 number of inputs: 1 	 input shape: 32x112x112 	 output shape: 32x112x112
+Layer Number: 0 	 time: 24.6059
+----------------------------
+
+ Sum of Layers time: 24.6059
+
+
+Graph0   Input: 61.0737   Task: 49.6753   send: 1.79369   Out: 0.0024793   Process: 112.545
+
+
+
+********
+
+0	Layer Name: NPU_MobileV1_1_1 	 Layer time: 135.3698 	 number of inputs: 1 	 input shape: 32x112x112 	 output shape: 64x112x112
+Layer Number: 0 	 time: 135.3698
+----------------------------
+
+ Sum of Layers time: 135.3698
+
+
+Graph1   Input: 0.0115208   Task: 144.046   send: 3.12649   Out: 0.0025082   Process: 147.187
+
+NPU NPU_MobileV1_1_1	AVG_input_time:31.4992	AVG_run_time:38.3085	AVG_prof_run_time:10.3492	AVG_output_time:61.6356
+
+
+********
+
+0	Layer Name: Conv2d_2_depthwise/depthwise 	 Layer time: 6.5267 	 number of inputs: 3 	 input shape: 64x112x112 	 output shape: 64x56x56
+1	Layer Name: Conv2d_2_depthwise/BatchNorm 	 Layer time: 3.2606 	 number of inputs: 5 	 input shape: 64x56x56 	 output shape: 64x56x56
+2	Layer Name: Conv2d_2_depthwise/Relu6 	 Layer time: 1.2883 	 number of inputs: 1 	 input shape: 64x56x56 	 output shape: 64x56x56
+3	Layer Name: Conv2d_2_pointwise/Conv2D 	 Layer time: 12.8720 	 number of inputs: 3 	 input shape: 64x56x56 	 output shape: 128x56x56
+4	Layer Name: Conv2d_2_pointwise/BatchNorm 	 Layer time: 5.7232 	 number of inputs: 5 	 input shape: 128x56x56 	 output shape: 128x56x56
+5	Layer Name: Conv2d_2_pointwise/Relu6 	 Layer time: 2.1930 	 number of inputs: 1 	 input shape: 128x56x56 	 output shape: 128x56x56
+Layer Number: 0 	 time: 31.8637
+----------------------------
+
+ Sum of Layers time: 31.8637
+
+
+Graph2   Input: 0.010996   Task: 81.118   send: 2.50408   Out: 0.0025959   Process: 83.6357
+
+
+
+********
+
+0	Layer Name: NPU_MobileV1_3_3 	 Layer time: 81.7323 	 number of inputs: 1 	 input shape: 128x56x56 	 output shape: 128x56x56
+Layer Number: 0 	 time: 81.7323
+----------------------------
+
+ Sum of Layers time: 81.7323
+
+
+Graph3   Input: 0.0112001   Task: 90.403   send: 2.2673   Out: 0.0025082   Process: 92.684
+
+NPU NPU_MobileV1_3_3	AVG_input_time:28.9748	AVG_run_time:23.0276	AVG_prof_run_time:6.2754	AVG_output_time:26.9367
+
+
+********
+
+0	Layer Name: Conv2d_4_depthwise/depthwise 	 Layer time: 3.1711 	 number of inputs: 3 	 input shape: 128x56x56 	 output shape: 128x28x28
+1	Layer Name: Conv2d_4_depthwise/BatchNorm 	 Layer time: 1.6692 	 number of inputs: 5 	 input shape: 128x28x28 	 output shape: 128x28x28
+2	Layer Name: Conv2d_4_depthwise/Relu6 	 Layer time: 0.6539 	 number of inputs: 1 	 input shape: 128x28x28 	 output shape: 128x28x28
+3	Layer Name: Conv2d_4_pointwise/Conv2D 	 Layer time: 14.5023 	 number of inputs: 3 	 input shape: 128x28x28 	 output shape: 256x28x28
+4	Layer Name: Conv2d_4_pointwise/BatchNorm 	 Layer time: 3.1121 	 number of inputs: 5 	 input shape: 256x28x28 	 output shape: 256x28x28
+5	Layer Name: Conv2d_4_pointwise/Relu6 	 Layer time: 1.2399 	 number of inputs: 1 	 input shape: 256x28x28 	 output shape: 256x28x28
+Layer Number: 0 	 time: 24.3485
+----------------------------
+
+ Sum of Layers time: 24.3485
+
+
+Graph4   Input: 0.0145542   Task: 73.6182   send: 1.54458   Out: 0.0025373   Process: 75.1799
+
+
+
+********
+
+0	Layer Name: NPU_MobileV1_5_5 	 Layer time: 43.0110 	 number of inputs: 1 	 input shape: 256x28x28 	 output shape: 256x28x28
+Layer Number: 0 	 time: 43.0110
+----------------------------
+
+ Sum of Layers time: 43.0110
+
+
+Graph5   Input: 0.0100625   Task: 51.6363   send: 1.45212   Out: 0.0022752   Process: 53.1008
+
+NPU NPU_MobileV1_5_5	AVG_input_time:14.3950	AVG_run_time:13.7266	AVG_prof_run_time:4.0500	AVG_output_time:12.1940
+
+
+********
+
+0	Layer Name: Conv2d_6_depthwise/depthwise 	 Layer time: 2.3953 	 number of inputs: 3 	 input shape: 256x28x28 	 output shape: 256x14x14
+1	Layer Name: Conv2d_6_depthwise/BatchNorm 	 Layer time: 0.8495 	 number of inputs: 5 	 input shape: 256x14x14 	 output shape: 256x14x14
+2	Layer Name: Conv2d_6_depthwise/Relu6 	 Layer time: 0.3729 	 number of inputs: 1 	 input shape: 256x14x14 	 output shape: 256x14x14
+3	Layer Name: Conv2d_6_pointwise/Conv2D 	 Layer time: 14.4758 	 number of inputs: 3 	 input shape: 256x14x14 	 output shape: 512x14x14
+4	Layer Name: Conv2d_6_pointwise/BatchNorm 	 Layer time: 1.5061 	 number of inputs: 5 	 input shape: 512x14x14 	 output shape: 512x14x14
+5	Layer Name: Conv2d_6_pointwise/Relu6 	 Layer time: 0.6115 	 number of inputs: 1 	 input shape: 512x14x14 	 output shape: 512x14x14
+Layer Number: 0 	 time: 20.2110
+----------------------------
+
+ Sum of Layers time: 20.2110
+
+
+Graph6   Input: 0.0093332   Task: 69.5842   send: 2.18041   Out: 0.0023041   Process: 71.7762
+
+
+
+********
+
+0	Layer Name: NPU_MobileV1_7_7 	 Layer time: 25.0947 	 number of inputs: 1 	 input shape: 512x14x14 	 output shape: 512x14x14
+Layer Number: 0 	 time: 25.0947
+----------------------------
+
+ Sum of Layers time: 25.0947
+
+
+Graph7   Input: 0.0098583   Task: 33.6726   send: 2.74531   Out: 0.0023916   Process: 36.4302
+
+NPU NPU_MobileV1_7_7	AVG_input_time:7.4461	AVG_run_time:8.4111	AVG_prof_run_time:1.9785	AVG_output_time:6.4982
+
+
+********
+
+0	Layer Name: Conv2d_8_depthwise/depthwise 	 Layer time: 3.1970 	 number of inputs: 3 	 input shape: 512x14x14 	 output shape: 512x14x14
+1	Layer Name: Conv2d_8_depthwise/BatchNorm 	 Layer time: 1.4096 	 number of inputs: 5 	 input shape: 512x14x14 	 output shape: 512x14x14
+2	Layer Name: Conv2d_8_depthwise/Relu6 	 Layer time: 0.5220 	 number of inputs: 1 	 input shape: 512x14x14 	 output shape: 512x14x14
+3	Layer Name: Conv2d_8_pointwise/Conv2D 	 Layer time: 22.4643 	 number of inputs: 3 	 input shape: 512x14x14 	 output shape: 512x14x14
+4	Layer Name: Conv2d_8_pointwise/BatchNorm 	 Layer time: 1.2041 	 number of inputs: 5 	 input shape: 512x14x14 	 output shape: 512x14x14
+5	Layer Name: Conv2d_8_pointwise/Relu6 	 Layer time: 0.5452 	 number of inputs: 1 	 input shape: 512x14x14 	 output shape: 512x14x14
+Layer Number: 0 	 time: 29.3423
+----------------------------
+
+ Sum of Layers time: 29.3423
+
+
+Graph8   Input: 0.0094792   Task: 78.476   send: 3.60313   Out: 0.0024792   Process: 82.0911
+
+
+
+********
+
+0	Layer Name: NPU_MobileV1_9_9 	 Layer time: 25.0973 	 number of inputs: 1 	 input shape: 512x14x14 	 output shape: 512x14x14
+Layer Number: 0 	 time: 25.0973
+----------------------------
+
+ Sum of Layers time: 25.0973
+
+
+Graph9   Input: 0.0103835   Task: 33.6505   send: 1.5783   Out: 0.0023042   Process: 35.2415
+
+NPU NPU_MobileV1_9_9	AVG_input_time:7.4830	AVG_run_time:8.3363	AVG_prof_run_time:1.9499	AVG_output_time:6.5939
+
+
+********
+
+0	Layer Name: Conv2d_10_depthwise/depthwise 	 Layer time: 2.5562 	 number of inputs: 3 	 input shape: 512x14x14 	 output shape: 512x14x14
+1	Layer Name: Conv2d_10_depthwise/BatchNorm 	 Layer time: 1.7825 	 number of inputs: 5 	 input shape: 512x14x14 	 output shape: 512x14x14
+2	Layer Name: Conv2d_10_depthwise/Relu6 	 Layer time: 0.6352 	 number of inputs: 1 	 input shape: 512x14x14 	 output shape: 512x14x14
+3	Layer Name: Conv2d_10_pointwise/Conv2D 	 Layer time: 28.8111 	 number of inputs: 3 	 input shape: 512x14x14 	 output shape: 512x14x14
+4	Layer Name: Conv2d_10_pointwise/BatchNorm 	 Layer time: 1.5201 	 number of inputs: 5 	 input shape: 512x14x14 	 output shape: 512x14x14
+5	Layer Name: Conv2d_10_pointwise/Relu6 	 Layer time: 0.6444 	 number of inputs: 1 	 input shape: 512x14x14 	 output shape: 512x14x14
+Layer Number: 0 	 time: 35.9495
+----------------------------
+
+ Sum of Layers time: 35.9495
+
+
+Graph10   Input: 0.0086334   Task: 85.1996   send: 2.34243   Out: 0.0024209   Process: 87.5531
+
+
+
+********
+
+0	Layer Name: NPU_MobileV1_11_11 	 Layer time: 24.6585 	 number of inputs: 1 	 input shape: 512x14x14 	 output shape: 512x14x14
+Layer Number: 0 	 time: 24.6585
+----------------------------
+
+ Sum of Layers time: 24.6585
+
+
+Graph11   Input: 0.0091292   Task: 33.205   send: 1.25326   Out: 0.0024209   Process: 34.4698
+
+NPU NPU_MobileV1_11_11	AVG_input_time:7.3481	AVG_run_time:8.6075	AVG_prof_run_time:1.9447	AVG_output_time:6.4034
+
+
+********
+
+0	Layer Name: Conv2d_12_depthwise/depthwise 	 Layer time: 1.7895 	 number of inputs: 3 	 input shape: 512x14x14 	 output shape: 512x7x7
+1	Layer Name: Conv2d_12_depthwise/BatchNorm 	 Layer time: 0.5324 	 number of inputs: 5 	 input shape: 512x7x7 	 output shape: 512x7x7
+2	Layer Name: Conv2d_12_depthwise/Relu6 	 Layer time: 0.2963 	 number of inputs: 1 	 input shape: 512x7x7 	 output shape: 512x7x7
+3	Layer Name: Conv2d_12_pointwise/Conv2D 	 Layer time: 24.1480 	 number of inputs: 3 	 input shape: 512x7x7 	 output shape: 1024x7x7
+4	Layer Name: Conv2d_12_pointwise/BatchNorm 	 Layer time: 1.0113 	 number of inputs: 5 	 input shape: 1024x7x7 	 output shape: 1024x7x7
+5	Layer Name: Conv2d_12_pointwise/Relu6 	 Layer time: 0.3926 	 number of inputs: 1 	 input shape: 1024x7x7 	 output shape: 1024x7x7
+Layer Number: 0 	 time: 28.1700
+----------------------------
+
+ Sum of Layers time: 28.1700
+
+
+Graph12   Input: 0.0083415   Task: 77.499   send: 0.720066   Out: 0.0021291   Process: 78.2295
+
+
+
+********
+
+0	Layer Name: NPU_MobileV1_13_13 	 Layer time: 10.3205 	 number of inputs: 1 	 input shape: 1024x7x7 	 output shape: 1000
+Layer Number: 0 	 time: 10.3205
+----------------------------
+
+ Sum of Layers time: 10.3205
+
+
+Graph13   Input: 0.0081374   Task: 18.8512   send: 0.0026832   Out: 1.68887   Process: 20.5509
+
+NPU NPU_MobileV1_13_13	AVG_input_time:3.6641	AVG_run_time:4.5722	AVG_prof_run_time:1.3170	AVG_output_time:0.0597
+
+
+********
+
+
+
+AVG Latency: 995.994
+
+Profiling these DVFS settings finised
+Please Enter the desired Frequency setttings: 
+1 Running Graph with 1-1-1-1-1-1-1-1-1-1-1-1-1-1 LW DVFS
+governor 0 task:Conv2d_0/Relu6 freqs:0,1,0
+governor 1 task:Conv2d_10_pointwise/Relu6 freqs:0,1,0
+governor 2 task:Conv2d_12_pointwise/Relu6 freqs:0,1,0
+governor 3 task:Conv2d_2_pointwise/Relu6 freqs:0,1,0
+governor 4 task:Conv2d_4_pointwise/Relu6 freqs:0,1,0
+governor 5 task:Conv2d_6_pointwise/Relu6 freqs:0,1,0
+governor 6 task:Conv2d_8_pointwise/Relu6 freqs:0,1,0
+governor 7 task:NPU_MobileV1_11_11 freqs:0,1,0
+governor 8 task:NPU_MobileV1_13_13 freqs:0,1,0
+governor 9 task:NPU_MobileV1_1_1 freqs:0,1,0
+governor 10 task:NPU_MobileV1_3_3 freqs:0,1,0
+governor 11 task:NPU_MobileV1_5_5 freqs:0,1,0
+governor 12 task:NPU_MobileV1_7_7 freqs:0,1,0
+governor 13 task:NPU_MobileV1_9_9 freqs:0,1,0
+set_GPIOs with mode: layers
+tass name: Conv2d_0	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_0/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_0/Relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: NPU_MobileV1_1_1	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_2_depthwise/depthwise	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_2_depthwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_2_depthwise/Relu6	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_2_pointwise/Conv2D	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_2_pointwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_2_pointwise/Relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: NPU_MobileV1_3_3	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_4_depthwise/depthwise	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_4_depthwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_4_depthwise/Relu6	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_4_pointwise/Conv2D	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_4_pointwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_4_pointwise/Relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: NPU_MobileV1_5_5	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_6_depthwise/depthwise	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_6_depthwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_6_depthwise/Relu6	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_6_pointwise/Conv2D	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_6_pointwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_6_pointwise/Relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: NPU_MobileV1_7_7	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_8_depthwise/depthwise	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_8_depthwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_8_depthwise/Relu6	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_8_pointwise/Conv2D	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_8_pointwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_8_pointwise/Relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: NPU_MobileV1_9_9	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_10_depthwise/depthwise	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_10_depthwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_10_depthwise/Relu6	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_10_pointwise/Conv2D	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_10_pointwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_10_pointwise/Relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: NPU_MobileV1_11_11	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_12_depthwise/depthwise	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_12_depthwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_12_depthwise/Relu6	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_12_pointwise/Conv2D	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_12_pointwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_12_pointwise/Relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: NPU_MobileV1_13_13	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+
+
+
+*********************************************
+start running graphs
+*************************************************
+
+
+
+
+************
+Photo_index:1
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//gondola.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0138 - [id = 885], n04525038 velvet
+0.0097 - [id = 904], n04589890 window screen
+0.0093 - [id = 911], n04599235 wool, woolen, woollen
+0.0081 - [id = 794], n04209239 shower curtain
+0.0067 - [id = 418], n02783161 ballpoint, ballpoint pen, ballpen, Biro
+
+
+************
+Photo_index:2
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//school_bus.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0127 - [id = 885], n04525038 velvet
+0.0088 - [id = 904], n04589890 window screen
+0.0084 - [id = 911], n04599235 wool, woolen, woollen
+0.0068 - [id = 794], n04209239 shower curtain
+0.0060 - [id = 845], n04376876 syringe
+
+
+************
+Photo_index:3
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//go_kart.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0131 - [id = 885], n04525038 velvet
+0.0089 - [id = 911], n04599235 wool, woolen, woollen
+0.0087 - [id = 904], n04589890 window screen
+0.0076 - [id = 794], n04209239 shower curtain
+0.0067 - [id = 879], n04507155 umbrella
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//gold_fish.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0140 - [id = 885], n04525038 velvet
+0.0088 - [id = 904], n04589890 window screen
+0.0086 - [id = 911], n04599235 wool, woolen, woollen
+0.0067 - [id = 794], n04209239 shower curtain
+0.0061 - [id = 845], n04376876 syringe
+
+
+************
+Photo_index:1
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//gondola.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0138 - [id = 885], n04525038 velvet
+0.0097 - [id = 904], n04589890 window screen
+0.0093 - [id = 911], n04599235 wool, woolen, woollen
+0.0081 - [id = 794], n04209239 shower curtain
+0.0067 - [id = 418], n02783161 ballpoint, ballpoint pen, ballpen, Biro
+
+
+************
+Photo_index:2
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//school_bus.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0127 - [id = 885], n04525038 velvet
+0.0088 - [id = 904], n04589890 window screen
+0.0084 - [id = 911], n04599235 wool, woolen, woollen
+0.0068 - [id = 794], n04209239 shower curtain
+0.0060 - [id = 845], n04376876 syringe
+
+
+************
+Photo_index:3
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//go_kart.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0131 - [id = 885], n04525038 velvet
+0.0089 - [id = 911], n04599235 wool, woolen, woollen
+0.0087 - [id = 904], n04589890 window screen
+0.0076 - [id = 794], n04209239 shower curtain
+0.0067 - [id = 879], n04507155 umbrella
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//gold_fish.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0140 - [id = 885], n04525038 velvet
+0.0088 - [id = 904], n04589890 window screen
+0.0086 - [id = 911], n04599235 wool, woolen, woollen
+0.0067 - [id = 794], n04209239 shower curtain
+0.0061 - [id = 845], n04376876 syringe
+
+
+************
+Photo_index:1
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//gondola.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0138 - [id = 885], n04525038 velvet
+0.0097 - [id = 904], n04589890 window screen
+0.0093 - [id = 911], n04599235 wool, woolen, woollen
+0.0081 - [id = 794], n04209239 shower curtain
+0.0067 - [id = 418], n02783161 ballpoint, ballpoint pen, ballpen, Biro
+
+
+************
+Photo_index:2
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//school_bus.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0127 - [id = 885], n04525038 velvet
+0.0088 - [id = 904], n04589890 window screen
+0.0084 - [id = 911], n04599235 wool, woolen, woollen
+0.0068 - [id = 794], n04209239 shower curtain
+0.0060 - [id = 845], n04376876 syringe
+
+
+************
+Photo_index:3
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//go_kart.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0131 - [id = 885], n04525038 velvet
+0.0089 - [id = 911], n04599235 wool, woolen, woollen
+0.0087 - [id = 904], n04589890 window screen
+0.0076 - [id = 794], n04209239 shower curtain
+0.0067 - [id = 879], n04507155 umbrella
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//gold_fish.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0140 - [id = 885], n04525038 velvet
+0.0088 - [id = 904], n04589890 window screen
+0.0086 - [id = 911], n04599235 wool, woolen, woollen
+0.0067 - [id = 794], n04209239 shower curtain
+0.0061 - [id = 845], n04376876 syringe
+
+
+************
+Photo_index:1
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//gondola.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0138 - [id = 885], n04525038 velvet
+0.0097 - [id = 904], n04589890 window screen
+0.0093 - [id = 911], n04599235 wool, woolen, woollen
+0.0081 - [id = 794], n04209239 shower curtain
+0.0067 - [id = 418], n02783161 ballpoint, ballpoint pen, ballpen, Biro
+0	Layer Name: Conv2d_0 	 Layer time: 8.8502 	 number of inputs: 3 	 input shape: 3x224x224 	 output shape: 32x112x112
+1	Layer Name: Conv2d_0/BatchNorm 	 Layer time: 5.4790 	 number of inputs: 5 	 input shape: 32x112x112 	 output shape: 32x112x112
+2	Layer Name: Conv2d_0/Relu6 	 Layer time: 2.1354 	 number of inputs: 1 	 input shape: 32x112x112 	 output shape: 32x112x112
+Layer Number: 0 	 time: 16.4646
+----------------------------
+
+ Sum of Layers time: 16.4646
+
+
+Graph0   Input: 46.8588   Task: 41.3273   send: 2.43387   Out: 0.001721   Process: 90.6217
+
+
+
+********
+
+0	Layer Name: NPU_MobileV1_1_1 	 Layer time: 102.0233 	 number of inputs: 1 	 input shape: 32x112x112 	 output shape: 64x112x112
+Layer Number: 0 	 time: 102.0233
+----------------------------
+
+ Sum of Layers time: 102.0233
+
+
+Graph1   Input: 0.0087499   Task: 110.509   send: 2.07836   Out: 0.0018375   Process: 112.598
+
+NPU NPU_MobileV1_1_1	AVG_input_time:21.1435	AVG_run_time:33.9762	AVG_prof_run_time:10.3541	AVG_output_time:43.6399
+
+
+********
+
+0	Layer Name: Conv2d_2_depthwise/depthwise 	 Layer time: 3.8879 	 number of inputs: 3 	 input shape: 64x112x112 	 output shape: 64x56x56
+1	Layer Name: Conv2d_2_depthwise/BatchNorm 	 Layer time: 1.8220 	 number of inputs: 5 	 input shape: 64x56x56 	 output shape: 64x56x56
+2	Layer Name: Conv2d_2_depthwise/Relu6 	 Layer time: 0.8583 	 number of inputs: 1 	 input shape: 64x56x56 	 output shape: 64x56x56
+3	Layer Name: Conv2d_2_pointwise/Conv2D 	 Layer time: 7.9074 	 number of inputs: 3 	 input shape: 64x56x56 	 output shape: 128x56x56
+4	Layer Name: Conv2d_2_pointwise/BatchNorm 	 Layer time: 3.3272 	 number of inputs: 5 	 input shape: 128x56x56 	 output shape: 128x56x56
+5	Layer Name: Conv2d_2_pointwise/Relu6 	 Layer time: 1.4001 	 number of inputs: 1 	 input shape: 128x56x56 	 output shape: 128x56x56
+Layer Number: 0 	 time: 19.2029
+----------------------------
+
+ Sum of Layers time: 19.2029
+
+
+Graph2   Input: 0.0092166   Task: 68.2787   send: 1.68729   Out: 0.0018376   Process: 69.9771
+
+
+
+********
+
+0	Layer Name: NPU_MobileV1_3_3 	 Layer time: 62.5125 	 number of inputs: 1 	 input shape: 128x56x56 	 output shape: 128x56x56
+Layer Number: 0 	 time: 62.5125
+----------------------------
+
+ Sum of Layers time: 62.5125
+
+
+Graph3   Input: 0.0087499   Task: 70.9865   send: 1.33134   Out: 0.0018958   Process: 72.3285
+
+NPU NPU_MobileV1_3_3	AVG_input_time:19.5662	AVG_run_time:20.6275	AVG_prof_run_time:6.2829	AVG_output_time:19.3128
+
+
+********
+
+0	Layer Name: Conv2d_4_depthwise/depthwise 	 Layer time: 2.2567 	 number of inputs: 3 	 input shape: 128x56x56 	 output shape: 128x28x28
+1	Layer Name: Conv2d_4_depthwise/BatchNorm 	 Layer time: 1.0394 	 number of inputs: 5 	 input shape: 128x28x28 	 output shape: 128x28x28
+2	Layer Name: Conv2d_4_depthwise/Relu6 	 Layer time: 0.4505 	 number of inputs: 1 	 input shape: 128x28x28 	 output shape: 128x28x28
+3	Layer Name: Conv2d_4_pointwise/Conv2D 	 Layer time: 8.5932 	 number of inputs: 3 	 input shape: 128x28x28 	 output shape: 256x28x28
+4	Layer Name: Conv2d_4_pointwise/BatchNorm 	 Layer time: 1.8465 	 number of inputs: 5 	 input shape: 256x28x28 	 output shape: 256x28x28
+5	Layer Name: Conv2d_4_pointwise/Relu6 	 Layer time: 0.7709 	 number of inputs: 1 	 input shape: 256x28x28 	 output shape: 256x28x28
+Layer Number: 0 	 time: 14.9573
+----------------------------
+
+ Sum of Layers time: 14.9573
+
+
+Graph4   Input: 0.0074957   Task: 63.9879   send: 1.54172   Out: 0.0016623   Process: 65.5388
+
+
+
+********
+
+0	Layer Name: NPU_MobileV1_5_5 	 Layer time: 33.8496 	 number of inputs: 1 	 input shape: 256x28x28 	 output shape: 256x28x28
+Layer Number: 0 	 time: 33.8496
+----------------------------
+
+ Sum of Layers time: 33.8496
+
+
+Graph5   Input: 0.0070584   Task: 42.3089   send: 0.501229   Out: 0.001604   Process: 42.8188
+
+NPU NPU_MobileV1_5_5	AVG_input_time:9.9056	AVG_run_time:12.7362	AVG_prof_run_time:4.0533	AVG_output_time:8.5163
+
+
+********
+
+0	Layer Name: Conv2d_6_depthwise/depthwise 	 Layer time: 1.8465 	 number of inputs: 3 	 input shape: 256x28x28 	 output shape: 256x14x14
+1	Layer Name: Conv2d_6_depthwise/BatchNorm 	 Layer time: 0.6585 	 number of inputs: 5 	 input shape: 256x14x14 	 output shape: 256x14x14
+2	Layer Name: Conv2d_6_depthwise/Relu6 	 Layer time: 0.2653 	 number of inputs: 1 	 input shape: 256x14x14 	 output shape: 256x14x14
+3	Layer Name: Conv2d_6_pointwise/Conv2D 	 Layer time: 9.0824 	 number of inputs: 3 	 input shape: 256x14x14 	 output shape: 512x14x14
+4	Layer Name: Conv2d_6_pointwise/BatchNorm 	 Layer time: 0.9811 	 number of inputs: 5 	 input shape: 512x14x14 	 output shape: 512x14x14
+5	Layer Name: Conv2d_6_pointwise/Relu6 	 Layer time: 0.4203 	 number of inputs: 1 	 input shape: 512x14x14 	 output shape: 512x14x14
+Layer Number: 0 	 time: 13.2540
+----------------------------
+
+ Sum of Layers time: 13.2540
+
+
+Graph6   Input: 0.0067082   Task: 62.3776   send: 0.784467   Out: 0.001575   Process: 63.1703
+
+
+
+********
+
+0	Layer Name: NPU_MobileV1_7_7 	 Layer time: 20.3541 	 number of inputs: 1 	 input shape: 512x14x14 	 output shape: 512x14x14
+Layer Number: 0 	 time: 20.3541
+----------------------------
+
+ Sum of Layers time: 20.3541
+
+
+Graph7   Input: 0.0066791   Task: 28.798   send: 0.691921   Out: 0.0015458   Process: 29.4982
+
+NPU NPU_MobileV1_7_7	AVG_input_time:5.1962	AVG_run_time:7.9536	AVG_prof_run_time:1.9850	AVG_output_time:4.7601
+
+
+********
+
+0	Layer Name: Conv2d_8_depthwise/depthwise 	 Layer time: 2.2035 	 number of inputs: 3 	 input shape: 512x14x14 	 output shape: 512x14x14
+1	Layer Name: Conv2d_8_depthwise/BatchNorm 	 Layer time: 0.9286 	 number of inputs: 5 	 input shape: 512x14x14 	 output shape: 512x14x14
+2	Layer Name: Conv2d_8_depthwise/Relu6 	 Layer time: 0.3564 	 number of inputs: 1 	 input shape: 512x14x14 	 output shape: 512x14x14
+3	Layer Name: Conv2d_8_pointwise/Conv2D 	 Layer time: 15.5286 	 number of inputs: 3 	 input shape: 512x14x14 	 output shape: 512x14x14
+4	Layer Name: Conv2d_8_pointwise/BatchNorm 	 Layer time: 0.8151 	 number of inputs: 5 	 input shape: 512x14x14 	 output shape: 512x14x14
+5	Layer Name: Conv2d_8_pointwise/Relu6 	 Layer time: 0.3605 	 number of inputs: 1 	 input shape: 512x14x14 	 output shape: 512x14x14
+Layer Number: 0 	 time: 20.1927
+----------------------------
+
+ Sum of Layers time: 20.1927
+
+
+Graph8   Input: 0.0070584   Task: 69.1141   send: 1.49549   Out: 0.0017208   Process: 70.6183
+
+
+
+********
+
+0	Layer Name: NPU_MobileV1_9_9 	 Layer time: 19.3707 	 number of inputs: 1 	 input shape: 512x14x14 	 output shape: 512x14x14
+Layer Number: 0 	 time: 19.3707
+----------------------------
+
+ Sum of Layers time: 19.3707
+
+
+Graph9   Input: 0.0076124   Task: 27.8054   send: 0.817892   Out: 0.0015459   Process: 28.6325
+
+NPU NPU_MobileV1_9_9	AVG_input_time:4.9298	AVG_run_time:7.5619	AVG_prof_run_time:1.9636	AVG_output_time:4.5498
+
+
+********
+
+0	Layer Name: Conv2d_10_depthwise/depthwise 	 Layer time: 1.9006 	 number of inputs: 3 	 input shape: 512x14x14 	 output shape: 512x14x14
+1	Layer Name: Conv2d_10_depthwise/BatchNorm 	 Layer time: 1.0493 	 number of inputs: 5 	 input shape: 512x14x14 	 output shape: 512x14x14
+2	Layer Name: Conv2d_10_depthwise/Relu6 	 Layer time: 0.3760 	 number of inputs: 1 	 input shape: 512x14x14 	 output shape: 512x14x14
+3	Layer Name: Conv2d_10_pointwise/Conv2D 	 Layer time: 14.8335 	 number of inputs: 3 	 input shape: 512x14x14 	 output shape: 512x14x14
+4	Layer Name: Conv2d_10_pointwise/BatchNorm 	 Layer time: 0.8842 	 number of inputs: 5 	 input shape: 512x14x14 	 output shape: 512x14x14
+5	Layer Name: Conv2d_10_pointwise/Relu6 	 Layer time: 0.3967 	 number of inputs: 1 	 input shape: 512x14x14 	 output shape: 512x14x14
+Layer Number: 0 	 time: 19.4403
+----------------------------
+
+ Sum of Layers time: 19.4403
+
+
+Graph10   Input: 0.0070001   Task: 68.4486   send: 1.59428   Out: 0.0015751   Process: 70.0514
+
+
+
+********
+
+0	Layer Name: NPU_MobileV1_11_11 	 Layer time: 20.0980 	 number of inputs: 1 	 input shape: 512x14x14 	 output shape: 512x14x14
+Layer Number: 0 	 time: 20.0980
+----------------------------
+
+ Sum of Layers time: 20.0980
+
+
+Graph11   Input: 0.0062418   Task: 28.5405   send: 0.412008   Out: 0.0017209   Process: 28.9605
+
+NPU NPU_MobileV1_11_11	AVG_input_time:4.9727	AVG_run_time:7.8898	AVG_prof_run_time:1.9448	AVG_output_time:4.6867
+
+
+********
+
+0	Layer Name: Conv2d_12_depthwise/depthwise 	 Layer time: 1.3319 	 number of inputs: 3 	 input shape: 512x14x14 	 output shape: 512x7x7
+1	Layer Name: Conv2d_12_depthwise/BatchNorm 	 Layer time: 0.3661 	 number of inputs: 5 	 input shape: 512x7x7 	 output shape: 512x7x7
+2	Layer Name: Conv2d_12_depthwise/Relu6 	 Layer time: 0.1889 	 number of inputs: 1 	 input shape: 512x7x7 	 output shape: 512x7x7
+3	Layer Name: Conv2d_12_pointwise/Conv2D 	 Layer time: 14.7511 	 number of inputs: 3 	 input shape: 512x7x7 	 output shape: 1024x7x7
+4	Layer Name: Conv2d_12_pointwise/BatchNorm 	 Layer time: 0.6317 	 number of inputs: 5 	 input shape: 1024x7x7 	 output shape: 1024x7x7
+5	Layer Name: Conv2d_12_pointwise/Relu6 	 Layer time: 0.2564 	 number of inputs: 1 	 input shape: 1024x7x7 	 output shape: 1024x7x7
+Layer Number: 0 	 time: 17.5260
+----------------------------
+
+ Sum of Layers time: 17.5260
+
+
+Graph12   Input: 0.0062127   Task: 66.5822   send: 1.26878   Out: 0.001575   Process: 67.8588
+
+
+
+********
+
+0	Layer Name: NPU_MobileV1_13_13 	 Layer time: 8.7166 	 number of inputs: 1 	 input shape: 1024x7x7 	 output shape: 1000
+Layer Number: 0 	 time: 8.7166
+----------------------------
+
+ Sum of Layers time: 8.7166
+
+
+Graph13   Input: 0.00595   Task: 17.1102   send: 0.0019833   Out: 1.12076   Process: 18.2389
+
+NPU NPU_MobileV1_13_13	AVG_input_time:2.4584	AVG_run_time:4.4160	AVG_prof_run_time:1.3250	AVG_output_time:0.0405
+
+
+********
+
+
+
+AVG Latency: 822.852
+
+Profiling these DVFS settings finised
+Please Enter the desired Frequency setttings: 
+2 Running Graph with 2-2-2-2-2-2-2-2-2-2-2-2-2-2 LW DVFS
+governor 0 task:Conv2d_0/Relu6 freqs:0,2,0
+governor 1 task:Conv2d_10_pointwise/Relu6 freqs:0,2,0
+governor 2 task:Conv2d_12_pointwise/Relu6 freqs:0,2,0
+governor 3 task:Conv2d_2_pointwise/Relu6 freqs:0,2,0
+governor 4 task:Conv2d_4_pointwise/Relu6 freqs:0,2,0
+governor 5 task:Conv2d_6_pointwise/Relu6 freqs:0,2,0
+governor 6 task:Conv2d_8_pointwise/Relu6 freqs:0,2,0
+governor 7 task:NPU_MobileV1_11_11 freqs:0,2,0
+governor 8 task:NPU_MobileV1_13_13 freqs:0,2,0
+governor 9 task:NPU_MobileV1_1_1 freqs:0,2,0
+governor 10 task:NPU_MobileV1_3_3 freqs:0,2,0
+governor 11 task:NPU_MobileV1_5_5 freqs:0,2,0
+governor 12 task:NPU_MobileV1_7_7 freqs:0,2,0
+governor 13 task:NPU_MobileV1_9_9 freqs:0,2,0
+set_GPIOs with mode: layers
+tass name: Conv2d_0	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_0/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_0/Relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: NPU_MobileV1_1_1	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_2_depthwise/depthwise	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_2_depthwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_2_depthwise/Relu6	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_2_pointwise/Conv2D	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_2_pointwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_2_pointwise/Relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: NPU_MobileV1_3_3	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_4_depthwise/depthwise	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_4_depthwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_4_depthwise/Relu6	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_4_pointwise/Conv2D	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_4_pointwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_4_pointwise/Relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: NPU_MobileV1_5_5	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_6_depthwise/depthwise	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_6_depthwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_6_depthwise/Relu6	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_6_pointwise/Conv2D	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_6_pointwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_6_pointwise/Relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: NPU_MobileV1_7_7	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_8_depthwise/depthwise	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_8_depthwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_8_depthwise/Relu6	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_8_pointwise/Conv2D	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_8_pointwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_8_pointwise/Relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: NPU_MobileV1_9_9	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_10_depthwise/depthwise	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_10_depthwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_10_depthwise/Relu6	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_10_pointwise/Conv2D	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_10_pointwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_10_pointwise/Relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: NPU_MobileV1_11_11	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_12_depthwise/depthwise	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_12_depthwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_12_depthwise/Relu6	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_12_pointwise/Conv2D	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_12_pointwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_12_pointwise/Relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: NPU_MobileV1_13_13	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+
+
+
+*********************************************
+start running graphs
+*************************************************
+
+
+
+
+************
+Photo_index:2
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//school_bus.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0127 - [id = 885], n04525038 velvet
+0.0088 - [id = 904], n04589890 window screen
+0.0084 - [id = 911], n04599235 wool, woolen, woollen
+0.0068 - [id = 794], n04209239 shower curtain
+0.0060 - [id = 845], n04376876 syringe
+
+
+************
+Photo_index:3
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//go_kart.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0131 - [id = 885], n04525038 velvet
+0.0089 - [id = 911], n04599235 wool, woolen, woollen
+0.0087 - [id = 904], n04589890 window screen
+0.0076 - [id = 794], n04209239 shower curtain
+0.0067 - [id = 879], n04507155 umbrella
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//gold_fish.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0140 - [id = 885], n04525038 velvet
+0.0088 - [id = 904], n04589890 window screen
+0.0086 - [id = 911], n04599235 wool, woolen, woollen
+0.0067 - [id = 794], n04209239 shower curtain
+0.0061 - [id = 845], n04376876 syringe
+
+
+************
+Photo_index:1
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//gondola.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0138 - [id = 885], n04525038 velvet
+0.0097 - [id = 904], n04589890 window screen
+0.0093 - [id = 911], n04599235 wool, woolen, woollen
+0.0081 - [id = 794], n04209239 shower curtain
+0.0067 - [id = 418], n02783161 ballpoint, ballpoint pen, ballpen, Biro
+
+
+************
+Photo_index:2
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//school_bus.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0127 - [id = 885], n04525038 velvet
+0.0088 - [id = 904], n04589890 window screen
+0.0084 - [id = 911], n04599235 wool, woolen, woollen
+0.0068 - [id = 794], n04209239 shower curtain
+0.0060 - [id = 845], n04376876 syringe
+
+
+************
+Photo_index:3
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//go_kart.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0131 - [id = 885], n04525038 velvet
+0.0089 - [id = 911], n04599235 wool, woolen, woollen
+0.0087 - [id = 904], n04589890 window screen
+0.0076 - [id = 794], n04209239 shower curtain
+0.0067 - [id = 879], n04507155 umbrella
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//gold_fish.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0140 - [id = 885], n04525038 velvet
+0.0088 - [id = 904], n04589890 window screen
+0.0086 - [id = 911], n04599235 wool, woolen, woollen
+0.0067 - [id = 794], n04209239 shower curtain
+0.0061 - [id = 845], n04376876 syringe
+
+
+************
+Photo_index:1
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//gondola.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0138 - [id = 885], n04525038 velvet
+0.0097 - [id = 904], n04589890 window screen
+0.0093 - [id = 911], n04599235 wool, woolen, woollen
+0.0081 - [id = 794], n04209239 shower curtain
+0.0067 - [id = 418], n02783161 ballpoint, ballpoint pen, ballpen, Biro
+
+
+************
+Photo_index:2
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//school_bus.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0127 - [id = 885], n04525038 velvet
+0.0088 - [id = 904], n04589890 window screen
+0.0084 - [id = 911], n04599235 wool, woolen, woollen
+0.0068 - [id = 794], n04209239 shower curtain
+0.0060 - [id = 845], n04376876 syringe
+
+
+************
+Photo_index:3
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//go_kart.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0131 - [id = 885], n04525038 velvet
+0.0089 - [id = 911], n04599235 wool, woolen, woollen
+0.0087 - [id = 904], n04589890 window screen
+0.0076 - [id = 794], n04209239 shower curtain
+0.0067 - [id = 879], n04507155 umbrella
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//gold_fish.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0140 - [id = 885], n04525038 velvet
+0.0088 - [id = 904], n04589890 window screen
+0.0086 - [id = 911], n04599235 wool, woolen, woollen
+0.0067 - [id = 794], n04209239 shower curtain
+0.0061 - [id = 845], n04376876 syringe
+
+
+************
+Photo_index:1
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//gondola.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0138 - [id = 885], n04525038 velvet
+0.0097 - [id = 904], n04589890 window screen
+0.0093 - [id = 911], n04599235 wool, woolen, woollen
+0.0081 - [id = 794], n04209239 shower curtain
+0.0067 - [id = 418], n02783161 ballpoint, ballpoint pen, ballpen, Biro
+
+
+************
+Photo_index:2
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//school_bus.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0127 - [id = 885], n04525038 velvet
+0.0088 - [id = 904], n04589890 window screen
+0.0084 - [id = 911], n04599235 wool, woolen, woollen
+0.0068 - [id = 794], n04209239 shower curtain
+0.0060 - [id = 845], n04376876 syringe
+0	Layer Name: Conv2d_0 	 Layer time: 6.9613 	 number of inputs: 3 	 input shape: 3x224x224 	 output shape: 32x112x112
+1	Layer Name: Conv2d_0/BatchNorm 	 Layer time: 3.9030 	 number of inputs: 5 	 input shape: 32x112x112 	 output shape: 32x112x112
+2	Layer Name: Conv2d_0/Relu6 	 Layer time: 1.7008 	 number of inputs: 1 	 input shape: 32x112x112 	 output shape: 32x112x112
+Layer Number: 0 	 time: 12.5651
+----------------------------
+
+ Sum of Layers time: 12.5651
+
+
+Graph0   Input: 30.5075   Task: 37.3225   send: 1.55829   Out: 0.0013415   Process: 69.3897
+
+
+
+********
+
+0	Layer Name: NPU_MobileV1_1_1 	 Layer time: 83.1063 	 number of inputs: 1 	 input shape: 32x112x112 	 output shape: 64x112x112
+Layer Number: 0 	 time: 83.1063
+----------------------------
+
+ Sum of Layers time: 83.1063
+
+
+Graph1   Input: 0.007525   Task: 91.5352   send: 1.59507   Out: 0.0015167   Process: 93.1393
+
+NPU NPU_MobileV1_1_1	AVG_input_time:15.3423	AVG_run_time:32.1266	AVG_prof_run_time:10.3559	AVG_output_time:32.4503
+
+
+********
+
+0	Layer Name: Conv2d_2_depthwise/depthwise 	 Layer time: 3.8050 	 number of inputs: 3 	 input shape: 64x112x112 	 output shape: 64x56x56
+1	Layer Name: Conv2d_2_depthwise/BatchNorm 	 Layer time: 1.8893 	 number of inputs: 5 	 input shape: 64x56x56 	 output shape: 64x56x56
+2	Layer Name: Conv2d_2_depthwise/Relu6 	 Layer time: 0.8573 	 number of inputs: 1 	 input shape: 64x56x56 	 output shape: 64x56x56
+3	Layer Name: Conv2d_2_pointwise/Conv2D 	 Layer time: 8.5056 	 number of inputs: 3 	 input shape: 64x56x56 	 output shape: 128x56x56
+4	Layer Name: Conv2d_2_pointwise/BatchNorm 	 Layer time: 2.7465 	 number of inputs: 5 	 input shape: 128x56x56 	 output shape: 128x56x56
+5	Layer Name: Conv2d_2_pointwise/Relu6 	 Layer time: 1.2937 	 number of inputs: 1 	 input shape: 128x56x56 	 output shape: 128x56x56
+Layer Number: 0 	 time: 19.0975
+----------------------------
+
+ Sum of Layers time: 19.0975
+
+
+Graph2   Input: 0.0080792   Task: 68.1072   send: 2.04397   Out: 0.0014292   Process: 70.1607
+
+
+
+********
+
+0	Layer Name: NPU_MobileV1_3_3 	 Layer time: 51.7579 	 number of inputs: 1 	 input shape: 128x56x56 	 output shape: 128x56x56
+Layer Number: 0 	 time: 51.7579
+----------------------------
+
+ Sum of Layers time: 51.7579
+
+
+Graph3   Input: 0.0110249   Task: 60.1953   send: 1.04329   Out: 0.0014587   Process: 61.2511
+
+NPU NPU_MobileV1_3_3	AVG_input_time:14.5772	AVG_run_time:19.5972	AVG_prof_run_time:6.2881	AVG_output_time:14.8364
+
+
+********
+
+0	Layer Name: Conv2d_4_depthwise/depthwise 	 Layer time: 1.8702 	 number of inputs: 3 	 input shape: 128x56x56 	 output shape: 128x28x28
+1	Layer Name: Conv2d_4_depthwise/BatchNorm 	 Layer time: 0.8852 	 number of inputs: 5 	 input shape: 128x28x28 	 output shape: 128x28x28
+2	Layer Name: Conv2d_4_depthwise/Relu6 	 Layer time: 0.3645 	 number of inputs: 1 	 input shape: 128x28x28 	 output shape: 128x28x28
+3	Layer Name: Conv2d_4_pointwise/Conv2D 	 Layer time: 8.2143 	 number of inputs: 3 	 input shape: 128x28x28 	 output shape: 256x28x28
+4	Layer Name: Conv2d_4_pointwise/BatchNorm 	 Layer time: 1.7952 	 number of inputs: 5 	 input shape: 256x28x28 	 output shape: 256x28x28
+5	Layer Name: Conv2d_4_pointwise/Relu6 	 Layer time: 0.7167 	 number of inputs: 1 	 input shape: 256x28x28 	 output shape: 256x28x28
+Layer Number: 0 	 time: 13.8461
+----------------------------
+
+ Sum of Layers time: 13.8461
+
+
+Graph4   Input: 0.0062708   Task: 62.7673   send: 0.805175   Out: 0.0014585   Process: 63.5802
+
+
+
+********
+
+0	Layer Name: NPU_MobileV1_5_5 	 Layer time: 28.4082 	 number of inputs: 1 	 input shape: 256x28x28 	 output shape: 256x28x28
+Layer Number: 0 	 time: 28.4082
+----------------------------
+
+ Sum of Layers time: 28.4082
+
+
+Graph5   Input: 0.0061834   Task: 36.8209   send: 0.676433   Out: 0.001225   Process: 37.5048
+
+NPU NPU_MobileV1_5_5	AVG_input_time:7.1724	AVG_run_time:11.9032	AVG_prof_run_time:4.0547	AVG_output_time:6.6055
+
+
+********
+
+0	Layer Name: Conv2d_6_depthwise/depthwise 	 Layer time: 1.4290 	 number of inputs: 3 	 input shape: 256x28x28 	 output shape: 256x14x14
+1	Layer Name: Conv2d_6_depthwise/BatchNorm 	 Layer time: 0.5190 	 number of inputs: 5 	 input shape: 256x14x14 	 output shape: 256x14x14
+2	Layer Name: Conv2d_6_depthwise/Relu6 	 Layer time: 0.2248 	 number of inputs: 1 	 input shape: 256x14x14 	 output shape: 256x14x14
+3	Layer Name: Conv2d_6_pointwise/Conv2D 	 Layer time: 7.6705 	 number of inputs: 3 	 input shape: 256x14x14 	 output shape: 512x14x14
+4	Layer Name: Conv2d_6_pointwise/BatchNorm 	 Layer time: 0.8078 	 number of inputs: 5 	 input shape: 512x14x14 	 output shape: 512x14x14
+5	Layer Name: Conv2d_6_pointwise/Relu6 	 Layer time: 0.3589 	 number of inputs: 1 	 input shape: 512x14x14 	 output shape: 512x14x14
+Layer Number: 0 	 time: 11.0101
+----------------------------
+
+ Sum of Layers time: 11.0101
+
+
+Graph6   Input: 0.0049875   Task: 59.9887   send: 0.210146   Out: 0.0011082   Process: 60.2049
+
+
+
+********
+
+0	Layer Name: NPU_MobileV1_7_7 	 Layer time: 17.0297 	 number of inputs: 1 	 input shape: 512x14x14 	 output shape: 512x14x14
+Layer Number: 0 	 time: 17.0297
+----------------------------
+
+ Sum of Layers time: 17.0297
+
+
+Graph7   Input: 0.0061833   Task: 25.3968   send: 1.13555   Out: 0.0011373   Process: 26.5397
+
+NPU NPU_MobileV1_7_7	AVG_input_time:3.6561	AVG_run_time:7.6070	AVG_prof_run_time:1.9732	AVG_output_time:3.4348
+
+
+********
+
+0	Layer Name: Conv2d_8_depthwise/depthwise 	 Layer time: 1.6236 	 number of inputs: 3 	 input shape: 512x14x14 	 output shape: 512x14x14
+1	Layer Name: Conv2d_8_depthwise/BatchNorm 	 Layer time: 0.7300 	 number of inputs: 5 	 input shape: 512x14x14 	 output shape: 512x14x14
+2	Layer Name: Conv2d_8_depthwise/Relu6 	 Layer time: 0.2960 	 number of inputs: 1 	 input shape: 512x14x14 	 output shape: 512x14x14
+3	Layer Name: Conv2d_8_pointwise/Conv2D 	 Layer time: 11.4954 	 number of inputs: 3 	 input shape: 512x14x14 	 output shape: 512x14x14
+4	Layer Name: Conv2d_8_pointwise/BatchNorm 	 Layer time: 0.5913 	 number of inputs: 5 	 input shape: 512x14x14 	 output shape: 512x14x14
+5	Layer Name: Conv2d_8_pointwise/Relu6 	 Layer time: 0.3224 	 number of inputs: 1 	 input shape: 512x14x14 	 output shape: 512x14x14
+Layer Number: 0 	 time: 15.0588
+----------------------------
+
+ Sum of Layers time: 15.0588
+
+
+Graph8   Input: 0.0064461   Task: 63.8683   send: 1.45408   Out: 0.0013417   Process: 65.3302
+
+
+
+********
+
+0	Layer Name: NPU_MobileV1_9_9 	 Layer time: 16.6776 	 number of inputs: 1 	 input shape: 512x14x14 	 output shape: 512x14x14
+Layer Number: 0 	 time: 16.6776
+----------------------------
+
+ Sum of Layers time: 16.6776
+
+
+Graph9   Input: 0.0058916   Task: 25.0382   send: 0.48475   Out: 0.0011956   Process: 25.53
+
+NPU NPU_MobileV1_9_9	AVG_input_time:3.6417	AVG_run_time:7.1456	AVG_prof_run_time:1.9508	AVG_output_time:3.5208
+
+
+********
+
+0	Layer Name: Conv2d_10_depthwise/depthwise 	 Layer time: 1.4302 	 number of inputs: 3 	 input shape: 512x14x14 	 output shape: 512x14x14
+1	Layer Name: Conv2d_10_depthwise/BatchNorm 	 Layer time: 0.9815 	 number of inputs: 5 	 input shape: 512x14x14 	 output shape: 512x14x14
+2	Layer Name: Conv2d_10_depthwise/Relu6 	 Layer time: 0.3746 	 number of inputs: 1 	 input shape: 512x14x14 	 output shape: 512x14x14
+3	Layer Name: Conv2d_10_pointwise/Conv2D 	 Layer time: 14.7333 	 number of inputs: 3 	 input shape: 512x14x14 	 output shape: 512x14x14
+4	Layer Name: Conv2d_10_pointwise/BatchNorm 	 Layer time: 0.8042 	 number of inputs: 5 	 input shape: 512x14x14 	 output shape: 512x14x14
+5	Layer Name: Conv2d_10_pointwise/Relu6 	 Layer time: 0.3412 	 number of inputs: 1 	 input shape: 512x14x14 	 output shape: 512x14x14
+Layer Number: 0 	 time: 18.6650
+----------------------------
+
+ Sum of Layers time: 18.6650
+
+
+Graph10   Input: 0.0048417   Task: 67.6379   send: 0.181038   Out: 0.0010789   Process: 67.8249
+
+
+
+********
+
+0	Layer Name: NPU_MobileV1_11_11 	 Layer time: 16.7349 	 number of inputs: 1 	 input shape: 512x14x14 	 output shape: 512x14x14
+Layer Number: 0 	 time: 16.7349
+----------------------------
+
+ Sum of Layers time: 16.7349
+
+
+Graph11   Input: 0.0055123   Task: 25.1201   send: 0.683492   Out: 0.0011377   Process: 25.8102
+
+NPU NPU_MobileV1_11_11	AVG_input_time:3.6226	AVG_run_time:7.3205	AVG_prof_run_time:1.9527	AVG_output_time:3.5053
+
+
+********
+
+0	Layer Name: Conv2d_12_depthwise/depthwise 	 Layer time: 0.9859 	 number of inputs: 3 	 input shape: 512x14x14 	 output shape: 512x7x7
+1	Layer Name: Conv2d_12_depthwise/BatchNorm 	 Layer time: 0.2786 	 number of inputs: 5 	 input shape: 512x7x7 	 output shape: 512x7x7
+2	Layer Name: Conv2d_12_depthwise/Relu6 	 Layer time: 0.1520 	 number of inputs: 1 	 input shape: 512x7x7 	 output shape: 512x7x7
+3	Layer Name: Conv2d_12_pointwise/Conv2D 	 Layer time: 13.2732 	 number of inputs: 3 	 input shape: 512x7x7 	 output shape: 1024x7x7
+4	Layer Name: Conv2d_12_pointwise/BatchNorm 	 Layer time: 0.5100 	 number of inputs: 5 	 input shape: 1024x7x7 	 output shape: 1024x7x7
+5	Layer Name: Conv2d_12_pointwise/Relu6 	 Layer time: 0.2063 	 number of inputs: 1 	 input shape: 1024x7x7 	 output shape: 1024x7x7
+Layer Number: 0 	 time: 15.4059
+----------------------------
+
+ Sum of Layers time: 15.4059
+
+
+Graph12   Input: 0.0049583   Task: 64.3447   send: 0.118358   Out: 0.0009917   Process: 64.469
+
+
+
+********
+
+0	Layer Name: NPU_MobileV1_13_13 	 Layer time: 8.5611 	 number of inputs: 1 	 input shape: 1024x7x7 	 output shape: 1000
+Layer Number: 0 	 time: 8.5611
+----------------------------
+
+ Sum of Layers time: 8.5611
+
+
+Graph13   Input: 0.0047249   Task: 16.8708   send: 0.0016334   Out: 0.540459   Process: 17.4176
+
+NPU NPU_MobileV1_13_13	AVG_input_time:1.8118	AVG_run_time:4.6902	AVG_prof_run_time:1.3190	AVG_output_time:0.0308
+
+
+********
+
+
+
+AVG Latency: 743.072
+
+Profiling these DVFS settings finised
+Please Enter the desired Frequency setttings: 
+3 Running Graph with 3-3-3-3-3-3-3-3-3-3-3-3-3-3 LW DVFS
+governor 0 task:Conv2d_0/Relu6 freqs:0,3,0
+governor 1 task:Conv2d_10_pointwise/Relu6 freqs:0,3,0
+governor 2 task:Conv2d_12_pointwise/Relu6 freqs:0,3,0
+governor 3 task:Conv2d_2_pointwise/Relu6 freqs:0,3,0
+governor 4 task:Conv2d_4_pointwise/Relu6 freqs:0,3,0
+governor 5 task:Conv2d_6_pointwise/Relu6 freqs:0,3,0
+governor 6 task:Conv2d_8_pointwise/Relu6 freqs:0,3,0
+governor 7 task:NPU_MobileV1_11_11 freqs:0,3,0
+governor 8 task:NPU_MobileV1_13_13 freqs:0,3,0
+governor 9 task:NPU_MobileV1_1_1 freqs:0,3,0
+governor 10 task:NPU_MobileV1_3_3 freqs:0,3,0
+governor 11 task:NPU_MobileV1_5_5 freqs:0,3,0
+governor 12 task:NPU_MobileV1_7_7 freqs:0,3,0
+governor 13 task:NPU_MobileV1_9_9 freqs:0,3,0
+set_GPIOs with mode: layers
+tass name: Conv2d_0	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_0/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_0/Relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: NPU_MobileV1_1_1	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_2_depthwise/depthwise	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_2_depthwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_2_depthwise/Relu6	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_2_pointwise/Conv2D	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_2_pointwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_2_pointwise/Relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: NPU_MobileV1_3_3	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_4_depthwise/depthwise	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_4_depthwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_4_depthwise/Relu6	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_4_pointwise/Conv2D	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_4_pointwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_4_pointwise/Relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: NPU_MobileV1_5_5	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_6_depthwise/depthwise	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_6_depthwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_6_depthwise/Relu6	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_6_pointwise/Conv2D	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_6_pointwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_6_pointwise/Relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: NPU_MobileV1_7_7	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_8_depthwise/depthwise	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_8_depthwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_8_depthwise/Relu6	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_8_pointwise/Conv2D	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_8_pointwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_8_pointwise/Relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: NPU_MobileV1_9_9	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_10_depthwise/depthwise	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_10_depthwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_10_depthwise/Relu6	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_10_pointwise/Conv2D	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_10_pointwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_10_pointwise/Relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: NPU_MobileV1_11_11	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_12_depthwise/depthwise	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_12_depthwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_12_depthwise/Relu6	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_12_pointwise/Conv2D	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_12_pointwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_12_pointwise/Relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: NPU_MobileV1_13_13	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+
+
+
+*********************************************
+start running graphs
+*************************************************
+
+
+
+
+************
+Photo_index:3
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//go_kart.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0131 - [id = 885], n04525038 velvet
+0.0089 - [id = 911], n04599235 wool, woolen, woollen
+0.0087 - [id = 904], n04589890 window screen
+0.0076 - [id = 794], n04209239 shower curtain
+0.0067 - [id = 879], n04507155 umbrella
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//gold_fish.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0140 - [id = 885], n04525038 velvet
+0.0088 - [id = 904], n04589890 window screen
+0.0086 - [id = 911], n04599235 wool, woolen, woollen
+0.0067 - [id = 794], n04209239 shower curtain
+0.0061 - [id = 845], n04376876 syringe
+
+
+************
+Photo_index:1
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//gondola.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0138 - [id = 885], n04525038 velvet
+0.0097 - [id = 904], n04589890 window screen
+0.0093 - [id = 911], n04599235 wool, woolen, woollen
+0.0081 - [id = 794], n04209239 shower curtain
+0.0067 - [id = 418], n02783161 ballpoint, ballpoint pen, ballpen, Biro
+
+
+************
+Photo_index:2
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//school_bus.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0127 - [id = 885], n04525038 velvet
+0.0088 - [id = 904], n04589890 window screen
+0.0084 - [id = 911], n04599235 wool, woolen, woollen
+0.0068 - [id = 794], n04209239 shower curtain
+0.0060 - [id = 845], n04376876 syringe
+
+
+************
+Photo_index:3
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//go_kart.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0131 - [id = 885], n04525038 velvet
+0.0089 - [id = 911], n04599235 wool, woolen, woollen
+0.0087 - [id = 904], n04589890 window screen
+0.0076 - [id = 794], n04209239 shower curtain
+0.0067 - [id = 879], n04507155 umbrella
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//gold_fish.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0140 - [id = 885], n04525038 velvet
+0.0088 - [id = 904], n04589890 window screen
+0.0086 - [id = 911], n04599235 wool, woolen, woollen
+0.0067 - [id = 794], n04209239 shower curtain
+0.0061 - [id = 845], n04376876 syringe
+
+
+************
+Photo_index:1
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//gondola.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0138 - [id = 885], n04525038 velvet
+0.0097 - [id = 904], n04589890 window screen
+0.0093 - [id = 911], n04599235 wool, woolen, woollen
+0.0081 - [id = 794], n04209239 shower curtain
+0.0067 - [id = 418], n02783161 ballpoint, ballpoint pen, ballpen, Biro
+
+
+************
+Photo_index:2
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//school_bus.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0127 - [id = 885], n04525038 velvet
+0.0088 - [id = 904], n04589890 window screen
+0.0084 - [id = 911], n04599235 wool, woolen, woollen
+0.0068 - [id = 794], n04209239 shower curtain
+0.0060 - [id = 845], n04376876 syringe
+
+
+************
+Photo_index:3
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//go_kart.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0131 - [id = 885], n04525038 velvet
+0.0089 - [id = 911], n04599235 wool, woolen, woollen
+0.0087 - [id = 904], n04589890 window screen
+0.0076 - [id = 794], n04209239 shower curtain
+0.0067 - [id = 879], n04507155 umbrella
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//gold_fish.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0140 - [id = 885], n04525038 velvet
+0.0088 - [id = 904], n04589890 window screen
+0.0086 - [id = 911], n04599235 wool, woolen, woollen
+0.0067 - [id = 794], n04209239 shower curtain
+0.0061 - [id = 845], n04376876 syringe
+
+
+************
+Photo_index:1
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//gondola.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0138 - [id = 885], n04525038 velvet
+0.0097 - [id = 904], n04589890 window screen
+0.0093 - [id = 911], n04599235 wool, woolen, woollen
+0.0081 - [id = 794], n04209239 shower curtain
+0.0067 - [id = 418], n02783161 ballpoint, ballpoint pen, ballpen, Biro
+
+
+************
+Photo_index:2
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//school_bus.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0127 - [id = 885], n04525038 velvet
+0.0088 - [id = 904], n04589890 window screen
+0.0084 - [id = 911], n04599235 wool, woolen, woollen
+0.0068 - [id = 794], n04209239 shower curtain
+0.0060 - [id = 845], n04376876 syringe
+
+
+************
+Photo_index:3
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//go_kart.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0131 - [id = 885], n04525038 velvet
+0.0089 - [id = 911], n04599235 wool, woolen, woollen
+0.0087 - [id = 904], n04589890 window screen
+0.0076 - [id = 794], n04209239 shower curtain
+0.0067 - [id = 879], n04507155 umbrella
+0	Layer Name: Conv2d_0 	 Layer time: 5.6287 	 number of inputs: 3 	 input shape: 3x224x224 	 output shape: 32x112x112
+1	Layer Name: Conv2d_0/BatchNorm 	 Layer time: 3.3165 	 number of inputs: 5 	 input shape: 32x112x112 	 output shape: 32x112x112
+2	Layer Name: Conv2d_0/Relu6 	 Layer time: 1.5198 	 number of inputs: 1 	 input shape: 32x112x112 	 output shape: 32x112x112
+Layer Number: 0 	 time: 10.4650
+----------------------------
+
+ Sum of Layers time: 10.4650
+
+
+Graph0   Input: 27.6851   Task: 35.1459   send: 1.37699   Out: 0.0012835   Process: 64.2092
+
+
+
+********
+
+0	Layer Name: NPU_MobileV1_1_1 	 Layer time: 72.6988 	 number of inputs: 1 	 input shape: 32x112x112 	 output shape: 64x112x112
+Layer Number: 0 	 time: 72.6988
+----------------------------
+
+ Sum of Layers time: 72.6988
+
+
+Graph1   Input: 0.0069127   Task: 81.0782   send: 2.04345   Out: 0.0012251   Process: 83.1298
+
+NPU NPU_MobileV1_1_1	AVG_input_time:12.4611	AVG_run_time:30.3082	AVG_prof_run_time:10.3626	AVG_output_time:27.4032
+
+
+********
+
+0	Layer Name: Conv2d_2_depthwise/depthwise 	 Layer time: 3.3794 	 number of inputs: 3 	 input shape: 64x112x112 	 output shape: 64x56x56
+1	Layer Name: Conv2d_2_depthwise/BatchNorm 	 Layer time: 1.6003 	 number of inputs: 5 	 input shape: 64x56x56 	 output shape: 64x56x56
+2	Layer Name: Conv2d_2_depthwise/Relu6 	 Layer time: 0.7445 	 number of inputs: 1 	 input shape: 64x56x56 	 output shape: 64x56x56
+3	Layer Name: Conv2d_2_pointwise/Conv2D 	 Layer time: 7.2713 	 number of inputs: 3 	 input shape: 64x56x56 	 output shape: 128x56x56
+4	Layer Name: Conv2d_2_pointwise/BatchNorm 	 Layer time: 2.5369 	 number of inputs: 5 	 input shape: 128x56x56 	 output shape: 128x56x56
+5	Layer Name: Conv2d_2_pointwise/Relu6 	 Layer time: 1.1590 	 number of inputs: 1 	 input shape: 128x56x56 	 output shape: 128x56x56
+Layer Number: 0 	 time: 16.6914
+----------------------------
+
+ Sum of Layers time: 16.6914
+
+
+Graph2   Input: 0.0122791   Task: 65.6148   send: 1.52437   Out: 0.0011666   Process: 67.1526
+
+
+
+********
+
+0	Layer Name: NPU_MobileV1_3_3 	 Layer time: 44.4686 	 number of inputs: 1 	 input shape: 128x56x56 	 output shape: 128x56x56
+Layer Number: 0 	 time: 44.4686
+----------------------------
+
+ Sum of Layers time: 44.4686
+
+
+Graph3   Input: 0.006679   Task: 52.8482   send: 0.728992   Out: 0.0011956   Process: 53.585
+
+NPU NPU_MobileV1_3_3	AVG_input_time:11.5087	AVG_run_time:18.4540	AVG_prof_run_time:6.2961	AVG_output_time:12.4224
+
+
+********
+
+0	Layer Name: Conv2d_4_depthwise/depthwise 	 Layer time: 1.6878 	 number of inputs: 3 	 input shape: 128x56x56 	 output shape: 128x28x28
+1	Layer Name: Conv2d_4_depthwise/BatchNorm 	 Layer time: 0.6906 	 number of inputs: 5 	 input shape: 128x28x28 	 output shape: 128x28x28
+2	Layer Name: Conv2d_4_depthwise/Relu6 	 Layer time: 0.2946 	 number of inputs: 1 	 input shape: 128x28x28 	 output shape: 128x28x28
+3	Layer Name: Conv2d_4_pointwise/Conv2D 	 Layer time: 6.2423 	 number of inputs: 3 	 input shape: 128x28x28 	 output shape: 256x28x28
+4	Layer Name: Conv2d_4_pointwise/BatchNorm 	 Layer time: 1.4024 	 number of inputs: 5 	 input shape: 256x28x28 	 output shape: 256x28x28
+5	Layer Name: Conv2d_4_pointwise/Relu6 	 Layer time: 0.6126 	 number of inputs: 1 	 input shape: 256x28x28 	 output shape: 256x28x28
+Layer Number: 0 	 time: 10.9304
+----------------------------
+
+ Sum of Layers time: 10.9304
+
+
+Graph4   Input: 0.0059791   Task: 59.8331   send: 1.24443   Out: 0.0011084   Process: 61.0847
+
+
+
+********
+
+0	Layer Name: NPU_MobileV1_5_5 	 Layer time: 24.8361 	 number of inputs: 1 	 input shape: 256x28x28 	 output shape: 256x28x28
+Layer Number: 0 	 time: 24.8361
+----------------------------
+
+ Sum of Layers time: 24.8361
+
+
+Graph5   Input: 0.0056292   Task: 33.1918   send: 0.521704   Out: 0.0011084   Process: 33.7202
+
+NPU NPU_MobileV1_5_5	AVG_input_time:5.7077	AVG_run_time:11.4329	AVG_prof_run_time:4.0471	AVG_output_time:5.5455
+
+
+********
+
+0	Layer Name: Conv2d_6_depthwise/depthwise 	 Layer time: 1.2290 	 number of inputs: 3 	 input shape: 256x28x28 	 output shape: 256x14x14
+1	Layer Name: Conv2d_6_depthwise/BatchNorm 	 Layer time: 0.3900 	 number of inputs: 5 	 input shape: 256x14x14 	 output shape: 256x14x14
+2	Layer Name: Conv2d_6_depthwise/Relu6 	 Layer time: 0.1799 	 number of inputs: 1 	 input shape: 256x14x14 	 output shape: 256x14x14
+3	Layer Name: Conv2d_6_pointwise/Conv2D 	 Layer time: 5.7958 	 number of inputs: 3 	 input shape: 256x14x14 	 output shape: 512x14x14
+4	Layer Name: Conv2d_6_pointwise/BatchNorm 	 Layer time: 0.6339 	 number of inputs: 5 	 input shape: 512x14x14 	 output shape: 512x14x14
+5	Layer Name: Conv2d_6_pointwise/Relu6 	 Layer time: 0.4173 	 number of inputs: 1 	 input shape: 512x14x14 	 output shape: 512x14x14
+Layer Number: 0 	 time: 8.6459
+----------------------------
+
+ Sum of Layers time: 8.6459
+
+
+Graph6   Input: 0.0049874   Task: 57.5325   send: 0.525671   Out: 0.0009042   Process: 58.0641
+
+
+
+********
+
+0	Layer Name: NPU_MobileV1_7_7 	 Layer time: 14.4714 	 number of inputs: 1 	 input shape: 512x14x14 	 output shape: 512x14x14
+Layer Number: 0 	 time: 14.4714
+----------------------------
+
+ Sum of Layers time: 14.4714
+
+
+Graph7   Input: 0.005279   Task: 22.7948   send: 0.704812   Out: 0.0009333   Process: 23.5059
+
+NPU NPU_MobileV1_7_7	AVG_input_time:2.9119	AVG_run_time:6.7806	AVG_prof_run_time:1.9779	AVG_output_time:2.8936
+
+
+********
+
+0	Layer Name: Conv2d_8_depthwise/depthwise 	 Layer time: 1.5167 	 number of inputs: 3 	 input shape: 512x14x14 	 output shape: 512x14x14
+1	Layer Name: Conv2d_8_depthwise/BatchNorm 	 Layer time: 0.7094 	 number of inputs: 5 	 input shape: 512x14x14 	 output shape: 512x14x14
+2	Layer Name: Conv2d_8_depthwise/Relu6 	 Layer time: 0.2798 	 number of inputs: 1 	 input shape: 512x14x14 	 output shape: 512x14x14
+3	Layer Name: Conv2d_8_pointwise/Conv2D 	 Layer time: 12.9803 	 number of inputs: 3 	 input shape: 512x14x14 	 output shape: 512x14x14
+4	Layer Name: Conv2d_8_pointwise/BatchNorm 	 Layer time: 0.6093 	 number of inputs: 5 	 input shape: 512x14x14 	 output shape: 512x14x14
+5	Layer Name: Conv2d_8_pointwise/Relu6 	 Layer time: 0.2853 	 number of inputs: 1 	 input shape: 512x14x14 	 output shape: 512x14x14
+Layer Number: 0 	 time: 16.3808
+----------------------------
+
+ Sum of Layers time: 16.3808
+
+
+Graph8   Input: 0.0046085   Task: 65.2588   send: 0.394917   Out: 0.0009042   Process: 65.6592
+
+
+
+********
+
+0	Layer Name: NPU_MobileV1_9_9 	 Layer time: 14.4133 	 number of inputs: 1 	 input shape: 512x14x14 	 output shape: 512x14x14
+Layer Number: 0 	 time: 14.4133
+----------------------------
+
+ Sum of Layers time: 14.4133
+
+
+Graph9   Input: 0.0049291   Task: 22.7326   send: 0.225983   Out: 0.0009334   Process: 22.9645
+
+NPU NPU_MobileV1_9_9	AVG_input_time:2.9117	AVG_run_time:6.5545	AVG_prof_run_time:1.9569	AVG_output_time:3.0693
+
+
+********
+
+0	Layer Name: Conv2d_10_depthwise/depthwise 	 Layer time: 1.1914 	 number of inputs: 3 	 input shape: 512x14x14 	 output shape: 512x14x14
+1	Layer Name: Conv2d_10_depthwise/BatchNorm 	 Layer time: 0.7334 	 number of inputs: 5 	 input shape: 512x14x14 	 output shape: 512x14x14
+2	Layer Name: Conv2d_10_depthwise/Relu6 	 Layer time: 0.2889 	 number of inputs: 1 	 input shape: 512x14x14 	 output shape: 512x14x14
+3	Layer Name: Conv2d_10_pointwise/Conv2D 	 Layer time: 12.8675 	 number of inputs: 3 	 input shape: 512x14x14 	 output shape: 512x14x14
+4	Layer Name: Conv2d_10_pointwise/BatchNorm 	 Layer time: 0.7017 	 number of inputs: 5 	 input shape: 512x14x14 	 output shape: 512x14x14
+5	Layer Name: Conv2d_10_pointwise/Relu6 	 Layer time: 0.2943 	 number of inputs: 1 	 input shape: 512x14x14 	 output shape: 512x14x14
+Layer Number: 0 	 time: 16.0772
+----------------------------
+
+ Sum of Layers time: 16.0772
+
+
+Graph10   Input: 0.0052207   Task: 64.9671   send: 0.469817   Out: 0.000875   Process: 65.443
+
+
+
+********
+
+0	Layer Name: NPU_MobileV1_11_11 	 Layer time: 14.6722 	 number of inputs: 1 	 input shape: 512x14x14 	 output shape: 512x14x14
+Layer Number: 0 	 time: 14.6722
+----------------------------
+
+ Sum of Layers time: 14.6722
+
+
+Graph11   Input: 0.0047832   Task: 23.001   send: 0.77245   Out: 0.0010207   Process: 23.7793
+
+NPU NPU_MobileV1_11_11	AVG_input_time:2.9069	AVG_run_time:6.9250	AVG_prof_run_time:1.9423	AVG_output_time:2.8657
+
+
+********
+
+0	Layer Name: Conv2d_12_depthwise/depthwise 	 Layer time: 0.8309 	 number of inputs: 3 	 input shape: 512x14x14 	 output shape: 512x7x7
+1	Layer Name: Conv2d_12_depthwise/BatchNorm 	 Layer time: 0.2319 	 number of inputs: 5 	 input shape: 512x7x7 	 output shape: 512x7x7
+2	Layer Name: Conv2d_12_depthwise/Relu6 	 Layer time: 0.1273 	 number of inputs: 1 	 input shape: 512x7x7 	 output shape: 512x7x7
+3	Layer Name: Conv2d_12_pointwise/Conv2D 	 Layer time: 10.9381 	 number of inputs: 3 	 input shape: 512x7x7 	 output shape: 1024x7x7
+4	Layer Name: Conv2d_12_pointwise/BatchNorm 	 Layer time: 0.4200 	 number of inputs: 5 	 input shape: 1024x7x7 	 output shape: 1024x7x7
+5	Layer Name: Conv2d_12_pointwise/Relu6 	 Layer time: 0.1694 	 number of inputs: 1 	 input shape: 1024x7x7 	 output shape: 1024x7x7
+Layer Number: 0 	 time: 12.7176
+----------------------------
+
+ Sum of Layers time: 12.7176
+
+
+Graph12   Input: 0.0045206   Task: 61.5963   send: 0.117804   Out: 0.0009626   Process: 61.7196
+
+
+
+********
+
+0	Layer Name: NPU_MobileV1_13_13 	 Layer time: 7.0461 	 number of inputs: 1 	 input shape: 1024x7x7 	 output shape: 1000
+Layer Number: 0 	 time: 7.0461
+----------------------------
+
+ Sum of Layers time: 7.0461
+
+
+Graph13   Input: 0.0048125   Task: 15.3028   send: 0.0014   Out: 0.395033   Process: 15.7041
+
+NPU NPU_MobileV1_13_13	AVG_input_time:1.4704	AVG_run_time:3.7680	AVG_prof_run_time:1.3286	AVG_output_time:0.0266
+
+
+********
+
+
+
+AVG Latency: 695.299
+
+Profiling these DVFS settings finised
+Please Enter the desired Frequency setttings: 
+4 Running Graph with 4-4-4-4-4-4-4-4-4-4-4-4-4-4 LW DVFS
+governor 0 task:Conv2d_0/Relu6 freqs:0,4,0
+governor 1 task:Conv2d_10_pointwise/Relu6 freqs:0,4,0
+governor 2 task:Conv2d_12_pointwise/Relu6 freqs:0,4,0
+governor 3 task:Conv2d_2_pointwise/Relu6 freqs:0,4,0
+governor 4 task:Conv2d_4_pointwise/Relu6 freqs:0,4,0
+governor 5 task:Conv2d_6_pointwise/Relu6 freqs:0,4,0
+governor 6 task:Conv2d_8_pointwise/Relu6 freqs:0,4,0
+governor 7 task:NPU_MobileV1_11_11 freqs:0,4,0
+governor 8 task:NPU_MobileV1_13_13 freqs:0,4,0
+governor 9 task:NPU_MobileV1_1_1 freqs:0,4,0
+governor 10 task:NPU_MobileV1_3_3 freqs:0,4,0
+governor 11 task:NPU_MobileV1_5_5 freqs:0,4,0
+governor 12 task:NPU_MobileV1_7_7 freqs:0,4,0
+governor 13 task:NPU_MobileV1_9_9 freqs:0,4,0
+set_GPIOs with mode: layers
+tass name: Conv2d_0	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_0/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_0/Relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: NPU_MobileV1_1_1	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_2_depthwise/depthwise	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_2_depthwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_2_depthwise/Relu6	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_2_pointwise/Conv2D	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_2_pointwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_2_pointwise/Relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: NPU_MobileV1_3_3	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_4_depthwise/depthwise	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_4_depthwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_4_depthwise/Relu6	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_4_pointwise/Conv2D	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_4_pointwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_4_pointwise/Relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: NPU_MobileV1_5_5	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_6_depthwise/depthwise	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_6_depthwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_6_depthwise/Relu6	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_6_pointwise/Conv2D	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_6_pointwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_6_pointwise/Relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: NPU_MobileV1_7_7	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_8_depthwise/depthwise	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_8_depthwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_8_depthwise/Relu6	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_8_pointwise/Conv2D	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_8_pointwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_8_pointwise/Relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: NPU_MobileV1_9_9	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_10_depthwise/depthwise	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_10_depthwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_10_depthwise/Relu6	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_10_pointwise/Conv2D	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_10_pointwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_10_pointwise/Relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: NPU_MobileV1_11_11	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_12_depthwise/depthwise	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_12_depthwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_12_depthwise/Relu6	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_12_pointwise/Conv2D	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_12_pointwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_12_pointwise/Relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: NPU_MobileV1_13_13	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+
+
+
+*********************************************
+start running graphs
+*************************************************
+
+
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//gold_fish.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0140 - [id = 885], n04525038 velvet
+0.0088 - [id = 904], n04589890 window screen
+0.0086 - [id = 911], n04599235 wool, woolen, woollen
+0.0067 - [id = 794], n04209239 shower curtain
+0.0061 - [id = 845], n04376876 syringe
+
+
+************
+Photo_index:1
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//gondola.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0138 - [id = 885], n04525038 velvet
+0.0097 - [id = 904], n04589890 window screen
+0.0093 - [id = 911], n04599235 wool, woolen, woollen
+0.0081 - [id = 794], n04209239 shower curtain
+0.0067 - [id = 418], n02783161 ballpoint, ballpoint pen, ballpen, Biro
+
+
+************
+Photo_index:2
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//school_bus.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0127 - [id = 885], n04525038 velvet
+0.0088 - [id = 904], n04589890 window screen
+0.0084 - [id = 911], n04599235 wool, woolen, woollen
+0.0068 - [id = 794], n04209239 shower curtain
+0.0060 - [id = 845], n04376876 syringe
+
+
+************
+Photo_index:3
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//go_kart.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0131 - [id = 885], n04525038 velvet
+0.0089 - [id = 911], n04599235 wool, woolen, woollen
+0.0087 - [id = 904], n04589890 window screen
+0.0076 - [id = 794], n04209239 shower curtain
+0.0067 - [id = 879], n04507155 umbrella
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//gold_fish.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0140 - [id = 885], n04525038 velvet
+0.0088 - [id = 904], n04589890 window screen
+0.0086 - [id = 911], n04599235 wool, woolen, woollen
+0.0067 - [id = 794], n04209239 shower curtain
+0.0061 - [id = 845], n04376876 syringe
+
+
+************
+Photo_index:1
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//gondola.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0138 - [id = 885], n04525038 velvet
+0.0097 - [id = 904], n04589890 window screen
+0.0093 - [id = 911], n04599235 wool, woolen, woollen
+0.0081 - [id = 794], n04209239 shower curtain
+0.0067 - [id = 418], n02783161 ballpoint, ballpoint pen, ballpen, Biro
+
+
+************
+Photo_index:2
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//school_bus.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0127 - [id = 885], n04525038 velvet
+0.0088 - [id = 904], n04589890 window screen
+0.0084 - [id = 911], n04599235 wool, woolen, woollen
+0.0068 - [id = 794], n04209239 shower curtain
+0.0060 - [id = 845], n04376876 syringe
+
+
+************
+Photo_index:3
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//go_kart.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0131 - [id = 885], n04525038 velvet
+0.0089 - [id = 911], n04599235 wool, woolen, woollen
+0.0087 - [id = 904], n04589890 window screen
+0.0076 - [id = 794], n04209239 shower curtain
+0.0067 - [id = 879], n04507155 umbrella
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//gold_fish.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0140 - [id = 885], n04525038 velvet
+0.0088 - [id = 904], n04589890 window screen
+0.0086 - [id = 911], n04599235 wool, woolen, woollen
+0.0067 - [id = 794], n04209239 shower curtain
+0.0061 - [id = 845], n04376876 syringe
+
+
+************
+Photo_index:1
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//gondola.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0138 - [id = 885], n04525038 velvet
+0.0097 - [id = 904], n04589890 window screen
+0.0093 - [id = 911], n04599235 wool, woolen, woollen
+0.0081 - [id = 794], n04209239 shower curtain
+0.0067 - [id = 418], n02783161 ballpoint, ballpoint pen, ballpen, Biro
+
+
+************
+Photo_index:2
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//school_bus.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0127 - [id = 885], n04525038 velvet
+0.0088 - [id = 904], n04589890 window screen
+0.0084 - [id = 911], n04599235 wool, woolen, woollen
+0.0068 - [id = 794], n04209239 shower curtain
+0.0060 - [id = 845], n04376876 syringe
+
+
+************
+Photo_index:3
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//go_kart.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0131 - [id = 885], n04525038 velvet
+0.0089 - [id = 911], n04599235 wool, woolen, woollen
+0.0087 - [id = 904], n04589890 window screen
+0.0076 - [id = 794], n04209239 shower curtain
+0.0067 - [id = 879], n04507155 umbrella
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//gold_fish.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0140 - [id = 885], n04525038 velvet
+0.0088 - [id = 904], n04589890 window screen
+0.0086 - [id = 911], n04599235 wool, woolen, woollen
+0.0067 - [id = 794], n04209239 shower curtain
+0.0061 - [id = 845], n04376876 syringe
+0	Layer Name: Conv2d_0 	 Layer time: 3.9378 	 number of inputs: 3 	 input shape: 3x224x224 	 output shape: 32x112x112
+1	Layer Name: Conv2d_0/BatchNorm 	 Layer time: 2.2071 	 number of inputs: 5 	 input shape: 32x112x112 	 output shape: 32x112x112
+2	Layer Name: Conv2d_0/Relu6 	 Layer time: 1.3777 	 number of inputs: 1 	 input shape: 32x112x112 	 output shape: 32x112x112
+Layer Number: 0 	 time: 7.5225
+----------------------------
+
+ Sum of Layers time: 7.5225
+
+
+Graph0   Input: 20.7495   Task: 32.16   send: 0.770088   Out: 0.00105   Process: 53.6807
+
+
+
+********
+
+0	Layer Name: NPU_MobileV1_1_1 	 Layer time: 66.0210 	 number of inputs: 1 	 input shape: 32x112x112 	 output shape: 64x112x112
+Layer Number: 0 	 time: 66.0210
+----------------------------
+
+ Sum of Layers time: 66.0210
+
+
+Graph1   Input: 0.0067959   Task: 74.3864   send: 1.5974   Out: 0.0010208   Process: 75.9917
+
+NPU NPU_MobileV1_1_1	AVG_input_time:10.4338	AVG_run_time:29.6159	AVG_prof_run_time:10.3658	AVG_output_time:23.5406
+
+
+********
+
+0	Layer Name: Conv2d_2_depthwise/depthwise 	 Layer time: 2.6764 	 number of inputs: 3 	 input shape: 64x112x112 	 output shape: 64x56x56
+1	Layer Name: Conv2d_2_depthwise/BatchNorm 	 Layer time: 1.1769 	 number of inputs: 5 	 input shape: 64x56x56 	 output shape: 64x56x56
+2	Layer Name: Conv2d_2_depthwise/Relu6 	 Layer time: 0.7339 	 number of inputs: 1 	 input shape: 64x56x56 	 output shape: 64x56x56
+3	Layer Name: Conv2d_2_pointwise/Conv2D 	 Layer time: 5.7907 	 number of inputs: 3 	 input shape: 64x56x56 	 output shape: 128x56x56
+4	Layer Name: Conv2d_2_pointwise/BatchNorm 	 Layer time: 2.2033 	 number of inputs: 5 	 input shape: 128x56x56 	 output shape: 128x56x56
+5	Layer Name: Conv2d_2_pointwise/Relu6 	 Layer time: 1.2121 	 number of inputs: 1 	 input shape: 128x56x56 	 output shape: 128x56x56
+Layer Number: 0 	 time: 13.7932
+----------------------------
+
+ Sum of Layers time: 13.7932
+
+
+Graph2   Input: 0.0187251   Task: 62.6755   send: 2.55313   Out: 0.0010209   Process: 65.2483
+
+
+
+********
+
+0	Layer Name: NPU_MobileV1_3_3 	 Layer time: 41.3789 	 number of inputs: 1 	 input shape: 128x56x56 	 output shape: 128x56x56
+Layer Number: 0 	 time: 41.3789
+----------------------------
+
+ Sum of Layers time: 41.3789
+
+
+Graph3   Input: 0.0063001   Task: 49.7462   send: 0.923154   Out: 0.0010208   Process: 50.6767
+
+NPU NPU_MobileV1_3_3	AVG_input_time:9.8853	AVG_run_time:18.0292	AVG_prof_run_time:6.2955	AVG_output_time:10.9272
+
+
+********
+
+0	Layer Name: Conv2d_4_depthwise/depthwise 	 Layer time: 1.4706 	 number of inputs: 3 	 input shape: 128x56x56 	 output shape: 128x28x28
+1	Layer Name: Conv2d_4_depthwise/BatchNorm 	 Layer time: 0.5336 	 number of inputs: 5 	 input shape: 128x28x28 	 output shape: 128x28x28
+2	Layer Name: Conv2d_4_depthwise/Relu6 	 Layer time: 0.2660 	 number of inputs: 1 	 input shape: 128x28x28 	 output shape: 128x28x28
+3	Layer Name: Conv2d_4_pointwise/Conv2D 	 Layer time: 4.9714 	 number of inputs: 3 	 input shape: 128x28x28 	 output shape: 256x28x28
+4	Layer Name: Conv2d_4_pointwise/BatchNorm 	 Layer time: 1.1164 	 number of inputs: 5 	 input shape: 256x28x28 	 output shape: 256x28x28
+5	Layer Name: Conv2d_4_pointwise/Relu6 	 Layer time: 0.5559 	 number of inputs: 1 	 input shape: 256x28x28 	 output shape: 256x28x28
+Layer Number: 0 	 time: 8.9139
+----------------------------
+
+ Sum of Layers time: 8.9139
+
+
+Graph4   Input: 0.0050167   Task: 57.7772   send: 0.405475   Out: 0.000875   Process: 58.1886
+
+
+
+********
+
+0	Layer Name: NPU_MobileV1_5_5 	 Layer time: 23.1347 	 number of inputs: 1 	 input shape: 256x28x28 	 output shape: 256x28x28
+Layer Number: 0 	 time: 23.1347
+----------------------------
+
+ Sum of Layers time: 23.1347
+
+
+Graph5   Input: 0.0052499   Task: 31.4783   send: 0.582371   Out: 0.0008751   Process: 32.0668
+
+NPU NPU_MobileV1_5_5	AVG_input_time:4.8006	AVG_run_time:11.4081	AVG_prof_run_time:4.0555	AVG_output_time:4.8732
+
+
+********
+
+0	Layer Name: Conv2d_6_depthwise/depthwise 	 Layer time: 1.0215 	 number of inputs: 3 	 input shape: 256x28x28 	 output shape: 256x14x14
+1	Layer Name: Conv2d_6_depthwise/BatchNorm 	 Layer time: 0.3321 	 number of inputs: 5 	 input shape: 256x14x14 	 output shape: 256x14x14
+2	Layer Name: Conv2d_6_depthwise/Relu6 	 Layer time: 0.1663 	 number of inputs: 1 	 input shape: 256x14x14 	 output shape: 256x14x14
+3	Layer Name: Conv2d_6_pointwise/Conv2D 	 Layer time: 5.2272 	 number of inputs: 3 	 input shape: 256x14x14 	 output shape: 512x14x14
+4	Layer Name: Conv2d_6_pointwise/BatchNorm 	 Layer time: 0.5450 	 number of inputs: 5 	 input shape: 512x14x14 	 output shape: 512x14x14
+5	Layer Name: Conv2d_6_pointwise/Relu6 	 Layer time: 0.2615 	 number of inputs: 1 	 input shape: 512x14x14 	 output shape: 512x14x14
+Layer Number: 0 	 time: 7.5535
+----------------------------
+
+ Sum of Layers time: 7.5535
+
+
+Graph6   Input: 0.0046375   Task: 56.3684   send: 0.430179   Out: 0.0008751   Process: 56.8041
+
+
+
+********
+
+0	Layer Name: NPU_MobileV1_7_7 	 Layer time: 14.0584 	 number of inputs: 1 	 input shape: 512x14x14 	 output shape: 512x14x14
+Layer Number: 0 	 time: 14.0584
+----------------------------
+
+ Sum of Layers time: 14.0584
+
+
+Graph7   Input: 0.0078461   Task: 22.3567   send: 0.719308   Out: 0.0008167   Process: 23.0847
+
+NPU NPU_MobileV1_7_7	AVG_input_time:2.4509	AVG_run_time:6.8722	AVG_prof_run_time:1.9824	AVG_output_time:2.6311
+
+
+********
+
+0	Layer Name: Conv2d_8_depthwise/depthwise 	 Layer time: 1.2898 	 number of inputs: 3 	 input shape: 512x14x14 	 output shape: 512x14x14
+1	Layer Name: Conv2d_8_depthwise/BatchNorm 	 Layer time: 0.5977 	 number of inputs: 5 	 input shape: 512x14x14 	 output shape: 512x14x14
+2	Layer Name: Conv2d_8_depthwise/Relu6 	 Layer time: 0.2463 	 number of inputs: 1 	 input shape: 512x14x14 	 output shape: 512x14x14
+3	Layer Name: Conv2d_8_pointwise/Conv2D 	 Layer time: 10.7029 	 number of inputs: 3 	 input shape: 512x14x14 	 output shape: 512x14x14
+4	Layer Name: Conv2d_8_pointwise/BatchNorm 	 Layer time: 0.5133 	 number of inputs: 5 	 input shape: 512x14x14 	 output shape: 512x14x14
+5	Layer Name: Conv2d_8_pointwise/Relu6 	 Layer time: 0.2425 	 number of inputs: 1 	 input shape: 512x14x14 	 output shape: 512x14x14
+Layer Number: 0 	 time: 13.5926
+----------------------------
+
+ Sum of Layers time: 13.5926
+
+
+Graph8   Input: 0.0041123   Task: 62.4041   send: 0.176371   Out: 0.000875   Process: 62.5854
+
+
+
+********
+
+0	Layer Name: NPU_MobileV1_9_9 	 Layer time: 13.7931 	 number of inputs: 1 	 input shape: 512x14x14 	 output shape: 512x14x14
+Layer Number: 0 	 time: 13.7931
+----------------------------
+
+ Sum of Layers time: 13.7931
+
+
+Graph9   Input: 0.0073502   Task: 22.0927   send: 0.220996   Out: 0.0007   Process: 22.3217
+
+NPU NPU_MobileV1_9_9	AVG_input_time:2.4434	AVG_run_time:6.6736	AVG_prof_run_time:1.9607	AVG_output_time:2.6349
+
+
+********
+
+0	Layer Name: Conv2d_10_depthwise/depthwise 	 Layer time: 1.0902 	 number of inputs: 3 	 input shape: 512x14x14 	 output shape: 512x14x14
+1	Layer Name: Conv2d_10_depthwise/BatchNorm 	 Layer time: 0.5703 	 number of inputs: 5 	 input shape: 512x14x14 	 output shape: 512x14x14
+2	Layer Name: Conv2d_10_depthwise/Relu6 	 Layer time: 0.2437 	 number of inputs: 1 	 input shape: 512x14x14 	 output shape: 512x14x14
+3	Layer Name: Conv2d_10_pointwise/Conv2D 	 Layer time: 10.1594 	 number of inputs: 3 	 input shape: 512x14x14 	 output shape: 512x14x14
+4	Layer Name: Conv2d_10_pointwise/BatchNorm 	 Layer time: 0.4791 	 number of inputs: 5 	 input shape: 512x14x14 	 output shape: 512x14x14
+5	Layer Name: Conv2d_10_pointwise/Relu6 	 Layer time: 0.2525 	 number of inputs: 1 	 input shape: 512x14x14 	 output shape: 512x14x14
+Layer Number: 0 	 time: 12.7951
+----------------------------
+
+ Sum of Layers time: 12.7951
+
+
+Graph10   Input: 0.0041125   Task: 61.5665   send: 0.174388   Out: 0.0007583   Process: 61.7458
+
+
+
+********
+
+0	Layer Name: NPU_MobileV1_11_11 	 Layer time: 13.9644 	 number of inputs: 1 	 input shape: 512x14x14 	 output shape: 512x14x14
+Layer Number: 0 	 time: 13.9644
+----------------------------
+
+ Sum of Layers time: 13.9644
+
+
+Graph11   Input: 0.0042584   Task: 22.2691   send: 0.647237   Out: 0.0008751   Process: 22.9215
+
+NPU NPU_MobileV1_11_11	AVG_input_time:2.4171	AVG_run_time:7.0123	AVG_prof_run_time:1.9464	AVG_output_time:2.5702
+
+
+********
+
+0	Layer Name: Conv2d_12_depthwise/depthwise 	 Layer time: 0.6725 	 number of inputs: 3 	 input shape: 512x14x14 	 output shape: 512x7x7
+1	Layer Name: Conv2d_12_depthwise/BatchNorm 	 Layer time: 0.1892 	 number of inputs: 5 	 input shape: 512x7x7 	 output shape: 512x7x7
+2	Layer Name: Conv2d_12_depthwise/Relu6 	 Layer time: 0.1105 	 number of inputs: 1 	 input shape: 512x7x7 	 output shape: 512x7x7
+3	Layer Name: Conv2d_12_pointwise/Conv2D 	 Layer time: 8.5891 	 number of inputs: 3 	 input shape: 512x7x7 	 output shape: 1024x7x7
+4	Layer Name: Conv2d_12_pointwise/BatchNorm 	 Layer time: 0.3522 	 number of inputs: 5 	 input shape: 1024x7x7 	 output shape: 1024x7x7
+5	Layer Name: Conv2d_12_pointwise/Relu6 	 Layer time: 0.1425 	 number of inputs: 1 	 input shape: 1024x7x7 	 output shape: 1024x7x7
+Layer Number: 0 	 time: 10.0560
+----------------------------
+
+ Sum of Layers time: 10.0560
+
+
+Graph12   Input: 0.0041126   Task: 58.8579   send: 0.112992   Out: 0.0007292   Process: 58.9757
+
+
+
+********
+
+0	Layer Name: NPU_MobileV1_13_13 	 Layer time: 7.3063 	 number of inputs: 1 	 input shape: 1024x7x7 	 output shape: 1000
+Layer Number: 0 	 time: 7.3063
+----------------------------
+
+ Sum of Layers time: 7.3063
+
+
+Graph13   Input: 0.0035876   Task: 15.5342   send: 0.0011664   Out: 0.252875   Process: 15.7919
+
+NPU NPU_MobileV1_13_13	AVG_input_time:1.2377	AVG_run_time:4.3583	AVG_prof_run_time:1.3280	AVG_output_time:0.0222
+
+
+********
+
+
+
+AVG Latency: 656.878
+
+Profiling these DVFS settings finised
+Please Enter the desired Frequency setttings: 
+5 Running Graph with 5-5-5-5-5-5-5-5-5-5-5-5-5-5 LW DVFS
+governor 0 task:Conv2d_0/Relu6 freqs:0,5,0
+governor 1 task:Conv2d_10_pointwise/Relu6 freqs:0,5,0
+governor 2 task:Conv2d_12_pointwise/Relu6 freqs:0,5,0
+governor 3 task:Conv2d_2_pointwise/Relu6 freqs:0,5,0
+governor 4 task:Conv2d_4_pointwise/Relu6 freqs:0,5,0
+governor 5 task:Conv2d_6_pointwise/Relu6 freqs:0,5,0
+governor 6 task:Conv2d_8_pointwise/Relu6 freqs:0,5,0
+governor 7 task:NPU_MobileV1_11_11 freqs:0,5,0
+governor 8 task:NPU_MobileV1_13_13 freqs:0,5,0
+governor 9 task:NPU_MobileV1_1_1 freqs:0,5,0
+governor 10 task:NPU_MobileV1_3_3 freqs:0,5,0
+governor 11 task:NPU_MobileV1_5_5 freqs:0,5,0
+governor 12 task:NPU_MobileV1_7_7 freqs:0,5,0
+governor 13 task:NPU_MobileV1_9_9 freqs:0,5,0
+set_GPIOs with mode: layers
+tass name: Conv2d_0	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_0/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_0/Relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: NPU_MobileV1_1_1	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_2_depthwise/depthwise	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_2_depthwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_2_depthwise/Relu6	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_2_pointwise/Conv2D	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_2_pointwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_2_pointwise/Relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: NPU_MobileV1_3_3	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_4_depthwise/depthwise	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_4_depthwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_4_depthwise/Relu6	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_4_pointwise/Conv2D	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_4_pointwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_4_pointwise/Relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: NPU_MobileV1_5_5	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_6_depthwise/depthwise	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_6_depthwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_6_depthwise/Relu6	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_6_pointwise/Conv2D	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_6_pointwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_6_pointwise/Relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: NPU_MobileV1_7_7	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_8_depthwise/depthwise	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_8_depthwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_8_depthwise/Relu6	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_8_pointwise/Conv2D	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_8_pointwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_8_pointwise/Relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: NPU_MobileV1_9_9	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_10_depthwise/depthwise	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_10_depthwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_10_depthwise/Relu6	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_10_pointwise/Conv2D	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_10_pointwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_10_pointwise/Relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: NPU_MobileV1_11_11	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_12_depthwise/depthwise	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_12_depthwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_12_depthwise/Relu6	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_12_pointwise/Conv2D	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_12_pointwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_12_pointwise/Relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: NPU_MobileV1_13_13	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+
+
+
+*********************************************
+start running graphs
+*************************************************
+
+
+
+
+************
+Photo_index:1
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//gondola.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0138 - [id = 885], n04525038 velvet
+0.0097 - [id = 904], n04589890 window screen
+0.0093 - [id = 911], n04599235 wool, woolen, woollen
+0.0081 - [id = 794], n04209239 shower curtain
+0.0067 - [id = 418], n02783161 ballpoint, ballpoint pen, ballpen, Biro
+
+
+************
+Photo_index:2
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//school_bus.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0127 - [id = 885], n04525038 velvet
+0.0088 - [id = 904], n04589890 window screen
+0.0084 - [id = 911], n04599235 wool, woolen, woollen
+0.0068 - [id = 794], n04209239 shower curtain
+0.0060 - [id = 845], n04376876 syringe
+
+
+************
+Photo_index:3
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//go_kart.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0131 - [id = 885], n04525038 velvet
+0.0089 - [id = 911], n04599235 wool, woolen, woollen
+0.0087 - [id = 904], n04589890 window screen
+0.0076 - [id = 794], n04209239 shower curtain
+0.0067 - [id = 879], n04507155 umbrella
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//gold_fish.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0140 - [id = 885], n04525038 velvet
+0.0088 - [id = 904], n04589890 window screen
+0.0086 - [id = 911], n04599235 wool, woolen, woollen
+0.0067 - [id = 794], n04209239 shower curtain
+0.0061 - [id = 845], n04376876 syringe
+
+
+************
+Photo_index:1
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//gondola.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0138 - [id = 885], n04525038 velvet
+0.0097 - [id = 904], n04589890 window screen
+0.0093 - [id = 911], n04599235 wool, woolen, woollen
+0.0081 - [id = 794], n04209239 shower curtain
+0.0067 - [id = 418], n02783161 ballpoint, ballpoint pen, ballpen, Biro
+
+
+************
+Photo_index:2
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//school_bus.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0127 - [id = 885], n04525038 velvet
+0.0088 - [id = 904], n04589890 window screen
+0.0084 - [id = 911], n04599235 wool, woolen, woollen
+0.0068 - [id = 794], n04209239 shower curtain
+0.0060 - [id = 845], n04376876 syringe
+
+
+************
+Photo_index:3
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//go_kart.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0131 - [id = 885], n04525038 velvet
+0.0089 - [id = 911], n04599235 wool, woolen, woollen
+0.0087 - [id = 904], n04589890 window screen
+0.0076 - [id = 794], n04209239 shower curtain
+0.0067 - [id = 879], n04507155 umbrella
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//gold_fish.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0140 - [id = 885], n04525038 velvet
+0.0088 - [id = 904], n04589890 window screen
+0.0086 - [id = 911], n04599235 wool, woolen, woollen
+0.0067 - [id = 794], n04209239 shower curtain
+0.0061 - [id = 845], n04376876 syringe
+
+
+************
+Photo_index:1
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//gondola.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0138 - [id = 885], n04525038 velvet
+0.0097 - [id = 904], n04589890 window screen
+0.0093 - [id = 911], n04599235 wool, woolen, woollen
+0.0081 - [id = 794], n04209239 shower curtain
+0.0067 - [id = 418], n02783161 ballpoint, ballpoint pen, ballpen, Biro
+
+
+************
+Photo_index:2
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//school_bus.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0127 - [id = 885], n04525038 velvet
+0.0088 - [id = 904], n04589890 window screen
+0.0084 - [id = 911], n04599235 wool, woolen, woollen
+0.0068 - [id = 794], n04209239 shower curtain
+0.0060 - [id = 845], n04376876 syringe
+
+
+************
+Photo_index:3
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//go_kart.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0131 - [id = 885], n04525038 velvet
+0.0089 - [id = 911], n04599235 wool, woolen, woollen
+0.0087 - [id = 904], n04589890 window screen
+0.0076 - [id = 794], n04209239 shower curtain
+0.0067 - [id = 879], n04507155 umbrella
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//gold_fish.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0140 - [id = 885], n04525038 velvet
+0.0088 - [id = 904], n04589890 window screen
+0.0086 - [id = 911], n04599235 wool, woolen, woollen
+0.0067 - [id = 794], n04209239 shower curtain
+0.0061 - [id = 845], n04376876 syringe
+
+
+************
+Photo_index:1
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//gondola.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0138 - [id = 885], n04525038 velvet
+0.0097 - [id = 904], n04589890 window screen
+0.0093 - [id = 911], n04599235 wool, woolen, woollen
+0.0081 - [id = 794], n04209239 shower curtain
+0.0067 - [id = 418], n02783161 ballpoint, ballpoint pen, ballpen, Biro
+0	Layer Name: Conv2d_0 	 Layer time: 4.3086 	 number of inputs: 3 	 input shape: 3x224x224 	 output shape: 32x112x112
+1	Layer Name: Conv2d_0/BatchNorm 	 Layer time: 2.1592 	 number of inputs: 5 	 input shape: 32x112x112 	 output shape: 32x112x112
+2	Layer Name: Conv2d_0/Relu6 	 Layer time: 1.3658 	 number of inputs: 1 	 input shape: 32x112x112 	 output shape: 32x112x112
+Layer Number: 0 	 time: 7.8336
+----------------------------
+
+ Sum of Layers time: 7.8336
+
+
+Graph0   Input: 17.7053   Task: 32.4086   send: 0.891625   Out: 0.0010791   Process: 51.0066
+
+
+
+********
+
+0	Layer Name: NPU_MobileV1_1_1 	 Layer time: 60.8117 	 number of inputs: 1 	 input shape: 32x112x112 	 output shape: 64x112x112
+Layer Number: 0 	 time: 60.8117
+----------------------------
+
+ Sum of Layers time: 60.8117
+
+
+Graph1   Input: 0.0063   Task: 69.1471   send: 1.42937   Out: 0.0010208   Process: 70.5837
+
+NPU NPU_MobileV1_1_1	AVG_input_time:8.7591	AVG_run_time:29.0925	AVG_prof_run_time:10.3612	AVG_output_time:20.4290
+
+
+********
+
+0	Layer Name: Conv2d_2_depthwise/depthwise 	 Layer time: 2.7395 	 number of inputs: 3 	 input shape: 64x112x112 	 output shape: 64x56x56
+1	Layer Name: Conv2d_2_depthwise/BatchNorm 	 Layer time: 1.1554 	 number of inputs: 5 	 input shape: 64x56x56 	 output shape: 64x56x56
+2	Layer Name: Conv2d_2_depthwise/Relu6 	 Layer time: 0.7058 	 number of inputs: 1 	 input shape: 64x56x56 	 output shape: 64x56x56
+3	Layer Name: Conv2d_2_pointwise/Conv2D 	 Layer time: 5.1943 	 number of inputs: 3 	 input shape: 64x56x56 	 output shape: 128x56x56
+4	Layer Name: Conv2d_2_pointwise/BatchNorm 	 Layer time: 1.9739 	 number of inputs: 5 	 input shape: 128x56x56 	 output shape: 128x56x56
+5	Layer Name: Conv2d_2_pointwise/Relu6 	 Layer time: 1.1430 	 number of inputs: 1 	 input shape: 128x56x56 	 output shape: 128x56x56
+Layer Number: 0 	 time: 12.9119
+----------------------------
+
+ Sum of Layers time: 12.9119
+
+
+Graph2   Input: 0.006621   Task: 61.7801   send: 2.5625   Out: 0.000875   Process: 64.3501
+
+
+
+********
+
+0	Layer Name: NPU_MobileV1_3_3 	 Layer time: 38.2309 	 number of inputs: 1 	 input shape: 128x56x56 	 output shape: 128x56x56
+Layer Number: 0 	 time: 38.2309
+----------------------------
+
+ Sum of Layers time: 38.2309
+
+
+Graph3   Input: 0.0056291   Task: 46.5536   send: 0.703267   Out: 0.0009334   Process: 47.2634
+
+NPU NPU_MobileV1_3_3	AVG_input_time:8.3075	AVG_run_time:18.0734	AVG_prof_run_time:6.2875	AVG_output_time:9.6689
+
+
+********
+
+0	Layer Name: Conv2d_4_depthwise/depthwise 	 Layer time: 1.2817 	 number of inputs: 3 	 input shape: 128x56x56 	 output shape: 128x28x28
+1	Layer Name: Conv2d_4_depthwise/BatchNorm 	 Layer time: 0.4488 	 number of inputs: 5 	 input shape: 128x28x28 	 output shape: 128x28x28
+2	Layer Name: Conv2d_4_depthwise/Relu6 	 Layer time: 0.7931 	 number of inputs: 1 	 input shape: 128x28x28 	 output shape: 128x28x28
+3	Layer Name: Conv2d_4_pointwise/Conv2D 	 Layer time: 4.2402 	 number of inputs: 3 	 input shape: 128x28x28 	 output shape: 256x28x28
+4	Layer Name: Conv2d_4_pointwise/BatchNorm 	 Layer time: 0.8607 	 number of inputs: 5 	 input shape: 256x28x28 	 output shape: 256x28x28
+5	Layer Name: Conv2d_4_pointwise/Relu6 	 Layer time: 0.5478 	 number of inputs: 1 	 input shape: 256x28x28 	 output shape: 256x28x28
+Layer Number: 0 	 time: 8.1724
+----------------------------
+
+ Sum of Layers time: 8.1724
+
+
+Graph4   Input: 0.0046083   Task: 56.9466   send: 0.747863   Out: 0.0007585   Process: 57.6998
+
+
+
+********
+
+0	Layer Name: NPU_MobileV1_5_5 	 Layer time: 20.7843 	 number of inputs: 1 	 input shape: 256x28x28 	 output shape: 256x28x28
+Layer Number: 0 	 time: 20.7843
+----------------------------
+
+ Sum of Layers time: 20.7843
+
+
+Graph5   Input: 0.0050459   Task: 29.0954   send: 0.577617   Out: 0.0007584   Process: 29.6788
+
+NPU NPU_MobileV1_5_5	AVG_input_time:4.1215	AVG_run_time:10.5410	AVG_prof_run_time:4.0502	AVG_output_time:4.2937
+
+
+********
+
+0	Layer Name: Conv2d_6_depthwise/depthwise 	 Layer time: 0.9628 	 number of inputs: 3 	 input shape: 256x28x28 	 output shape: 256x14x14
+1	Layer Name: Conv2d_6_depthwise/BatchNorm 	 Layer time: 0.2859 	 number of inputs: 5 	 input shape: 256x14x14 	 output shape: 256x14x14
+2	Layer Name: Conv2d_6_depthwise/Relu6 	 Layer time: 0.1472 	 number of inputs: 1 	 input shape: 256x14x14 	 output shape: 256x14x14
+3	Layer Name: Conv2d_6_pointwise/Conv2D 	 Layer time: 4.5877 	 number of inputs: 3 	 input shape: 256x14x14 	 output shape: 512x14x14
+4	Layer Name: Conv2d_6_pointwise/BatchNorm 	 Layer time: 0.5258 	 number of inputs: 5 	 input shape: 512x14x14 	 output shape: 512x14x14
+5	Layer Name: Conv2d_6_pointwise/Relu6 	 Layer time: 0.2320 	 number of inputs: 1 	 input shape: 512x14x14 	 output shape: 512x14x14
+Layer Number: 0 	 time: 6.7415
+----------------------------
+
+ Sum of Layers time: 6.7415
+
+
+Graph6   Input: 0.0042876   Task: 55.5209   send: 0.453221   Out: 0.0006707   Process: 55.9791
+
+
+
+********
+
+0	Layer Name: NPU_MobileV1_7_7 	 Layer time: 12.3028 	 number of inputs: 1 	 input shape: 512x14x14 	 output shape: 512x14x14
+Layer Number: 0 	 time: 12.3028
+----------------------------
+
+ Sum of Layers time: 12.3028
+
+
+Graph7   Input: 0.0042876   Task: 20.5836   send: 0.546787   Out: 0.0007   Process: 21.1353
+
+NPU NPU_MobileV1_7_7	AVG_input_time:2.0812	AVG_run_time:6.3120	AVG_prof_run_time:1.9773	AVG_output_time:2.3056
+
+
+********
+
+0	Layer Name: Conv2d_8_depthwise/depthwise 	 Layer time: 1.1218 	 number of inputs: 3 	 input shape: 512x14x14 	 output shape: 512x14x14
+1	Layer Name: Conv2d_8_depthwise/BatchNorm 	 Layer time: 0.5393 	 number of inputs: 5 	 input shape: 512x14x14 	 output shape: 512x14x14
+2	Layer Name: Conv2d_8_depthwise/Relu6 	 Layer time: 0.2169 	 number of inputs: 1 	 input shape: 512x14x14 	 output shape: 512x14x14
+3	Layer Name: Conv2d_8_pointwise/Conv2D 	 Layer time: 9.7611 	 number of inputs: 3 	 input shape: 512x14x14 	 output shape: 512x14x14
+4	Layer Name: Conv2d_8_pointwise/BatchNorm 	 Layer time: 0.4353 	 number of inputs: 5 	 input shape: 512x14x14 	 output shape: 512x14x14
+5	Layer Name: Conv2d_8_pointwise/Relu6 	 Layer time: 0.2418 	 number of inputs: 1 	 input shape: 512x14x14 	 output shape: 512x14x14
+Layer Number: 0 	 time: 12.3161
+----------------------------
+
+ Sum of Layers time: 12.3161
+
+
+Graph8   Input: 0.0039959   Task: 61.0865   send: 0.26005   Out: 0.0007293   Process: 61.3513
+
+
+
+********
+
+0	Layer Name: NPU_MobileV1_9_9 	 Layer time: 12.7131 	 number of inputs: 1 	 input shape: 512x14x14 	 output shape: 512x14x14
+Layer Number: 0 	 time: 12.7131
+----------------------------
+
+ Sum of Layers time: 12.7131
+
+
+Graph9   Input: 0.0043457   Task: 20.9838   send: 0.375346   Out: 0.0006707   Process: 21.3641
+
+NPU NPU_MobileV1_9_9	AVG_input_time:2.0812	AVG_run_time:6.4266	AVG_prof_run_time:1.9624	AVG_output_time:2.2384
+
+
+********
+
+0	Layer Name: Conv2d_10_depthwise/depthwise 	 Layer time: 1.0456 	 number of inputs: 3 	 input shape: 512x14x14 	 output shape: 512x14x14
+1	Layer Name: Conv2d_10_depthwise/BatchNorm 	 Layer time: 0.5801 	 number of inputs: 5 	 input shape: 512x14x14 	 output shape: 512x14x14
+2	Layer Name: Conv2d_10_depthwise/Relu6 	 Layer time: 0.2271 	 number of inputs: 1 	 input shape: 512x14x14 	 output shape: 512x14x14
+3	Layer Name: Conv2d_10_pointwise/Conv2D 	 Layer time: 10.0933 	 number of inputs: 3 	 input shape: 512x14x14 	 output shape: 512x14x14
+4	Layer Name: Conv2d_10_pointwise/BatchNorm 	 Layer time: 0.5412 	 number of inputs: 5 	 input shape: 512x14x14 	 output shape: 512x14x14
+5	Layer Name: Conv2d_10_pointwise/Relu6 	 Layer time: 0.2480 	 number of inputs: 1 	 input shape: 512x14x14 	 output shape: 512x14x14
+Layer Number: 0 	 time: 12.7352
+----------------------------
+
+ Sum of Layers time: 12.7352
+
+
+Graph10   Input: 0.0039082   Task: 61.506   send: 0.165463   Out: 0.0006707   Process: 61.6761
+
+
+
+********
+
+0	Layer Name: NPU_MobileV1_11_11 	 Layer time: 13.3152 	 number of inputs: 1 	 input shape: 512x14x14 	 output shape: 512x14x14
+Layer Number: 0 	 time: 13.3152
+----------------------------
+
+ Sum of Layers time: 13.3152
+
+
+Graph11   Input: 0.0039956   Task: 21.6032   send: 0.202125   Out: 0.0006708   Process: 21.81
+
+NPU NPU_MobileV1_11_11	AVG_input_time:2.0512	AVG_run_time:7.0965	AVG_prof_run_time:1.9442	AVG_output_time:2.2504
+
+
+********
+
+0	Layer Name: Conv2d_12_depthwise/depthwise 	 Layer time: 0.5818 	 number of inputs: 3 	 input shape: 512x14x14 	 output shape: 512x7x7
+1	Layer Name: Conv2d_12_depthwise/BatchNorm 	 Layer time: 0.1609 	 number of inputs: 5 	 input shape: 512x7x7 	 output shape: 512x7x7
+2	Layer Name: Conv2d_12_depthwise/Relu6 	 Layer time: 0.1074 	 number of inputs: 1 	 input shape: 512x7x7 	 output shape: 512x7x7
+3	Layer Name: Conv2d_12_pointwise/Conv2D 	 Layer time: 6.2430 	 number of inputs: 3 	 input shape: 512x7x7 	 output shape: 1024x7x7
+4	Layer Name: Conv2d_12_pointwise/BatchNorm 	 Layer time: 0.2780 	 number of inputs: 5 	 input shape: 1024x7x7 	 output shape: 1024x7x7
+5	Layer Name: Conv2d_12_pointwise/Relu6 	 Layer time: 0.1342 	 number of inputs: 1 	 input shape: 1024x7x7 	 output shape: 1024x7x7
+Layer Number: 0 	 time: 7.5052
+----------------------------
+
+ Sum of Layers time: 7.5052
+
+
+Graph12   Input: 0.0046373   Task: 56.1807   send: 0.414429   Out: 0.0007291   Process: 56.6005
+
+
+
+********
+
+0	Layer Name: NPU_MobileV1_13_13 	 Layer time: 6.2784 	 number of inputs: 1 	 input shape: 1024x7x7 	 output shape: 1000
+Layer Number: 0 	 time: 6.2784
+----------------------------
+
+ Sum of Layers time: 6.2784
+
+
+Graph13   Input: 0.0030625   Task: 14.498   send: 0.0011082   Out: 0.2191   Process: 14.7213
+
+NPU NPU_MobileV1_13_13	AVG_input_time:1.0519	AVG_run_time:3.5833	AVG_prof_run_time:1.3288	AVG_output_time:0.0232
+
+
+********
+
+
+
+AVG Latency: 631.874
+
+Profiling these DVFS settings finised
+Please Enter the desired Frequency setttings: 
+6 Running Graph with 6-6-6-6-6-6-6-6-6-6-6-6-6-6 LW DVFS
+governor 0 task:Conv2d_0/Relu6 freqs:0,6,0
+governor 1 task:Conv2d_10_pointwise/Relu6 freqs:0,6,0
+governor 2 task:Conv2d_12_pointwise/Relu6 freqs:0,6,0
+governor 3 task:Conv2d_2_pointwise/Relu6 freqs:0,6,0
+governor 4 task:Conv2d_4_pointwise/Relu6 freqs:0,6,0
+governor 5 task:Conv2d_6_pointwise/Relu6 freqs:0,6,0
+governor 6 task:Conv2d_8_pointwise/Relu6 freqs:0,6,0
+governor 7 task:NPU_MobileV1_11_11 freqs:0,6,0
+governor 8 task:NPU_MobileV1_13_13 freqs:0,6,0
+governor 9 task:NPU_MobileV1_1_1 freqs:0,6,0
+governor 10 task:NPU_MobileV1_3_3 freqs:0,6,0
+governor 11 task:NPU_MobileV1_5_5 freqs:0,6,0
+governor 12 task:NPU_MobileV1_7_7 freqs:0,6,0
+governor 13 task:NPU_MobileV1_9_9 freqs:0,6,0
+set_GPIOs with mode: layers
+tass name: Conv2d_0	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_0/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_0/Relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: NPU_MobileV1_1_1	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_2_depthwise/depthwise	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_2_depthwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_2_depthwise/Relu6	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_2_pointwise/Conv2D	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_2_pointwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_2_pointwise/Relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: NPU_MobileV1_3_3	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_4_depthwise/depthwise	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_4_depthwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_4_depthwise/Relu6	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_4_pointwise/Conv2D	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_4_pointwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_4_pointwise/Relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: NPU_MobileV1_5_5	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_6_depthwise/depthwise	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_6_depthwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_6_depthwise/Relu6	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_6_pointwise/Conv2D	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_6_pointwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_6_pointwise/Relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: NPU_MobileV1_7_7	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_8_depthwise/depthwise	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_8_depthwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_8_depthwise/Relu6	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_8_pointwise/Conv2D	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_8_pointwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_8_pointwise/Relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: NPU_MobileV1_9_9	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_10_depthwise/depthwise	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_10_depthwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_10_depthwise/Relu6	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_10_pointwise/Conv2D	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_10_pointwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_10_pointwise/Relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: NPU_MobileV1_11_11	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_12_depthwise/depthwise	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_12_depthwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_12_depthwise/Relu6	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_12_pointwise/Conv2D	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_12_pointwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_12_pointwise/Relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: NPU_MobileV1_13_13	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+
+
+
+*********************************************
+start running graphs
+*************************************************
+
+
+
+
+************
+Photo_index:2
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//school_bus.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0127 - [id = 885], n04525038 velvet
+0.0088 - [id = 904], n04589890 window screen
+0.0084 - [id = 911], n04599235 wool, woolen, woollen
+0.0068 - [id = 794], n04209239 shower curtain
+0.0060 - [id = 845], n04376876 syringe
+
+
+************
+Photo_index:3
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//go_kart.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0131 - [id = 885], n04525038 velvet
+0.0089 - [id = 911], n04599235 wool, woolen, woollen
+0.0087 - [id = 904], n04589890 window screen
+0.0076 - [id = 794], n04209239 shower curtain
+0.0067 - [id = 879], n04507155 umbrella
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//gold_fish.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0140 - [id = 885], n04525038 velvet
+0.0088 - [id = 904], n04589890 window screen
+0.0086 - [id = 911], n04599235 wool, woolen, woollen
+0.0067 - [id = 794], n04209239 shower curtain
+0.0061 - [id = 845], n04376876 syringe
+
+
+************
+Photo_index:1
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//gondola.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0138 - [id = 885], n04525038 velvet
+0.0097 - [id = 904], n04589890 window screen
+0.0093 - [id = 911], n04599235 wool, woolen, woollen
+0.0081 - [id = 794], n04209239 shower curtain
+0.0067 - [id = 418], n02783161 ballpoint, ballpoint pen, ballpen, Biro
+
+
+************
+Photo_index:2
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//school_bus.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0127 - [id = 885], n04525038 velvet
+0.0088 - [id = 904], n04589890 window screen
+0.0084 - [id = 911], n04599235 wool, woolen, woollen
+0.0068 - [id = 794], n04209239 shower curtain
+0.0060 - [id = 845], n04376876 syringe
+
+
+************
+Photo_index:3
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//go_kart.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0131 - [id = 885], n04525038 velvet
+0.0089 - [id = 911], n04599235 wool, woolen, woollen
+0.0087 - [id = 904], n04589890 window screen
+0.0076 - [id = 794], n04209239 shower curtain
+0.0067 - [id = 879], n04507155 umbrella
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//gold_fish.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0140 - [id = 885], n04525038 velvet
+0.0088 - [id = 904], n04589890 window screen
+0.0086 - [id = 911], n04599235 wool, woolen, woollen
+0.0067 - [id = 794], n04209239 shower curtain
+0.0061 - [id = 845], n04376876 syringe
+
+
+************
+Photo_index:1
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//gondola.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0138 - [id = 885], n04525038 velvet
+0.0097 - [id = 904], n04589890 window screen
+0.0093 - [id = 911], n04599235 wool, woolen, woollen
+0.0081 - [id = 794], n04209239 shower curtain
+0.0067 - [id = 418], n02783161 ballpoint, ballpoint pen, ballpen, Biro
+
+
+************
+Photo_index:2
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//school_bus.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0127 - [id = 885], n04525038 velvet
+0.0088 - [id = 904], n04589890 window screen
+0.0084 - [id = 911], n04599235 wool, woolen, woollen
+0.0068 - [id = 794], n04209239 shower curtain
+0.0060 - [id = 845], n04376876 syringe
+
+
+************
+Photo_index:3
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//go_kart.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0131 - [id = 885], n04525038 velvet
+0.0089 - [id = 911], n04599235 wool, woolen, woollen
+0.0087 - [id = 904], n04589890 window screen
+0.0076 - [id = 794], n04209239 shower curtain
+0.0067 - [id = 879], n04507155 umbrella
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//gold_fish.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0140 - [id = 885], n04525038 velvet
+0.0088 - [id = 904], n04589890 window screen
+0.0086 - [id = 911], n04599235 wool, woolen, woollen
+0.0067 - [id = 794], n04209239 shower curtain
+0.0061 - [id = 845], n04376876 syringe
+
+
+************
+Photo_index:1
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//gondola.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0138 - [id = 885], n04525038 velvet
+0.0097 - [id = 904], n04589890 window screen
+0.0093 - [id = 911], n04599235 wool, woolen, woollen
+0.0081 - [id = 794], n04209239 shower curtain
+0.0067 - [id = 418], n02783161 ballpoint, ballpoint pen, ballpen, Biro
+
+
+************
+Photo_index:2
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//school_bus.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0127 - [id = 885], n04525038 velvet
+0.0088 - [id = 904], n04589890 window screen
+0.0084 - [id = 911], n04599235 wool, woolen, woollen
+0.0068 - [id = 794], n04209239 shower curtain
+0.0060 - [id = 845], n04376876 syringe
+0	Layer Name: Conv2d_0 	 Layer time: 3.9449 	 number of inputs: 3 	 input shape: 3x224x224 	 output shape: 32x112x112
+1	Layer Name: Conv2d_0/BatchNorm 	 Layer time: 1.8231 	 number of inputs: 5 	 input shape: 32x112x112 	 output shape: 32x112x112
+2	Layer Name: Conv2d_0/Relu6 	 Layer time: 1.3497 	 number of inputs: 1 	 input shape: 32x112x112 	 output shape: 32x112x112
+Layer Number: 0 	 time: 7.1177
+----------------------------
+
+ Sum of Layers time: 7.1177
+
+
+Graph0   Input: 17.383   Task: 31.7065   send: 1.28567   Out: 0.0007875   Process: 50.376
+
+
+
+********
+
+0	Layer Name: NPU_MobileV1_1_1 	 Layer time: 57.0193 	 number of inputs: 1 	 input shape: 32x112x112 	 output shape: 64x112x112
+Layer Number: 0 	 time: 57.0193
+----------------------------
+
+ Sum of Layers time: 57.0193
+
+
+Graph1   Input: 0.0056874   Task: 65.345   send: 1.30955   Out: 0.000875   Process: 66.6612
+
+NPU NPU_MobileV1_1_1	AVG_input_time:7.8314	AVG_run_time:28.7776	AVG_prof_run_time:10.3599	AVG_output_time:18.3725
+
+
+********
+
+0	Layer Name: Conv2d_2_depthwise/depthwise 	 Layer time: 2.4120 	 number of inputs: 3 	 input shape: 64x112x112 	 output shape: 64x56x56
+1	Layer Name: Conv2d_2_depthwise/BatchNorm 	 Layer time: 0.9440 	 number of inputs: 5 	 input shape: 64x56x56 	 output shape: 64x56x56
+2	Layer Name: Conv2d_2_depthwise/Relu6 	 Layer time: 0.6427 	 number of inputs: 1 	 input shape: 64x56x56 	 output shape: 64x56x56
+3	Layer Name: Conv2d_2_pointwise/Conv2D 	 Layer time: 4.5161 	 number of inputs: 3 	 input shape: 64x56x56 	 output shape: 128x56x56
+4	Layer Name: Conv2d_2_pointwise/BatchNorm 	 Layer time: 1.6949 	 number of inputs: 5 	 input shape: 128x56x56 	 output shape: 128x56x56
+5	Layer Name: Conv2d_2_pointwise/Relu6 	 Layer time: 1.1031 	 number of inputs: 1 	 input shape: 128x56x56 	 output shape: 128x56x56
+Layer Number: 0 	 time: 11.3128
+----------------------------
+
+ Sum of Layers time: 11.3128
+
+
+Graph2   Input: 0.0061248   Task: 60.1426   send: 1.45968   Out: 0.0009333   Process: 61.6093
+
+
+
+********
+
+0	Layer Name: NPU_MobileV1_3_3 	 Layer time: 35.6855 	 number of inputs: 1 	 input shape: 128x56x56 	 output shape: 128x56x56
+Layer Number: 0 	 time: 35.6855
+----------------------------
+
+ Sum of Layers time: 35.6855
+
+
+Graph3   Input: 0.0057459   Task: 44.0302   send: 0.709683   Out: 0.000875   Process: 44.7465
+
+NPU NPU_MobileV1_3_3	AVG_input_time:7.3947	AVG_run_time:17.4299	AVG_prof_run_time:6.2880	AVG_output_time:8.8228
+
+
+********
+
+0	Layer Name: Conv2d_4_depthwise/depthwise 	 Layer time: 1.3298 	 number of inputs: 3 	 input shape: 128x56x56 	 output shape: 128x28x28
+1	Layer Name: Conv2d_4_depthwise/BatchNorm 	 Layer time: 0.4065 	 number of inputs: 5 	 input shape: 128x28x28 	 output shape: 128x28x28
+2	Layer Name: Conv2d_4_depthwise/Relu6 	 Layer time: 0.2094 	 number of inputs: 1 	 input shape: 128x28x28 	 output shape: 128x28x28
+3	Layer Name: Conv2d_4_pointwise/Conv2D 	 Layer time: 3.3494 	 number of inputs: 3 	 input shape: 128x28x28 	 output shape: 256x28x28
+4	Layer Name: Conv2d_4_pointwise/BatchNorm 	 Layer time: 0.7817 	 number of inputs: 5 	 input shape: 256x28x28 	 output shape: 256x28x28
+5	Layer Name: Conv2d_4_pointwise/Relu6 	 Layer time: 0.5473 	 number of inputs: 1 	 input shape: 256x28x28 	 output shape: 256x28x28
+Layer Number: 0 	 time: 6.6240
+----------------------------
+
+ Sum of Layers time: 6.6240
+
+
+Graph4   Input: 0.00525   Task: 55.3561   send: 1.05793   Out: 0.0006998   Process: 56.42
+
+
+
+********
+
+0	Layer Name: NPU_MobileV1_5_5 	 Layer time: 19.9820 	 number of inputs: 1 	 input shape: 256x28x28 	 output shape: 256x28x28
+Layer Number: 0 	 time: 19.9820
+----------------------------
+
+ Sum of Layers time: 19.9820
+
+
+Graph5   Input: 0.0045213   Task: 28.2922   send: 0.459287   Out: 0.0006709   Process: 28.7567
+
+NPU NPU_MobileV1_5_5	AVG_input_time:3.6398	AVG_run_time:10.7473	AVG_prof_run_time:4.0507	AVG_output_time:3.8829
+
+
+********
+
+0	Layer Name: Conv2d_6_depthwise/depthwise 	 Layer time: 1.0648 	 number of inputs: 3 	 input shape: 256x28x28 	 output shape: 256x14x14
+1	Layer Name: Conv2d_6_depthwise/BatchNorm 	 Layer time: 0.2658 	 number of inputs: 5 	 input shape: 256x14x14 	 output shape: 256x14x14
+2	Layer Name: Conv2d_6_depthwise/Relu6 	 Layer time: 0.1290 	 number of inputs: 1 	 input shape: 256x14x14 	 output shape: 256x14x14
+3	Layer Name: Conv2d_6_pointwise/Conv2D 	 Layer time: 4.0507 	 number of inputs: 3 	 input shape: 256x14x14 	 output shape: 512x14x14
+4	Layer Name: Conv2d_6_pointwise/BatchNorm 	 Layer time: 0.4768 	 number of inputs: 5 	 input shape: 512x14x14 	 output shape: 512x14x14
+5	Layer Name: Conv2d_6_pointwise/Relu6 	 Layer time: 0.2211 	 number of inputs: 1 	 input shape: 512x14x14 	 output shape: 512x14x14
+Layer Number: 0 	 time: 6.2081
+----------------------------
+
+ Sum of Layers time: 6.2081
+
+
+Graph6   Input: 0.0038792   Task: 54.991   send: 0.286125   Out: 0.0006124   Process: 55.2816
+
+
+
+********
+
+0	Layer Name: NPU_MobileV1_7_7 	 Layer time: 12.0023 	 number of inputs: 1 	 input shape: 512x14x14 	 output shape: 512x14x14
+Layer Number: 0 	 time: 12.0023
+----------------------------
+
+ Sum of Layers time: 12.0023
+
+
+Graph7   Input: 0.0040834   Task: 20.2593   send: 0.228842   Out: 0.0005541   Process: 20.4928
+
+NPU NPU_MobileV1_7_7	AVG_input_time:1.8089	AVG_run_time:6.5442	AVG_prof_run_time:1.9797	AVG_output_time:2.0346
+
+
+********
+
+0	Layer Name: Conv2d_8_depthwise/depthwise 	 Layer time: 1.0955 	 number of inputs: 3 	 input shape: 512x14x14 	 output shape: 512x14x14
+1	Layer Name: Conv2d_8_depthwise/BatchNorm 	 Layer time: 0.4488 	 number of inputs: 5 	 input shape: 512x14x14 	 output shape: 512x14x14
+2	Layer Name: Conv2d_8_depthwise/Relu6 	 Layer time: 0.2082 	 number of inputs: 1 	 input shape: 512x14x14 	 output shape: 512x14x14
+3	Layer Name: Conv2d_8_pointwise/Conv2D 	 Layer time: 9.1104 	 number of inputs: 3 	 input shape: 512x14x14 	 output shape: 512x14x14
+4	Layer Name: Conv2d_8_pointwise/BatchNorm 	 Layer time: 0.4229 	 number of inputs: 5 	 input shape: 512x14x14 	 output shape: 512x14x14
+5	Layer Name: Conv2d_8_pointwise/Relu6 	 Layer time: 0.2124 	 number of inputs: 1 	 input shape: 512x14x14 	 output shape: 512x14x14
+Layer Number: 0 	 time: 11.4981
+----------------------------
+
+ Sum of Layers time: 11.4981
+
+
+Graph8   Input: 0.0038791   Task: 60.3243   send: 0.613375   Out: 0.0007001   Process: 60.9423
+
+
+
+********
+
+0	Layer Name: NPU_MobileV1_9_9 	 Layer time: 12.1482 	 number of inputs: 1 	 input shape: 512x14x14 	 output shape: 512x14x14
+Layer Number: 0 	 time: 12.1482
+----------------------------
+
+ Sum of Layers time: 12.1482
+
+
+Graph9   Input: 0.0045501   Task: 20.4079   send: 0.572075   Out: 0.0007584   Process: 20.9853
+
+NPU NPU_MobileV1_9_9	AVG_input_time:1.8105	AVG_run_time:6.4359	AVG_prof_run_time:1.9610	AVG_output_time:2.1609
+
+
+********
+
+0	Layer Name: Conv2d_10_depthwise/depthwise 	 Layer time: 0.9649 	 number of inputs: 3 	 input shape: 512x14x14 	 output shape: 512x14x14
+1	Layer Name: Conv2d_10_depthwise/BatchNorm 	 Layer time: 0.4982 	 number of inputs: 5 	 input shape: 512x14x14 	 output shape: 512x14x14
+2	Layer Name: Conv2d_10_depthwise/Relu6 	 Layer time: 0.2107 	 number of inputs: 1 	 input shape: 512x14x14 	 output shape: 512x14x14
+3	Layer Name: Conv2d_10_pointwise/Conv2D 	 Layer time: 8.5472 	 number of inputs: 3 	 input shape: 512x14x14 	 output shape: 512x14x14
+4	Layer Name: Conv2d_10_pointwise/BatchNorm 	 Layer time: 0.4387 	 number of inputs: 5 	 input shape: 512x14x14 	 output shape: 512x14x14
+5	Layer Name: Conv2d_10_pointwise/Relu6 	 Layer time: 0.2222 	 number of inputs: 1 	 input shape: 512x14x14 	 output shape: 512x14x14
+Layer Number: 0 	 time: 10.8819
+----------------------------
+
+ Sum of Layers time: 10.8819
+
+
+Graph10   Input: 0.0037042   Task: 59.6247   send: 0.217788   Out: 0.0005832   Process: 59.8468
+
+
+
+********
+
+0	Layer Name: NPU_MobileV1_11_11 	 Layer time: 12.2747 	 number of inputs: 1 	 input shape: 512x14x14 	 output shape: 512x14x14
+Layer Number: 0 	 time: 12.2747
+----------------------------
+
+ Sum of Layers time: 12.2747
+
+
+Graph11   Input: 0.0062127   Task: 20.5378   send: 0.404629   Out: 0.0006416   Process: 20.9493
+
+NPU NPU_MobileV1_11_11	AVG_input_time:1.8080	AVG_run_time:6.5664	AVG_prof_run_time:1.9485	AVG_output_time:2.0514
+
+
+********
+
+0	Layer Name: Conv2d_12_depthwise/depthwise 	 Layer time: 0.6901 	 number of inputs: 3 	 input shape: 512x14x14 	 output shape: 512x7x7
+1	Layer Name: Conv2d_12_depthwise/BatchNorm 	 Layer time: 0.1578 	 number of inputs: 5 	 input shape: 512x7x7 	 output shape: 512x7x7
+2	Layer Name: Conv2d_12_depthwise/Relu6 	 Layer time: 0.0901 	 number of inputs: 1 	 input shape: 512x7x7 	 output shape: 512x7x7
+3	Layer Name: Conv2d_12_pointwise/Conv2D 	 Layer time: 6.9796 	 number of inputs: 3 	 input shape: 512x7x7 	 output shape: 1024x7x7
+4	Layer Name: Conv2d_12_pointwise/BatchNorm 	 Layer time: 0.2775 	 number of inputs: 5 	 input shape: 1024x7x7 	 output shape: 1024x7x7
+5	Layer Name: Conv2d_12_pointwise/Relu6 	 Layer time: 0.1236 	 number of inputs: 1 	 input shape: 1024x7x7 	 output shape: 1024x7x7
+Layer Number: 0 	 time: 8.3187
+----------------------------
+
+ Sum of Layers time: 8.3187
+
+
+Graph12   Input: 0.0037332   Task: 57.0742   send: 0.105933   Out: 0.0005835   Process: 57.1845
+
+
+
+********
+
+0	Layer Name: NPU_MobileV1_13_13 	 Layer time: 6.4998 	 number of inputs: 1 	 input shape: 1024x7x7 	 output shape: 1000
+Layer Number: 0 	 time: 6.4998
+----------------------------
+
+ Sum of Layers time: 6.4998
+
+
+Graph13   Input: 0.0028292   Task: 14.6999   send: 0.0008749   Out: 0.195533   Process: 14.8992
+
+NPU NPU_MobileV1_13_13	AVG_input_time:0.9384	AVG_run_time:3.9534	AVG_prof_run_time:1.3231	AVG_output_time:0.0201
+
+
+********
+
+
+
+AVG Latency: 616.281
+
+Profiling these DVFS settings finised
+Please Enter the desired Frequency setttings: 
+7 Running Graph with 7-7-7-7-7-7-7-7-7-7-7-7-7-7 LW DVFS
+governor 0 task:Conv2d_0/Relu6 freqs:0,7,0
+governor 1 task:Conv2d_10_pointwise/Relu6 freqs:0,7,0
+governor 2 task:Conv2d_12_pointwise/Relu6 freqs:0,7,0
+governor 3 task:Conv2d_2_pointwise/Relu6 freqs:0,7,0
+governor 4 task:Conv2d_4_pointwise/Relu6 freqs:0,7,0
+governor 5 task:Conv2d_6_pointwise/Relu6 freqs:0,7,0
+governor 6 task:Conv2d_8_pointwise/Relu6 freqs:0,7,0
+governor 7 task:NPU_MobileV1_11_11 freqs:0,7,0
+governor 8 task:NPU_MobileV1_13_13 freqs:0,7,0
+governor 9 task:NPU_MobileV1_1_1 freqs:0,7,0
+governor 10 task:NPU_MobileV1_3_3 freqs:0,7,0
+governor 11 task:NPU_MobileV1_5_5 freqs:0,7,0
+governor 12 task:NPU_MobileV1_7_7 freqs:0,7,0
+governor 13 task:NPU_MobileV1_9_9 freqs:0,7,0
+set_GPIOs with mode: layers
+tass name: Conv2d_0	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_0/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_0/Relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: NPU_MobileV1_1_1	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_2_depthwise/depthwise	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_2_depthwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_2_depthwise/Relu6	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_2_pointwise/Conv2D	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_2_pointwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_2_pointwise/Relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: NPU_MobileV1_3_3	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_4_depthwise/depthwise	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_4_depthwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_4_depthwise/Relu6	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_4_pointwise/Conv2D	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_4_pointwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_4_pointwise/Relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: NPU_MobileV1_5_5	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_6_depthwise/depthwise	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_6_depthwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_6_depthwise/Relu6	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_6_pointwise/Conv2D	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_6_pointwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_6_pointwise/Relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: NPU_MobileV1_7_7	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_8_depthwise/depthwise	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_8_depthwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_8_depthwise/Relu6	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_8_pointwise/Conv2D	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_8_pointwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_8_pointwise/Relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: NPU_MobileV1_9_9	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_10_depthwise/depthwise	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_10_depthwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_10_depthwise/Relu6	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_10_pointwise/Conv2D	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_10_pointwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_10_pointwise/Relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: NPU_MobileV1_11_11	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_12_depthwise/depthwise	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_12_depthwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_12_depthwise/Relu6	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_12_pointwise/Conv2D	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_12_pointwise/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+tass name: Conv2d_12_pointwise/Relu6	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+tass name: NPU_MobileV1_13_13	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+
+
+
+*********************************************
+start running graphs
+*************************************************
+
+
+
+
+************
+Photo_index:3
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//go_kart.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0131 - [id = 885], n04525038 velvet
+0.0089 - [id = 911], n04599235 wool, woolen, woollen
+0.0087 - [id = 904], n04589890 window screen
+0.0076 - [id = 794], n04209239 shower curtain
+0.0067 - [id = 879], n04507155 umbrella
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//gold_fish.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0140 - [id = 885], n04525038 velvet
+0.0088 - [id = 904], n04589890 window screen
+0.0086 - [id = 911], n04599235 wool, woolen, woollen
+0.0067 - [id = 794], n04209239 shower curtain
+0.0061 - [id = 845], n04376876 syringe
+
+
+************
+Photo_index:1
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//gondola.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0138 - [id = 885], n04525038 velvet
+0.0097 - [id = 904], n04589890 window screen
+0.0093 - [id = 911], n04599235 wool, woolen, woollen
+0.0081 - [id = 794], n04209239 shower curtain
+0.0067 - [id = 418], n02783161 ballpoint, ballpoint pen, ballpen, Biro
+
+
+************
+Photo_index:2
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//school_bus.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0127 - [id = 885], n04525038 velvet
+0.0088 - [id = 904], n04589890 window screen
+0.0084 - [id = 911], n04599235 wool, woolen, woollen
+0.0068 - [id = 794], n04209239 shower curtain
+0.0060 - [id = 845], n04376876 syringe
+
+
+************
+Photo_index:3
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//go_kart.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0131 - [id = 885], n04525038 velvet
+0.0089 - [id = 911], n04599235 wool, woolen, woollen
+0.0087 - [id = 904], n04589890 window screen
+0.0076 - [id = 794], n04209239 shower curtain
+0.0067 - [id = 879], n04507155 umbrella
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//gold_fish.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0140 - [id = 885], n04525038 velvet
+0.0088 - [id = 904], n04589890 window screen
+0.0086 - [id = 911], n04599235 wool, woolen, woollen
+0.0067 - [id = 794], n04209239 shower curtain
+0.0061 - [id = 845], n04376876 syringe
+
+
+************
+Photo_index:1
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//gondola.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0138 - [id = 885], n04525038 velvet
+0.0097 - [id = 904], n04589890 window screen
+0.0093 - [id = 911], n04599235 wool, woolen, woollen
+0.0081 - [id = 794], n04209239 shower curtain
+0.0067 - [id = 418], n02783161 ballpoint, ballpoint pen, ballpen, Biro
+
+
+************
+Photo_index:2
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//school_bus.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0127 - [id = 885], n04525038 velvet
+0.0088 - [id = 904], n04589890 window screen
+0.0084 - [id = 911], n04599235 wool, woolen, woollen
+0.0068 - [id = 794], n04209239 shower curtain
+0.0060 - [id = 845], n04376876 syringe
+
+
+************
+Photo_index:3
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//go_kart.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0131 - [id = 885], n04525038 velvet
+0.0089 - [id = 911], n04599235 wool, woolen, woollen
+0.0087 - [id = 904], n04589890 window screen
+0.0076 - [id = 794], n04209239 shower curtain
+0.0067 - [id = 879], n04507155 umbrella
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//gold_fish.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0140 - [id = 885], n04525038 velvet
+0.0088 - [id = 904], n04589890 window screen
+0.0086 - [id = 911], n04599235 wool, woolen, woollen
+0.0067 - [id = 794], n04209239 shower curtain
+0.0061 - [id = 845], n04376876 syringe
+
+
+************
+Photo_index:1
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//gondola.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0138 - [id = 885], n04525038 velvet
+0.0097 - [id = 904], n04589890 window screen
+0.0093 - [id = 911], n04599235 wool, woolen, woollen
+0.0081 - [id = 794], n04209239 shower curtain
+0.0067 - [id = 418], n02783161 ballpoint, ballpoint pen, ballpen, Biro
+
+
+************
+Photo_index:2
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//school_bus.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0127 - [id = 885], n04525038 velvet
+0.0088 - [id = 904], n04589890 window screen
+0.0084 - [id = 911], n04599235 wool, woolen, woollen
+0.0068 - [id = 794], n04209239 shower curtain
+0.0060 - [id = 845], n04376876 syringe
+
+
+************
+Photo_index:3
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//go_kart.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0131 - [id = 885], n04525038 velvet
+0.0089 - [id = 911], n04599235 wool, woolen, woollen
+0.0087 - [id = 904], n04589890 window screen
+0.0076 - [id = 794], n04209239 shower curtain
+0.0067 - [id = 879], n04507155 umbrella
+0	Layer Name: Conv2d_0 	 Layer time: 3.3958 	 number of inputs: 3 	 input shape: 3x224x224 	 output shape: 32x112x112
+1	Layer Name: Conv2d_0/BatchNorm 	 Layer time: 1.6401 	 number of inputs: 5 	 input shape: 32x112x112 	 output shape: 32x112x112
+2	Layer Name: Conv2d_0/Relu6 	 Layer time: 1.3170 	 number of inputs: 1 	 input shape: 32x112x112 	 output shape: 32x112x112
+Layer Number: 0 	 time: 6.3529
+----------------------------
+
+ Sum of Layers time: 6.3529
+
+
+Graph0   Input: 13.9249   Task: 30.9192   send: 0.729925   Out: 0.0007876   Process: 45.5748
+
+
+
+********
+
+0	Layer Name: NPU_MobileV1_1_1 	 Layer time: 54.2967 	 number of inputs: 1 	 input shape: 32x112x112 	 output shape: 64x112x112
+Layer Number: 0 	 time: 54.2967
+----------------------------
+
+ Sum of Layers time: 54.2967
+
+
+Graph1   Input: 0.0058335   Task: 62.6008   send: 1.3006   Out: 0.0007585   Process: 63.908
+
+NPU NPU_MobileV1_1_1	AVG_input_time:6.8665	AVG_run_time:28.4192	AVG_prof_run_time:10.3646	AVG_output_time:16.8087
+
+
+********
+
+0	Layer Name: Conv2d_2_depthwise/depthwise 	 Layer time: 2.3879 	 number of inputs: 3 	 input shape: 64x112x112 	 output shape: 64x56x56
+1	Layer Name: Conv2d_2_depthwise/BatchNorm 	 Layer time: 0.9323 	 number of inputs: 5 	 input shape: 64x56x56 	 output shape: 64x56x56
+2	Layer Name: Conv2d_2_depthwise/Relu6 	 Layer time: 0.6432 	 number of inputs: 1 	 input shape: 64x56x56 	 output shape: 64x56x56
+3	Layer Name: Conv2d_2_pointwise/Conv2D 	 Layer time: 4.5677 	 number of inputs: 3 	 input shape: 64x56x56 	 output shape: 128x56x56
+4	Layer Name: Conv2d_2_pointwise/BatchNorm 	 Layer time: 1.5661 	 number of inputs: 5 	 input shape: 128x56x56 	 output shape: 128x56x56
+5	Layer Name: Conv2d_2_pointwise/Relu6 	 Layer time: 1.0394 	 number of inputs: 1 	 input shape: 128x56x56 	 output shape: 128x56x56
+Layer Number: 0 	 time: 11.1367
+----------------------------
+
+ Sum of Layers time: 11.1367
+
+
+Graph2   Input: 0.0062126   Task: 59.9555   send: 1.49071   Out: 0.0008748   Process: 61.4533
+
+
+
+********
+
+0	Layer Name: NPU_MobileV1_3_3 	 Layer time: 34.4827 	 number of inputs: 1 	 input shape: 128x56x56 	 output shape: 128x56x56
+Layer Number: 0 	 time: 34.4827
+----------------------------
+
+ Sum of Layers time: 34.4827
+
+
+Graph3   Input: 0.0058043   Task: 42.7929   send: 0.716479   Out: 0.0007875   Process: 43.516
+
+NPU NPU_MobileV1_3_3	AVG_input_time:6.5254	AVG_run_time:17.5223	AVG_prof_run_time:6.2970	AVG_output_time:8.1729
+
+
+********
+
+0	Layer Name: Conv2d_4_depthwise/depthwise 	 Layer time: 1.2728 	 number of inputs: 3 	 input shape: 128x56x56 	 output shape: 128x28x28
+1	Layer Name: Conv2d_4_depthwise/BatchNorm 	 Layer time: 1.1708 	 number of inputs: 5 	 input shape: 128x28x28 	 output shape: 128x28x28
+2	Layer Name: Conv2d_4_depthwise/Relu6 	 Layer time: 0.2296 	 number of inputs: 1 	 input shape: 128x28x28 	 output shape: 128x28x28
+3	Layer Name: Conv2d_4_pointwise/Conv2D 	 Layer time: 3.7717 	 number of inputs: 3 	 input shape: 128x28x28 	 output shape: 256x28x28
+4	Layer Name: Conv2d_4_pointwise/BatchNorm 	 Layer time: 0.7913 	 number of inputs: 5 	 input shape: 256x28x28 	 output shape: 256x28x28
+5	Layer Name: Conv2d_4_pointwise/Relu6 	 Layer time: 0.5390 	 number of inputs: 1 	 input shape: 256x28x28 	 output shape: 256x28x28
+Layer Number: 0 	 time: 7.7752
+----------------------------
+
+ Sum of Layers time: 7.7752
+
+
+Graph4   Input: 0.0047543   Task: 56.5188   send: 0.735496   Out: 0.0006125   Process: 57.2597
+
+
+
+********
+
+0	Layer Name: NPU_MobileV1_5_5 	 Layer time: 19.2576 	 number of inputs: 1 	 input shape: 256x28x28 	 output shape: 256x28x28
+Layer Number: 0 	 time: 19.2576
+----------------------------
+
+ Sum of Layers time: 19.2576
+
+
+Graph5   Input: 0.0043167   Task: 27.5543   send: 0.385408   Out: 0.0006126   Process: 27.9446
+
+NPU NPU_MobileV1_5_5	AVG_input_time:3.2386	AVG_run_time:10.4388	AVG_prof_run_time:4.0542	AVG_output_time:3.5519
+
+
+********
+
+0	Layer Name: Conv2d_6_depthwise/depthwise 	 Layer time: 0.8954 	 number of inputs: 3 	 input shape: 256x28x28 	 output shape: 256x14x14
+1	Layer Name: Conv2d_6_depthwise/BatchNorm 	 Layer time: 0.2397 	 number of inputs: 5 	 input shape: 256x14x14 	 output shape: 256x14x14
+2	Layer Name: Conv2d_6_depthwise/Relu6 	 Layer time: 0.1196 	 number of inputs: 1 	 input shape: 256x14x14 	 output shape: 256x14x14
+3	Layer Name: Conv2d_6_pointwise/Conv2D 	 Layer time: 3.4525 	 number of inputs: 3 	 input shape: 256x14x14 	 output shape: 512x14x14
+4	Layer Name: Conv2d_6_pointwise/BatchNorm 	 Layer time: 0.3966 	 number of inputs: 5 	 input shape: 512x14x14 	 output shape: 512x14x14
+5	Layer Name: Conv2d_6_pointwise/Relu6 	 Layer time: 0.2163 	 number of inputs: 1 	 input shape: 512x14x14 	 output shape: 512x14x14
+Layer Number: 0 	 time: 5.3200
+----------------------------
+
+ Sum of Layers time: 5.3200
+
+
+Graph6   Input: 0.0035291   Task: 54.0355   send: 0.262092   Out: 0.0005833   Process: 54.3017
+
+
+
+********
+
+0	Layer Name: NPU_MobileV1_7_7 	 Layer time: 12.0683 	 number of inputs: 1 	 input shape: 512x14x14 	 output shape: 512x14x14
+Layer Number: 0 	 time: 12.0683
+----------------------------
+
+ Sum of Layers time: 12.0683
+
+
+Graph7   Input: 0.0035292   Task: 20.3216   send: 0.224846   Out: 0.0004086   Process: 20.5504
+
+NPU NPU_MobileV1_7_7	AVG_input_time:1.6206	AVG_run_time:6.7492	AVG_prof_run_time:1.9832	AVG_output_time:1.8473
+
+
+********
+
+0	Layer Name: Conv2d_8_depthwise/depthwise 	 Layer time: 1.0561 	 number of inputs: 3 	 input shape: 512x14x14 	 output shape: 512x14x14
+1	Layer Name: Conv2d_8_depthwise/BatchNorm 	 Layer time: 0.4226 	 number of inputs: 5 	 input shape: 512x14x14 	 output shape: 512x14x14
+2	Layer Name: Conv2d_8_depthwise/Relu6 	 Layer time: 0.8551 	 number of inputs: 1 	 input shape: 512x14x14 	 output shape: 512x14x14
+3	Layer Name: Conv2d_8_pointwise/Conv2D 	 Layer time: 7.8560 	 number of inputs: 3 	 input shape: 512x14x14 	 output shape: 512x14x14
+4	Layer Name: Conv2d_8_pointwise/BatchNorm 	 Layer time: 0.4126 	 number of inputs: 5 	 input shape: 512x14x14 	 output shape: 512x14x14
+5	Layer Name: Conv2d_8_pointwise/Relu6 	 Layer time: 0.2162 	 number of inputs: 1 	 input shape: 512x14x14 	 output shape: 512x14x14
+Layer Number: 0 	 time: 10.8186
+----------------------------
+
+ Sum of Layers time: 10.8186
+
+
+Graph8   Input: 0.0037333   Task: 59.6445   send: 0.165142   Out: 0.0004958   Process: 59.8139
+
+
+
+********
+
+0	Layer Name: NPU_MobileV1_9_9 	 Layer time: 11.6186 	 number of inputs: 1 	 input shape: 512x14x14 	 output shape: 512x14x14
+Layer Number: 0 	 time: 11.6186
+----------------------------
+
+ Sum of Layers time: 11.6186
+
+
+Graph9   Input: 0.0059209   Task: 19.8694   send: 0.489883   Out: 0.0006414   Process: 20.3659
+
+NPU NPU_MobileV1_9_9	AVG_input_time:1.6131	AVG_run_time:6.4658	AVG_prof_run_time:1.9595	AVG_output_time:1.8702
+
+
+********
+
+0	Layer Name: Conv2d_10_depthwise/depthwise 	 Layer time: 0.8370 	 number of inputs: 3 	 input shape: 512x14x14 	 output shape: 512x14x14
+1	Layer Name: Conv2d_10_depthwise/BatchNorm 	 Layer time: 0.4700 	 number of inputs: 5 	 input shape: 512x14x14 	 output shape: 512x14x14
+2	Layer Name: Conv2d_10_depthwise/Relu6 	 Layer time: 0.1978 	 number of inputs: 1 	 input shape: 512x14x14 	 output shape: 512x14x14
+3	Layer Name: Conv2d_10_pointwise/Conv2D 	 Layer time: 8.1074 	 number of inputs: 3 	 input shape: 512x14x14 	 output shape: 512x14x14
+4	Layer Name: Conv2d_10_pointwise/BatchNorm 	 Layer time: 0.3516 	 number of inputs: 5 	 input shape: 512x14x14 	 output shape: 512x14x14
+5	Layer Name: Conv2d_10_pointwise/Relu6 	 Layer time: 0.2079 	 number of inputs: 1 	 input shape: 512x14x14 	 output shape: 512x14x14
+Layer Number: 0 	 time: 10.1717
+----------------------------
+
+ Sum of Layers time: 10.1717
+
+
+Graph10   Input: 0.0034998   Task: 58.9012   send: 0.258504   Out: 0.0005544   Process: 59.1637
+
+
+
+********
+
+0	Layer Name: NPU_MobileV1_11_11 	 Layer time: 11.7516 	 number of inputs: 1 	 input shape: 512x14x14 	 output shape: 512x14x14
+Layer Number: 0 	 time: 11.7516
+----------------------------
+
+ Sum of Layers time: 11.7516
+
+
+Graph11   Input: 0.004725   Task: 20.01   send: 0.394042   Out: 0.0006124   Process: 20.4094
+
+NPU NPU_MobileV1_11_11	AVG_input_time:1.6237	AVG_run_time:6.6407	AVG_prof_run_time:1.9612	AVG_output_time:1.8619
+
+
+********
+
+0	Layer Name: Conv2d_12_depthwise/depthwise 	 Layer time: 0.5942 	 number of inputs: 3 	 input shape: 512x14x14 	 output shape: 512x7x7
+1	Layer Name: Conv2d_12_depthwise/BatchNorm 	 Layer time: 0.1405 	 number of inputs: 5 	 input shape: 512x7x7 	 output shape: 512x7x7
+2	Layer Name: Conv2d_12_depthwise/Relu6 	 Layer time: 0.0882 	 number of inputs: 1 	 input shape: 512x7x7 	 output shape: 512x7x7
+3	Layer Name: Conv2d_12_pointwise/Conv2D 	 Layer time: 5.6951 	 number of inputs: 3 	 input shape: 512x7x7 	 output shape: 1024x7x7
+4	Layer Name: Conv2d_12_pointwise/BatchNorm 	 Layer time: 0.2521 	 number of inputs: 5 	 input shape: 1024x7x7 	 output shape: 1024x7x7
+5	Layer Name: Conv2d_12_pointwise/Relu6 	 Layer time: 0.1182 	 number of inputs: 1 	 input shape: 1024x7x7 	 output shape: 1024x7x7
+Layer Number: 0 	 time: 6.8882
+----------------------------
+
+ Sum of Layers time: 6.8882
+
+
+Graph12   Input: 0.0035   Task: 55.5859   send: 0.111329   Out: 0.0004958   Process: 55.7012
+
+
+
+********
+
+0	Layer Name: NPU_MobileV1_13_13 	 Layer time: 6.0248 	 number of inputs: 1 	 input shape: 1024x7x7 	 output shape: 1000
+Layer Number: 0 	 time: 6.0248
+----------------------------
+
+ Sum of Layers time: 6.0248
+
+
+Graph13   Input: 0.0029168   Task: 14.2229   send: 0.0009043   Out: 0.182729   Process: 14.4095
+
+NPU NPU_MobileV1_13_13	AVG_input_time:0.8341	AVG_run_time:3.8468	AVG_prof_run_time:1.3272	AVG_output_time:0.0160
+
+
+********
+
+
+
+AVG Latency: 602.845
+
+Profiling these DVFS settings finised
+Please Enter the desired Frequency setttings: 
+
+Test passed

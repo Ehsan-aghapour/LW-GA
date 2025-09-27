@@ -1,0 +1,2359 @@
+List of devices attached
+4UB7RRTHY8	device
+
+disconnected everything
+adbd is already running as root
+remount succeeded
+/home/ehsan/UvA/ARMCL/Rock-Pi/ComputeLibrary_64_Yolov3/utils/DVFS/governor_pandoon.ko: 1 file pushed, 0 skipped. 69.7 MB/s (260080 bytes in 0.004s)
+Module is already inserted, removing and reinserting...
+start=0, end=74
+conda run -n rock-kit3 python /home/ehsan/UvA/Sub_Model/Sub_Func_CO_UP.py --Start=0 --End=74 --Model=/home/ehsan/UvA/Sub_Model/YOLOv3/Yolov3.h5 --Structure=/home/ehsan/UvA/Sub_Model/YOLOv3/
+st is /home/ehsan/UvA/Sub_Model/YOLOv3/
+/home/ehsan/UvA/Sub_Model/YOLOv3/Yolov3.h5
+Visiting layer: input_2
+Visiting layer: conv_0
+Visiting layer: bnorm_0
+Visiting layer: leaky_0
+Visiting layer: zero_padding2d_1
+Visiting layer: conv_1
+Visiting layer: bnorm_1
+Visiting layer: leaky_1
+Visiting layer: conv_2
+Visiting layer: bnorm_2
+Visiting layer: leaky_2
+Visiting layer: conv_3
+Visiting layer: bnorm_3
+Visiting layer: leaky_3
+Visiting layer: add_1
+Visiting layer: zero_padding2d_2
+Visiting layer: conv_5
+Visiting layer: bnorm_5
+Visiting layer: leaky_5
+Visiting layer: conv_6
+Visiting layer: bnorm_6
+Visiting layer: leaky_6
+Visiting layer: conv_7
+Visiting layer: bnorm_7
+Visiting layer: leaky_7
+Visiting layer: add_2
+Visiting layer: conv_9
+Visiting layer: bnorm_9
+Visiting layer: leaky_9
+Visiting layer: conv_10
+Visiting layer: bnorm_10
+Visiting layer: leaky_10
+Visiting layer: add_3
+Visiting layer: zero_padding2d_3
+Visiting layer: conv_12
+Visiting layer: bnorm_12
+Visiting layer: leaky_12
+Visiting layer: conv_13
+Visiting layer: bnorm_13
+Visiting layer: leaky_13
+Visiting layer: conv_14
+Visiting layer: bnorm_14
+Visiting layer: leaky_14
+Visiting layer: add_4
+Visiting layer: conv_16
+Visiting layer: bnorm_16
+Visiting layer: leaky_16
+Visiting layer: conv_17
+Visiting layer: bnorm_17
+Visiting layer: leaky_17
+Visiting layer: add_5
+Visiting layer: conv_19
+Visiting layer: bnorm_19
+Visiting layer: leaky_19
+Visiting layer: conv_20
+Visiting layer: bnorm_20
+Visiting layer: leaky_20
+Visiting layer: add_6
+Visiting layer: conv_22
+Visiting layer: bnorm_22
+Visiting layer: leaky_22
+Visiting layer: conv_23
+Visiting layer: bnorm_23
+Visiting layer: leaky_23
+Visiting layer: add_7
+Visiting layer: conv_25
+Visiting layer: bnorm_25
+Visiting layer: leaky_25
+Visiting layer: conv_26
+Visiting layer: bnorm_26
+Visiting layer: leaky_26
+Visiting layer: add_8
+Visiting layer: conv_28
+Visiting layer: bnorm_28
+Visiting layer: leaky_28
+Visiting layer: conv_29
+Visiting layer: bnorm_29
+Visiting layer: leaky_29
+Visiting layer: add_9
+Visiting layer: conv_31
+Visiting layer: bnorm_31
+Visiting layer: leaky_31
+Visiting layer: conv_32
+Visiting layer: bnorm_32
+Visiting layer: leaky_32
+Visiting layer: add_10
+Visiting layer: conv_34
+Visiting layer: bnorm_34
+Visiting layer: leaky_34
+Visiting layer: conv_35
+Visiting layer: bnorm_35
+Visiting layer: leaky_35
+Visiting layer: add_11
+Visiting layer: zero_padding2d_4
+Visiting layer: conv_37
+Visiting layer: bnorm_37
+Visiting layer: leaky_37
+Visiting layer: conv_38
+Visiting layer: bnorm_38
+Visiting layer: leaky_38
+Visiting layer: conv_39
+Visiting layer: bnorm_39
+Visiting layer: leaky_39
+Visiting layer: add_12
+Visiting layer: conv_41
+Visiting layer: bnorm_41
+Visiting layer: leaky_41
+Visiting layer: conv_42
+Visiting layer: bnorm_42
+Visiting layer: leaky_42
+Visiting layer: add_13
+Visiting layer: conv_44
+Visiting layer: bnorm_44
+Visiting layer: leaky_44
+Visiting layer: conv_45
+Visiting layer: bnorm_45
+Visiting layer: leaky_45
+Visiting layer: add_14
+Visiting layer: conv_47
+Visiting layer: bnorm_47
+Visiting layer: leaky_47
+Visiting layer: conv_48
+Visiting layer: bnorm_48
+Visiting layer: leaky_48
+Visiting layer: add_15
+Visiting layer: conv_50
+Visiting layer: bnorm_50
+Visiting layer: leaky_50
+Visiting layer: conv_51
+Visiting layer: bnorm_51
+Visiting layer: leaky_51
+Visiting layer: add_16
+Visiting layer: conv_53
+Visiting layer: bnorm_53
+Visiting layer: leaky_53
+Visiting layer: conv_54
+Visiting layer: bnorm_54
+Visiting layer: leaky_54
+Visiting layer: add_17
+Visiting layer: conv_56
+Visiting layer: bnorm_56
+Visiting layer: leaky_56
+Visiting layer: conv_57
+Visiting layer: bnorm_57
+Visiting layer: leaky_57
+Visiting layer: add_18
+Visiting layer: conv_59
+Visiting layer: bnorm_59
+Visiting layer: leaky_59
+Visiting layer: conv_60
+Visiting layer: bnorm_60
+Visiting layer: leaky_60
+Visiting layer: add_19
+Visiting layer: zero_padding2d_5
+Visiting layer: conv_62
+Visiting layer: bnorm_62
+Visiting layer: leaky_62
+Visiting layer: conv_63
+Visiting layer: bnorm_63
+Visiting layer: leaky_63
+Visiting layer: conv_64
+Visiting layer: bnorm_64
+Visiting layer: leaky_64
+Visiting layer: add_20
+Visiting layer: conv_66
+Visiting layer: bnorm_66
+Visiting layer: leaky_66
+Visiting layer: conv_67
+Visiting layer: bnorm_67
+Visiting layer: leaky_67
+Visiting layer: add_21
+Visiting layer: conv_69
+Visiting layer: bnorm_69
+Visiting layer: leaky_69
+Visiting layer: conv_70
+Visiting layer: bnorm_70
+Visiting layer: leaky_70
+Visiting layer: add_22
+Visiting layer: conv_72
+Visiting layer: bnorm_72
+Visiting layer: leaky_72
+Visiting layer: conv_73
+Visiting layer: bnorm_73
+Visiting layer: leaky_73
+Visiting layer: add_23
+Visiting layer: conv_75
+Visiting layer: bnorm_75
+Visiting layer: leaky_75
+Visiting layer: conv_76
+Visiting layer: bnorm_76
+Visiting layer: leaky_76
+Visiting layer: conv_77
+Visiting layer: bnorm_77
+Visiting layer: leaky_77
+Visiting layer: conv_78
+Visiting layer: bnorm_78
+Visiting layer: leaky_78
+Visiting layer: conv_79
+Visiting layer: bnorm_79
+Visiting layer: leaky_79
+Visiting layer: conv_80
+Visiting layer: bnorm_80
+Visiting layer: leaky_80
+Visiting layer: conv_81
+Visiting layer: conv_84
+Visiting layer: bnorm_84
+Visiting layer: leaky_84
+Visiting layer: up_sampling2d_1
+Visiting layer: concatenate_1
+Visiting layer: conv_87
+Visiting layer: bnorm_87
+Visiting layer: leaky_87
+Visiting layer: conv_88
+Visiting layer: bnorm_88
+Visiting layer: leaky_88
+Visiting layer: conv_89
+Visiting layer: bnorm_89
+Visiting layer: leaky_89
+Visiting layer: conv_90
+Visiting layer: bnorm_90
+Visiting layer: leaky_90
+Visiting layer: conv_91
+Visiting layer: bnorm_91
+Visiting layer: leaky_91
+Visiting layer: conv_92
+Visiting layer: bnorm_92
+Visiting layer: leaky_92
+Visiting layer: conv_93
+Visiting layer: conv_96
+Visiting layer: bnorm_96
+Visiting layer: leaky_96
+Visiting layer: up_sampling2d_2
+Visiting layer: concatenate_2
+Visiting layer: conv_99
+Visiting layer: bnorm_99
+Visiting layer: leaky_99
+Visiting layer: conv_100
+Visiting layer: bnorm_100
+Visiting layer: leaky_100
+Visiting layer: conv_101
+Visiting layer: bnorm_101
+Visiting layer: leaky_101
+Visiting layer: conv_102
+Visiting layer: bnorm_102
+Visiting layer: leaky_102
+Visiting layer: conv_103
+Visiting layer: bnorm_103
+Visiting layer: leaky_103
+Visiting layer: conv_104
+Visiting layer: bnorm_104
+Visiting layer: leaky_104
+Visiting layer: conv_105
+
+
+
+
+
+
+
+['input_2', 'conv_0', 'bnorm_0', 'leaky_0', 'zero_padding2d_1', 'conv_1', 'bnorm_1', 'leaky_1', 'conv_2', 'bnorm_2', 'leaky_2', 'conv_3', 'bnorm_3', 'leaky_3', 'add_1', 'zero_padding2d_2', 'conv_5', 'bnorm_5', 'leaky_5', 'conv_6', 'bnorm_6', 'leaky_6', 'conv_7', 'bnorm_7', 'leaky_7', 'add_2', 'conv_9', 'bnorm_9', 'leaky_9', 'conv_10', 'bnorm_10', 'leaky_10', 'add_3', 'zero_padding2d_3', 'conv_12', 'bnorm_12', 'leaky_12', 'conv_13', 'bnorm_13', 'leaky_13', 'conv_14', 'bnorm_14', 'leaky_14', 'add_4', 'conv_16', 'bnorm_16', 'leaky_16', 'conv_17', 'bnorm_17', 'leaky_17', 'add_5', 'conv_19', 'bnorm_19', 'leaky_19', 'conv_20', 'bnorm_20', 'leaky_20', 'add_6', 'conv_22', 'bnorm_22', 'leaky_22', 'conv_23', 'bnorm_23', 'leaky_23', 'add_7', 'conv_25', 'bnorm_25', 'leaky_25', 'conv_26', 'bnorm_26', 'leaky_26', 'add_8', 'conv_28', 'bnorm_28', 'leaky_28', 'conv_29', 'bnorm_29', 'leaky_29', 'add_9', 'conv_31', 'bnorm_31', 'leaky_31', 'conv_32', 'bnorm_32', 'leaky_32', 'add_10', 'conv_34', 'bnorm_34', 'leaky_34', 'conv_35', 'bnorm_35', 'leaky_35', 'add_11', 'zero_padding2d_4', 'conv_37', 'bnorm_37', 'leaky_37', 'conv_38', 'bnorm_38', 'leaky_38', 'conv_39', 'bnorm_39', 'leaky_39', 'add_12', 'conv_41', 'bnorm_41', 'leaky_41', 'conv_42', 'bnorm_42', 'leaky_42', 'add_13', 'conv_44', 'bnorm_44', 'leaky_44', 'conv_45', 'bnorm_45', 'leaky_45', 'add_14', 'conv_47', 'bnorm_47', 'leaky_47', 'conv_48', 'bnorm_48', 'leaky_48', 'add_15', 'conv_50', 'bnorm_50', 'leaky_50', 'conv_51', 'bnorm_51', 'leaky_51', 'add_16', 'conv_53', 'bnorm_53', 'leaky_53', 'conv_54', 'bnorm_54', 'leaky_54', 'add_17', 'conv_56', 'bnorm_56', 'leaky_56', 'conv_57', 'bnorm_57', 'leaky_57', 'add_18', 'conv_59', 'bnorm_59', 'leaky_59', 'conv_60', 'bnorm_60', 'leaky_60', 'add_19', 'zero_padding2d_5', 'conv_62', 'bnorm_62', 'leaky_62', 'conv_63', 'bnorm_63', 'leaky_63', 'conv_64', 'bnorm_64', 'leaky_64', 'add_20', 'conv_66', 'bnorm_66', 'leaky_66', 'conv_67', 'bnorm_67', 'leaky_67', 'add_21', 'conv_69', 'bnorm_69', 'leaky_69', 'conv_70', 'bnorm_70', 'leaky_70', 'add_22', 'conv_72', 'bnorm_72', 'leaky_72', 'conv_73', 'bnorm_73', 'leaky_73', 'add_23', 'conv_75', 'bnorm_75', 'leaky_75', 'conv_76', 'bnorm_76', 'leaky_76', 'conv_77', 'bnorm_77', 'leaky_77', 'conv_78', 'bnorm_78', 'leaky_78', 'conv_79', 'bnorm_79', 'leaky_79', 'conv_80', 'bnorm_80', 'leaky_80', 'conv_81', 'conv_84', 'bnorm_84', 'leaky_84', 'up_sampling2d_1', 'concatenate_1', 'conv_87', 'bnorm_87', 'leaky_87', 'conv_88', 'bnorm_88', 'leaky_88', 'conv_89', 'bnorm_89', 'leaky_89', 'conv_90', 'bnorm_90', 'leaky_90', 'conv_91', 'bnorm_91', 'leaky_91', 'conv_92', 'bnorm_92', 'leaky_92', 'conv_93', 'conv_96', 'bnorm_96', 'leaky_96', 'up_sampling2d_2', 'concatenate_2', 'conv_99', 'bnorm_99', 'leaky_99', 'conv_100', 'bnorm_100', 'leaky_100', 'conv_101', 'bnorm_101', 'leaky_101', 'conv_102', 'bnorm_102', 'leaky_102', 'conv_103', 'bnorm_103', 'leaky_103', 'conv_104', 'bnorm_104', 'leaky_104', 'conv_105']
+
+
+
+
+
+
+['conv_0', 'conv_1', 'conv_2', 'conv_3', 'conv_5', 'conv_6', 'conv_7', 'conv_9', 'conv_10', 'conv_12', 'conv_13', 'conv_14', 'conv_16', 'conv_17', 'conv_19', 'conv_20', 'conv_22', 'conv_23', 'conv_25', 'conv_26', 'conv_28', 'conv_29', 'conv_31', 'conv_32', 'conv_34', 'conv_35', 'conv_37', 'conv_38', 'conv_39', 'conv_41', 'conv_42', 'conv_44', 'conv_45', 'conv_47', 'conv_48', 'conv_50', 'conv_51', 'conv_53', 'conv_54', 'conv_56', 'conv_57', 'conv_59', 'conv_60', 'conv_62', 'conv_63', 'conv_64', 'conv_66', 'conv_67', 'conv_69', 'conv_70', 'conv_72', 'conv_73', 'conv_75', 'conv_76', 'conv_77', 'conv_78', 'conv_79', 'conv_80', 'conv_81', 'conv_84', 'conv_87', 'conv_88', 'conv_89', 'conv_90', 'conv_91', 'conv_92', 'conv_93', 'conv_96', 'conv_99', 'conv_100', 'conv_101', 'conv_102', 'conv_103', 'conv_104', 'conv_105']
+Model /home/ehsan/UvA/Sub_Model/YOLOv3/Yolov3.h5 loaded.
+252
+sublayer input_2, output shape :(?, 608, 608, 3)
+
+
+
+layer conv_0, input :conv_0,(?, 608, 608, 3)
+sublayer conv_0, output shape :(?, 608, 608, 32)
+sublayer bnorm_0, output shape :(?, 608, 608, 32)
+sublayer leaky_0, output shape :(?, 608, 608, 32)
+sublayer zero_padding2d_1, output shape :(?, 609, 609, 32)
+0 conv_0 1 4
+
+
+
+layer conv_1, input :(?, 609, 609, 32)
+sublayer conv_1, output shape :(?, 304, 304, 64)
+sublayer bnorm_1, output shape :(?, 304, 304, 64)
+sublayer leaky_1, output shape :(?, 304, 304, 64)
+1 conv_1 5 7
+
+
+
+layer conv_2, input :(?, 304, 304, 64)
+sublayer conv_2, output shape :(?, 304, 304, 32)
+sublayer bnorm_2, output shape :(?, 304, 304, 32)
+sublayer leaky_2, output shape :(?, 304, 304, 32)
+2 conv_2 8 10
+
+
+
+layer conv_3, input :(?, 304, 304, 32)
+sublayer conv_3, output shape :(?, 304, 304, 64)
+sublayer bnorm_3, output shape :(?, 304, 304, 64)
+sublayer leaky_3, output shape :(?, 304, 304, 64)
+sublayer add_1, output shape :(?, 304, 304, 64)
+sublayer zero_padding2d_2, output shape :(?, 305, 305, 64)
+3 conv_3 11 15
+
+
+
+layer conv_5, input :(?, 305, 305, 64)
+sublayer conv_5, output shape :(?, 152, 152, 128)
+sublayer bnorm_5, output shape :(?, 152, 152, 128)
+sublayer leaky_5, output shape :(?, 152, 152, 128)
+4 conv_5 16 18
+
+
+
+layer conv_6, input :(?, 152, 152, 128)
+sublayer conv_6, output shape :(?, 152, 152, 64)
+sublayer bnorm_6, output shape :(?, 152, 152, 64)
+sublayer leaky_6, output shape :(?, 152, 152, 64)
+5 conv_6 19 21
+
+
+
+layer conv_7, input :(?, 152, 152, 64)
+sublayer conv_7, output shape :(?, 152, 152, 128)
+sublayer bnorm_7, output shape :(?, 152, 152, 128)
+sublayer leaky_7, output shape :(?, 152, 152, 128)
+sublayer add_2, output shape :(?, 152, 152, 128)
+6 conv_7 22 25
+
+
+
+layer conv_9, input :(?, 152, 152, 128)
+sublayer conv_9, output shape :(?, 152, 152, 64)
+sublayer bnorm_9, output shape :(?, 152, 152, 64)
+sublayer leaky_9, output shape :(?, 152, 152, 64)
+7 conv_9 26 28
+
+
+
+layer conv_10, input :(?, 152, 152, 64)
+sublayer conv_10, output shape :(?, 152, 152, 128)
+sublayer bnorm_10, output shape :(?, 152, 152, 128)
+sublayer leaky_10, output shape :(?, 152, 152, 128)
+sublayer add_3, output shape :(?, 152, 152, 128)
+sublayer zero_padding2d_3, output shape :(?, 153, 153, 128)
+8 conv_10 29 33
+
+
+
+layer conv_12, input :(?, 153, 153, 128)
+sublayer conv_12, output shape :(?, 76, 76, 256)
+sublayer bnorm_12, output shape :(?, 76, 76, 256)
+sublayer leaky_12, output shape :(?, 76, 76, 256)
+9 conv_12 34 36
+
+
+
+layer conv_13, input :(?, 76, 76, 256)
+sublayer conv_13, output shape :(?, 76, 76, 128)
+sublayer bnorm_13, output shape :(?, 76, 76, 128)
+sublayer leaky_13, output shape :(?, 76, 76, 128)
+10 conv_13 37 39
+
+
+
+layer conv_14, input :(?, 76, 76, 128)
+sublayer conv_14, output shape :(?, 76, 76, 256)
+sublayer bnorm_14, output shape :(?, 76, 76, 256)
+sublayer leaky_14, output shape :(?, 76, 76, 256)
+sublayer add_4, output shape :(?, 76, 76, 256)
+11 conv_14 40 43
+
+
+
+layer conv_16, input :(?, 76, 76, 256)
+sublayer conv_16, output shape :(?, 76, 76, 128)
+sublayer bnorm_16, output shape :(?, 76, 76, 128)
+sublayer leaky_16, output shape :(?, 76, 76, 128)
+12 conv_16 44 46
+
+
+
+layer conv_17, input :(?, 76, 76, 128)
+sublayer conv_17, output shape :(?, 76, 76, 256)
+sublayer bnorm_17, output shape :(?, 76, 76, 256)
+sublayer leaky_17, output shape :(?, 76, 76, 256)
+sublayer add_5, output shape :(?, 76, 76, 256)
+13 conv_17 47 50
+
+
+
+layer conv_19, input :(?, 76, 76, 256)
+sublayer conv_19, output shape :(?, 76, 76, 128)
+sublayer bnorm_19, output shape :(?, 76, 76, 128)
+sublayer leaky_19, output shape :(?, 76, 76, 128)
+14 conv_19 51 53
+
+
+
+layer conv_20, input :(?, 76, 76, 128)
+sublayer conv_20, output shape :(?, 76, 76, 256)
+sublayer bnorm_20, output shape :(?, 76, 76, 256)
+sublayer leaky_20, output shape :(?, 76, 76, 256)
+sublayer add_6, output shape :(?, 76, 76, 256)
+15 conv_20 54 57
+
+
+
+layer conv_22, input :(?, 76, 76, 256)
+sublayer conv_22, output shape :(?, 76, 76, 128)
+sublayer bnorm_22, output shape :(?, 76, 76, 128)
+sublayer leaky_22, output shape :(?, 76, 76, 128)
+16 conv_22 58 60
+
+
+
+layer conv_23, input :(?, 76, 76, 128)
+sublayer conv_23, output shape :(?, 76, 76, 256)
+sublayer bnorm_23, output shape :(?, 76, 76, 256)
+sublayer leaky_23, output shape :(?, 76, 76, 256)
+sublayer add_7, output shape :(?, 76, 76, 256)
+17 conv_23 61 64
+
+
+
+layer conv_25, input :(?, 76, 76, 256)
+sublayer conv_25, output shape :(?, 76, 76, 128)
+sublayer bnorm_25, output shape :(?, 76, 76, 128)
+sublayer leaky_25, output shape :(?, 76, 76, 128)
+18 conv_25 65 67
+
+
+
+layer conv_26, input :(?, 76, 76, 128)
+sublayer conv_26, output shape :(?, 76, 76, 256)
+sublayer bnorm_26, output shape :(?, 76, 76, 256)
+sublayer leaky_26, output shape :(?, 76, 76, 256)
+sublayer add_8, output shape :(?, 76, 76, 256)
+19 conv_26 68 71
+
+
+
+layer conv_28, input :(?, 76, 76, 256)
+sublayer conv_28, output shape :(?, 76, 76, 128)
+sublayer bnorm_28, output shape :(?, 76, 76, 128)
+sublayer leaky_28, output shape :(?, 76, 76, 128)
+20 conv_28 72 74
+
+
+
+layer conv_29, input :(?, 76, 76, 128)
+sublayer conv_29, output shape :(?, 76, 76, 256)
+sublayer bnorm_29, output shape :(?, 76, 76, 256)
+sublayer leaky_29, output shape :(?, 76, 76, 256)
+sublayer add_9, output shape :(?, 76, 76, 256)
+21 conv_29 75 78
+
+
+
+layer conv_31, input :(?, 76, 76, 256)
+sublayer conv_31, output shape :(?, 76, 76, 128)
+sublayer bnorm_31, output shape :(?, 76, 76, 128)
+sublayer leaky_31, output shape :(?, 76, 76, 128)
+22 conv_31 79 81
+
+
+
+layer conv_32, input :(?, 76, 76, 128)
+sublayer conv_32, output shape :(?, 76, 76, 256)
+sublayer bnorm_32, output shape :(?, 76, 76, 256)
+sublayer leaky_32, output shape :(?, 76, 76, 256)
+sublayer add_10, output shape :(?, 76, 76, 256)
+23 conv_32 82 85
+
+
+
+layer conv_34, input :(?, 76, 76, 256)
+sublayer conv_34, output shape :(?, 76, 76, 128)
+sublayer bnorm_34, output shape :(?, 76, 76, 128)
+sublayer leaky_34, output shape :(?, 76, 76, 128)
+24 conv_34 86 88
+
+
+
+layer conv_35, input :(?, 76, 76, 128)
+sublayer conv_35, output shape :(?, 76, 76, 256)
+sublayer bnorm_35, output shape :(?, 76, 76, 256)
+sublayer leaky_35, output shape :(?, 76, 76, 256)
+sublayer add_11, output shape :(?, 76, 76, 256)
+sublayer zero_padding2d_4, output shape :(?, 77, 77, 256)
+25 conv_35 89 93
+
+
+
+layer conv_37, input :(?, 77, 77, 256)
+sublayer conv_37, output shape :(?, 38, 38, 512)
+sublayer bnorm_37, output shape :(?, 38, 38, 512)
+sublayer leaky_37, output shape :(?, 38, 38, 512)
+26 conv_37 94 96
+
+
+
+layer conv_38, input :(?, 38, 38, 512)
+sublayer conv_38, output shape :(?, 38, 38, 256)
+sublayer bnorm_38, output shape :(?, 38, 38, 256)
+sublayer leaky_38, output shape :(?, 38, 38, 256)
+27 conv_38 97 99
+
+
+
+layer conv_39, input :(?, 38, 38, 256)
+sublayer conv_39, output shape :(?, 38, 38, 512)
+sublayer bnorm_39, output shape :(?, 38, 38, 512)
+sublayer leaky_39, output shape :(?, 38, 38, 512)
+sublayer add_12, output shape :(?, 38, 38, 512)
+28 conv_39 100 103
+
+
+
+layer conv_41, input :(?, 38, 38, 512)
+sublayer conv_41, output shape :(?, 38, 38, 256)
+sublayer bnorm_41, output shape :(?, 38, 38, 256)
+sublayer leaky_41, output shape :(?, 38, 38, 256)
+29 conv_41 104 106
+
+
+
+layer conv_42, input :(?, 38, 38, 256)
+sublayer conv_42, output shape :(?, 38, 38, 512)
+sublayer bnorm_42, output shape :(?, 38, 38, 512)
+sublayer leaky_42, output shape :(?, 38, 38, 512)
+sublayer add_13, output shape :(?, 38, 38, 512)
+30 conv_42 107 110
+
+
+
+layer conv_44, input :(?, 38, 38, 512)
+sublayer conv_44, output shape :(?, 38, 38, 256)
+sublayer bnorm_44, output shape :(?, 38, 38, 256)
+sublayer leaky_44, output shape :(?, 38, 38, 256)
+31 conv_44 111 113
+
+
+
+layer conv_45, input :(?, 38, 38, 256)
+sublayer conv_45, output shape :(?, 38, 38, 512)
+sublayer bnorm_45, output shape :(?, 38, 38, 512)
+sublayer leaky_45, output shape :(?, 38, 38, 512)
+sublayer add_14, output shape :(?, 38, 38, 512)
+32 conv_45 114 117
+
+
+
+layer conv_47, input :(?, 38, 38, 512)
+sublayer conv_47, output shape :(?, 38, 38, 256)
+sublayer bnorm_47, output shape :(?, 38, 38, 256)
+sublayer leaky_47, output shape :(?, 38, 38, 256)
+33 conv_47 118 120
+
+
+
+layer conv_48, input :(?, 38, 38, 256)
+sublayer conv_48, output shape :(?, 38, 38, 512)
+sublayer bnorm_48, output shape :(?, 38, 38, 512)
+sublayer leaky_48, output shape :(?, 38, 38, 512)
+sublayer add_15, output shape :(?, 38, 38, 512)
+34 conv_48 121 124
+
+
+
+layer conv_50, input :(?, 38, 38, 512)
+sublayer conv_50, output shape :(?, 38, 38, 256)
+sublayer bnorm_50, output shape :(?, 38, 38, 256)
+sublayer leaky_50, output shape :(?, 38, 38, 256)
+35 conv_50 125 127
+
+
+
+layer conv_51, input :(?, 38, 38, 256)
+sublayer conv_51, output shape :(?, 38, 38, 512)
+sublayer bnorm_51, output shape :(?, 38, 38, 512)
+sublayer leaky_51, output shape :(?, 38, 38, 512)
+sublayer add_16, output shape :(?, 38, 38, 512)
+36 conv_51 128 131
+
+
+
+layer conv_53, input :(?, 38, 38, 512)
+sublayer conv_53, output shape :(?, 38, 38, 256)
+sublayer bnorm_53, output shape :(?, 38, 38, 256)
+sublayer leaky_53, output shape :(?, 38, 38, 256)
+37 conv_53 132 134
+
+
+
+layer conv_54, input :(?, 38, 38, 256)
+sublayer conv_54, output shape :(?, 38, 38, 512)
+sublayer bnorm_54, output shape :(?, 38, 38, 512)
+sublayer leaky_54, output shape :(?, 38, 38, 512)
+sublayer add_17, output shape :(?, 38, 38, 512)
+38 conv_54 135 138
+
+
+
+layer conv_56, input :(?, 38, 38, 512)
+sublayer conv_56, output shape :(?, 38, 38, 256)
+sublayer bnorm_56, output shape :(?, 38, 38, 256)
+sublayer leaky_56, output shape :(?, 38, 38, 256)
+39 conv_56 139 141
+
+
+
+layer conv_57, input :(?, 38, 38, 256)
+sublayer conv_57, output shape :(?, 38, 38, 512)
+sublayer bnorm_57, output shape :(?, 38, 38, 512)
+sublayer leaky_57, output shape :(?, 38, 38, 512)
+sublayer add_18, output shape :(?, 38, 38, 512)
+40 conv_57 142 145
+
+
+
+layer conv_59, input :(?, 38, 38, 512)
+sublayer conv_59, output shape :(?, 38, 38, 256)
+sublayer bnorm_59, output shape :(?, 38, 38, 256)
+sublayer leaky_59, output shape :(?, 38, 38, 256)
+41 conv_59 146 148
+
+
+
+layer conv_60, input :(?, 38, 38, 256)
+sublayer conv_60, output shape :(?, 38, 38, 512)
+sublayer bnorm_60, output shape :(?, 38, 38, 512)
+sublayer leaky_60, output shape :(?, 38, 38, 512)
+sublayer add_19, output shape :(?, 38, 38, 512)
+sublayer zero_padding2d_5, output shape :(?, 39, 39, 512)
+42 conv_60 149 153
+
+
+
+layer conv_62, input :(?, 39, 39, 512)
+sublayer conv_62, output shape :(?, 19, 19, 1024)
+sublayer bnorm_62, output shape :(?, 19, 19, 1024)
+sublayer leaky_62, output shape :(?, 19, 19, 1024)
+43 conv_62 154 156
+
+
+
+layer conv_63, input :(?, 19, 19, 1024)
+sublayer conv_63, output shape :(?, 19, 19, 512)
+sublayer bnorm_63, output shape :(?, 19, 19, 512)
+sublayer leaky_63, output shape :(?, 19, 19, 512)
+44 conv_63 157 159
+
+
+
+layer conv_64, input :(?, 19, 19, 512)
+sublayer conv_64, output shape :(?, 19, 19, 1024)
+sublayer bnorm_64, output shape :(?, 19, 19, 1024)
+sublayer leaky_64, output shape :(?, 19, 19, 1024)
+sublayer add_20, output shape :(?, 19, 19, 1024)
+45 conv_64 160 163
+
+
+
+layer conv_66, input :(?, 19, 19, 1024)
+sublayer conv_66, output shape :(?, 19, 19, 512)
+sublayer bnorm_66, output shape :(?, 19, 19, 512)
+sublayer leaky_66, output shape :(?, 19, 19, 512)
+46 conv_66 164 166
+
+
+
+layer conv_67, input :(?, 19, 19, 512)
+sublayer conv_67, output shape :(?, 19, 19, 1024)
+sublayer bnorm_67, output shape :(?, 19, 19, 1024)
+sublayer leaky_67, output shape :(?, 19, 19, 1024)
+sublayer add_21, output shape :(?, 19, 19, 1024)
+47 conv_67 167 170
+
+
+
+layer conv_69, input :(?, 19, 19, 1024)
+sublayer conv_69, output shape :(?, 19, 19, 512)
+sublayer bnorm_69, output shape :(?, 19, 19, 512)
+sublayer leaky_69, output shape :(?, 19, 19, 512)
+48 conv_69 171 173
+
+
+
+layer conv_70, input :(?, 19, 19, 512)
+sublayer conv_70, output shape :(?, 19, 19, 1024)
+sublayer bnorm_70, output shape :(?, 19, 19, 1024)
+sublayer leaky_70, output shape :(?, 19, 19, 1024)
+sublayer add_22, output shape :(?, 19, 19, 1024)
+49 conv_70 174 177
+
+
+
+layer conv_72, input :(?, 19, 19, 1024)
+sublayer conv_72, output shape :(?, 19, 19, 512)
+sublayer bnorm_72, output shape :(?, 19, 19, 512)
+sublayer leaky_72, output shape :(?, 19, 19, 512)
+50 conv_72 178 180
+
+
+
+layer conv_73, input :(?, 19, 19, 512)
+sublayer conv_73, output shape :(?, 19, 19, 1024)
+sublayer bnorm_73, output shape :(?, 19, 19, 1024)
+sublayer leaky_73, output shape :(?, 19, 19, 1024)
+sublayer add_23, output shape :(?, 19, 19, 1024)
+51 conv_73 181 184
+
+
+
+layer conv_75, input :(?, 19, 19, 1024)
+sublayer conv_75, output shape :(?, 19, 19, 512)
+sublayer bnorm_75, output shape :(?, 19, 19, 512)
+sublayer leaky_75, output shape :(?, 19, 19, 512)
+52 conv_75 185 187
+
+
+
+layer conv_76, input :(?, 19, 19, 512)
+sublayer conv_76, output shape :(?, 19, 19, 1024)
+sublayer bnorm_76, output shape :(?, 19, 19, 1024)
+sublayer leaky_76, output shape :(?, 19, 19, 1024)
+53 conv_76 188 190
+
+
+
+layer conv_77, input :(?, 19, 19, 1024)
+sublayer conv_77, output shape :(?, 19, 19, 512)
+sublayer bnorm_77, output shape :(?, 19, 19, 512)
+sublayer leaky_77, output shape :(?, 19, 19, 512)
+54 conv_77 191 193
+
+
+
+layer conv_78, input :(?, 19, 19, 512)
+sublayer conv_78, output shape :(?, 19, 19, 1024)
+sublayer bnorm_78, output shape :(?, 19, 19, 1024)
+sublayer leaky_78, output shape :(?, 19, 19, 1024)
+55 conv_78 194 196
+
+
+
+layer conv_79, input :(?, 19, 19, 1024)
+sublayer conv_79, output shape :(?, 19, 19, 512)
+sublayer bnorm_79, output shape :(?, 19, 19, 512)
+sublayer leaky_79, output shape :(?, 19, 19, 512)
+56 conv_79 197 199
+
+
+
+layer conv_80, input :(?, 19, 19, 512)
+sublayer conv_80, output shape :(?, 19, 19, 1024)
+sublayer bnorm_80, output shape :(?, 19, 19, 1024)
+sublayer leaky_80, output shape :(?, 19, 19, 1024)
+57 conv_80 200 202
+
+
+
+layer conv_81, input :(?, 19, 19, 1024)
+sublayer conv_81, output shape :(?, 19, 19, 255)
+58 conv_81 203 203
+
+
+
+layer conv_84, input :(?, 19, 19, 512)
+sublayer conv_84, output shape :(?, 19, 19, 256)
+sublayer bnorm_84, output shape :(?, 19, 19, 256)
+sublayer leaky_84, output shape :(?, 19, 19, 256)
+sublayer up_sampling2d_1, output shape :(?, 38, 38, 256)
+sublayer concatenate_1, output shape :(?, 38, 38, 768)
+59 conv_84 204 208
+
+
+
+layer conv_87, input :(?, 38, 38, 768)
+sublayer conv_87, output shape :(?, 38, 38, 256)
+sublayer bnorm_87, output shape :(?, 38, 38, 256)
+sublayer leaky_87, output shape :(?, 38, 38, 256)
+60 conv_87 209 211
+
+
+
+layer conv_88, input :(?, 38, 38, 256)
+sublayer conv_88, output shape :(?, 38, 38, 512)
+sublayer bnorm_88, output shape :(?, 38, 38, 512)
+sublayer leaky_88, output shape :(?, 38, 38, 512)
+61 conv_88 212 214
+
+
+
+layer conv_89, input :(?, 38, 38, 512)
+sublayer conv_89, output shape :(?, 38, 38, 256)
+sublayer bnorm_89, output shape :(?, 38, 38, 256)
+sublayer leaky_89, output shape :(?, 38, 38, 256)
+62 conv_89 215 217
+
+
+
+layer conv_90, input :(?, 38, 38, 256)
+sublayer conv_90, output shape :(?, 38, 38, 512)
+sublayer bnorm_90, output shape :(?, 38, 38, 512)
+sublayer leaky_90, output shape :(?, 38, 38, 512)
+63 conv_90 218 220
+
+
+
+layer conv_91, input :(?, 38, 38, 512)
+sublayer conv_91, output shape :(?, 38, 38, 256)
+sublayer bnorm_91, output shape :(?, 38, 38, 256)
+sublayer leaky_91, output shape :(?, 38, 38, 256)
+64 conv_91 221 223
+
+
+
+layer conv_92, input :(?, 38, 38, 256)
+sublayer conv_92, output shape :(?, 38, 38, 512)
+sublayer bnorm_92, output shape :(?, 38, 38, 512)
+sublayer leaky_92, output shape :(?, 38, 38, 512)
+65 conv_92 224 226
+
+
+
+layer conv_93, input :(?, 38, 38, 512)
+sublayer conv_93, output shape :(?, 38, 38, 255)
+66 conv_93 227 227
+
+
+
+layer conv_96, input :(?, 38, 38, 256)
+sublayer conv_96, output shape :(?, 38, 38, 128)
+sublayer bnorm_96, output shape :(?, 38, 38, 128)
+sublayer leaky_96, output shape :(?, 38, 38, 128)
+sublayer up_sampling2d_2, output shape :(?, 76, 76, 128)
+sublayer concatenate_2, output shape :(?, 76, 76, 384)
+67 conv_96 228 232
+
+
+
+layer conv_99, input :(?, 76, 76, 384)
+sublayer conv_99, output shape :(?, 76, 76, 128)
+sublayer bnorm_99, output shape :(?, 76, 76, 128)
+sublayer leaky_99, output shape :(?, 76, 76, 128)
+68 conv_99 233 235
+
+
+
+layer conv_100, input :(?, 76, 76, 128)
+sublayer conv_100, output shape :(?, 76, 76, 256)
+sublayer bnorm_100, output shape :(?, 76, 76, 256)
+sublayer leaky_100, output shape :(?, 76, 76, 256)
+69 conv_100 236 238
+
+
+
+layer conv_101, input :(?, 76, 76, 256)
+sublayer conv_101, output shape :(?, 76, 76, 128)
+sublayer bnorm_101, output shape :(?, 76, 76, 128)
+sublayer leaky_101, output shape :(?, 76, 76, 128)
+70 conv_101 239 241
+
+
+
+layer conv_102, input :(?, 76, 76, 128)
+sublayer conv_102, output shape :(?, 76, 76, 256)
+sublayer bnorm_102, output shape :(?, 76, 76, 256)
+sublayer leaky_102, output shape :(?, 76, 76, 256)
+71 conv_102 242 244
+
+
+
+layer conv_103, input :(?, 76, 76, 256)
+sublayer conv_103, output shape :(?, 76, 76, 128)
+sublayer bnorm_103, output shape :(?, 76, 76, 128)
+sublayer leaky_103, output shape :(?, 76, 76, 128)
+72 conv_103 245 247
+
+
+
+layer conv_104, input :(?, 76, 76, 128)
+sublayer conv_104, output shape :(?, 76, 76, 256)
+sublayer bnorm_104, output shape :(?, 76, 76, 256)
+sublayer leaky_104, output shape :(?, 76, 76, 256)
+73 conv_104 248 250
+
+
+
+layer conv_105, input :(?, 76, 76, 256)
+sublayer conv_105, output shape :(?, 76, 76, 255)
+74 conv_105 251 251
+
+
+****************
+Slicing model from layer: conv_0 to conv_105
+
+inbound layers outside:
+input_2
+
+outbound layers outside:
+Create input layer for input_2 with shape: (608, 608, 3)
+Replacing connection from input_2 to conv_0
+
+inbound layers of input tensors:
+input_2
+
+inbound layers of output tensors:
+conv_81
+conv_93
+conv_105
+__________________________________________________________________________________________________
+Layer (type)                    Output Shape         Param #     Connected to                     
+==================================================================================================
+input_2 (InputLayer)            (None, 608, 608, 3)  0                                            
+__________________________________________________________________________________________________
+conv_0 (Conv2D)                 (None, 608, 608, 32) 864         input_2[0][0]                    
+__________________________________________________________________________________________________
+bnorm_0 (BatchNormalization)    (None, 608, 608, 32) 128         conv_0[0][0]                     
+__________________________________________________________________________________________________
+leaky_0 (LeakyReLU)             (None, 608, 608, 32) 0           bnorm_0[0][0]                    
+__________________________________________________________________________________________________
+zero_padding2d_1 (ZeroPadding2D (None, 609, 609, 32) 0           leaky_0[0][0]                    
+__________________________________________________________________________________________________
+conv_1 (Conv2D)                 (None, 304, 304, 64) 18432       zero_padding2d_1[0][0]           
+__________________________________________________________________________________________________
+bnorm_1 (BatchNormalization)    (None, 304, 304, 64) 256         conv_1[0][0]                     
+__________________________________________________________________________________________________
+leaky_1 (LeakyReLU)             (None, 304, 304, 64) 0           bnorm_1[0][0]                    
+__________________________________________________________________________________________________
+conv_2 (Conv2D)                 (None, 304, 304, 32) 2048        leaky_1[0][0]                    
+__________________________________________________________________________________________________
+bnorm_2 (BatchNormalization)    (None, 304, 304, 32) 128         conv_2[0][0]                     
+__________________________________________________________________________________________________
+leaky_2 (LeakyReLU)             (None, 304, 304, 32) 0           bnorm_2[0][0]                    
+__________________________________________________________________________________________________
+conv_3 (Conv2D)                 (None, 304, 304, 64) 18432       leaky_2[0][0]                    
+__________________________________________________________________________________________________
+bnorm_3 (BatchNormalization)    (None, 304, 304, 64) 256         conv_3[0][0]                     
+__________________________________________________________________________________________________
+leaky_3 (LeakyReLU)             (None, 304, 304, 64) 0           bnorm_3[0][0]                    
+__________________________________________________________________________________________________
+add_1 (Add)                     (None, 304, 304, 64) 0           leaky_1[0][0]                    
+                                                                 leaky_3[0][0]                    
+__________________________________________________________________________________________________
+zero_padding2d_2 (ZeroPadding2D (None, 305, 305, 64) 0           add_1[0][0]                      
+__________________________________________________________________________________________________
+conv_5 (Conv2D)                 (None, 152, 152, 128 73728       zero_padding2d_2[0][0]           
+__________________________________________________________________________________________________
+bnorm_5 (BatchNormalization)    (None, 152, 152, 128 512         conv_5[0][0]                     
+__________________________________________________________________________________________________
+leaky_5 (LeakyReLU)             (None, 152, 152, 128 0           bnorm_5[0][0]                    
+__________________________________________________________________________________________________
+conv_6 (Conv2D)                 (None, 152, 152, 64) 8192        leaky_5[0][0]                    
+__________________________________________________________________________________________________
+bnorm_6 (BatchNormalization)    (None, 152, 152, 64) 256         conv_6[0][0]                     
+__________________________________________________________________________________________________
+leaky_6 (LeakyReLU)             (None, 152, 152, 64) 0           bnorm_6[0][0]                    
+__________________________________________________________________________________________________
+conv_7 (Conv2D)                 (None, 152, 152, 128 73728       leaky_6[0][0]                    
+__________________________________________________________________________________________________
+bnorm_7 (BatchNormalization)    (None, 152, 152, 128 512         conv_7[0][0]                     
+__________________________________________________________________________________________________
+leaky_7 (LeakyReLU)             (None, 152, 152, 128 0           bnorm_7[0][0]                    
+__________________________________________________________________________________________________
+add_2 (Add)                     (None, 152, 152, 128 0           leaky_5[0][0]                    
+                                                                 leaky_7[0][0]                    
+__________________________________________________________________________________________________
+conv_9 (Conv2D)                 (None, 152, 152, 64) 8192        add_2[0][0]                      
+__________________________________________________________________________________________________
+bnorm_9 (BatchNormalization)    (None, 152, 152, 64) 256         conv_9[0][0]                     
+__________________________________________________________________________________________________
+leaky_9 (LeakyReLU)             (None, 152, 152, 64) 0           bnorm_9[0][0]                    
+__________________________________________________________________________________________________
+conv_10 (Conv2D)                (None, 152, 152, 128 73728       leaky_9[0][0]                    
+__________________________________________________________________________________________________
+bnorm_10 (BatchNormalization)   (None, 152, 152, 128 512         conv_10[0][0]                    
+__________________________________________________________________________________________________
+leaky_10 (LeakyReLU)            (None, 152, 152, 128 0           bnorm_10[0][0]                   
+__________________________________________________________________________________________________
+add_3 (Add)                     (None, 152, 152, 128 0           add_2[0][0]                      
+                                                                 leaky_10[0][0]                   
+__________________________________________________________________________________________________
+zero_padding2d_3 (ZeroPadding2D (None, 153, 153, 128 0           add_3[0][0]                      
+__________________________________________________________________________________________________
+conv_12 (Conv2D)                (None, 76, 76, 256)  294912      zero_padding2d_3[0][0]           
+__________________________________________________________________________________________________
+bnorm_12 (BatchNormalization)   (None, 76, 76, 256)  1024        conv_12[0][0]                    
+__________________________________________________________________________________________________
+leaky_12 (LeakyReLU)            (None, 76, 76, 256)  0           bnorm_12[0][0]                   
+__________________________________________________________________________________________________
+conv_13 (Conv2D)                (None, 76, 76, 128)  32768       leaky_12[0][0]                   
+__________________________________________________________________________________________________
+bnorm_13 (BatchNormalization)   (None, 76, 76, 128)  512         conv_13[0][0]                    
+__________________________________________________________________________________________________
+leaky_13 (LeakyReLU)            (None, 76, 76, 128)  0           bnorm_13[0][0]                   
+__________________________________________________________________________________________________
+conv_14 (Conv2D)                (None, 76, 76, 256)  294912      leaky_13[0][0]                   
+__________________________________________________________________________________________________
+bnorm_14 (BatchNormalization)   (None, 76, 76, 256)  1024        conv_14[0][0]                    
+__________________________________________________________________________________________________
+leaky_14 (LeakyReLU)            (None, 76, 76, 256)  0           bnorm_14[0][0]                   
+__________________________________________________________________________________________________
+add_4 (Add)                     (None, 76, 76, 256)  0           leaky_12[0][0]                   
+                                                                 leaky_14[0][0]                   
+__________________________________________________________________________________________________
+conv_16 (Conv2D)                (None, 76, 76, 128)  32768       add_4[0][0]                      
+__________________________________________________________________________________________________
+bnorm_16 (BatchNormalization)   (None, 76, 76, 128)  512         conv_16[0][0]                    
+__________________________________________________________________________________________________
+leaky_16 (LeakyReLU)            (None, 76, 76, 128)  0           bnorm_16[0][0]                   
+__________________________________________________________________________________________________
+conv_17 (Conv2D)                (None, 76, 76, 256)  294912      leaky_16[0][0]                   
+__________________________________________________________________________________________________
+bnorm_17 (BatchNormalization)   (None, 76, 76, 256)  1024        conv_17[0][0]                    
+__________________________________________________________________________________________________
+leaky_17 (LeakyReLU)            (None, 76, 76, 256)  0           bnorm_17[0][0]                   
+__________________________________________________________________________________________________
+add_5 (Add)                     (None, 76, 76, 256)  0           add_4[0][0]                      
+                                                                 leaky_17[0][0]                   
+__________________________________________________________________________________________________
+conv_19 (Conv2D)                (None, 76, 76, 128)  32768       add_5[0][0]                      
+__________________________________________________________________________________________________
+bnorm_19 (BatchNormalization)   (None, 76, 76, 128)  512         conv_19[0][0]                    
+__________________________________________________________________________________________________
+leaky_19 (LeakyReLU)            (None, 76, 76, 128)  0           bnorm_19[0][0]                   
+__________________________________________________________________________________________________
+conv_20 (Conv2D)                (None, 76, 76, 256)  294912      leaky_19[0][0]                   
+__________________________________________________________________________________________________
+bnorm_20 (BatchNormalization)   (None, 76, 76, 256)  1024        conv_20[0][0]                    
+__________________________________________________________________________________________________
+leaky_20 (LeakyReLU)            (None, 76, 76, 256)  0           bnorm_20[0][0]                   
+__________________________________________________________________________________________________
+add_6 (Add)                     (None, 76, 76, 256)  0           add_5[0][0]                      
+                                                                 leaky_20[0][0]                   
+__________________________________________________________________________________________________
+conv_22 (Conv2D)                (None, 76, 76, 128)  32768       add_6[0][0]                      
+__________________________________________________________________________________________________
+bnorm_22 (BatchNormalization)   (None, 76, 76, 128)  512         conv_22[0][0]                    
+__________________________________________________________________________________________________
+leaky_22 (LeakyReLU)            (None, 76, 76, 128)  0           bnorm_22[0][0]                   
+__________________________________________________________________________________________________
+conv_23 (Conv2D)                (None, 76, 76, 256)  294912      leaky_22[0][0]                   
+__________________________________________________________________________________________________
+bnorm_23 (BatchNormalization)   (None, 76, 76, 256)  1024        conv_23[0][0]                    
+__________________________________________________________________________________________________
+leaky_23 (LeakyReLU)            (None, 76, 76, 256)  0           bnorm_23[0][0]                   
+__________________________________________________________________________________________________
+add_7 (Add)                     (None, 76, 76, 256)  0           add_6[0][0]                      
+                                                                 leaky_23[0][0]                   
+__________________________________________________________________________________________________
+conv_25 (Conv2D)                (None, 76, 76, 128)  32768       add_7[0][0]                      
+__________________________________________________________________________________________________
+bnorm_25 (BatchNormalization)   (None, 76, 76, 128)  512         conv_25[0][0]                    
+__________________________________________________________________________________________________
+leaky_25 (LeakyReLU)            (None, 76, 76, 128)  0           bnorm_25[0][0]                   
+__________________________________________________________________________________________________
+conv_26 (Conv2D)                (None, 76, 76, 256)  294912      leaky_25[0][0]                   
+__________________________________________________________________________________________________
+bnorm_26 (BatchNormalization)   (None, 76, 76, 256)  1024        conv_26[0][0]                    
+__________________________________________________________________________________________________
+leaky_26 (LeakyReLU)            (None, 76, 76, 256)  0           bnorm_26[0][0]                   
+__________________________________________________________________________________________________
+add_8 (Add)                     (None, 76, 76, 256)  0           add_7[0][0]                      
+                                                                 leaky_26[0][0]                   
+__________________________________________________________________________________________________
+conv_28 (Conv2D)                (None, 76, 76, 128)  32768       add_8[0][0]                      
+__________________________________________________________________________________________________
+bnorm_28 (BatchNormalization)   (None, 76, 76, 128)  512         conv_28[0][0]                    
+__________________________________________________________________________________________________
+leaky_28 (LeakyReLU)            (None, 76, 76, 128)  0           bnorm_28[0][0]                   
+__________________________________________________________________________________________________
+conv_29 (Conv2D)                (None, 76, 76, 256)  294912      leaky_28[0][0]                   
+__________________________________________________________________________________________________
+bnorm_29 (BatchNormalization)   (None, 76, 76, 256)  1024        conv_29[0][0]                    
+__________________________________________________________________________________________________
+leaky_29 (LeakyReLU)            (None, 76, 76, 256)  0           bnorm_29[0][0]                   
+__________________________________________________________________________________________________
+add_9 (Add)                     (None, 76, 76, 256)  0           add_8[0][0]                      
+                                                                 leaky_29[0][0]                   
+__________________________________________________________________________________________________
+conv_31 (Conv2D)                (None, 76, 76, 128)  32768       add_9[0][0]                      
+__________________________________________________________________________________________________
+bnorm_31 (BatchNormalization)   (None, 76, 76, 128)  512         conv_31[0][0]                    
+__________________________________________________________________________________________________
+leaky_31 (LeakyReLU)            (None, 76, 76, 128)  0           bnorm_31[0][0]                   
+__________________________________________________________________________________________________
+conv_32 (Conv2D)                (None, 76, 76, 256)  294912      leaky_31[0][0]                   
+__________________________________________________________________________________________________
+bnorm_32 (BatchNormalization)   (None, 76, 76, 256)  1024        conv_32[0][0]                    
+__________________________________________________________________________________________________
+leaky_32 (LeakyReLU)            (None, 76, 76, 256)  0           bnorm_32[0][0]                   
+__________________________________________________________________________________________________
+add_10 (Add)                    (None, 76, 76, 256)  0           add_9[0][0]                      
+                                                                 leaky_32[0][0]                   
+__________________________________________________________________________________________________
+conv_34 (Conv2D)                (None, 76, 76, 128)  32768       add_10[0][0]                     
+__________________________________________________________________________________________________
+bnorm_34 (BatchNormalization)   (None, 76, 76, 128)  512         conv_34[0][0]                    
+__________________________________________________________________________________________________
+leaky_34 (LeakyReLU)            (None, 76, 76, 128)  0           bnorm_34[0][0]                   
+__________________________________________________________________________________________________
+conv_35 (Conv2D)                (None, 76, 76, 256)  294912      leaky_34[0][0]                   
+__________________________________________________________________________________________________
+bnorm_35 (BatchNormalization)   (None, 76, 76, 256)  1024        conv_35[0][0]                    
+__________________________________________________________________________________________________
+leaky_35 (LeakyReLU)            (None, 76, 76, 256)  0           bnorm_35[0][0]                   
+__________________________________________________________________________________________________
+add_11 (Add)                    (None, 76, 76, 256)  0           add_10[0][0]                     
+                                                                 leaky_35[0][0]                   
+__________________________________________________________________________________________________
+zero_padding2d_4 (ZeroPadding2D (None, 77, 77, 256)  0           add_11[0][0]                     
+__________________________________________________________________________________________________
+conv_37 (Conv2D)                (None, 38, 38, 512)  1179648     zero_padding2d_4[0][0]           
+__________________________________________________________________________________________________
+bnorm_37 (BatchNormalization)   (None, 38, 38, 512)  2048        conv_37[0][0]                    
+__________________________________________________________________________________________________
+leaky_37 (LeakyReLU)            (None, 38, 38, 512)  0           bnorm_37[0][0]                   
+__________________________________________________________________________________________________
+conv_38 (Conv2D)                (None, 38, 38, 256)  131072      leaky_37[0][0]                   
+__________________________________________________________________________________________________
+bnorm_38 (BatchNormalization)   (None, 38, 38, 256)  1024        conv_38[0][0]                    
+__________________________________________________________________________________________________
+leaky_38 (LeakyReLU)            (None, 38, 38, 256)  0           bnorm_38[0][0]                   
+__________________________________________________________________________________________________
+conv_39 (Conv2D)                (None, 38, 38, 512)  1179648     leaky_38[0][0]                   
+__________________________________________________________________________________________________
+bnorm_39 (BatchNormalization)   (None, 38, 38, 512)  2048        conv_39[0][0]                    
+__________________________________________________________________________________________________
+leaky_39 (LeakyReLU)            (None, 38, 38, 512)  0           bnorm_39[0][0]                   
+__________________________________________________________________________________________________
+add_12 (Add)                    (None, 38, 38, 512)  0           leaky_37[0][0]                   
+                                                                 leaky_39[0][0]                   
+__________________________________________________________________________________________________
+conv_41 (Conv2D)                (None, 38, 38, 256)  131072      add_12[0][0]                     
+__________________________________________________________________________________________________
+bnorm_41 (BatchNormalization)   (None, 38, 38, 256)  1024        conv_41[0][0]                    
+__________________________________________________________________________________________________
+leaky_41 (LeakyReLU)            (None, 38, 38, 256)  0           bnorm_41[0][0]                   
+__________________________________________________________________________________________________
+conv_42 (Conv2D)                (None, 38, 38, 512)  1179648     leaky_41[0][0]                   
+__________________________________________________________________________________________________
+bnorm_42 (BatchNormalization)   (None, 38, 38, 512)  2048        conv_42[0][0]                    
+__________________________________________________________________________________________________
+leaky_42 (LeakyReLU)            (None, 38, 38, 512)  0           bnorm_42[0][0]                   
+__________________________________________________________________________________________________
+add_13 (Add)                    (None, 38, 38, 512)  0           add_12[0][0]                     
+                                                                 leaky_42[0][0]                   
+__________________________________________________________________________________________________
+conv_44 (Conv2D)                (None, 38, 38, 256)  131072      add_13[0][0]                     
+__________________________________________________________________________________________________
+bnorm_44 (BatchNormalization)   (None, 38, 38, 256)  1024        conv_44[0][0]                    
+__________________________________________________________________________________________________
+leaky_44 (LeakyReLU)            (None, 38, 38, 256)  0           bnorm_44[0][0]                   
+__________________________________________________________________________________________________
+conv_45 (Conv2D)                (None, 38, 38, 512)  1179648     leaky_44[0][0]                   
+__________________________________________________________________________________________________
+bnorm_45 (BatchNormalization)   (None, 38, 38, 512)  2048        conv_45[0][0]                    
+__________________________________________________________________________________________________
+leaky_45 (LeakyReLU)            (None, 38, 38, 512)  0           bnorm_45[0][0]                   
+__________________________________________________________________________________________________
+add_14 (Add)                    (None, 38, 38, 512)  0           add_13[0][0]                     
+                                                                 leaky_45[0][0]                   
+__________________________________________________________________________________________________
+conv_47 (Conv2D)                (None, 38, 38, 256)  131072      add_14[0][0]                     
+__________________________________________________________________________________________________
+bnorm_47 (BatchNormalization)   (None, 38, 38, 256)  1024        conv_47[0][0]                    
+__________________________________________________________________________________________________
+leaky_47 (LeakyReLU)            (None, 38, 38, 256)  0           bnorm_47[0][0]                   
+__________________________________________________________________________________________________
+conv_48 (Conv2D)                (None, 38, 38, 512)  1179648     leaky_47[0][0]                   
+__________________________________________________________________________________________________
+bnorm_48 (BatchNormalization)   (None, 38, 38, 512)  2048        conv_48[0][0]                    
+__________________________________________________________________________________________________
+leaky_48 (LeakyReLU)            (None, 38, 38, 512)  0           bnorm_48[0][0]                   
+__________________________________________________________________________________________________
+add_15 (Add)                    (None, 38, 38, 512)  0           add_14[0][0]                     
+                                                                 leaky_48[0][0]                   
+__________________________________________________________________________________________________
+conv_50 (Conv2D)                (None, 38, 38, 256)  131072      add_15[0][0]                     
+__________________________________________________________________________________________________
+bnorm_50 (BatchNormalization)   (None, 38, 38, 256)  1024        conv_50[0][0]                    
+__________________________________________________________________________________________________
+leaky_50 (LeakyReLU)            (None, 38, 38, 256)  0           bnorm_50[0][0]                   
+__________________________________________________________________________________________________
+conv_51 (Conv2D)                (None, 38, 38, 512)  1179648     leaky_50[0][0]                   
+__________________________________________________________________________________________________
+bnorm_51 (BatchNormalization)   (None, 38, 38, 512)  2048        conv_51[0][0]                    
+__________________________________________________________________________________________________
+leaky_51 (LeakyReLU)            (None, 38, 38, 512)  0           bnorm_51[0][0]                   
+__________________________________________________________________________________________________
+add_16 (Add)                    (None, 38, 38, 512)  0           add_15[0][0]                     
+                                                                 leaky_51[0][0]                   
+__________________________________________________________________________________________________
+conv_53 (Conv2D)                (None, 38, 38, 256)  131072      add_16[0][0]                     
+__________________________________________________________________________________________________
+bnorm_53 (BatchNormalization)   (None, 38, 38, 256)  1024        conv_53[0][0]                    
+__________________________________________________________________________________________________
+leaky_53 (LeakyReLU)            (None, 38, 38, 256)  0           bnorm_53[0][0]                   
+__________________________________________________________________________________________________
+conv_54 (Conv2D)                (None, 38, 38, 512)  1179648     leaky_53[0][0]                   
+__________________________________________________________________________________________________
+bnorm_54 (BatchNormalization)   (None, 38, 38, 512)  2048        conv_54[0][0]                    
+__________________________________________________________________________________________________
+leaky_54 (LeakyReLU)            (None, 38, 38, 512)  0           bnorm_54[0][0]                   
+__________________________________________________________________________________________________
+add_17 (Add)                    (None, 38, 38, 512)  0           add_16[0][0]                     
+                                                                 leaky_54[0][0]                   
+__________________________________________________________________________________________________
+conv_56 (Conv2D)                (None, 38, 38, 256)  131072      add_17[0][0]                     
+__________________________________________________________________________________________________
+bnorm_56 (BatchNormalization)   (None, 38, 38, 256)  1024        conv_56[0][0]                    
+__________________________________________________________________________________________________
+leaky_56 (LeakyReLU)            (None, 38, 38, 256)  0           bnorm_56[0][0]                   
+__________________________________________________________________________________________________
+conv_57 (Conv2D)                (None, 38, 38, 512)  1179648     leaky_56[0][0]                   
+__________________________________________________________________________________________________
+bnorm_57 (BatchNormalization)   (None, 38, 38, 512)  2048        conv_57[0][0]                    
+__________________________________________________________________________________________________
+leaky_57 (LeakyReLU)            (None, 38, 38, 512)  0           bnorm_57[0][0]                   
+__________________________________________________________________________________________________
+add_18 (Add)                    (None, 38, 38, 512)  0           add_17[0][0]                     
+                                                                 leaky_57[0][0]                   
+__________________________________________________________________________________________________
+conv_59 (Conv2D)                (None, 38, 38, 256)  131072      add_18[0][0]                     
+__________________________________________________________________________________________________
+bnorm_59 (BatchNormalization)   (None, 38, 38, 256)  1024        conv_59[0][0]                    
+__________________________________________________________________________________________________
+leaky_59 (LeakyReLU)            (None, 38, 38, 256)  0           bnorm_59[0][0]                   
+__________________________________________________________________________________________________
+conv_60 (Conv2D)                (None, 38, 38, 512)  1179648     leaky_59[0][0]                   
+__________________________________________________________________________________________________
+bnorm_60 (BatchNormalization)   (None, 38, 38, 512)  2048        conv_60[0][0]                    
+__________________________________________________________________________________________________
+leaky_60 (LeakyReLU)            (None, 38, 38, 512)  0           bnorm_60[0][0]                   
+__________________________________________________________________________________________________
+add_19 (Add)                    (None, 38, 38, 512)  0           add_18[0][0]                     
+                                                                 leaky_60[0][0]                   
+__________________________________________________________________________________________________
+zero_padding2d_5 (ZeroPadding2D (None, 39, 39, 512)  0           add_19[0][0]                     
+__________________________________________________________________________________________________
+conv_62 (Conv2D)                (None, 19, 19, 1024) 4718592     zero_padding2d_5[0][0]           
+__________________________________________________________________________________________________
+bnorm_62 (BatchNormalization)   (None, 19, 19, 1024) 4096        conv_62[0][0]                    
+__________________________________________________________________________________________________
+leaky_62 (LeakyReLU)            (None, 19, 19, 1024) 0           bnorm_62[0][0]                   
+__________________________________________________________________________________________________
+conv_63 (Conv2D)                (None, 19, 19, 512)  524288      leaky_62[0][0]                   
+__________________________________________________________________________________________________
+bnorm_63 (BatchNormalization)   (None, 19, 19, 512)  2048        conv_63[0][0]                    
+__________________________________________________________________________________________________
+leaky_63 (LeakyReLU)            (None, 19, 19, 512)  0           bnorm_63[0][0]                   
+__________________________________________________________________________________________________
+conv_64 (Conv2D)                (None, 19, 19, 1024) 4718592     leaky_63[0][0]                   
+__________________________________________________________________________________________________
+bnorm_64 (BatchNormalization)   (None, 19, 19, 1024) 4096        conv_64[0][0]                    
+__________________________________________________________________________________________________
+leaky_64 (LeakyReLU)            (None, 19, 19, 1024) 0           bnorm_64[0][0]                   
+__________________________________________________________________________________________________
+add_20 (Add)                    (None, 19, 19, 1024) 0           leaky_62[0][0]                   
+                                                                 leaky_64[0][0]                   
+__________________________________________________________________________________________________
+conv_66 (Conv2D)                (None, 19, 19, 512)  524288      add_20[0][0]                     
+__________________________________________________________________________________________________
+bnorm_66 (BatchNormalization)   (None, 19, 19, 512)  2048        conv_66[0][0]                    
+__________________________________________________________________________________________________
+leaky_66 (LeakyReLU)            (None, 19, 19, 512)  0           bnorm_66[0][0]                   
+__________________________________________________________________________________________________
+conv_67 (Conv2D)                (None, 19, 19, 1024) 4718592     leaky_66[0][0]                   
+__________________________________________________________________________________________________
+bnorm_67 (BatchNormalization)   (None, 19, 19, 1024) 4096        conv_67[0][0]                    
+__________________________________________________________________________________________________
+leaky_67 (LeakyReLU)            (None, 19, 19, 1024) 0           bnorm_67[0][0]                   
+__________________________________________________________________________________________________
+add_21 (Add)                    (None, 19, 19, 1024) 0           add_20[0][0]                     
+                                                                 leaky_67[0][0]                   
+__________________________________________________________________________________________________
+conv_69 (Conv2D)                (None, 19, 19, 512)  524288      add_21[0][0]                     
+__________________________________________________________________________________________________
+bnorm_69 (BatchNormalization)   (None, 19, 19, 512)  2048        conv_69[0][0]                    
+__________________________________________________________________________________________________
+leaky_69 (LeakyReLU)            (None, 19, 19, 512)  0           bnorm_69[0][0]                   
+__________________________________________________________________________________________________
+conv_70 (Conv2D)                (None, 19, 19, 1024) 4718592     leaky_69[0][0]                   
+__________________________________________________________________________________________________
+bnorm_70 (BatchNormalization)   (None, 19, 19, 1024) 4096        conv_70[0][0]                    
+__________________________________________________________________________________________________
+leaky_70 (LeakyReLU)            (None, 19, 19, 1024) 0           bnorm_70[0][0]                   
+__________________________________________________________________________________________________
+add_22 (Add)                    (None, 19, 19, 1024) 0           add_21[0][0]                     
+                                                                 leaky_70[0][0]                   
+__________________________________________________________________________________________________
+conv_72 (Conv2D)                (None, 19, 19, 512)  524288      add_22[0][0]                     
+__________________________________________________________________________________________________
+bnorm_72 (BatchNormalization)   (None, 19, 19, 512)  2048        conv_72[0][0]                    
+__________________________________________________________________________________________________
+leaky_72 (LeakyReLU)            (None, 19, 19, 512)  0           bnorm_72[0][0]                   
+__________________________________________________________________________________________________
+conv_73 (Conv2D)                (None, 19, 19, 1024) 4718592     leaky_72[0][0]                   
+__________________________________________________________________________________________________
+bnorm_73 (BatchNormalization)   (None, 19, 19, 1024) 4096        conv_73[0][0]                    
+__________________________________________________________________________________________________
+leaky_73 (LeakyReLU)            (None, 19, 19, 1024) 0           bnorm_73[0][0]                   
+__________________________________________________________________________________________________
+add_23 (Add)                    (None, 19, 19, 1024) 0           add_22[0][0]                     
+                                                                 leaky_73[0][0]                   
+__________________________________________________________________________________________________
+conv_75 (Conv2D)                (None, 19, 19, 512)  524288      add_23[0][0]                     
+__________________________________________________________________________________________________
+bnorm_75 (BatchNormalization)   (None, 19, 19, 512)  2048        conv_75[0][0]                    
+__________________________________________________________________________________________________
+leaky_75 (LeakyReLU)            (None, 19, 19, 512)  0           bnorm_75[0][0]                   
+__________________________________________________________________________________________________
+conv_76 (Conv2D)                (None, 19, 19, 1024) 4718592     leaky_75[0][0]                   
+__________________________________________________________________________________________________
+bnorm_76 (BatchNormalization)   (None, 19, 19, 1024) 4096        conv_76[0][0]                    
+__________________________________________________________________________________________________
+leaky_76 (LeakyReLU)            (None, 19, 19, 1024) 0           bnorm_76[0][0]                   
+__________________________________________________________________________________________________
+conv_77 (Conv2D)                (None, 19, 19, 512)  524288      leaky_76[0][0]                   
+__________________________________________________________________________________________________
+bnorm_77 (BatchNormalization)   (None, 19, 19, 512)  2048        conv_77[0][0]                    
+__________________________________________________________________________________________________
+leaky_77 (LeakyReLU)            (None, 19, 19, 512)  0           bnorm_77[0][0]                   
+__________________________________________________________________________________________________
+conv_78 (Conv2D)                (None, 19, 19, 1024) 4718592     leaky_77[0][0]                   
+__________________________________________________________________________________________________
+bnorm_78 (BatchNormalization)   (None, 19, 19, 1024) 4096        conv_78[0][0]                    
+__________________________________________________________________________________________________
+leaky_78 (LeakyReLU)            (None, 19, 19, 1024) 0           bnorm_78[0][0]                   
+__________________________________________________________________________________________________
+conv_79 (Conv2D)                (None, 19, 19, 512)  524288      leaky_78[0][0]                   
+__________________________________________________________________________________________________
+bnorm_79 (BatchNormalization)   (None, 19, 19, 512)  2048        conv_79[0][0]                    
+__________________________________________________________________________________________________
+leaky_79 (LeakyReLU)            (None, 19, 19, 512)  0           bnorm_79[0][0]                   
+__________________________________________________________________________________________________
+conv_84 (Conv2D)                (None, 19, 19, 256)  131072      leaky_79[0][0]                   
+__________________________________________________________________________________________________
+bnorm_84 (BatchNormalization)   (None, 19, 19, 256)  1024        conv_84[0][0]                    
+__________________________________________________________________________________________________
+leaky_84 (LeakyReLU)            (None, 19, 19, 256)  0           bnorm_84[0][0]                   
+__________________________________________________________________________________________________
+up_sampling2d_1 (UpSampling2D)  (None, 38, 38, 256)  0           leaky_84[0][0]                   
+__________________________________________________________________________________________________
+concatenate_1 (Concatenate)     (None, 38, 38, 768)  0           up_sampling2d_1[0][0]            
+                                                                 add_19[0][0]                     
+__________________________________________________________________________________________________
+conv_87 (Conv2D)                (None, 38, 38, 256)  196608      concatenate_1[0][0]              
+__________________________________________________________________________________________________
+bnorm_87 (BatchNormalization)   (None, 38, 38, 256)  1024        conv_87[0][0]                    
+__________________________________________________________________________________________________
+leaky_87 (LeakyReLU)            (None, 38, 38, 256)  0           bnorm_87[0][0]                   
+__________________________________________________________________________________________________
+conv_88 (Conv2D)                (None, 38, 38, 512)  1179648     leaky_87[0][0]                   
+__________________________________________________________________________________________________
+bnorm_88 (BatchNormalization)   (None, 38, 38, 512)  2048        conv_88[0][0]                    
+__________________________________________________________________________________________________
+leaky_88 (LeakyReLU)            (None, 38, 38, 512)  0           bnorm_88[0][0]                   
+__________________________________________________________________________________________________
+conv_89 (Conv2D)                (None, 38, 38, 256)  131072      leaky_88[0][0]                   
+__________________________________________________________________________________________________
+bnorm_89 (BatchNormalization)   (None, 38, 38, 256)  1024        conv_89[0][0]                    
+__________________________________________________________________________________________________
+leaky_89 (LeakyReLU)            (None, 38, 38, 256)  0           bnorm_89[0][0]                   
+__________________________________________________________________________________________________
+conv_90 (Conv2D)                (None, 38, 38, 512)  1179648     leaky_89[0][0]                   
+__________________________________________________________________________________________________
+bnorm_90 (BatchNormalization)   (None, 38, 38, 512)  2048        conv_90[0][0]                    
+__________________________________________________________________________________________________
+leaky_90 (LeakyReLU)            (None, 38, 38, 512)  0           bnorm_90[0][0]                   
+__________________________________________________________________________________________________
+conv_91 (Conv2D)                (None, 38, 38, 256)  131072      leaky_90[0][0]                   
+__________________________________________________________________________________________________
+bnorm_91 (BatchNormalization)   (None, 38, 38, 256)  1024        conv_91[0][0]                    
+__________________________________________________________________________________________________
+leaky_91 (LeakyReLU)            (None, 38, 38, 256)  0           bnorm_91[0][0]                   
+__________________________________________________________________________________________________
+conv_96 (Conv2D)                (None, 38, 38, 128)  32768       leaky_91[0][0]                   
+__________________________________________________________________________________________________
+bnorm_96 (BatchNormalization)   (None, 38, 38, 128)  512         conv_96[0][0]                    
+__________________________________________________________________________________________________
+leaky_96 (LeakyReLU)            (None, 38, 38, 128)  0           bnorm_96[0][0]                   
+__________________________________________________________________________________________________
+up_sampling2d_2 (UpSampling2D)  (None, 76, 76, 128)  0           leaky_96[0][0]                   
+__________________________________________________________________________________________________
+concatenate_2 (Concatenate)     (None, 76, 76, 384)  0           up_sampling2d_2[0][0]            
+                                                                 add_11[0][0]                     
+__________________________________________________________________________________________________
+conv_99 (Conv2D)                (None, 76, 76, 128)  49152       concatenate_2[0][0]              
+__________________________________________________________________________________________________
+bnorm_99 (BatchNormalization)   (None, 76, 76, 128)  512         conv_99[0][0]                    
+__________________________________________________________________________________________________
+leaky_99 (LeakyReLU)            (None, 76, 76, 128)  0           bnorm_99[0][0]                   
+__________________________________________________________________________________________________
+conv_100 (Conv2D)               (None, 76, 76, 256)  294912      leaky_99[0][0]                   
+__________________________________________________________________________________________________
+bnorm_100 (BatchNormalization)  (None, 76, 76, 256)  1024        conv_100[0][0]                   
+__________________________________________________________________________________________________
+leaky_100 (LeakyReLU)           (None, 76, 76, 256)  0           bnorm_100[0][0]                  
+__________________________________________________________________________________________________
+conv_101 (Conv2D)               (None, 76, 76, 128)  32768       leaky_100[0][0]                  
+__________________________________________________________________________________________________
+bnorm_101 (BatchNormalization)  (None, 76, 76, 128)  512         conv_101[0][0]                   
+__________________________________________________________________________________________________
+leaky_101 (LeakyReLU)           (None, 76, 76, 128)  0           bnorm_101[0][0]                  
+__________________________________________________________________________________________________
+conv_102 (Conv2D)               (None, 76, 76, 256)  294912      leaky_101[0][0]                  
+__________________________________________________________________________________________________
+bnorm_102 (BatchNormalization)  (None, 76, 76, 256)  1024        conv_102[0][0]                   
+__________________________________________________________________________________________________
+leaky_102 (LeakyReLU)           (None, 76, 76, 256)  0           bnorm_102[0][0]                  
+__________________________________________________________________________________________________
+conv_103 (Conv2D)               (None, 76, 76, 128)  32768       leaky_102[0][0]                  
+__________________________________________________________________________________________________
+bnorm_103 (BatchNormalization)  (None, 76, 76, 128)  512         conv_103[0][0]                   
+__________________________________________________________________________________________________
+leaky_103 (LeakyReLU)           (None, 76, 76, 128)  0           bnorm_103[0][0]                  
+__________________________________________________________________________________________________
+conv_80 (Conv2D)                (None, 19, 19, 1024) 4718592     leaky_79[0][0]                   
+__________________________________________________________________________________________________
+conv_92 (Conv2D)                (None, 38, 38, 512)  1179648     leaky_91[0][0]                   
+__________________________________________________________________________________________________
+conv_104 (Conv2D)               (None, 76, 76, 256)  294912      leaky_103[0][0]                  
+__________________________________________________________________________________________________
+bnorm_80 (BatchNormalization)   (None, 19, 19, 1024) 4096        conv_80[0][0]                    
+__________________________________________________________________________________________________
+bnorm_92 (BatchNormalization)   (None, 38, 38, 512)  2048        conv_92[0][0]                    
+__________________________________________________________________________________________________
+bnorm_104 (BatchNormalization)  (None, 76, 76, 256)  1024        conv_104[0][0]                   
+__________________________________________________________________________________________________
+leaky_80 (LeakyReLU)            (None, 19, 19, 1024) 0           bnorm_80[0][0]                   
+__________________________________________________________________________________________________
+leaky_92 (LeakyReLU)            (None, 38, 38, 512)  0           bnorm_92[0][0]                   
+__________________________________________________________________________________________________
+leaky_104 (LeakyReLU)           (None, 76, 76, 256)  0           bnorm_104[0][0]                  
+__________________________________________________________________________________________________
+conv_81 (Conv2D)                (None, 19, 19, 255)  261375      leaky_80[0][0]                   
+__________________________________________________________________________________________________
+conv_93 (Conv2D)                (None, 38, 38, 255)  130815      leaky_92[0][0]                   
+__________________________________________________________________________________________________
+conv_105 (Conv2D)               (None, 76, 76, 255)  65535       leaky_104[0][0]                  
+==================================================================================================
+Total params: 62,001,757
+Trainable params: 61,949,149
+Non-trainable params: 52,608
+__________________________________________________________________________________________________
+
+
+New model First Layer:conv_0, Input shape:(?, 608, 608, 3)
+			Input name:input_2 First layer input shape:(?, 608, 608, 3),
+			Last layer name:conv_105 and conv_105/BiasAdd
+			output shape:(?, 76, 76, 255)
+Model sliced
+Model saved as /home/ehsan/UvA/Sub_Model/YOLOv3/YOLOv3_0_74.h5
+command is: python /home/ehsan/UvA/Sub_Model/keras_to_tensorflow.py --input_model=/home/ehsan/UvA/Sub_Model/YOLOv3/YOLOv3_0_74.h5 --output_model=/home/ehsan/UvA/Sub_Model/YOLOv3/YOLOv3_0_74.pb
+Freezing graph return code is 0 
+generator is called with shapes: [[608, 608, 3]]
+(608, 608, 3)
+first npy with shape: (608, 608, 3)
+Calling convert function with argumetns:
+          model:/home/ehsan/UvA/Sub_Model/YOLOv3/YOLOv3_0_74.pb
+          blobs:
+          Inputs:['input_2']
+          Outputs:['conv_81/BiasAdd', 'conv_93/BiasAdd', 'conv_105/BiasAdd']
+          Inputs_shape:[[608, 608, 3]]
+          Quantization:True
+          Quantization_data_set:/home/ehsan/UvA/Sub_Model/dataset.txt
+          
+done
+--> Loading model
+done
+--> Building model
+build with quantization
+done
+/home/ehsan/UvA/Sub_Model/YOLOv3/YOLOv3_0_74.rknn
+Convert to rknn return code is 0 
+2023-11-17 13:23:16.326527: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 AVX512F FMA
+/home/ehsan/anaconda3/envs/rock-kit3/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:523: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
+/home/ehsan/anaconda3/envs/rock-kit3/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:524: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
+/home/ehsan/anaconda3/envs/rock-kit3/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:525: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
+/home/ehsan/anaconda3/envs/rock-kit3/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:526: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
+/home/ehsan/anaconda3/envs/rock-kit3/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:527: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
+/home/ehsan/anaconda3/envs/rock-kit3/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:532: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  np_resource = np.dtype([("resource", np.ubyte, 1)])
+Using TensorFlow backend.
+2023-11-17 13:23:30.200555: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 AVX512F FMA
+/home/ehsan/anaconda3/envs/rock-kit3/lib/python3.6/site-packages/keras/engine/saving.py:292: UserWarning: No training configuration found in save file: the model was *not* compiled. Compile it manually.
+  warnings.warn('No training configuration found in save file: '
+I1117 13:23:34.710045 140316753040192 keras_to_tensorflow.py:132] sadd
+I1117 13:23:34.710155 140316753040192 keras_to_tensorflow.py:133] ['input_2']
+I1117 13:23:34.710208 140316753040192 keras_to_tensorflow.py:148] Converted output node names are: ['conv_81/BiasAdd', 'conv_93/BiasAdd', 'conv_105/BiasAdd']
+INFO:tensorflow:Froze 366 variables.
+I1117 13:23:34.899143 140316753040192 tf_logging.py:115] Froze 366 variables.
+INFO:tensorflow:Converted 366 variables to const ops.
+I1117 13:23:35.138203 140316753040192 tf_logging.py:115] Converted 366 variables to const ops.
+I1117 13:23:35.559165 140316753040192 keras_to_tensorflow.py:181] Saved the freezed graph at /home/ehsan/UvA/Sub_Model/YOLOv3/YOLOv3_0_74.pb
+Using TensorFlow backend.
+/home/ehsan/anaconda3/envs/rock-kit3/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:523: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
+/home/ehsan/anaconda3/envs/rock-kit3/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:524: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
+/home/ehsan/anaconda3/envs/rock-kit3/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:525: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
+/home/ehsan/anaconda3/envs/rock-kit3/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:526: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
+/home/ehsan/anaconda3/envs/rock-kit3/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:527: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
+/home/ehsan/anaconda3/envs/rock-kit3/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:532: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  np_resource = np.dtype([("resource", np.ubyte, 1)])
+/home/ehsan/anaconda3/envs/rock-kit3/lib/python3.6/site-packages/onnx_tf/common/__init__.py:87: UserWarning: FrontendHandler.get_outputs_names is deprecated. It will be removed in future release.. Use node.outputs instead.
+  warnings.warn(message)
+W /home/ehsan/UvA/Sub_Model/dataset/test0.npy need NHWC format!
+
+
+/home/ehsan/UvA/Sub_Model/YOLOv3/YOLOv3_0_74.rknn: 1 file pushed, 0 skipped. 23.6 MB/s (62159225 bytes in 2.508s)
+
+WARNING: linker: Warning: unable to normalize "build/"
+5 Input images are read from /data/local/ARM-CO-UP/assets//ppm_images_608/
+[UtilsPipeline.h] image directory is: /data/local/ARM-CO-UP/assets//ppm_images_608//
+Threads : 1
+Small Cores Threads : 1
+Target : Neon
+Data type : F32
+Data layout : NHWC
+Tuner enabled? : false
+Cache enabled? : false
+Tuner mode : Normal
+Tuner file : 
+MLGO file : 
+Fast math enabled? : false
+Data path : /data/local/ARM-CO-UP/assets//yolov3/
+Image file : /data/local/ARM-CO-UP/assets//ppm_images_608//
+Labels file : /data/local/ARM-CO-UP/assets//coco.names
+Partition point is : 0
+Second partition point is : 0
+Order is : NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+freqs of layers : 
+power_profile_mode : whole
+GPU host is: B
+NPU host is: B
+Number of totla cores is : 6
+Number of little cores is : 4
+Print task names : 0
+Run network for 10 times.
+Layer timing: 0
+
+Adding Graph0 target 4 PE: N Host PE: B Layers: 0-74
+pandoon
+pandoon
+pandoon
+Pandoon opened at 3
+Threads : 1
+Small Cores Threads : 1
+Target : Neon
+Data type : F32
+Data layout : NHWC
+Tuner enabled? : false
+Cache enabled? : false
+Tuner mode : Normal
+Tuner file : 
+MLGO file : 
+Fast math enabled? : false
+Data path : /data/local/ARM-CO-UP/assets//yolov3/
+Image file : /data/local/ARM-CO-UP/assets//ppm_images_608//
+Labels file : /data/local/ARM-CO-UP/assets//coco.names
+Partition point is : 0
+Second partition point is : 0
+Order is : NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+freqs of layers : 
+power_profile_mode : whole
+GPU host is: B
+NPU host is: B
+Number of totla cores is : 6
+Number of little cores is : 4
+Print task names : 0
+Run network for 10 times.
+Layer timing: 0
+
+****************************
+GraphUtils.cpp- reading images: /data/local/ARM-CO-UP/assets//ppm_images_608//
+/data/local/ARM-CO-UP/assets//ppm_images_608//apple.ppm
+/data/local/ARM-CO-UP/assets//ppm_images_608//dishes.ppm
+/data/local/ARM-CO-UP/assets//ppm_images_608//bus.ppm
+/data/local/ARM-CO-UP/assets//ppm_images_608//zebra.ppm
+/data/local/ARM-CO-UP/assets//ppm_images_608//bear.ppm
+*****************************
+
+
+
+-1 skipping layer: 
+			0 layer: conv2d_1/Conv2D
+			0 skipping layer: conv2d_1/BatchNorm
+			0 skipping layer: conv2d_1/LeakyRelu
+1 layer: conv2d_2/Conv2D
+1 skipping layer: conv2d_2/BatchNorm
+1 skipping layer: conv2d_2/LeakyRelu
+			2 layer: conv2d_3/Conv2D
+			2 skipping layer: conv2d_3/BatchNorm
+			2 skipping layer: conv2d_3/LeakyRelu
+3 layer: conv2d_4/Conv2D
+3 skipping layer: conv2d_4/BatchNorm
+3 skipping layer: conv2d_4/LeakyRelu
+3 skipping layer: add_3_4
+			4 layer: conv2d_5/Conv2D
+			4 skipping layer: conv2d_5/BatchNorm
+			4 skipping layer: conv2d_5/LeakyRelu
+5 layer: conv2d_6/Conv2D
+5 skipping layer: conv2d_6/BatchNorm
+5 skipping layer: conv2d_6/LeakyRelu
+			6 layer: conv2d_7/Conv2D
+			6 skipping layer: conv2d_7/BatchNorm
+			6 skipping layer: conv2d_7/LeakyRelu
+			6 skipping layer: add_6_7
+7 layer: conv2d_8/Conv2D
+7 skipping layer: conv2d_8/BatchNorm
+7 skipping layer: conv2d_8/LeakyRelu
+			8 layer: conv2d_9/Conv2D
+			8 skipping layer: conv2d_9/BatchNorm
+			8 skipping layer: conv2d_9/LeakyRelu
+			8 skipping layer: add_8_9
+9 layer: conv2d_10/Conv2D
+9 skipping layer: conv2d_10/BatchNorm
+9 skipping layer: conv2d_10/LeakyRelu
+			10 layer: conv2d_11/Conv2D
+			10 skipping layer: conv2d_11/BatchNorm
+			10 skipping layer: conv2d_11/LeakyRelu
+11 layer: conv2d_12/Conv2D
+11 skipping layer: conv2d_12/BatchNorm
+11 skipping layer: conv2d_12/LeakyRelu
+11 skipping layer: add_11_12
+			12 layer: conv2d_13/Conv2D
+			12 skipping layer: conv2d_13/BatchNorm
+			12 skipping layer: conv2d_13/LeakyRelu
+13 layer: conv2d_14/Conv2D
+13 skipping layer: conv2d_14/BatchNorm
+13 skipping layer: conv2d_14/LeakyRelu
+13 skipping layer: add_13_14
+			14 layer: conv2d_15/Conv2D
+			14 skipping layer: conv2d_15/BatchNorm
+			14 skipping layer: conv2d_15/LeakyRelu
+15 layer: conv2d_16/Conv2D
+15 skipping layer: conv2d_16/BatchNorm
+15 skipping layer: conv2d_16/LeakyRelu
+15 skipping layer: add_15_16
+			16 layer: conv2d_17/Conv2D
+			16 skipping layer: conv2d_17/BatchNorm
+			16 skipping layer: conv2d_17/LeakyRelu
+17 layer: conv2d_18/Conv2D
+17 skipping layer: conv2d_18/BatchNorm
+17 skipping layer: conv2d_18/LeakyRelu
+17 skipping layer: add_17_18
+			18 layer: conv2d_19/Conv2D
+			18 skipping layer: conv2d_19/BatchNorm
+			18 skipping layer: conv2d_19/LeakyRelu
+19 layer: conv2d_20/Conv2D
+19 skipping layer: conv2d_20/BatchNorm
+19 skipping layer: conv2d_20/LeakyRelu
+19 skipping layer: add_19_20
+			20 layer: conv2d_21/Conv2D
+			20 skipping layer: conv2d_21/BatchNorm
+			20 skipping layer: conv2d_21/LeakyRelu
+21 layer: conv2d_22/Conv2D
+21 skipping layer: conv2d_22/BatchNorm
+21 skipping layer: conv2d_22/LeakyRelu
+21 skipping layer: add_21_22
+			22 layer: conv2d_23/Conv2D
+			22 skipping layer: conv2d_23/BatchNorm
+			22 skipping layer: conv2d_23/LeakyRelu
+23 layer: conv2d_24/Conv2D
+23 skipping layer: conv2d_24/BatchNorm
+23 skipping layer: conv2d_24/LeakyRelu
+23 skipping layer: add_23_24
+			24 layer: conv2d_25/Conv2D
+			24 skipping layer: conv2d_25/BatchNorm
+			24 skipping layer: conv2d_25/LeakyRelu
+25 layer: conv2d_26/Conv2D
+25 skipping layer: conv2d_26/BatchNorm
+25 skipping layer: conv2d_26/LeakyRelu
+25 skipping layer: add_25_26
+			26 layer: conv2d_27/Conv2D
+			26 skipping layer: conv2d_27/BatchNorm
+			26 skipping layer: conv2d_27/LeakyRelu
+27 layer: conv2d_28/Conv2D
+27 skipping layer: conv2d_28/BatchNorm
+27 skipping layer: conv2d_28/LeakyRelu
+			28 layer: conv2d_29/Conv2D
+			28 skipping layer: conv2d_29/BatchNorm
+			28 skipping layer: conv2d_29/LeakyRelu
+			28 skipping layer: add_28_29
+29 layer: conv2d_30/Conv2D
+29 skipping layer: conv2d_30/BatchNorm
+29 skipping layer: conv2d_30/LeakyRelu
+			30 layer: conv2d_31/Conv2D
+			30 skipping layer: conv2d_31/BatchNorm
+			30 skipping layer: conv2d_31/LeakyRelu
+			30 skipping layer: add_30_31
+31 layer: conv2d_32/Conv2D
+31 skipping layer: conv2d_32/BatchNorm
+31 skipping layer: conv2d_32/LeakyRelu
+			32 layer: conv2d_33/Conv2D
+			32 skipping layer: conv2d_33/BatchNorm
+			32 skipping layer: conv2d_33/LeakyRelu
+			32 skipping layer: add_32_33
+33 layer: conv2d_34/Conv2D
+33 skipping layer: conv2d_34/BatchNorm
+33 skipping layer: conv2d_34/LeakyRelu
+			34 layer: conv2d_35/Conv2D
+			34 skipping layer: conv2d_35/BatchNorm
+			34 skipping layer: conv2d_35/LeakyRelu
+			34 skipping layer: add_34_35
+35 layer: conv2d_36/Conv2D
+35 skipping layer: conv2d_36/BatchNorm
+35 skipping layer: conv2d_36/LeakyRelu
+			36 layer: conv2d_37/Conv2D
+			36 skipping layer: conv2d_37/BatchNorm
+			36 skipping layer: conv2d_37/LeakyRelu
+			36 skipping layer: add_36_37
+37 layer: conv2d_38/Conv2D
+37 skipping layer: conv2d_38/BatchNorm
+37 skipping layer: conv2d_38/LeakyRelu
+			38 layer: conv2d_39/Conv2D
+			38 skipping layer: conv2d_39/BatchNorm
+			38 skipping layer: conv2d_39/LeakyRelu
+			38 skipping layer: add_38_39
+39 layer: conv2d_40/Conv2D
+39 skipping layer: conv2d_40/BatchNorm
+39 skipping layer: conv2d_40/LeakyRelu
+			40 layer: conv2d_41/Conv2D
+			40 skipping layer: conv2d_41/BatchNorm
+			40 skipping layer: conv2d_41/LeakyRelu
+			40 skipping layer: add_40_41
+41 layer: conv2d_42/Conv2D
+41 skipping layer: conv2d_42/BatchNorm
+41 skipping layer: conv2d_42/LeakyRelu
+			42 layer: conv2d_43/Conv2D
+			42 skipping layer: conv2d_43/BatchNorm
+			42 skipping layer: conv2d_43/LeakyRelu
+			42 skipping layer: add_42_43
+43 layer: conv2d_44/Conv2D
+43 skipping layer: conv2d_44/BatchNorm
+43 skipping layer: conv2d_44/LeakyRelu
+			44 layer: conv2d_45/Conv2D
+			44 skipping layer: conv2d_45/BatchNorm
+			44 skipping layer: conv2d_45/LeakyRelu
+45 layer: conv2d_46/Conv2D
+45 skipping layer: conv2d_46/BatchNorm
+45 skipping layer: conv2d_46/LeakyRelu
+45 skipping layer: add_45_46
+			46 layer: conv2d_47/Conv2D
+			46 skipping layer: conv2d_47/BatchNorm
+			46 skipping layer: conv2d_47/LeakyRelu
+47 layer: conv2d_48/Conv2D
+47 skipping layer: conv2d_48/BatchNorm
+47 skipping layer: conv2d_48/LeakyRelu
+47 skipping layer: add_47_48
+			48 layer: conv2d_49/Conv2D
+			48 skipping layer: conv2d_49/BatchNorm
+			48 skipping layer: conv2d_49/LeakyRelu
+49 layer: conv2d_50/Conv2D
+49 skipping layer: conv2d_50/BatchNorm
+49 skipping layer: conv2d_50/LeakyRelu
+49 skipping layer: add_49_50
+			50 layer: conv2d_51/Conv2D
+			50 skipping layer: conv2d_51/BatchNorm
+			50 skipping layer: conv2d_51/LeakyRelu
+51 layer: conv2d_52/Conv2D
+51 skipping layer: conv2d_52/BatchNorm
+51 skipping layer: conv2d_52/LeakyRelu
+51 skipping layer: add_51_52
+			52 layer: conv2d_53
+			52 skipping layer: conv2d_53/BatchNorm
+			52 skipping layer: conv2d_53/LeakyRelu
+53 layer: conv2d_54
+53 skipping layer: conv2d_54/BatchNorm
+53 skipping layer: conv2d_54/LeakyRelu
+			54 layer: conv2d_55
+			54 skipping layer: conv2d_55/BatchNorm
+			54 skipping layer: conv2d_55/LeakyRelu
+55 layer: conv2d_56
+55 skipping layer: conv2d_56/BatchNorm
+55 skipping layer: conv2d_56/LeakyRelu
+			56 layer: conv2d_57
+			56 skipping layer: conv2d_57/BatchNorm
+			56 skipping layer: conv2d_57/LeakyRelu
+57 layer: conv2d_58
+57 skipping layer: conv2d_58/BatchNorm
+57 skipping layer: conv2d_58/LeakyRelu
+			58 layer: conv2d_59
+			58 skipping layer: conv2d_59/Linear
+			58 skipping layer: Yolo1
+output accessor reading label file /data/local/ARM-CO-UP/assets//coco.names
+			58 skipping layer: output
+59 layer: conv2d_60
+59 skipping layer: conv2d_59/BatchNorm
+59 skipping layer: conv2d_60/LeakyRelu
+59 skipping layer: Upsample_60
+59 skipping layer: Route1
+			60 layer: conv2d_61
+			60 skipping layer: conv2d_60/BatchNorm
+			60 skipping layer: conv2d_61/LeakyRelu
+61 layer: conv2d_62
+61 skipping layer: conv2d_61/BatchNorm
+61 skipping layer: conv2d_62/LeakyRelu
+			62 layer: conv2d_63
+			62 skipping layer: conv2d_62/BatchNorm
+			62 skipping layer: conv2d_63/LeakyRelu
+63 layer: conv2d_64
+63 skipping layer: conv2d_63/BatchNorm
+63 skipping layer: conv2d_64/LeakyRelu
+			64 layer: conv2d_65
+			64 skipping layer: conv2d_65/BatchNorm
+			64 skipping layer: conv2d_65/LeakyRelu
+65 layer: conv2d_66
+65 skipping layer: conv2d_65/BatchNorm
+65 skipping layer: conv2d_66/LeakyRelu
+			66 layer: conv2d_67
+			66 skipping layer: conv2d_67/Linear
+			66 skipping layer: Yolo2
+output accessor reading label file /data/local/ARM-CO-UP/assets//coco.names
+			66 skipping layer: output
+67 layer: conv2d_68
+67 skipping layer: conv2d_66/BatchNorm
+67 skipping layer: conv2d_68/LeakyRelu
+67 skipping layer: Upsample_68
+67 skipping layer: Route2
+			68 layer: conv2d_69
+			68 skipping layer: conv2d_67/BatchNorm
+			68 skipping layer: conv2d_69/LeakyRelu
+69 layer: conv2d_70
+69 skipping layer: conv2d_68/BatchNorm
+69 skipping layer: conv2d_70/LeakyRelu
+			70 layer: conv2d_71
+			70 skipping layer: conv2d_69/BatchNorm
+			70 skipping layer: conv2d_71/LeakyRelu
+71 layer: conv2d_72
+71 skipping layer: conv2d_70/BatchNorm
+71 skipping layer: conv2d_72/LeakyRelu
+			72 layer: conv2d_73
+			72 skipping layer: conv2d_71/BatchNorm
+			72 skipping layer: conv2d_73/LeakyRelu
+73 layer: conv2d_74
+73 skipping layer: conv2d_72/BatchNorm
+73 skipping layer: conv2d_74/LeakyRelu
+			74 layer: conv2d_75
+			74 skipping layer: conv2d_75/Linear
+			74 skipping layer: Yolo3
+output accessor reading label file /data/local/ARM-CO-UP/assets//coco.names
+			74 skipping layer: output
+graph 0 target is NPU, merging nodes into one NPU Node ...
+Adding NPU Node NPU_YOLOv3_0_74 to graph 0 with target 4
+re-struct output node output to the npu node
+producer is Yolo1
+removing edge between producer and the output
+adding edge between NPU node and the output
+re-struct output node output to the npu node
+producer is Yolo2
+removing edge between producer and the output
+adding edge between NPU node and the output
+re-struct output node output to the npu node
+producer is Yolo3
+removing edge between producer and the output
+adding edge between NPU node and the output
+re-struct input node  to the npu node
+consumer is conv2d_1/Conv2D
+removing edge between input and the consumer
+adding edge between input and NPU node
+npu node created
+
+
+
+*********************
+Start finalizing Graphs
+*******************
+
+Graph id: 0 Target is: NPU
+Creating a RockPi NPU node...
+NPU YOLOv3_0_74 Number of inputs: 1 and number of outputs: 3
+Model name: /data/local/ARM-CO-UP/graphs/YOLOv3_0_74.rknn
+NPU /data/local/ARM-CO-UP/graphs/YOLOv3_0_74.rknn Reading model...
+NPU /data/local/ARM-CO-UP/graphs/YOLOv3_0_74.rknn Initialized
+model input num: 1, output num: 3
+
+Number of NPU model outputs: 3 number of NPU subgraph outputs: 3
+Number of NPU model inputs: 1 number of NPU subgraph inputs: 1
+NPU Model Input:0	Num elements:1108992	Size:1108992	Name:	Fmt:1	Qnt type:2	Type:3
+Explre input 0 n_elements: 1108992
+Is match with sub graph input: 0
+
+NPU Mobel Output:0	Num elements:92055	Size:92055	Name:	Fmt:0	Qnt type:2	Type:3
+Explore output 0 n_elements: 92055
+Is match with sub graph output: 0
+
+NPU Mobel Output:1	Num elements:368220	Size:368220	Name:	Fmt:0	Qnt type:2	Type:3
+Explore output 0 n_elements: 92055
+Explore output 1 n_elements: 368220
+Is match with sub graph output: 1
+
+NPU Mobel Output:2	Num elements:1472880	Size:1472880	Name:	Fmt:0	Qnt type:2	Type:3
+Explore output 0 n_elements: 92055
+Explore output 1 n_elements: 368220
+Explore output 2 n_elements: 1472880
+Is match with sub graph output: 2
+Graph (0) Task 0: NPU_YOLOv3_0_74
+Graph 0 input size: 1 receiver size: 0 tasks size: 1 senders size: 0 output size: 3
+
+
+NPU Mobel Output:0	Num elements:92055	Size:92055	Name:	Fmt:0	Qnt type:2	Type:3
+Explore output 0 n_elements: 92055
+Is match with sub graph output: 0
+
+NPU Mobel Output:1	Num elements:368220	Size:368220	Name:	Fmt:0	Qnt type:2	Type:3
+Explore output 0 n_elements: 92055
+Explore output 1 n_elements: 368220
+Is match with sub graph output: 1
+
+NPU Mobel Output:2	Num elements:1472880	Size:1472880	Name:	Fmt:0	Qnt type:2	Type:3
+Explore output 0 n_elements: 92055
+Explore output 1 n_elements: 368220
+Explore output 2 n_elements: 1472880
+Is match with sub graph output: 2
+setting ending for layer: NPU_YOLOv3_0_74
+Finish finalizing graph 0
+
+
+
+setup finished
+
+Please Enter the desired Frequency setttings: 0 Running Graph with min LW DVFS
+governor 0 task:NPU_YOLOv3_0_74 freqs:0,0,0
+set_GPIOs with mode: whole
+tass name: NPU_YOLOv3_0_74	starting gpio: 1	ending gpio: 1	profiling layers: 0	profiling transfers: 0
+
+
+
+*********************************************
+start running graphs
+*************************************************
+
+
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_608//apple.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+1.0543 - [id = 217], 
+0.7668 - [id = 166], tennis racket
+0.4792 - [id = 77], teddy bear
+0.1917 - [id = 81], �"�s   �z?�s   �z?�s   �z?�s   @���s   @���s   ����s   ��"�s   @     ���s   Ў"�s   �"�s   �"�s   �z?�s   �z?�s 
+0.1917 - [id = 158], skis
+---------- Top 5 predictions ----------
+
+0.4690 - [id = 254], 
+0.0000 - [id = 167], bottle
+0.0000 - [id = 84], 
+-0.1172 - [id = 252], 
+-0.1172 - [id = 170], fork
+---------- Top 5 predictions ----------
+
+1.9417 - [id = 72], refrigerator
+0.3883 - [id = 127], 
+0.2913 - [id = 0], person
+0.2913 - [id = 191], 
+0.2913 - [id = 170], 
+
+
+************
+Photo_index:1
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_608//dishes.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.7668 - [id = 250], 
+0.3834 - [id = 166], tennis racket
+0.2875 - [id = 251], 
+0.2875 - [id = 158], skis
+0.2875 - [id = 77], teddy bear
+---------- Top 5 predictions ----------
+
+1.1724 - [id = 250], 
+0.4690 - [id = 0], person
+0.3517 - [id = 254], 
+0.3517 - [id = 170], fork
+0.1172 - [id = 84], 
+---------- Top 5 predictions ----------
+
+0.3883 - [id = 106], 
+0.2913 - [id = 127], 
+0.1942 - [id = 212], 
+0.1942 - [id = 42], fork
+0.0971 - [id = 0], person
+
+
+************
+Photo_index:2
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_608//bus.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+2.0128 - [id = 150], zebra
+0.7668 - [id = 11], stop sign
+0.7668 - [id = 170], fork
+0.5751 - [id = 81], �"�s   �z?�s   �z?�s   �z?�s   @���s   @���s   ����s   ��"�s   @     ���s   Ў"�s   �"�s   �"�s   �z?�s   �z?�s 
+0.4792 - [id = 77], teddy bear
+---------- Top 5 predictions ----------
+
+0.3517 - [id = 167], bottle
+0.2345 - [id = 254], 
+0.2345 - [id = 84], 
+0.2345 - [id = 0], person
+0.2345 - [id = 170], fork
+---------- Top 5 predictions ----------
+
+3.5922 - [id = 105], 
+0.7767 - [id = 41], cup
+0.5825 - [id = 21], bear
+0.3883 - [id = 148], 
+0.2913 - [id = 0], person
+
+
+************
+Photo_index:3
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_608//zebra.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.3834 - [id = 77], teddy bear
+0.3834 - [id = 81], �"�s   �z?�s   �z?�s   �z?�s   @���s   @���s   ����s   ��"�s   @     ���s   Ў"�s   �"�s   �"�s   �z?�s   �z?�s 
+0.3834 - [id = 166], tennis racket
+0.2875 - [id = 170], fork
+0.2875 - [id = 50], broccoli
+---------- Top 5 predictions ----------
+
+0.7034 - [id = 254], 
+0.2345 - [id = 85], 
+0.2345 - [id = 84], 
+0.1172 - [id = 0], person
+0.1172 - [id = 169], cup
+---------- Top 5 predictions ----------
+
+0.4854 - [id = 41], cup
+0.3883 - [id = 127], 
+0.2913 - [id = 20], elephant
+0.1942 - [id = 191], 
+0.1942 - [id = 148], 
+
+
+************
+Photo_index:4
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_608//bear.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+1.9169 - [id = 151], giraffe
+0.3834 - [id = 158], skis
+0.2875 - [id = 166], tennis racket
+0.2875 - [id = 77], teddy bear
+0.1917 - [id = 247], 
+---------- Top 5 predictions ----------
+
+1.2896 - [id = 170], fork
+0.0000 - [id = 0], person
+0.0000 - [id = 169], cup
+-0.1172 - [id = 252], 
+-0.1172 - [id = 167], bottle
+---------- Top 5 predictions ----------
+
+0.4854 - [id = 191], 
+0.4854 - [id = 85], 
+0.3883 - [id = 127], 
+0.3883 - [id = 148], 
+0.2913 - [id = 232], 
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_608//apple.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+1.0543 - [id = 217], 
+0.7668 - [id = 166], tennis racket
+0.4792 - [id = 77], teddy bear
+0.1917 - [id = 81], �"�s   �z?�s   �z?�s   �z?�s   @���s   @���s   ����s   ��"�s   @     ���s   Ў"�s   �"�s   �"�s   �z?�s   �z?�s 
+0.1917 - [id = 158], skis
+---------- Top 5 predictions ----------
+
+0.4690 - [id = 254], 
+0.0000 - [id = 167], bottle
+0.0000 - [id = 84], 
+-0.1172 - [id = 252], 
+-0.1172 - [id = 170], fork
+---------- Top 5 predictions ----------
+
+1.9417 - [id = 72], refrigerator
+0.3883 - [id = 127], 
+0.2913 - [id = 0], person
+0.2913 - [id = 191], 
+0.2913 - [id = 170], 
+
+
+************
+Photo_index:1
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_608//dishes.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.7668 - [id = 250], 
+0.3834 - [id = 166], tennis racket
+0.2875 - [id = 251], 
+0.2875 - [id = 158], skis
+0.2875 - [id = 77], teddy bear
+---------- Top 5 predictions ----------
+
+1.1724 - [id = 250], 
+0.4690 - [id = 0], person
+0.3517 - [id = 254], 
+0.3517 - [id = 170], fork
+0.1172 - [id = 84], 
+---------- Top 5 predictions ----------
+
+0.3883 - [id = 106], 
+0.2913 - [id = 127], 
+0.1942 - [id = 212], 
+0.1942 - [id = 42], fork
+0.0971 - [id = 0], person
+
+
+************
+Photo_index:2
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_608//bus.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+2.0128 - [id = 150], zebra
+0.7668 - [id = 11], stop sign
+0.7668 - [id = 170], fork
+0.5751 - [id = 81], �"�s   �z?�s   �z?�s   �z?�s   @���s   @���s   ����s   ��"�s   @     ���s   Ў"�s   �"�s   �"�s   �z?�s   �z?�s 
+0.4792 - [id = 77], teddy bear
+---------- Top 5 predictions ----------
+
+0.3517 - [id = 167], bottle
+0.2345 - [id = 254], 
+0.2345 - [id = 84], 
+0.2345 - [id = 0], person
+0.2345 - [id = 170], fork
+---------- Top 5 predictions ----------
+
+3.5922 - [id = 105], 
+0.7767 - [id = 41], cup
+0.5825 - [id = 21], bear
+0.3883 - [id = 148], 
+0.2913 - [id = 0], person
+
+
+************
+Photo_index:3
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_608//zebra.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.3834 - [id = 77], teddy bear
+0.3834 - [id = 81], �"�s   �z?�s   �z?�s   �z?�s   @���s   @���s   ����s   ��"�s   @     ���s   Ў"�s   �"�s   �"�s   �z?�s   �z?�s 
+0.3834 - [id = 166], tennis racket
+0.2875 - [id = 170], fork
+0.2875 - [id = 50], broccoli
+---------- Top 5 predictions ----------
+
+0.7034 - [id = 254], 
+0.2345 - [id = 85], 
+0.2345 - [id = 84], 
+0.1172 - [id = 0], person
+0.1172 - [id = 169], cup
+---------- Top 5 predictions ----------
+
+0.4854 - [id = 41], cup
+0.3883 - [id = 127], 
+0.2913 - [id = 20], elephant
+0.1942 - [id = 191], 
+0.1942 - [id = 148], 
+
+
+************
+Photo_index:4
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_608//bear.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+1.9169 - [id = 151], giraffe
+0.3834 - [id = 158], skis
+0.2875 - [id = 166], tennis racket
+0.2875 - [id = 77], teddy bear
+0.1917 - [id = 247], 
+---------- Top 5 predictions ----------
+
+1.2896 - [id = 170], fork
+0.0000 - [id = 0], person
+0.0000 - [id = 169], cup
+-0.1172 - [id = 252], 
+-0.1172 - [id = 167], bottle
+---------- Top 5 predictions ----------
+
+0.4854 - [id = 191], 
+0.4854 - [id = 85], 
+0.3883 - [id = 127], 
+0.3883 - [id = 148], 
+0.2913 - [id = 232], 
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_608//apple.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+1.0543 - [id = 217], 
+0.7668 - [id = 166], tennis racket
+0.4792 - [id = 77], teddy bear
+0.1917 - [id = 81], �"�s   �z?�s   �z?�s   �z?�s   @���s   @���s   ����s   ��"�s   @     ���s   Ў"�s   �"�s   �"�s   �z?�s   �z?�s 
+0.1917 - [id = 158], skis
+---------- Top 5 predictions ----------
+
+0.4690 - [id = 254], 
+0.0000 - [id = 167], bottle
+0.0000 - [id = 84], 
+-0.1172 - [id = 252], 
+-0.1172 - [id = 170], fork
+---------- Top 5 predictions ----------
+
+1.9417 - [id = 72], refrigerator
+0.3883 - [id = 127], 
+0.2913 - [id = 0], person
+0.2913 - [id = 191], 
+0.2913 - [id = 170], 
+
+
+************
+Photo_index:1
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_608//dishes.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.7668 - [id = 250], 
+0.3834 - [id = 166], tennis racket
+0.2875 - [id = 251], 
+0.2875 - [id = 158], skis
+0.2875 - [id = 77], teddy bear
+---------- Top 5 predictions ----------
+
+1.1724 - [id = 250], 
+0.4690 - [id = 0], person
+0.3517 - [id = 254], 
+0.3517 - [id = 170], fork
+0.1172 - [id = 84], 
+---------- Top 5 predictions ----------
+
+0.3883 - [id = 106], 
+0.2913 - [id = 127], 
+0.1942 - [id = 212], 
+0.1942 - [id = 42], fork
+0.0971 - [id = 0], person
+
+
+************
+Photo_index:2
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_608//bus.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+2.0128 - [id = 150], zebra
+0.7668 - [id = 11], stop sign
+0.7668 - [id = 170], fork
+0.5751 - [id = 81], �"�s   �z?�s   �z?�s   �z?�s   @���s   @���s   ����s   ��"�s   @     ���s   Ў"�s   �"�s   �"�s   �z?�s   �z?�s 
+0.4792 - [id = 77], teddy bear
+---------- Top 5 predictions ----------
+
+0.3517 - [id = 167], bottle
+0.2345 - [id = 254], 
+0.2345 - [id = 84], 
+0.2345 - [id = 0], person
+0.2345 - [id = 170], fork
+---------- Top 5 predictions ----------
+
+3.5922 - [id = 105], 
+0.7767 - [id = 41], cup
+0.5825 - [id = 21], bear
+0.3883 - [id = 148], 
+0.2913 - [id = 0], person
+0	Layer Name: NPU_YOLOv3_0_74 	 Layer time: 493.624 	 number of inputs: 1 	 input shape: 3x608x608 	 output shape: 255x19x19
+Layer Number: 0 	 time: 493.624
+----------------------------
+
+ Sum of Layers time: 493.624
+
+
+Graph0   Input: 442.882   Task: 494.09   send: 0.0028584   Out: 1.75403   Process: 938.73
+
+NPU NPU_YOLOv3_0_74	AVG_input_time:69.5652	AVG_run_time:302.727	AVG_prof_run_time:235.209	AVG_output_time:117.601
+
+
+********
+
+
+
+AVG Latency: 938.749
+
+Profiling these DVFS settings finised
+Please Enter the desired Frequency setttings: 
+Test passed

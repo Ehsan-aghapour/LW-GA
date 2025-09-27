@@ -1,0 +1,898 @@
+List of devices attached
+4UB7RRTHY8	device
+
+disconnected everything
+adbd is already running as root
+remount succeeded
+/home/ehsan/UvA/ARMCL/Rock-Pi/ComputeLibrary_64_Yolov3/utils/DVFS/governor_pandoon.ko: 1 file pushed, 0 skipped. 1146.3 MB/s (260080 bytes in 0.000s)
+Module is already inserted, removing and reinserting...
+
+WARNING: linker: Warning: unable to normalize "build/"
+4 Input images are read from /data/local/ARM-CO-UP/assets//ppm_images_227/
+[UtilsPipeline.h] image directory is: /data/local/ARM-CO-UP/assets//ppm_images_227//
+Threads : 1
+Small Cores Threads : 1
+Target : Neon
+Data type : F32
+Data layout : NHWC
+Tuner enabled? : false
+Cache enabled? : false
+Tuner mode : Normal
+Tuner file : 
+MLGO file : 
+Fast math enabled? : false
+Data path : /data/local/ARM-CO-UP/assets//squeezenet/
+Image file : /data/local/ARM-CO-UP/assets//ppm_images_227//
+Labels file : /data/local/ARM-CO-UP/assets//labels.txt
+Partition point is : 0
+Second partition point is : 0
+Order is : LGLGLGLGLG
+freqs of layers : 
+power_profile_mode : transfers
+GPU host is: B
+NPU host is: B
+Number of totla cores is : 6
+Number of little cores is : 4
+Print task names : 0
+Run network for 10 times.
+Layer timing: 0
+
+Adding Graph0 target 1 PE: L Host PE: L Layers: 0-0
+Adding Graph1 target 2 PE: G Host PE: B Layers: 1-1
+Adding Graph2 target 1 PE: L Host PE: L Layers: 2-2
+Adding Graph3 target 2 PE: G Host PE: B Layers: 3-3
+Adding Graph4 target 1 PE: L Host PE: L Layers: 4-4
+Adding Graph5 target 2 PE: G Host PE: B Layers: 5-5
+Adding Graph6 target 1 PE: L Host PE: L Layers: 6-6
+Adding Graph7 target 2 PE: G Host PE: B Layers: 7-7
+Adding Graph8 target 1 PE: L Host PE: L Layers: 8-8
+Adding Graph9 target 2 PE: G Host PE: B Layers: 9-9
+pandoon
+pandoon
+pandoon
+Pandoon opened at 3
+Threads : 1
+Small Cores Threads : 1
+Target : Neon
+Data type : F32
+Data layout : NHWC
+Tuner enabled? : false
+Cache enabled? : false
+Tuner mode : Normal
+Tuner file : 
+MLGO file : 
+Fast math enabled? : false
+Data path : /data/local/ARM-CO-UP/assets//squeezenet/
+Image file : /data/local/ARM-CO-UP/assets//ppm_images_227//
+Labels file : /data/local/ARM-CO-UP/assets//labels.txt
+Partition point is : 0
+Second partition point is : 0
+Order is : LGLGLGLGLG
+freqs of layers : 
+power_profile_mode : transfers
+GPU host is: B
+NPU host is: B
+Number of totla cores is : 6
+Number of little cores is : 4
+Print task names : 0
+Run network for 10 times.
+Layer timing: 0
+
+****************************
+GraphUtils.cpp- reading images: /data/local/ARM-CO-UP/assets//ppm_images_227//
+/data/local/ARM-CO-UP/assets//ppm_images_227//gold_fish.ppm
+/data/local/ARM-CO-UP/assets//ppm_images_227//gondola.ppm
+/data/local/ARM-CO-UP/assets//ppm_images_227//school_bus.ppm
+/data/local/ARM-CO-UP/assets//ppm_images_227//go_kart.ppm
+*****************************
+
+
+
+			0 skipping layer: 
+current layer number: 0 layer name: 
+			0 skipping layer: conv1
+current layer number: 0 layer name: conv1
+			0 skipping layer: relu_conv1
+current layer number: 0 layer name: relu_conv1
+			0 skipping layer: pool1
+current layer number: 0 layer name: pool1
+1 layer: fire2/squeeze1x1
+current layer number: 1 layer name: fire2/squeeze1x1
+Input node for the layer 1 is in graph: 0 Adding Transmitter to that graph
+Adding Sender_pool1 to graph 0 with target 1
+Adding Receiver_pool1 to graph 1 with target 2
+1 skipping layer: fire2/relu_squeeze1x1
+current layer number: 1 layer name: fire2/relu_squeeze1x1
+new sub stream with tail node: 4 and tail graph: 1
+1 skipping layer: fire2/expand1x1
+current layer number: 1 layer name: fire2/expand1x1
+1 skipping layer: fire2/relu_expand1x1
+current layer number: 1 layer name: fire2/relu_expand1x1
+new sub stream with tail node: 4 and tail graph: 1
+1 skipping layer: fire2/expand3x3
+current layer number: 1 layer name: fire2/expand3x3
+1 skipping layer: fire2/relu_expand3x3
+current layer number: 1 layer name: fire2/relu_expand3x3
+1 skipping layer: fire2/concat
+current layer number: 1 layer name: fire2/concat
+			2 layer: fire3/squeeze1x1
+current layer number: 2 layer name: fire3/squeeze1x1
+Input node for the layer 2 is in graph: 1 Adding Transmitter to that graph
+Adding Sender_fire2/concat to graph 1 with target 2
+Adding Receiver_fire2/concat to graph 2 with target 1
+			2 skipping layer: fire3/relu_squeeze1x1
+current layer number: 2 layer name: fire3/relu_squeeze1x1
+new sub stream with tail node: 4 and tail graph: 2
+			2 skipping layer: fire3/expand1x1
+current layer number: 2 layer name: fire3/expand1x1
+			2 skipping layer: fire3/relu_expand1x1
+current layer number: 2 layer name: fire3/relu_expand1x1
+new sub stream with tail node: 4 and tail graph: 2
+			2 skipping layer: fire3/expand3x3
+current layer number: 2 layer name: fire3/expand3x3
+			2 skipping layer: fire3/relu_expand3x3
+current layer number: 2 layer name: fire3/relu_expand3x3
+			2 skipping layer: fire3/concat
+current layer number: 2 layer name: fire3/concat
+3 layer: fire4/squeeze1x1
+current layer number: 3 layer name: fire4/squeeze1x1
+Input node for the layer 3 is in graph: 2 Adding Transmitter to that graph
+Adding Sender_fire3/concat to graph 2 with target 1
+Adding Receiver_fire3/concat to graph 3 with target 2
+3 skipping layer: fire4/relu_squeeze1x1
+current layer number: 3 layer name: fire4/relu_squeeze1x1
+new sub stream with tail node: 4 and tail graph: 3
+3 skipping layer: fire4/expand1x1
+current layer number: 3 layer name: fire4/expand1x1
+3 skipping layer: fire4/relu_expand1x1
+current layer number: 3 layer name: fire4/relu_expand1x1
+new sub stream with tail node: 4 and tail graph: 3
+3 skipping layer: fire4/expand3x3
+current layer number: 3 layer name: fire4/expand3x3
+3 skipping layer: fire4/relu_expand3x3
+current layer number: 3 layer name: fire4/relu_expand3x3
+3 skipping layer: fire4/concat
+current layer number: 3 layer name: fire4/concat
+3 skipping layer: pool4
+current layer number: 3 layer name: pool4
+			4 layer: fire5/squeeze1x1
+current layer number: 4 layer name: fire5/squeeze1x1
+Input node for the layer 4 is in graph: 3 Adding Transmitter to that graph
+Adding Sender_pool4 to graph 3 with target 2
+Adding Receiver_pool4 to graph 4 with target 1
+			4 skipping layer: fire5/relu_squeeze1x1
+current layer number: 4 layer name: fire5/relu_squeeze1x1
+new sub stream with tail node: 4 and tail graph: 4
+			4 skipping layer: fire5/expand1x1
+current layer number: 4 layer name: fire5/expand1x1
+			4 skipping layer: fire5/relu_expand1x1
+current layer number: 4 layer name: fire5/relu_expand1x1
+new sub stream with tail node: 4 and tail graph: 4
+			4 skipping layer: fire5/expand3x3
+current layer number: 4 layer name: fire5/expand3x3
+			4 skipping layer: fire5/relu_expand3x3
+current layer number: 4 layer name: fire5/relu_expand3x3
+			4 skipping layer: fire5/concat
+current layer number: 4 layer name: fire5/concat
+5 layer: fire6/squeeze1x1
+current layer number: 5 layer name: fire6/squeeze1x1
+Input node for the layer 5 is in graph: 4 Adding Transmitter to that graph
+Adding Sender_fire5/concat to graph 4 with target 1
+Adding Receiver_fire5/concat to graph 5 with target 2
+5 skipping layer: fire6/relu_squeeze1x1
+current layer number: 5 layer name: fire6/relu_squeeze1x1
+new sub stream with tail node: 4 and tail graph: 5
+5 skipping layer: fire6/expand1x1
+current layer number: 5 layer name: fire6/expand1x1
+5 skipping layer: fire6/relu_expand1x1
+current layer number: 5 layer name: fire6/relu_expand1x1
+new sub stream with tail node: 4 and tail graph: 5
+5 skipping layer: fire6/expand3x3
+current layer number: 5 layer name: fire6/expand3x3
+5 skipping layer: fire6/relu_expand3x3
+current layer number: 5 layer name: fire6/relu_expand3x3
+5 skipping layer: fire6/concat
+current layer number: 5 layer name: fire6/concat
+			6 layer: fire7/squeeze1x1
+current layer number: 6 layer name: fire7/squeeze1x1
+Input node for the layer 6 is in graph: 5 Adding Transmitter to that graph
+Adding Sender_fire6/concat to graph 5 with target 2
+Adding Receiver_fire6/concat to graph 6 with target 1
+			6 skipping layer: fire7/relu_squeeze1x1
+current layer number: 6 layer name: fire7/relu_squeeze1x1
+new sub stream with tail node: 4 and tail graph: 6
+			6 skipping layer: fire7/expand1x1
+current layer number: 6 layer name: fire7/expand1x1
+			6 skipping layer: fire7/relu_expand1x1
+current layer number: 6 layer name: fire7/relu_expand1x1
+new sub stream with tail node: 4 and tail graph: 6
+			6 skipping layer: fire7/expand3x3
+current layer number: 6 layer name: fire7/expand3x3
+			6 skipping layer: fire7/relu_expand3x3
+current layer number: 6 layer name: fire7/relu_expand3x3
+			6 skipping layer: fire7/concat
+current layer number: 6 layer name: fire7/concat
+7 layer: fire8/squeeze1x1
+current layer number: 7 layer name: fire8/squeeze1x1
+Input node for the layer 7 is in graph: 6 Adding Transmitter to that graph
+Adding Sender_fire7/concat to graph 6 with target 1
+Adding Receiver_fire7/concat to graph 7 with target 2
+7 skipping layer: fire8/relu_squeeze1x1
+current layer number: 7 layer name: fire8/relu_squeeze1x1
+new sub stream with tail node: 4 and tail graph: 7
+7 skipping layer: fire8/expand1x1
+current layer number: 7 layer name: fire8/expand1x1
+7 skipping layer: fire8/relu_expand1x1
+current layer number: 7 layer name: fire8/relu_expand1x1
+new sub stream with tail node: 4 and tail graph: 7
+7 skipping layer: fire8/expand3x3
+current layer number: 7 layer name: fire8/expand3x3
+7 skipping layer: fire8/relu_expand3x3
+current layer number: 7 layer name: fire8/relu_expand3x3
+7 skipping layer: fire8/concat
+current layer number: 7 layer name: fire8/concat
+7 skipping layer: pool8
+current layer number: 7 layer name: pool8
+			8 layer: fire9/squeeze1x1
+current layer number: 8 layer name: fire9/squeeze1x1
+Input node for the layer 8 is in graph: 7 Adding Transmitter to that graph
+Adding Sender_pool8 to graph 7 with target 2
+Adding Receiver_pool8 to graph 8 with target 1
+			8 skipping layer: fire9/relu_squeeze1x1
+current layer number: 8 layer name: fire9/relu_squeeze1x1
+new sub stream with tail node: 4 and tail graph: 8
+			8 skipping layer: fire9/expand1x1
+current layer number: 8 layer name: fire9/expand1x1
+			8 skipping layer: fire9/relu_expand1x1
+current layer number: 8 layer name: fire9/relu_expand1x1
+new sub stream with tail node: 4 and tail graph: 8
+			8 skipping layer: fire9/expand3x3
+current layer number: 8 layer name: fire9/expand3x3
+			8 skipping layer: fire9/relu_expand3x3
+current layer number: 8 layer name: fire9/relu_expand3x3
+			8 skipping layer: fire9/concat
+current layer number: 8 layer name: fire9/concat
+9 layer: conv10
+current layer number: 9 layer name: conv10
+Input node for the layer 9 is in graph: 8 Adding Transmitter to that graph
+Adding Sender_fire9/concat to graph 8 with target 1
+Adding Receiver_fire9/concat to graph 9 with target 2
+9 skipping layer: relu_conv10
+current layer number: 9 layer name: relu_conv10
+9 skipping layer: pool10
+current layer number: 9 layer name: pool10
+9 skipping layer: flatten
+current layer number: 9 layer name: flatten
+9 skipping layer: prob
+current layer number: 9 layer name: prob
+output accessor reading label file /data/local/ARM-CO-UP/assets//labels.txt
+			10 layer: 
+current layer number: 10 layer name: 
+
+
+*********************
+Start finalizing Graphs
+*******************
+
+Graph id: Graph id: 0 Target is: Neon
+Graph id: Graph id: 3 Target is: Neon
+4 Target is: Neon
+2 Target is: Neon
+Graph id: 5 Target is: Neon
+Graph id: 6 Target is: Neon
+Graph id: 7 Target is: Neon
+Graph id: 9 Target is: Neon
+Graph id: 8 Target is: Neon
+Graph (0) Task 0: conv1
+Graph (0) Task 1: relu_conv1
+Graph (0) Task 2: pool1
+Graph 0 input size: 1 receiver size: 0 tasks size: 3 senders size: 1 output size: 0
+
+Graph (3) Task 0: fire4/squeeze1x1
+Graph (3) Task 1: fire4/relu_squeeze1x1
+Graph (3) Task 2: fire4/expand1x1
+Graph (3) Task 3: fire4/relu_expand1x1
+Graph (3) Task 4: fire4/expand3x3
+Graph (3) Task 5: fire4/relu_expand3x3
+Graph (3) Task 6: fire4/concat
+Graph (3) Task 7: pool4
+Graph 3 input size: 0 receiver size: 1 tasks size: 8 senders size: 1 output size: 0
+
+Graph id: 1 Target is: CL
+Graph (4) Task 0: fire5/squeeze1x1
+Graph (4) Task 1: fire5/relu_squeeze1x1
+Graph (4) Task 2: fire5/expand1x1
+Graph (4) Task 3: fire5/relu_expand1x1
+Graph (4) Task 4: fire5/expand3x3
+Graph (4) Task 5: fire5/relu_expand3x3
+Graph (4) Task 6: fire5/concat
+Graph 4 input size: 0 receiver size: 1 tasks size: 7 senders size: 1 output size: 0
+
+Graph (2) Task 0: fire3/squeeze1x1
+Graph (2) Task 1: fire3/relu_squeeze1x1
+Graph (2) Task 2: fire3/expand1x1
+Graph (2) Task 3: fire3/relu_expand1x1
+Graph (2) Task 4: fire3/expand3x3
+Graph (2) Task 5: fire3/relu_expand3x3
+Graph (2) Task 6: fire3/concat
+Graph 2 input size: 0 receiver size: 1 tasks size: 7 senders size: 1 output size: 0
+
+Graph (5) Task 0: fire6/squeeze1x1
+Graph (5) Task 1: fire6/relu_squeeze1x1
+Graph (5) Task 2: fire6/expand1x1
+Graph (5) Task 3: fire6/relu_expand1x1
+Graph (5) Task 4: fire6/expand3x3
+Graph (5) Task 5: fire6/relu_expand3x3
+Graph (5) Task 6: fire6/concat
+Graph 5 input size: 0 receiver size: 1 tasks size: 7 senders size: 1 output size: 0
+
+Graph (6) Task 0: fire7/squeeze1x1
+Graph (6) Task 1: fire7/relu_squeeze1x1
+Graph (6) Task 2: fire7/expand1x1
+Graph (6) Task 3: fire7/relu_expand1x1
+Graph (7) Task 0: fire8/squeeze1x1
+Graph (7) Task 1: fire8/relu_squeeze1x1
+Graph (7) Task 2: fire8/expand1x1
+Graph (7) Task 3: fire8/relu_expand1x1
+Graph (7) Task 4: fire8/expand3x3
+Graph (7) Task 5: fire8/relu_expand3x3
+Graph (7) Task 6: fire8/concat
+Graph (7) Task 7: pool8
+Graph 7 input size: 0 receiver size: 1 tasks size: 8 senders size: 1 output size: 0
+
+Graph (6) Task 4: fire7/expand3x3
+Graph (6) Task 5: fire7/relu_expand3x3
+Graph (6) Task 6: fire7/concat
+Graph 6 input size: 0 receiver size: 1 tasks size: 7 senders size: 1 output size: 0
+
+Graph (9) Task 0: conv10
+Graph (9) Task 1: relu_conv10
+Graph (9) Task 2: pool10
+Graph (9) Task 3: flatten
+Graph (9) Task 4: prob
+Graph 9 input size: 0 receiver size: 1 tasks size: 5 senders size: 0 output size: 1
+
+Graph (8) Task 0: fire9/squeeze1x1
+Graph (8) Task 1: fire9/relu_squeeze1x1
+Graph (8) Task 2: fire9/expand1x1
+Graph (8) Task 3: fire9/relu_expand1x1
+Graph (8) Task 4: fire9/expand3x3
+Graph (8) Task 5: fire9/relu_expand3x3
+Graph (8) Task 6: fire9/concat
+Graph 8 input size: 0 receiver size: 1 tasks size: 7 senders size: 1 output size: 0
+
+setting ending for layer: fire5/concat
+Finish finalizing graph 4
+
+
+
+setting ending for layer: pool4
+Finish finalizing graph 3
+
+
+
+setting ending for layer: fire3/concat
+Finish finalizing graph 2
+
+
+
+setting ending for layer: pool1
+Finish finalizing graph 0
+
+
+
+setting ending for layer: fire6/concat
+Finish finalizing graph 5
+
+
+
+setting ending for layer: fire7/concat
+Finish finalizing graph 6
+
+
+
+setting ending for layer: pool8
+Finish finalizing graph 7
+
+
+
+setting ending for layer: fire9/concat
+Finish finalizing graph 8
+
+
+
+setting ending for layer: prob
+Finish finalizing graph 9
+
+
+
+Graph (1) Task 0: fire2/squeeze1x1
+Graph (1) Task 1: fire2/relu_squeeze1x1
+Graph (1) Task 2: fire2/expand1x1
+Graph (1) Task 3: fire2/relu_expand1x1
+Graph (1) Task 4: fire2/expand3x3
+Graph (1) Task 5: fire2/relu_expand3x3
+Graph (1) Task 6: fire2/concat
+Graph 1 input size: 0 receiver size: 1 tasks size: 7 senders size: 1 output size: 0
+
+setting ending for layer: fire2/concat
+Finish finalizing graph 1
+
+
+
+setup finished
+
+Please Enter the desired Frequency setttings: 0 Running Graph with min LW DVFS
+governor 0 task:fire2/concat freqs:0,0,0
+governor 1 task:fire3/concat freqs:0,0,0
+governor 2 task:fire5/concat freqs:0,0,0
+governor 3 task:fire6/concat freqs:0,0,0
+governor 4 task:fire7/concat freqs:0,0,0
+governor 5 task:fire9/concat freqs:0,0,0
+governor 6 task:pool1 freqs:0,0,0
+governor 7 task:pool4 freqs:0,0,0
+governor 8 task:pool8 freqs:0,0,0
+governor 9 task:prob freqs:0,0,0
+set_GPIOs with mode: transfers
+tass name: conv1	starting gpio: 1	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: relu_conv1	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: pool1	starting gpio: 0	ending gpio: 1	profiling layers: 0	profiling transfers: 1
+tass name: fire2/squeeze1x1	starting gpio: 1	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: fire2/relu_squeeze1x1	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: fire2/expand1x1	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: fire2/relu_expand1x1	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: fire2/expand3x3	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: fire2/relu_expand3x3	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: fire2/concat	starting gpio: 0	ending gpio: 1	profiling layers: 0	profiling transfers: 1
+tass name: fire3/squeeze1x1	starting gpio: 1	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: fire3/relu_squeeze1x1	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: fire3/expand1x1	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: fire3/relu_expand1x1	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: fire3/expand3x3	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: fire3/relu_expand3x3	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: fire3/concat	starting gpio: 0	ending gpio: 1	profiling layers: 0	profiling transfers: 1
+tass name: fire4/squeeze1x1	starting gpio: 1	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: fire4/relu_squeeze1x1	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: fire4/expand1x1	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: fire4/relu_expand1x1	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: fire4/expand3x3	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: fire4/relu_expand3x3	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: fire4/concat	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: pool4	starting gpio: 0	ending gpio: 1	profiling layers: 0	profiling transfers: 1
+tass name: fire5/squeeze1x1	starting gpio: 1	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: fire5/relu_squeeze1x1	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: fire5/expand1x1	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: fire5/relu_expand1x1	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: fire5/expand3x3	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: fire5/relu_expand3x3	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: fire5/concat	starting gpio: 0	ending gpio: 1	profiling layers: 0	profiling transfers: 1
+tass name: fire6/squeeze1x1	starting gpio: 1	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: fire6/relu_squeeze1x1	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: fire6/expand1x1	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: fire6/relu_expand1x1	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: fire6/expand3x3	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: fire6/relu_expand3x3	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: fire6/concat	starting gpio: 0	ending gpio: 1	profiling layers: 0	profiling transfers: 1
+tass name: fire7/squeeze1x1	starting gpio: 1	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: fire7/relu_squeeze1x1	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: fire7/expand1x1	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: fire7/relu_expand1x1	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: fire7/expand3x3	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: fire7/relu_expand3x3	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: fire7/concat	starting gpio: 0	ending gpio: 1	profiling layers: 0	profiling transfers: 1
+tass name: fire8/squeeze1x1	starting gpio: 1	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: fire8/relu_squeeze1x1	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: fire8/expand1x1	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: fire8/relu_expand1x1	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: fire8/expand3x3	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: fire8/relu_expand3x3	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: fire8/concat	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: pool8	starting gpio: 0	ending gpio: 1	profiling layers: 0	profiling transfers: 1
+tass name: fire9/squeeze1x1	starting gpio: 1	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: fire9/relu_squeeze1x1	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: fire9/expand1x1	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: fire9/relu_expand1x1	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: fire9/expand3x3	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: fire9/relu_expand3x3	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: fire9/concat	starting gpio: 0	ending gpio: 1	profiling layers: 0	profiling transfers: 1
+tass name: conv10	starting gpio: 1	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: relu_conv10	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: pool10	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: flatten	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: prob	starting gpio: 0	ending gpio: 1	profiling layers: 0	profiling transfers: 1
+
+
+
+*********************************************
+start running graphs
+*************************************************
+
+
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gold_fish.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0000 - [id = 0], n01440764 tench, Tinca tinca
+0.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 2], n01484850 great white shark, white shark, man-eater, man-eating shark, Carcharodon carcharias
+0.0000 - [id = 3], n01491361 tiger shark, Galeocerdo cuvieri
+0.0000 - [id = 4], n01494475 hammerhead, hammerhead shark
+
+
+************
+Photo_index:1
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gondola.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0000 - [id = 0], n01440764 tench, Tinca tinca
+0.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 2], n01484850 great white shark, white shark, man-eater, man-eating shark, Carcharodon carcharias
+0.0000 - [id = 3], n01491361 tiger shark, Galeocerdo cuvieri
+0.0000 - [id = 4], n01494475 hammerhead, hammerhead shark
+
+
+************
+Photo_index:2
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//school_bus.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0000 - [id = 0], n01440764 tench, Tinca tinca
+0.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 2], n01484850 great white shark, white shark, man-eater, man-eating shark, Carcharodon carcharias
+0.0000 - [id = 3], n01491361 tiger shark, Galeocerdo cuvieri
+0.0000 - [id = 4], n01494475 hammerhead, hammerhead shark
+
+
+************
+Photo_index:3
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//go_kart.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0000 - [id = 0], n01440764 tench, Tinca tinca
+0.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 2], n01484850 great white shark, white shark, man-eater, man-eating shark, Carcharodon carcharias
+0.0000 - [id = 3], n01491361 tiger shark, Galeocerdo cuvieri
+0.0000 - [id = 4], n01494475 hammerhead, hammerhead shark
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gold_fish.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0000 - [id = 0], n01440764 tench, Tinca tinca
+0.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 2], n01484850 great white shark, white shark, man-eater, man-eating shark, Carcharodon carcharias
+0.0000 - [id = 3], n01491361 tiger shark, Galeocerdo cuvieri
+0.0000 - [id = 4], n01494475 hammerhead, hammerhead shark
+
+
+************
+Photo_index:1
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gondola.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0000 - [id = 0], n01440764 tench, Tinca tinca
+0.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 2], n01484850 great white shark, white shark, man-eater, man-eating shark, Carcharodon carcharias
+0.0000 - [id = 3], n01491361 tiger shark, Galeocerdo cuvieri
+0.0000 - [id = 4], n01494475 hammerhead, hammerhead shark
+
+
+************
+Photo_index:2
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//school_bus.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0000 - [id = 0], n01440764 tench, Tinca tinca
+0.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 2], n01484850 great white shark, white shark, man-eater, man-eating shark, Carcharodon carcharias
+0.0000 - [id = 3], n01491361 tiger shark, Galeocerdo cuvieri
+0.0000 - [id = 4], n01494475 hammerhead, hammerhead shark
+
+
+************
+Photo_index:3
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//go_kart.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0000 - [id = 0], n01440764 tench, Tinca tinca
+0.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 2], n01484850 great white shark, white shark, man-eater, man-eating shark, Carcharodon carcharias
+0.0000 - [id = 3], n01491361 tiger shark, Galeocerdo cuvieri
+0.0000 - [id = 4], n01494475 hammerhead, hammerhead shark
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gold_fish.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0000 - [id = 0], n01440764 tench, Tinca tinca
+0.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 2], n01484850 great white shark, white shark, man-eater, man-eating shark, Carcharodon carcharias
+0.0000 - [id = 3], n01491361 tiger shark, Galeocerdo cuvieri
+0.0000 - [id = 4], n01494475 hammerhead, hammerhead shark
+
+
+************
+Photo_index:1
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gondola.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0000 - [id = 0], n01440764 tench, Tinca tinca
+0.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 2], n01484850 great white shark, white shark, man-eater, man-eating shark, Carcharodon carcharias
+0.0000 - [id = 3], n01491361 tiger shark, Galeocerdo cuvieri
+0.0000 - [id = 4], n01494475 hammerhead, hammerhead shark
+
+
+************
+Photo_index:2
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//school_bus.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0000 - [id = 0], n01440764 tench, Tinca tinca
+0.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 2], n01484850 great white shark, white shark, man-eater, man-eating shark, Carcharodon carcharias
+0.0000 - [id = 3], n01491361 tiger shark, Galeocerdo cuvieri
+0.0000 - [id = 4], n01494475 hammerhead, hammerhead shark
+
+
+************
+Photo_index:3
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//go_kart.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0000 - [id = 0], n01440764 tench, Tinca tinca
+0.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 2], n01484850 great white shark, white shark, man-eater, man-eating shark, Carcharodon carcharias
+0.0000 - [id = 3], n01491361 tiger shark, Galeocerdo cuvieri
+0.0000 - [id = 4], n01494475 hammerhead, hammerhead shark
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gold_fish.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0000 - [id = 0], n01440764 tench, Tinca tinca
+0.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 2], n01484850 great white shark, white shark, man-eater, man-eating shark, Carcharodon carcharias
+0.0000 - [id = 3], n01491361 tiger shark, Galeocerdo cuvieri
+0.0000 - [id = 4], n01494475 hammerhead, hammerhead shark
+0	Layer Name: conv1 	 Layer time: 0 	 number of inputs: 3 	 input shape: 3x227x227 	 output shape: 96x111x111
+1	Layer Name: relu_conv1 	 Layer time: 0 	 number of inputs: 1 	 input shape: 96x111x111 	 output shape: 96x111x111
+2	Layer Name: pool1 	 Layer time: 0 	 number of inputs: 1 	 input shape: 96x111x111 	 output shape: 96x55x55
+Layer Number: 0 	 time: 0
+----------------------------
+
+ Sum of Layers time: 0
+
+
+Graph0   Input: 120.633   Task: 25.496   send: 3.71986   Out: 0.0018082   Process: 149.85
+
+
+
+********
+
+0	Layer Name: fire2/squeeze1x1 	 Layer time: 0 	 number of inputs: 3 	 input shape: 96x55x55 	 output shape: 16x55x55
+1	Layer Name: fire2/relu_squeeze1x1 	 Layer time: 0 	 number of inputs: 1 	 input shape: 16x55x55 	 output shape: 16x55x55
+2	Layer Name: fire2/expand1x1 	 Layer time: 0 	 number of inputs: 3 	 input shape: 16x55x55 	 output shape: 64x55x55
+3	Layer Name: fire2/relu_expand1x1 	 Layer time: 0 	 number of inputs: 1 	 input shape: 64x55x55 	 output shape: 64x55x55
+4	Layer Name: fire2/expand3x3 	 Layer time: 0 	 number of inputs: 3 	 input shape: 16x55x55 	 output shape: 64x55x55
+5	Layer Name: fire2/relu_expand3x3 	 Layer time: 0 	 number of inputs: 1 	 input shape: 64x55x55 	 output shape: 64x55x55
+6	Layer Name: fire2/concat 	 Layer time: 0 	 number of inputs: 2 	 input shape: 64x55x55 	 output shape: 128x55x55
+Layer Number: 0 	 time: 0
+----------------------------
+
+ Sum of Layers time: 0
+
+
+Graph1   Input: 0.0137084   Task: 58.4594   send: 3.56385   Out: 0.0025667   Process: 62.0395
+
+
+
+********
+
+0	Layer Name: fire3/squeeze1x1 	 Layer time: 0 	 number of inputs: 3 	 input shape: 128x55x55 	 output shape: 16x55x55
+1	Layer Name: fire3/relu_squeeze1x1 	 Layer time: 0 	 number of inputs: 1 	 input shape: 16x55x55 	 output shape: 16x55x55
+2	Layer Name: fire3/expand1x1 	 Layer time: 0 	 number of inputs: 3 	 input shape: 16x55x55 	 output shape: 64x55x55
+3	Layer Name: fire3/relu_expand1x1 	 Layer time: 0 	 number of inputs: 1 	 input shape: 64x55x55 	 output shape: 64x55x55
+4	Layer Name: fire3/expand3x3 	 Layer time: 0 	 number of inputs: 3 	 input shape: 16x55x55 	 output shape: 64x55x55
+5	Layer Name: fire3/relu_expand3x3 	 Layer time: 0 	 number of inputs: 1 	 input shape: 64x55x55 	 output shape: 64x55x55
+6	Layer Name: fire3/concat 	 Layer time: 0 	 number of inputs: 2 	 input shape: 64x55x55 	 output shape: 128x55x55
+Layer Number: 0 	 time: 0
+----------------------------
+
+ Sum of Layers time: 0
+
+
+Graph2   Input: 0.0128332   Task: 58.9445   send: 1.63529   Out: 0.0017792   Process: 60.5944
+
+
+
+********
+
+0	Layer Name: fire4/squeeze1x1 	 Layer time: 0 	 number of inputs: 3 	 input shape: 128x55x55 	 output shape: 32x55x55
+1	Layer Name: fire4/relu_squeeze1x1 	 Layer time: 0 	 number of inputs: 1 	 input shape: 32x55x55 	 output shape: 32x55x55
+2	Layer Name: fire4/expand1x1 	 Layer time: 0 	 number of inputs: 3 	 input shape: 32x55x55 	 output shape: 128x55x55
+3	Layer Name: fire4/relu_expand1x1 	 Layer time: 0 	 number of inputs: 1 	 input shape: 128x55x55 	 output shape: 128x55x55
+4	Layer Name: fire4/expand3x3 	 Layer time: 0 	 number of inputs: 3 	 input shape: 32x55x55 	 output shape: 128x55x55
+5	Layer Name: fire4/relu_expand3x3 	 Layer time: 0 	 number of inputs: 1 	 input shape: 128x55x55 	 output shape: 128x55x55
+6	Layer Name: fire4/concat 	 Layer time: 0 	 number of inputs: 2 	 input shape: 128x55x55 	 output shape: 256x55x55
+7	Layer Name: pool4 	 Layer time: 0 	 number of inputs: 1 	 input shape: 256x55x55 	 output shape: 256x27x27
+Layer Number: 0 	 time: 0
+----------------------------
+
+ Sum of Layers time: 0
+
+
+Graph3   Input: 0.0088374   Task: 66.5817   send: 0.605441   Out: 0.0022749   Process: 67.1982
+
+
+
+********
+
+0	Layer Name: fire5/squeeze1x1 	 Layer time: 0 	 number of inputs: 3 	 input shape: 256x27x27 	 output shape: 32x27x27
+1	Layer Name: fire5/relu_squeeze1x1 	 Layer time: 0 	 number of inputs: 1 	 input shape: 32x27x27 	 output shape: 32x27x27
+2	Layer Name: fire5/expand1x1 	 Layer time: 0 	 number of inputs: 3 	 input shape: 32x27x27 	 output shape: 128x27x27
+3	Layer Name: fire5/relu_expand1x1 	 Layer time: 0 	 number of inputs: 1 	 input shape: 128x27x27 	 output shape: 128x27x27
+4	Layer Name: fire5/expand3x3 	 Layer time: 0 	 number of inputs: 3 	 input shape: 32x27x27 	 output shape: 128x27x27
+5	Layer Name: fire5/relu_expand3x3 	 Layer time: 0 	 number of inputs: 1 	 input shape: 128x27x27 	 output shape: 128x27x27
+6	Layer Name: fire5/concat 	 Layer time: 0 	 number of inputs: 2 	 input shape: 128x27x27 	 output shape: 256x27x27
+Layer Number: 0 	 time: 0
+----------------------------
+
+ Sum of Layers time: 0
+
+
+Graph4   Input: 0.0108791   Task: 58.8825   send: 0.751479   Out: 0.0019249   Process: 59.6468
+
+
+
+********
+
+0	Layer Name: fire6/squeeze1x1 	 Layer time: 0 	 number of inputs: 3 	 input shape: 256x27x27 	 output shape: 48x27x27
+1	Layer Name: fire6/relu_squeeze1x1 	 Layer time: 0 	 number of inputs: 1 	 input shape: 48x27x27 	 output shape: 48x27x27
+2	Layer Name: fire6/expand1x1 	 Layer time: 0 	 number of inputs: 3 	 input shape: 48x27x27 	 output shape: 192x27x27
+3	Layer Name: fire6/relu_expand1x1 	 Layer time: 0 	 number of inputs: 1 	 input shape: 192x27x27 	 output shape: 192x27x27
+4	Layer Name: fire6/expand3x3 	 Layer time: 0 	 number of inputs: 3 	 input shape: 48x27x27 	 output shape: 192x27x27
+5	Layer Name: fire6/relu_expand3x3 	 Layer time: 0 	 number of inputs: 1 	 input shape: 192x27x27 	 output shape: 192x27x27
+6	Layer Name: fire6/concat 	 Layer time: 0 	 number of inputs: 2 	 input shape: 192x27x27 	 output shape: 384x27x27
+Layer Number: 0 	 time: 0
+----------------------------
+
+ Sum of Layers time: 0
+
+
+Graph5   Input: 0.0096251   Task: 58.5254   send: 0.897458   Out: 0.0023334   Process: 59.4348
+
+
+
+********
+
+0	Layer Name: fire7/squeeze1x1 	 Layer time: 0 	 number of inputs: 3 	 input shape: 384x27x27 	 output shape: 48x27x27
+1	Layer Name: fire7/relu_squeeze1x1 	 Layer time: 0 	 number of inputs: 1 	 input shape: 48x27x27 	 output shape: 48x27x27
+2	Layer Name: fire7/expand1x1 	 Layer time: 0 	 number of inputs: 3 	 input shape: 48x27x27 	 output shape: 192x27x27
+3	Layer Name: fire7/relu_expand1x1 	 Layer time: 0 	 number of inputs: 1 	 input shape: 192x27x27 	 output shape: 192x27x27
+4	Layer Name: fire7/expand3x3 	 Layer time: 0 	 number of inputs: 3 	 input shape: 48x27x27 	 output shape: 192x27x27
+5	Layer Name: fire7/relu_expand3x3 	 Layer time: 0 	 number of inputs: 1 	 input shape: 192x27x27 	 output shape: 192x27x27
+6	Layer Name: fire7/concat 	 Layer time: 0 	 number of inputs: 2 	 input shape: 192x27x27 	 output shape: 384x27x27
+Layer Number: 0 	 time: 0
+----------------------------
+
+ Sum of Layers time: 0
+
+
+Graph6   Input: 0.011871   Task: 58.895   send: 1.09935   Out: 0.0016333   Process: 60.0078
+
+
+
+********
+
+0	Layer Name: fire8/squeeze1x1 	 Layer time: 0 	 number of inputs: 3 	 input shape: 384x27x27 	 output shape: 64x27x27
+1	Layer Name: fire8/relu_squeeze1x1 	 Layer time: 0 	 number of inputs: 1 	 input shape: 64x27x27 	 output shape: 64x27x27
+2	Layer Name: fire8/expand1x1 	 Layer time: 0 	 number of inputs: 3 	 input shape: 64x27x27 	 output shape: 256x27x27
+3	Layer Name: fire8/relu_expand1x1 	 Layer time: 0 	 number of inputs: 1 	 input shape: 256x27x27 	 output shape: 256x27x27
+4	Layer Name: fire8/expand3x3 	 Layer time: 0 	 number of inputs: 3 	 input shape: 64x27x27 	 output shape: 256x27x27
+5	Layer Name: fire8/relu_expand3x3 	 Layer time: 0 	 number of inputs: 1 	 input shape: 256x27x27 	 output shape: 256x27x27
+6	Layer Name: fire8/concat 	 Layer time: 0 	 number of inputs: 2 	 input shape: 256x27x27 	 output shape: 512x27x27
+7	Layer Name: pool8 	 Layer time: 0 	 number of inputs: 1 	 input shape: 512x27x27 	 output shape: 512x13x13
+Layer Number: 0 	 time: 0
+----------------------------
+
+ Sum of Layers time: 0
+
+
+Graph7   Input: 0.007875   Task: 66.8191   send: 0.29785   Out: 0.0024208   Process: 67.1272
+
+
+
+********
+
+0	Layer Name: fire9/squeeze1x1 	 Layer time: 0 	 number of inputs: 3 	 input shape: 512x13x13 	 output shape: 64x13x13
+1	Layer Name: fire9/relu_squeeze1x1 	 Layer time: 0 	 number of inputs: 1 	 input shape: 64x13x13 	 output shape: 64x13x13
+2	Layer Name: fire9/expand1x1 	 Layer time: 0 	 number of inputs: 3 	 input shape: 64x13x13 	 output shape: 256x13x13
+3	Layer Name: fire9/relu_expand1x1 	 Layer time: 0 	 number of inputs: 1 	 input shape: 256x13x13 	 output shape: 256x13x13
+4	Layer Name: fire9/expand3x3 	 Layer time: 0 	 number of inputs: 3 	 input shape: 64x13x13 	 output shape: 256x13x13
+5	Layer Name: fire9/relu_expand3x3 	 Layer time: 0 	 number of inputs: 1 	 input shape: 256x13x13 	 output shape: 256x13x13
+6	Layer Name: fire9/concat 	 Layer time: 0 	 number of inputs: 2 	 input shape: 256x13x13 	 output shape: 512x13x13
+Layer Number: 0 	 time: 0
+----------------------------
+
+ Sum of Layers time: 0
+
+
+Graph8   Input: 0.0100334   Task: 58.866   send: 0.382958   Out: 0.0015461   Process: 59.2606
+
+
+
+********
+
+0	Layer Name: conv10 	 Layer time: 0 	 number of inputs: 3 	 input shape: 512x13x13 	 output shape: 1000x13x13
+1	Layer Name: relu_conv10 	 Layer time: 0 	 number of inputs: 1 	 input shape: 1000x13x13 	 output shape: 1000x13x13
+2	Layer Name: pool10 	 Layer time: 0 	 number of inputs: 1 	 input shape: 1000x13x13 	 output shape: 1000
+3	Layer Name: flatten 	 Layer time: 0 	 number of inputs: 1 	 input shape: 1000 	 output shape: 1000
+4	Layer Name: prob 	 Layer time: 0 	 number of inputs: 1 	 input shape: 1000 	 output shape: 1000
+Layer Number: 0 	 time: 0
+----------------------------
+
+ Sum of Layers time: 0
+
+
+Graph9   Input: 0.0077581   Task: 41.8562   send: 0.0029459   Out: 0.318238   Process: 42.1852
+
+
+
+********
+
+
+
+AVG Latency: 689.229
+
+Profiling these DVFS settings finised
+Please Enter the desired Frequency setttings: 
+Test passed

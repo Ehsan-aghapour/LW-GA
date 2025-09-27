@@ -21,7 +21,7 @@ from scipy.stats import norm
 
 
 
-Test=1
+Test=0
 
 
 cnn_dir="/home/ehsan/UvA/ARMCL/Rock-Pi/ComputeLibrary_64_CPUGPULW/"
@@ -617,13 +617,18 @@ def Profile_Task_Time(graph):
         Layers_df.to_csv(Layers_csv,index=False)
 
 
+# +
 #when reading:
 #test=pd.read_csv("data_df.csv",index_col=0)
 #or you can use df.to_csv with index=False argument
+
 def Profiling_Layers():
     for graph in graphs[::1]:
         if Layers_df[Layers_df["Graph"]==graph].shape[0]==0:
             Profile_Task_Time(graph)   
+            
+if Test==3:
+    Profiling_Layers()
 
 
 # +
@@ -1149,20 +1154,21 @@ def AOA():
     for _g in graphs:
         Real_Evaluation(g=_g,_ord='G',_fs=[[["min"]]],suffix="AOA")
         
-if Test==3:
+if Test==2:
     AOA()
-# -
 
+# +
 #Fixed freq
 Motivation_Fig2=False
 #def Motivation_Fig2():
 if Motivation_Fig2:
-    _g='alex'
-    N=NLayers[g]
-    Real_Evaluation(g="alex",_ord='L',_fs=[[[5]]*N],suffix="Motivation_Figure")
-    Real_Evaluation(g="alex",_ord='B',_fs=[[[1]]*N],suffix="Motivation_Figure")
-    Real_Evaluation(g="alex",_ord='G',_fs=[[[1,1]]*N],suffix="Motivation_Figure")
-
+    _g='mobile'
+    N=NLayers[_g]
+    Real_Evaluation(g=_g,_ord='L',_fs=[[[5]]*N,[[4]]*N,[[3]]*N,[[2]]*N,[[1]]*N,[[0]]*N],suffix="Motivation_Figure")
+    Real_Evaluation(g=_g,_ord='B',_fs=[[[0]]*N,[[1]]*N,[[2]]*N,[[3]]*N,[[4]]*N,[[5]]*N,[[6]]*N,[[7]]*N],suffix="Motivation_Figure")
+    Real_Evaluation(g=_g,_ord='G',_fs=[[[0,0]]*N,[[1,1]]*N,[[2,2]]*N,[[3,3]]*N,[[4,4]]*N],suffix="Motivation_Figure")
+    
+#Real_Evaluation(g="google",_ord='LLLLLLLLLLL',_fs=[[[5]]*11],suffix="ttt")
 
 # +
 #This version of Real_Evalutaion is for evaluating GA results, so it get the df instead of using global one
@@ -1318,11 +1324,46 @@ def Fill_prediction(_FileName, dvfs_delay):
         order=row['order']
         #print(graph,freq,order,dvfs_delay)
         return Inference_Cost(_graph=graph,_freq=freq,_order=order,_dvfs_delay=dvfs_delay, _debug=False)
-    Evals_df[['Predicted_Time','Predicted_Energy']]=Evals_df.apply(prediction,axis=1, result_type='expand')
+    if 'Predicted_Time' not in Evals_df:
+        Evals_df[['Predicted_Time','Predicted_Energy']]=Evals_df.apply(prediction,axis=1, result_type='expand')
+    if 'Predicted_Time' in Evals_df:
+        if pd.isna(Evals_df['Predicted_Time']).any():
+            Evals_df[['Predicted_Time','Predicted_Energy']]=Evals_df.apply(prediction,axis=1, result_type='expand')
+    
+    #display(Evals_df)
+    def calc_EE(row):
+        Measured=1000.0/row['total_e']
+        Pred=1000.0/row['Predicted_Energy']
+        Err=abs(Pred-Measured)/Measured
+        return 100.0*Err
+    
+    def calc_Power(row):
+        measured=row['total_e']/row['total_time']
+        pred=row['Predicted_Energy']/row['Predicted_Time']
+        Err=100*abs(pred-measured)/measured
+        return Err
+    
+    def calc_FPS(row):
+        measured=1000/row['total_time']
+        pred=1000/row['Predicted_Time']
+        Err=100.0*abs(pred-measured)/measured
+        return Err
+    
+    if 'Error_Time' not in Evals_df:
+        Evals_df['Error_Time']=Evals_df.apply(lambda x:100*abs(x['Predicted_Time']-x['total_time'])/x['total_time'],axis=1)
+    if 'Error_Energy' not in Evals_df:
+        Evals_df['Error_Energy']=Evals_df.apply(lambda x:100*abs(x['Predicted_Energy']-x['total_e'])/x['total_e'],axis=1)
+    if 'Error_EE' not in Evals_df:
+        Evals_df['Error_EE']=Evals_df.apply(calc_EE,axis=1)
+    #Evals_df['Error_Power']=Evals_df.apply(lambda x:100*abs( (x['Predicted_Energy']/x['Predicted_Time']) - (x['total_e']/x['total_time']) /(x['total_e']/x['total_time']) ),axis=1)
+    if 'Error_Power' not in Evals_df:
+        Evals_df['Error_Power']=Evals_df.apply(calc_Power,axis=1)
+    if 'Error_FPS' not in Evals_df:
+        Evals_df['Error_FPS']=Evals_df.apply(calc_FPS,axis=1)
     new_file=_FileName.with_name(_FileName.name.replace(".csv", "_prediction.csv"))
     Evals_df.to_csv(new_file)
 
-if Test==1:
+if Test==2:
     for g in graphs:
         fname=Path('Evaluations_'+g+'.csv')
         Fill_prediction(fname, 'variable')
@@ -1330,23 +1371,28 @@ if Test==1:
 
 #def Anlze_Error():
 #if True:
-for g in graphs:
-    print(f'Graph: {g}')
-    Evals_df=pd.read_csv('Evaluations_'+g+'_prediction.csv')
-    #error_time = abs(100.0*(Evals_df['Predicted_Time'] - Evals_df['total_time'])/Evals_df['total_time'])
-    #print(abs(error_time).describe())
-    error_energy = abs(100.0*(1000.0/Evals_df['Predicted_Energy'] - 1000.0/Evals_df['total_e'])/(1000.0/Evals_df['total_e']))
-    plt.hist(error_energy, bins=50, density=True)
-    print(error_energy.describe())
-    #plt.hist(error_time, bins=40, density=True)
-    # Add normal curve
-    mu, std = norm.fit(error_energy
-                      )
-    x = np.linspace(-1.5, 40, 100)
-    
-    y = norm.pdf(x, mu, std)
-    plt.plot(x, y)
-    
+if Test==2:
+    for g in graphs:
+        print(f'Graph: {g}')
+        if not Path('Evaluations_'+g+'_prediction.csv').exists():
+            continue
+        Evals_df=pd.read_csv('Evaluations_'+g+'_prediction.csv')
+        #error_time = abs(100.0*(Evals_df['Predicted_Time'] - Evals_df['total_time'])/Evals_df['total_time'])
+        #print(abs(error_time).describe())
+        #error_energy = abs(100.0*((1000.0/Evals_df['Predicted_Energy']) - (1000.0/Evals_df['total_e']))/(1000.0/Evals_df['total_e']))
+        #error_energy=Evals_df['Error_Time']
+        error_energy=Evals_df['Error_Energy']
+        #error_energy=Evals_df['Error_EE']
+        #plt.hist(error_energy, bins=50, density=True)
+        print(error_energy.describe())
+        # Add normal curve
+        mu, std = norm.fit(error_energy
+                          )
+        x = np.linspace(0, 100, 100)
+
+        y = norm.pdf(x, mu, std)
+        plt.plot(x, y)
+
 
 # +
 def prediction(File,row_num,dvfs_delay):
@@ -1360,58 +1406,31 @@ def prediction(File,row_num,dvfs_delay):
         cases=Evals_df.shape[0]
         print(f'There are {cases}')
         #print(row)
+        Evals_df=Evals_df.sort_values('Error_Time',ascending=False)
         row=Evals_df.iloc[row_num]
         graph=row['graph']
         freq=format_to_list([row['freq']])
         order=row['order']
         #print(graph,freq,order,dvfs_delay)
         t,e=Inference_Cost(_graph=graph,_freq=freq[0],_order=order,_dvfs_delay=dvfs_delay, _debug=True)
-        run=False
+        print(f'total_time:{t}, total_e:{e}')
+        run=True
         if run:
             Real_Evaluation(g=graph,_ord=order,_fs=freq)
             
         return t,e
     
 
-if Test==2:
-    prediction("test.csv",-1,'variable')
-    
-
-# +
-#Layers_df[(Layers_df['Graph']=='alex') & (Layers_df['Component']=='L') & (Layers_df['Layer']==0)]
-
-# +
-import seaborn as sns
-
-plt.hist(error_time)
-plt.show()
-sns.kdeplot(error_time)
-plt.show()
-import numpy as np
-print("Mean:", np.mean(error_time))
-print("Standard deviation:", np.std(error_time))
-print("25th percentile:", np.percentile(error_time, 25))
-print("50th percentile (median):", np.percentile(error_time, 50))
-print("75th percentile:", np.percentile(error_time, 75))
+if Test==3:
+    g='google'
+    prediction('Evaluations_'+g+'_prediction.csv',-1,'variable')
 
 
 # +
-import matplotlib.pyplot as plt
-import seaborn as sns
-from scipy.stats import norm, gamma, beta, lognorm, chi2, expon, kstest
-plt.clf()
-loc, scale = norm.fit(error_time)
-print("Normal distribution parameters: loc={}, scale={}".format(loc, scale))
-kstest_result = kstest(error_time, 'norm', args=(loc, scale))
-print("Kolmogorov-Smirnov test result:", kstest_result)
-sns.histplot(error_time, kde=True, stat="density")
-x = np.linspace(min(error_time), max(error_time), 100)
-sns.lineplot(x=x, y=norm.pdf(x, loc, scale), label="Normal distribution")
-sns.lineplot(x=x, y=gamma.pdf(x, a=kstest_result[0]), label="Gamma distribution")
-plt.legend()
-plt.show()
+#Layers_df[(Layers_df['Graph']=='google') & (Layers_df['Layer']==4) & (Layers_df['Component']=='B') &(Layers_df['Freq']==0)]
 
-
+# +
+#Value('google','L',[0],[3],'task','Time')
 # -
 
 def _Test():
@@ -1842,7 +1861,7 @@ def Run_Eval(g='alex',num_evals=1000,num_freqs=10):
             if row.shape[0]==0:
                 Evaluations_df.loc[len(Evaluations_df)]={"graph":g,"order":order,"freq":f}
             
-    Evaluations_df.to_csv(Evaluations_csv,index=False)
+    Evaluations_df.to_csv(EvalFile,index=False)
     
     grouped = Evaluations_df.groupby('order')
     unique_values_order = Evaluations_df['order'].unique()
@@ -1879,9 +1898,9 @@ def Gather_real_profile(_g,_num_evals):
             ab()
             time.sleep(5)
 #3
-if Test==3:
+if Test==2:
     for g in graphs:
-            Gather_real_profile(g,200)
+            Gather_real_profile(g,100)
 
 
 def main():
@@ -1961,7 +1980,7 @@ def main():
     _n = 8  # replace with desired length of the random strings
     num_strings = 1000  # replace with desired number of random strings
     random_strings = generate_random_strings(_n, num_strings)
-if Test==2:
+if Test==4:
     main()
 
 

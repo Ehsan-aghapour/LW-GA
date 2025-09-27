@@ -1,0 +1,3774 @@
+List of devices attached
+4UB7RRTHY8	device
+
+disconnected everything
+adbd is already running as root
+remount succeeded
+/home/ehsan/UvA/ARMCL/Rock-Pi/ComputeLibrary_64_Yolov3/utils/DVFS/governor_pandoon.ko: 1 file pushed, 0 skipped. 1920.5 MB/s (260080 bytes in 0.000s)
+Module is already inserted, removing and reinserting...
+
+WARNING: linker: Warning: unable to normalize "build/"
+5 Input images are read from /data/local/ARM-CO-UP/assets//ppm_images_608/
+[UtilsPipeline.h] image directory is: /data/local/ARM-CO-UP/assets//ppm_images_608//
+Threads : 1
+Small Cores Threads : 1
+Target : Neon
+Data type : F32
+Data layout : NHWC
+Tuner enabled? : false
+Cache enabled? : false
+Tuner mode : Normal
+Tuner file : 
+MLGO file : 
+Fast math enabled? : false
+Data path : /data/local/ARM-CO-UP/assets//yolov3/
+Image file : /data/local/ARM-CO-UP/assets//ppm_images_608//
+Labels file : /data/local/ARM-CO-UP/assets//coco.names
+Partition point is : 0
+Second partition point is : 0
+Order is : GLGLGLGLGLGLGLGLGLGLGLGLGLGLGLGLGLGLGLGLGLGLGLGLGLGLGLGLGLGLGLGLGLGLGLGLGLG
+freqs of layers : 
+power_profile_mode : transfers
+GPU host is: B
+NPU host is: B
+Number of totla cores is : 6
+Number of little cores is : 4
+Print task names : 0
+Run network for 10 times.
+Layer timing: 0
+
+Adding Graph0 target 2 PE: G Host PE: B Layers: 0-0
+Adding Graph1 target 1 PE: L Host PE: L Layers: 1-1
+Adding Graph2 target 2 PE: G Host PE: B Layers: 2-2
+Adding Graph3 target 1 PE: L Host PE: L Layers: 3-3
+Adding Graph4 target 2 PE: G Host PE: B Layers: 4-4
+Adding Graph5 target 1 PE: L Host PE: L Layers: 5-5
+Adding Graph6 target 2 PE: G Host PE: B Layers: 6-6
+Adding Graph7 target 1 PE: L Host PE: L Layers: 7-7
+Adding Graph8 target 2 PE: G Host PE: B Layers: 8-8
+Adding Graph9 target 1 PE: L Host PE: L Layers: 9-9
+Adding Graph10 target 2 PE: G Host PE: B Layers: 10-10
+Adding Graph11 target 1 PE: L Host PE: L Layers: 11-11
+Adding Graph12 target 2 PE: G Host PE: B Layers: 12-12
+Adding Graph13 target 1 PE: L Host PE: L Layers: 13-13
+Adding Graph14 target 2 PE: G Host PE: B Layers: 14-14
+Adding Graph15 target 1 PE: L Host PE: L Layers: 15-15
+Adding Graph16 target 2 PE: G Host PE: B Layers: 16-16
+Adding Graph17 target 1 PE: L Host PE: L Layers: 17-17
+Adding Graph18 target 2 PE: G Host PE: B Layers: 18-18
+Adding Graph19 target 1 PE: L Host PE: L Layers: 19-19
+Adding Graph20 target 2 PE: G Host PE: B Layers: 20-20
+Adding Graph21 target 1 PE: L Host PE: L Layers: 21-21
+Adding Graph22 target 2 PE: G Host PE: B Layers: 22-22
+Adding Graph23 target 1 PE: L Host PE: L Layers: 23-23
+Adding Graph24 target 2 PE: G Host PE: B Layers: 24-24
+Adding Graph25 target 1 PE: L Host PE: L Layers: 25-25
+Adding Graph26 target 2 PE: G Host PE: B Layers: 26-26
+Adding Graph27 target 1 PE: L Host PE: L Layers: 27-27
+Adding Graph28 target 2 PE: G Host PE: B Layers: 28-28
+Adding Graph29 target 1 PE: L Host PE: L Layers: 29-29
+Adding Graph30 target 2 PE: G Host PE: B Layers: 30-30
+Adding Graph31 target 1 PE: L Host PE: L Layers: 31-31
+Adding Graph32 target 2 PE: G Host PE: B Layers: 32-32
+Adding Graph33 target 1 PE: L Host PE: L Layers: 33-33
+Adding Graph34 target 2 PE: G Host PE: B Layers: 34-34
+Adding Graph35 target 1 PE: L Host PE: L Layers: 35-35
+Adding Graph36 target 2 PE: G Host PE: B Layers: 36-36
+Adding Graph37 target 1 PE: L Host PE: L Layers: 37-37
+Adding Graph38 target 2 PE: G Host PE: B Layers: 38-38
+Adding Graph39 target 1 PE: L Host PE: L Layers: 39-39
+Adding Graph40 target 2 PE: G Host PE: B Layers: 40-40
+Adding Graph41 target 1 PE: L Host PE: L Layers: 41-41
+Adding Graph42 target 2 PE: G Host PE: B Layers: 42-42
+Adding Graph43 target 1 PE: L Host PE: L Layers: 43-43
+Adding Graph44 target 2 PE: G Host PE: B Layers: 44-44
+Adding Graph45 target 1 PE: L Host PE: L Layers: 45-45
+Adding Graph46 target 2 PE: G Host PE: B Layers: 46-46
+Adding Graph47 target 1 PE: L Host PE: L Layers: 47-47
+Adding Graph48 target 2 PE: G Host PE: B Layers: 48-48
+Adding Graph49 target 1 PE: L Host PE: L Layers: 49-49
+Adding Graph50 target 2 PE: G Host PE: B Layers: 50-50
+Adding Graph51 target 1 PE: L Host PE: L Layers: 51-51
+Adding Graph52 target 2 PE: G Host PE: B Layers: 52-52
+Adding Graph53 target 1 PE: L Host PE: L Layers: 53-53
+Adding Graph54 target 2 PE: G Host PE: B Layers: 54-54
+Adding Graph55 target 1 PE: L Host PE: L Layers: 55-55
+Adding Graph56 target 2 PE: G Host PE: B Layers: 56-56
+Adding Graph57 target 1 PE: L Host PE: L Layers: 57-57
+Adding Graph58 target 2 PE: G Host PE: B Layers: 58-58
+Adding Graph59 target 1 PE: L Host PE: L Layers: 59-59
+Adding Graph60 target 2 PE: G Host PE: B Layers: 60-60
+Adding Graph61 target 1 PE: L Host PE: L Layers: 61-61
+Adding Graph62 target 2 PE: G Host PE: B Layers: 62-62
+Adding Graph63 target 1 PE: L Host PE: L Layers: 63-63
+Adding Graph64 target 2 PE: G Host PE: B Layers: 64-64
+Adding Graph65 target 1 PE: L Host PE: L Layers: 65-65
+Adding Graph66 target 2 PE: G Host PE: B Layers: 66-66
+Adding Graph67 target 1 PE: L Host PE: L Layers: 67-67
+Adding Graph68 target 2 PE: G Host PE: B Layers: 68-68
+Adding Graph69 target 1 PE: L Host PE: L Layers: 69-69
+Adding Graph70 target 2 PE: G Host PE: B Layers: 70-70
+Adding Graph71 target 1 PE: L Host PE: L Layers: 71-71
+Adding Graph72 target 2 PE: G Host PE: B Layers: 72-72
+Adding Graph73 target 1 PE: L Host PE: L Layers: 73-73
+Adding Graph74 target 2 PE: G Host PE: B Layers: 74-74
+pandoon
+pandoon
+pandoon
+Pandoon opened at 3
+Threads : 1
+Small Cores Threads : 1
+Target : Neon
+Data type : F32
+Data layout : NHWC
+Tuner enabled? : false
+Cache enabled? : false
+Tuner mode : Normal
+Tuner file : 
+MLGO file : 
+Fast math enabled? : false
+Data path : /data/local/ARM-CO-UP/assets//yolov3/
+Image file : /data/local/ARM-CO-UP/assets//ppm_images_608//
+Labels file : /data/local/ARM-CO-UP/assets//coco.names
+Partition point is : 0
+Second partition point is : 0
+Order is : GLGLGLGLGLGLGLGLGLGLGLGLGLGLGLGLGLGLGLGLGLGLGLGLGLGLGLGLGLGLGLGLGLGLGLGLGLG
+freqs of layers : 
+power_profile_mode : transfers
+GPU host is: B
+NPU host is: B
+Number of totla cores is : 6
+Number of little cores is : 4
+Print task names : 0
+Run network for 10 times.
+Layer timing: 0
+
+****************************
+GraphUtils.cpp- reading images: /data/local/ARM-CO-UP/assets//ppm_images_608//
+/data/local/ARM-CO-UP/assets//ppm_images_608//apple.ppm
+/data/local/ARM-CO-UP/assets//ppm_images_608//dishes.ppm
+/data/local/ARM-CO-UP/assets//ppm_images_608//bus.ppm
+/data/local/ARM-CO-UP/assets//ppm_images_608//zebra.ppm
+/data/local/ARM-CO-UP/assets//ppm_images_608//bear.ppm
+*****************************
+
+
+
+			0 skipping layer: 
+current layer number: 0 layer name: 
+			0 skipping layer: conv2d_1/Conv2D
+current layer number: 0 layer name: conv2d_1/Conv2D
+			0 skipping layer: conv2d_1/BatchNorm
+current layer number: 0 layer name: conv2d_1/BatchNorm
+			0 skipping layer: conv2d_1/LeakyRelu
+current layer number: 0 layer name: conv2d_1/LeakyRelu
+1 layer: conv2d_2/Conv2D
+current layer number: 1 layer name: conv2d_2/Conv2D
+Input node for the layer 1 is in graph: 0 Adding Transmitter to that graph
+Adding Sender_conv2d_1/LeakyRelu to graph 0 with target 2
+Adding Receiver_conv2d_1/LeakyRelu to graph 1 with target 1
+1 skipping layer: conv2d_2/BatchNorm
+current layer number: 1 layer name: conv2d_2/BatchNorm
+1 skipping layer: conv2d_2/LeakyRelu
+current layer number: 1 layer name: conv2d_2/LeakyRelu
+new sub stream with tail node: 8 and tail graph: 1
+new sub stream with tail node: 8 and tail graph: 1
+			2 layer: conv2d_3/Conv2D
+current layer number: 2 layer name: conv2d_3/Conv2D
+Input node for the layer 2 is in graph: 1 Adding Transmitter to that graph
+Adding Sender_conv2d_2/LeakyRelu to graph 1 with target 1
+Adding Receiver_conv2d_2/LeakyRelu to graph 2 with target 2
+			2 skipping layer: conv2d_3/BatchNorm
+current layer number: 2 layer name: conv2d_3/BatchNorm
+			2 skipping layer: conv2d_3/LeakyRelu
+current layer number: 2 layer name: conv2d_3/LeakyRelu
+3 layer: conv2d_4/Conv2D
+current layer number: 3 layer name: conv2d_4/Conv2D
+Input node for the layer 3 is in graph: 2 Adding Transmitter to that graph
+Adding Sender_conv2d_3/LeakyRelu to graph 2 with target 2
+Adding Receiver_conv2d_3/LeakyRelu to graph 3 with target 1
+3 skipping layer: conv2d_4/BatchNorm
+current layer number: 3 layer name: conv2d_4/BatchNorm
+3 skipping layer: conv2d_4/LeakyRelu
+current layer number: 3 layer name: conv2d_4/LeakyRelu
+3 skipping layer: add_3_4
+current layer number: 3 layer name: add_3_4
+Input node for the layer 3 is in graph: 1and there is a sender node (mapped) for that node
+Adding Receiver_conv2d_2/LeakyRelu to graph 3 with target 1
+			4 layer: conv2d_5/Conv2D
+current layer number: 4 layer name: conv2d_5/Conv2D
+Input node for the layer 4 is in graph: 3 Adding Transmitter to that graph
+Adding Sender_add_3_4 to graph 3 with target 1
+Adding Receiver_add_3_4 to graph 4 with target 2
+			4 skipping layer: conv2d_5/BatchNorm
+current layer number: 4 layer name: conv2d_5/BatchNorm
+			4 skipping layer: conv2d_5/LeakyRelu
+current layer number: 4 layer name: conv2d_5/LeakyRelu
+new sub stream with tail node: 8 and tail graph: 4
+new sub stream with tail node: 8 and tail graph: 4
+5 layer: conv2d_6/Conv2D
+current layer number: 5 layer name: conv2d_6/Conv2D
+Input node for the layer 5 is in graph: 4 Adding Transmitter to that graph
+Adding Sender_conv2d_5/LeakyRelu to graph 4 with target 2
+Adding Receiver_conv2d_5/LeakyRelu to graph 5 with target 1
+5 skipping layer: conv2d_6/BatchNorm
+current layer number: 5 layer name: conv2d_6/BatchNorm
+5 skipping layer: conv2d_6/LeakyRelu
+current layer number: 5 layer name: conv2d_6/LeakyRelu
+			6 layer: conv2d_7/Conv2D
+current layer number: 6 layer name: conv2d_7/Conv2D
+Input node for the layer 6 is in graph: 5 Adding Transmitter to that graph
+Adding Sender_conv2d_6/LeakyRelu to graph 5 with target 1
+Adding Receiver_conv2d_6/LeakyRelu to graph 6 with target 2
+			6 skipping layer: conv2d_7/BatchNorm
+current layer number: 6 layer name: conv2d_7/BatchNorm
+			6 skipping layer: conv2d_7/LeakyRelu
+current layer number: 6 layer name: conv2d_7/LeakyRelu
+			6 skipping layer: add_6_7
+current layer number: 6 layer name: add_6_7
+Input node for the layer 6 is in graph: 4and there is a sender node (mapped) for that node
+Adding Receiver_conv2d_5/LeakyRelu to graph 6 with target 2
+new sub stream with tail node: 10 and tail graph: 6
+new sub stream with tail node: 10 and tail graph: 6
+7 layer: conv2d_8/Conv2D
+current layer number: 7 layer name: conv2d_8/Conv2D
+Input node for the layer 7 is in graph: 6 Adding Transmitter to that graph
+Adding Sender_add_6_7 to graph 6 with target 2
+Adding Receiver_add_6_7 to graph 7 with target 1
+7 skipping layer: conv2d_8/BatchNorm
+current layer number: 7 layer name: conv2d_8/BatchNorm
+7 skipping layer: conv2d_8/LeakyRelu
+current layer number: 7 layer name: conv2d_8/LeakyRelu
+			8 layer: conv2d_9/Conv2D
+current layer number: 8 layer name: conv2d_9/Conv2D
+Input node for the layer 8 is in graph: 7 Adding Transmitter to that graph
+Adding Sender_conv2d_8/LeakyRelu to graph 7 with target 1
+Adding Receiver_conv2d_8/LeakyRelu to graph 8 with target 2
+			8 skipping layer: conv2d_9/BatchNorm
+current layer number: 8 layer name: conv2d_9/BatchNorm
+			8 skipping layer: conv2d_9/LeakyRelu
+current layer number: 8 layer name: conv2d_9/LeakyRelu
+			8 skipping layer: add_8_9
+current layer number: 8 layer name: add_8_9
+Input node for the layer 8 is in graph: 6and there is a sender node (mapped) for that node
+Adding Receiver_add_6_7 to graph 8 with target 2
+9 layer: conv2d_10/Conv2D
+current layer number: 9 layer name: conv2d_10/Conv2D
+Input node for the layer 9 is in graph: 8 Adding Transmitter to that graph
+Adding Sender_add_8_9 to graph 8 with target 2
+Adding Receiver_add_8_9 to graph 9 with target 1
+9 skipping layer: conv2d_10/BatchNorm
+current layer number: 9 layer name: conv2d_10/BatchNorm
+9 skipping layer: conv2d_10/LeakyRelu
+current layer number: 9 layer name: conv2d_10/LeakyRelu
+new sub stream with tail node: 8 and tail graph: 9
+new sub stream with tail node: 8 and tail graph: 9
+			10 layer: conv2d_11/Conv2D
+current layer number: 10 layer name: conv2d_11/Conv2D
+Input node for the layer 10 is in graph: 9 Adding Transmitter to that graph
+Adding Sender_conv2d_10/LeakyRelu to graph 9 with target 1
+Adding Receiver_conv2d_10/LeakyRelu to graph 10 with target 2
+			10 skipping layer: conv2d_11/BatchNorm
+current layer number: 10 layer name: conv2d_11/BatchNorm
+			10 skipping layer: conv2d_11/LeakyRelu
+current layer number: 10 layer name: conv2d_11/LeakyRelu
+11 layer: conv2d_12/Conv2D
+current layer number: 11 layer name: conv2d_12/Conv2D
+Input node for the layer 11 is in graph: 10 Adding Transmitter to that graph
+Adding Sender_conv2d_11/LeakyRelu to graph 10 with target 2
+Adding Receiver_conv2d_11/LeakyRelu to graph 11 with target 1
+11 skipping layer: conv2d_12/BatchNorm
+current layer number: 11 layer name: conv2d_12/BatchNorm
+11 skipping layer: conv2d_12/LeakyRelu
+current layer number: 11 layer name: conv2d_12/LeakyRelu
+11 skipping layer: add_11_12
+current layer number: 11 layer name: add_11_12
+Input node for the layer 11 is in graph: 9and there is a sender node (mapped) for that node
+Adding Receiver_conv2d_10/LeakyRelu to graph 11 with target 1
+new sub stream with tail node: 10 and tail graph: 11
+new sub stream with tail node: 10 and tail graph: 11
+			12 layer: conv2d_13/Conv2D
+current layer number: 12 layer name: conv2d_13/Conv2D
+Input node for the layer 12 is in graph: 11 Adding Transmitter to that graph
+Adding Sender_add_11_12 to graph 11 with target 1
+Adding Receiver_add_11_12 to graph 12 with target 2
+			12 skipping layer: conv2d_13/BatchNorm
+current layer number: 12 layer name: conv2d_13/BatchNorm
+			12 skipping layer: conv2d_13/LeakyRelu
+current layer number: 12 layer name: conv2d_13/LeakyRelu
+13 layer: conv2d_14/Conv2D
+current layer number: 13 layer name: conv2d_14/Conv2D
+Input node for the layer 13 is in graph: 12 Adding Transmitter to that graph
+Adding Sender_conv2d_13/LeakyRelu to graph 12 with target 2
+Adding Receiver_conv2d_13/LeakyRelu to graph 13 with target 1
+13 skipping layer: conv2d_14/BatchNorm
+current layer number: 13 layer name: conv2d_14/BatchNorm
+13 skipping layer: conv2d_14/LeakyRelu
+current layer number: 13 layer name: conv2d_14/LeakyRelu
+13 skipping layer: add_13_14
+current layer number: 13 layer name: add_13_14
+Input node for the layer 13 is in graph: 11and there is a sender node (mapped) for that node
+Adding Receiver_add_11_12 to graph 13 with target 1
+new sub stream with tail node: 10 and tail graph: 13
+new sub stream with tail node: 10 and tail graph: 13
+			14 layer: conv2d_15/Conv2D
+current layer number: 14 layer name: conv2d_15/Conv2D
+Input node for the layer 14 is in graph: 13 Adding Transmitter to that graph
+Adding Sender_add_13_14 to graph 13 with target 1
+Adding Receiver_add_13_14 to graph 14 with target 2
+			14 skipping layer: conv2d_15/BatchNorm
+current layer number: 14 layer name: conv2d_15/BatchNorm
+			14 skipping layer: conv2d_15/LeakyRelu
+current layer number: 14 layer name: conv2d_15/LeakyRelu
+15 layer: conv2d_16/Conv2D
+current layer number: 15 layer name: conv2d_16/Conv2D
+Input node for the layer 15 is in graph: 14 Adding Transmitter to that graph
+Adding Sender_conv2d_15/LeakyRelu to graph 14 with target 2
+Adding Receiver_conv2d_15/LeakyRelu to graph 15 with target 1
+15 skipping layer: conv2d_16/BatchNorm
+current layer number: 15 layer name: conv2d_16/BatchNorm
+15 skipping layer: conv2d_16/LeakyRelu
+current layer number: 15 layer name: conv2d_16/LeakyRelu
+15 skipping layer: add_15_16
+current layer number: 15 layer name: add_15_16
+Input node for the layer 15 is in graph: 13and there is a sender node (mapped) for that node
+Adding Receiver_add_13_14 to graph 15 with target 1
+new sub stream with tail node: 10 and tail graph: 15
+new sub stream with tail node: 10 and tail graph: 15
+			16 layer: conv2d_17/Conv2D
+current layer number: 16 layer name: conv2d_17/Conv2D
+Input node for the layer 16 is in graph: 15 Adding Transmitter to that graph
+Adding Sender_add_15_16 to graph 15 with target 1
+Adding Receiver_add_15_16 to graph 16 with target 2
+			16 skipping layer: conv2d_17/BatchNorm
+current layer number: 16 layer name: conv2d_17/BatchNorm
+			16 skipping layer: conv2d_17/LeakyRelu
+current layer number: 16 layer name: conv2d_17/LeakyRelu
+17 layer: conv2d_18/Conv2D
+current layer number: 17 layer name: conv2d_18/Conv2D
+Input node for the layer 17 is in graph: 16 Adding Transmitter to that graph
+Adding Sender_conv2d_17/LeakyRelu to graph 16 with target 2
+Adding Receiver_conv2d_17/LeakyRelu to graph 17 with target 1
+17 skipping layer: conv2d_18/BatchNorm
+current layer number: 17 layer name: conv2d_18/BatchNorm
+17 skipping layer: conv2d_18/LeakyRelu
+current layer number: 17 layer name: conv2d_18/LeakyRelu
+17 skipping layer: add_17_18
+current layer number: 17 layer name: add_17_18
+Input node for the layer 17 is in graph: 15and there is a sender node (mapped) for that node
+Adding Receiver_add_15_16 to graph 17 with target 1
+new sub stream with tail node: 10 and tail graph: 17
+new sub stream with tail node: 10 and tail graph: 17
+			18 layer: conv2d_19/Conv2D
+current layer number: 18 layer name: conv2d_19/Conv2D
+Input node for the layer 18 is in graph: 17 Adding Transmitter to that graph
+Adding Sender_add_17_18 to graph 17 with target 1
+Adding Receiver_add_17_18 to graph 18 with target 2
+			18 skipping layer: conv2d_19/BatchNorm
+current layer number: 18 layer name: conv2d_19/BatchNorm
+			18 skipping layer: conv2d_19/LeakyRelu
+current layer number: 18 layer name: conv2d_19/LeakyRelu
+19 layer: conv2d_20/Conv2D
+current layer number: 19 layer name: conv2d_20/Conv2D
+Input node for the layer 19 is in graph: 18 Adding Transmitter to that graph
+Adding Sender_conv2d_19/LeakyRelu to graph 18 with target 2
+Adding Receiver_conv2d_19/LeakyRelu to graph 19 with target 1
+19 skipping layer: conv2d_20/BatchNorm
+current layer number: 19 layer name: conv2d_20/BatchNorm
+19 skipping layer: conv2d_20/LeakyRelu
+current layer number: 19 layer name: conv2d_20/LeakyRelu
+19 skipping layer: add_19_20
+current layer number: 19 layer name: add_19_20
+Input node for the layer 19 is in graph: 17and there is a sender node (mapped) for that node
+Adding Receiver_add_17_18 to graph 19 with target 1
+new sub stream with tail node: 10 and tail graph: 19
+new sub stream with tail node: 10 and tail graph: 19
+			20 layer: conv2d_21/Conv2D
+current layer number: 20 layer name: conv2d_21/Conv2D
+Input node for the layer 20 is in graph: 19 Adding Transmitter to that graph
+Adding Sender_add_19_20 to graph 19 with target 1
+Adding Receiver_add_19_20 to graph 20 with target 2
+			20 skipping layer: conv2d_21/BatchNorm
+current layer number: 20 layer name: conv2d_21/BatchNorm
+			20 skipping layer: conv2d_21/LeakyRelu
+current layer number: 20 layer name: conv2d_21/LeakyRelu
+21 layer: conv2d_22/Conv2D
+current layer number: 21 layer name: conv2d_22/Conv2D
+Input node for the layer 21 is in graph: 20 Adding Transmitter to that graph
+Adding Sender_conv2d_21/LeakyRelu to graph 20 with target 2
+Adding Receiver_conv2d_21/LeakyRelu to graph 21 with target 1
+21 skipping layer: conv2d_22/BatchNorm
+current layer number: 21 layer name: conv2d_22/BatchNorm
+21 skipping layer: conv2d_22/LeakyRelu
+current layer number: 21 layer name: conv2d_22/LeakyRelu
+21 skipping layer: add_21_22
+current layer number: 21 layer name: add_21_22
+Input node for the layer 21 is in graph: 19and there is a sender node (mapped) for that node
+Adding Receiver_add_19_20 to graph 21 with target 1
+new sub stream with tail node: 10 and tail graph: 21
+new sub stream with tail node: 10 and tail graph: 21
+			22 layer: conv2d_23/Conv2D
+current layer number: 22 layer name: conv2d_23/Conv2D
+Input node for the layer 22 is in graph: 21 Adding Transmitter to that graph
+Adding Sender_add_21_22 to graph 21 with target 1
+Adding Receiver_add_21_22 to graph 22 with target 2
+			22 skipping layer: conv2d_23/BatchNorm
+current layer number: 22 layer name: conv2d_23/BatchNorm
+			22 skipping layer: conv2d_23/LeakyRelu
+current layer number: 22 layer name: conv2d_23/LeakyRelu
+23 layer: conv2d_24/Conv2D
+current layer number: 23 layer name: conv2d_24/Conv2D
+Input node for the layer 23 is in graph: 22 Adding Transmitter to that graph
+Adding Sender_conv2d_23/LeakyRelu to graph 22 with target 2
+Adding Receiver_conv2d_23/LeakyRelu to graph 23 with target 1
+23 skipping layer: conv2d_24/BatchNorm
+current layer number: 23 layer name: conv2d_24/BatchNorm
+23 skipping layer: conv2d_24/LeakyRelu
+current layer number: 23 layer name: conv2d_24/LeakyRelu
+23 skipping layer: add_23_24
+current layer number: 23 layer name: add_23_24
+Input node for the layer 23 is in graph: 21and there is a sender node (mapped) for that node
+Adding Receiver_add_21_22 to graph 23 with target 1
+new sub stream with tail node: 10 and tail graph: 23
+new sub stream with tail node: 10 and tail graph: 23
+			24 layer: conv2d_25/Conv2D
+current layer number: 24 layer name: conv2d_25/Conv2D
+Input node for the layer 24 is in graph: 23 Adding Transmitter to that graph
+Adding Sender_add_23_24 to graph 23 with target 1
+Adding Receiver_add_23_24 to graph 24 with target 2
+			24 skipping layer: conv2d_25/BatchNorm
+current layer number: 24 layer name: conv2d_25/BatchNorm
+			24 skipping layer: conv2d_25/LeakyRelu
+current layer number: 24 layer name: conv2d_25/LeakyRelu
+25 layer: conv2d_26/Conv2D
+current layer number: 25 layer name: conv2d_26/Conv2D
+Input node for the layer 25 is in graph: 24 Adding Transmitter to that graph
+Adding Sender_conv2d_25/LeakyRelu to graph 24 with target 2
+Adding Receiver_conv2d_25/LeakyRelu to graph 25 with target 1
+25 skipping layer: conv2d_26/BatchNorm
+current layer number: 25 layer name: conv2d_26/BatchNorm
+25 skipping layer: conv2d_26/LeakyRelu
+current layer number: 25 layer name: conv2d_26/LeakyRelu
+25 skipping layer: add_25_26
+current layer number: 25 layer name: add_25_26
+Input node for the layer 25 is in graph: 23and there is a sender node (mapped) for that node
+Adding Receiver_add_23_24 to graph 25 with target 1
+new sub stream with tail node: 10 and tail graph: 25
+			26 layer: conv2d_27/Conv2D
+current layer number: 26 layer name: conv2d_27/Conv2D
+Input node for the layer 26 is in graph: 25 Adding Transmitter to that graph
+Adding Sender_add_25_26 to graph 25 with target 1
+Adding Receiver_add_25_26 to graph 26 with target 2
+			26 skipping layer: conv2d_27/BatchNorm
+current layer number: 26 layer name: conv2d_27/BatchNorm
+			26 skipping layer: conv2d_27/LeakyRelu
+current layer number: 26 layer name: conv2d_27/LeakyRelu
+new sub stream with tail node: 8 and tail graph: 26
+new sub stream with tail node: 8 and tail graph: 26
+27 layer: conv2d_28/Conv2D
+current layer number: 27 layer name: conv2d_28/Conv2D
+Input node for the layer 27 is in graph: 26 Adding Transmitter to that graph
+Adding Sender_conv2d_27/LeakyRelu to graph 26 with target 2
+Adding Receiver_conv2d_27/LeakyRelu to graph 27 with target 1
+27 skipping layer: conv2d_28/BatchNorm
+current layer number: 27 layer name: conv2d_28/BatchNorm
+27 skipping layer: conv2d_28/LeakyRelu
+current layer number: 27 layer name: conv2d_28/LeakyRelu
+			28 layer: conv2d_29/Conv2D
+current layer number: 28 layer name: conv2d_29/Conv2D
+Input node for the layer 28 is in graph: 27 Adding Transmitter to that graph
+Adding Sender_conv2d_28/LeakyRelu to graph 27 with target 1
+Adding Receiver_conv2d_28/LeakyRelu to graph 28 with target 2
+			28 skipping layer: conv2d_29/BatchNorm
+current layer number: 28 layer name: conv2d_29/BatchNorm
+			28 skipping layer: conv2d_29/LeakyRelu
+current layer number: 28 layer name: conv2d_29/LeakyRelu
+			28 skipping layer: add_28_29
+current layer number: 28 layer name: add_28_29
+Input node for the layer 28 is in graph: 26and there is a sender node (mapped) for that node
+Adding Receiver_conv2d_27/LeakyRelu to graph 28 with target 2
+new sub stream with tail node: 10 and tail graph: 28
+new sub stream with tail node: 10 and tail graph: 28
+29 layer: conv2d_30/Conv2D
+current layer number: 29 layer name: conv2d_30/Conv2D
+Input node for the layer 29 is in graph: 28 Adding Transmitter to that graph
+Adding Sender_add_28_29 to graph 28 with target 2
+Adding Receiver_add_28_29 to graph 29 with target 1
+29 skipping layer: conv2d_30/BatchNorm
+current layer number: 29 layer name: conv2d_30/BatchNorm
+29 skipping layer: conv2d_30/LeakyRelu
+current layer number: 29 layer name: conv2d_30/LeakyRelu
+			30 layer: conv2d_31/Conv2D
+current layer number: 30 layer name: conv2d_31/Conv2D
+Input node for the layer 30 is in graph: 29 Adding Transmitter to that graph
+Adding Sender_conv2d_30/LeakyRelu to graph 29 with target 1
+Adding Receiver_conv2d_30/LeakyRelu to graph 30 with target 2
+			30 skipping layer: conv2d_31/BatchNorm
+current layer number: 30 layer name: conv2d_31/BatchNorm
+			30 skipping layer: conv2d_31/LeakyRelu
+current layer number: 30 layer name: conv2d_31/LeakyRelu
+			30 skipping layer: add_30_31
+current layer number: 30 layer name: add_30_31
+Input node for the layer 30 is in graph: 28and there is a sender node (mapped) for that node
+Adding Receiver_add_28_29 to graph 30 with target 2
+new sub stream with tail node: 10 and tail graph: 30
+new sub stream with tail node: 10 and tail graph: 30
+31 layer: conv2d_32/Conv2D
+current layer number: 31 layer name: conv2d_32/Conv2D
+Input node for the layer 31 is in graph: 30 Adding Transmitter to that graph
+Adding Sender_add_30_31 to graph 30 with target 2
+Adding Receiver_add_30_31 to graph 31 with target 1
+31 skipping layer: conv2d_32/BatchNorm
+current layer number: 31 layer name: conv2d_32/BatchNorm
+31 skipping layer: conv2d_32/LeakyRelu
+current layer number: 31 layer name: conv2d_32/LeakyRelu
+			32 layer: conv2d_33/Conv2D
+current layer number: 32 layer name: conv2d_33/Conv2D
+Input node for the layer 32 is in graph: 31 Adding Transmitter to that graph
+Adding Sender_conv2d_32/LeakyRelu to graph 31 with target 1
+Adding Receiver_conv2d_32/LeakyRelu to graph 32 with target 2
+			32 skipping layer: conv2d_33/BatchNorm
+current layer number: 32 layer name: conv2d_33/BatchNorm
+			32 skipping layer: conv2d_33/LeakyRelu
+current layer number: 32 layer name: conv2d_33/LeakyRelu
+			32 skipping layer: add_32_33
+current layer number: 32 layer name: add_32_33
+Input node for the layer 32 is in graph: 30and there is a sender node (mapped) for that node
+Adding Receiver_add_30_31 to graph 32 with target 2
+new sub stream with tail node: 10 and tail graph: 32
+new sub stream with tail node: 10 and tail graph: 32
+33 layer: conv2d_34/Conv2D
+current layer number: 33 layer name: conv2d_34/Conv2D
+Input node for the layer 33 is in graph: 32 Adding Transmitter to that graph
+Adding Sender_add_32_33 to graph 32 with target 2
+Adding Receiver_add_32_33 to graph 33 with target 1
+33 skipping layer: conv2d_34/BatchNorm
+current layer number: 33 layer name: conv2d_34/BatchNorm
+33 skipping layer: conv2d_34/LeakyRelu
+current layer number: 33 layer name: conv2d_34/LeakyRelu
+			34 layer: conv2d_35/Conv2D
+current layer number: 34 layer name: conv2d_35/Conv2D
+Input node for the layer 34 is in graph: 33 Adding Transmitter to that graph
+Adding Sender_conv2d_34/LeakyRelu to graph 33 with target 1
+Adding Receiver_conv2d_34/LeakyRelu to graph 34 with target 2
+			34 skipping layer: conv2d_35/BatchNorm
+current layer number: 34 layer name: conv2d_35/BatchNorm
+			34 skipping layer: conv2d_35/LeakyRelu
+current layer number: 34 layer name: conv2d_35/LeakyRelu
+			34 skipping layer: add_34_35
+current layer number: 34 layer name: add_34_35
+Input node for the layer 34 is in graph: 32and there is a sender node (mapped) for that node
+Adding Receiver_add_32_33 to graph 34 with target 2
+new sub stream with tail node: 10 and tail graph: 34
+new sub stream with tail node: 10 and tail graph: 34
+35 layer: conv2d_36/Conv2D
+current layer number: 35 layer name: conv2d_36/Conv2D
+Input node for the layer 35 is in graph: 34 Adding Transmitter to that graph
+Adding Sender_add_34_35 to graph 34 with target 2
+Adding Receiver_add_34_35 to graph 35 with target 1
+35 skipping layer: conv2d_36/BatchNorm
+current layer number: 35 layer name: conv2d_36/BatchNorm
+35 skipping layer: conv2d_36/LeakyRelu
+current layer number: 35 layer name: conv2d_36/LeakyRelu
+			36 layer: conv2d_37/Conv2D
+current layer number: 36 layer name: conv2d_37/Conv2D
+Input node for the layer 36 is in graph: 35 Adding Transmitter to that graph
+Adding Sender_conv2d_36/LeakyRelu to graph 35 with target 1
+Adding Receiver_conv2d_36/LeakyRelu to graph 36 with target 2
+			36 skipping layer: conv2d_37/BatchNorm
+current layer number: 36 layer name: conv2d_37/BatchNorm
+			36 skipping layer: conv2d_37/LeakyRelu
+current layer number: 36 layer name: conv2d_37/LeakyRelu
+			36 skipping layer: add_36_37
+current layer number: 36 layer name: add_36_37
+Input node for the layer 36 is in graph: 34and there is a sender node (mapped) for that node
+Adding Receiver_add_34_35 to graph 36 with target 2
+new sub stream with tail node: 10 and tail graph: 36
+new sub stream with tail node: 10 and tail graph: 36
+37 layer: conv2d_38/Conv2D
+current layer number: 37 layer name: conv2d_38/Conv2D
+Input node for the layer 37 is in graph: 36 Adding Transmitter to that graph
+Adding Sender_add_36_37 to graph 36 with target 2
+Adding Receiver_add_36_37 to graph 37 with target 1
+37 skipping layer: conv2d_38/BatchNorm
+current layer number: 37 layer name: conv2d_38/BatchNorm
+37 skipping layer: conv2d_38/LeakyRelu
+current layer number: 37 layer name: conv2d_38/LeakyRelu
+			38 layer: conv2d_39/Conv2D
+current layer number: 38 layer name: conv2d_39/Conv2D
+Input node for the layer 38 is in graph: 37 Adding Transmitter to that graph
+Adding Sender_conv2d_38/LeakyRelu to graph 37 with target 1
+Adding Receiver_conv2d_38/LeakyRelu to graph 38 with target 2
+			38 skipping layer: conv2d_39/BatchNorm
+current layer number: 38 layer name: conv2d_39/BatchNorm
+			38 skipping layer: conv2d_39/LeakyRelu
+current layer number: 38 layer name: conv2d_39/LeakyRelu
+			38 skipping layer: add_38_39
+current layer number: 38 layer name: add_38_39
+Input node for the layer 38 is in graph: 36and there is a sender node (mapped) for that node
+Adding Receiver_add_36_37 to graph 38 with target 2
+new sub stream with tail node: 10 and tail graph: 38
+new sub stream with tail node: 10 and tail graph: 38
+39 layer: conv2d_40/Conv2D
+current layer number: 39 layer name: conv2d_40/Conv2D
+Input node for the layer 39 is in graph: 38 Adding Transmitter to that graph
+Adding Sender_add_38_39 to graph 38 with target 2
+Adding Receiver_add_38_39 to graph 39 with target 1
+39 skipping layer: conv2d_40/BatchNorm
+current layer number: 39 layer name: conv2d_40/BatchNorm
+39 skipping layer: conv2d_40/LeakyRelu
+current layer number: 39 layer name: conv2d_40/LeakyRelu
+			40 layer: conv2d_41/Conv2D
+current layer number: 40 layer name: conv2d_41/Conv2D
+Input node for the layer 40 is in graph: 39 Adding Transmitter to that graph
+Adding Sender_conv2d_40/LeakyRelu to graph 39 with target 1
+Adding Receiver_conv2d_40/LeakyRelu to graph 40 with target 2
+			40 skipping layer: conv2d_41/BatchNorm
+current layer number: 40 layer name: conv2d_41/BatchNorm
+			40 skipping layer: conv2d_41/LeakyRelu
+current layer number: 40 layer name: conv2d_41/LeakyRelu
+			40 skipping layer: add_40_41
+current layer number: 40 layer name: add_40_41
+Input node for the layer 40 is in graph: 38and there is a sender node (mapped) for that node
+Adding Receiver_add_38_39 to graph 40 with target 2
+new sub stream with tail node: 10 and tail graph: 40
+new sub stream with tail node: 10 and tail graph: 40
+41 layer: conv2d_42/Conv2D
+current layer number: 41 layer name: conv2d_42/Conv2D
+Input node for the layer 41 is in graph: 40 Adding Transmitter to that graph
+Adding Sender_add_40_41 to graph 40 with target 2
+Adding Receiver_add_40_41 to graph 41 with target 1
+41 skipping layer: conv2d_42/BatchNorm
+current layer number: 41 layer name: conv2d_42/BatchNorm
+41 skipping layer: conv2d_42/LeakyRelu
+current layer number: 41 layer name: conv2d_42/LeakyRelu
+			42 layer: conv2d_43/Conv2D
+current layer number: 42 layer name: conv2d_43/Conv2D
+Input node for the layer 42 is in graph: 41 Adding Transmitter to that graph
+Adding Sender_conv2d_42/LeakyRelu to graph 41 with target 1
+Adding Receiver_conv2d_42/LeakyRelu to graph 42 with target 2
+			42 skipping layer: conv2d_43/BatchNorm
+current layer number: 42 layer name: conv2d_43/BatchNorm
+			42 skipping layer: conv2d_43/LeakyRelu
+current layer number: 42 layer name: conv2d_43/LeakyRelu
+			42 skipping layer: add_42_43
+current layer number: 42 layer name: add_42_43
+Input node for the layer 42 is in graph: 40and there is a sender node (mapped) for that node
+Adding Receiver_add_40_41 to graph 42 with target 2
+new sub stream with tail node: 10 and tail graph: 42
+43 layer: conv2d_44/Conv2D
+current layer number: 43 layer name: conv2d_44/Conv2D
+Input node for the layer 43 is in graph: 42 Adding Transmitter to that graph
+Adding Sender_add_42_43 to graph 42 with target 2
+Adding Receiver_add_42_43 to graph 43 with target 1
+43 skipping layer: conv2d_44/BatchNorm
+current layer number: 43 layer name: conv2d_44/BatchNorm
+43 skipping layer: conv2d_44/LeakyRelu
+current layer number: 43 layer name: conv2d_44/LeakyRelu
+new sub stream with tail node: 8 and tail graph: 43
+new sub stream with tail node: 8 and tail graph: 43
+			44 layer: conv2d_45/Conv2D
+current layer number: 44 layer name: conv2d_45/Conv2D
+Input node for the layer 44 is in graph: 43 Adding Transmitter to that graph
+Adding Sender_conv2d_44/LeakyRelu to graph 43 with target 1
+Adding Receiver_conv2d_44/LeakyRelu to graph 44 with target 2
+			44 skipping layer: conv2d_45/BatchNorm
+current layer number: 44 layer name: conv2d_45/BatchNorm
+			44 skipping layer: conv2d_45/LeakyRelu
+current layer number: 44 layer name: conv2d_45/LeakyRelu
+45 layer: conv2d_46/Conv2D
+current layer number: 45 layer name: conv2d_46/Conv2D
+Input node for the layer 45 is in graph: 44 Adding Transmitter to that graph
+Adding Sender_conv2d_45/LeakyRelu to graph 44 with target 2
+Adding Receiver_conv2d_45/LeakyRelu to graph 45 with target 1
+45 skipping layer: conv2d_46/BatchNorm
+current layer number: 45 layer name: conv2d_46/BatchNorm
+45 skipping layer: conv2d_46/LeakyRelu
+current layer number: 45 layer name: conv2d_46/LeakyRelu
+45 skipping layer: add_45_46
+current layer number: 45 layer name: add_45_46
+Input node for the layer 45 is in graph: 43and there is a sender node (mapped) for that node
+Adding Receiver_conv2d_44/LeakyRelu to graph 45 with target 1
+new sub stream with tail node: 10 and tail graph: 45
+new sub stream with tail node: 10 and tail graph: 45
+			46 layer: conv2d_47/Conv2D
+current layer number: 46 layer name: conv2d_47/Conv2D
+Input node for the layer 46 is in graph: 45 Adding Transmitter to that graph
+Adding Sender_add_45_46 to graph 45 with target 1
+Adding Receiver_add_45_46 to graph 46 with target 2
+			46 skipping layer: conv2d_47/BatchNorm
+current layer number: 46 layer name: conv2d_47/BatchNorm
+			46 skipping layer: conv2d_47/LeakyRelu
+current layer number: 46 layer name: conv2d_47/LeakyRelu
+47 layer: conv2d_48/Conv2D
+current layer number: 47 layer name: conv2d_48/Conv2D
+Input node for the layer 47 is in graph: 46 Adding Transmitter to that graph
+Adding Sender_conv2d_47/LeakyRelu to graph 46 with target 2
+Adding Receiver_conv2d_47/LeakyRelu to graph 47 with target 1
+47 skipping layer: conv2d_48/BatchNorm
+current layer number: 47 layer name: conv2d_48/BatchNorm
+47 skipping layer: conv2d_48/LeakyRelu
+current layer number: 47 layer name: conv2d_48/LeakyRelu
+47 skipping layer: add_47_48
+current layer number: 47 layer name: add_47_48
+Input node for the layer 47 is in graph: 45and there is a sender node (mapped) for that node
+Adding Receiver_add_45_46 to graph 47 with target 1
+new sub stream with tail node: 10 and tail graph: 47
+new sub stream with tail node: 10 and tail graph: 47
+			48 layer: conv2d_49/Conv2D
+current layer number: 48 layer name: conv2d_49/Conv2D
+Input node for the layer 48 is in graph: 47 Adding Transmitter to that graph
+Adding Sender_add_47_48 to graph 47 with target 1
+Adding Receiver_add_47_48 to graph 48 with target 2
+			48 skipping layer: conv2d_49/BatchNorm
+current layer number: 48 layer name: conv2d_49/BatchNorm
+			48 skipping layer: conv2d_49/LeakyRelu
+current layer number: 48 layer name: conv2d_49/LeakyRelu
+49 layer: conv2d_50/Conv2D
+current layer number: 49 layer name: conv2d_50/Conv2D
+Input node for the layer 49 is in graph: 48 Adding Transmitter to that graph
+Adding Sender_conv2d_49/LeakyRelu to graph 48 with target 2
+Adding Receiver_conv2d_49/LeakyRelu to graph 49 with target 1
+49 skipping layer: conv2d_50/BatchNorm
+current layer number: 49 layer name: conv2d_50/BatchNorm
+49 skipping layer: conv2d_50/LeakyRelu
+current layer number: 49 layer name: conv2d_50/LeakyRelu
+49 skipping layer: add_49_50
+current layer number: 49 layer name: add_49_50
+Input node for the layer 49 is in graph: 47and there is a sender node (mapped) for that node
+Adding Receiver_add_47_48 to graph 49 with target 1
+new sub stream with tail node: 10 and tail graph: 49
+new sub stream with tail node: 10 and tail graph: 49
+			50 layer: conv2d_51/Conv2D
+current layer number: 50 layer name: conv2d_51/Conv2D
+Input node for the layer 50 is in graph: 49 Adding Transmitter to that graph
+Adding Sender_add_49_50 to graph 49 with target 1
+Adding Receiver_add_49_50 to graph 50 with target 2
+			50 skipping layer: conv2d_51/BatchNorm
+current layer number: 50 layer name: conv2d_51/BatchNorm
+			50 skipping layer: conv2d_51/LeakyRelu
+current layer number: 50 layer name: conv2d_51/LeakyRelu
+51 layer: conv2d_52/Conv2D
+current layer number: 51 layer name: conv2d_52/Conv2D
+Input node for the layer 51 is in graph: 50 Adding Transmitter to that graph
+Adding Sender_conv2d_51/LeakyRelu to graph 50 with target 2
+Adding Receiver_conv2d_51/LeakyRelu to graph 51 with target 1
+51 skipping layer: conv2d_52/BatchNorm
+current layer number: 51 layer name: conv2d_52/BatchNorm
+51 skipping layer: conv2d_52/LeakyRelu
+current layer number: 51 layer name: conv2d_52/LeakyRelu
+51 skipping layer: add_51_52
+current layer number: 51 layer name: add_51_52
+Input node for the layer 51 is in graph: 49and there is a sender node (mapped) for that node
+Adding Receiver_add_49_50 to graph 51 with target 1
+			52 layer: conv2d_53
+current layer number: 52 layer name: conv2d_53
+Input node for the layer 52 is in graph: 51 Adding Transmitter to that graph
+Adding Sender_add_51_52 to graph 51 with target 1
+Adding Receiver_add_51_52 to graph 52 with target 2
+			52 skipping layer: conv2d_53/BatchNorm
+current layer number: 52 layer name: conv2d_53/BatchNorm
+			52 skipping layer: conv2d_53/LeakyRelu
+current layer number: 52 layer name: conv2d_53/LeakyRelu
+53 layer: conv2d_54
+current layer number: 53 layer name: conv2d_54
+Input node for the layer 53 is in graph: 52 Adding Transmitter to that graph
+Adding Sender_conv2d_53/LeakyRelu to graph 52 with target 2
+Adding Receiver_conv2d_53/LeakyRelu to graph 53 with target 1
+53 skipping layer: conv2d_54/BatchNorm
+current layer number: 53 layer name: conv2d_54/BatchNorm
+53 skipping layer: conv2d_54/LeakyRelu
+current layer number: 53 layer name: conv2d_54/LeakyRelu
+			54 layer: conv2d_55
+current layer number: 54 layer name: conv2d_55
+Input node for the layer 54 is in graph: 53 Adding Transmitter to that graph
+Adding Sender_conv2d_54/LeakyRelu to graph 53 with target 1
+Adding Receiver_conv2d_54/LeakyRelu to graph 54 with target 2
+			54 skipping layer: conv2d_55/BatchNorm
+current layer number: 54 layer name: conv2d_55/BatchNorm
+			54 skipping layer: conv2d_55/LeakyRelu
+current layer number: 54 layer name: conv2d_55/LeakyRelu
+55 layer: conv2d_56
+current layer number: 55 layer name: conv2d_56
+Input node for the layer 55 is in graph: 54 Adding Transmitter to that graph
+Adding Sender_conv2d_55/LeakyRelu to graph 54 with target 2
+Adding Receiver_conv2d_55/LeakyRelu to graph 55 with target 1
+55 skipping layer: conv2d_56/BatchNorm
+current layer number: 55 layer name: conv2d_56/BatchNorm
+55 skipping layer: conv2d_56/LeakyRelu
+current layer number: 55 layer name: conv2d_56/LeakyRelu
+			56 layer: conv2d_57
+current layer number: 56 layer name: conv2d_57
+Input node for the layer 56 is in graph: 55 Adding Transmitter to that graph
+Adding Sender_conv2d_56/LeakyRelu to graph 55 with target 1
+Adding Receiver_conv2d_56/LeakyRelu to graph 56 with target 2
+			56 skipping layer: conv2d_57/BatchNorm
+current layer number: 56 layer name: conv2d_57/BatchNorm
+			56 skipping layer: conv2d_57/LeakyRelu
+current layer number: 56 layer name: conv2d_57/LeakyRelu
+new sub stream with tail node: 8 and tail graph: 56
+57 layer: conv2d_58
+current layer number: 57 layer name: conv2d_58
+Input node for the layer 57 is in graph: 56 Adding Transmitter to that graph
+Adding Sender_conv2d_57/LeakyRelu to graph 56 with target 2
+Adding Receiver_conv2d_57/LeakyRelu to graph 57 with target 1
+57 skipping layer: conv2d_58/BatchNorm
+current layer number: 57 layer name: conv2d_58/BatchNorm
+57 skipping layer: conv2d_58/LeakyRelu
+current layer number: 57 layer name: conv2d_58/LeakyRelu
+			58 layer: conv2d_59
+current layer number: 58 layer name: conv2d_59
+Input node for the layer 58 is in graph: 57 Adding Transmitter to that graph
+Adding Sender_conv2d_58/LeakyRelu to graph 57 with target 1
+Adding Receiver_conv2d_58/LeakyRelu to graph 58 with target 2
+			58 skipping layer: conv2d_59/Linear
+current layer number: 58 layer name: conv2d_59/Linear
+			58 skipping layer: Yolo1
+current layer number: 58 layer name: Yolo1
+output accessor reading label file /data/local/ARM-CO-UP/assets//coco.names
+59 layer: 
+current layer number: 59 layer name: 
+Input node for the layer 59 is in graph: 58 Adding Transmitter to that graph
+Adding Sender_Yolo1 to graph 58 with target 2
+Adding Receiver_Yolo1 to graph 59 with target 1
+59 skipping layer: conv2d_60
+current layer number: 59 layer name: conv2d_60
+Input node for the layer 59 is in graph: 56and there is a sender node (mapped) for that node
+Adding Receiver_conv2d_57/LeakyRelu to graph 59 with target 1
+59 skipping layer: conv2d_59/BatchNorm
+current layer number: 59 layer name: conv2d_59/BatchNorm
+59 skipping layer: conv2d_60/LeakyRelu
+current layer number: 59 layer name: conv2d_60/LeakyRelu
+59 skipping layer: Upsample_60
+current layer number: 59 layer name: Upsample_60
+59 skipping layer: Route1
+current layer number: 59 layer name: Route1
+Input node for the layer 59 is in graph: 42and there is a sender node (mapped) for that node
+Adding Receiver_add_42_43 to graph 59 with target 1
+			60 layer: conv2d_61
+current layer number: 60 layer name: conv2d_61
+Input node for the layer 60 is in graph: 59 Adding Transmitter to that graph
+Adding Sender_Route1 to graph 59 with target 1
+Adding Receiver_Route1 to graph 60 with target 2
+			60 skipping layer: conv2d_60/BatchNorm
+current layer number: 60 layer name: conv2d_60/BatchNorm
+			60 skipping layer: conv2d_61/LeakyRelu
+current layer number: 60 layer name: conv2d_61/LeakyRelu
+61 layer: conv2d_62
+current layer number: 61 layer name: conv2d_62
+Input node for the layer 61 is in graph: 60 Adding Transmitter to that graph
+Adding Sender_conv2d_61/LeakyRelu to graph 60 with target 2
+Adding Receiver_conv2d_61/LeakyRelu to graph 61 with target 1
+61 skipping layer: conv2d_61/BatchNorm
+current layer number: 61 layer name: conv2d_61/BatchNorm
+61 skipping layer: conv2d_62/LeakyRelu
+current layer number: 61 layer name: conv2d_62/LeakyRelu
+			62 layer: conv2d_63
+current layer number: 62 layer name: conv2d_63
+Input node for the layer 62 is in graph: 61 Adding Transmitter to that graph
+Adding Sender_conv2d_62/LeakyRelu to graph 61 with target 1
+Adding Receiver_conv2d_62/LeakyRelu to graph 62 with target 2
+			62 skipping layer: conv2d_62/BatchNorm
+current layer number: 62 layer name: conv2d_62/BatchNorm
+			62 skipping layer: conv2d_63/LeakyRelu
+current layer number: 62 layer name: conv2d_63/LeakyRelu
+63 layer: conv2d_64
+current layer number: 63 layer name: conv2d_64
+Input node for the layer 63 is in graph: 62 Adding Transmitter to that graph
+Adding Sender_conv2d_63/LeakyRelu to graph 62 with target 2
+Adding Receiver_conv2d_63/LeakyRelu to graph 63 with target 1
+63 skipping layer: conv2d_63/BatchNorm
+current layer number: 63 layer name: conv2d_63/BatchNorm
+63 skipping layer: conv2d_64/LeakyRelu
+current layer number: 63 layer name: conv2d_64/LeakyRelu
+			64 layer: conv2d_65
+current layer number: 64 layer name: conv2d_65
+Input node for the layer 64 is in graph: 63 Adding Transmitter to that graph
+Adding Sender_conv2d_64/LeakyRelu to graph 63 with target 1
+Adding Receiver_conv2d_64/LeakyRelu to graph 64 with target 2
+			64 skipping layer: conv2d_65/BatchNorm
+current layer number: 64 layer name: conv2d_65/BatchNorm
+			64 skipping layer: conv2d_65/LeakyRelu
+current layer number: 64 layer name: conv2d_65/LeakyRelu
+65 layer: conv2d_66
+current layer number: 65 layer name: conv2d_66
+Input node for the layer 65 is in graph: 64 Adding Transmitter to that graph
+Adding Sender_conv2d_65/LeakyRelu to graph 64 with target 2
+Adding Receiver_conv2d_65/LeakyRelu to graph 65 with target 1
+65 skipping layer: conv2d_65/BatchNorm
+current layer number: 65 layer name: conv2d_65/BatchNorm
+65 skipping layer: conv2d_66/LeakyRelu
+current layer number: 65 layer name: conv2d_66/LeakyRelu
+			66 layer: conv2d_67
+current layer number: 66 layer name: conv2d_67
+Input node for the layer 66 is in graph: 65 Adding Transmitter to that graph
+Adding Sender_conv2d_66/LeakyRelu to graph 65 with target 1
+Adding Receiver_conv2d_66/LeakyRelu to graph 66 with target 2
+			66 skipping layer: conv2d_67/Linear
+current layer number: 66 layer name: conv2d_67/Linear
+			66 skipping layer: Yolo2
+current layer number: 66 layer name: Yolo2
+output accessor reading label file /data/local/ARM-CO-UP/assets//coco.names
+67 layer: 
+current layer number: 67 layer name: 
+Input node for the layer 67 is in graph: 66 Adding Transmitter to that graph
+Adding Sender_Yolo2 to graph 66 with target 2
+Adding Receiver_Yolo2 to graph 67 with target 1
+67 skipping layer: conv2d_68
+current layer number: 67 layer name: conv2d_68
+Input node for the layer 67 is in graph: 64and there is a sender node (mapped) for that node
+Adding Receiver_conv2d_65/LeakyRelu to graph 67 with target 1
+67 skipping layer: conv2d_66/BatchNorm
+current layer number: 67 layer name: conv2d_66/BatchNorm
+67 skipping layer: conv2d_68/LeakyRelu
+current layer number: 67 layer name: conv2d_68/LeakyRelu
+67 skipping layer: Upsample_68
+current layer number: 67 layer name: Upsample_68
+67 skipping layer: Route2
+current layer number: 67 layer name: Route2
+Input node for the layer 67 is in graph: 25and there is a sender node (mapped) for that node
+Adding Receiver_add_25_26 to graph 67 with target 1
+			68 layer: conv2d_69
+current layer number: 68 layer name: conv2d_69
+Input node for the layer 68 is in graph: 67 Adding Transmitter to that graph
+Adding Sender_Route2 to graph 67 with target 1
+Adding Receiver_Route2 to graph 68 with target 2
+			68 skipping layer: conv2d_67/BatchNorm
+current layer number: 68 layer name: conv2d_67/BatchNorm
+			68 skipping layer: conv2d_69/LeakyRelu
+current layer number: 68 layer name: conv2d_69/LeakyRelu
+69 layer: conv2d_70
+current layer number: 69 layer name: conv2d_70
+Input node for the layer 69 is in graph: 68 Adding Transmitter to that graph
+Adding Sender_conv2d_69/LeakyRelu to graph 68 with target 2
+Adding Receiver_conv2d_69/LeakyRelu to graph 69 with target 1
+69 skipping layer: conv2d_68/BatchNorm
+current layer number: 69 layer name: conv2d_68/BatchNorm
+69 skipping layer: conv2d_70/LeakyRelu
+current layer number: 69 layer name: conv2d_70/LeakyRelu
+			70 layer: conv2d_71
+current layer number: 70 layer name: conv2d_71
+Input node for the layer 70 is in graph: 69 Adding Transmitter to that graph
+Adding Sender_conv2d_70/LeakyRelu to graph 69 with target 1
+Adding Receiver_conv2d_70/LeakyRelu to graph 70 with target 2
+			70 skipping layer: conv2d_69/BatchNorm
+current layer number: 70 layer name: conv2d_69/BatchNorm
+			70 skipping layer: conv2d_71/LeakyRelu
+current layer number: 70 layer name: conv2d_71/LeakyRelu
+71 layer: conv2d_72
+current layer number: 71 layer name: conv2d_72
+Input node for the layer 71 is in graph: 70 Adding Transmitter to that graph
+Adding Sender_conv2d_71/LeakyRelu to graph 70 with target 2
+Adding Receiver_conv2d_71/LeakyRelu to graph 71 with target 1
+71 skipping layer: conv2d_70/BatchNorm
+current layer number: 71 layer name: conv2d_70/BatchNorm
+71 skipping layer: conv2d_72/LeakyRelu
+current layer number: 71 layer name: conv2d_72/LeakyRelu
+			72 layer: conv2d_73
+current layer number: 72 layer name: conv2d_73
+Input node for the layer 72 is in graph: 71 Adding Transmitter to that graph
+Adding Sender_conv2d_72/LeakyRelu to graph 71 with target 1
+Adding Receiver_conv2d_72/LeakyRelu to graph 72 with target 2
+			72 skipping layer: conv2d_71/BatchNorm
+current layer number: 72 layer name: conv2d_71/BatchNorm
+			72 skipping layer: conv2d_73/LeakyRelu
+current layer number: 72 layer name: conv2d_73/LeakyRelu
+73 layer: conv2d_74
+current layer number: 73 layer name: conv2d_74
+Input node for the layer 73 is in graph: 72 Adding Transmitter to that graph
+Adding Sender_conv2d_73/LeakyRelu to graph 72 with target 2
+Adding Receiver_conv2d_73/LeakyRelu to graph 73 with target 1
+73 skipping layer: conv2d_72/BatchNorm
+current layer number: 73 layer name: conv2d_72/BatchNorm
+73 skipping layer: conv2d_74/LeakyRelu
+current layer number: 73 layer name: conv2d_74/LeakyRelu
+			74 layer: conv2d_75
+current layer number: 74 layer name: conv2d_75
+Input node for the layer 74 is in graph: 73 Adding Transmitter to that graph
+Adding Sender_conv2d_74/LeakyRelu to graph 73 with target 1
+Adding Receiver_conv2d_74/LeakyRelu to graph 74 with target 2
+			74 skipping layer: conv2d_75/Linear
+current layer number: 74 layer name: conv2d_75/Linear
+			74 skipping layer: Yolo3
+current layer number: 74 layer name: Yolo3
+output accessor reading label file /data/local/ARM-CO-UP/assets//coco.names
+75 layer: 
+current layer number: 75 layer name: 
+
+
+*********************
+Start finalizing Graphs
+*******************
+
+Graph id: 3 Target is: Neon
+Graph id: Graph id: Graph id: Graph id: 0 Target is: 1 Target is: Neon
+Neon
+4 Target is: Neon
+5 Target is: Neon
+Graph id: 6 Target is: Neon
+Graph id: 7 Target is: Neon
+Graph id: 8 Target is: Neon
+Graph id: Graph id: 9 Target is: Neon
+10 Target is: Neon
+Graph id: Graph id: 12 Target is: Neon
+11 Target is: Neon
+Graph id: 13 Target is: Neon
+Graph id: Graph id: 16 Target is: Neon
+Graph id: 15 Target is: Neon
+14 Target is: Neon
+Graph id: 17 Target is: Neon
+Graph id: Graph id: 19 Target is: Neon
+18 Target is: Neon
+Graph id: Graph id: 20 Target is: Neon
+21 Target is: Neon
+Graph id: 22 Target is: Neon
+Graph id: Graph id: 23 Target is: Neon
+Graph id: 25 Target is: Neon
+24 Target is: Neon
+Graph id: 26 Target is: NeonGraph id: Graph (3) Task 0: conv2d_4/Conv2D
+Graph (1) Task 0: conv2d_2/Conv2D
+
+27 Target is: Graph (3) Task 1: conv2d_4/BatchNorm
+Graph (3) Task 2: conv2d_4/LeakyRelu
+Graph (3) Task 3: add_3_4
+Graph 3 input size: 0 receiver size: 2 tasks size: 4 senders size: 1 output size: 0
+
+Graph (1) Task Neon
+1: conv2d_2/BatchNorm
+Graph (1) Task 2: conv2d_2/LeakyRelu
+Graph id: Graph (0) Task 0: conv2d_1/Conv2D
+Graph (0) Task 1: conv2d_1/BatchNorm
+Graph (0) Task 2: conv2d_1/LeakyRelu
+Graph 0 input size: 1 receiver size: 0 tasks size: 3 senders size: 1 output size: 0
+
+Graph 1 input size: 0 receiver size: 1 tasks size: 3 senders size: 1 output size: 0
+
+28 Target is: Neon
+Graph (4) Task 0: conv2d_5/Conv2D
+Graph (4) Task 1: conv2d_5/BatchNorm
+Graph (4) Task 2: conv2d_5/LeakyRelu
+Graph 4 input size: 0 receiver size: 1 tasks size: 3 senders size: 1 output size: 0
+
+Graph id: Graph id: 29 Target is: Neon
+Graph id: 30 Target is: Neon
+31 Target is: Neon
+Graph (5) Task 0: conv2d_6/Conv2D
+Graph (5) Task 1: conv2d_6/BatchNorm
+Graph (5) Task 2: conv2d_6/LeakyRelu
+Graph 5 input size: 0 receiver size: 1 tasks size: 3 senders size: 1 output size: 0
+
+Graph id: 32 Target is: Neon
+Graph id: 33 Target is: Neon
+Graph id: 34 Target is: Neon
+Graph (7) Task 0: conv2d_8/Conv2D
+Graph (7) Task 1: conv2d_8/BatchNorm
+Graph (7) Task 2: conv2d_8/LeakyRelu
+Graph id: Graph 7 input size: 0 receiver size: 1 tasks size: 3 senders size: 1 output size: 0
+
+Graph (6) Task 0: conv2d_7/Conv2D
+Graph (6) Task 1: conv2d_7/BatchNorm
+Graph (6) Task 2: conv2d_7/LeakyRelu
+Graph (6) Task 3: add_6_7
+Graph 6 input size: 0 receiver size: 2 tasks size: 4 senders size: 1 output size: 0
+
+35 Target is: Neon
+Graph id: Graph id: 37 Target is: Neon
+Graph (9) Task 0: conv2d_10/Conv2D
+Graph (9) Task 1: conv2d_10/BatchNorm
+Graph (9) Task 2: conv2d_10/LeakyRelu
+Graph 9 input size: 0 receiver size: 1 tasks size: 3 senders size: 1 output size: 0
+
+Graph id: 36 Target is: Neon
+38 Target is: Neon
+Graph (8) Task 0: conv2d_9/Conv2D
+Graph (8) Task 1: conv2d_9/BatchNorm
+Graph (8) Task 2: conv2d_9/LeakyRelu
+Graph (8) Task 3: add_8_9
+Graph 8 input size: 0 receiver size: 2 tasks size: 4 senders size: 1 output size: 0
+
+Graph id: 39 Target is: Neon
+Graph (10) Task 0: conv2d_11/Conv2D
+Graph (10) Task 1: conv2d_11/BatchNorm
+Graph (10) Task 2: conv2d_11/LeakyRelu
+Graph 10 input size: 0 receiver size: 1 tasks size: 3 senders size: 1 output size: 0
+
+Graph id: Graph (12) Task 0: conv2d_13/Conv2D
+40 Target is: Neon
+Graph (12) Task 1: conv2d_13/BatchNorm
+Graph (12) Task 2: conv2d_13/LeakyRelu
+Graph 12 input size: 0 receiver size: 1 tasks size: 3 senders size: 1 output size: 0
+
+Graph id: 41 Target is: Neon
+Graph (11) Task 0: conv2d_12/Conv2D
+Graph (11) Task 1: conv2d_12/BatchNorm
+Graph (11) Task 2: conv2d_12/LeakyRelu
+Graph (11) Task 3: add_11_12
+Graph 11 input size: 0 receiver size: 2 tasks size: 4 senders size: 1 output size: 0
+
+Graph id: 42 Target is: Neon
+Graph id: 43 Target is: Neon
+Graph (13) Task 0: conv2d_14/Conv2D
+Graph (13) Task 1: conv2d_14/BatchNorm
+Graph (13) Task 2: conv2d_14/LeakyRelu
+Graph (13) Task 3: add_13_14
+Graph 13 input size: 0 receiver size: 2 tasks size: 4 senders size: 1 output size: 0
+
+Graph (16) Task 0: conv2d_17/Conv2D
+Graph (16) Task 1: conv2d_17/BatchNorm
+Graph (16) Task 2: conv2d_17/LeakyRelu
+Graph 16 input size: 0 receiver size: 1 tasks size: 3 senders size: 1 output size: 0
+
+Graph id: 44 Target is: Neon
+Graph id: 45 Target is: Neon
+Graph (14) Task 0: conv2d_15/Conv2D
+Graph (14) Task 1: conv2d_15/BatchNorm
+Graph (14) Task 2: conv2d_15/LeakyRelu
+Graph 14 input size: 0 receiver size: 1 tasks size: 3 senders size: 1 output size: 0
+
+Graph id: Graph (15) Task 0: conv2d_16/Conv2D
+Graph id: Graph (15) Task 1: conv2d_16/BatchNorm
+Graph (15) Task 2: conv2d_16/LeakyRelu
+Graph (15) Task 3: add_15_16
+Graph 15 input size: 0 receiver size: 2 tasks size: 4 senders size: 1 output size: 0
+
+46 Target is: Neon
+47 Target is: Neon
+Graph id: 48 Target is: Neon
+Graph id: 49 Target is: Neon
+Graph (19) Task 0: conv2d_20/Conv2D
+Graph (19) Task 1: conv2d_20/BatchNorm
+Graph (19) Task 2: conv2d_20/LeakyRelu
+Graph (19) Task 3: add_19_20
+Graph 19 input size: 0 receiver size: 2 tasks size: 4 senders size: 1 output size: 0
+
+Graph (17) Task 0: conv2d_18/Conv2D
+Graph (17) Task 1: conv2d_18/BatchNorm
+Graph (17) Task 2: conv2d_18/LeakyRelu
+Graph (17) Task 3: add_17_18
+Graph 17 input size: 0 receiver size: 2 tasks size: 4 senders size: 1 output size: 0
+
+Graph id: 50 Target is: Neon
+Graph id: 51 Target is: Neon
+Graph (20) Task 0: conv2d_21/Conv2D
+Graph id: Graph (20) Task 1: conv2d_21/BatchNorm
+Graph (20) Task 2: conv2d_21/LeakyRelu
+52 Target is: Graph 20 input size: 0 receiver size: 1 tasks size: 3 senders size: 1 output size: 0
+
+Neon
+Graph id: 53 Target is: Neon
+Graph id: 54 Target is: Neon
+Graph id: Graph (22) Task 0: conv2d_23/Conv2D
+55 Target is: Neon
+Graph (21) Task 0: conv2d_22/Conv2D
+Graph (22) Task 1: conv2d_23/BatchNorm
+Graph (22) Task 2: conv2d_23/LeakyRelu
+Graph 22 input size: 0 receiver size: 1 tasks size: 3 senders size: 1 output size: 0
+
+Graph (21) Task 1: conv2d_22/BatchNorm
+Graph (21) Task 2: conv2d_22/LeakyRelu
+Graph (21) Task 3: add_21_22
+Graph 21 input size: 0 receiver size: 2 tasks size: 4 senders size: 1 output size: 0
+
+Graph id: 56 Target is: Neon
+Graph id: 57 Target is: Neon
+Graph id: 58 Target is: Neon
+Graph (23) Task 0: conv2d_24/Conv2D
+Graph (23) Task 1: conv2d_24/BatchNorm
+Graph (23) Task 2: conv2d_24/LeakyRelu
+Graph (23) Task 3: add_23_24
+Graph 23 input size: 0 receiver size: 2 tasks size: 4 senders size: 1 output size: 0
+
+Graph id: 59 Target is: Neon
+Graph (24) Task 0: conv2d_25/Conv2D
+Graph (24) Task 1: conv2d_25/BatchNorm
+Graph (24) Task 2: conv2d_25/LeakyRelu
+Graph 24 input size: 0 receiver size: 1 tasks size: 3 senders size: 1 output size: 0
+
+Graph id: 60 Target is: Neon
+Graph (25) Task 0: conv2d_26/Conv2D
+Graph (25) Task 1: conv2d_26/BatchNorm
+Graph (25) Task 2: conv2d_26/LeakyRelu
+Graph (25) Task 3: add_25_26
+Graph 25 input size: 0 receiver size: 2 tasks size: 4 senders size: 1 output size: 0
+
+Graph (27) Task 0: conv2d_28/Conv2D
+Graph id: Graph (27) Task 1: conv2d_28/BatchNorm
+Graph (27) Task 2: conv2d_28/LeakyRelu
+Graph 27 input size: 0 receiver size: 1 tasks size: 3 senders size: 1 output size: 0
+
+61 Target is: Neon
+Graph id: 62 Target is: Neon
+Graph (26) Task 0: conv2d_27/Conv2D
+Graph (26) Task 1: conv2d_27/BatchNorm
+Graph (26) Task 2: conv2d_27/LeakyRelu
+Graph 26 input size: 0 receiver size: 1 tasks size: 3 senders size: 1 output size: 0
+
+Graph id: Graph (6446) Task 0: conv2d_47/Conv2D
+ Target is: NeonGraph (
+46) Task 1: conv2d_47/BatchNorm
+Graph (46) Task 2: conv2d_47/LeakyRelu
+Graph 46 input size: 0 receiver size: 1 tasks size: 3 senders size: 1 output size: 0
+
+Graph id: 63 Target is: Neon
+Graph id: 65 Target is: Neon
+Graph id: 66 Target is: Neon
+Graph id: 67 Target is: Neon
+Graph (29) Task 0: conv2d_30/Conv2D
+Graph id: Graph (29) Task 1: conv2d_30/BatchNorm
+Graph (29) Task 2: conv2d_30/LeakyRelu
+Graph 29 input size: 0 receiver size: 1 tasks size: 3 senders size: 1 output size: 0
+
+68 Target is: Neon
+Graph (28) Task 0: conv2d_29/Conv2D
+Graph (28) Task 1: conv2d_29/BatchNorm
+Graph (28) Task 2: conv2d_29/LeakyRelu
+Graph (28) Task 3: add_28_29
+Graph 28 input size: 0 receiver size: 2 tasks size: 4 senders size: 1 output size: 0
+
+Graph id: 69 Target is: Neon
+Graph id: 70 Target is: Neon
+Graph id: Graph (31) Task 0: conv2d_32/Conv2D
+Graph (31) Task 1: conv2d_32/BatchNorm
+71 Target is: Neon
+Graph (31) Task 2: conv2d_32/LeakyRelu
+Graph 31 input size: 0 receiver size: 1 tasks size: 3 senders size: 1 output size: 0
+
+Graph id: Graph (30) Task 0: conv2d_31/Conv2D
+Graph (30) Task 1: conv2d_31/BatchNorm
+Graph (30) Task 2: conv2d_31/LeakyRelu
+Graph (30) Task 3: add_30_31
+Graph 30 input size: 0 receiver size: 2 tasks size: 4 senders size: 1 output size: 0
+
+72 Target is: Neon
+Graph id: 73 Target is: Neon
+Graph id: Graph (33) Task 0: conv2d_34/Conv2D
+Graph (33) Task 1: conv2d_34/BatchNorm
+Graph (33) Task 2: conv2d_34/LeakyRelu
+Graph 33 input size: 0 receiver size: 1 tasks size: 3 senders size: 1 output size: 0
+
+74 Target is: Neon
+Graph (35) Task 0: conv2d_36/Conv2D
+Graph (35) Task 1: conv2d_36/BatchNorm
+Graph (35) Task 2: conv2d_36/LeakyRelu
+Graph 35 input size: 0 receiver size: 1 tasks size: 3 senders size: 1 output size: 0
+
+Graph (32) Task 0: conv2d_33/Conv2D
+Graph (32) Task 1: conv2d_33/BatchNorm
+Graph (32) Task 2: conv2d_33/LeakyRelu
+Graph (32) Task 3: add_32_33
+Graph 32 input size: 0 receiver size: 2 tasks size: 4 senders size: 1 output size: 0
+
+Graph (34) Task 0: conv2d_35/Conv2D
+Graph (34) Task 1: conv2d_35/BatchNorm
+Graph (34) Task 2: conv2d_35/LeakyRelu
+Graph (34) Task 3: add_34_35
+Graph 34 input size: 0 receiver size: 2 tasks size: 4 senders size: 1 output size: 0
+
+Graph (37) Task 0: conv2d_38/Conv2D
+Graph (37) Task 1: conv2d_38/BatchNorm
+Graph (37) Task 2: conv2d_38/LeakyRelu
+Graph 37 input size: 0 receiver size: 1 tasks size: 3 senders size: 1 output size: 0
+
+Graph (36) Task 0: conv2d_37/Conv2D
+Graph (36) Task 1: conv2d_37/BatchNorm
+Graph (36) Task 2: conv2d_37/LeakyRelu
+Graph (36) Task 3: add_36_37
+Graph 36 input size: 0 receiver size: 2 tasks size: 4 senders size: 1 output size: 0
+
+Graph (39) Task 0: conv2d_40/Conv2D
+Graph (39) Task 1: conv2d_40/BatchNorm
+Graph (39) Task 2: conv2d_40/LeakyRelu
+Graph 39 input size: 0 receiver size: 1 tasks size: 3 senders size: 1 output size: 0
+
+Graph (38) Task 0: conv2d_39/Conv2D
+Graph (38) Task 1: conv2d_39/BatchNorm
+Graph (38) Task 2: conv2d_39/LeakyRelu
+Graph (38) Task 3: add_38_39
+Graph 38 input size: 0 receiver size: 2 tasks size: 4 senders size: 1 output size: 0
+
+Graph (41) Task 0: conv2d_42/Conv2D
+Graph (41) Task 1: conv2d_42/BatchNorm
+Graph (41) Task 2: conv2d_42/LeakyRelu
+Graph 41 input size: 0 receiver size: 1 tasks size: 3 senders size: 1 output size: 0
+
+Graph (40) Task 0: conv2d_41/Conv2D
+Graph (40) Task 1: conv2d_41/BatchNorm
+Graph (40) Task 2: conv2d_41/LeakyRelu
+Graph (40) Task 3: add_40_41
+Graph 40 input size: 0 receiver size: 2 tasks size: 4 senders size: 1 output size: 0
+
+Graph (42) Task 0: conv2d_43/Conv2D
+Graph (42) Task 1: conv2d_43/BatchNorm
+Graph (42) Task 2: conv2d_43/LeakyRelu
+Graph (42) Task 3: add_42_43
+Graph 42 input size: 0 receiver size: 2 tasks size: 4 senders size: 1 output size: 0
+
+Graph (44) Task 0: conv2d_45/Conv2D
+Graph (44) Task 1: conv2d_45/BatchNorm
+Graph (44) Task 2: conv2d_45/LeakyRelu
+Graph 44 input size: 0 receiver size: 1 tasks size: 3 senders size: 1 output size: 0
+
+Graph (43) Task 0: conv2d_44/Conv2D
+Graph (43) Task 1: conv2d_44/BatchNorm
+Graph (43) Task 2: conv2d_44/LeakyRelu
+Graph 43 input size: 0 receiver size: 1 tasks size: 3 senders size: 1 output size: 0
+
+Graph (18) Task 0: conv2d_19/Conv2D
+Graph (18) Task 1: conv2d_19/BatchNorm
+Graph (18) Task 2: conv2d_19/LeakyRelu
+Graph 18 input size: 0 receiver size: 1 tasks size: 3 senders size: 1 output size: 0
+
+Graph id: 2 Target is: CL
+Graph (45) Task 0: conv2d_46/Conv2D
+Graph (45) Task 1: conv2d_46/BatchNorm
+Graph (45) Task 2: conv2d_46/LeakyRelu
+Graph (45) Task 3: add_45_46
+Graph 45 input size: 0 receiver size: 2 tasks size: 4 senders size: 1 output size: 0
+
+Graph (47) Task 0: conv2d_48/Conv2D
+Graph (47) Task 1: conv2d_48/BatchNorm
+Graph (47) Task 2: conv2d_48/LeakyRelu
+Graph (47) Task 3: add_47_48
+Graph 47 input size: 0 receiver size: 2 tasks size: 4 senders size: 1 output size: 0
+
+Graph (48) Task 0: conv2d_49/Conv2D
+Graph (48) Task 1: conv2d_49/BatchNorm
+Graph (48) Task 2: conv2d_49/LeakyRelu
+Graph 48 input size: 0 receiver size: 1 tasks size: 3 senders size: 1 output size: 0
+
+Graph (49) Task 0: conv2d_50/Conv2D
+Graph (49) Task 1: conv2d_50/BatchNorm
+Graph (49) Task 2: conv2d_50/LeakyRelu
+Graph (49) Task 3: add_49_50
+Graph 49 input size: 0 receiver size: 2 tasks size: 4 senders size: 1 output size: 0
+
+Graph (50) Task 0: conv2d_51/Conv2D
+Graph (50) Task 1: conv2d_51/BatchNorm
+Graph (50) Task 2: conv2d_51/LeakyRelu
+Graph 50 input size: 0 receiver size: 1 tasks size: 3 senders size: 1 output size: 0
+
+Graph (51) Task 0: conv2d_52/Conv2D
+Graph (51) Task 1: conv2d_52/BatchNorm
+Graph (51) Task 2: conv2d_52/LeakyRelu
+Graph (51) Task 3: add_51_52
+Graph 51 input size: 0 receiver size: 2 tasks size: 4 senders size: 1 output size: 0
+
+Graph (52) Task 0: conv2d_53
+Graph (52) Task 1: conv2d_53/BatchNorm
+Graph (52) Task 2: conv2d_53/LeakyRelu
+Graph 52 input size: 0 receiver size: 1 tasks size: 3 senders size: 1 output size: 0
+
+Graph (54) Task 0: conv2d_55
+Graph (54) Task 1: conv2d_55/BatchNorm
+Graph (54) Task 2: conv2d_55/LeakyRelu
+Graph 54 input size: 0 receiver size: 1 tasks size: 3 senders size: 1 output size: 0
+
+Graph (53) Task 0: conv2d_54
+Graph (53) Task 1: conv2d_54/BatchNorm
+Graph (53) Task 2: conv2d_54/LeakyRelu
+Graph 53 input size: 0 receiver size: 1 tasks size: 3 senders size: 1 output size: 0
+
+Graph (55) Task 0: conv2d_56
+Graph (55) Task 1: conv2d_56/BatchNorm
+Graph (55) Task 2: conv2d_56/LeakyRelu
+Graph 55 input size: 0 receiver size: 1 tasks size: 3 senders size: 1 output size: 0
+
+Graph (56) Task 0: conv2d_57
+Graph (56) Task 1: conv2d_57/BatchNorm
+Graph (56) Task 2: conv2d_57/LeakyRelu
+Graph 56 input size: 0 receiver size: 1 tasks size: 3 senders size: 1 output size: 0
+
+Graph (57) Task 0: conv2d_58
+Graph (57) Task 1: conv2d_58/BatchNorm
+Graph (57) Task 2: conv2d_58/LeakyRelu
+Graph 57 input size: 0 receiver size: 1 tasks size: 3 senders size: 1 output size: 0
+
+Graph (58) Task 0: conv2d_59
+Graph (58) Task 1: conv2d_59/Linear
+Graph (58) Task 2: Yolo1
+Graph (58) Task 3: Yolo1
+Graph (58) Task 4: Yolo1
+Graph (58) Task 5: Yolo1
+Graph (58) Task 6: Yolo1
+Graph (58) Task 7: Yolo1
+Graph 58 input size: 0 receiver size: 1 tasks size: 8 senders size: 1 output size: 0
+
+Graph (59) Task 0: conv2d_60
+Graph (59) Task 1: conv2d_59/BatchNorm
+Graph (59) Task 2: conv2d_60/LeakyRelu
+Graph (59) Task 3: Upsample_60
+Graph (59) Task 4: Route1
+Graph 59 input size: 0 receiver size: 3 tasks size: 5 senders size: 1 output size: 1
+
+Graph (60) Task 0: conv2d_61
+Graph (60) Task 1: conv2d_60/BatchNorm
+Graph (60) Task 2: conv2d_61/LeakyRelu
+Graph 60 input size: 0 receiver size: 1 tasks size: 3 senders size: 1 output size: 0
+
+Graph (61) Task 0: conv2d_62
+Graph (61) Task 1: conv2d_61/BatchNorm
+Graph (61) Task 2: conv2d_62/LeakyRelu
+Graph 61 input size: 0 receiver size: 1 tasks size: 3 senders size: 1 output size: 0
+
+Graph (62) Task 0: conv2d_63
+Graph (62) Task 1: conv2d_62/BatchNorm
+Graph (62) Task 2: conv2d_63/LeakyRelu
+Graph 62 input size: 0 receiver size: 1 tasks size: 3 senders size: 1 output size: 0
+
+Graph (64) Task 0: conv2d_65
+Graph (64) Task 1: conv2d_65/BatchNorm
+Graph (64) Task 2: conv2d_65/LeakyRelu
+Graph 64 input size: 0 receiver size: 1 tasks size: 3 senders size: 1 output size: 0
+
+Graph (63) Task 0: conv2d_64
+Graph (63) Task 1: conv2d_63/BatchNorm
+Graph (63) Task 2: conv2d_64/LeakyRelu
+Graph 63 input size: 0 receiver size: 1 tasks size: 3 senders size: 1 output size: 0
+
+Graph (65) Task 0: conv2d_66
+Graph (65) Task 1: conv2d_65/BatchNorm
+Graph (65) Task 2: conv2d_66/LeakyRelu
+Graph 65 input size: 0 receiver size: 1 tasks size: 3 senders size: 1 output size: 0
+
+Graph (66) Task 0: conv2d_67
+Graph (66) Task 1: conv2d_67/Linear
+Graph (66) Task 2: Yolo2
+Graph (66) Task 3: Yolo2
+Graph (66) Task 4: Yolo2
+Graph (66) Task 5: Yolo2
+Graph (66) Task 6: Yolo2
+Graph (66) Task 7: Yolo2
+Graph 66 input size: 0 receiver size: 1 tasks size: 8 senders size: 1 output size: 0
+
+Graph (67) Task 0: conv2d_68
+Graph (67) Task 1: conv2d_66/BatchNorm
+Graph (67) Task 2: conv2d_68/LeakyRelu
+Graph (67) Task 3: Upsample_68
+Graph (67) Task 4: Route2
+Graph 67 input size: 0 receiver size: 3 tasks size: 5 senders size: 1 output size: 1
+
+Graph (68) Task 0: conv2d_69
+Graph (68) Task 1: conv2d_67/BatchNorm
+Graph (68) Task 2: conv2d_69/LeakyRelu
+Graph 68 input size: 0 receiver size: 1 tasks size: 3 senders size: 1 output size: 0
+
+Graph (69) Task 0: conv2d_70
+Graph (69) Task 1: conv2d_68/BatchNorm
+Graph (69) Task 2: conv2d_70/LeakyRelu
+Graph 69 input size: 0 receiver size: 1 tasks size: 3 senders size: 1 output size: 0
+
+Graph (70) Task 0: conv2d_71
+Graph (70) Task 1: conv2d_69/BatchNorm
+Graph (70) Task 2: conv2d_71/LeakyRelu
+Graph 70 input size: 0 receiver size: 1 tasks size: 3 senders size: 1 output size: 0
+
+Graph (71) Task 0: conv2d_72
+Graph (71) Task 1: conv2d_70/BatchNorm
+Graph (71) Task 2: conv2d_72/LeakyRelu
+Graph 71 input size: 0 receiver size: 1 tasks size: 3 senders size: 1 output size: 0
+
+Graph (72) Task 0: conv2d_73
+Graph (72) Task 1: conv2d_71/BatchNorm
+Graph (72) Task 2: conv2d_73/LeakyRelu
+Graph 72 input size: 0 receiver size: 1 tasks size: 3 senders size: 1 output size: 0
+
+Graph (73) Task 0: conv2d_74
+Graph (73) Task 1: conv2d_72/BatchNorm
+Graph (73) Task 2: conv2d_74/LeakyRelu
+Graph 73 input size: 0 receiver size: 1 tasks size: 3 senders size: 1 output size: 0
+
+Graph (74) Task 0: conv2d_75
+Graph (74) Task 1: conv2d_75/Linear
+Graph (74) Task 2: Yolo3
+Graph (74) Task 3: Yolo3
+Graph (74) Task 4: Yolo3
+Graph (74) Task 5: Yolo3
+Graph (74) Task 6: Yolo3
+Graph (74) Task 7: Yolo3
+Graph 74 input size: 0 receiver size: 1 tasks size: 8 senders size: 0 output size: 1
+
+setting ending for layer: conv2d_36/LeakyRelu
+Finish finalizing graph 35
+
+
+
+setting ending for layer: conv2d_15/LeakyRelu
+Finish finalizing graph 14
+
+
+
+setting ending for layer: conv2d_23/LeakyRelu
+Finish finalizing graph 22
+
+
+
+setting ending for layer: conv2d_38/LeakyRelu
+Finish finalizing graph 37
+
+
+
+setting ending for layer: conv2d_30/LeakyRelu
+Finish finalizing graph 29
+
+
+
+setting ending for layer: conv2d_34/LeakyRelu
+Finish finalizing graph 33
+
+
+
+setting ending for layer: conv2d_42/LeakyRelu
+Finish finalizing graph 41
+
+
+
+setting ending for layer: conv2d_32/LeakyRelu
+Finish finalizing graph 31
+
+
+
+setting ending for layer: conv2d_28/LeakyRelu
+Finish finalizing graph 27
+
+
+
+setting ending for layer: conv2d_19/LeakyRelu
+Finish finalizing graph 18
+
+
+
+setting ending for layer: conv2d_11/LeakyRelu
+Finish finalizing graph 10
+
+
+
+setting ending for layer: conv2d_17/LeakyRelu
+Finish finalizing graph 16
+
+
+
+setting ending for layer: conv2d_21/LeakyRelu
+Finish finalizing graph 20
+
+
+
+setting ending for layer: conv2d_25/LeakyRelu
+Finish finalizing graph 24
+
+
+
+setting ending for layer: conv2d_40/LeakyRelu
+Finish finalizing graph 39
+
+
+
+setting ending for layer: conv2d_13/LeakyRelu
+Finish finalizing graph 12
+
+
+
+setting ending for layer: conv2d_6/LeakyRelu
+Finish finalizing graph 5
+
+
+
+setting ending for layer: conv2d_8/LeakyRelu
+Finish finalizing graph 7
+
+
+
+setting ending for layer: conv2d_45/LeakyRelu
+Finish finalizing graph 44
+
+
+
+setting ending for layer: conv2d_47/LeakyRelu
+Finish finalizing graph 46
+
+
+
+setting ending for layer: Route1
+Finish finalizing graph 59
+
+
+
+setting ending for layer: Yolo1
+Finish finalizing graph 58
+
+
+
+setting ending for layer: conv2d_5/LeakyRelu
+Finish finalizing graph 4
+
+
+
+setting ending for layer: conv2d_65/LeakyRelu
+Finish finalizing graph 64
+
+
+
+setting ending for layer: conv2d_63/LeakyRelu
+Finish finalizing graph 62
+
+
+
+setting ending for layer: conv2d_61/LeakyRelu
+Finish finalizing graph 60
+
+
+
+setting ending for layer: conv2d_49/LeakyRelu
+Finish finalizing graph 48
+
+
+
+setting ending for layer: conv2d_10/LeakyRelu
+Finish finalizing graph 9
+
+
+
+setting ending for layer: conv2d_51/LeakyRelu
+Finish finalizing graph 50
+
+
+
+setting ending for layer: conv2d_53/LeakyRelu
+Finish finalizing graph 52
+
+
+
+setting ending for layer: conv2d_57/LeakyRelu
+Finish finalizing graph 56
+
+
+
+setting ending for layer: conv2d_55/LeakyRelu
+Finish finalizing graph 54
+
+
+
+setting ending for layer: Yolo2
+Finish finalizing graph 66
+
+
+
+setting ending for layer: conv2d_69/LeakyRelu
+Finish finalizing graph 68
+
+
+
+setting ending for layer: add_23_24
+Finish finalizing graph 23
+
+
+
+setting ending for layer: add_19_20
+Finish finalizing graph 19
+
+
+
+setting ending for layer: add_21_22
+Finish finalizing graph 21
+
+
+
+setting ending for layer: add_25_26
+Finish finalizing graph 25
+
+
+
+setting ending for layer: conv2d_71/LeakyRelu
+Finish finalizing graph 70
+
+
+
+setting ending for layer: add_17_18
+Finish finalizing graph 17
+
+
+
+setting ending for layer: add_15_16
+Finish finalizing graph 15
+
+
+
+setting ending for layer: add_13_14
+Finish finalizing graph 13
+
+
+
+setting ending for layer: Route2
+Finish finalizing graph 67
+
+
+
+setting ending for layer: conv2d_73/LeakyRelu
+Finish finalizing graph 72
+
+
+
+setting ending for layer: add_11_12
+Finish finalizing graph 11
+
+
+
+setting ending for layer: add_8_9
+Finish finalizing graph 8
+
+
+
+setting ending for layer: add_6_7
+Finish finalizing graph 6
+
+
+
+Graph (2) Task 0: conv2d_3/Conv2D
+Graph (2) Task 1: conv2d_3/BatchNorm
+setting ending for layer: Yolo3
+Finish finalizing graph 74
+
+
+
+Graph (2) Task 2: conv2d_3/LeakyRelu
+Graph 2 input size: 0 receiver size: 1 tasks size: 3 senders size: 1 output size: 0
+
+setting ending for layer: conv2d_3/LeakyRelu
+Finish finalizing graph 2
+
+
+
+setting ending for layer: conv2d_2/LeakyRelu
+Finish finalizing graph 1
+
+
+
+setting ending for layer: conv2d_70/LeakyRelu
+Finish finalizing graph 69
+
+
+
+setting ending for layer: conv2d_27/LeakyRelu
+Finish finalizing graph 26
+
+
+
+setting ending for layer: conv2d_72/LeakyRelu
+Finish finalizing graph 71
+
+
+
+setting ending for layer: add_34_35
+Finish finalizing graph 34
+
+
+
+setting ending for layer: add_38_39
+Finish finalizing graph 38
+
+
+
+setting ending for layer: add_36_37
+Finish finalizing graph 36
+
+
+
+setting ending for layer: conv2d_74/LeakyRelu
+Finish finalizing graph 73
+
+
+
+setting ending for layer: add_32_33
+Finish finalizing graph 32
+
+
+
+setting ending for layer: add_40_41
+Finish finalizing graph 40
+
+
+
+setting ending for layer: add_28_29
+Finish finalizing graph 28
+
+
+
+setting ending for layer: add_42_43
+Finish finalizing graph 42
+
+
+
+setting ending for layer: add_30_31
+Finish finalizing graph 30
+
+
+
+setting ending for layer: add_3_4
+Finish finalizing graph 3
+
+
+
+setting ending for layer: conv2d_62/LeakyRelu
+Finish finalizing graph 61
+
+
+
+setting ending for layer: conv2d_64/LeakyRelu
+Finish finalizing graph 63
+
+
+
+setting ending for layer: conv2d_66/LeakyRelu
+Finish finalizing graph 65
+
+
+
+setting ending for layer: conv2d_1/LeakyRelu
+Finish finalizing graph 0
+
+
+
+setting ending for layer: conv2d_44/LeakyRelu
+Finish finalizing graph 43
+
+
+
+setting ending for layer: add_45_46
+Finish finalizing graph 45
+
+
+
+setting ending for layer: add_51_52
+Finish finalizing graph 51
+
+
+
+setting ending for layer: add_47_48
+Finish finalizing graph 47
+
+
+
+setting ending for layer: add_49_50
+Finish finalizing graph 49
+
+
+
+setting ending for layer: conv2d_54/LeakyRelu
+Finish finalizing graph 53
+
+
+
+setting ending for layer: conv2d_56/LeakyRelu
+Finish finalizing graph 55
+
+
+
+setting ending for layer: conv2d_58/LeakyRelu
+Finish finalizing graph 57
+
+
+
+setup finished
+
+Please Enter the desired Frequency setttings: 0 Running Graph with min LW DVFS
+governor 0 task:Route1 freqs:0,0,0
+governor 1 task:Route2 freqs:0,0,0
+governor 2 task:Yolo1 freqs:0,0,0
+governor 3 task:Yolo2 freqs:0,0,0
+governor 4 task:Yolo3 freqs:0,0,0
+governor 5 task:add_11_12 freqs:0,0,0
+governor 6 task:add_13_14 freqs:0,0,0
+governor 7 task:add_15_16 freqs:0,0,0
+governor 8 task:add_17_18 freqs:0,0,0
+governor 9 task:add_19_20 freqs:0,0,0
+governor 10 task:add_21_22 freqs:0,0,0
+governor 11 task:add_23_24 freqs:0,0,0
+governor 12 task:add_25_26 freqs:0,0,0
+governor 13 task:add_28_29 freqs:0,0,0
+governor 14 task:add_30_31 freqs:0,0,0
+governor 15 task:add_32_33 freqs:0,0,0
+governor 16 task:add_34_35 freqs:0,0,0
+governor 17 task:add_36_37 freqs:0,0,0
+governor 18 task:add_38_39 freqs:0,0,0
+governor 19 task:add_3_4 freqs:0,0,0
+governor 20 task:add_40_41 freqs:0,0,0
+governor 21 task:add_42_43 freqs:0,0,0
+governor 22 task:add_45_46 freqs:0,0,0
+governor 23 task:add_47_48 freqs:0,0,0
+governor 24 task:add_49_50 freqs:0,0,0
+governor 25 task:add_51_52 freqs:0,0,0
+governor 26 task:add_6_7 freqs:0,0,0
+governor 27 task:add_8_9 freqs:0,0,0
+governor 28 task:conv2d_1/LeakyRelu freqs:0,0,0
+governor 29 task:conv2d_10/LeakyRelu freqs:0,0,0
+governor 30 task:conv2d_11/LeakyRelu freqs:0,0,0
+governor 31 task:conv2d_13/LeakyRelu freqs:0,0,0
+governor 32 task:conv2d_15/LeakyRelu freqs:0,0,0
+governor 33 task:conv2d_17/LeakyRelu freqs:0,0,0
+governor 34 task:conv2d_19/LeakyRelu freqs:0,0,0
+governor 35 task:conv2d_2/LeakyRelu freqs:0,0,0
+governor 36 task:conv2d_21/LeakyRelu freqs:0,0,0
+governor 37 task:conv2d_23/LeakyRelu freqs:0,0,0
+governor 38 task:conv2d_25/LeakyRelu freqs:0,0,0
+governor 39 task:conv2d_27/LeakyRelu freqs:0,0,0
+governor 40 task:conv2d_28/LeakyRelu freqs:0,0,0
+governor 41 task:conv2d_3/LeakyRelu freqs:0,0,0
+governor 42 task:conv2d_30/LeakyRelu freqs:0,0,0
+governor 43 task:conv2d_32/LeakyRelu freqs:0,0,0
+governor 44 task:conv2d_34/LeakyRelu freqs:0,0,0
+governor 45 task:conv2d_36/LeakyRelu freqs:0,0,0
+governor 46 task:conv2d_38/LeakyRelu freqs:0,0,0
+governor 47 task:conv2d_40/LeakyRelu freqs:0,0,0
+governor 48 task:conv2d_42/LeakyRelu freqs:0,0,0
+governor 49 task:conv2d_44/LeakyRelu freqs:0,0,0
+governor 50 task:conv2d_45/LeakyRelu freqs:0,0,0
+governor 51 task:conv2d_47/LeakyRelu freqs:0,0,0
+governor 52 task:conv2d_49/LeakyRelu freqs:0,0,0
+governor 53 task:conv2d_5/LeakyRelu freqs:0,0,0
+governor 54 task:conv2d_51/LeakyRelu freqs:0,0,0
+governor 55 task:conv2d_53/LeakyRelu freqs:0,0,0
+governor 56 task:conv2d_54/LeakyRelu freqs:0,0,0
+governor 57 task:conv2d_55/LeakyRelu freqs:0,0,0
+governor 58 task:conv2d_56/LeakyRelu freqs:0,0,0
+governor 59 task:conv2d_57/LeakyRelu freqs:0,0,0
+governor 60 task:conv2d_58/LeakyRelu freqs:0,0,0
+governor 61 task:conv2d_6/LeakyRelu freqs:0,0,0
+governor 62 task:conv2d_61/LeakyRelu freqs:0,0,0
+governor 63 task:conv2d_62/LeakyRelu freqs:0,0,0
+governor 64 task:conv2d_63/LeakyRelu freqs:0,0,0
+governor 65 task:conv2d_64/LeakyRelu freqs:0,0,0
+governor 66 task:conv2d_65/LeakyRelu freqs:0,0,0
+governor 67 task:conv2d_66/LeakyRelu freqs:0,0,0
+governor 68 task:conv2d_69/LeakyRelu freqs:0,0,0
+governor 69 task:conv2d_70/LeakyRelu freqs:0,0,0
+governor 70 task:conv2d_71/LeakyRelu freqs:0,0,0
+governor 71 task:conv2d_72/LeakyRelu freqs:0,0,0
+governor 72 task:conv2d_73/LeakyRelu freqs:0,0,0
+governor 73 task:conv2d_74/LeakyRelu freqs:0,0,0
+governor 74 task:conv2d_8/LeakyRelu freqs:0,0,0
+set_GPIOs with mode: transfers
+tass name: conv2d_1/Conv2D	starting gpio: 1	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_1/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_1/LeakyRelu	starting gpio: 0	ending gpio: 1	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_2/Conv2D	starting gpio: 1	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_2/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_2/LeakyRelu	starting gpio: 0	ending gpio: 1	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_3/Conv2D	starting gpio: 1	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_3/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_3/LeakyRelu	starting gpio: 0	ending gpio: 1	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_4/Conv2D	starting gpio: 1	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_4/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_4/LeakyRelu	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: add_3_4	starting gpio: 0	ending gpio: 1	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_5/Conv2D	starting gpio: 1	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_5/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_5/LeakyRelu	starting gpio: 0	ending gpio: 1	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_6/Conv2D	starting gpio: 1	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_6/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_6/LeakyRelu	starting gpio: 0	ending gpio: 1	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_7/Conv2D	starting gpio: 1	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_7/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_7/LeakyRelu	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: add_6_7	starting gpio: 0	ending gpio: 1	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_8/Conv2D	starting gpio: 1	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_8/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_8/LeakyRelu	starting gpio: 0	ending gpio: 1	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_9/Conv2D	starting gpio: 1	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_9/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_9/LeakyRelu	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: add_8_9	starting gpio: 0	ending gpio: 1	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_10/Conv2D	starting gpio: 1	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_10/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_10/LeakyRelu	starting gpio: 0	ending gpio: 1	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_11/Conv2D	starting gpio: 1	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_11/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_11/LeakyRelu	starting gpio: 0	ending gpio: 1	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_12/Conv2D	starting gpio: 1	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_12/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_12/LeakyRelu	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: add_11_12	starting gpio: 0	ending gpio: 1	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_13/Conv2D	starting gpio: 1	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_13/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_13/LeakyRelu	starting gpio: 0	ending gpio: 1	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_14/Conv2D	starting gpio: 1	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_14/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_14/LeakyRelu	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: add_13_14	starting gpio: 0	ending gpio: 1	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_15/Conv2D	starting gpio: 1	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_15/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_15/LeakyRelu	starting gpio: 0	ending gpio: 1	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_16/Conv2D	starting gpio: 1	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_16/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_16/LeakyRelu	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: add_15_16	starting gpio: 0	ending gpio: 1	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_17/Conv2D	starting gpio: 1	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_17/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_17/LeakyRelu	starting gpio: 0	ending gpio: 1	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_18/Conv2D	starting gpio: 1	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_18/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_18/LeakyRelu	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: add_17_18	starting gpio: 0	ending gpio: 1	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_19/Conv2D	starting gpio: 1	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_19/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_19/LeakyRelu	starting gpio: 0	ending gpio: 1	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_20/Conv2D	starting gpio: 1	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_20/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_20/LeakyRelu	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: add_19_20	starting gpio: 0	ending gpio: 1	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_21/Conv2D	starting gpio: 1	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_21/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_21/LeakyRelu	starting gpio: 0	ending gpio: 1	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_22/Conv2D	starting gpio: 1	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_22/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_22/LeakyRelu	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: add_21_22	starting gpio: 0	ending gpio: 1	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_23/Conv2D	starting gpio: 1	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_23/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_23/LeakyRelu	starting gpio: 0	ending gpio: 1	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_24/Conv2D	starting gpio: 1	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_24/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_24/LeakyRelu	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: add_23_24	starting gpio: 0	ending gpio: 1	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_25/Conv2D	starting gpio: 1	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_25/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_25/LeakyRelu	starting gpio: 0	ending gpio: 1	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_26/Conv2D	starting gpio: 1	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_26/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_26/LeakyRelu	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: add_25_26	starting gpio: 0	ending gpio: 1	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_27/Conv2D	starting gpio: 1	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_27/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_27/LeakyRelu	starting gpio: 0	ending gpio: 1	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_28/Conv2D	starting gpio: 1	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_28/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_28/LeakyRelu	starting gpio: 0	ending gpio: 1	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_29/Conv2D	starting gpio: 1	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_29/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_29/LeakyRelu	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: add_28_29	starting gpio: 0	ending gpio: 1	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_30/Conv2D	starting gpio: 1	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_30/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_30/LeakyRelu	starting gpio: 0	ending gpio: 1	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_31/Conv2D	starting gpio: 1	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_31/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_31/LeakyRelu	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: add_30_31	starting gpio: 0	ending gpio: 1	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_32/Conv2D	starting gpio: 1	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_32/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_32/LeakyRelu	starting gpio: 0	ending gpio: 1	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_33/Conv2D	starting gpio: 1	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_33/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_33/LeakyRelu	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: add_32_33	starting gpio: 0	ending gpio: 1	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_34/Conv2D	starting gpio: 1	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_34/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_34/LeakyRelu	starting gpio: 0	ending gpio: 1	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_35/Conv2D	starting gpio: 1	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_35/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_35/LeakyRelu	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: add_34_35	starting gpio: 0	ending gpio: 1	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_36/Conv2D	starting gpio: 1	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_36/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_36/LeakyRelu	starting gpio: 0	ending gpio: 1	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_37/Conv2D	starting gpio: 1	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_37/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_37/LeakyRelu	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: add_36_37	starting gpio: 0	ending gpio: 1	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_38/Conv2D	starting gpio: 1	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_38/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_38/LeakyRelu	starting gpio: 0	ending gpio: 1	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_39/Conv2D	starting gpio: 1	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_39/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_39/LeakyRelu	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: add_38_39	starting gpio: 0	ending gpio: 1	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_40/Conv2D	starting gpio: 1	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_40/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_40/LeakyRelu	starting gpio: 0	ending gpio: 1	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_41/Conv2D	starting gpio: 1	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_41/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_41/LeakyRelu	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: add_40_41	starting gpio: 0	ending gpio: 1	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_42/Conv2D	starting gpio: 1	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_42/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_42/LeakyRelu	starting gpio: 0	ending gpio: 1	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_43/Conv2D	starting gpio: 1	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_43/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_43/LeakyRelu	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: add_42_43	starting gpio: 0	ending gpio: 1	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_44/Conv2D	starting gpio: 1	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_44/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_44/LeakyRelu	starting gpio: 0	ending gpio: 1	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_45/Conv2D	starting gpio: 1	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_45/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_45/LeakyRelu	starting gpio: 0	ending gpio: 1	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_46/Conv2D	starting gpio: 1	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_46/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_46/LeakyRelu	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: add_45_46	starting gpio: 0	ending gpio: 1	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_47/Conv2D	starting gpio: 1	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_47/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_47/LeakyRelu	starting gpio: 0	ending gpio: 1	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_48/Conv2D	starting gpio: 1	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_48/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_48/LeakyRelu	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: add_47_48	starting gpio: 0	ending gpio: 1	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_49/Conv2D	starting gpio: 1	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_49/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_49/LeakyRelu	starting gpio: 0	ending gpio: 1	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_50/Conv2D	starting gpio: 1	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_50/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_50/LeakyRelu	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: add_49_50	starting gpio: 0	ending gpio: 1	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_51/Conv2D	starting gpio: 1	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_51/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_51/LeakyRelu	starting gpio: 0	ending gpio: 1	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_52/Conv2D	starting gpio: 1	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_52/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_52/LeakyRelu	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: add_51_52	starting gpio: 0	ending gpio: 1	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_53	starting gpio: 1	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_53/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_53/LeakyRelu	starting gpio: 0	ending gpio: 1	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_54	starting gpio: 1	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_54/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_54/LeakyRelu	starting gpio: 0	ending gpio: 1	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_55	starting gpio: 1	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_55/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_55/LeakyRelu	starting gpio: 0	ending gpio: 1	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_56	starting gpio: 1	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_56/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_56/LeakyRelu	starting gpio: 0	ending gpio: 1	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_57	starting gpio: 1	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_57/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_57/LeakyRelu	starting gpio: 0	ending gpio: 1	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_58	starting gpio: 1	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_58/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_58/LeakyRelu	starting gpio: 0	ending gpio: 1	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_59	starting gpio: 1	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_59/Linear	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: Yolo1	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: Yolo1	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: Yolo1	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: Yolo1	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: Yolo1	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: Yolo1	starting gpio: 0	ending gpio: 1	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_60	starting gpio: 1	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_59/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_60/LeakyRelu	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: Upsample_60	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: Route1	starting gpio: 0	ending gpio: 1	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_61	starting gpio: 1	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_60/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_61/LeakyRelu	starting gpio: 0	ending gpio: 1	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_62	starting gpio: 1	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_61/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_62/LeakyRelu	starting gpio: 0	ending gpio: 1	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_63	starting gpio: 1	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_62/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_63/LeakyRelu	starting gpio: 0	ending gpio: 1	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_64	starting gpio: 1	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_63/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_64/LeakyRelu	starting gpio: 0	ending gpio: 1	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_65	starting gpio: 1	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_65/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_65/LeakyRelu	starting gpio: 0	ending gpio: 1	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_66	starting gpio: 1	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_65/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_66/LeakyRelu	starting gpio: 0	ending gpio: 1	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_67	starting gpio: 1	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_67/Linear	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: Yolo2	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: Yolo2	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: Yolo2	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: Yolo2	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: Yolo2	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: Yolo2	starting gpio: 0	ending gpio: 1	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_68	starting gpio: 1	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_66/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_68/LeakyRelu	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: Upsample_68	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: Route2	starting gpio: 0	ending gpio: 1	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_69	starting gpio: 1	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_67/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_69/LeakyRelu	starting gpio: 0	ending gpio: 1	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_70	starting gpio: 1	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_68/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_70/LeakyRelu	starting gpio: 0	ending gpio: 1	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_71	starting gpio: 1	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_69/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_71/LeakyRelu	starting gpio: 0	ending gpio: 1	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_72	starting gpio: 1	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_70/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_72/LeakyRelu	starting gpio: 0	ending gpio: 1	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_73	starting gpio: 1	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_71/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_73/LeakyRelu	starting gpio: 0	ending gpio: 1	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_74	starting gpio: 1	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_72/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_74/LeakyRelu	starting gpio: 0	ending gpio: 1	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_75	starting gpio: 1	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2d_75/Linear	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: Yolo3	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: Yolo3	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: Yolo3	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: Yolo3	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: Yolo3	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: Yolo3	starting gpio: 0	ending gpio: 1	profiling layers: 0	profiling transfers: 1
+
+
+
+*********************************************
+start running graphs
+*************************************************
+
+
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_608//apple.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0000 - [id = 0], person
+0.0000 - [id = 1], bicycle
+0.0000 - [id = 2], car
+0.0000 - [id = 3], motorbike
+0.0000 - [id = 4], aeroplane
+---------- Top 5 predictions ----------
+
+0.0000 - [id = 0], person
+0.0000 - [id = 1], bicycle
+0.0000 - [id = 2], car
+0.0000 - [id = 3], motorbike
+0.0000 - [id = 4], aeroplane
+---------- Top 5 predictions ----------
+
+0.0000 - [id = 0], person
+0.0000 - [id = 1], bicycle
+0.0000 - [id = 2], car
+0.0000 - [id = 3], motorbike
+0.0000 - [id = 4], aeroplane
+
+
+************
+Photo_index:1
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_608//dishes.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0000 - [id = 0], person
+0.0000 - [id = 1], bicycle
+0.0000 - [id = 2], car
+0.0000 - [id = 3], motorbike
+0.0000 - [id = 4], aeroplane
+---------- Top 5 predictions ----------
+
+0.0000 - [id = 0], person
+0.0000 - [id = 1], bicycle
+0.0000 - [id = 2], car
+0.0000 - [id = 3], motorbike
+0.0000 - [id = 4], aeroplane
+---------- Top 5 predictions ----------
+
+0.0000 - [id = 0], person
+0.0000 - [id = 1], bicycle
+0.0000 - [id = 2], car
+0.0000 - [id = 3], motorbike
+0.0000 - [id = 4], aeroplane
+
+
+************
+Photo_index:2
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_608//bus.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0000 - [id = 0], person
+0.0000 - [id = 1], bicycle
+0.0000 - [id = 2], car
+0.0000 - [id = 3], motorbike
+0.0000 - [id = 4], aeroplane
+---------- Top 5 predictions ----------
+
+0.0000 - [id = 0], person
+0.0000 - [id = 1], bicycle
+0.0000 - [id = 2], car
+0.0000 - [id = 3], motorbike
+0.0000 - [id = 4], aeroplane
+---------- Top 5 predictions ----------
+
+0.0000 - [id = 0], person
+0.0000 - [id = 1], bicycle
+0.0000 - [id = 2], car
+0.0000 - [id = 3], motorbike
+0.0000 - [id = 4], aeroplane
+
+
+************
+Photo_index:3
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_608//zebra.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0000 - [id = 0], person
+0.0000 - [id = 1], bicycle
+0.0000 - [id = 2], car
+0.0000 - [id = 3], motorbike
+0.0000 - [id = 4], aeroplane
+---------- Top 5 predictions ----------
+
+0.0000 - [id = 0], person
+0.0000 - [id = 1], bicycle
+0.0000 - [id = 2], car
+0.0000 - [id = 3], motorbike
+0.0000 - [id = 4], aeroplane
+---------- Top 5 predictions ----------
+
+0.0000 - [id = 0], person
+0.0000 - [id = 1], bicycle
+0.0000 - [id = 2], car
+0.0000 - [id = 3], motorbike
+0.0000 - [id = 4], aeroplane
+
+
+************
+Photo_index:4
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_608//bear.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0000 - [id = 0], person
+0.0000 - [id = 1], bicycle
+0.0000 - [id = 2], car
+0.0000 - [id = 3], motorbike
+0.0000 - [id = 4], aeroplane
+---------- Top 5 predictions ----------
+
+0.0000 - [id = 0], person
+0.0000 - [id = 1], bicycle
+0.0000 - [id = 2], car
+0.0000 - [id = 3], motorbike
+0.0000 - [id = 4], aeroplane
+---------- Top 5 predictions ----------
+
+0.0000 - [id = 0], person
+0.0000 - [id = 1], bicycle
+0.0000 - [id = 2], car
+0.0000 - [id = 3], motorbike
+0.0000 - [id = 4], aeroplane
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_608//apple.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0000 - [id = 0], person
+0.0000 - [id = 1], bicycle
+0.0000 - [id = 2], car
+0.0000 - [id = 3], motorbike
+0.0000 - [id = 4], aeroplane
+---------- Top 5 predictions ----------
+
+0.0000 - [id = 0], person
+0.0000 - [id = 1], bicycle
+0.0000 - [id = 2], car
+0.0000 - [id = 3], motorbike
+0.0000 - [id = 4], aeroplane
+---------- Top 5 predictions ----------
+
+0.0000 - [id = 0], person
+0.0000 - [id = 1], bicycle
+0.0000 - [id = 2], car
+0.0000 - [id = 3], motorbike
+0.0000 - [id = 4], aeroplane
+
+
+************
+Photo_index:1
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_608//dishes.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0000 - [id = 0], person
+0.0000 - [id = 1], bicycle
+0.0000 - [id = 2], car
+0.0000 - [id = 3], motorbike
+0.0000 - [id = 4], aeroplane
+---------- Top 5 predictions ----------
+
+0.0000 - [id = 0], person
+0.0000 - [id = 1], bicycle
+0.0000 - [id = 2], car
+0.0000 - [id = 3], motorbike
+0.0000 - [id = 4], aeroplane
+---------- Top 5 predictions ----------
+
+0.0000 - [id = 0], person
+0.0000 - [id = 1], bicycle
+0.0000 - [id = 2], car
+0.0000 - [id = 3], motorbike
+0.0000 - [id = 4], aeroplane
+
+
+************
+Photo_index:2
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_608//bus.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0000 - [id = 0], person
+0.0000 - [id = 1], bicycle
+0.0000 - [id = 2], car
+0.0000 - [id = 3], motorbike
+0.0000 - [id = 4], aeroplane
+---------- Top 5 predictions ----------
+
+0.0000 - [id = 0], person
+0.0000 - [id = 1], bicycle
+0.0000 - [id = 2], car
+0.0000 - [id = 3], motorbike
+0.0000 - [id = 4], aeroplane
+---------- Top 5 predictions ----------
+
+0.0000 - [id = 0], person
+0.0000 - [id = 1], bicycle
+0.0000 - [id = 2], car
+0.0000 - [id = 3], motorbike
+0.0000 - [id = 4], aeroplane
+
+
+************
+Photo_index:3
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_608//zebra.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0000 - [id = 0], person
+0.0000 - [id = 1], bicycle
+0.0000 - [id = 2], car
+0.0000 - [id = 3], motorbike
+0.0000 - [id = 4], aeroplane
+---------- Top 5 predictions ----------
+
+0.0000 - [id = 0], person
+0.0000 - [id = 1], bicycle
+0.0000 - [id = 2], car
+0.0000 - [id = 3], motorbike
+0.0000 - [id = 4], aeroplane
+---------- Top 5 predictions ----------
+
+0.0000 - [id = 0], person
+0.0000 - [id = 1], bicycle
+0.0000 - [id = 2], car
+0.0000 - [id = 3], motorbike
+0.0000 - [id = 4], aeroplane
+
+
+************
+Photo_index:4
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_608//bear.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0000 - [id = 0], person
+0.0000 - [id = 1], bicycle
+0.0000 - [id = 2], car
+0.0000 - [id = 3], motorbike
+0.0000 - [id = 4], aeroplane
+---------- Top 5 predictions ----------
+
+0.0000 - [id = 0], person
+0.0000 - [id = 1], bicycle
+0.0000 - [id = 2], car
+0.0000 - [id = 3], motorbike
+0.0000 - [id = 4], aeroplane
+---------- Top 5 predictions ----------
+
+0.0000 - [id = 0], person
+0.0000 - [id = 1], bicycle
+0.0000 - [id = 2], car
+0.0000 - [id = 3], motorbike
+0.0000 - [id = 4], aeroplane
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_608//apple.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0000 - [id = 0], person
+0.0000 - [id = 1], bicycle
+0.0000 - [id = 2], car
+0.0000 - [id = 3], motorbike
+0.0000 - [id = 4], aeroplane
+---------- Top 5 predictions ----------
+
+0.0000 - [id = 0], person
+0.0000 - [id = 1], bicycle
+0.0000 - [id = 2], car
+0.0000 - [id = 3], motorbike
+0.0000 - [id = 4], aeroplane
+---------- Top 5 predictions ----------
+
+0.0000 - [id = 0], person
+0.0000 - [id = 1], bicycle
+0.0000 - [id = 2], car
+0.0000 - [id = 3], motorbike
+0.0000 - [id = 4], aeroplane
+
+
+************
+Photo_index:1
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_608//dishes.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0000 - [id = 0], person
+0.0000 - [id = 1], bicycle
+0.0000 - [id = 2], car
+0.0000 - [id = 3], motorbike
+0.0000 - [id = 4], aeroplane
+---------- Top 5 predictions ----------
+
+0.0000 - [id = 0], person
+0.0000 - [id = 1], bicycle
+0.0000 - [id = 2], car
+0.0000 - [id = 3], motorbike
+0.0000 - [id = 4], aeroplane
+---------- Top 5 predictions ----------
+
+0.0000 - [id = 0], person
+0.0000 - [id = 1], bicycle
+0.0000 - [id = 2], car
+0.0000 - [id = 3], motorbike
+0.0000 - [id = 4], aeroplane
+
+
+************
+Photo_index:2
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_608//bus.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0000 - [id = 0], person
+0.0000 - [id = 1], bicycle
+0.0000 - [id = 2], car
+0.0000 - [id = 3], motorbike
+0.0000 - [id = 4], aeroplane
+---------- Top 5 predictions ----------
+
+0.0000 - [id = 0], person
+0.0000 - [id = 1], bicycle
+0.0000 - [id = 2], car
+0.0000 - [id = 3], motorbike
+0.0000 - [id = 4], aeroplane
+---------- Top 5 predictions ----------
+
+0.0000 - [id = 0], person
+0.0000 - [id = 1], bicycle
+0.0000 - [id = 2], car
+0.0000 - [id = 3], motorbike
+0.0000 - [id = 4], aeroplane
+0	Layer Name: conv2d_1/Conv2D 	 Layer time: 0 	 number of inputs: 3 	 input shape: 3x608x608 	 output shape: 32x608x608
+1	Layer Name: conv2d_1/BatchNorm 	 Layer time: 0 	 number of inputs: 5 	 input shape: 32x608x608 	 output shape: 32x608x608
+2	Layer Name: conv2d_1/LeakyRelu 	 Layer time: 0 	 number of inputs: 1 	 input shape: 32x608x608 	 output shape: 32x608x608
+Layer Number: 0 	 time: 0
+----------------------------
+
+ Sum of Layers time: 0
+
+
+Graph0   Input: 439.392   Task: 25.2243   send: 50.4469   Out: 0.0029458   Process: 515.066
+
+
+
+********
+
+0	Layer Name: conv2d_2/Conv2D 	 Layer time: 0 	 number of inputs: 3 	 input shape: 32x608x608 	 output shape: 64x304x304
+1	Layer Name: conv2d_2/BatchNorm 	 Layer time: 0 	 number of inputs: 5 	 input shape: 64x304x304 	 output shape: 64x304x304
+2	Layer Name: conv2d_2/LeakyRelu 	 Layer time: 0 	 number of inputs: 1 	 input shape: 64x304x304 	 output shape: 64x304x304
+Layer Number: 0 	 time: 0
+----------------------------
+
+ Sum of Layers time: 0
+
+
+Graph1   Input: 0.0144374   Task: 25.5477   send: 62.8933   Out: 0.0019833   Process: 88.4575
+
+
+
+********
+
+0	Layer Name: conv2d_3/Conv2D 	 Layer time: 0 	 number of inputs: 3 	 input shape: 64x304x304 	 output shape: 32x304x304
+1	Layer Name: conv2d_3/BatchNorm 	 Layer time: 0 	 number of inputs: 5 	 input shape: 32x304x304 	 output shape: 32x304x304
+2	Layer Name: conv2d_3/LeakyRelu 	 Layer time: 0 	 number of inputs: 1 	 input shape: 32x304x304 	 output shape: 32x304x304
+Layer Number: 0 	 time: 0
+----------------------------
+
+ Sum of Layers time: 0
+
+
+Graph2   Input: 0.0129208   Task: 25.2387   send: 28.9972   Out: 0.0025374   Process: 54.2514
+
+
+
+********
+
+0	Layer Name: conv2d_4/Conv2D 	 Layer time: 0 	 number of inputs: 3 	 input shape: 32x304x304 	 output shape: 64x304x304
+1	Layer Name: conv2d_4/BatchNorm 	 Layer time: 0 	 number of inputs: 5 	 input shape: 64x304x304 	 output shape: 64x304x304
+2	Layer Name: conv2d_4/LeakyRelu 	 Layer time: 0 	 number of inputs: 1 	 input shape: 64x304x304 	 output shape: 64x304x304
+3	Layer Name: add_3_4 	 Layer time: 0 	 number of inputs: 2 	 input shape: 64x304x304 	 output shape: 64x304x304
+Layer Number: 0 	 time: 0
+----------------------------
+
+ Sum of Layers time: 0
+
+
+Graph3   Input: 0.0209709   Task: 33.9496   send: 23.1936   Out: 0.0020123   Process: 57.1662
+
+
+
+********
+
+0	Layer Name: conv2d_5/Conv2D 	 Layer time: 0 	 number of inputs: 3 	 input shape: 64x304x304 	 output shape: 128x152x152
+1	Layer Name: conv2d_5/BatchNorm 	 Layer time: 0 	 number of inputs: 5 	 input shape: 128x152x152 	 output shape: 128x152x152
+2	Layer Name: conv2d_5/LeakyRelu 	 Layer time: 0 	 number of inputs: 1 	 input shape: 128x152x152 	 output shape: 128x152x152
+Layer Number: 0 	 time: 0
+----------------------------
+
+ Sum of Layers time: 0
+
+
+Graph4   Input: 0.0130958   Task: 25.2753   send: 20.6149   Out: 0.002625   Process: 45.906
+
+
+
+********
+
+0	Layer Name: conv2d_6/Conv2D 	 Layer time: 0 	 number of inputs: 3 	 input shape: 128x152x152 	 output shape: 64x152x152
+1	Layer Name: conv2d_6/BatchNorm 	 Layer time: 0 	 number of inputs: 5 	 input shape: 64x152x152 	 output shape: 64x152x152
+2	Layer Name: conv2d_6/LeakyRelu 	 Layer time: 0 	 number of inputs: 1 	 input shape: 64x152x152 	 output shape: 64x152x152
+Layer Number: 0 	 time: 0
+----------------------------
+
+ Sum of Layers time: 0
+
+
+Graph5   Input: 0.0134749   Task: 25.4342   send: 5.92486   Out: 0.0018956   Process: 31.3744
+
+
+
+********
+
+0	Layer Name: conv2d_7/Conv2D 	 Layer time: 0 	 number of inputs: 3 	 input shape: 64x152x152 	 output shape: 128x152x152
+1	Layer Name: conv2d_7/BatchNorm 	 Layer time: 0 	 number of inputs: 5 	 input shape: 128x152x152 	 output shape: 128x152x152
+2	Layer Name: conv2d_7/LeakyRelu 	 Layer time: 0 	 number of inputs: 1 	 input shape: 128x152x152 	 output shape: 128x152x152
+3	Layer Name: add_6_7 	 Layer time: 0 	 number of inputs: 2 	 input shape: 128x152x152 	 output shape: 128x152x152
+Layer Number: 0 	 time: 0
+----------------------------
+
+ Sum of Layers time: 0
+
+
+Graph6   Input: 0.0126291   Task: 33.5709   send: 20.622   Out: 0.002625   Process: 54.2082
+
+
+
+********
+
+0	Layer Name: conv2d_8/Conv2D 	 Layer time: 0 	 number of inputs: 3 	 input shape: 128x152x152 	 output shape: 64x152x152
+1	Layer Name: conv2d_8/BatchNorm 	 Layer time: 0 	 number of inputs: 5 	 input shape: 64x152x152 	 output shape: 64x152x152
+2	Layer Name: conv2d_8/LeakyRelu 	 Layer time: 0 	 number of inputs: 1 	 input shape: 64x152x152 	 output shape: 64x152x152
+Layer Number: 0 	 time: 0
+----------------------------
+
+ Sum of Layers time: 0
+
+
+Graph7   Input: 0.0133293   Task: 25.5726   send: 5.88709   Out: 0.0018083   Process: 31.4748
+
+
+
+********
+
+0	Layer Name: conv2d_9/Conv2D 	 Layer time: 0 	 number of inputs: 3 	 input shape: 64x152x152 	 output shape: 128x152x152
+1	Layer Name: conv2d_9/BatchNorm 	 Layer time: 0 	 number of inputs: 5 	 input shape: 128x152x152 	 output shape: 128x152x152
+2	Layer Name: conv2d_9/LeakyRelu 	 Layer time: 0 	 number of inputs: 1 	 input shape: 128x152x152 	 output shape: 128x152x152
+3	Layer Name: add_8_9 	 Layer time: 0 	 number of inputs: 2 	 input shape: 128x152x152 	 output shape: 128x152x152
+Layer Number: 0 	 time: 0
+----------------------------
+
+ Sum of Layers time: 0
+
+
+Graph8   Input: 0.0119874   Task: 33.5713   send: 10.579   Out: 0.0026833   Process: 44.165
+
+
+
+********
+
+0	Layer Name: conv2d_10/Conv2D 	 Layer time: 0 	 number of inputs: 3 	 input shape: 128x152x152 	 output shape: 256x76x76
+1	Layer Name: conv2d_10/BatchNorm 	 Layer time: 0 	 number of inputs: 5 	 input shape: 256x76x76 	 output shape: 256x76x76
+2	Layer Name: conv2d_10/LeakyRelu 	 Layer time: 0 	 number of inputs: 1 	 input shape: 256x76x76 	 output shape: 256x76x76
+Layer Number: 0 	 time: 0
+----------------------------
+
+ Sum of Layers time: 0
+
+
+Graph9   Input: 0.013533   Task: 25.5908   send: 11.2316   Out: 0.0018667   Process: 36.8377
+
+
+
+********
+
+0	Layer Name: conv2d_11/Conv2D 	 Layer time: 0 	 number of inputs: 3 	 input shape: 256x76x76 	 output shape: 128x76x76
+1	Layer Name: conv2d_11/BatchNorm 	 Layer time: 0 	 number of inputs: 5 	 input shape: 128x76x76 	 output shape: 128x76x76
+2	Layer Name: conv2d_11/LeakyRelu 	 Layer time: 0 	 number of inputs: 1 	 input shape: 128x76x76 	 output shape: 128x76x76
+Layer Number: 0 	 time: 0
+----------------------------
+
+ Sum of Layers time: 0
+
+
+Graph10   Input: 0.0112001   Task: 25.2355   send: 2.66653   Out: 0.0026248   Process: 27.9159
+
+
+
+********
+
+0	Layer Name: conv2d_12/Conv2D 	 Layer time: 0 	 number of inputs: 3 	 input shape: 128x76x76 	 output shape: 256x76x76
+1	Layer Name: conv2d_12/BatchNorm 	 Layer time: 0 	 number of inputs: 5 	 input shape: 256x76x76 	 output shape: 256x76x76
+2	Layer Name: conv2d_12/LeakyRelu 	 Layer time: 0 	 number of inputs: 1 	 input shape: 256x76x76 	 output shape: 256x76x76
+3	Layer Name: add_11_12 	 Layer time: 0 	 number of inputs: 2 	 input shape: 256x76x76 	 output shape: 256x76x76
+Layer Number: 0 	 time: 0
+----------------------------
+
+ Sum of Layers time: 0
+
+
+Graph11   Input: 0.0133292   Task: 33.9045   send: 11.3119   Out: 0.0018667   Process: 45.2315
+
+
+
+********
+
+0	Layer Name: conv2d_13/Conv2D 	 Layer time: 0 	 number of inputs: 3 	 input shape: 256x76x76 	 output shape: 128x76x76
+1	Layer Name: conv2d_13/BatchNorm 	 Layer time: 0 	 number of inputs: 5 	 input shape: 128x76x76 	 output shape: 128x76x76
+2	Layer Name: conv2d_13/LeakyRelu 	 Layer time: 0 	 number of inputs: 1 	 input shape: 128x76x76 	 output shape: 128x76x76
+Layer Number: 0 	 time: 0
+----------------------------
+
+ Sum of Layers time: 0
+
+
+Graph12   Input: 0.0107915   Task: 25.293   send: 2.63993   Out: 0.0027125   Process: 27.9464
+
+
+
+********
+
+0	Layer Name: conv2d_14/Conv2D 	 Layer time: 0 	 number of inputs: 3 	 input shape: 128x76x76 	 output shape: 256x76x76
+1	Layer Name: conv2d_14/BatchNorm 	 Layer time: 0 	 number of inputs: 5 	 input shape: 256x76x76 	 output shape: 256x76x76
+2	Layer Name: conv2d_14/LeakyRelu 	 Layer time: 0 	 number of inputs: 1 	 input shape: 256x76x76 	 output shape: 256x76x76
+3	Layer Name: add_13_14 	 Layer time: 0 	 number of inputs: 2 	 input shape: 256x76x76 	 output shape: 256x76x76
+Layer Number: 0 	 time: 0
+----------------------------
+
+ Sum of Layers time: 0
+
+
+Graph13   Input: 0.0134749   Task: 33.8394   send: 11.2344   Out: 0.0020126   Process: 45.0893
+
+
+
+********
+
+0	Layer Name: conv2d_15/Conv2D 	 Layer time: 0 	 number of inputs: 3 	 input shape: 256x76x76 	 output shape: 128x76x76
+1	Layer Name: conv2d_15/BatchNorm 	 Layer time: 0 	 number of inputs: 5 	 input shape: 128x76x76 	 output shape: 128x76x76
+2	Layer Name: conv2d_15/LeakyRelu 	 Layer time: 0 	 number of inputs: 1 	 input shape: 128x76x76 	 output shape: 128x76x76
+Layer Number: 0 	 time: 0
+----------------------------
+
+ Sum of Layers time: 0
+
+
+Graph14   Input: 0.0105001   Task: 25.2483   send: 2.67595   Out: 0.0027417   Process: 27.9375
+
+
+
+********
+
+0	Layer Name: conv2d_16/Conv2D 	 Layer time: 0 	 number of inputs: 3 	 input shape: 128x76x76 	 output shape: 256x76x76
+1	Layer Name: conv2d_16/BatchNorm 	 Layer time: 0 	 number of inputs: 5 	 input shape: 256x76x76 	 output shape: 256x76x76
+2	Layer Name: conv2d_16/LeakyRelu 	 Layer time: 0 	 number of inputs: 1 	 input shape: 256x76x76 	 output shape: 256x76x76
+3	Layer Name: add_15_16 	 Layer time: 0 	 number of inputs: 2 	 input shape: 256x76x76 	 output shape: 256x76x76
+Layer Number: 0 	 time: 0
+----------------------------
+
+ Sum of Layers time: 0
+
+
+Graph15   Input: 0.0132999   Task: 33.913   send: 11.4402   Out: 0.0018958   Process: 45.3684
+
+
+
+********
+
+0	Layer Name: conv2d_17/Conv2D 	 Layer time: 0 	 number of inputs: 3 	 input shape: 256x76x76 	 output shape: 128x76x76
+1	Layer Name: conv2d_17/BatchNorm 	 Layer time: 0 	 number of inputs: 5 	 input shape: 128x76x76 	 output shape: 128x76x76
+2	Layer Name: conv2d_17/LeakyRelu 	 Layer time: 0 	 number of inputs: 1 	 input shape: 128x76x76 	 output shape: 128x76x76
+Layer Number: 0 	 time: 0
+----------------------------
+
+ Sum of Layers time: 0
+
+
+Graph16   Input: 0.0208541   Task: 25.2485   send: 2.69815   Out: 0.0026833   Process: 27.9702
+
+
+
+********
+
+0	Layer Name: conv2d_18/Conv2D 	 Layer time: 0 	 number of inputs: 3 	 input shape: 128x76x76 	 output shape: 256x76x76
+1	Layer Name: conv2d_18/BatchNorm 	 Layer time: 0 	 number of inputs: 5 	 input shape: 256x76x76 	 output shape: 256x76x76
+2	Layer Name: conv2d_18/LeakyRelu 	 Layer time: 0 	 number of inputs: 1 	 input shape: 256x76x76 	 output shape: 256x76x76
+3	Layer Name: add_17_18 	 Layer time: 0 	 number of inputs: 2 	 input shape: 256x76x76 	 output shape: 256x76x76
+Layer Number: 0 	 time: 0
+----------------------------
+
+ Sum of Layers time: 0
+
+
+Graph17   Input: 0.0135334   Task: 33.8899   send: 11.2326   Out: 0.001925   Process: 45.1379
+
+
+
+********
+
+0	Layer Name: conv2d_19/Conv2D 	 Layer time: 0 	 number of inputs: 3 	 input shape: 256x76x76 	 output shape: 128x76x76
+1	Layer Name: conv2d_19/BatchNorm 	 Layer time: 0 	 number of inputs: 5 	 input shape: 128x76x76 	 output shape: 128x76x76
+2	Layer Name: conv2d_19/LeakyRelu 	 Layer time: 0 	 number of inputs: 1 	 input shape: 128x76x76 	 output shape: 128x76x76
+Layer Number: 0 	 time: 0
+----------------------------
+
+ Sum of Layers time: 0
+
+
+Graph18   Input: 0.0107331   Task: 25.2414   send: 2.63699   Out: 0.0025374   Process: 27.8917
+
+
+
+********
+
+0	Layer Name: conv2d_20/Conv2D 	 Layer time: 0 	 number of inputs: 3 	 input shape: 128x76x76 	 output shape: 256x76x76
+1	Layer Name: conv2d_20/BatchNorm 	 Layer time: 0 	 number of inputs: 5 	 input shape: 256x76x76 	 output shape: 256x76x76
+2	Layer Name: conv2d_20/LeakyRelu 	 Layer time: 0 	 number of inputs: 1 	 input shape: 256x76x76 	 output shape: 256x76x76
+3	Layer Name: add_19_20 	 Layer time: 0 	 number of inputs: 2 	 input shape: 256x76x76 	 output shape: 256x76x76
+Layer Number: 0 	 time: 0
+----------------------------
+
+ Sum of Layers time: 0
+
+
+Graph19   Input: 0.0132997   Task: 33.9252   send: 11.2491   Out: 0.0019542   Process: 45.1896
+
+
+
+********
+
+0	Layer Name: conv2d_21/Conv2D 	 Layer time: 0 	 number of inputs: 3 	 input shape: 256x76x76 	 output shape: 128x76x76
+1	Layer Name: conv2d_21/BatchNorm 	 Layer time: 0 	 number of inputs: 5 	 input shape: 128x76x76 	 output shape: 128x76x76
+2	Layer Name: conv2d_21/LeakyRelu 	 Layer time: 0 	 number of inputs: 1 	 input shape: 128x76x76 	 output shape: 128x76x76
+Layer Number: 0 	 time: 0
+----------------------------
+
+ Sum of Layers time: 0
+
+
+Graph20   Input: 0.0103834   Task: 25.249   send: 2.65218   Out: 0.0026541   Process: 27.9142
+
+
+
+********
+
+0	Layer Name: conv2d_22/Conv2D 	 Layer time: 0 	 number of inputs: 3 	 input shape: 128x76x76 	 output shape: 256x76x76
+1	Layer Name: conv2d_22/BatchNorm 	 Layer time: 0 	 number of inputs: 5 	 input shape: 256x76x76 	 output shape: 256x76x76
+2	Layer Name: conv2d_22/LeakyRelu 	 Layer time: 0 	 number of inputs: 1 	 input shape: 256x76x76 	 output shape: 256x76x76
+3	Layer Name: add_21_22 	 Layer time: 0 	 number of inputs: 2 	 input shape: 256x76x76 	 output shape: 256x76x76
+Layer Number: 0 	 time: 0
+----------------------------
+
+ Sum of Layers time: 0
+
+
+Graph21   Input: 0.0132998   Task: 33.9454   send: 11.1762   Out: 0.0020125   Process: 45.137
+
+
+
+********
+
+0	Layer Name: conv2d_23/Conv2D 	 Layer time: 0 	 number of inputs: 3 	 input shape: 256x76x76 	 output shape: 128x76x76
+1	Layer Name: conv2d_23/BatchNorm 	 Layer time: 0 	 number of inputs: 5 	 input shape: 128x76x76 	 output shape: 128x76x76
+2	Layer Name: conv2d_23/LeakyRelu 	 Layer time: 0 	 number of inputs: 1 	 input shape: 128x76x76 	 output shape: 128x76x76
+Layer Number: 0 	 time: 0
+----------------------------
+
+ Sum of Layers time: 0
+
+
+Graph22   Input: 0.010821   Task: 25.518   send: 2.68928   Out: 0.002654   Process: 28.2207
+
+
+
+********
+
+0	Layer Name: conv2d_24/Conv2D 	 Layer time: 0 	 number of inputs: 3 	 input shape: 128x76x76 	 output shape: 256x76x76
+1	Layer Name: conv2d_24/BatchNorm 	 Layer time: 0 	 number of inputs: 5 	 input shape: 256x76x76 	 output shape: 256x76x76
+2	Layer Name: conv2d_24/LeakyRelu 	 Layer time: 0 	 number of inputs: 1 	 input shape: 256x76x76 	 output shape: 256x76x76
+3	Layer Name: add_23_24 	 Layer time: 0 	 number of inputs: 2 	 input shape: 256x76x76 	 output shape: 256x76x76
+Layer Number: 0 	 time: 0
+----------------------------
+
+ Sum of Layers time: 0
+
+
+Graph23   Input: 0.0134457   Task: 33.9038   send: 11.3037   Out: 0.0019835   Process: 45.2229
+
+
+
+********
+
+0	Layer Name: conv2d_25/Conv2D 	 Layer time: 0 	 number of inputs: 3 	 input shape: 256x76x76 	 output shape: 128x76x76
+1	Layer Name: conv2d_25/BatchNorm 	 Layer time: 0 	 number of inputs: 5 	 input shape: 128x76x76 	 output shape: 128x76x76
+2	Layer Name: conv2d_25/LeakyRelu 	 Layer time: 0 	 number of inputs: 1 	 input shape: 128x76x76 	 output shape: 128x76x76
+Layer Number: 0 	 time: 0
+----------------------------
+
+ Sum of Layers time: 0
+
+
+Graph24   Input: 0.0105292   Task: 25.2463   send: 2.82669   Out: 0.0027707   Process: 28.0863
+
+
+
+********
+
+0	Layer Name: conv2d_26/Conv2D 	 Layer time: 0 	 number of inputs: 3 	 input shape: 128x76x76 	 output shape: 256x76x76
+1	Layer Name: conv2d_26/BatchNorm 	 Layer time: 0 	 number of inputs: 5 	 input shape: 256x76x76 	 output shape: 256x76x76
+2	Layer Name: conv2d_26/LeakyRelu 	 Layer time: 0 	 number of inputs: 1 	 input shape: 256x76x76 	 output shape: 256x76x76
+3	Layer Name: add_25_26 	 Layer time: 0 	 number of inputs: 2 	 input shape: 256x76x76 	 output shape: 256x76x76
+Layer Number: 0 	 time: 0
+----------------------------
+
+ Sum of Layers time: 0
+
+
+Graph25   Input: 0.0133583   Task: 34.0371   send: 11.3249   Out: 0.0019249   Process: 45.3772
+
+
+
+********
+
+0	Layer Name: conv2d_27/Conv2D 	 Layer time: 0 	 number of inputs: 3 	 input shape: 256x76x76 	 output shape: 512x38x38
+1	Layer Name: conv2d_27/BatchNorm 	 Layer time: 0 	 number of inputs: 5 	 input shape: 512x38x38 	 output shape: 512x38x38
+2	Layer Name: conv2d_27/LeakyRelu 	 Layer time: 0 	 number of inputs: 1 	 input shape: 512x38x38 	 output shape: 512x38x38
+Layer Number: 0 	 time: 0
+----------------------------
+
+ Sum of Layers time: 0
+
+
+Graph26   Input: 0.0110541   Task: 25.2624   send: 4.72672   Out: 0.0027418   Process: 30.0029
+
+
+
+********
+
+0	Layer Name: conv2d_28/Conv2D 	 Layer time: 0 	 number of inputs: 3 	 input shape: 512x38x38 	 output shape: 256x38x38
+1	Layer Name: conv2d_28/BatchNorm 	 Layer time: 0 	 number of inputs: 5 	 input shape: 256x38x38 	 output shape: 256x38x38
+2	Layer Name: conv2d_28/LeakyRelu 	 Layer time: 0 	 number of inputs: 1 	 input shape: 256x38x38 	 output shape: 256x38x38
+Layer Number: 0 	 time: 0
+----------------------------
+
+ Sum of Layers time: 0
+
+
+Graph27   Input: 0.0122209   Task: 25.564   send: 1.44611   Out: 0.0016332   Process: 27.0239
+
+
+
+********
+
+0	Layer Name: conv2d_29/Conv2D 	 Layer time: 0 	 number of inputs: 3 	 input shape: 256x38x38 	 output shape: 512x38x38
+1	Layer Name: conv2d_29/BatchNorm 	 Layer time: 0 	 number of inputs: 5 	 input shape: 512x38x38 	 output shape: 512x38x38
+2	Layer Name: conv2d_29/LeakyRelu 	 Layer time: 0 	 number of inputs: 1 	 input shape: 512x38x38 	 output shape: 512x38x38
+3	Layer Name: add_28_29 	 Layer time: 0 	 number of inputs: 2 	 input shape: 512x38x38 	 output shape: 512x38x38
+Layer Number: 0 	 time: 0
+----------------------------
+
+ Sum of Layers time: 0
+
+
+Graph28   Input: 0.0112585   Task: 33.5669   send: 4.79806   Out: 0.0026833   Process: 38.3789
+
+
+
+********
+
+0	Layer Name: conv2d_30/Conv2D 	 Layer time: 0 	 number of inputs: 3 	 input shape: 512x38x38 	 output shape: 256x38x38
+1	Layer Name: conv2d_30/BatchNorm 	 Layer time: 0 	 number of inputs: 5 	 input shape: 256x38x38 	 output shape: 256x38x38
+2	Layer Name: conv2d_30/LeakyRelu 	 Layer time: 0 	 number of inputs: 1 	 input shape: 256x38x38 	 output shape: 256x38x38
+Layer Number: 0 	 time: 0
+----------------------------
+
+ Sum of Layers time: 0
+
+
+Graph29   Input: 0.0121333   Task: 25.5969   send: 1.47968   Out: 0.0017209   Process: 27.0905
+
+
+
+********
+
+0	Layer Name: conv2d_31/Conv2D 	 Layer time: 0 	 number of inputs: 3 	 input shape: 256x38x38 	 output shape: 512x38x38
+1	Layer Name: conv2d_31/BatchNorm 	 Layer time: 0 	 number of inputs: 5 	 input shape: 512x38x38 	 output shape: 512x38x38
+2	Layer Name: conv2d_31/LeakyRelu 	 Layer time: 0 	 number of inputs: 1 	 input shape: 512x38x38 	 output shape: 512x38x38
+3	Layer Name: add_30_31 	 Layer time: 0 	 number of inputs: 2 	 input shape: 512x38x38 	 output shape: 512x38x38
+Layer Number: 0 	 time: 0
+----------------------------
+
+ Sum of Layers time: 0
+
+
+Graph30   Input: 0.0116957   Task: 33.4628   send: 5.4185   Out: 0.002625   Process: 38.8956
+
+
+
+********
+
+0	Layer Name: conv2d_32/Conv2D 	 Layer time: 0 	 number of inputs: 3 	 input shape: 512x38x38 	 output shape: 256x38x38
+1	Layer Name: conv2d_32/BatchNorm 	 Layer time: 0 	 number of inputs: 5 	 input shape: 256x38x38 	 output shape: 256x38x38
+2	Layer Name: conv2d_32/LeakyRelu 	 Layer time: 0 	 number of inputs: 1 	 input shape: 256x38x38 	 output shape: 256x38x38
+Layer Number: 0 	 time: 0
+----------------------------
+
+ Sum of Layers time: 0
+
+
+Graph31   Input: 0.0120458   Task: 25.5525   send: 1.51118   Out: 0.0016334   Process: 27.0773
+
+
+
+********
+
+0	Layer Name: conv2d_33/Conv2D 	 Layer time: 0 	 number of inputs: 3 	 input shape: 256x38x38 	 output shape: 512x38x38
+1	Layer Name: conv2d_33/BatchNorm 	 Layer time: 0 	 number of inputs: 5 	 input shape: 512x38x38 	 output shape: 512x38x38
+2	Layer Name: conv2d_33/LeakyRelu 	 Layer time: 0 	 number of inputs: 1 	 input shape: 512x38x38 	 output shape: 512x38x38
+3	Layer Name: add_32_33 	 Layer time: 0 	 number of inputs: 2 	 input shape: 512x38x38 	 output shape: 512x38x38
+Layer Number: 0 	 time: 0
+----------------------------
+
+ Sum of Layers time: 0
+
+
+Graph32   Input: 0.0113459   Task: 33.4866   send: 4.70333   Out: 0.0030916   Process: 38.2044
+
+
+
+********
+
+0	Layer Name: conv2d_34/Conv2D 	 Layer time: 0 	 number of inputs: 3 	 input shape: 512x38x38 	 output shape: 256x38x38
+1	Layer Name: conv2d_34/BatchNorm 	 Layer time: 0 	 number of inputs: 5 	 input shape: 256x38x38 	 output shape: 256x38x38
+2	Layer Name: conv2d_34/LeakyRelu 	 Layer time: 0 	 number of inputs: 1 	 input shape: 256x38x38 	 output shape: 256x38x38
+Layer Number: 0 	 time: 0
+----------------------------
+
+ Sum of Layers time: 0
+
+
+Graph33   Input: 0.0125125   Task: 25.5089   send: 1.47225   Out: 0.0017207   Process: 26.9954
+
+
+
+********
+
+0	Layer Name: conv2d_35/Conv2D 	 Layer time: 0 	 number of inputs: 3 	 input shape: 256x38x38 	 output shape: 512x38x38
+1	Layer Name: conv2d_35/BatchNorm 	 Layer time: 0 	 number of inputs: 5 	 input shape: 512x38x38 	 output shape: 512x38x38
+2	Layer Name: conv2d_35/LeakyRelu 	 Layer time: 0 	 number of inputs: 1 	 input shape: 512x38x38 	 output shape: 512x38x38
+3	Layer Name: add_34_35 	 Layer time: 0 	 number of inputs: 2 	 input shape: 512x38x38 	 output shape: 512x38x38
+Layer Number: 0 	 time: 0
+----------------------------
+
+ Sum of Layers time: 0
+
+
+Graph34   Input: 0.0116667   Task: 33.4824   send: 5.70768   Out: 0.002975   Process: 39.2047
+
+
+
+********
+
+0	Layer Name: conv2d_36/Conv2D 	 Layer time: 0 	 number of inputs: 3 	 input shape: 512x38x38 	 output shape: 256x38x38
+1	Layer Name: conv2d_36/BatchNorm 	 Layer time: 0 	 number of inputs: 5 	 input shape: 256x38x38 	 output shape: 256x38x38
+2	Layer Name: conv2d_36/LeakyRelu 	 Layer time: 0 	 number of inputs: 1 	 input shape: 256x38x38 	 output shape: 256x38x38
+Layer Number: 0 	 time: 0
+----------------------------
+
+ Sum of Layers time: 0
+
+
+Graph35   Input: 0.0120166   Task: 25.4751   send: 1.44935   Out: 0.0016624   Process: 26.9382
+
+
+
+********
+
+0	Layer Name: conv2d_37/Conv2D 	 Layer time: 0 	 number of inputs: 3 	 input shape: 256x38x38 	 output shape: 512x38x38
+1	Layer Name: conv2d_37/BatchNorm 	 Layer time: 0 	 number of inputs: 5 	 input shape: 512x38x38 	 output shape: 512x38x38
+2	Layer Name: conv2d_37/LeakyRelu 	 Layer time: 0 	 number of inputs: 1 	 input shape: 512x38x38 	 output shape: 512x38x38
+3	Layer Name: add_36_37 	 Layer time: 0 	 number of inputs: 2 	 input shape: 512x38x38 	 output shape: 512x38x38
+Layer Number: 0 	 time: 0
+----------------------------
+
+ Sum of Layers time: 0
+
+
+Graph36   Input: 0.0111707   Task: 33.4696   send: 4.6646   Out: 0.0028875   Process: 38.1483
+
+
+
+********
+
+0	Layer Name: conv2d_38/Conv2D 	 Layer time: 0 	 number of inputs: 3 	 input shape: 512x38x38 	 output shape: 256x38x38
+1	Layer Name: conv2d_38/BatchNorm 	 Layer time: 0 	 number of inputs: 5 	 input shape: 256x38x38 	 output shape: 256x38x38
+2	Layer Name: conv2d_38/LeakyRelu 	 Layer time: 0 	 number of inputs: 1 	 input shape: 256x38x38 	 output shape: 256x38x38
+Layer Number: 0 	 time: 0
+----------------------------
+
+ Sum of Layers time: 0
+
+
+Graph37   Input: 0.0120167   Task: 25.5319   send: 1.47971   Out: 0.0018374   Process: 27.0255
+
+
+
+********
+
+0	Layer Name: conv2d_39/Conv2D 	 Layer time: 0 	 number of inputs: 3 	 input shape: 256x38x38 	 output shape: 512x38x38
+1	Layer Name: conv2d_39/BatchNorm 	 Layer time: 0 	 number of inputs: 5 	 input shape: 512x38x38 	 output shape: 512x38x38
+2	Layer Name: conv2d_39/LeakyRelu 	 Layer time: 0 	 number of inputs: 1 	 input shape: 512x38x38 	 output shape: 512x38x38
+3	Layer Name: add_38_39 	 Layer time: 0 	 number of inputs: 2 	 input shape: 512x38x38 	 output shape: 512x38x38
+Layer Number: 0 	 time: 0
+----------------------------
+
+ Sum of Layers time: 0
+
+
+Graph38   Input: 0.0107915   Task: 33.5431   send: 4.66675   Out: 0.0028584   Process: 38.2235
+
+
+
+********
+
+0	Layer Name: conv2d_40/Conv2D 	 Layer time: 0 	 number of inputs: 3 	 input shape: 512x38x38 	 output shape: 256x38x38
+1	Layer Name: conv2d_40/BatchNorm 	 Layer time: 0 	 number of inputs: 5 	 input shape: 256x38x38 	 output shape: 256x38x38
+2	Layer Name: conv2d_40/LeakyRelu 	 Layer time: 0 	 number of inputs: 1 	 input shape: 256x38x38 	 output shape: 256x38x38
+Layer Number: 0 	 time: 0
+----------------------------
+
+ Sum of Layers time: 0
+
+
+Graph39   Input: 0.0120168   Task: 25.57   send: 1.44095   Out: 0.0017208   Process: 27.0247
+
+
+
+********
+
+0	Layer Name: conv2d_41/Conv2D 	 Layer time: 0 	 number of inputs: 3 	 input shape: 256x38x38 	 output shape: 512x38x38
+1	Layer Name: conv2d_41/BatchNorm 	 Layer time: 0 	 number of inputs: 5 	 input shape: 512x38x38 	 output shape: 512x38x38
+2	Layer Name: conv2d_41/LeakyRelu 	 Layer time: 0 	 number of inputs: 1 	 input shape: 512x38x38 	 output shape: 512x38x38
+3	Layer Name: add_40_41 	 Layer time: 0 	 number of inputs: 2 	 input shape: 512x38x38 	 output shape: 512x38x38
+Layer Number: 0 	 time: 0
+----------------------------
+
+ Sum of Layers time: 0
+
+
+Graph40   Input: 0.0109665   Task: 33.4852   send: 4.68752   Out: 0.003004   Process: 38.1867
+
+
+
+********
+
+0	Layer Name: conv2d_42/Conv2D 	 Layer time: 0 	 number of inputs: 3 	 input shape: 512x38x38 	 output shape: 256x38x38
+1	Layer Name: conv2d_42/BatchNorm 	 Layer time: 0 	 number of inputs: 5 	 input shape: 256x38x38 	 output shape: 256x38x38
+2	Layer Name: conv2d_42/LeakyRelu 	 Layer time: 0 	 number of inputs: 1 	 input shape: 256x38x38 	 output shape: 256x38x38
+Layer Number: 0 	 time: 0
+----------------------------
+
+ Sum of Layers time: 0
+
+
+Graph41   Input: 0.0123667   Task: 25.5679   send: 1.49004   Out: 0.0017208   Process: 27.072
+
+
+
+********
+
+0	Layer Name: conv2d_43/Conv2D 	 Layer time: 0 	 number of inputs: 3 	 input shape: 256x38x38 	 output shape: 512x38x38
+1	Layer Name: conv2d_43/BatchNorm 	 Layer time: 0 	 number of inputs: 5 	 input shape: 512x38x38 	 output shape: 512x38x38
+2	Layer Name: conv2d_43/LeakyRelu 	 Layer time: 0 	 number of inputs: 1 	 input shape: 512x38x38 	 output shape: 512x38x38
+3	Layer Name: add_42_43 	 Layer time: 0 	 number of inputs: 2 	 input shape: 512x38x38 	 output shape: 512x38x38
+Layer Number: 0 	 time: 0
+----------------------------
+
+ Sum of Layers time: 0
+
+
+Graph42   Input: 0.0111417   Task: 33.5052   send: 4.72573   Out: 0.0031498   Process: 38.2453
+
+
+
+********
+
+0	Layer Name: conv2d_44/Conv2D 	 Layer time: 0 	 number of inputs: 3 	 input shape: 512x38x38 	 output shape: 1024x19x19
+1	Layer Name: conv2d_44/BatchNorm 	 Layer time: 0 	 number of inputs: 5 	 input shape: 1024x19x19 	 output shape: 1024x19x19
+2	Layer Name: conv2d_44/LeakyRelu 	 Layer time: 0 	 number of inputs: 1 	 input shape: 1024x19x19 	 output shape: 1024x19x19
+Layer Number: 0 	 time: 0
+----------------------------
+
+ Sum of Layers time: 0
+
+
+Graph43   Input: 0.0130374   Task: 25.5185   send: 2.82978   Out: 0.0018668   Process: 28.3632
+
+
+
+********
+
+0	Layer Name: conv2d_45/Conv2D 	 Layer time: 0 	 number of inputs: 3 	 input shape: 1024x19x19 	 output shape: 512x19x19
+1	Layer Name: conv2d_45/BatchNorm 	 Layer time: 0 	 number of inputs: 5 	 input shape: 512x19x19 	 output shape: 512x19x19
+2	Layer Name: conv2d_45/LeakyRelu 	 Layer time: 0 	 number of inputs: 1 	 input shape: 512x19x19 	 output shape: 512x19x19
+Layer Number: 0 	 time: 0
+----------------------------
+
+ Sum of Layers time: 0
+
+
+Graph44   Input: 0.0079335   Task: 25.1715   send: 0.59325   Out: 0.0021878   Process: 25.7748
+
+
+
+********
+
+0	Layer Name: conv2d_46/Conv2D 	 Layer time: 0 	 number of inputs: 3 	 input shape: 512x19x19 	 output shape: 1024x19x19
+1	Layer Name: conv2d_46/BatchNorm 	 Layer time: 0 	 number of inputs: 5 	 input shape: 1024x19x19 	 output shape: 1024x19x19
+2	Layer Name: conv2d_46/LeakyRelu 	 Layer time: 0 	 number of inputs: 1 	 input shape: 1024x19x19 	 output shape: 1024x19x19
+3	Layer Name: add_45_46 	 Layer time: 0 	 number of inputs: 2 	 input shape: 1024x19x19 	 output shape: 1024x19x19
+Layer Number: 0 	 time: 0
+----------------------------
+
+ Sum of Layers time: 0
+
+
+Graph45   Input: 0.0128333   Task: 33.9089   send: 2.91136   Out: 0.0019543   Process: 36.835
+
+
+
+********
+
+0	Layer Name: conv2d_47/Conv2D 	 Layer time: 0 	 number of inputs: 3 	 input shape: 1024x19x19 	 output shape: 512x19x19
+1	Layer Name: conv2d_47/BatchNorm 	 Layer time: 0 	 number of inputs: 5 	 input shape: 512x19x19 	 output shape: 512x19x19
+2	Layer Name: conv2d_47/LeakyRelu 	 Layer time: 0 	 number of inputs: 1 	 input shape: 512x19x19 	 output shape: 512x19x19
+Layer Number: 0 	 time: 0
+----------------------------
+
+ Sum of Layers time: 0
+
+
+Graph46   Input: 0.0085168   Task: 25.1773   send: 0.710792   Out: 0.0023919   Process: 25.899
+
+
+
+********
+
+0	Layer Name: conv2d_48/Conv2D 	 Layer time: 0 	 number of inputs: 3 	 input shape: 512x19x19 	 output shape: 1024x19x19
+1	Layer Name: conv2d_48/BatchNorm 	 Layer time: 0 	 number of inputs: 5 	 input shape: 1024x19x19 	 output shape: 1024x19x19
+2	Layer Name: conv2d_48/LeakyRelu 	 Layer time: 0 	 number of inputs: 1 	 input shape: 1024x19x19 	 output shape: 1024x19x19
+3	Layer Name: add_47_48 	 Layer time: 0 	 number of inputs: 2 	 input shape: 1024x19x19 	 output shape: 1024x19x19
+Layer Number: 0 	 time: 0
+----------------------------
+
+ Sum of Layers time: 0
+
+
+Graph47   Input: 0.0128333   Task: 33.8612   send: 2.86119   Out: 0.0019248   Process: 36.7371
+
+
+
+********
+
+0	Layer Name: conv2d_49/Conv2D 	 Layer time: 0 	 number of inputs: 3 	 input shape: 1024x19x19 	 output shape: 512x19x19
+1	Layer Name: conv2d_49/BatchNorm 	 Layer time: 0 	 number of inputs: 5 	 input shape: 512x19x19 	 output shape: 512x19x19
+2	Layer Name: conv2d_49/LeakyRelu 	 Layer time: 0 	 number of inputs: 1 	 input shape: 512x19x19 	 output shape: 512x19x19
+Layer Number: 0 	 time: 0
+----------------------------
+
+ Sum of Layers time: 0
+
+
+Graph48   Input: 0.008021   Task: 25.1355   send: 0.619325   Out: 0.002246   Process: 25.7651
+
+
+
+********
+
+0	Layer Name: conv2d_50/Conv2D 	 Layer time: 0 	 number of inputs: 3 	 input shape: 512x19x19 	 output shape: 1024x19x19
+1	Layer Name: conv2d_50/BatchNorm 	 Layer time: 0 	 number of inputs: 5 	 input shape: 1024x19x19 	 output shape: 1024x19x19
+2	Layer Name: conv2d_50/LeakyRelu 	 Layer time: 0 	 number of inputs: 1 	 input shape: 1024x19x19 	 output shape: 1024x19x19
+3	Layer Name: add_49_50 	 Layer time: 0 	 number of inputs: 2 	 input shape: 1024x19x19 	 output shape: 1024x19x19
+Layer Number: 0 	 time: 0
+----------------------------
+
+ Sum of Layers time: 0
+
+
+Graph49   Input: 0.0129209   Task: 33.8688   send: 2.91894   Out: 0.0020125   Process: 36.8027
+
+
+
+********
+
+0	Layer Name: conv2d_51/Conv2D 	 Layer time: 0 	 number of inputs: 3 	 input shape: 1024x19x19 	 output shape: 512x19x19
+1	Layer Name: conv2d_51/BatchNorm 	 Layer time: 0 	 number of inputs: 5 	 input shape: 512x19x19 	 output shape: 512x19x19
+2	Layer Name: conv2d_51/LeakyRelu 	 Layer time: 0 	 number of inputs: 1 	 input shape: 512x19x19 	 output shape: 512x19x19
+Layer Number: 0 	 time: 0
+----------------------------
+
+ Sum of Layers time: 0
+
+
+Graph50   Input: 0.0080209   Task: 25.1498   send: 0.640296   Out: 0.0021876   Process: 25.8003
+
+
+
+********
+
+0	Layer Name: conv2d_52/Conv2D 	 Layer time: 0 	 number of inputs: 3 	 input shape: 512x19x19 	 output shape: 1024x19x19
+1	Layer Name: conv2d_52/BatchNorm 	 Layer time: 0 	 number of inputs: 5 	 input shape: 1024x19x19 	 output shape: 1024x19x19
+2	Layer Name: conv2d_52/LeakyRelu 	 Layer time: 0 	 number of inputs: 1 	 input shape: 1024x19x19 	 output shape: 1024x19x19
+3	Layer Name: add_51_52 	 Layer time: 0 	 number of inputs: 2 	 input shape: 1024x19x19 	 output shape: 1024x19x19
+Layer Number: 0 	 time: 0
+----------------------------
+
+ Sum of Layers time: 0
+
+
+Graph51   Input: 0.0119294   Task: 33.8951   send: 1.45909   Out: 0.0018375   Process: 35.3679
+
+
+
+********
+
+0	Layer Name: conv2d_53 	 Layer time: 0 	 number of inputs: 3 	 input shape: 1024x19x19 	 output shape: 512x19x19
+1	Layer Name: conv2d_53/BatchNorm 	 Layer time: 0 	 number of inputs: 5 	 input shape: 512x19x19 	 output shape: 512x19x19
+2	Layer Name: conv2d_53/LeakyRelu 	 Layer time: 0 	 number of inputs: 1 	 input shape: 512x19x19 	 output shape: 512x19x19
+Layer Number: 0 	 time: 0
+----------------------------
+
+ Sum of Layers time: 0
+
+
+Graph52   Input: 0.0154878   Task: 25.1518   send: 0.584938   Out: 0.0022751   Process: 25.7545
+
+
+
+********
+
+0	Layer Name: conv2d_54 	 Layer time: 0 	 number of inputs: 3 	 input shape: 512x19x19 	 output shape: 1024x19x19
+1	Layer Name: conv2d_54/BatchNorm 	 Layer time: 0 	 number of inputs: 5 	 input shape: 1024x19x19 	 output shape: 1024x19x19
+2	Layer Name: conv2d_54/LeakyRelu 	 Layer time: 0 	 number of inputs: 1 	 input shape: 1024x19x19 	 output shape: 1024x19x19
+Layer Number: 0 	 time: 0
+----------------------------
+
+ Sum of Layers time: 0
+
+
+Graph53   Input: 0.0121042   Task: 25.5894   send: 1.41668   Out: 0.0018958   Process: 27.0201
+
+
+
+********
+
+0	Layer Name: conv2d_55 	 Layer time: 0 	 number of inputs: 3 	 input shape: 1024x19x19 	 output shape: 512x19x19
+1	Layer Name: conv2d_55/BatchNorm 	 Layer time: 0 	 number of inputs: 5 	 input shape: 512x19x19 	 output shape: 512x19x19
+2	Layer Name: conv2d_55/LeakyRelu 	 Layer time: 0 	 number of inputs: 1 	 input shape: 512x19x19 	 output shape: 512x19x19
+Layer Number: 0 	 time: 0
+----------------------------
+
+ Sum of Layers time: 0
+
+
+Graph54   Input: 0.0081374   Task: 25.3401   send: 0.600337   Out: 0.0023041   Process: 25.9509
+
+
+
+********
+
+0	Layer Name: conv2d_56 	 Layer time: 0 	 number of inputs: 3 	 input shape: 512x19x19 	 output shape: 1024x19x19
+1	Layer Name: conv2d_56/BatchNorm 	 Layer time: 0 	 number of inputs: 5 	 input shape: 1024x19x19 	 output shape: 1024x19x19
+2	Layer Name: conv2d_56/LeakyRelu 	 Layer time: 0 	 number of inputs: 1 	 input shape: 1024x19x19 	 output shape: 1024x19x19
+Layer Number: 0 	 time: 0
+----------------------------
+
+ Sum of Layers time: 0
+
+
+Graph55   Input: 0.0122501   Task: 25.5864   send: 1.43652   Out: 0.0017792   Process: 27.0369
+
+
+
+********
+
+0	Layer Name: conv2d_57 	 Layer time: 0 	 number of inputs: 3 	 input shape: 1024x19x19 	 output shape: 512x19x19
+1	Layer Name: conv2d_57/BatchNorm 	 Layer time: 0 	 number of inputs: 5 	 input shape: 512x19x19 	 output shape: 512x19x19
+2	Layer Name: conv2d_57/LeakyRelu 	 Layer time: 0 	 number of inputs: 1 	 input shape: 512x19x19 	 output shape: 512x19x19
+Layer Number: 0 	 time: 0
+----------------------------
+
+ Sum of Layers time: 0
+
+
+Graph56   Input: 0.0079332   Task: 25.2129   send: 1.0883   Out: 0.0023918   Process: 26.3115
+
+
+
+********
+
+0	Layer Name: conv2d_58 	 Layer time: 0 	 number of inputs: 3 	 input shape: 512x19x19 	 output shape: 1024x19x19
+1	Layer Name: conv2d_58/BatchNorm 	 Layer time: 0 	 number of inputs: 5 	 input shape: 1024x19x19 	 output shape: 1024x19x19
+2	Layer Name: conv2d_58/LeakyRelu 	 Layer time: 0 	 number of inputs: 1 	 input shape: 1024x19x19 	 output shape: 1024x19x19
+Layer Number: 0 	 time: 0
+----------------------------
+
+ Sum of Layers time: 0
+
+
+Graph57   Input: 0.0124834   Task: 25.5793   send: 1.43103   Out: 0.0020418   Process: 27.0249
+
+
+
+********
+
+0	Layer Name: conv2d_59 	 Layer time: 0 	 number of inputs: 3 	 input shape: 1024x19x19 	 output shape: 255x19x19
+1	Layer Name: conv2d_59/Linear 	 Layer time: 0 	 number of inputs: 1 	 input shape: 255x19x19 	 output shape: 255x19x19
+2	Layer Name: Yolo1 	 Layer time: 0 	 number of inputs: 1 	 input shape: 255x19x19 	 output shape: 3x19x19
+3	Layer Name: Yolo1 	 Layer time: 0 	 number of inputs: 1 	 input shape: 3x19x19 	 output shape: 3x19x19
+4	Layer Name: Yolo1 	 Layer time: 0 	 number of inputs: 1 	 input shape: 255x19x19 	 output shape: 2x19x19
+5	Layer Name: Yolo1 	 Layer time: 0 	 number of inputs: 1 	 input shape: 255x19x19 	 output shape: 250x19x19
+6	Layer Name: Yolo1 	 Layer time: 0 	 number of inputs: 1 	 input shape: 250x19x19 	 output shape: 250x19x19
+7	Layer Name: Yolo1 	 Layer time: 0 	 number of inputs: 3 	 input shape: 3x19x19 	 output shape: 255x19x19
+Layer Number: 0 	 time: 0
+----------------------------
+
+ Sum of Layers time: 0
+
+
+Graph58   Input: 0.0076708   Task: 66.7671   send: 0.314184   Out: 0.0021875   Process: 67.0911
+
+
+
+********
+
+0	Layer Name: conv2d_60 	 Layer time: 0 	 number of inputs: 3 	 input shape: 512x19x19 	 output shape: 256x19x19
+1	Layer Name: conv2d_59/BatchNorm 	 Layer time: 0 	 number of inputs: 5 	 input shape: 256x19x19 	 output shape: 256x19x19
+2	Layer Name: conv2d_60/LeakyRelu 	 Layer time: 0 	 number of inputs: 1 	 input shape: 256x19x19 	 output shape: 256x19x19
+3	Layer Name: Upsample_60 	 Layer time: 0 	 number of inputs: 1 	 input shape: 256x19x19 	 output shape: 256x38x38
+4	Layer Name: Route1 	 Layer time: 0 	 number of inputs: 2 	 input shape: 256x38x38 	 output shape: 768x38x38
+Layer Number: 0 	 time: 0
+----------------------------
+
+ Sum of Layers time: 0
+
+
+Graph59   Input: 0.0100333   Task: 42.2244   send: 4.1634   Out: 0.430325   Process: 46.8282
+
+
+
+********
+
+0	Layer Name: conv2d_61 	 Layer time: 0 	 number of inputs: 3 	 input shape: 768x38x38 	 output shape: 256x38x38
+1	Layer Name: conv2d_60/BatchNorm 	 Layer time: 0 	 number of inputs: 5 	 input shape: 256x38x38 	 output shape: 256x38x38
+2	Layer Name: conv2d_61/LeakyRelu 	 Layer time: 0 	 number of inputs: 1 	 input shape: 256x38x38 	 output shape: 256x38x38
+Layer Number: 0 	 time: 0
+----------------------------
+
+ Sum of Layers time: 0
+
+
+Graph60   Input: 0.0094211   Task: 25.1595   send: 1.34257   Out: 0.0029751   Process: 26.5145
+
+
+
+********
+
+0	Layer Name: conv2d_62 	 Layer time: 0 	 number of inputs: 3 	 input shape: 256x38x38 	 output shape: 512x38x38
+1	Layer Name: conv2d_61/BatchNorm 	 Layer time: 0 	 number of inputs: 5 	 input shape: 512x38x38 	 output shape: 512x38x38
+2	Layer Name: conv2d_62/LeakyRelu 	 Layer time: 0 	 number of inputs: 1 	 input shape: 512x38x38 	 output shape: 512x38x38
+Layer Number: 0 	 time: 0
+----------------------------
+
+ Sum of Layers time: 0
+
+
+Graph61   Input: 0.0128918   Task: 25.5306   send: 2.86606   Out: 0.001779   Process: 28.4113
+
+
+
+********
+
+0	Layer Name: conv2d_63 	 Layer time: 0 	 number of inputs: 3 	 input shape: 512x38x38 	 output shape: 256x38x38
+1	Layer Name: conv2d_62/BatchNorm 	 Layer time: 0 	 number of inputs: 5 	 input shape: 256x38x38 	 output shape: 256x38x38
+2	Layer Name: conv2d_63/LeakyRelu 	 Layer time: 0 	 number of inputs: 1 	 input shape: 256x38x38 	 output shape: 256x38x38
+Layer Number: 0 	 time: 0
+----------------------------
+
+ Sum of Layers time: 0
+
+
+Graph62   Input: 0.0102958   Task: 25.1785   send: 1.33607   Out: 0.0028001   Process: 26.5276
+
+
+
+********
+
+0	Layer Name: conv2d_64 	 Layer time: 0 	 number of inputs: 3 	 input shape: 256x38x38 	 output shape: 512x38x38
+1	Layer Name: conv2d_63/BatchNorm 	 Layer time: 0 	 number of inputs: 5 	 input shape: 512x38x38 	 output shape: 512x38x38
+2	Layer Name: conv2d_64/LeakyRelu 	 Layer time: 0 	 number of inputs: 1 	 input shape: 512x38x38 	 output shape: 512x38x38
+Layer Number: 0 	 time: 0
+----------------------------
+
+ Sum of Layers time: 0
+
+
+Graph63   Input: 0.0125708   Task: 25.524   send: 2.78046   Out: 0.001896   Process: 28.3189
+
+
+
+********
+
+0	Layer Name: conv2d_65 	 Layer time: 0 	 number of inputs: 3 	 input shape: 512x38x38 	 output shape: 256x38x38
+1	Layer Name: conv2d_65/BatchNorm 	 Layer time: 0 	 number of inputs: 5 	 input shape: 256x38x38 	 output shape: 256x38x38
+2	Layer Name: conv2d_65/LeakyRelu 	 Layer time: 0 	 number of inputs: 1 	 input shape: 256x38x38 	 output shape: 256x38x38
+Layer Number: 0 	 time: 0
+----------------------------
+
+ Sum of Layers time: 0
+
+
+Graph64   Input: 0.0106167   Task: 25.2121   send: 2.58554   Out: 0.0029168   Process: 27.8112
+
+
+
+********
+
+0	Layer Name: conv2d_66 	 Layer time: 0 	 number of inputs: 3 	 input shape: 256x38x38 	 output shape: 512x38x38
+1	Layer Name: conv2d_65/BatchNorm 	 Layer time: 0 	 number of inputs: 5 	 input shape: 512x38x38 	 output shape: 512x38x38
+2	Layer Name: conv2d_66/LeakyRelu 	 Layer time: 0 	 number of inputs: 1 	 input shape: 512x38x38 	 output shape: 512x38x38
+Layer Number: 0 	 time: 0
+----------------------------
+
+ Sum of Layers time: 0
+
+
+Graph65   Input: 0.0128624   Task: 25.6088   send: 3.09575   Out: 0.0020416   Process: 28.7195
+
+
+
+********
+
+0	Layer Name: conv2d_67 	 Layer time: 0 	 number of inputs: 3 	 input shape: 512x38x38 	 output shape: 255x38x38
+1	Layer Name: conv2d_67/Linear 	 Layer time: 0 	 number of inputs: 1 	 input shape: 255x38x38 	 output shape: 255x38x38
+2	Layer Name: Yolo2 	 Layer time: 0 	 number of inputs: 1 	 input shape: 255x38x38 	 output shape: 3x38x38
+3	Layer Name: Yolo2 	 Layer time: 0 	 number of inputs: 1 	 input shape: 3x38x38 	 output shape: 3x38x38
+4	Layer Name: Yolo2 	 Layer time: 0 	 number of inputs: 1 	 input shape: 255x38x38 	 output shape: 2x38x38
+5	Layer Name: Yolo2 	 Layer time: 0 	 number of inputs: 1 	 input shape: 255x38x38 	 output shape: 250x38x38
+6	Layer Name: Yolo2 	 Layer time: 0 	 number of inputs: 1 	 input shape: 250x38x38 	 output shape: 250x38x38
+7	Layer Name: Yolo2 	 Layer time: 0 	 number of inputs: 3 	 input shape: 3x38x38 	 output shape: 255x38x38
+Layer Number: 0 	 time: 0
+----------------------------
+
+ Sum of Layers time: 0
+
+
+Graph66   Input: 0.0100045   Task: 66.7277   send: 1.13916   Out: 0.0119003   Process: 67.8888
+
+
+
+********
+
+0	Layer Name: conv2d_68 	 Layer time: 0 	 number of inputs: 3 	 input shape: 256x38x38 	 output shape: 128x38x38
+1	Layer Name: conv2d_66/BatchNorm 	 Layer time: 0 	 number of inputs: 5 	 input shape: 128x38x38 	 output shape: 128x38x38
+2	Layer Name: conv2d_68/LeakyRelu 	 Layer time: 0 	 number of inputs: 1 	 input shape: 128x38x38 	 output shape: 128x38x38
+3	Layer Name: Upsample_68 	 Layer time: 0 	 number of inputs: 1 	 input shape: 128x38x38 	 output shape: 128x76x76
+4	Layer Name: Route2 	 Layer time: 0 	 number of inputs: 2 	 input shape: 128x76x76 	 output shape: 384x76x76
+Layer Number: 0 	 time: 0
+----------------------------
+
+ Sum of Layers time: 0
+
+
+Graph67   Input: 0.0100623   Task: 42.1684   send: 8.35742   Out: 0.438667   Process: 50.9746
+
+
+
+********
+
+0	Layer Name: conv2d_69 	 Layer time: 0 	 number of inputs: 3 	 input shape: 384x76x76 	 output shape: 128x76x76
+1	Layer Name: conv2d_67/BatchNorm 	 Layer time: 0 	 number of inputs: 5 	 input shape: 128x76x76 	 output shape: 128x76x76
+2	Layer Name: conv2d_69/LeakyRelu 	 Layer time: 0 	 number of inputs: 1 	 input shape: 128x76x76 	 output shape: 128x76x76
+Layer Number: 0 	 time: 0
+----------------------------
+
+ Sum of Layers time: 0
+
+
+Graph68   Input: 0.0110542   Task: 25.1525   send: 2.65624   Out: 0.002596   Process: 27.8224
+
+
+
+********
+
+0	Layer Name: conv2d_70 	 Layer time: 0 	 number of inputs: 3 	 input shape: 128x76x76 	 output shape: 256x76x76
+1	Layer Name: conv2d_68/BatchNorm 	 Layer time: 0 	 number of inputs: 5 	 input shape: 256x76x76 	 output shape: 256x76x76
+2	Layer Name: conv2d_70/LeakyRelu 	 Layer time: 0 	 number of inputs: 1 	 input shape: 256x76x76 	 output shape: 256x76x76
+Layer Number: 0 	 time: 0
+----------------------------
+
+ Sum of Layers time: 0
+
+
+Graph69   Input: 0.0135625   Task: 25.4274   send: 6.03461   Out: 0.0021293   Process: 31.4777
+
+
+
+********
+
+0	Layer Name: conv2d_71 	 Layer time: 0 	 number of inputs: 3 	 input shape: 256x76x76 	 output shape: 128x76x76
+1	Layer Name: conv2d_69/BatchNorm 	 Layer time: 0 	 number of inputs: 5 	 input shape: 128x76x76 	 output shape: 128x76x76
+2	Layer Name: conv2d_71/LeakyRelu 	 Layer time: 0 	 number of inputs: 1 	 input shape: 128x76x76 	 output shape: 128x76x76
+Layer Number: 0 	 time: 0
+----------------------------
+
+ Sum of Layers time: 0
+
+
+Graph70   Input: 0.0106751   Task: 25.1541   send: 2.636   Out: 0.0025376   Process: 27.8033
+
+
+
+********
+
+0	Layer Name: conv2d_72 	 Layer time: 0 	 number of inputs: 3 	 input shape: 128x76x76 	 output shape: 256x76x76
+1	Layer Name: conv2d_70/BatchNorm 	 Layer time: 0 	 number of inputs: 5 	 input shape: 256x76x76 	 output shape: 256x76x76
+2	Layer Name: conv2d_72/LeakyRelu 	 Layer time: 0 	 number of inputs: 1 	 input shape: 256x76x76 	 output shape: 256x76x76
+Layer Number: 0 	 time: 0
+----------------------------
+
+ Sum of Layers time: 0
+
+
+Graph71   Input: 0.0135043   Task: 25.4563   send: 5.60834   Out: 0.0021583   Process: 31.0803
+
+
+
+********
+
+0	Layer Name: conv2d_73 	 Layer time: 0 	 number of inputs: 3 	 input shape: 256x76x76 	 output shape: 128x76x76
+1	Layer Name: conv2d_71/BatchNorm 	 Layer time: 0 	 number of inputs: 5 	 input shape: 128x76x76 	 output shape: 128x76x76
+2	Layer Name: conv2d_73/LeakyRelu 	 Layer time: 0 	 number of inputs: 1 	 input shape: 128x76x76 	 output shape: 128x76x76
+Layer Number: 0 	 time: 0
+----------------------------
+
+ Sum of Layers time: 0
+
+
+Graph72   Input: 0.0109372   Task: 25.3144   send: 2.64661   Out: 0.0030043   Process: 27.975
+
+
+
+********
+
+0	Layer Name: conv2d_74 	 Layer time: 0 	 number of inputs: 3 	 input shape: 128x76x76 	 output shape: 256x76x76
+1	Layer Name: conv2d_72/BatchNorm 	 Layer time: 0 	 number of inputs: 5 	 input shape: 256x76x76 	 output shape: 256x76x76
+2	Layer Name: conv2d_74/LeakyRelu 	 Layer time: 0 	 number of inputs: 1 	 input shape: 256x76x76 	 output shape: 256x76x76
+Layer Number: 0 	 time: 0
+----------------------------
+
+ Sum of Layers time: 0
+
+
+Graph73   Input: 0.0132711   Task: 25.6472   send: 5.61788   Out: 0.0019833   Process: 31.2804
+
+
+
+********
+
+0	Layer Name: conv2d_75 	 Layer time: 0 	 number of inputs: 3 	 input shape: 256x76x76 	 output shape: 255x76x76
+1	Layer Name: conv2d_75/Linear 	 Layer time: 0 	 number of inputs: 1 	 input shape: 255x76x76 	 output shape: 255x76x76
+2	Layer Name: Yolo3 	 Layer time: 0 	 number of inputs: 1 	 input shape: 255x76x76 	 output shape: 3x76x76
+3	Layer Name: Yolo3 	 Layer time: 0 	 number of inputs: 1 	 input shape: 3x76x76 	 output shape: 3x76x76
+4	Layer Name: Yolo3 	 Layer time: 0 	 number of inputs: 1 	 input shape: 255x76x76 	 output shape: 2x76x76
+5	Layer Name: Yolo3 	 Layer time: 0 	 number of inputs: 1 	 input shape: 255x76x76 	 output shape: 250x76x76
+6	Layer Name: Yolo3 	 Layer time: 0 	 number of inputs: 1 	 input shape: 250x76x76 	 output shape: 250x76x76
+7	Layer Name: Yolo3 	 Layer time: 0 	 number of inputs: 3 	 input shape: 3x76x76 	 output shape: 255x76x76
+Layer Number: 0 	 time: 0
+----------------------------
+
+ Sum of Layers time: 0
+
+
+Graph74   Input: 0.0071751   Task: 66.9592   send: 0.0030624   Out: 0.292513   Process: 67.2619
+
+
+
+********
+
+
+
+AVG Latency: 3069.26
+
+Profiling these DVFS settings finised
+Please Enter the desired Frequency setttings: 
+Test passed

@@ -1,0 +1,598 @@
+List of devices attached
+4UB7RRTHY8	device
+
+disconnected everything
+adbd is already running as root
+remount succeeded
+/home/ehsan/UvA/ARMCL/Rock-Pi/ComputeLibrary_64_Yolov3/utils/DVFS/governor_pandoon.ko: 1 file pushed, 0 skipped. 1442.9 MB/s (260080 bytes in 0.000s)
+Module is already inserted, removing and reinserting...
+
+WARNING: linker: Warning: unable to normalize "build/"
+4 Input images are read from /data/local/ARM-CO-UP/assets//ppm_images_227/
+[UtilsPipeline.h] image directory is: /data/local/ARM-CO-UP/assets//ppm_images_227//
+Threads : 1
+Small Cores Threads : 1
+Target : Neon
+Data type : F32
+Data layout : NHWC
+Tuner enabled? : false
+Cache enabled? : false
+Tuner mode : Normal
+Tuner file : 
+MLGO file : 
+Fast math enabled? : false
+Data path : /data/local/ARM-CO-UP/assets//alexnet/
+Image file : /data/local/ARM-CO-UP/assets//ppm_images_227//
+Labels file : /data/local/ARM-CO-UP/assets//labels.txt
+Partition point is : 0
+Second partition point is : 0
+Order is : GLGLGLGL
+freqs of layers : 
+power_profile_mode : transfers
+GPU host is: B
+NPU host is: B
+Number of totla cores is : 6
+Number of little cores is : 4
+Print task names : 0
+Run network for 10 times.
+Layer timing: 0
+
+Adding Graph0 target 2 PE: G Host PE: B Layers: 0-0
+Adding Graph1 target 1 PE: L Host PE: L Layers: 1-1
+Adding Graph2 target 2 PE: G Host PE: B Layers: 2-2
+Adding Graph3 target 1 PE: L Host PE: L Layers: 3-3
+Adding Graph4 target 2 PE: G Host PE: B Layers: 4-4
+Adding Graph5 target 1 PE: L Host PE: L Layers: 5-5
+Adding Graph6 target 2 PE: G Host PE: B Layers: 6-6
+Adding Graph7 target 1 PE: L Host PE: L Layers: 7-7
+pandoon
+pandoon
+pandoon
+Pandoon opened at 3
+****************************
+GraphUtils.cpp- reading images: /data/local/ARM-CO-UP/assets//ppm_images_227//
+/data/local/ARM-CO-UP/assets//ppm_images_227//gold_fish.ppm
+/data/local/ARM-CO-UP/assets//ppm_images_227//gondola.ppm
+/data/local/ARM-CO-UP/assets//ppm_images_227//school_bus.ppm
+/data/local/ARM-CO-UP/assets//ppm_images_227//go_kart.ppm
+*****************************
+
+
+
+			0 skipping layer: 
+current layer number: 0 layer name: 
+			0 skipping layer: conv1
+current layer number: 0 layer name: conv1
+			0 skipping layer: relu1
+current layer number: 0 layer name: relu1
+			0 skipping layer: norm1
+current layer number: 0 layer name: norm1
+			0 skipping layer: pool1
+current layer number: 0 layer name: pool1
+1 layer: conv2
+current layer number: 1 layer name: conv2
+Input node for the layer 1 is in graph: 0 Adding Transmitter to that graph
+Adding Sender_pool1 to graph 0 with target 2
+Adding Receiver_pool1 to graph 1 with target 1
+1 skipping layer: relu2
+current layer number: 1 layer name: relu2
+1 skipping layer: norm2
+current layer number: 1 layer name: norm2
+1 skipping layer: pool2
+current layer number: 1 layer name: pool2
+			2 layer: conv3
+current layer number: 2 layer name: conv3
+Input node for the layer 2 is in graph: 1 Adding Transmitter to that graph
+Adding Sender_pool2 to graph 1 with target 1
+Adding Receiver_pool2 to graph 2 with target 2
+			2 skipping layer: relu3
+current layer number: 2 layer name: relu3
+3 layer: conv4
+current layer number: 3 layer name: conv4
+Input node for the layer 3 is in graph: 2 Adding Transmitter to that graph
+Adding Sender_relu3 to graph 2 with target 2
+Adding Receiver_relu3 to graph 3 with target 1
+3 skipping layer: relu4
+current layer number: 3 layer name: relu4
+			4 layer: conv5
+current layer number: 4 layer name: conv5
+Input node for the layer 4 is in graph: 3 Adding Transmitter to that graph
+Adding Sender_relu4 to graph 3 with target 1
+Adding Receiver_relu4 to graph 4 with target 2
+			4 skipping layer: relu5
+current layer number: 4 layer name: relu5
+			4 skipping layer: pool5
+current layer number: 4 layer name: pool5
+5 layer: fc6
+current layer number: 5 layer name: fc6
+Input node for the layer 5 is in graph: 4 Adding Transmitter to that graph
+Adding Sender_pool5 to graph 4 with target 2
+Adding Receiver_pool5 to graph 5 with target 1
+5 skipping layer: relu6
+current layer number: 5 layer name: relu6
+			6 layer: fc7
+current layer number: 6 layer name: fc7
+Input node for the layer 6 is in graph: 5 Adding Transmitter to that graph
+Adding Sender_relu6 to graph 5 with target 1
+Adding Receiver_relu6 to graph 6 with target 2
+			6 skipping layer: relu7
+current layer number: 6 layer name: relu7
+7 layer: fc8
+current layer number: 7 layer name: fc8
+Input node for the layer 7 is in graph: 6 Adding Transmitter to that graph
+Adding Sender_relu7 to graph 6 with target 2
+Adding Receiver_relu7 to graph 7 with target 1
+7 skipping layer: prob
+current layer number: 7 layer name: prob
+output accessor reading label file /data/local/ARM-CO-UP/assets//labels.txt
+			8 layer: 
+current layer number: 8 layer name: 
+
+
+*********************
+Start finalizing Graphs
+*******************
+
+Graph id: 1 Target is: Neon
+Graph id: Graph id: 0 Target is: NeonGraph id: 
+3 Target is: Neon
+2Graph id:  Target is: Neon
+Graph id: 6 Target is: Neon
+Graph id: 5 Target is: Neon
+7 Target is: Neon
+Graph (1) Task 0: conv2_g0
+Graph (1) Task 1: conv2_g1
+Graph (1) Task 2: conv2
+Graph (1) Task 3: relu2
+Graph (1) Task 4: norm2
+Graph (1) Task 5: pool2
+Graph 1 input size: 0 receiver size: 1 tasks size: 6 senders size: 1 output size: 0
+
+Graph (0) Task 0: conv1
+Graph (0) Task 1: relu1
+Graph (0) Task 2: norm1
+Graph (0) Task 3: pool1
+Graph 0 input size: 1 receiver size: 0 tasks size: 4 senders size: 1 output size: 0
+
+Graph (3) Task 0: conv4_g0
+Graph (2) Task 0: conv3
+Graph (2) Task 1: relu3
+Graph 2 input size: 0 receiver size: 1 tasks size: 2 senders size: 1 output size: 0
+
+Graph (3) Task 1: conv4_g1
+Graph (3) Task 2: conv4
+Graph (3) Task 3: relu4
+Graph 3 input size: 0 receiver size: 1 tasks size: 4 senders size: 1 output size: 0
+
+Graph (6) Task 0: fc7
+Graph (6) Task 1: relu7
+Graph 6 input size: 0 receiver size: 1 tasks size: 2 senders size: 1 output size: 0
+
+Graph id: 4 Target is: CL
+Graph (5) Task 0: fc6
+Graph (5) Task 1: relu6
+Graph 5 input size: 0 receiver size: 1 tasks size: 2 senders size: 1 output size: 0
+
+Graph (7) Task 0: fc8
+Graph (7) Task 1: prob
+Graph 7 input size: 0 receiver size: 1 tasks size: 2 senders size: 0 output size: 1
+
+setting ending for layer: pool1
+Finish finalizing graph 0
+
+
+
+setting ending for layer: pool2
+Finish finalizing graph 1
+
+
+
+setting ending for layer: relu4
+Finish finalizing graph 3
+
+
+
+setting ending for layer: relu3
+Finish finalizing graph 2
+
+
+
+setting ending for layer: prob
+Finish finalizing graph 7
+
+
+
+Graph (4) Task 0: conv5_g0
+Graph (4) Task 1: conv5_g1
+Graph (4) Task 2: conv5
+Graph (4) Task 3: relu5
+Graph (4) Task 4: pool5
+Graph 4 input size: 0 receiver size: 1 tasks size: 5 senders size: 1 output size: 0
+
+setting ending for layer: pool5
+Finish finalizing graph 4
+
+
+
+setting ending for layer: relu7
+Finish finalizing graph 6
+
+
+
+setting ending for layer: relu6
+Finish finalizing graph 5
+
+
+
+setup finished
+
+Please Enter the desired Frequency setttings: 0 Running Graph with min LW DVFS
+governor 0 task:pool1 freqs:0,0,0
+governor 1 task:pool2 freqs:0,0,0
+governor 2 task:pool5 freqs:0,0,0
+governor 3 task:prob freqs:0,0,0
+governor 4 task:relu3 freqs:0,0,0
+governor 5 task:relu4 freqs:0,0,0
+governor 6 task:relu6 freqs:0,0,0
+governor 7 task:relu7 freqs:0,0,0
+set_GPIOs with mode: transfers
+tass name: conv1	starting gpio: 1	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: relu1	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: norm1	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: pool1	starting gpio: 0	ending gpio: 1	profiling layers: 0	profiling transfers: 1
+tass name: conv2_g0	starting gpio: 1	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2_g1	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv2	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: relu2	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: norm2	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: pool2	starting gpio: 0	ending gpio: 1	profiling layers: 0	profiling transfers: 1
+tass name: conv3	starting gpio: 1	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: relu3	starting gpio: 0	ending gpio: 1	profiling layers: 0	profiling transfers: 1
+tass name: conv4_g0	starting gpio: 1	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv4_g1	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv4	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: relu4	starting gpio: 0	ending gpio: 1	profiling layers: 0	profiling transfers: 1
+tass name: conv5_g0	starting gpio: 1	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv5_g1	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv5	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: relu5	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: pool5	starting gpio: 0	ending gpio: 1	profiling layers: 0	profiling transfers: 1
+tass name: fc6	starting gpio: 1	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: relu6	starting gpio: 0	ending gpio: 1	profiling layers: 0	profiling transfers: 1
+tass name: fc7	starting gpio: 1	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: relu7	starting gpio: 0	ending gpio: 1	profiling layers: 0	profiling transfers: 1
+tass name: fc8	starting gpio: 1	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: prob	starting gpio: 0	ending gpio: 1	profiling layers: 0	profiling transfers: 1
+
+
+
+*********************************************
+start running graphs
+*************************************************
+
+
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gold_fish.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0000 - [id = 0], n01440764 tench, Tinca tinca
+0.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 2], n01484850 great white shark, white shark, man-eater, man-eating shark, Carcharodon carcharias
+0.0000 - [id = 3], n01491361 tiger shark, Galeocerdo cuvieri
+0.0000 - [id = 4], n01494475 hammerhead, hammerhead shark
+
+
+************
+Photo_index:1
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gondola.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0000 - [id = 0], n01440764 tench, Tinca tinca
+0.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 2], n01484850 great white shark, white shark, man-eater, man-eating shark, Carcharodon carcharias
+0.0000 - [id = 3], n01491361 tiger shark, Galeocerdo cuvieri
+0.0000 - [id = 4], n01494475 hammerhead, hammerhead shark
+
+
+************
+Photo_index:2
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//school_bus.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0000 - [id = 0], n01440764 tench, Tinca tinca
+0.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 2], n01484850 great white shark, white shark, man-eater, man-eating shark, Carcharodon carcharias
+0.0000 - [id = 3], n01491361 tiger shark, Galeocerdo cuvieri
+0.0000 - [id = 4], n01494475 hammerhead, hammerhead shark
+
+
+************
+Photo_index:3
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//go_kart.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0000 - [id = 0], n01440764 tench, Tinca tinca
+0.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 2], n01484850 great white shark, white shark, man-eater, man-eating shark, Carcharodon carcharias
+0.0000 - [id = 3], n01491361 tiger shark, Galeocerdo cuvieri
+0.0000 - [id = 4], n01494475 hammerhead, hammerhead shark
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gold_fish.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0000 - [id = 0], n01440764 tench, Tinca tinca
+0.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 2], n01484850 great white shark, white shark, man-eater, man-eating shark, Carcharodon carcharias
+0.0000 - [id = 3], n01491361 tiger shark, Galeocerdo cuvieri
+0.0000 - [id = 4], n01494475 hammerhead, hammerhead shark
+
+
+************
+Photo_index:1
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gondola.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0000 - [id = 0], n01440764 tench, Tinca tinca
+0.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 2], n01484850 great white shark, white shark, man-eater, man-eating shark, Carcharodon carcharias
+0.0000 - [id = 3], n01491361 tiger shark, Galeocerdo cuvieri
+0.0000 - [id = 4], n01494475 hammerhead, hammerhead shark
+
+
+************
+Photo_index:2
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//school_bus.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0000 - [id = 0], n01440764 tench, Tinca tinca
+0.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 2], n01484850 great white shark, white shark, man-eater, man-eating shark, Carcharodon carcharias
+0.0000 - [id = 3], n01491361 tiger shark, Galeocerdo cuvieri
+0.0000 - [id = 4], n01494475 hammerhead, hammerhead shark
+
+
+************
+Photo_index:3
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//go_kart.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0000 - [id = 0], n01440764 tench, Tinca tinca
+0.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 2], n01484850 great white shark, white shark, man-eater, man-eating shark, Carcharodon carcharias
+0.0000 - [id = 3], n01491361 tiger shark, Galeocerdo cuvieri
+0.0000 - [id = 4], n01494475 hammerhead, hammerhead shark
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gold_fish.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0000 - [id = 0], n01440764 tench, Tinca tinca
+0.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 2], n01484850 great white shark, white shark, man-eater, man-eating shark, Carcharodon carcharias
+0.0000 - [id = 3], n01491361 tiger shark, Galeocerdo cuvieri
+0.0000 - [id = 4], n01494475 hammerhead, hammerhead shark
+
+
+************
+Photo_index:1
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gondola.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0000 - [id = 0], n01440764 tench, Tinca tinca
+0.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 2], n01484850 great white shark, white shark, man-eater, man-eating shark, Carcharodon carcharias
+0.0000 - [id = 3], n01491361 tiger shark, Galeocerdo cuvieri
+0.0000 - [id = 4], n01494475 hammerhead, hammerhead shark
+
+
+************
+Photo_index:2
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//school_bus.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0000 - [id = 0], n01440764 tench, Tinca tinca
+0.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 2], n01484850 great white shark, white shark, man-eater, man-eating shark, Carcharodon carcharias
+0.0000 - [id = 3], n01491361 tiger shark, Galeocerdo cuvieri
+0.0000 - [id = 4], n01494475 hammerhead, hammerhead shark
+
+
+************
+Photo_index:3
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//go_kart.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0000 - [id = 0], n01440764 tench, Tinca tinca
+0.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 2], n01484850 great white shark, white shark, man-eater, man-eating shark, Carcharodon carcharias
+0.0000 - [id = 3], n01491361 tiger shark, Galeocerdo cuvieri
+0.0000 - [id = 4], n01494475 hammerhead, hammerhead shark
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_227//gold_fish.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0000 - [id = 0], n01440764 tench, Tinca tinca
+0.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 2], n01484850 great white shark, white shark, man-eater, man-eating shark, Carcharodon carcharias
+0.0000 - [id = 3], n01491361 tiger shark, Galeocerdo cuvieri
+0.0000 - [id = 4], n01494475 hammerhead, hammerhead shark
+0	Layer Name: conv1 	 Layer time: 0 	 number of inputs: 3 	 input shape: 3x227x227 	 output shape: 96x55x55
+1	Layer Name: relu1 	 Layer time: 0 	 number of inputs: 1 	 input shape: 96x55x55 	 output shape: 96x55x55
+2	Layer Name: norm1 	 Layer time: 0 	 number of inputs: 1 	 input shape: 96x55x55 	 output shape: 96x55x55
+3	Layer Name: pool1 	 Layer time: 0 	 number of inputs: 1 	 input shape: 96x55x55 	 output shape: 96x27x27
+Layer Number: 0 	 time: 0
+----------------------------
+
+ Sum of Layers time: 0
+
+
+Graph0   Input: 62.767   Task: 33.4757   send: 0.280817   Out: 0.0022463   Process: 96.5257
+
+
+
+********
+
+0	Layer Name: conv2_g0 	 Layer time: 0 	 number of inputs: 3 	 input shape: 48x27x27 	 output shape: 128x27x27
+1	Layer Name: conv2_g1 	 Layer time: 0 	 number of inputs: 3 	 input shape: 48x27x27 	 output shape: 128x27x27
+2	Layer Name: conv2 	 Layer time: 0 	 number of inputs: 2 	 input shape: 128x27x27 	 output shape: 256x27x27
+3	Layer Name: relu2 	 Layer time: 0 	 number of inputs: 1 	 input shape: 256x27x27 	 output shape: 256x27x27
+4	Layer Name: norm2 	 Layer time: 0 	 number of inputs: 1 	 input shape: 256x27x27 	 output shape: 256x27x27
+5	Layer Name: pool2 	 Layer time: 0 	 number of inputs: 1 	 input shape: 256x27x27 	 output shape: 256x13x13
+Layer Number: 0 	 time: 0
+----------------------------
+
+ Sum of Layers time: 0
+
+
+Graph1   Input: 0.0097414   Task: 50.5503   send: 0.2156   Out: 0.0012834   Process: 50.7769
+
+
+
+********
+
+0	Layer Name: conv3 	 Layer time: 0 	 number of inputs: 3 	 input shape: 256x13x13 	 output shape: 384x13x13
+1	Layer Name: relu3 	 Layer time: 0 	 number of inputs: 1 	 input shape: 384x13x13 	 output shape: 384x13x13
+Layer Number: 0 	 time: 0
+----------------------------
+
+ Sum of Layers time: 0
+
+
+Graph2   Input: 0.0079042   Task: 16.9095   send: 0.259817   Out: 0.0022169   Process: 17.1794
+
+
+
+********
+
+0	Layer Name: conv4_g0 	 Layer time: 0 	 number of inputs: 3 	 input shape: 192x13x13 	 output shape: 192x13x13
+1	Layer Name: conv4_g1 	 Layer time: 0 	 number of inputs: 3 	 input shape: 192x13x13 	 output shape: 192x13x13
+2	Layer Name: conv4 	 Layer time: 0 	 number of inputs: 2 	 input shape: 192x13x13 	 output shape: 384x13x13
+3	Layer Name: relu4 	 Layer time: 0 	 number of inputs: 1 	 input shape: 384x13x13 	 output shape: 384x13x13
+Layer Number: 0 	 time: 0
+----------------------------
+
+ Sum of Layers time: 0
+
+
+Graph3   Input: 0.0136209   Task: 33.8909   send: 2.13789   Out: 0.0016917   Process: 36.0441
+
+
+
+********
+
+0	Layer Name: conv5_g0 	 Layer time: 0 	 number of inputs: 3 	 input shape: 192x13x13 	 output shape: 128x13x13
+1	Layer Name: conv5_g1 	 Layer time: 0 	 number of inputs: 3 	 input shape: 192x13x13 	 output shape: 128x13x13
+2	Layer Name: conv5 	 Layer time: 0 	 number of inputs: 2 	 input shape: 128x13x13 	 output shape: 256x13x13
+3	Layer Name: relu5 	 Layer time: 0 	 number of inputs: 1 	 input shape: 256x13x13 	 output shape: 256x13x13
+4	Layer Name: pool5 	 Layer time: 0 	 number of inputs: 1 	 input shape: 256x13x13 	 output shape: 256x6x6
+Layer Number: 0 	 time: 0
+----------------------------
+
+ Sum of Layers time: 0
+
+
+Graph4   Input: 0.0094206   Task: 41.8316   send: 1.23821   Out: 0.0022455   Process: 43.0814
+
+
+
+********
+
+0	Layer Name: fc6 	 Layer time: 0 	 number of inputs: 3 	 input shape: 256x6x6 	 output shape: 4096
+1	Layer Name: relu6 	 Layer time: 0 	 number of inputs: 1 	 input shape: 4096 	 output shape: 4096
+Layer Number: 0 	 time: 0
+----------------------------
+
+ Sum of Layers time: 0
+
+
+Graph5   Input: 0.00945   Task: 17.13   send: 0.0719251   Out: 0.001429   Process: 17.2129
+
+
+
+********
+
+0	Layer Name: fc7 	 Layer time: 0 	 number of inputs: 3 	 input shape: 4096 	 output shape: 4096
+1	Layer Name: relu7 	 Layer time: 0 	 number of inputs: 1 	 input shape: 4096 	 output shape: 4096
+Layer Number: 0 	 time: 0
+----------------------------
+
+ Sum of Layers time: 0
+
+
+Graph6   Input: 0.0078166   Task: 16.8393   send: 0.0622707   Out: 0.0020997   Process: 16.9115
+
+
+
+********
+
+0	Layer Name: fc8 	 Layer time: 0 	 number of inputs: 3 	 input shape: 4096 	 output shape: 1000
+1	Layer Name: prob 	 Layer time: 0 	 number of inputs: 1 	 input shape: 1000 	 output shape: 1000
+Layer Number: 0 	 time: 0
+----------------------------
+
+ Sum of Layers time: 0
+
+
+Graph7   Input: 0.0087498   Task: 17.2275   send: 0.0019539   Out: 0.420875   Process: 17.6591
+
+
+
+********
+
+
+
+AVG Latency: 297.066
+
+Profiling these DVFS settings finised
+Please Enter the desired Frequency setttings: 
+Test passed

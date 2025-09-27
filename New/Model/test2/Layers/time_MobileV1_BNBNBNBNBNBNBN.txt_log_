@@ -1,0 +1,2645 @@
+List of devices attached
+4UB7RRTHY8	device
+
+disconnected everything
+adbd is already running as root
+remount succeeded
+/home/ehsan/UvA/ARMCL/Rock-Pi/ComputeLibrary_64_Yolov3/utils/DVFS/governor_pandoon.ko: 1 file pushed, 0 skipped. 1033.4 MB/s (260080 bytes in 0.000s)
+Module is already inserted, removing and reinserting...
+start=1, end=1
+conda run -n rock-kit3 python /home/ehsan/UvA/Sub_Model/Sub_Func_CO_UP.py --Start=1 --End=1 --Model=/home/ehsan/UvA/Sub_Model/MobileV1/MobileNet.h5 --Structure=/home/ehsan/UvA/Sub_Model/MobileV1/
+st is /home/ehsan/UvA/Sub_Model/MobileV1/
+/home/ehsan/UvA/Sub_Model/MobileV1/MobileNet.h5
+Visiting layer: input_2
+Visiting layer: conv1_pad
+Visiting layer: conv1
+Visiting layer: conv1_bn
+Visiting layer: conv1_relu
+Visiting layer: conv_dw_1
+Visiting layer: conv_dw_1_bn
+Visiting layer: conv_dw_1_relu
+Visiting layer: conv_pw_1
+Visiting layer: conv_pw_1_bn
+Visiting layer: conv_pw_1_relu
+Visiting layer: conv_pad_2
+Visiting layer: conv_dw_2
+Visiting layer: conv_dw_2_bn
+Visiting layer: conv_dw_2_relu
+Visiting layer: conv_pw_2
+Visiting layer: conv_pw_2_bn
+Visiting layer: conv_pw_2_relu
+Visiting layer: conv_dw_3
+Visiting layer: conv_dw_3_bn
+Visiting layer: conv_dw_3_relu
+Visiting layer: conv_pw_3
+Visiting layer: conv_pw_3_bn
+Visiting layer: conv_pw_3_relu
+Visiting layer: conv_pad_4
+Visiting layer: conv_dw_4
+Visiting layer: conv_dw_4_bn
+Visiting layer: conv_dw_4_relu
+Visiting layer: conv_pw_4
+Visiting layer: conv_pw_4_bn
+Visiting layer: conv_pw_4_relu
+Visiting layer: conv_dw_5
+Visiting layer: conv_dw_5_bn
+Visiting layer: conv_dw_5_relu
+Visiting layer: conv_pw_5
+Visiting layer: conv_pw_5_bn
+Visiting layer: conv_pw_5_relu
+Visiting layer: conv_pad_6
+Visiting layer: conv_dw_6
+Visiting layer: conv_dw_6_bn
+Visiting layer: conv_dw_6_relu
+Visiting layer: conv_pw_6
+Visiting layer: conv_pw_6_bn
+Visiting layer: conv_pw_6_relu
+Visiting layer: conv_dw_7
+Visiting layer: conv_dw_7_bn
+Visiting layer: conv_dw_7_relu
+Visiting layer: conv_pw_7
+Visiting layer: conv_pw_7_bn
+Visiting layer: conv_pw_7_relu
+Visiting layer: conv_dw_8
+Visiting layer: conv_dw_8_bn
+Visiting layer: conv_dw_8_relu
+Visiting layer: conv_pw_8
+Visiting layer: conv_pw_8_bn
+Visiting layer: conv_pw_8_relu
+Visiting layer: conv_dw_9
+Visiting layer: conv_dw_9_bn
+Visiting layer: conv_dw_9_relu
+Visiting layer: conv_pw_9
+Visiting layer: conv_pw_9_bn
+Visiting layer: conv_pw_9_relu
+Visiting layer: conv_dw_10
+Visiting layer: conv_dw_10_bn
+Visiting layer: conv_dw_10_relu
+Visiting layer: conv_pw_10
+Visiting layer: conv_pw_10_bn
+Visiting layer: conv_pw_10_relu
+Visiting layer: conv_dw_11
+Visiting layer: conv_dw_11_bn
+Visiting layer: conv_dw_11_relu
+Visiting layer: conv_pw_11
+Visiting layer: conv_pw_11_bn
+Visiting layer: conv_pw_11_relu
+Visiting layer: conv_pad_12
+Visiting layer: conv_dw_12
+Visiting layer: conv_dw_12_bn
+Visiting layer: conv_dw_12_relu
+Visiting layer: conv_pw_12
+Visiting layer: conv_pw_12_bn
+Visiting layer: conv_pw_12_relu
+Visiting layer: conv_dw_13
+Visiting layer: conv_dw_13_bn
+Visiting layer: conv_dw_13_relu
+Visiting layer: conv_pw_13
+Visiting layer: conv_pw_13_bn
+Visiting layer: conv_pw_13_relu
+Visiting layer: global_average_pooling2d_1
+Visiting layer: reshape_1
+Visiting layer: dropout
+Visiting layer: conv_preds
+Visiting layer: reshape_2
+Visiting layer: act_softmax
+Model /home/ehsan/UvA/Sub_Model/MobileV1/MobileNet.h5 loaded.
+93
+sublayer input_2, output shape :(?, 224, 224, 3)
+
+
+
+layer conv1_pad, input :conv1_pad,(?, 224, 224, 3)
+sublayer conv1_pad, output shape :(?, 225, 225, 3)
+sublayer conv1, output shape :(?, 112, 112, 32)
+sublayer conv1_bn, output shape :(?, 112, 112, 32)
+sublayer conv1_relu, output shape :(?, 112, 112, 32)
+0 conv1_pad 1 4
+
+
+
+layer conv_dw_1, input :(?, 112, 112, 32)
+sublayer conv_dw_1, output shape :(?, 112, 112, 32)
+sublayer conv_dw_1_bn, output shape :(?, 112, 112, 32)
+sublayer conv_dw_1_relu, output shape :(?, 112, 112, 32)
+sublayer conv_pw_1, output shape :(?, 112, 112, 64)
+sublayer conv_pw_1_bn, output shape :(?, 112, 112, 64)
+sublayer conv_pw_1_relu, output shape :(?, 112, 112, 64)
+1 conv_dw_1 5 10
+
+
+
+layer conv_pad_2, input :(?, 112, 112, 64)
+sublayer conv_pad_2, output shape :(?, 113, 113, 64)
+sublayer conv_dw_2, output shape :(?, 56, 56, 64)
+sublayer conv_dw_2_bn, output shape :(?, 56, 56, 64)
+sublayer conv_dw_2_relu, output shape :(?, 56, 56, 64)
+sublayer conv_pw_2, output shape :(?, 56, 56, 128)
+sublayer conv_pw_2_bn, output shape :(?, 56, 56, 128)
+sublayer conv_pw_2_relu, output shape :(?, 56, 56, 128)
+2 conv_pad_2 11 17
+
+
+
+layer conv_dw_3, input :(?, 56, 56, 128)
+sublayer conv_dw_3, output shape :(?, 56, 56, 128)
+sublayer conv_dw_3_bn, output shape :(?, 56, 56, 128)
+sublayer conv_dw_3_relu, output shape :(?, 56, 56, 128)
+sublayer conv_pw_3, output shape :(?, 56, 56, 128)
+sublayer conv_pw_3_bn, output shape :(?, 56, 56, 128)
+sublayer conv_pw_3_relu, output shape :(?, 56, 56, 128)
+3 conv_dw_3 18 23
+
+
+
+layer conv_pad_4, input :(?, 56, 56, 128)
+sublayer conv_pad_4, output shape :(?, 57, 57, 128)
+sublayer conv_dw_4, output shape :(?, 28, 28, 128)
+sublayer conv_dw_4_bn, output shape :(?, 28, 28, 128)
+sublayer conv_dw_4_relu, output shape :(?, 28, 28, 128)
+sublayer conv_pw_4, output shape :(?, 28, 28, 256)
+sublayer conv_pw_4_bn, output shape :(?, 28, 28, 256)
+sublayer conv_pw_4_relu, output shape :(?, 28, 28, 256)
+4 conv_pad_4 24 30
+
+
+
+layer conv_dw_5, input :(?, 28, 28, 256)
+sublayer conv_dw_5, output shape :(?, 28, 28, 256)
+sublayer conv_dw_5_bn, output shape :(?, 28, 28, 256)
+sublayer conv_dw_5_relu, output shape :(?, 28, 28, 256)
+sublayer conv_pw_5, output shape :(?, 28, 28, 256)
+sublayer conv_pw_5_bn, output shape :(?, 28, 28, 256)
+sublayer conv_pw_5_relu, output shape :(?, 28, 28, 256)
+5 conv_dw_5 31 36
+
+
+
+layer conv_pad_6, input :(?, 28, 28, 256)
+sublayer conv_pad_6, output shape :(?, 29, 29, 256)
+sublayer conv_dw_6, output shape :(?, 14, 14, 256)
+sublayer conv_dw_6_bn, output shape :(?, 14, 14, 256)
+sublayer conv_dw_6_relu, output shape :(?, 14, 14, 256)
+sublayer conv_pw_6, output shape :(?, 14, 14, 512)
+sublayer conv_pw_6_bn, output shape :(?, 14, 14, 512)
+sublayer conv_pw_6_relu, output shape :(?, 14, 14, 512)
+6 conv_pad_6 37 43
+
+
+
+layer conv_dw_7, input :(?, 14, 14, 512)
+sublayer conv_dw_7, output shape :(?, 14, 14, 512)
+sublayer conv_dw_7_bn, output shape :(?, 14, 14, 512)
+sublayer conv_dw_7_relu, output shape :(?, 14, 14, 512)
+sublayer conv_pw_7, output shape :(?, 14, 14, 512)
+sublayer conv_pw_7_bn, output shape :(?, 14, 14, 512)
+sublayer conv_pw_7_relu, output shape :(?, 14, 14, 512)
+7 conv_dw_7 44 49
+
+
+
+layer conv_dw_8, input :(?, 14, 14, 512)
+sublayer conv_dw_8, output shape :(?, 14, 14, 512)
+sublayer conv_dw_8_bn, output shape :(?, 14, 14, 512)
+sublayer conv_dw_8_relu, output shape :(?, 14, 14, 512)
+sublayer conv_pw_8, output shape :(?, 14, 14, 512)
+sublayer conv_pw_8_bn, output shape :(?, 14, 14, 512)
+sublayer conv_pw_8_relu, output shape :(?, 14, 14, 512)
+8 conv_dw_8 50 55
+
+
+
+layer conv_dw_9, input :(?, 14, 14, 512)
+sublayer conv_dw_9, output shape :(?, 14, 14, 512)
+sublayer conv_dw_9_bn, output shape :(?, 14, 14, 512)
+sublayer conv_dw_9_relu, output shape :(?, 14, 14, 512)
+sublayer conv_pw_9, output shape :(?, 14, 14, 512)
+sublayer conv_pw_9_bn, output shape :(?, 14, 14, 512)
+sublayer conv_pw_9_relu, output shape :(?, 14, 14, 512)
+9 conv_dw_9 56 61
+
+
+
+layer conv_dw_10, input :(?, 14, 14, 512)
+sublayer conv_dw_10, output shape :(?, 14, 14, 512)
+sublayer conv_dw_10_bn, output shape :(?, 14, 14, 512)
+sublayer conv_dw_10_relu, output shape :(?, 14, 14, 512)
+sublayer conv_pw_10, output shape :(?, 14, 14, 512)
+sublayer conv_pw_10_bn, output shape :(?, 14, 14, 512)
+sublayer conv_pw_10_relu, output shape :(?, 14, 14, 512)
+10 conv_dw_10 62 67
+
+
+
+layer conv_dw_11, input :(?, 14, 14, 512)
+sublayer conv_dw_11, output shape :(?, 14, 14, 512)
+sublayer conv_dw_11_bn, output shape :(?, 14, 14, 512)
+sublayer conv_dw_11_relu, output shape :(?, 14, 14, 512)
+sublayer conv_pw_11, output shape :(?, 14, 14, 512)
+sublayer conv_pw_11_bn, output shape :(?, 14, 14, 512)
+sublayer conv_pw_11_relu, output shape :(?, 14, 14, 512)
+11 conv_dw_11 68 73
+
+
+
+layer conv_pad_12, input :(?, 14, 14, 512)
+sublayer conv_pad_12, output shape :(?, 15, 15, 512)
+sublayer conv_dw_12, output shape :(?, 7, 7, 512)
+sublayer conv_dw_12_bn, output shape :(?, 7, 7, 512)
+sublayer conv_dw_12_relu, output shape :(?, 7, 7, 512)
+sublayer conv_pw_12, output shape :(?, 7, 7, 1024)
+sublayer conv_pw_12_bn, output shape :(?, 7, 7, 1024)
+sublayer conv_pw_12_relu, output shape :(?, 7, 7, 1024)
+12 conv_pad_12 74 80
+
+
+
+layer conv_dw_13, input :(?, 7, 7, 1024)
+sublayer conv_dw_13, output shape :(?, 7, 7, 1024)
+sublayer conv_dw_13_bn, output shape :(?, 7, 7, 1024)
+sublayer conv_dw_13_relu, output shape :(?, 7, 7, 1024)
+sublayer conv_pw_13, output shape :(?, 7, 7, 1024)
+sublayer conv_pw_13_bn, output shape :(?, 7, 7, 1024)
+sublayer conv_pw_13_relu, output shape :(?, 7, 7, 1024)
+sublayer global_average_pooling2d_1, output shape :(?, 1024)
+sublayer reshape_1, output shape :(?, 1, 1, 1024)
+sublayer dropout, output shape :(?, 1, 1, 1024)
+sublayer conv_preds, output shape :(?, 1, 1, 1000)
+sublayer reshape_2, output shape :(?, 1000)
+sublayer act_softmax, output shape :(?, 1000)
+13 conv_dw_13 81 92
+
+
+****************
+Slicing model from layer: conv_dw_1 to conv_pw_1_relu
+
+inbound layers outside:
+conv1_relu
+
+outbound layers outside:
+conv_pad_2
+Create input layer for conv1_relu with shape: (112, 112, 32)
+Replacing connection from conv1_relu to conv_dw_1
+
+inbound layers of input tensors:
+conv1_relu
+
+inbound layers of output tensors:
+conv_pw_1_relu
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+conv1_relu (InputLayer)      (None, 112, 112, 32)      0         
+_________________________________________________________________
+conv_dw_1 (DepthwiseConv2D)  (None, 112, 112, 32)      288       
+_________________________________________________________________
+conv_dw_1_bn (BatchNormaliza (None, 112, 112, 32)      128       
+_________________________________________________________________
+conv_dw_1_relu (ReLU)        (None, 112, 112, 32)      0         
+_________________________________________________________________
+conv_pw_1 (Conv2D)           (None, 112, 112, 64)      2048      
+_________________________________________________________________
+conv_pw_1_bn (BatchNormaliza (None, 112, 112, 64)      256       
+_________________________________________________________________
+conv_pw_1_relu (ReLU)        (None, 112, 112, 64)      0         
+=================================================================
+Total params: 2,720
+Trainable params: 2,528
+Non-trainable params: 192
+_________________________________________________________________
+
+
+New model First Layer:conv_dw_1, Input shape:(?, 112, 112, 32)
+			Input name:conv1_relu First layer input shape:(?, 112, 112, 32),
+			Last layer name:conv_pw_1_relu and conv_pw_1_relu/Relu6
+			output shape:(?, 112, 112, 64)
+Model sliced
+Model saved as /home/ehsan/UvA/Sub_Model/MobileV1/MobileV1_1_1.h5
+command is: python /home/ehsan/UvA/Sub_Model/keras_to_tensorflow.py --input_model=/home/ehsan/UvA/Sub_Model/MobileV1/MobileV1_1_1.h5 --output_model=/home/ehsan/UvA/Sub_Model/MobileV1/MobileV1_1_1.pb
+Freezing graph return code is 0 
+generator is called with shapes: [[112, 112, 32]]
+(112, 112, 32)
+first npy with shape: (112, 112, 32)
+Calling convert function with argumetns:
+          model:/home/ehsan/UvA/Sub_Model/MobileV1/MobileV1_1_1.pb
+          blobs:
+          Inputs:['conv1_relu']
+          Outputs:['conv_pw_1_relu/Relu6']
+          Inputs_shape:[[112, 112, 32]]
+          Quantization:True
+          Quantization_data_set:/home/ehsan/UvA/Sub_Model/dataset.txt
+          
+done
+--> Loading model
+done
+--> Building model
+build with quantization
+done
+/home/ehsan/UvA/Sub_Model/MobileV1/MobileV1_1_1.rknn
+Convert to rknn return code is 0 
+2023-11-18 01:30:50.023073: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 AVX512F FMA
+/home/ehsan/anaconda3/envs/rock-kit3/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:523: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
+/home/ehsan/anaconda3/envs/rock-kit3/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:524: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
+/home/ehsan/anaconda3/envs/rock-kit3/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:525: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
+/home/ehsan/anaconda3/envs/rock-kit3/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:526: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
+/home/ehsan/anaconda3/envs/rock-kit3/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:527: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
+/home/ehsan/anaconda3/envs/rock-kit3/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:532: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  np_resource = np.dtype([("resource", np.ubyte, 1)])
+Using TensorFlow backend.
+2023-11-18 01:30:52.530412: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 AVX512F FMA
+/home/ehsan/anaconda3/envs/rock-kit3/lib/python3.6/site-packages/keras/engine/saving.py:292: UserWarning: No training configuration found in save file: the model was *not* compiled. Compile it manually.
+  warnings.warn('No training configuration found in save file: '
+I1118 01:30:52.629232 139935197586240 keras_to_tensorflow.py:132] sadd
+I1118 01:30:52.629338 139935197586240 keras_to_tensorflow.py:133] ['conv1_relu']
+I1118 01:30:52.629373 139935197586240 keras_to_tensorflow.py:148] Converted output node names are: ['conv_pw_1_relu/Relu6']
+INFO:tensorflow:Froze 10 variables.
+I1118 01:30:52.633688 139935197586240 tf_logging.py:115] Froze 10 variables.
+INFO:tensorflow:Converted 10 variables to const ops.
+I1118 01:30:52.634425 139935197586240 tf_logging.py:115] Converted 10 variables to const ops.
+I1118 01:30:52.634980 139935197586240 keras_to_tensorflow.py:181] Saved the freezed graph at /home/ehsan/UvA/Sub_Model/MobileV1/MobileV1_1_1.pb
+Using TensorFlow backend.
+/home/ehsan/anaconda3/envs/rock-kit3/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:523: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
+/home/ehsan/anaconda3/envs/rock-kit3/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:524: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
+/home/ehsan/anaconda3/envs/rock-kit3/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:525: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
+/home/ehsan/anaconda3/envs/rock-kit3/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:526: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
+/home/ehsan/anaconda3/envs/rock-kit3/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:527: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
+/home/ehsan/anaconda3/envs/rock-kit3/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:532: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  np_resource = np.dtype([("resource", np.ubyte, 1)])
+/home/ehsan/anaconda3/envs/rock-kit3/lib/python3.6/site-packages/onnx_tf/common/__init__.py:87: UserWarning: FrontendHandler.get_outputs_names is deprecated. It will be removed in future release.. Use node.outputs instead.
+  warnings.warn(message)
+W /home/ehsan/UvA/Sub_Model/dataset/test0.npy need NHWC format!
+
+
+/home/ehsan/UvA/Sub_Model/MobileV1/MobileV1_1_1.rknn: 1 file pushed, 0 skipped. 50.1 MB/s (7475 bytes in 0.000s)
+start=3, end=3
+conda run -n rock-kit3 python /home/ehsan/UvA/Sub_Model/Sub_Func_CO_UP.py --Start=3 --End=3 --Model=/home/ehsan/UvA/Sub_Model/MobileV1/MobileNet.h5 --Structure=/home/ehsan/UvA/Sub_Model/MobileV1/
+st is /home/ehsan/UvA/Sub_Model/MobileV1/
+/home/ehsan/UvA/Sub_Model/MobileV1/MobileNet.h5
+Visiting layer: input_2
+Visiting layer: conv1_pad
+Visiting layer: conv1
+Visiting layer: conv1_bn
+Visiting layer: conv1_relu
+Visiting layer: conv_dw_1
+Visiting layer: conv_dw_1_bn
+Visiting layer: conv_dw_1_relu
+Visiting layer: conv_pw_1
+Visiting layer: conv_pw_1_bn
+Visiting layer: conv_pw_1_relu
+Visiting layer: conv_pad_2
+Visiting layer: conv_dw_2
+Visiting layer: conv_dw_2_bn
+Visiting layer: conv_dw_2_relu
+Visiting layer: conv_pw_2
+Visiting layer: conv_pw_2_bn
+Visiting layer: conv_pw_2_relu
+Visiting layer: conv_dw_3
+Visiting layer: conv_dw_3_bn
+Visiting layer: conv_dw_3_relu
+Visiting layer: conv_pw_3
+Visiting layer: conv_pw_3_bn
+Visiting layer: conv_pw_3_relu
+Visiting layer: conv_pad_4
+Visiting layer: conv_dw_4
+Visiting layer: conv_dw_4_bn
+Visiting layer: conv_dw_4_relu
+Visiting layer: conv_pw_4
+Visiting layer: conv_pw_4_bn
+Visiting layer: conv_pw_4_relu
+Visiting layer: conv_dw_5
+Visiting layer: conv_dw_5_bn
+Visiting layer: conv_dw_5_relu
+Visiting layer: conv_pw_5
+Visiting layer: conv_pw_5_bn
+Visiting layer: conv_pw_5_relu
+Visiting layer: conv_pad_6
+Visiting layer: conv_dw_6
+Visiting layer: conv_dw_6_bn
+Visiting layer: conv_dw_6_relu
+Visiting layer: conv_pw_6
+Visiting layer: conv_pw_6_bn
+Visiting layer: conv_pw_6_relu
+Visiting layer: conv_dw_7
+Visiting layer: conv_dw_7_bn
+Visiting layer: conv_dw_7_relu
+Visiting layer: conv_pw_7
+Visiting layer: conv_pw_7_bn
+Visiting layer: conv_pw_7_relu
+Visiting layer: conv_dw_8
+Visiting layer: conv_dw_8_bn
+Visiting layer: conv_dw_8_relu
+Visiting layer: conv_pw_8
+Visiting layer: conv_pw_8_bn
+Visiting layer: conv_pw_8_relu
+Visiting layer: conv_dw_9
+Visiting layer: conv_dw_9_bn
+Visiting layer: conv_dw_9_relu
+Visiting layer: conv_pw_9
+Visiting layer: conv_pw_9_bn
+Visiting layer: conv_pw_9_relu
+Visiting layer: conv_dw_10
+Visiting layer: conv_dw_10_bn
+Visiting layer: conv_dw_10_relu
+Visiting layer: conv_pw_10
+Visiting layer: conv_pw_10_bn
+Visiting layer: conv_pw_10_relu
+Visiting layer: conv_dw_11
+Visiting layer: conv_dw_11_bn
+Visiting layer: conv_dw_11_relu
+Visiting layer: conv_pw_11
+Visiting layer: conv_pw_11_bn
+Visiting layer: conv_pw_11_relu
+Visiting layer: conv_pad_12
+Visiting layer: conv_dw_12
+Visiting layer: conv_dw_12_bn
+Visiting layer: conv_dw_12_relu
+Visiting layer: conv_pw_12
+Visiting layer: conv_pw_12_bn
+Visiting layer: conv_pw_12_relu
+Visiting layer: conv_dw_13
+Visiting layer: conv_dw_13_bn
+Visiting layer: conv_dw_13_relu
+Visiting layer: conv_pw_13
+Visiting layer: conv_pw_13_bn
+Visiting layer: conv_pw_13_relu
+Visiting layer: global_average_pooling2d_1
+Visiting layer: reshape_1
+Visiting layer: dropout
+Visiting layer: conv_preds
+Visiting layer: reshape_2
+Visiting layer: act_softmax
+Model /home/ehsan/UvA/Sub_Model/MobileV1/MobileNet.h5 loaded.
+93
+sublayer input_2, output shape :(?, 224, 224, 3)
+
+
+
+layer conv1_pad, input :conv1_pad,(?, 224, 224, 3)
+sublayer conv1_pad, output shape :(?, 225, 225, 3)
+sublayer conv1, output shape :(?, 112, 112, 32)
+sublayer conv1_bn, output shape :(?, 112, 112, 32)
+sublayer conv1_relu, output shape :(?, 112, 112, 32)
+0 conv1_pad 1 4
+
+
+
+layer conv_dw_1, input :(?, 112, 112, 32)
+sublayer conv_dw_1, output shape :(?, 112, 112, 32)
+sublayer conv_dw_1_bn, output shape :(?, 112, 112, 32)
+sublayer conv_dw_1_relu, output shape :(?, 112, 112, 32)
+sublayer conv_pw_1, output shape :(?, 112, 112, 64)
+sublayer conv_pw_1_bn, output shape :(?, 112, 112, 64)
+sublayer conv_pw_1_relu, output shape :(?, 112, 112, 64)
+1 conv_dw_1 5 10
+
+
+
+layer conv_pad_2, input :(?, 112, 112, 64)
+sublayer conv_pad_2, output shape :(?, 113, 113, 64)
+sublayer conv_dw_2, output shape :(?, 56, 56, 64)
+sublayer conv_dw_2_bn, output shape :(?, 56, 56, 64)
+sublayer conv_dw_2_relu, output shape :(?, 56, 56, 64)
+sublayer conv_pw_2, output shape :(?, 56, 56, 128)
+sublayer conv_pw_2_bn, output shape :(?, 56, 56, 128)
+sublayer conv_pw_2_relu, output shape :(?, 56, 56, 128)
+2 conv_pad_2 11 17
+
+
+
+layer conv_dw_3, input :(?, 56, 56, 128)
+sublayer conv_dw_3, output shape :(?, 56, 56, 128)
+sublayer conv_dw_3_bn, output shape :(?, 56, 56, 128)
+sublayer conv_dw_3_relu, output shape :(?, 56, 56, 128)
+sublayer conv_pw_3, output shape :(?, 56, 56, 128)
+sublayer conv_pw_3_bn, output shape :(?, 56, 56, 128)
+sublayer conv_pw_3_relu, output shape :(?, 56, 56, 128)
+3 conv_dw_3 18 23
+
+
+
+layer conv_pad_4, input :(?, 56, 56, 128)
+sublayer conv_pad_4, output shape :(?, 57, 57, 128)
+sublayer conv_dw_4, output shape :(?, 28, 28, 128)
+sublayer conv_dw_4_bn, output shape :(?, 28, 28, 128)
+sublayer conv_dw_4_relu, output shape :(?, 28, 28, 128)
+sublayer conv_pw_4, output shape :(?, 28, 28, 256)
+sublayer conv_pw_4_bn, output shape :(?, 28, 28, 256)
+sublayer conv_pw_4_relu, output shape :(?, 28, 28, 256)
+4 conv_pad_4 24 30
+
+
+
+layer conv_dw_5, input :(?, 28, 28, 256)
+sublayer conv_dw_5, output shape :(?, 28, 28, 256)
+sublayer conv_dw_5_bn, output shape :(?, 28, 28, 256)
+sublayer conv_dw_5_relu, output shape :(?, 28, 28, 256)
+sublayer conv_pw_5, output shape :(?, 28, 28, 256)
+sublayer conv_pw_5_bn, output shape :(?, 28, 28, 256)
+sublayer conv_pw_5_relu, output shape :(?, 28, 28, 256)
+5 conv_dw_5 31 36
+
+
+
+layer conv_pad_6, input :(?, 28, 28, 256)
+sublayer conv_pad_6, output shape :(?, 29, 29, 256)
+sublayer conv_dw_6, output shape :(?, 14, 14, 256)
+sublayer conv_dw_6_bn, output shape :(?, 14, 14, 256)
+sublayer conv_dw_6_relu, output shape :(?, 14, 14, 256)
+sublayer conv_pw_6, output shape :(?, 14, 14, 512)
+sublayer conv_pw_6_bn, output shape :(?, 14, 14, 512)
+sublayer conv_pw_6_relu, output shape :(?, 14, 14, 512)
+6 conv_pad_6 37 43
+
+
+
+layer conv_dw_7, input :(?, 14, 14, 512)
+sublayer conv_dw_7, output shape :(?, 14, 14, 512)
+sublayer conv_dw_7_bn, output shape :(?, 14, 14, 512)
+sublayer conv_dw_7_relu, output shape :(?, 14, 14, 512)
+sublayer conv_pw_7, output shape :(?, 14, 14, 512)
+sublayer conv_pw_7_bn, output shape :(?, 14, 14, 512)
+sublayer conv_pw_7_relu, output shape :(?, 14, 14, 512)
+7 conv_dw_7 44 49
+
+
+
+layer conv_dw_8, input :(?, 14, 14, 512)
+sublayer conv_dw_8, output shape :(?, 14, 14, 512)
+sublayer conv_dw_8_bn, output shape :(?, 14, 14, 512)
+sublayer conv_dw_8_relu, output shape :(?, 14, 14, 512)
+sublayer conv_pw_8, output shape :(?, 14, 14, 512)
+sublayer conv_pw_8_bn, output shape :(?, 14, 14, 512)
+sublayer conv_pw_8_relu, output shape :(?, 14, 14, 512)
+8 conv_dw_8 50 55
+
+
+
+layer conv_dw_9, input :(?, 14, 14, 512)
+sublayer conv_dw_9, output shape :(?, 14, 14, 512)
+sublayer conv_dw_9_bn, output shape :(?, 14, 14, 512)
+sublayer conv_dw_9_relu, output shape :(?, 14, 14, 512)
+sublayer conv_pw_9, output shape :(?, 14, 14, 512)
+sublayer conv_pw_9_bn, output shape :(?, 14, 14, 512)
+sublayer conv_pw_9_relu, output shape :(?, 14, 14, 512)
+9 conv_dw_9 56 61
+
+
+
+layer conv_dw_10, input :(?, 14, 14, 512)
+sublayer conv_dw_10, output shape :(?, 14, 14, 512)
+sublayer conv_dw_10_bn, output shape :(?, 14, 14, 512)
+sublayer conv_dw_10_relu, output shape :(?, 14, 14, 512)
+sublayer conv_pw_10, output shape :(?, 14, 14, 512)
+sublayer conv_pw_10_bn, output shape :(?, 14, 14, 512)
+sublayer conv_pw_10_relu, output shape :(?, 14, 14, 512)
+10 conv_dw_10 62 67
+
+
+
+layer conv_dw_11, input :(?, 14, 14, 512)
+sublayer conv_dw_11, output shape :(?, 14, 14, 512)
+sublayer conv_dw_11_bn, output shape :(?, 14, 14, 512)
+sublayer conv_dw_11_relu, output shape :(?, 14, 14, 512)
+sublayer conv_pw_11, output shape :(?, 14, 14, 512)
+sublayer conv_pw_11_bn, output shape :(?, 14, 14, 512)
+sublayer conv_pw_11_relu, output shape :(?, 14, 14, 512)
+11 conv_dw_11 68 73
+
+
+
+layer conv_pad_12, input :(?, 14, 14, 512)
+sublayer conv_pad_12, output shape :(?, 15, 15, 512)
+sublayer conv_dw_12, output shape :(?, 7, 7, 512)
+sublayer conv_dw_12_bn, output shape :(?, 7, 7, 512)
+sublayer conv_dw_12_relu, output shape :(?, 7, 7, 512)
+sublayer conv_pw_12, output shape :(?, 7, 7, 1024)
+sublayer conv_pw_12_bn, output shape :(?, 7, 7, 1024)
+sublayer conv_pw_12_relu, output shape :(?, 7, 7, 1024)
+12 conv_pad_12 74 80
+
+
+
+layer conv_dw_13, input :(?, 7, 7, 1024)
+sublayer conv_dw_13, output shape :(?, 7, 7, 1024)
+sublayer conv_dw_13_bn, output shape :(?, 7, 7, 1024)
+sublayer conv_dw_13_relu, output shape :(?, 7, 7, 1024)
+sublayer conv_pw_13, output shape :(?, 7, 7, 1024)
+sublayer conv_pw_13_bn, output shape :(?, 7, 7, 1024)
+sublayer conv_pw_13_relu, output shape :(?, 7, 7, 1024)
+sublayer global_average_pooling2d_1, output shape :(?, 1024)
+sublayer reshape_1, output shape :(?, 1, 1, 1024)
+sublayer dropout, output shape :(?, 1, 1, 1024)
+sublayer conv_preds, output shape :(?, 1, 1, 1000)
+sublayer reshape_2, output shape :(?, 1000)
+sublayer act_softmax, output shape :(?, 1000)
+13 conv_dw_13 81 92
+
+
+****************
+Slicing model from layer: conv_dw_3 to conv_pw_3_relu
+
+inbound layers outside:
+conv_pw_2_relu
+
+outbound layers outside:
+conv_pad_4
+Create input layer for conv_pw_2_relu with shape: (56, 56, 128)
+Replacing connection from conv_pw_2_relu to conv_dw_3
+
+inbound layers of input tensors:
+conv_pw_2_relu
+
+inbound layers of output tensors:
+conv_pw_3_relu
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+conv_pw_2_relu (InputLayer)  (None, 56, 56, 128)       0         
+_________________________________________________________________
+conv_dw_3 (DepthwiseConv2D)  (None, 56, 56, 128)       1152      
+_________________________________________________________________
+conv_dw_3_bn (BatchNormaliza (None, 56, 56, 128)       512       
+_________________________________________________________________
+conv_dw_3_relu (ReLU)        (None, 56, 56, 128)       0         
+_________________________________________________________________
+conv_pw_3 (Conv2D)           (None, 56, 56, 128)       16384     
+_________________________________________________________________
+conv_pw_3_bn (BatchNormaliza (None, 56, 56, 128)       512       
+_________________________________________________________________
+conv_pw_3_relu (ReLU)        (None, 56, 56, 128)       0         
+=================================================================
+Total params: 18,560
+Trainable params: 18,048
+Non-trainable params: 512
+_________________________________________________________________
+
+
+New model First Layer:conv_dw_3, Input shape:(?, 56, 56, 128)
+			Input name:conv_pw_2_relu First layer input shape:(?, 56, 56, 128),
+			Last layer name:conv_pw_3_relu and conv_pw_3_relu/Relu6
+			output shape:(?, 56, 56, 128)
+Model sliced
+Model saved as /home/ehsan/UvA/Sub_Model/MobileV1/MobileV1_3_3.h5
+command is: python /home/ehsan/UvA/Sub_Model/keras_to_tensorflow.py --input_model=/home/ehsan/UvA/Sub_Model/MobileV1/MobileV1_3_3.h5 --output_model=/home/ehsan/UvA/Sub_Model/MobileV1/MobileV1_3_3.pb
+Freezing graph return code is 0 
+generator is called with shapes: [[56, 56, 128]]
+(56, 56, 128)
+first npy with shape: (56, 56, 128)
+Calling convert function with argumetns:
+          model:/home/ehsan/UvA/Sub_Model/MobileV1/MobileV1_3_3.pb
+          blobs:
+          Inputs:['conv_pw_2_relu']
+          Outputs:['conv_pw_3_relu/Relu6']
+          Inputs_shape:[[56, 56, 128]]
+          Quantization:True
+          Quantization_data_set:/home/ehsan/UvA/Sub_Model/dataset.txt
+          
+done
+--> Loading model
+done
+--> Building model
+build with quantization
+done
+/home/ehsan/UvA/Sub_Model/MobileV1/MobileV1_3_3.rknn
+Convert to rknn return code is 0 
+2023-11-18 01:31:09.156050: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 AVX512F FMA
+/home/ehsan/anaconda3/envs/rock-kit3/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:523: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
+/home/ehsan/anaconda3/envs/rock-kit3/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:524: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
+/home/ehsan/anaconda3/envs/rock-kit3/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:525: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
+/home/ehsan/anaconda3/envs/rock-kit3/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:526: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
+/home/ehsan/anaconda3/envs/rock-kit3/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:527: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
+/home/ehsan/anaconda3/envs/rock-kit3/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:532: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  np_resource = np.dtype([("resource", np.ubyte, 1)])
+Using TensorFlow backend.
+2023-11-18 01:31:11.568778: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 AVX512F FMA
+/home/ehsan/anaconda3/envs/rock-kit3/lib/python3.6/site-packages/keras/engine/saving.py:292: UserWarning: No training configuration found in save file: the model was *not* compiled. Compile it manually.
+  warnings.warn('No training configuration found in save file: '
+I1118 01:31:11.666511 139649511437120 keras_to_tensorflow.py:132] sadd
+I1118 01:31:11.666614 139649511437120 keras_to_tensorflow.py:133] ['conv_pw_2_relu']
+I1118 01:31:11.666653 139649511437120 keras_to_tensorflow.py:148] Converted output node names are: ['conv_pw_3_relu/Relu6']
+INFO:tensorflow:Froze 10 variables.
+I1118 01:31:11.670868 139649511437120 tf_logging.py:115] Froze 10 variables.
+INFO:tensorflow:Converted 10 variables to const ops.
+I1118 01:31:11.671595 139649511437120 tf_logging.py:115] Converted 10 variables to const ops.
+I1118 01:31:11.672180 139649511437120 keras_to_tensorflow.py:181] Saved the freezed graph at /home/ehsan/UvA/Sub_Model/MobileV1/MobileV1_3_3.pb
+Using TensorFlow backend.
+/home/ehsan/anaconda3/envs/rock-kit3/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:523: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
+/home/ehsan/anaconda3/envs/rock-kit3/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:524: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
+/home/ehsan/anaconda3/envs/rock-kit3/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:525: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
+/home/ehsan/anaconda3/envs/rock-kit3/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:526: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
+/home/ehsan/anaconda3/envs/rock-kit3/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:527: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
+/home/ehsan/anaconda3/envs/rock-kit3/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:532: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  np_resource = np.dtype([("resource", np.ubyte, 1)])
+/home/ehsan/anaconda3/envs/rock-kit3/lib/python3.6/site-packages/onnx_tf/common/__init__.py:87: UserWarning: FrontendHandler.get_outputs_names is deprecated. It will be removed in future release.. Use node.outputs instead.
+  warnings.warn(message)
+W /home/ehsan/UvA/Sub_Model/dataset/test0.npy need NHWC format!
+
+
+/home/ehsan/UvA/Sub_Model/MobileV1/MobileV1_3_3.rknn: 1 file pushed, 0 skipped. 127.5 MB/s (23323 bytes in 0.000s)
+start=5, end=5
+conda run -n rock-kit3 python /home/ehsan/UvA/Sub_Model/Sub_Func_CO_UP.py --Start=5 --End=5 --Model=/home/ehsan/UvA/Sub_Model/MobileV1/MobileNet.h5 --Structure=/home/ehsan/UvA/Sub_Model/MobileV1/
+st is /home/ehsan/UvA/Sub_Model/MobileV1/
+/home/ehsan/UvA/Sub_Model/MobileV1/MobileNet.h5
+Visiting layer: input_2
+Visiting layer: conv1_pad
+Visiting layer: conv1
+Visiting layer: conv1_bn
+Visiting layer: conv1_relu
+Visiting layer: conv_dw_1
+Visiting layer: conv_dw_1_bn
+Visiting layer: conv_dw_1_relu
+Visiting layer: conv_pw_1
+Visiting layer: conv_pw_1_bn
+Visiting layer: conv_pw_1_relu
+Visiting layer: conv_pad_2
+Visiting layer: conv_dw_2
+Visiting layer: conv_dw_2_bn
+Visiting layer: conv_dw_2_relu
+Visiting layer: conv_pw_2
+Visiting layer: conv_pw_2_bn
+Visiting layer: conv_pw_2_relu
+Visiting layer: conv_dw_3
+Visiting layer: conv_dw_3_bn
+Visiting layer: conv_dw_3_relu
+Visiting layer: conv_pw_3
+Visiting layer: conv_pw_3_bn
+Visiting layer: conv_pw_3_relu
+Visiting layer: conv_pad_4
+Visiting layer: conv_dw_4
+Visiting layer: conv_dw_4_bn
+Visiting layer: conv_dw_4_relu
+Visiting layer: conv_pw_4
+Visiting layer: conv_pw_4_bn
+Visiting layer: conv_pw_4_relu
+Visiting layer: conv_dw_5
+Visiting layer: conv_dw_5_bn
+Visiting layer: conv_dw_5_relu
+Visiting layer: conv_pw_5
+Visiting layer: conv_pw_5_bn
+Visiting layer: conv_pw_5_relu
+Visiting layer: conv_pad_6
+Visiting layer: conv_dw_6
+Visiting layer: conv_dw_6_bn
+Visiting layer: conv_dw_6_relu
+Visiting layer: conv_pw_6
+Visiting layer: conv_pw_6_bn
+Visiting layer: conv_pw_6_relu
+Visiting layer: conv_dw_7
+Visiting layer: conv_dw_7_bn
+Visiting layer: conv_dw_7_relu
+Visiting layer: conv_pw_7
+Visiting layer: conv_pw_7_bn
+Visiting layer: conv_pw_7_relu
+Visiting layer: conv_dw_8
+Visiting layer: conv_dw_8_bn
+Visiting layer: conv_dw_8_relu
+Visiting layer: conv_pw_8
+Visiting layer: conv_pw_8_bn
+Visiting layer: conv_pw_8_relu
+Visiting layer: conv_dw_9
+Visiting layer: conv_dw_9_bn
+Visiting layer: conv_dw_9_relu
+Visiting layer: conv_pw_9
+Visiting layer: conv_pw_9_bn
+Visiting layer: conv_pw_9_relu
+Visiting layer: conv_dw_10
+Visiting layer: conv_dw_10_bn
+Visiting layer: conv_dw_10_relu
+Visiting layer: conv_pw_10
+Visiting layer: conv_pw_10_bn
+Visiting layer: conv_pw_10_relu
+Visiting layer: conv_dw_11
+Visiting layer: conv_dw_11_bn
+Visiting layer: conv_dw_11_relu
+Visiting layer: conv_pw_11
+Visiting layer: conv_pw_11_bn
+Visiting layer: conv_pw_11_relu
+Visiting layer: conv_pad_12
+Visiting layer: conv_dw_12
+Visiting layer: conv_dw_12_bn
+Visiting layer: conv_dw_12_relu
+Visiting layer: conv_pw_12
+Visiting layer: conv_pw_12_bn
+Visiting layer: conv_pw_12_relu
+Visiting layer: conv_dw_13
+Visiting layer: conv_dw_13_bn
+Visiting layer: conv_dw_13_relu
+Visiting layer: conv_pw_13
+Visiting layer: conv_pw_13_bn
+Visiting layer: conv_pw_13_relu
+Visiting layer: global_average_pooling2d_1
+Visiting layer: reshape_1
+Visiting layer: dropout
+Visiting layer: conv_preds
+Visiting layer: reshape_2
+Visiting layer: act_softmax
+Model /home/ehsan/UvA/Sub_Model/MobileV1/MobileNet.h5 loaded.
+93
+sublayer input_2, output shape :(?, 224, 224, 3)
+
+
+
+layer conv1_pad, input :conv1_pad,(?, 224, 224, 3)
+sublayer conv1_pad, output shape :(?, 225, 225, 3)
+sublayer conv1, output shape :(?, 112, 112, 32)
+sublayer conv1_bn, output shape :(?, 112, 112, 32)
+sublayer conv1_relu, output shape :(?, 112, 112, 32)
+0 conv1_pad 1 4
+
+
+
+layer conv_dw_1, input :(?, 112, 112, 32)
+sublayer conv_dw_1, output shape :(?, 112, 112, 32)
+sublayer conv_dw_1_bn, output shape :(?, 112, 112, 32)
+sublayer conv_dw_1_relu, output shape :(?, 112, 112, 32)
+sublayer conv_pw_1, output shape :(?, 112, 112, 64)
+sublayer conv_pw_1_bn, output shape :(?, 112, 112, 64)
+sublayer conv_pw_1_relu, output shape :(?, 112, 112, 64)
+1 conv_dw_1 5 10
+
+
+
+layer conv_pad_2, input :(?, 112, 112, 64)
+sublayer conv_pad_2, output shape :(?, 113, 113, 64)
+sublayer conv_dw_2, output shape :(?, 56, 56, 64)
+sublayer conv_dw_2_bn, output shape :(?, 56, 56, 64)
+sublayer conv_dw_2_relu, output shape :(?, 56, 56, 64)
+sublayer conv_pw_2, output shape :(?, 56, 56, 128)
+sublayer conv_pw_2_bn, output shape :(?, 56, 56, 128)
+sublayer conv_pw_2_relu, output shape :(?, 56, 56, 128)
+2 conv_pad_2 11 17
+
+
+
+layer conv_dw_3, input :(?, 56, 56, 128)
+sublayer conv_dw_3, output shape :(?, 56, 56, 128)
+sublayer conv_dw_3_bn, output shape :(?, 56, 56, 128)
+sublayer conv_dw_3_relu, output shape :(?, 56, 56, 128)
+sublayer conv_pw_3, output shape :(?, 56, 56, 128)
+sublayer conv_pw_3_bn, output shape :(?, 56, 56, 128)
+sublayer conv_pw_3_relu, output shape :(?, 56, 56, 128)
+3 conv_dw_3 18 23
+
+
+
+layer conv_pad_4, input :(?, 56, 56, 128)
+sublayer conv_pad_4, output shape :(?, 57, 57, 128)
+sublayer conv_dw_4, output shape :(?, 28, 28, 128)
+sublayer conv_dw_4_bn, output shape :(?, 28, 28, 128)
+sublayer conv_dw_4_relu, output shape :(?, 28, 28, 128)
+sublayer conv_pw_4, output shape :(?, 28, 28, 256)
+sublayer conv_pw_4_bn, output shape :(?, 28, 28, 256)
+sublayer conv_pw_4_relu, output shape :(?, 28, 28, 256)
+4 conv_pad_4 24 30
+
+
+
+layer conv_dw_5, input :(?, 28, 28, 256)
+sublayer conv_dw_5, output shape :(?, 28, 28, 256)
+sublayer conv_dw_5_bn, output shape :(?, 28, 28, 256)
+sublayer conv_dw_5_relu, output shape :(?, 28, 28, 256)
+sublayer conv_pw_5, output shape :(?, 28, 28, 256)
+sublayer conv_pw_5_bn, output shape :(?, 28, 28, 256)
+sublayer conv_pw_5_relu, output shape :(?, 28, 28, 256)
+5 conv_dw_5 31 36
+
+
+
+layer conv_pad_6, input :(?, 28, 28, 256)
+sublayer conv_pad_6, output shape :(?, 29, 29, 256)
+sublayer conv_dw_6, output shape :(?, 14, 14, 256)
+sublayer conv_dw_6_bn, output shape :(?, 14, 14, 256)
+sublayer conv_dw_6_relu, output shape :(?, 14, 14, 256)
+sublayer conv_pw_6, output shape :(?, 14, 14, 512)
+sublayer conv_pw_6_bn, output shape :(?, 14, 14, 512)
+sublayer conv_pw_6_relu, output shape :(?, 14, 14, 512)
+6 conv_pad_6 37 43
+
+
+
+layer conv_dw_7, input :(?, 14, 14, 512)
+sublayer conv_dw_7, output shape :(?, 14, 14, 512)
+sublayer conv_dw_7_bn, output shape :(?, 14, 14, 512)
+sublayer conv_dw_7_relu, output shape :(?, 14, 14, 512)
+sublayer conv_pw_7, output shape :(?, 14, 14, 512)
+sublayer conv_pw_7_bn, output shape :(?, 14, 14, 512)
+sublayer conv_pw_7_relu, output shape :(?, 14, 14, 512)
+7 conv_dw_7 44 49
+
+
+
+layer conv_dw_8, input :(?, 14, 14, 512)
+sublayer conv_dw_8, output shape :(?, 14, 14, 512)
+sublayer conv_dw_8_bn, output shape :(?, 14, 14, 512)
+sublayer conv_dw_8_relu, output shape :(?, 14, 14, 512)
+sublayer conv_pw_8, output shape :(?, 14, 14, 512)
+sublayer conv_pw_8_bn, output shape :(?, 14, 14, 512)
+sublayer conv_pw_8_relu, output shape :(?, 14, 14, 512)
+8 conv_dw_8 50 55
+
+
+
+layer conv_dw_9, input :(?, 14, 14, 512)
+sublayer conv_dw_9, output shape :(?, 14, 14, 512)
+sublayer conv_dw_9_bn, output shape :(?, 14, 14, 512)
+sublayer conv_dw_9_relu, output shape :(?, 14, 14, 512)
+sublayer conv_pw_9, output shape :(?, 14, 14, 512)
+sublayer conv_pw_9_bn, output shape :(?, 14, 14, 512)
+sublayer conv_pw_9_relu, output shape :(?, 14, 14, 512)
+9 conv_dw_9 56 61
+
+
+
+layer conv_dw_10, input :(?, 14, 14, 512)
+sublayer conv_dw_10, output shape :(?, 14, 14, 512)
+sublayer conv_dw_10_bn, output shape :(?, 14, 14, 512)
+sublayer conv_dw_10_relu, output shape :(?, 14, 14, 512)
+sublayer conv_pw_10, output shape :(?, 14, 14, 512)
+sublayer conv_pw_10_bn, output shape :(?, 14, 14, 512)
+sublayer conv_pw_10_relu, output shape :(?, 14, 14, 512)
+10 conv_dw_10 62 67
+
+
+
+layer conv_dw_11, input :(?, 14, 14, 512)
+sublayer conv_dw_11, output shape :(?, 14, 14, 512)
+sublayer conv_dw_11_bn, output shape :(?, 14, 14, 512)
+sublayer conv_dw_11_relu, output shape :(?, 14, 14, 512)
+sublayer conv_pw_11, output shape :(?, 14, 14, 512)
+sublayer conv_pw_11_bn, output shape :(?, 14, 14, 512)
+sublayer conv_pw_11_relu, output shape :(?, 14, 14, 512)
+11 conv_dw_11 68 73
+
+
+
+layer conv_pad_12, input :(?, 14, 14, 512)
+sublayer conv_pad_12, output shape :(?, 15, 15, 512)
+sublayer conv_dw_12, output shape :(?, 7, 7, 512)
+sublayer conv_dw_12_bn, output shape :(?, 7, 7, 512)
+sublayer conv_dw_12_relu, output shape :(?, 7, 7, 512)
+sublayer conv_pw_12, output shape :(?, 7, 7, 1024)
+sublayer conv_pw_12_bn, output shape :(?, 7, 7, 1024)
+sublayer conv_pw_12_relu, output shape :(?, 7, 7, 1024)
+12 conv_pad_12 74 80
+
+
+
+layer conv_dw_13, input :(?, 7, 7, 1024)
+sublayer conv_dw_13, output shape :(?, 7, 7, 1024)
+sublayer conv_dw_13_bn, output shape :(?, 7, 7, 1024)
+sublayer conv_dw_13_relu, output shape :(?, 7, 7, 1024)
+sublayer conv_pw_13, output shape :(?, 7, 7, 1024)
+sublayer conv_pw_13_bn, output shape :(?, 7, 7, 1024)
+sublayer conv_pw_13_relu, output shape :(?, 7, 7, 1024)
+sublayer global_average_pooling2d_1, output shape :(?, 1024)
+sublayer reshape_1, output shape :(?, 1, 1, 1024)
+sublayer dropout, output shape :(?, 1, 1, 1024)
+sublayer conv_preds, output shape :(?, 1, 1, 1000)
+sublayer reshape_2, output shape :(?, 1000)
+sublayer act_softmax, output shape :(?, 1000)
+13 conv_dw_13 81 92
+
+
+****************
+Slicing model from layer: conv_dw_5 to conv_pw_5_relu
+
+inbound layers outside:
+conv_pw_4_relu
+
+outbound layers outside:
+conv_pad_6
+Create input layer for conv_pw_4_relu with shape: (28, 28, 256)
+Replacing connection from conv_pw_4_relu to conv_dw_5
+
+inbound layers of input tensors:
+conv_pw_4_relu
+
+inbound layers of output tensors:
+conv_pw_5_relu
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+conv_pw_4_relu (InputLayer)  (None, 28, 28, 256)       0         
+_________________________________________________________________
+conv_dw_5 (DepthwiseConv2D)  (None, 28, 28, 256)       2304      
+_________________________________________________________________
+conv_dw_5_bn (BatchNormaliza (None, 28, 28, 256)       1024      
+_________________________________________________________________
+conv_dw_5_relu (ReLU)        (None, 28, 28, 256)       0         
+_________________________________________________________________
+conv_pw_5 (Conv2D)           (None, 28, 28, 256)       65536     
+_________________________________________________________________
+conv_pw_5_bn (BatchNormaliza (None, 28, 28, 256)       1024      
+_________________________________________________________________
+conv_pw_5_relu (ReLU)        (None, 28, 28, 256)       0         
+=================================================================
+Total params: 69,888
+Trainable params: 68,864
+Non-trainable params: 1,024
+_________________________________________________________________
+
+
+New model First Layer:conv_dw_5, Input shape:(?, 28, 28, 256)
+			Input name:conv_pw_4_relu First layer input shape:(?, 28, 28, 256),
+			Last layer name:conv_pw_5_relu and conv_pw_5_relu/Relu6
+			output shape:(?, 28, 28, 256)
+Model sliced
+Model saved as /home/ehsan/UvA/Sub_Model/MobileV1/MobileV1_5_5.h5
+command is: python /home/ehsan/UvA/Sub_Model/keras_to_tensorflow.py --input_model=/home/ehsan/UvA/Sub_Model/MobileV1/MobileV1_5_5.h5 --output_model=/home/ehsan/UvA/Sub_Model/MobileV1/MobileV1_5_5.pb
+Freezing graph return code is 0 
+generator is called with shapes: [[28, 28, 256]]
+(28, 28, 256)
+first npy with shape: (28, 28, 256)
+Calling convert function with argumetns:
+          model:/home/ehsan/UvA/Sub_Model/MobileV1/MobileV1_5_5.pb
+          blobs:
+          Inputs:['conv_pw_4_relu']
+          Outputs:['conv_pw_5_relu/Relu6']
+          Inputs_shape:[[28, 28, 256]]
+          Quantization:True
+          Quantization_data_set:/home/ehsan/UvA/Sub_Model/dataset.txt
+          
+done
+--> Loading model
+done
+--> Building model
+build with quantization
+done
+/home/ehsan/UvA/Sub_Model/MobileV1/MobileV1_5_5.rknn
+Convert to rknn return code is 0 
+2023-11-18 01:31:28.707431: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 AVX512F FMA
+/home/ehsan/anaconda3/envs/rock-kit3/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:523: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
+/home/ehsan/anaconda3/envs/rock-kit3/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:524: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
+/home/ehsan/anaconda3/envs/rock-kit3/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:525: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
+/home/ehsan/anaconda3/envs/rock-kit3/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:526: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
+/home/ehsan/anaconda3/envs/rock-kit3/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:527: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
+/home/ehsan/anaconda3/envs/rock-kit3/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:532: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  np_resource = np.dtype([("resource", np.ubyte, 1)])
+Using TensorFlow backend.
+2023-11-18 01:31:31.195952: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 AVX512F FMA
+/home/ehsan/anaconda3/envs/rock-kit3/lib/python3.6/site-packages/keras/engine/saving.py:292: UserWarning: No training configuration found in save file: the model was *not* compiled. Compile it manually.
+  warnings.warn('No training configuration found in save file: '
+I1118 01:31:31.298157 139972064490304 keras_to_tensorflow.py:132] sadd
+I1118 01:31:31.298253 139972064490304 keras_to_tensorflow.py:133] ['conv_pw_4_relu']
+I1118 01:31:31.298288 139972064490304 keras_to_tensorflow.py:148] Converted output node names are: ['conv_pw_5_relu/Relu6']
+INFO:tensorflow:Froze 10 variables.
+I1118 01:31:31.302579 139972064490304 tf_logging.py:115] Froze 10 variables.
+INFO:tensorflow:Converted 10 variables to const ops.
+I1118 01:31:31.303571 139972064490304 tf_logging.py:115] Converted 10 variables to const ops.
+I1118 01:31:31.304399 139972064490304 keras_to_tensorflow.py:181] Saved the freezed graph at /home/ehsan/UvA/Sub_Model/MobileV1/MobileV1_5_5.pb
+Using TensorFlow backend.
+/home/ehsan/anaconda3/envs/rock-kit3/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:523: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
+/home/ehsan/anaconda3/envs/rock-kit3/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:524: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
+/home/ehsan/anaconda3/envs/rock-kit3/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:525: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
+/home/ehsan/anaconda3/envs/rock-kit3/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:526: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
+/home/ehsan/anaconda3/envs/rock-kit3/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:527: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
+/home/ehsan/anaconda3/envs/rock-kit3/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:532: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  np_resource = np.dtype([("resource", np.ubyte, 1)])
+/home/ehsan/anaconda3/envs/rock-kit3/lib/python3.6/site-packages/onnx_tf/common/__init__.py:87: UserWarning: FrontendHandler.get_outputs_names is deprecated. It will be removed in future release.. Use node.outputs instead.
+  warnings.warn(message)
+W /home/ehsan/UvA/Sub_Model/dataset/test0.npy need NHWC format!
+
+
+/home/ehsan/UvA/Sub_Model/MobileV1/MobileV1_5_5.rknn: 1 file pushed, 0 skipped. 285.2 MB/s (74655 bytes in 0.000s)
+start=7, end=7
+conda run -n rock-kit3 python /home/ehsan/UvA/Sub_Model/Sub_Func_CO_UP.py --Start=7 --End=7 --Model=/home/ehsan/UvA/Sub_Model/MobileV1/MobileNet.h5 --Structure=/home/ehsan/UvA/Sub_Model/MobileV1/
+st is /home/ehsan/UvA/Sub_Model/MobileV1/
+/home/ehsan/UvA/Sub_Model/MobileV1/MobileNet.h5
+Visiting layer: input_2
+Visiting layer: conv1_pad
+Visiting layer: conv1
+Visiting layer: conv1_bn
+Visiting layer: conv1_relu
+Visiting layer: conv_dw_1
+Visiting layer: conv_dw_1_bn
+Visiting layer: conv_dw_1_relu
+Visiting layer: conv_pw_1
+Visiting layer: conv_pw_1_bn
+Visiting layer: conv_pw_1_relu
+Visiting layer: conv_pad_2
+Visiting layer: conv_dw_2
+Visiting layer: conv_dw_2_bn
+Visiting layer: conv_dw_2_relu
+Visiting layer: conv_pw_2
+Visiting layer: conv_pw_2_bn
+Visiting layer: conv_pw_2_relu
+Visiting layer: conv_dw_3
+Visiting layer: conv_dw_3_bn
+Visiting layer: conv_dw_3_relu
+Visiting layer: conv_pw_3
+Visiting layer: conv_pw_3_bn
+Visiting layer: conv_pw_3_relu
+Visiting layer: conv_pad_4
+Visiting layer: conv_dw_4
+Visiting layer: conv_dw_4_bn
+Visiting layer: conv_dw_4_relu
+Visiting layer: conv_pw_4
+Visiting layer: conv_pw_4_bn
+Visiting layer: conv_pw_4_relu
+Visiting layer: conv_dw_5
+Visiting layer: conv_dw_5_bn
+Visiting layer: conv_dw_5_relu
+Visiting layer: conv_pw_5
+Visiting layer: conv_pw_5_bn
+Visiting layer: conv_pw_5_relu
+Visiting layer: conv_pad_6
+Visiting layer: conv_dw_6
+Visiting layer: conv_dw_6_bn
+Visiting layer: conv_dw_6_relu
+Visiting layer: conv_pw_6
+Visiting layer: conv_pw_6_bn
+Visiting layer: conv_pw_6_relu
+Visiting layer: conv_dw_7
+Visiting layer: conv_dw_7_bn
+Visiting layer: conv_dw_7_relu
+Visiting layer: conv_pw_7
+Visiting layer: conv_pw_7_bn
+Visiting layer: conv_pw_7_relu
+Visiting layer: conv_dw_8
+Visiting layer: conv_dw_8_bn
+Visiting layer: conv_dw_8_relu
+Visiting layer: conv_pw_8
+Visiting layer: conv_pw_8_bn
+Visiting layer: conv_pw_8_relu
+Visiting layer: conv_dw_9
+Visiting layer: conv_dw_9_bn
+Visiting layer: conv_dw_9_relu
+Visiting layer: conv_pw_9
+Visiting layer: conv_pw_9_bn
+Visiting layer: conv_pw_9_relu
+Visiting layer: conv_dw_10
+Visiting layer: conv_dw_10_bn
+Visiting layer: conv_dw_10_relu
+Visiting layer: conv_pw_10
+Visiting layer: conv_pw_10_bn
+Visiting layer: conv_pw_10_relu
+Visiting layer: conv_dw_11
+Visiting layer: conv_dw_11_bn
+Visiting layer: conv_dw_11_relu
+Visiting layer: conv_pw_11
+Visiting layer: conv_pw_11_bn
+Visiting layer: conv_pw_11_relu
+Visiting layer: conv_pad_12
+Visiting layer: conv_dw_12
+Visiting layer: conv_dw_12_bn
+Visiting layer: conv_dw_12_relu
+Visiting layer: conv_pw_12
+Visiting layer: conv_pw_12_bn
+Visiting layer: conv_pw_12_relu
+Visiting layer: conv_dw_13
+Visiting layer: conv_dw_13_bn
+Visiting layer: conv_dw_13_relu
+Visiting layer: conv_pw_13
+Visiting layer: conv_pw_13_bn
+Visiting layer: conv_pw_13_relu
+Visiting layer: global_average_pooling2d_1
+Visiting layer: reshape_1
+Visiting layer: dropout
+Visiting layer: conv_preds
+Visiting layer: reshape_2
+Visiting layer: act_softmax
+Model /home/ehsan/UvA/Sub_Model/MobileV1/MobileNet.h5 loaded.
+93
+sublayer input_2, output shape :(?, 224, 224, 3)
+
+
+
+layer conv1_pad, input :conv1_pad,(?, 224, 224, 3)
+sublayer conv1_pad, output shape :(?, 225, 225, 3)
+sublayer conv1, output shape :(?, 112, 112, 32)
+sublayer conv1_bn, output shape :(?, 112, 112, 32)
+sublayer conv1_relu, output shape :(?, 112, 112, 32)
+0 conv1_pad 1 4
+
+
+
+layer conv_dw_1, input :(?, 112, 112, 32)
+sublayer conv_dw_1, output shape :(?, 112, 112, 32)
+sublayer conv_dw_1_bn, output shape :(?, 112, 112, 32)
+sublayer conv_dw_1_relu, output shape :(?, 112, 112, 32)
+sublayer conv_pw_1, output shape :(?, 112, 112, 64)
+sublayer conv_pw_1_bn, output shape :(?, 112, 112, 64)
+sublayer conv_pw_1_relu, output shape :(?, 112, 112, 64)
+1 conv_dw_1 5 10
+
+
+
+layer conv_pad_2, input :(?, 112, 112, 64)
+sublayer conv_pad_2, output shape :(?, 113, 113, 64)
+sublayer conv_dw_2, output shape :(?, 56, 56, 64)
+sublayer conv_dw_2_bn, output shape :(?, 56, 56, 64)
+sublayer conv_dw_2_relu, output shape :(?, 56, 56, 64)
+sublayer conv_pw_2, output shape :(?, 56, 56, 128)
+sublayer conv_pw_2_bn, output shape :(?, 56, 56, 128)
+sublayer conv_pw_2_relu, output shape :(?, 56, 56, 128)
+2 conv_pad_2 11 17
+
+
+
+layer conv_dw_3, input :(?, 56, 56, 128)
+sublayer conv_dw_3, output shape :(?, 56, 56, 128)
+sublayer conv_dw_3_bn, output shape :(?, 56, 56, 128)
+sublayer conv_dw_3_relu, output shape :(?, 56, 56, 128)
+sublayer conv_pw_3, output shape :(?, 56, 56, 128)
+sublayer conv_pw_3_bn, output shape :(?, 56, 56, 128)
+sublayer conv_pw_3_relu, output shape :(?, 56, 56, 128)
+3 conv_dw_3 18 23
+
+
+
+layer conv_pad_4, input :(?, 56, 56, 128)
+sublayer conv_pad_4, output shape :(?, 57, 57, 128)
+sublayer conv_dw_4, output shape :(?, 28, 28, 128)
+sublayer conv_dw_4_bn, output shape :(?, 28, 28, 128)
+sublayer conv_dw_4_relu, output shape :(?, 28, 28, 128)
+sublayer conv_pw_4, output shape :(?, 28, 28, 256)
+sublayer conv_pw_4_bn, output shape :(?, 28, 28, 256)
+sublayer conv_pw_4_relu, output shape :(?, 28, 28, 256)
+4 conv_pad_4 24 30
+
+
+
+layer conv_dw_5, input :(?, 28, 28, 256)
+sublayer conv_dw_5, output shape :(?, 28, 28, 256)
+sublayer conv_dw_5_bn, output shape :(?, 28, 28, 256)
+sublayer conv_dw_5_relu, output shape :(?, 28, 28, 256)
+sublayer conv_pw_5, output shape :(?, 28, 28, 256)
+sublayer conv_pw_5_bn, output shape :(?, 28, 28, 256)
+sublayer conv_pw_5_relu, output shape :(?, 28, 28, 256)
+5 conv_dw_5 31 36
+
+
+
+layer conv_pad_6, input :(?, 28, 28, 256)
+sublayer conv_pad_6, output shape :(?, 29, 29, 256)
+sublayer conv_dw_6, output shape :(?, 14, 14, 256)
+sublayer conv_dw_6_bn, output shape :(?, 14, 14, 256)
+sublayer conv_dw_6_relu, output shape :(?, 14, 14, 256)
+sublayer conv_pw_6, output shape :(?, 14, 14, 512)
+sublayer conv_pw_6_bn, output shape :(?, 14, 14, 512)
+sublayer conv_pw_6_relu, output shape :(?, 14, 14, 512)
+6 conv_pad_6 37 43
+
+
+
+layer conv_dw_7, input :(?, 14, 14, 512)
+sublayer conv_dw_7, output shape :(?, 14, 14, 512)
+sublayer conv_dw_7_bn, output shape :(?, 14, 14, 512)
+sublayer conv_dw_7_relu, output shape :(?, 14, 14, 512)
+sublayer conv_pw_7, output shape :(?, 14, 14, 512)
+sublayer conv_pw_7_bn, output shape :(?, 14, 14, 512)
+sublayer conv_pw_7_relu, output shape :(?, 14, 14, 512)
+7 conv_dw_7 44 49
+
+
+
+layer conv_dw_8, input :(?, 14, 14, 512)
+sublayer conv_dw_8, output shape :(?, 14, 14, 512)
+sublayer conv_dw_8_bn, output shape :(?, 14, 14, 512)
+sublayer conv_dw_8_relu, output shape :(?, 14, 14, 512)
+sublayer conv_pw_8, output shape :(?, 14, 14, 512)
+sublayer conv_pw_8_bn, output shape :(?, 14, 14, 512)
+sublayer conv_pw_8_relu, output shape :(?, 14, 14, 512)
+8 conv_dw_8 50 55
+
+
+
+layer conv_dw_9, input :(?, 14, 14, 512)
+sublayer conv_dw_9, output shape :(?, 14, 14, 512)
+sublayer conv_dw_9_bn, output shape :(?, 14, 14, 512)
+sublayer conv_dw_9_relu, output shape :(?, 14, 14, 512)
+sublayer conv_pw_9, output shape :(?, 14, 14, 512)
+sublayer conv_pw_9_bn, output shape :(?, 14, 14, 512)
+sublayer conv_pw_9_relu, output shape :(?, 14, 14, 512)
+9 conv_dw_9 56 61
+
+
+
+layer conv_dw_10, input :(?, 14, 14, 512)
+sublayer conv_dw_10, output shape :(?, 14, 14, 512)
+sublayer conv_dw_10_bn, output shape :(?, 14, 14, 512)
+sublayer conv_dw_10_relu, output shape :(?, 14, 14, 512)
+sublayer conv_pw_10, output shape :(?, 14, 14, 512)
+sublayer conv_pw_10_bn, output shape :(?, 14, 14, 512)
+sublayer conv_pw_10_relu, output shape :(?, 14, 14, 512)
+10 conv_dw_10 62 67
+
+
+
+layer conv_dw_11, input :(?, 14, 14, 512)
+sublayer conv_dw_11, output shape :(?, 14, 14, 512)
+sublayer conv_dw_11_bn, output shape :(?, 14, 14, 512)
+sublayer conv_dw_11_relu, output shape :(?, 14, 14, 512)
+sublayer conv_pw_11, output shape :(?, 14, 14, 512)
+sublayer conv_pw_11_bn, output shape :(?, 14, 14, 512)
+sublayer conv_pw_11_relu, output shape :(?, 14, 14, 512)
+11 conv_dw_11 68 73
+
+
+
+layer conv_pad_12, input :(?, 14, 14, 512)
+sublayer conv_pad_12, output shape :(?, 15, 15, 512)
+sublayer conv_dw_12, output shape :(?, 7, 7, 512)
+sublayer conv_dw_12_bn, output shape :(?, 7, 7, 512)
+sublayer conv_dw_12_relu, output shape :(?, 7, 7, 512)
+sublayer conv_pw_12, output shape :(?, 7, 7, 1024)
+sublayer conv_pw_12_bn, output shape :(?, 7, 7, 1024)
+sublayer conv_pw_12_relu, output shape :(?, 7, 7, 1024)
+12 conv_pad_12 74 80
+
+
+
+layer conv_dw_13, input :(?, 7, 7, 1024)
+sublayer conv_dw_13, output shape :(?, 7, 7, 1024)
+sublayer conv_dw_13_bn, output shape :(?, 7, 7, 1024)
+sublayer conv_dw_13_relu, output shape :(?, 7, 7, 1024)
+sublayer conv_pw_13, output shape :(?, 7, 7, 1024)
+sublayer conv_pw_13_bn, output shape :(?, 7, 7, 1024)
+sublayer conv_pw_13_relu, output shape :(?, 7, 7, 1024)
+sublayer global_average_pooling2d_1, output shape :(?, 1024)
+sublayer reshape_1, output shape :(?, 1, 1, 1024)
+sublayer dropout, output shape :(?, 1, 1, 1024)
+sublayer conv_preds, output shape :(?, 1, 1, 1000)
+sublayer reshape_2, output shape :(?, 1000)
+sublayer act_softmax, output shape :(?, 1000)
+13 conv_dw_13 81 92
+
+
+****************
+Slicing model from layer: conv_dw_7 to conv_pw_7_relu
+
+inbound layers outside:
+conv_pw_6_relu
+
+outbound layers outside:
+conv_dw_8
+Create input layer for conv_pw_6_relu with shape: (14, 14, 512)
+Replacing connection from conv_pw_6_relu to conv_dw_7
+
+inbound layers of input tensors:
+conv_pw_6_relu
+
+inbound layers of output tensors:
+conv_pw_7_relu
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+conv_pw_6_relu (InputLayer)  (None, 14, 14, 512)       0         
+_________________________________________________________________
+conv_dw_7 (DepthwiseConv2D)  (None, 14, 14, 512)       4608      
+_________________________________________________________________
+conv_dw_7_bn (BatchNormaliza (None, 14, 14, 512)       2048      
+_________________________________________________________________
+conv_dw_7_relu (ReLU)        (None, 14, 14, 512)       0         
+_________________________________________________________________
+conv_pw_7 (Conv2D)           (None, 14, 14, 512)       262144    
+_________________________________________________________________
+conv_pw_7_bn (BatchNormaliza (None, 14, 14, 512)       2048      
+_________________________________________________________________
+conv_pw_7_relu (ReLU)        (None, 14, 14, 512)       0         
+=================================================================
+Total params: 270,848
+Trainable params: 268,800
+Non-trainable params: 2,048
+_________________________________________________________________
+
+
+New model First Layer:conv_dw_7, Input shape:(?, 14, 14, 512)
+			Input name:conv_pw_6_relu First layer input shape:(?, 14, 14, 512),
+			Last layer name:conv_pw_7_relu and conv_pw_7_relu/Relu6
+			output shape:(?, 14, 14, 512)
+Model sliced
+Model saved as /home/ehsan/UvA/Sub_Model/MobileV1/MobileV1_7_7.h5
+command is: python /home/ehsan/UvA/Sub_Model/keras_to_tensorflow.py --input_model=/home/ehsan/UvA/Sub_Model/MobileV1/MobileV1_7_7.h5 --output_model=/home/ehsan/UvA/Sub_Model/MobileV1/MobileV1_7_7.pb
+Freezing graph return code is 0 
+generator is called with shapes: [[14, 14, 512]]
+(14, 14, 512)
+first npy with shape: (14, 14, 512)
+Calling convert function with argumetns:
+          model:/home/ehsan/UvA/Sub_Model/MobileV1/MobileV1_7_7.pb
+          blobs:
+          Inputs:['conv_pw_6_relu']
+          Outputs:['conv_pw_7_relu/Relu6']
+          Inputs_shape:[[14, 14, 512]]
+          Quantization:True
+          Quantization_data_set:/home/ehsan/UvA/Sub_Model/dataset.txt
+          
+done
+--> Loading model
+done
+--> Building model
+build with quantization
+done
+/home/ehsan/UvA/Sub_Model/MobileV1/MobileV1_7_7.rknn
+Convert to rknn return code is 0 
+2023-11-18 01:31:47.806921: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 AVX512F FMA
+/home/ehsan/anaconda3/envs/rock-kit3/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:523: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
+/home/ehsan/anaconda3/envs/rock-kit3/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:524: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
+/home/ehsan/anaconda3/envs/rock-kit3/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:525: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
+/home/ehsan/anaconda3/envs/rock-kit3/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:526: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
+/home/ehsan/anaconda3/envs/rock-kit3/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:527: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
+/home/ehsan/anaconda3/envs/rock-kit3/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:532: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  np_resource = np.dtype([("resource", np.ubyte, 1)])
+Using TensorFlow backend.
+2023-11-18 01:31:50.274510: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 AVX512F FMA
+/home/ehsan/anaconda3/envs/rock-kit3/lib/python3.6/site-packages/keras/engine/saving.py:292: UserWarning: No training configuration found in save file: the model was *not* compiled. Compile it manually.
+  warnings.warn('No training configuration found in save file: '
+I1118 01:31:50.377374 139904486531904 keras_to_tensorflow.py:132] sadd
+I1118 01:31:50.377469 139904486531904 keras_to_tensorflow.py:133] ['conv_pw_6_relu']
+I1118 01:31:50.377504 139904486531904 keras_to_tensorflow.py:148] Converted output node names are: ['conv_pw_7_relu/Relu6']
+INFO:tensorflow:Froze 10 variables.
+I1118 01:31:50.381849 139904486531904 tf_logging.py:115] Froze 10 variables.
+INFO:tensorflow:Converted 10 variables to const ops.
+I1118 01:31:50.383444 139904486531904 tf_logging.py:115] Converted 10 variables to const ops.
+I1118 01:31:50.384450 139904486531904 keras_to_tensorflow.py:181] Saved the freezed graph at /home/ehsan/UvA/Sub_Model/MobileV1/MobileV1_7_7.pb
+Using TensorFlow backend.
+/home/ehsan/anaconda3/envs/rock-kit3/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:523: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
+/home/ehsan/anaconda3/envs/rock-kit3/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:524: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
+/home/ehsan/anaconda3/envs/rock-kit3/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:525: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
+/home/ehsan/anaconda3/envs/rock-kit3/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:526: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
+/home/ehsan/anaconda3/envs/rock-kit3/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:527: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
+/home/ehsan/anaconda3/envs/rock-kit3/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:532: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  np_resource = np.dtype([("resource", np.ubyte, 1)])
+/home/ehsan/anaconda3/envs/rock-kit3/lib/python3.6/site-packages/onnx_tf/common/__init__.py:87: UserWarning: FrontendHandler.get_outputs_names is deprecated. It will be removed in future release.. Use node.outputs instead.
+  warnings.warn(message)
+W /home/ehsan/UvA/Sub_Model/dataset/test0.npy need NHWC format!
+
+
+/home/ehsan/UvA/Sub_Model/MobileV1/MobileV1_7_7.rknn: 1 file pushed, 0 skipped. 903.0 MB/s (275617 bytes in 0.000s)
+start=9, end=9
+conda run -n rock-kit3 python /home/ehsan/UvA/Sub_Model/Sub_Func_CO_UP.py --Start=9 --End=9 --Model=/home/ehsan/UvA/Sub_Model/MobileV1/MobileNet.h5 --Structure=/home/ehsan/UvA/Sub_Model/MobileV1/
+st is /home/ehsan/UvA/Sub_Model/MobileV1/
+/home/ehsan/UvA/Sub_Model/MobileV1/MobileNet.h5
+Visiting layer: input_2
+Visiting layer: conv1_pad
+Visiting layer: conv1
+Visiting layer: conv1_bn
+Visiting layer: conv1_relu
+Visiting layer: conv_dw_1
+Visiting layer: conv_dw_1_bn
+Visiting layer: conv_dw_1_relu
+Visiting layer: conv_pw_1
+Visiting layer: conv_pw_1_bn
+Visiting layer: conv_pw_1_relu
+Visiting layer: conv_pad_2
+Visiting layer: conv_dw_2
+Visiting layer: conv_dw_2_bn
+Visiting layer: conv_dw_2_relu
+Visiting layer: conv_pw_2
+Visiting layer: conv_pw_2_bn
+Visiting layer: conv_pw_2_relu
+Visiting layer: conv_dw_3
+Visiting layer: conv_dw_3_bn
+Visiting layer: conv_dw_3_relu
+Visiting layer: conv_pw_3
+Visiting layer: conv_pw_3_bn
+Visiting layer: conv_pw_3_relu
+Visiting layer: conv_pad_4
+Visiting layer: conv_dw_4
+Visiting layer: conv_dw_4_bn
+Visiting layer: conv_dw_4_relu
+Visiting layer: conv_pw_4
+Visiting layer: conv_pw_4_bn
+Visiting layer: conv_pw_4_relu
+Visiting layer: conv_dw_5
+Visiting layer: conv_dw_5_bn
+Visiting layer: conv_dw_5_relu
+Visiting layer: conv_pw_5
+Visiting layer: conv_pw_5_bn
+Visiting layer: conv_pw_5_relu
+Visiting layer: conv_pad_6
+Visiting layer: conv_dw_6
+Visiting layer: conv_dw_6_bn
+Visiting layer: conv_dw_6_relu
+Visiting layer: conv_pw_6
+Visiting layer: conv_pw_6_bn
+Visiting layer: conv_pw_6_relu
+Visiting layer: conv_dw_7
+Visiting layer: conv_dw_7_bn
+Visiting layer: conv_dw_7_relu
+Visiting layer: conv_pw_7
+Visiting layer: conv_pw_7_bn
+Visiting layer: conv_pw_7_relu
+Visiting layer: conv_dw_8
+Visiting layer: conv_dw_8_bn
+Visiting layer: conv_dw_8_relu
+Visiting layer: conv_pw_8
+Visiting layer: conv_pw_8_bn
+Visiting layer: conv_pw_8_relu
+Visiting layer: conv_dw_9
+Visiting layer: conv_dw_9_bn
+Visiting layer: conv_dw_9_relu
+Visiting layer: conv_pw_9
+Visiting layer: conv_pw_9_bn
+Visiting layer: conv_pw_9_relu
+Visiting layer: conv_dw_10
+Visiting layer: conv_dw_10_bn
+Visiting layer: conv_dw_10_relu
+Visiting layer: conv_pw_10
+Visiting layer: conv_pw_10_bn
+Visiting layer: conv_pw_10_relu
+Visiting layer: conv_dw_11
+Visiting layer: conv_dw_11_bn
+Visiting layer: conv_dw_11_relu
+Visiting layer: conv_pw_11
+Visiting layer: conv_pw_11_bn
+Visiting layer: conv_pw_11_relu
+Visiting layer: conv_pad_12
+Visiting layer: conv_dw_12
+Visiting layer: conv_dw_12_bn
+Visiting layer: conv_dw_12_relu
+Visiting layer: conv_pw_12
+Visiting layer: conv_pw_12_bn
+Visiting layer: conv_pw_12_relu
+Visiting layer: conv_dw_13
+Visiting layer: conv_dw_13_bn
+Visiting layer: conv_dw_13_relu
+Visiting layer: conv_pw_13
+Visiting layer: conv_pw_13_bn
+Visiting layer: conv_pw_13_relu
+Visiting layer: global_average_pooling2d_1
+Visiting layer: reshape_1
+Visiting layer: dropout
+Visiting layer: conv_preds
+Visiting layer: reshape_2
+Visiting layer: act_softmax
+Model /home/ehsan/UvA/Sub_Model/MobileV1/MobileNet.h5 loaded.
+93
+sublayer input_2, output shape :(?, 224, 224, 3)
+
+
+
+layer conv1_pad, input :conv1_pad,(?, 224, 224, 3)
+sublayer conv1_pad, output shape :(?, 225, 225, 3)
+sublayer conv1, output shape :(?, 112, 112, 32)
+sublayer conv1_bn, output shape :(?, 112, 112, 32)
+sublayer conv1_relu, output shape :(?, 112, 112, 32)
+0 conv1_pad 1 4
+
+
+
+layer conv_dw_1, input :(?, 112, 112, 32)
+sublayer conv_dw_1, output shape :(?, 112, 112, 32)
+sublayer conv_dw_1_bn, output shape :(?, 112, 112, 32)
+sublayer conv_dw_1_relu, output shape :(?, 112, 112, 32)
+sublayer conv_pw_1, output shape :(?, 112, 112, 64)
+sublayer conv_pw_1_bn, output shape :(?, 112, 112, 64)
+sublayer conv_pw_1_relu, output shape :(?, 112, 112, 64)
+1 conv_dw_1 5 10
+
+
+
+layer conv_pad_2, input :(?, 112, 112, 64)
+sublayer conv_pad_2, output shape :(?, 113, 113, 64)
+sublayer conv_dw_2, output shape :(?, 56, 56, 64)
+sublayer conv_dw_2_bn, output shape :(?, 56, 56, 64)
+sublayer conv_dw_2_relu, output shape :(?, 56, 56, 64)
+sublayer conv_pw_2, output shape :(?, 56, 56, 128)
+sublayer conv_pw_2_bn, output shape :(?, 56, 56, 128)
+sublayer conv_pw_2_relu, output shape :(?, 56, 56, 128)
+2 conv_pad_2 11 17
+
+
+
+layer conv_dw_3, input :(?, 56, 56, 128)
+sublayer conv_dw_3, output shape :(?, 56, 56, 128)
+sublayer conv_dw_3_bn, output shape :(?, 56, 56, 128)
+sublayer conv_dw_3_relu, output shape :(?, 56, 56, 128)
+sublayer conv_pw_3, output shape :(?, 56, 56, 128)
+sublayer conv_pw_3_bn, output shape :(?, 56, 56, 128)
+sublayer conv_pw_3_relu, output shape :(?, 56, 56, 128)
+3 conv_dw_3 18 23
+
+
+
+layer conv_pad_4, input :(?, 56, 56, 128)
+sublayer conv_pad_4, output shape :(?, 57, 57, 128)
+sublayer conv_dw_4, output shape :(?, 28, 28, 128)
+sublayer conv_dw_4_bn, output shape :(?, 28, 28, 128)
+sublayer conv_dw_4_relu, output shape :(?, 28, 28, 128)
+sublayer conv_pw_4, output shape :(?, 28, 28, 256)
+sublayer conv_pw_4_bn, output shape :(?, 28, 28, 256)
+sublayer conv_pw_4_relu, output shape :(?, 28, 28, 256)
+4 conv_pad_4 24 30
+
+
+
+layer conv_dw_5, input :(?, 28, 28, 256)
+sublayer conv_dw_5, output shape :(?, 28, 28, 256)
+sublayer conv_dw_5_bn, output shape :(?, 28, 28, 256)
+sublayer conv_dw_5_relu, output shape :(?, 28, 28, 256)
+sublayer conv_pw_5, output shape :(?, 28, 28, 256)
+sublayer conv_pw_5_bn, output shape :(?, 28, 28, 256)
+sublayer conv_pw_5_relu, output shape :(?, 28, 28, 256)
+5 conv_dw_5 31 36
+
+
+
+layer conv_pad_6, input :(?, 28, 28, 256)
+sublayer conv_pad_6, output shape :(?, 29, 29, 256)
+sublayer conv_dw_6, output shape :(?, 14, 14, 256)
+sublayer conv_dw_6_bn, output shape :(?, 14, 14, 256)
+sublayer conv_dw_6_relu, output shape :(?, 14, 14, 256)
+sublayer conv_pw_6, output shape :(?, 14, 14, 512)
+sublayer conv_pw_6_bn, output shape :(?, 14, 14, 512)
+sublayer conv_pw_6_relu, output shape :(?, 14, 14, 512)
+6 conv_pad_6 37 43
+
+
+
+layer conv_dw_7, input :(?, 14, 14, 512)
+sublayer conv_dw_7, output shape :(?, 14, 14, 512)
+sublayer conv_dw_7_bn, output shape :(?, 14, 14, 512)
+sublayer conv_dw_7_relu, output shape :(?, 14, 14, 512)
+sublayer conv_pw_7, output shape :(?, 14, 14, 512)
+sublayer conv_pw_7_bn, output shape :(?, 14, 14, 512)
+sublayer conv_pw_7_relu, output shape :(?, 14, 14, 512)
+7 conv_dw_7 44 49
+
+
+
+layer conv_dw_8, input :(?, 14, 14, 512)
+sublayer conv_dw_8, output shape :(?, 14, 14, 512)
+sublayer conv_dw_8_bn, output shape :(?, 14, 14, 512)
+sublayer conv_dw_8_relu, output shape :(?, 14, 14, 512)
+sublayer conv_pw_8, output shape :(?, 14, 14, 512)
+sublayer conv_pw_8_bn, output shape :(?, 14, 14, 512)
+sublayer conv_pw_8_relu, output shape :(?, 14, 14, 512)
+8 conv_dw_8 50 55
+
+
+
+layer conv_dw_9, input :(?, 14, 14, 512)
+sublayer conv_dw_9, output shape :(?, 14, 14, 512)
+sublayer conv_dw_9_bn, output shape :(?, 14, 14, 512)
+sublayer conv_dw_9_relu, output shape :(?, 14, 14, 512)
+sublayer conv_pw_9, output shape :(?, 14, 14, 512)
+sublayer conv_pw_9_bn, output shape :(?, 14, 14, 512)
+sublayer conv_pw_9_relu, output shape :(?, 14, 14, 512)
+9 conv_dw_9 56 61
+
+
+
+layer conv_dw_10, input :(?, 14, 14, 512)
+sublayer conv_dw_10, output shape :(?, 14, 14, 512)
+sublayer conv_dw_10_bn, output shape :(?, 14, 14, 512)
+sublayer conv_dw_10_relu, output shape :(?, 14, 14, 512)
+sublayer conv_pw_10, output shape :(?, 14, 14, 512)
+sublayer conv_pw_10_bn, output shape :(?, 14, 14, 512)
+sublayer conv_pw_10_relu, output shape :(?, 14, 14, 512)
+10 conv_dw_10 62 67
+
+
+
+layer conv_dw_11, input :(?, 14, 14, 512)
+sublayer conv_dw_11, output shape :(?, 14, 14, 512)
+sublayer conv_dw_11_bn, output shape :(?, 14, 14, 512)
+sublayer conv_dw_11_relu, output shape :(?, 14, 14, 512)
+sublayer conv_pw_11, output shape :(?, 14, 14, 512)
+sublayer conv_pw_11_bn, output shape :(?, 14, 14, 512)
+sublayer conv_pw_11_relu, output shape :(?, 14, 14, 512)
+11 conv_dw_11 68 73
+
+
+
+layer conv_pad_12, input :(?, 14, 14, 512)
+sublayer conv_pad_12, output shape :(?, 15, 15, 512)
+sublayer conv_dw_12, output shape :(?, 7, 7, 512)
+sublayer conv_dw_12_bn, output shape :(?, 7, 7, 512)
+sublayer conv_dw_12_relu, output shape :(?, 7, 7, 512)
+sublayer conv_pw_12, output shape :(?, 7, 7, 1024)
+sublayer conv_pw_12_bn, output shape :(?, 7, 7, 1024)
+sublayer conv_pw_12_relu, output shape :(?, 7, 7, 1024)
+12 conv_pad_12 74 80
+
+
+
+layer conv_dw_13, input :(?, 7, 7, 1024)
+sublayer conv_dw_13, output shape :(?, 7, 7, 1024)
+sublayer conv_dw_13_bn, output shape :(?, 7, 7, 1024)
+sublayer conv_dw_13_relu, output shape :(?, 7, 7, 1024)
+sublayer conv_pw_13, output shape :(?, 7, 7, 1024)
+sublayer conv_pw_13_bn, output shape :(?, 7, 7, 1024)
+sublayer conv_pw_13_relu, output shape :(?, 7, 7, 1024)
+sublayer global_average_pooling2d_1, output shape :(?, 1024)
+sublayer reshape_1, output shape :(?, 1, 1, 1024)
+sublayer dropout, output shape :(?, 1, 1, 1024)
+sublayer conv_preds, output shape :(?, 1, 1, 1000)
+sublayer reshape_2, output shape :(?, 1000)
+sublayer act_softmax, output shape :(?, 1000)
+13 conv_dw_13 81 92
+
+
+****************
+Slicing model from layer: conv_dw_9 to conv_pw_9_relu
+
+inbound layers outside:
+conv_pw_8_relu
+
+outbound layers outside:
+conv_dw_10
+Create input layer for conv_pw_8_relu with shape: (14, 14, 512)
+Replacing connection from conv_pw_8_relu to conv_dw_9
+
+inbound layers of input tensors:
+conv_pw_8_relu
+
+inbound layers of output tensors:
+conv_pw_9_relu
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+conv_pw_8_relu (InputLayer)  (None, 14, 14, 512)       0         
+_________________________________________________________________
+conv_dw_9 (DepthwiseConv2D)  (None, 14, 14, 512)       4608      
+_________________________________________________________________
+conv_dw_9_bn (BatchNormaliza (None, 14, 14, 512)       2048      
+_________________________________________________________________
+conv_dw_9_relu (ReLU)        (None, 14, 14, 512)       0         
+_________________________________________________________________
+conv_pw_9 (Conv2D)           (None, 14, 14, 512)       262144    
+_________________________________________________________________
+conv_pw_9_bn (BatchNormaliza (None, 14, 14, 512)       2048      
+_________________________________________________________________
+conv_pw_9_relu (ReLU)        (None, 14, 14, 512)       0         
+=================================================================
+Total params: 270,848
+Trainable params: 268,800
+Non-trainable params: 2,048
+_________________________________________________________________
+
+
+New model First Layer:conv_dw_9, Input shape:(?, 14, 14, 512)
+			Input name:conv_pw_8_relu First layer input shape:(?, 14, 14, 512),
+			Last layer name:conv_pw_9_relu and conv_pw_9_relu/Relu6
+			output shape:(?, 14, 14, 512)
+Model sliced
+Model saved as /home/ehsan/UvA/Sub_Model/MobileV1/MobileV1_9_9.h5
+command is: python /home/ehsan/UvA/Sub_Model/keras_to_tensorflow.py --input_model=/home/ehsan/UvA/Sub_Model/MobileV1/MobileV1_9_9.h5 --output_model=/home/ehsan/UvA/Sub_Model/MobileV1/MobileV1_9_9.pb
+Freezing graph return code is 0 
+generator is called with shapes: [[14, 14, 512]]
+(14, 14, 512)
+first npy with shape: (14, 14, 512)
+Calling convert function with argumetns:
+          model:/home/ehsan/UvA/Sub_Model/MobileV1/MobileV1_9_9.pb
+          blobs:
+          Inputs:['conv_pw_8_relu']
+          Outputs:['conv_pw_9_relu/Relu6']
+          Inputs_shape:[[14, 14, 512]]
+          Quantization:True
+          Quantization_data_set:/home/ehsan/UvA/Sub_Model/dataset.txt
+          
+done
+--> Loading model
+done
+--> Building model
+build with quantization
+done
+/home/ehsan/UvA/Sub_Model/MobileV1/MobileV1_9_9.rknn
+Convert to rknn return code is 0 
+2023-11-18 01:32:06.491773: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 AVX512F FMA
+/home/ehsan/anaconda3/envs/rock-kit3/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:523: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
+/home/ehsan/anaconda3/envs/rock-kit3/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:524: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
+/home/ehsan/anaconda3/envs/rock-kit3/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:525: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
+/home/ehsan/anaconda3/envs/rock-kit3/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:526: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
+/home/ehsan/anaconda3/envs/rock-kit3/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:527: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
+/home/ehsan/anaconda3/envs/rock-kit3/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:532: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  np_resource = np.dtype([("resource", np.ubyte, 1)])
+Using TensorFlow backend.
+2023-11-18 01:32:08.996427: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 AVX512F FMA
+/home/ehsan/anaconda3/envs/rock-kit3/lib/python3.6/site-packages/keras/engine/saving.py:292: UserWarning: No training configuration found in save file: the model was *not* compiled. Compile it manually.
+  warnings.warn('No training configuration found in save file: '
+I1118 01:32:09.100653 140349287768896 keras_to_tensorflow.py:132] sadd
+I1118 01:32:09.100748 140349287768896 keras_to_tensorflow.py:133] ['conv_pw_8_relu']
+I1118 01:32:09.100791 140349287768896 keras_to_tensorflow.py:148] Converted output node names are: ['conv_pw_9_relu/Relu6']
+INFO:tensorflow:Froze 10 variables.
+I1118 01:32:09.105067 140349287768896 tf_logging.py:115] Froze 10 variables.
+INFO:tensorflow:Converted 10 variables to const ops.
+I1118 01:32:09.106645 140349287768896 tf_logging.py:115] Converted 10 variables to const ops.
+I1118 01:32:09.107703 140349287768896 keras_to_tensorflow.py:181] Saved the freezed graph at /home/ehsan/UvA/Sub_Model/MobileV1/MobileV1_9_9.pb
+Using TensorFlow backend.
+/home/ehsan/anaconda3/envs/rock-kit3/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:523: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
+/home/ehsan/anaconda3/envs/rock-kit3/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:524: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
+/home/ehsan/anaconda3/envs/rock-kit3/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:525: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
+/home/ehsan/anaconda3/envs/rock-kit3/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:526: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
+/home/ehsan/anaconda3/envs/rock-kit3/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:527: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
+/home/ehsan/anaconda3/envs/rock-kit3/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:532: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  np_resource = np.dtype([("resource", np.ubyte, 1)])
+/home/ehsan/anaconda3/envs/rock-kit3/lib/python3.6/site-packages/onnx_tf/common/__init__.py:87: UserWarning: FrontendHandler.get_outputs_names is deprecated. It will be removed in future release.. Use node.outputs instead.
+  warnings.warn(message)
+W /home/ehsan/UvA/Sub_Model/dataset/test0.npy need NHWC format!
+
+
+/home/ehsan/UvA/Sub_Model/MobileV1/MobileV1_9_9.rknn: 1 file pushed, 0 skipped. 1841.7 MB/s (275618 bytes in 0.000s)
+start=11, end=11
+conda run -n rock-kit3 python /home/ehsan/UvA/Sub_Model/Sub_Func_CO_UP.py --Start=11 --End=11 --Model=/home/ehsan/UvA/Sub_Model/MobileV1/MobileNet.h5 --Structure=/home/ehsan/UvA/Sub_Model/MobileV1/
+st is /home/ehsan/UvA/Sub_Model/MobileV1/
+/home/ehsan/UvA/Sub_Model/MobileV1/MobileNet.h5
+Visiting layer: input_2
+Visiting layer: conv1_pad
+Visiting layer: conv1
+Visiting layer: conv1_bn
+Visiting layer: conv1_relu
+Visiting layer: conv_dw_1
+Visiting layer: conv_dw_1_bn
+Visiting layer: conv_dw_1_relu
+Visiting layer: conv_pw_1
+Visiting layer: conv_pw_1_bn
+Visiting layer: conv_pw_1_relu
+Visiting layer: conv_pad_2
+Visiting layer: conv_dw_2
+Visiting layer: conv_dw_2_bn
+Visiting layer: conv_dw_2_relu
+Visiting layer: conv_pw_2
+Visiting layer: conv_pw_2_bn
+Visiting layer: conv_pw_2_relu
+Visiting layer: conv_dw_3
+Visiting layer: conv_dw_3_bn
+Visiting layer: conv_dw_3_relu
+Visiting layer: conv_pw_3
+Visiting layer: conv_pw_3_bn
+Visiting layer: conv_pw_3_relu
+Visiting layer: conv_pad_4
+Visiting layer: conv_dw_4
+Visiting layer: conv_dw_4_bn
+Visiting layer: conv_dw_4_relu
+Visiting layer: conv_pw_4
+Visiting layer: conv_pw_4_bn
+Visiting layer: conv_pw_4_relu
+Visiting layer: conv_dw_5
+Visiting layer: conv_dw_5_bn
+Visiting layer: conv_dw_5_relu
+Visiting layer: conv_pw_5
+Visiting layer: conv_pw_5_bn
+Visiting layer: conv_pw_5_relu
+Visiting layer: conv_pad_6
+Visiting layer: conv_dw_6
+Visiting layer: conv_dw_6_bn
+Visiting layer: conv_dw_6_relu
+Visiting layer: conv_pw_6
+Visiting layer: conv_pw_6_bn
+Visiting layer: conv_pw_6_relu
+Visiting layer: conv_dw_7
+Visiting layer: conv_dw_7_bn
+Visiting layer: conv_dw_7_relu
+Visiting layer: conv_pw_7
+Visiting layer: conv_pw_7_bn
+Visiting layer: conv_pw_7_relu
+Visiting layer: conv_dw_8
+Visiting layer: conv_dw_8_bn
+Visiting layer: conv_dw_8_relu
+Visiting layer: conv_pw_8
+Visiting layer: conv_pw_8_bn
+Visiting layer: conv_pw_8_relu
+Visiting layer: conv_dw_9
+Visiting layer: conv_dw_9_bn
+Visiting layer: conv_dw_9_relu
+Visiting layer: conv_pw_9
+Visiting layer: conv_pw_9_bn
+Visiting layer: conv_pw_9_relu
+Visiting layer: conv_dw_10
+Visiting layer: conv_dw_10_bn
+Visiting layer: conv_dw_10_relu
+Visiting layer: conv_pw_10
+Visiting layer: conv_pw_10_bn
+Visiting layer: conv_pw_10_relu
+Visiting layer: conv_dw_11
+Visiting layer: conv_dw_11_bn
+Visiting layer: conv_dw_11_relu
+Visiting layer: conv_pw_11
+Visiting layer: conv_pw_11_bn
+Visiting layer: conv_pw_11_relu
+Visiting layer: conv_pad_12
+Visiting layer: conv_dw_12
+Visiting layer: conv_dw_12_bn
+Visiting layer: conv_dw_12_relu
+Visiting layer: conv_pw_12
+Visiting layer: conv_pw_12_bn
+Visiting layer: conv_pw_12_relu
+Visiting layer: conv_dw_13
+Visiting layer: conv_dw_13_bn
+Visiting layer: conv_dw_13_relu
+Visiting layer: conv_pw_13
+Visiting layer: conv_pw_13_bn
+Visiting layer: conv_pw_13_relu
+Visiting layer: global_average_pooling2d_1
+Visiting layer: reshape_1
+Visiting layer: dropout
+Visiting layer: conv_preds
+Visiting layer: reshape_2
+Visiting layer: act_softmax
+Model /home/ehsan/UvA/Sub_Model/MobileV1/MobileNet.h5 loaded.
+93
+sublayer input_2, output shape :(?, 224, 224, 3)
+
+
+
+layer conv1_pad, input :conv1_pad,(?, 224, 224, 3)
+sublayer conv1_pad, output shape :(?, 225, 225, 3)
+sublayer conv1, output shape :(?, 112, 112, 32)
+sublayer conv1_bn, output shape :(?, 112, 112, 32)
+sublayer conv1_relu, output shape :(?, 112, 112, 32)
+0 conv1_pad 1 4
+
+
+
+layer conv_dw_1, input :(?, 112, 112, 32)
+sublayer conv_dw_1, output shape :(?, 112, 112, 32)
+sublayer conv_dw_1_bn, output shape :(?, 112, 112, 32)
+sublayer conv_dw_1_relu, output shape :(?, 112, 112, 32)
+sublayer conv_pw_1, output shape :(?, 112, 112, 64)
+sublayer conv_pw_1_bn, output shape :(?, 112, 112, 64)
+sublayer conv_pw_1_relu, output shape :(?, 112, 112, 64)
+1 conv_dw_1 5 10
+
+
+
+layer conv_pad_2, input :(?, 112, 112, 64)
+sublayer conv_pad_2, output shape :(?, 113, 113, 64)
+sublayer conv_dw_2, output shape :(?, 56, 56, 64)
+sublayer conv_dw_2_bn, output shape :(?, 56, 56, 64)
+sublayer conv_dw_2_relu, output shape :(?, 56, 56, 64)
+sublayer conv_pw_2, output shape :(?, 56, 56, 128)
+sublayer conv_pw_2_bn, output shape :(?, 56, 56, 128)
+sublayer conv_pw_2_relu, output shape :(?, 56, 56, 128)
+2 conv_pad_2 11 17
+
+
+
+layer conv_dw_3, input :(?, 56, 56, 128)
+sublayer conv_dw_3, output shape :(?, 56, 56, 128)
+sublayer conv_dw_3_bn, output shape :(?, 56, 56, 128)
+sublayer conv_dw_3_relu, output shape :(?, 56, 56, 128)
+sublayer conv_pw_3, output shape :(?, 56, 56, 128)
+sublayer conv_pw_3_bn, output shape :(?, 56, 56, 128)
+sublayer conv_pw_3_relu, output shape :(?, 56, 56, 128)
+3 conv_dw_3 18 23
+
+
+
+layer conv_pad_4, input :(?, 56, 56, 128)
+sublayer conv_pad_4, output shape :(?, 57, 57, 128)
+sublayer conv_dw_4, output shape :(?, 28, 28, 128)
+sublayer conv_dw_4_bn, output shape :(?, 28, 28, 128)
+sublayer conv_dw_4_relu, output shape :(?, 28, 28, 128)
+sublayer conv_pw_4, output shape :(?, 28, 28, 256)
+sublayer conv_pw_4_bn, output shape :(?, 28, 28, 256)
+sublayer conv_pw_4_relu, output shape :(?, 28, 28, 256)
+4 conv_pad_4 24 30
+
+
+
+layer conv_dw_5, input :(?, 28, 28, 256)
+sublayer conv_dw_5, output shape :(?, 28, 28, 256)
+sublayer conv_dw_5_bn, output shape :(?, 28, 28, 256)
+sublayer conv_dw_5_relu, output shape :(?, 28, 28, 256)
+sublayer conv_pw_5, output shape :(?, 28, 28, 256)
+sublayer conv_pw_5_bn, output shape :(?, 28, 28, 256)
+sublayer conv_pw_5_relu, output shape :(?, 28, 28, 256)
+5 conv_dw_5 31 36
+
+
+
+layer conv_pad_6, input :(?, 28, 28, 256)
+sublayer conv_pad_6, output shape :(?, 29, 29, 256)
+sublayer conv_dw_6, output shape :(?, 14, 14, 256)
+sublayer conv_dw_6_bn, output shape :(?, 14, 14, 256)
+sublayer conv_dw_6_relu, output shape :(?, 14, 14, 256)
+sublayer conv_pw_6, output shape :(?, 14, 14, 512)
+sublayer conv_pw_6_bn, output shape :(?, 14, 14, 512)
+sublayer conv_pw_6_relu, output shape :(?, 14, 14, 512)
+6 conv_pad_6 37 43
+
+
+
+layer conv_dw_7, input :(?, 14, 14, 512)
+sublayer conv_dw_7, output shape :(?, 14, 14, 512)
+sublayer conv_dw_7_bn, output shape :(?, 14, 14, 512)
+sublayer conv_dw_7_relu, output shape :(?, 14, 14, 512)
+sublayer conv_pw_7, output shape :(?, 14, 14, 512)
+sublayer conv_pw_7_bn, output shape :(?, 14, 14, 512)
+sublayer conv_pw_7_relu, output shape :(?, 14, 14, 512)
+7 conv_dw_7 44 49
+
+
+
+layer conv_dw_8, input :(?, 14, 14, 512)
+sublayer conv_dw_8, output shape :(?, 14, 14, 512)
+sublayer conv_dw_8_bn, output shape :(?, 14, 14, 512)
+sublayer conv_dw_8_relu, output shape :(?, 14, 14, 512)
+sublayer conv_pw_8, output shape :(?, 14, 14, 512)
+sublayer conv_pw_8_bn, output shape :(?, 14, 14, 512)
+sublayer conv_pw_8_relu, output shape :(?, 14, 14, 512)
+8 conv_dw_8 50 55
+
+
+
+layer conv_dw_9, input :(?, 14, 14, 512)
+sublayer conv_dw_9, output shape :(?, 14, 14, 512)
+sublayer conv_dw_9_bn, output shape :(?, 14, 14, 512)
+sublayer conv_dw_9_relu, output shape :(?, 14, 14, 512)
+sublayer conv_pw_9, output shape :(?, 14, 14, 512)
+sublayer conv_pw_9_bn, output shape :(?, 14, 14, 512)
+sublayer conv_pw_9_relu, output shape :(?, 14, 14, 512)
+9 conv_dw_9 56 61
+
+
+
+layer conv_dw_10, input :(?, 14, 14, 512)
+sublayer conv_dw_10, output shape :(?, 14, 14, 512)
+sublayer conv_dw_10_bn, output shape :(?, 14, 14, 512)
+sublayer conv_dw_10_relu, output shape :(?, 14, 14, 512)
+sublayer conv_pw_10, output shape :(?, 14, 14, 512)
+sublayer conv_pw_10_bn, output shape :(?, 14, 14, 512)
+sublayer conv_pw_10_relu, output shape :(?, 14, 14, 512)
+10 conv_dw_10 62 67
+
+
+
+layer conv_dw_11, input :(?, 14, 14, 512)
+sublayer conv_dw_11, output shape :(?, 14, 14, 512)
+sublayer conv_dw_11_bn, output shape :(?, 14, 14, 512)
+sublayer conv_dw_11_relu, output shape :(?, 14, 14, 512)
+sublayer conv_pw_11, output shape :(?, 14, 14, 512)
+sublayer conv_pw_11_bn, output shape :(?, 14, 14, 512)
+sublayer conv_pw_11_relu, output shape :(?, 14, 14, 512)
+11 conv_dw_11 68 73
+
+
+
+layer conv_pad_12, input :(?, 14, 14, 512)
+sublayer conv_pad_12, output shape :(?, 15, 15, 512)
+sublayer conv_dw_12, output shape :(?, 7, 7, 512)
+sublayer conv_dw_12_bn, output shape :(?, 7, 7, 512)
+sublayer conv_dw_12_relu, output shape :(?, 7, 7, 512)
+sublayer conv_pw_12, output shape :(?, 7, 7, 1024)
+sublayer conv_pw_12_bn, output shape :(?, 7, 7, 1024)
+sublayer conv_pw_12_relu, output shape :(?, 7, 7, 1024)
+12 conv_pad_12 74 80
+
+
+
+layer conv_dw_13, input :(?, 7, 7, 1024)
+sublayer conv_dw_13, output shape :(?, 7, 7, 1024)
+sublayer conv_dw_13_bn, output shape :(?, 7, 7, 1024)
+sublayer conv_dw_13_relu, output shape :(?, 7, 7, 1024)
+sublayer conv_pw_13, output shape :(?, 7, 7, 1024)
+sublayer conv_pw_13_bn, output shape :(?, 7, 7, 1024)
+sublayer conv_pw_13_relu, output shape :(?, 7, 7, 1024)
+sublayer global_average_pooling2d_1, output shape :(?, 1024)
+sublayer reshape_1, output shape :(?, 1, 1, 1024)
+sublayer dropout, output shape :(?, 1, 1, 1024)
+sublayer conv_preds, output shape :(?, 1, 1, 1000)
+sublayer reshape_2, output shape :(?, 1000)
+sublayer act_softmax, output shape :(?, 1000)
+13 conv_dw_13 81 92
+
+
+****************
+Slicing model from layer: conv_dw_11 to conv_pw_11_relu
+
+inbound layers outside:
+conv_pw_10_relu
+
+outbound layers outside:
+conv_pad_12
+Create input layer for conv_pw_10_relu with shape: (14, 14, 512)
+Replacing connection from conv_pw_10_relu to conv_dw_11
+
+inbound layers of input tensors:
+conv_pw_10_relu
+
+inbound layers of output tensors:
+conv_pw_11_relu
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+conv_pw_10_relu (InputLayer) (None, 14, 14, 512)       0         
+_________________________________________________________________
+conv_dw_11 (DepthwiseConv2D) (None, 14, 14, 512)       4608      
+_________________________________________________________________
+conv_dw_11_bn (BatchNormaliz (None, 14, 14, 512)       2048      
+_________________________________________________________________
+conv_dw_11_relu (ReLU)       (None, 14, 14, 512)       0         
+_________________________________________________________________
+conv_pw_11 (Conv2D)          (None, 14, 14, 512)       262144    
+_________________________________________________________________
+conv_pw_11_bn (BatchNormaliz (None, 14, 14, 512)       2048      
+_________________________________________________________________
+conv_pw_11_relu (ReLU)       (None, 14, 14, 512)       0         
+=================================================================
+Total params: 270,848
+Trainable params: 268,800
+Non-trainable params: 2,048
+_________________________________________________________________
+
+
+New model First Layer:conv_dw_11, Input shape:(?, 14, 14, 512)
+			Input name:conv_pw_10_relu First layer input shape:(?, 14, 14, 512),
+			Last layer name:conv_pw_11_relu and conv_pw_11_relu/Relu6
+			output shape:(?, 14, 14, 512)
+Model sliced
+Model saved as /home/ehsan/UvA/Sub_Model/MobileV1/MobileV1_11_11.h5
+command is: python /home/ehsan/UvA/Sub_Model/keras_to_tensorflow.py --input_model=/home/ehsan/UvA/Sub_Model/MobileV1/MobileV1_11_11.h5 --output_model=/home/ehsan/UvA/Sub_Model/MobileV1/MobileV1_11_11.pb
+Freezing graph return code is 0 
+generator is called with shapes: [[14, 14, 512]]
+(14, 14, 512)
+first npy with shape: (14, 14, 512)
+Calling convert function with argumetns:
+          model:/home/ehsan/UvA/Sub_Model/MobileV1/MobileV1_11_11.pb
+          blobs:
+          Inputs:['conv_pw_10_relu']
+          Outputs:['conv_pw_11_relu/Relu6']
+          Inputs_shape:[[14, 14, 512]]
+          Quantization:True
+          Quantization_data_set:/home/ehsan/UvA/Sub_Model/dataset.txt
+          
+done
+--> Loading model
+done
+--> Building model
+build with quantization
+done
+/home/ehsan/UvA/Sub_Model/MobileV1/MobileV1_11_11.rknn
+Convert to rknn return code is 0 
+2023-11-18 01:32:25.274825: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 AVX512F FMA
+/home/ehsan/anaconda3/envs/rock-kit3/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:523: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
+/home/ehsan/anaconda3/envs/rock-kit3/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:524: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
+/home/ehsan/anaconda3/envs/rock-kit3/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:525: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
+/home/ehsan/anaconda3/envs/rock-kit3/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:526: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
+/home/ehsan/anaconda3/envs/rock-kit3/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:527: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
+/home/ehsan/anaconda3/envs/rock-kit3/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:532: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  np_resource = np.dtype([("resource", np.ubyte, 1)])
+Using TensorFlow backend.
+2023-11-18 01:32:27.793227: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 AVX512F FMA
+/home/ehsan/anaconda3/envs/rock-kit3/lib/python3.6/site-packages/keras/engine/saving.py:292: UserWarning: No training configuration found in save file: the model was *not* compiled. Compile it manually.
+  warnings.warn('No training configuration found in save file: '
+I1118 01:32:27.897424 139897292841792 keras_to_tensorflow.py:132] sadd
+I1118 01:32:27.897520 139897292841792 keras_to_tensorflow.py:133] ['conv_pw_10_relu']
+I1118 01:32:27.897555 139897292841792 keras_to_tensorflow.py:148] Converted output node names are: ['conv_pw_11_relu/Relu6']
+INFO:tensorflow:Froze 10 variables.
+I1118 01:32:27.901854 139897292841792 tf_logging.py:115] Froze 10 variables.
+INFO:tensorflow:Converted 10 variables to const ops.
+I1118 01:32:27.903391 139897292841792 tf_logging.py:115] Converted 10 variables to const ops.
+I1118 01:32:27.904417 139897292841792 keras_to_tensorflow.py:181] Saved the freezed graph at /home/ehsan/UvA/Sub_Model/MobileV1/MobileV1_11_11.pb
+Using TensorFlow backend.
+/home/ehsan/anaconda3/envs/rock-kit3/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:523: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
+/home/ehsan/anaconda3/envs/rock-kit3/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:524: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
+/home/ehsan/anaconda3/envs/rock-kit3/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:525: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
+/home/ehsan/anaconda3/envs/rock-kit3/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:526: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
+/home/ehsan/anaconda3/envs/rock-kit3/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:527: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
+/home/ehsan/anaconda3/envs/rock-kit3/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:532: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  np_resource = np.dtype([("resource", np.ubyte, 1)])
+/home/ehsan/anaconda3/envs/rock-kit3/lib/python3.6/site-packages/onnx_tf/common/__init__.py:87: UserWarning: FrontendHandler.get_outputs_names is deprecated. It will be removed in future release.. Use node.outputs instead.
+  warnings.warn(message)
+W /home/ehsan/UvA/Sub_Model/dataset/test0.npy need NHWC format!
+
+
+/home/ehsan/UvA/Sub_Model/MobileV1/MobileV1_11_11.rknn: 1 file pushed, 0 skipped. 870.3 MB/s (275627 bytes in 0.000s)
+start=13, end=13
+conda run -n rock-kit3 python /home/ehsan/UvA/Sub_Model/Sub_Func_CO_UP.py --Start=13 --End=13 --Model=/home/ehsan/UvA/Sub_Model/MobileV1/MobileNet.h5 --Structure=/home/ehsan/UvA/Sub_Model/MobileV1/
+st is /home/ehsan/UvA/Sub_Model/MobileV1/
+/home/ehsan/UvA/Sub_Model/MobileV1/MobileNet.h5
+Visiting layer: input_2
+Visiting layer: conv1_pad
+Visiting layer: conv1
+Visiting layer: conv1_bn
+Visiting layer: conv1_relu
+Visiting layer: conv_dw_1
+Visiting layer: conv_dw_1_bn
+Visiting layer: conv_dw_1_relu
+Visiting layer: conv_pw_1
+Visiting layer: conv_pw_1_bn
+Visiting layer: conv_pw_1_relu
+Visiting layer: conv_pad_2
+Visiting layer: conv_dw_2
+Visiting layer: conv_dw_2_bn
+Visiting layer: conv_dw_2_relu
+Visiting layer: conv_pw_2
+Visiting layer: conv_pw_2_bn
+Visiting layer: conv_pw_2_relu
+Visiting layer: conv_dw_3
+Visiting layer: conv_dw_3_bn
+Visiting layer: conv_dw_3_relu
+Visiting layer: conv_pw_3
+Visiting layer: conv_pw_3_bn
+Visiting layer: conv_pw_3_relu
+Visiting layer: conv_pad_4
+Visiting layer: conv_dw_4
+Visiting layer: conv_dw_4_bn
+Visiting layer: conv_dw_4_relu
+Visiting layer: conv_pw_4
+Visiting layer: conv_pw_4_bn
+Visiting layer: conv_pw_4_relu
+Visiting layer: conv_dw_5
+Visiting layer: conv_dw_5_bn
+Visiting layer: conv_dw_5_relu
+Visiting layer: conv_pw_5
+Visiting layer: conv_pw_5_bn
+Visiting layer: conv_pw_5_relu
+Visiting layer: conv_pad_6
+Visiting layer: conv_dw_6
+Visiting layer: conv_dw_6_bn
+Visiting layer: conv_dw_6_relu
+Visiting layer: conv_pw_6
+Visiting layer: conv_pw_6_bn
+Visiting layer: conv_pw_6_relu
+Visiting layer: conv_dw_7
+Visiting layer: conv_dw_7_bn
+Visiting layer: conv_dw_7_relu
+Visiting layer: conv_pw_7
+Visiting layer: conv_pw_7_bn
+Visiting layer: conv_pw_7_relu
+Visiting layer: conv_dw_8
+Visiting layer: conv_dw_8_bn
+Visiting layer: conv_dw_8_relu
+Visiting layer: conv_pw_8
+Visiting layer: conv_pw_8_bn
+Visiting layer: conv_pw_8_relu
+Visiting layer: conv_dw_9
+Visiting layer: conv_dw_9_bn
+Visiting layer: conv_dw_9_relu
+Visiting layer: conv_pw_9
+Visiting layer: conv_pw_9_bn
+Visiting layer: conv_pw_9_relu
+Visiting layer: conv_dw_10
+Visiting layer: conv_dw_10_bn
+Visiting layer: conv_dw_10_relu
+Visiting layer: conv_pw_10
+Visiting layer: conv_pw_10_bn
+Visiting layer: conv_pw_10_relu
+Visiting layer: conv_dw_11
+Visiting layer: conv_dw_11_bn
+Visiting layer: conv_dw_11_relu
+Visiting layer: conv_pw_11
+Visiting layer: conv_pw_11_bn
+Visiting layer: conv_pw_11_relu
+Visiting layer: conv_pad_12
+Visiting layer: conv_dw_12
+Visiting layer: conv_dw_12_bn
+Visiting layer: conv_dw_12_relu
+Visiting layer: conv_pw_12
+Visiting layer: conv_pw_12_bn
+Visiting layer: conv_pw_12_relu
+Visiting layer: conv_dw_13
+Visiting layer: conv_dw_13_bn
+Visiting layer: conv_dw_13_relu
+Visiting layer: conv_pw_13
+Visiting layer: conv_pw_13_bn
+Visiting layer: conv_pw_13_relu
+Visiting layer: global_average_pooling2d_1
+Visiting layer: reshape_1
+Visiting layer: dropout
+Visiting layer: conv_preds
+Visiting layer: reshape_2
+Visiting layer: act_softmax
+Model /home/ehsan/UvA/Sub_Model/MobileV1/MobileNet.h5 loaded.
+93
+sublayer input_2, output shape :(?, 224, 224, 3)
+
+
+
+layer conv1_pad, input :conv1_pad,(?, 224, 224, 3)
+sublayer conv1_pad, output shape :(?, 225, 225, 3)
+sublayer conv1, output shape :(?, 112, 112, 32)
+sublayer conv1_bn, output shape :(?, 112, 112, 32)
+sublayer conv1_relu, output shape :(?, 112, 112, 32)
+0 conv1_pad 1 4
+
+
+
+layer conv_dw_1, input :(?, 112, 112, 32)
+sublayer conv_dw_1, output shape :(?, 112, 112, 32)
+sublayer conv_dw_1_bn, output shape :(?, 112, 112, 32)
+sublayer conv_dw_1_relu, output shape :(?, 112, 112, 32)
+sublayer conv_pw_1, output shape :(?, 112, 112, 64)
+sublayer conv_pw_1_bn, output shape :(?, 112, 112, 64)
+sublayer conv_pw_1_relu, output shape :(?, 112, 112, 64)
+1 conv_dw_1 5 10
+
+
+
+layer conv_pad_2, input :(?, 112, 112, 64)
+sublayer conv_pad_2, output shape :(?, 113, 113, 64)
+sublayer conv_dw_2, output shape :(?, 56, 56, 64)
+sublayer conv_dw_2_bn, output shape :(?, 56, 56, 64)
+sublayer conv_dw_2_relu, output shape :(?, 56, 56, 64)
+sublayer conv_pw_2, output shape :(?, 56, 56, 128)
+sublayer conv_pw_2_bn, output shape :(?, 56, 56, 128)
+sublayer conv_pw_2_relu, output shape :(?, 56, 56, 128)
+2 conv_pad_2 11 17
+
+
+
+layer conv_dw_3, input :(?, 56, 56, 128)
+sublayer conv_dw_3, output shape :(?, 56, 56, 128)
+sublayer conv_dw_3_bn, output shape :(?, 56, 56, 128)
+sublayer conv_dw_3_relu, output shape :(?, 56, 56, 128)
+sublayer conv_pw_3, output shape :(?, 56, 56, 128)
+sublayer conv_pw_3_bn, output shape :(?, 56, 56, 128)
+sublayer conv_pw_3_relu, output shape :(?, 56, 56, 128)
+3 conv_dw_3 18 23
+
+
+
+layer conv_pad_4, input :(?, 56, 56, 128)
+sublayer conv_pad_4, output shape :(?, 57, 57, 128)
+sublayer conv_dw_4, output shape :(?, 28, 28, 128)
+sublayer conv_dw_4_bn, output shape :(?, 28, 28, 128)
+sublayer conv_dw_4_relu, output shape :(?, 28, 28, 128)
+sublayer conv_pw_4, output shape :(?, 28, 28, 256)
+sublayer conv_pw_4_bn, output shape :(?, 28, 28, 256)
+sublayer conv_pw_4_relu, output shape :(?, 28, 28, 256)
+4 conv_pad_4 24 30
+
+
+
+layer conv_dw_5, input :(?, 28, 28, 256)
+sublayer conv_dw_5, output shape :(?, 28, 28, 256)
+sublayer conv_dw_5_bn, output shape :(?, 28, 28, 256)
+sublayer conv_dw_5_relu, output shape :(?, 28, 28, 256)
+sublayer conv_pw_5, output shape :(?, 28, 28, 256)
+sublayer conv_pw_5_bn, output shape :(?, 28, 28, 256)
+sublayer conv_pw_5_relu, output shape :(?, 28, 28, 256)
+5 conv_dw_5 31 36
+
+
+
+layer conv_pad_6, input :(?, 28, 28, 256)
+sublayer conv_pad_6, output shape :(?, 29, 29, 256)
+sublayer conv_dw_6, output shape :(?, 14, 14, 256)
+sublayer conv_dw_6_bn, output shape :(?, 14, 14, 256)
+sublayer conv_dw_6_relu, output shape :(?, 14, 14, 256)
+sublayer conv_pw_6, output shape :(?, 14, 14, 512)
+sublayer conv_pw_6_bn, output shape :(?, 14, 14, 512)
+sublayer conv_pw_6_relu, output shape :(?, 14, 14, 512)
+6 conv_pad_6 37 43
+
+
+
+layer conv_dw_7, input :(?, 14, 14, 512)
+sublayer conv_dw_7, output shape :(?, 14, 14, 512)
+sublayer conv_dw_7_bn, output shape :(?, 14, 14, 512)
+sublayer conv_dw_7_relu, output shape :(?, 14, 14, 512)
+sublayer conv_pw_7, output shape :(?, 14, 14, 512)
+sublayer conv_pw_7_bn, output shape :(?, 14, 14, 512)
+sublayer conv_pw_7_relu, output shape :(?, 14, 14, 512)
+7 conv_dw_7 44 49
+
+
+
+layer conv_dw_8, input :(?, 14, 14, 512)
+sublayer conv_dw_8, output shape :(?, 14, 14, 512)
+sublayer conv_dw_8_bn, output shape :(?, 14, 14, 512)
+sublayer conv_dw_8_relu, output shape :(?, 14, 14, 512)
+sublayer conv_pw_8, output shape :(?, 14, 14, 512)
+sublayer conv_pw_8_bn, output shape :(?, 14, 14, 512)
+sublayer conv_pw_8_relu, output shape :(?, 14, 14, 512)
+8 conv_dw_8 50 55
+
+
+
+layer conv_dw_9, input :(?, 14, 14, 512)
+sublayer conv_dw_9, output shape :(?, 14, 14, 512)
+sublayer conv_dw_9_bn, output shape :(?, 14, 14, 512)
+sublayer conv_dw_9_relu, output shape :(?, 14, 14, 512)
+sublayer conv_pw_9, output shape :(?, 14, 14, 512)
+sublayer conv_pw_9_bn, output shape :(?, 14, 14, 512)
+sublayer conv_pw_9_relu, output shape :(?, 14, 14, 512)
+9 conv_dw_9 56 61
+
+
+
+layer conv_dw_10, input :(?, 14, 14, 512)
+sublayer conv_dw_10, output shape :(?, 14, 14, 512)
+sublayer conv_dw_10_bn, output shape :(?, 14, 14, 512)
+sublayer conv_dw_10_relu, output shape :(?, 14, 14, 512)
+sublayer conv_pw_10, output shape :(?, 14, 14, 512)
+sublayer conv_pw_10_bn, output shape :(?, 14, 14, 512)
+sublayer conv_pw_10_relu, output shape :(?, 14, 14, 512)
+10 conv_dw_10 62 67
+
+
+
+layer conv_dw_11, input :(?, 14, 14, 512)
+sublayer conv_dw_11, output shape :(?, 14, 14, 512)
+sublayer conv_dw_11_bn, output shape :(?, 14, 14, 512)
+sublayer conv_dw_11_relu, output shape :(?, 14, 14, 512)
+sublayer conv_pw_11, output shape :(?, 14, 14, 512)
+sublayer conv_pw_11_bn, output shape :(?, 14, 14, 512)
+sublayer conv_pw_11_relu, output shape :(?, 14, 14, 512)
+11 conv_dw_11 68 73
+
+
+
+layer conv_pad_12, input :(?, 14, 14, 512)
+sublayer conv_pad_12, output shape :(?, 15, 15, 512)
+sublayer conv_dw_12, output shape :(?, 7, 7, 512)
+sublayer conv_dw_12_bn, output shape :(?, 7, 7, 512)
+sublayer conv_dw_12_relu, output shape :(?, 7, 7, 512)
+sublayer conv_pw_12, output shape :(?, 7, 7, 1024)
+sublayer conv_pw_12_bn, output shape :(?, 7, 7, 1024)
+sublayer conv_pw_12_relu, output shape :(?, 7, 7, 1024)
+12 conv_pad_12 74 80
+
+
+
+layer conv_dw_13, input :(?, 7, 7, 1024)
+sublayer conv_dw_13, output shape :(?, 7, 7, 1024)
+sublayer conv_dw_13_bn, output shape :(?, 7, 7, 1024)
+sublayer conv_dw_13_relu, output shape :(?, 7, 7, 1024)
+sublayer conv_pw_13, output shape :(?, 7, 7, 1024)
+sublayer conv_pw_13_bn, output shape :(?, 7, 7, 1024)
+sublayer conv_pw_13_relu, output shape :(?, 7, 7, 1024)
+sublayer global_average_pooling2d_1, output shape :(?, 1024)
+sublayer reshape_1, output shape :(?, 1, 1, 1024)
+sublayer dropout, output shape :(?, 1, 1, 1024)
+sublayer conv_preds, output shape :(?, 1, 1, 1000)
+sublayer reshape_2, output shape :(?, 1000)
+sublayer act_softmax, output shape :(?, 1000)
+13 conv_dw_13 81 92
+
+
+****************
+Slicing model from layer: conv_dw_13 to act_softmax
+
+inbound layers outside:
+conv_pw_12_relu
+
+outbound layers outside:
+Create input layer for conv_pw_12_relu with shape: (7, 7, 1024)
+Replacing connection from conv_pw_12_relu to conv_dw_13
+
+inbound layers of input tensors:
+conv_pw_12_relu
+
+inbound layers of output tensors:
+act_softmax
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+conv_pw_12_relu (InputLayer) (None, 7, 7, 1024)        0         
+_________________________________________________________________
+conv_dw_13 (DepthwiseConv2D) (None, 7, 7, 1024)        9216      
+_________________________________________________________________
+conv_dw_13_bn (BatchNormaliz (None, 7, 7, 1024)        4096      
+_________________________________________________________________
+conv_dw_13_relu (ReLU)       (None, 7, 7, 1024)        0         
+_________________________________________________________________
+conv_pw_13 (Conv2D)          (None, 7, 7, 1024)        1048576   
+_________________________________________________________________
+conv_pw_13_bn (BatchNormaliz (None, 7, 7, 1024)        4096      
+_________________________________________________________________
+conv_pw_13_relu (ReLU)       (None, 7, 7, 1024)        0         
+_________________________________________________________________
+global_average_pooling2d_1 ( (None, 1024)              0         
+_________________________________________________________________
+reshape_1 (Reshape)          (None, 1, 1, 1024)        0         
+_________________________________________________________________
+dropout (Dropout)            (None, 1, 1, 1024)        0         
+_________________________________________________________________
+conv_preds (Conv2D)          (None, 1, 1, 1000)        1025000   
+_________________________________________________________________
+reshape_2 (Reshape)          (None, 1000)              0         
+_________________________________________________________________
+act_softmax (Activation)     (None, 1000)              0         
+=================================================================
+Total params: 2,090,984
+Trainable params: 2,086,888
+Non-trainable params: 4,096
+_________________________________________________________________
+
+
+New model First Layer:conv_dw_13, Input shape:(?, 7, 7, 1024)
+			Input name:conv_pw_12_relu First layer input shape:(?, 7, 7, 1024),
+			Last layer name:act_softmax and act_softmax/Softmax
+			output shape:(?, 1000)
+Model sliced
+Model saved as /home/ehsan/UvA/Sub_Model/MobileV1/MobileV1_13_13.h5
+command is: python /home/ehsan/UvA/Sub_Model/keras_to_tensorflow.py --input_model=/home/ehsan/UvA/Sub_Model/MobileV1/MobileV1_13_13.h5 --output_model=/home/ehsan/UvA/Sub_Model/MobileV1/MobileV1_13_13.pb
+Freezing graph return code is 0 
+generator is called with shapes: [[7, 7, 1024]]
+(7, 7, 1024)
+first npy with shape: (7, 7, 1024)
+Calling convert function with argumetns:
+          model:/home/ehsan/UvA/Sub_Model/MobileV1/MobileV1_13_13.pb
+          blobs:
+          Inputs:['conv_pw_12_relu']
+          Outputs:['act_softmax/Softmax']
+          Inputs_shape:[[7, 7, 1024]]
+          Quantization:True
+          Quantization_data_set:/home/ehsan/UvA/Sub_Model/dataset.txt
+          
+done
+--> Loading model
+done
+--> Building model
+build with quantization
+done
+/home/ehsan/UvA/Sub_Model/MobileV1/MobileV1_13_13.rknn
+Convert to rknn return code is 0 
+2023-11-18 01:32:44.293846: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 AVX512F FMA
+/home/ehsan/anaconda3/envs/rock-kit3/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:523: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
+/home/ehsan/anaconda3/envs/rock-kit3/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:524: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
+/home/ehsan/anaconda3/envs/rock-kit3/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:525: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
+/home/ehsan/anaconda3/envs/rock-kit3/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:526: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
+/home/ehsan/anaconda3/envs/rock-kit3/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:527: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
+/home/ehsan/anaconda3/envs/rock-kit3/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:532: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  np_resource = np.dtype([("resource", np.ubyte, 1)])
+Using TensorFlow backend.
+2023-11-18 01:32:46.945473: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 AVX512F FMA
+/home/ehsan/anaconda3/envs/rock-kit3/lib/python3.6/site-packages/keras/engine/saving.py:292: UserWarning: No training configuration found in save file: the model was *not* compiled. Compile it manually.
+  warnings.warn('No training configuration found in save file: '
+I1118 01:32:47.088829 140457677960000 keras_to_tensorflow.py:132] sadd
+I1118 01:32:47.088933 140457677960000 keras_to_tensorflow.py:133] ['conv_pw_12_relu']
+I1118 01:32:47.088969 140457677960000 keras_to_tensorflow.py:148] Converted output node names are: ['act_softmax/Softmax']
+INFO:tensorflow:Froze 12 variables.
+I1118 01:32:47.097523 140457677960000 tf_logging.py:115] Froze 12 variables.
+INFO:tensorflow:Converted 12 variables to const ops.
+I1118 01:32:47.107433 140457677960000 tf_logging.py:115] Converted 12 variables to const ops.
+I1118 01:32:47.117102 140457677960000 keras_to_tensorflow.py:181] Saved the freezed graph at /home/ehsan/UvA/Sub_Model/MobileV1/MobileV1_13_13.pb
+Using TensorFlow backend.
+/home/ehsan/anaconda3/envs/rock-kit3/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:523: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
+/home/ehsan/anaconda3/envs/rock-kit3/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:524: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
+/home/ehsan/anaconda3/envs/rock-kit3/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:525: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
+/home/ehsan/anaconda3/envs/rock-kit3/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:526: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
+/home/ehsan/anaconda3/envs/rock-kit3/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:527: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
+/home/ehsan/anaconda3/envs/rock-kit3/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:532: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  np_resource = np.dtype([("resource", np.ubyte, 1)])
+/home/ehsan/anaconda3/envs/rock-kit3/lib/python3.6/site-packages/onnx_tf/common/__init__.py:87: UserWarning: FrontendHandler.get_outputs_names is deprecated. It will be removed in future release.. Use node.outputs instead.
+  warnings.warn(message)
+W /home/ehsan/UvA/Sub_Model/dataset/test0.npy need NHWC format!
+
+
+/home/ehsan/UvA/Sub_Model/MobileV1/MobileV1_13_13.rknn: 1 file pushed, 0 skipped. 1723.3 MB/s (2102964 bytes in 0.001s)
+

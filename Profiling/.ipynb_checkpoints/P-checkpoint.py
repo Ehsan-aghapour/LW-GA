@@ -21,7 +21,7 @@ from scipy.stats import norm
 
 
 
-Test=2
+Test=1
 
 
 cnn_dir="/home/ehsan/UvA/ARMCL/Rock-Pi/ComputeLibrary_64_CPUGPULW/"
@@ -632,6 +632,7 @@ if Test==3:
 
 
 # +
+#exploring dvfs for layers for example
 def Analyze(graph_name=graphs,metric=['task','in','out','trans'],comp=['G','B','L'],
             freq_h=[-1],f=range(10),layers=range(40),index=['Layer'],columns=['Freq'],parameter='Time'):
 
@@ -649,14 +650,28 @@ def Analyze(graph_name=graphs,metric=['task','in','out','trans'],comp=['G','B','
         display(pivot_table)
     except:
         pprint.pprint(pivot_table)
-    pivot_table.plot(kind='bar', stacked=False, figsize=(30, 12))
-    plt.title(f'{metric} {parameter} vs {columns} for {graph_name}')
+    #pivot_table.plot(kind='bar', stacked=False, figsize=(30, 14))
+    pivot_table.plot(kind='bar', stacked=False, figsize=(10, 5.625))
+    
+    #pivot_table.plot(kind='bar', stacked=False, figsize=(12, 12))
+    
+    #This part is wrote for getting graph for presentation if you see error later
+    # consider removing it and uncommenting next lines that are similar
+    font_size = 18
+    plt.title(f'{parameter} vs {columns[0]} for {graph_name[0]} {index[0]}s', fontsize=font_size)
+    plt.xlabel(f'{index[0]}', fontsize=font_size-2)
+    plt.ylabel(f'{parameter}', fontsize=font_size-2)
+    plt.xticks(fontsize=font_size-2)
+    plt.yticks(fontsize=font_size-2)
+    plt.legend(fontsize=font_size-2)
+    '''
+    plt.title(f'{metric} {parameter} vs {columns} for {graph_name} ')
     plt.xlabel(f'{index}')
     plt.ylabel(f'{metric} {parameter}')
-    plt.show()
+    plt.show()'''
     return pivot_table
 
-if Test==2:
+if Test==1:
     g='alex'
     Analyze(graph_name=[g],metric=['task'],comp=['L'],index=['Layer'],columns=['Freq'],parameter='Power-Efficiency')
     Analyze(graph_name=[g],metric=['task'],comp=['B'],index=['Layer'],columns=['Freq'],parameter='Power-Efficiency')
@@ -1178,7 +1193,7 @@ if Test==2:
 
 # +
 #Fixed freq
-Motivation_Fig2=False
+Motivation_Fig2=True
 #def Motivation_Fig2():
 if Motivation_Fig2:
     _g='mobile'
@@ -1393,7 +1408,7 @@ if Test==2:
 
 #def Anlze_Error():
 #if True:
-if Test==3:
+if Test==1:
     for g in graphs:
         print(f'Graph: {g}')
         if not Path('Evaluations_'+g+'_prediction.csv').exists():
@@ -1403,7 +1418,7 @@ if Test==3:
         #print(abs(error_time).describe())
         #error_energy = abs(100.0*((1000.0/Evals_df['Predicted_Energy']) - (1000.0/Evals_df['total_e']))/(1000.0/Evals_df['total_e']))
         #error_energy=Evals_df['Error_Time']
-        error_energy=Evals_df['Error_Time']
+        error_energy=abs(Evals_df['Error_Energy'])
         #error_energy=Evals_df['Error_EE']
         #plt.hist(error_energy, bins=50, density=True)
         print(error_energy.describe())
@@ -1720,10 +1735,25 @@ def _Analyze_Components(g=['alex']):
     except:
         pprint.pprint(pivot_df)
         
+    font_size = 18
     PE_cols = ['Power-Efficiency_G', 'Power-Efficiency_B', 'Power-Efficiency_L']
-    energy_plot = pivot_df.plot(x='Layer', y=PE_cols, kind='bar', title='Power-Efficiency for Average Freqs {}'.format(g))
+    #pivot_table.plot(kind='bar', stacked=False, figsize=(10, 5.625))
+    energy_plot = pivot_df.plot(x='Layer', y=PE_cols, kind='bar', title='Power-Efficiency of {}net layers for Average Freqs'.format(g[0]),figsize=(10, 5.625))
+    energy_plot.set_xlabel('Layer', fontsize=font_size-2)
+    energy_plot.set_ylabel('Power-Efficiency FPS/Watt', fontsize=font_size-2)
+    
+    energy_plot.title.set_fontsize(font_size)
+    plt.xticks(fontsize=font_size-2)
+    plt.yticks(fontsize=font_size-2)
+    plt.legend(fontsize=font_size-2)
+    
+    '''energy_plot = pivot_df.plot(x='Layer', y=PE_cols, kind='bar', title='Energy-Efficiency of {}net layers for Average Freqs'.format(g[0]))
     energy_plot.set_xlabel('Layer')
-    energy_plot.set_ylabel('Power-Efficiency FPS/Watt')
+    energy_plot.set_ylabel('Energy-Efficiency FPS/Watt')
+    legend = energy_plot.legend()
+    for label in legend.get_texts():
+        label.set_text(label.get_text().replace('Power-Efficiency', 'Energy-Efficiency'))'''
+    
     plt.show()
         
     energy_cols = ['Energy_G', 'Energy_B', 'Energy_L']
@@ -1739,7 +1769,7 @@ def _Analyze_Components(g=['alex']):
     time_plot.set_ylabel('Time')
     plt.show()
 
-if Test==2:
+if Test==1:
     _Analyze_Components(g=['alex'])
 
 

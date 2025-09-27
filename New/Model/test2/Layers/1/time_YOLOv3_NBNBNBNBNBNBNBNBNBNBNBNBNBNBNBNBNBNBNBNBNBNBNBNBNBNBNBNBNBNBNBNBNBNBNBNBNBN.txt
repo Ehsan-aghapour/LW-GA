@@ -1,0 +1,4587 @@
+WARNING: linker: Warning: unable to normalize "build/"
+5 Input images are read from /data/local/ARM-CO-UP/assets//ppm_images_608/
+[UtilsPipeline.h] image directory is: /data/local/ARM-CO-UP/assets//ppm_images_608//
+Threads : 1
+Small Cores Threads : 1
+Target : Neon
+Data type : F32
+Data layout : NHWC
+Tuner enabled? : false
+Cache enabled? : false
+Tuner mode : Normal
+Tuner file : 
+MLGO file : 
+Fast math enabled? : false
+Data path : /data/local/ARM-CO-UP/assets//yolov3/
+Image file : /data/local/ARM-CO-UP/assets//ppm_images_608//
+Labels file : /data/local/ARM-CO-UP/assets//coco.names
+Partition point is : 0
+Second partition point is : 0
+Order is : NBNBNBNBNBNBNBNBNBNBNBNBNBNBNBNBNBNBNBNBNBNBNBNBNBNBNBNBNBNBNBNBNBNBNBNBNBN
+freqs of layers : 
+power_profile_mode : layers
+GPU host is: B
+NPU host is: B
+Number of totla cores is : 6
+Number of little cores is : 4
+Print task names : 0
+Run network for 10 times.
+Layer timing: 0
+
+Adding Graph0 target 4 PE: N Host PE: B Layers: 0-0
+Adding Graph1 target 1 PE: B Host PE: B Layers: 1-1
+Adding Graph2 target 4 PE: N Host PE: B Layers: 2-2
+Adding Graph3 target 1 PE: B Host PE: B Layers: 3-3
+Adding Graph4 target 4 PE: N Host PE: B Layers: 4-4
+Adding Graph5 target 1 PE: B Host PE: B Layers: 5-5
+Adding Graph6 target 4 PE: N Host PE: B Layers: 6-6
+Adding Graph7 target 1 PE: B Host PE: B Layers: 7-7
+Adding Graph8 target 4 PE: N Host PE: B Layers: 8-8
+Adding Graph9 target 1 PE: B Host PE: B Layers: 9-9
+Adding Graph10 target 4 PE: N Host PE: B Layers: 10-10
+Adding Graph11 target 1 PE: B Host PE: B Layers: 11-11
+Adding Graph12 target 4 PE: N Host PE: B Layers: 12-12
+Adding Graph13 target 1 PE: B Host PE: B Layers: 13-13
+Adding Graph14 target 4 PE: N Host PE: B Layers: 14-14
+Adding Graph15 target 1 PE: B Host PE: B Layers: 15-15
+Adding Graph16 target 4 PE: N Host PE: B Layers: 16-16
+Adding Graph17 target 1 PE: B Host PE: B Layers: 17-17
+Adding Graph18 target 4 PE: N Host PE: B Layers: 18-18
+Adding Graph19 target 1 PE: B Host PE: B Layers: 19-19
+Adding Graph20 target 4 PE: N Host PE: B Layers: 20-20
+Adding Graph21 target 1 PE: B Host PE: B Layers: 21-21
+Adding Graph22 target 4 PE: N Host PE: B Layers: 22-22
+Adding Graph23 target 1 PE: B Host PE: B Layers: 23-23
+Adding Graph24 target 4 PE: N Host PE: B Layers: 24-24
+Adding Graph25 target 1 PE: B Host PE: B Layers: 25-25
+Adding Graph26 target 4 PE: N Host PE: B Layers: 26-26
+Adding Graph27 target 1 PE: B Host PE: B Layers: 27-27
+Adding Graph28 target 4 PE: N Host PE: B Layers: 28-28
+Adding Graph29 target 1 PE: B Host PE: B Layers: 29-29
+Adding Graph30 target 4 PE: N Host PE: B Layers: 30-30
+Adding Graph31 target 1 PE: B Host PE: B Layers: 31-31
+Adding Graph32 target 4 PE: N Host PE: B Layers: 32-32
+Adding Graph33 target 1 PE: B Host PE: B Layers: 33-33
+Adding Graph34 target 4 PE: N Host PE: B Layers: 34-34
+Adding Graph35 target 1 PE: B Host PE: B Layers: 35-35
+Adding Graph36 target 4 PE: N Host PE: B Layers: 36-36
+Adding Graph37 target 1 PE: B Host PE: B Layers: 37-37
+Adding Graph38 target 4 PE: N Host PE: B Layers: 38-38
+Adding Graph39 target 1 PE: B Host PE: B Layers: 39-39
+Adding Graph40 target 4 PE: N Host PE: B Layers: 40-40
+Adding Graph41 target 1 PE: B Host PE: B Layers: 41-41
+Adding Graph42 target 4 PE: N Host PE: B Layers: 42-42
+Adding Graph43 target 1 PE: B Host PE: B Layers: 43-43
+Adding Graph44 target 4 PE: N Host PE: B Layers: 44-44
+Adding Graph45 target 1 PE: B Host PE: B Layers: 45-45
+Adding Graph46 target 4 PE: N Host PE: B Layers: 46-46
+Adding Graph47 target 1 PE: B Host PE: B Layers: 47-47
+Adding Graph48 target 4 PE: N Host PE: B Layers: 48-48
+Adding Graph49 target 1 PE: B Host PE: B Layers: 49-49
+Adding Graph50 target 4 PE: N Host PE: B Layers: 50-50
+Adding Graph51 target 1 PE: B Host PE: B Layers: 51-51
+Adding Graph52 target 4 PE: N Host PE: B Layers: 52-52
+Adding Graph53 target 1 PE: B Host PE: B Layers: 53-53
+Adding Graph54 target 4 PE: N Host PE: B Layers: 54-54
+Adding Graph55 target 1 PE: B Host PE: B Layers: 55-55
+Adding Graph56 target 4 PE: N Host PE: B Layers: 56-56
+Adding Graph57 target 1 PE: B Host PE: B Layers: 57-57
+Adding Graph58 target 4 PE: N Host PE: B Layers: 58-58
+Adding Graph59 target 1 PE: B Host PE: B Layers: 59-59
+Adding Graph60 target 4 PE: N Host PE: B Layers: 60-60
+Adding Graph61 target 1 PE: B Host PE: B Layers: 61-61
+Adding Graph62 target 4 PE: N Host PE: B Layers: 62-62
+Adding Graph63 target 1 PE: B Host PE: B Layers: 63-63
+Adding Graph64 target 4 PE: N Host PE: B Layers: 64-64
+Adding Graph65 target 1 PE: B Host PE: B Layers: 65-65
+Adding Graph66 target 4 PE: N Host PE: B Layers: 66-66
+Adding Graph67 target 1 PE: B Host PE: B Layers: 67-67
+Adding Graph68 target 4 PE: N Host PE: B Layers: 68-68
+Adding Graph69 target 1 PE: B Host PE: B Layers: 69-69
+Adding Graph70 target 4 PE: N Host PE: B Layers: 70-70
+Adding Graph71 target 1 PE: B Host PE: B Layers: 71-71
+Adding Graph72 target 4 PE: N Host PE: B Layers: 72-72
+Adding Graph73 target 1 PE: B Host PE: B Layers: 73-73
+Adding Graph74 target 4 PE: N Host PE: B Layers: 74-74
+pandoon
+pandoon
+pandoon
+Pandoon opened at 3
+Threads : 1
+Small Cores Threads : 1
+Target : Neon
+Data type : F32
+Data layout : NHWC
+Tuner enabled? : false
+Cache enabled? : false
+Tuner mode : Normal
+Tuner file : 
+MLGO file : 
+Fast math enabled? : false
+Data path : /data/local/ARM-CO-UP/assets//yolov3/
+Image file : /data/local/ARM-CO-UP/assets//ppm_images_608//
+Labels file : /data/local/ARM-CO-UP/assets//coco.names
+Partition point is : 0
+Second partition point is : 0
+Order is : NBNBNBNBNBNBNBNBNBNBNBNBNBNBNBNBNBNBNBNBNBNBNBNBNBNBNBNBNBNBNBNBNBNBNBNBNBN
+freqs of layers : 
+power_profile_mode : layers
+GPU host is: B
+NPU host is: B
+Number of totla cores is : 6
+Number of little cores is : 4
+Print task names : 0
+Run network for 10 times.
+Layer timing: 0
+
+****************************
+GraphUtils.cpp- reading images: /data/local/ARM-CO-UP/assets//ppm_images_608//
+/data/local/ARM-CO-UP/assets//ppm_images_608//apple.ppm
+/data/local/ARM-CO-UP/assets//ppm_images_608//dishes.ppm
+/data/local/ARM-CO-UP/assets//ppm_images_608//bus.ppm
+/data/local/ARM-CO-UP/assets//ppm_images_608//zebra.ppm
+/data/local/ARM-CO-UP/assets//ppm_images_608//bear.ppm
+*****************************
+
+
+
+-1 skipping layer: 
+			0 layer: conv2d_1/Conv2D
+			0 skipping layer: conv2d_1/BatchNorm
+			0 skipping layer: conv2d_1/LeakyRelu
+1 layer: conv2d_2/Conv2D
+Input node for the layer 1 is in graph: 0 Adding Transmitter to that graph
+Adding Sender_conv2d_1/LeakyRelu to graph 0 with target 4
+Adding Receiver_conv2d_1/LeakyRelu to graph 1 with target 1
+1 skipping layer: conv2d_2/BatchNorm
+1 skipping layer: conv2d_2/LeakyRelu
+			2 layer: conv2d_3/Conv2D
+Input node for the layer 2 is in graph: 1 Adding Transmitter to that graph
+Adding Sender_conv2d_2/LeakyRelu to graph 1 with target 1
+Adding Receiver_conv2d_2/LeakyRelu to graph 2 with target 4
+			2 skipping layer: conv2d_3/BatchNorm
+			2 skipping layer: conv2d_3/LeakyRelu
+3 layer: conv2d_4/Conv2D
+Input node for the layer 3 is in graph: 2 Adding Transmitter to that graph
+Adding Sender_conv2d_3/LeakyRelu to graph 2 with target 4
+Adding Receiver_conv2d_3/LeakyRelu to graph 3 with target 1
+3 skipping layer: conv2d_4/BatchNorm
+3 skipping layer: conv2d_4/LeakyRelu
+3 skipping layer: add_3_4
+Input node for the layer 3 is in graph: 1and there is a sender node (mapped) for that node
+Adding Receiver_conv2d_2/LeakyRelu to graph 3 with target 1
+			4 layer: conv2d_5/Conv2D
+Input node for the layer 4 is in graph: 3 Adding Transmitter to that graph
+Adding Sender_add_3_4 to graph 3 with target 1
+Adding Receiver_add_3_4 to graph 4 with target 4
+			4 skipping layer: conv2d_5/BatchNorm
+			4 skipping layer: conv2d_5/LeakyRelu
+5 layer: conv2d_6/Conv2D
+Input node for the layer 5 is in graph: 4 Adding Transmitter to that graph
+Adding Sender_conv2d_5/LeakyRelu to graph 4 with target 4
+Adding Receiver_conv2d_5/LeakyRelu to graph 5 with target 1
+5 skipping layer: conv2d_6/BatchNorm
+5 skipping layer: conv2d_6/LeakyRelu
+			6 layer: conv2d_7/Conv2D
+Input node for the layer 6 is in graph: 5 Adding Transmitter to that graph
+Adding Sender_conv2d_6/LeakyRelu to graph 5 with target 1
+Adding Receiver_conv2d_6/LeakyRelu to graph 6 with target 4
+			6 skipping layer: conv2d_7/BatchNorm
+			6 skipping layer: conv2d_7/LeakyRelu
+			6 skipping layer: add_6_7
+Input node for the layer 6 is in graph: 4and there is a sender node (mapped) for that node
+Adding Receiver_conv2d_5/LeakyRelu to graph 6 with target 4
+7 layer: conv2d_8/Conv2D
+Input node for the layer 7 is in graph: 6 Adding Transmitter to that graph
+Adding Sender_add_6_7 to graph 6 with target 4
+Adding Receiver_add_6_7 to graph 7 with target 1
+7 skipping layer: conv2d_8/BatchNorm
+7 skipping layer: conv2d_8/LeakyRelu
+			8 layer: conv2d_9/Conv2D
+Input node for the layer 8 is in graph: 7 Adding Transmitter to that graph
+Adding Sender_conv2d_8/LeakyRelu to graph 7 with target 1
+Adding Receiver_conv2d_8/LeakyRelu to graph 8 with target 4
+			8 skipping layer: conv2d_9/BatchNorm
+			8 skipping layer: conv2d_9/LeakyRelu
+			8 skipping layer: add_8_9
+Input node for the layer 8 is in graph: 6and there is a sender node (mapped) for that node
+Adding Receiver_add_6_7 to graph 8 with target 4
+9 layer: conv2d_10/Conv2D
+Input node for the layer 9 is in graph: 8 Adding Transmitter to that graph
+Adding Sender_add_8_9 to graph 8 with target 4
+Adding Receiver_add_8_9 to graph 9 with target 1
+9 skipping layer: conv2d_10/BatchNorm
+9 skipping layer: conv2d_10/LeakyRelu
+			10 layer: conv2d_11/Conv2D
+Input node for the layer 10 is in graph: 9 Adding Transmitter to that graph
+Adding Sender_conv2d_10/LeakyRelu to graph 9 with target 1
+Adding Receiver_conv2d_10/LeakyRelu to graph 10 with target 4
+			10 skipping layer: conv2d_11/BatchNorm
+			10 skipping layer: conv2d_11/LeakyRelu
+11 layer: conv2d_12/Conv2D
+Input node for the layer 11 is in graph: 10 Adding Transmitter to that graph
+Adding Sender_conv2d_11/LeakyRelu to graph 10 with target 4
+Adding Receiver_conv2d_11/LeakyRelu to graph 11 with target 1
+11 skipping layer: conv2d_12/BatchNorm
+11 skipping layer: conv2d_12/LeakyRelu
+11 skipping layer: add_11_12
+Input node for the layer 11 is in graph: 9and there is a sender node (mapped) for that node
+Adding Receiver_conv2d_10/LeakyRelu to graph 11 with target 1
+			12 layer: conv2d_13/Conv2D
+Input node for the layer 12 is in graph: 11 Adding Transmitter to that graph
+Adding Sender_add_11_12 to graph 11 with target 1
+Adding Receiver_add_11_12 to graph 12 with target 4
+			12 skipping layer: conv2d_13/BatchNorm
+			12 skipping layer: conv2d_13/LeakyRelu
+13 layer: conv2d_14/Conv2D
+Input node for the layer 13 is in graph: 12 Adding Transmitter to that graph
+Adding Sender_conv2d_13/LeakyRelu to graph 12 with target 4
+Adding Receiver_conv2d_13/LeakyRelu to graph 13 with target 1
+13 skipping layer: conv2d_14/BatchNorm
+13 skipping layer: conv2d_14/LeakyRelu
+13 skipping layer: add_13_14
+Input node for the layer 13 is in graph: 11and there is a sender node (mapped) for that node
+Adding Receiver_add_11_12 to graph 13 with target 1
+			14 layer: conv2d_15/Conv2D
+Input node for the layer 14 is in graph: 13 Adding Transmitter to that graph
+Adding Sender_add_13_14 to graph 13 with target 1
+Adding Receiver_add_13_14 to graph 14 with target 4
+			14 skipping layer: conv2d_15/BatchNorm
+			14 skipping layer: conv2d_15/LeakyRelu
+15 layer: conv2d_16/Conv2D
+Input node for the layer 15 is in graph: 14 Adding Transmitter to that graph
+Adding Sender_conv2d_15/LeakyRelu to graph 14 with target 4
+Adding Receiver_conv2d_15/LeakyRelu to graph 15 with target 1
+15 skipping layer: conv2d_16/BatchNorm
+15 skipping layer: conv2d_16/LeakyRelu
+15 skipping layer: add_15_16
+Input node for the layer 15 is in graph: 13and there is a sender node (mapped) for that node
+Adding Receiver_add_13_14 to graph 15 with target 1
+			16 layer: conv2d_17/Conv2D
+Input node for the layer 16 is in graph: 15 Adding Transmitter to that graph
+Adding Sender_add_15_16 to graph 15 with target 1
+Adding Receiver_add_15_16 to graph 16 with target 4
+			16 skipping layer: conv2d_17/BatchNorm
+			16 skipping layer: conv2d_17/LeakyRelu
+17 layer: conv2d_18/Conv2D
+Input node for the layer 17 is in graph: 16 Adding Transmitter to that graph
+Adding Sender_conv2d_17/LeakyRelu to graph 16 with target 4
+Adding Receiver_conv2d_17/LeakyRelu to graph 17 with target 1
+17 skipping layer: conv2d_18/BatchNorm
+17 skipping layer: conv2d_18/LeakyRelu
+17 skipping layer: add_17_18
+Input node for the layer 17 is in graph: 15and there is a sender node (mapped) for that node
+Adding Receiver_add_15_16 to graph 17 with target 1
+			18 layer: conv2d_19/Conv2D
+Input node for the layer 18 is in graph: 17 Adding Transmitter to that graph
+Adding Sender_add_17_18 to graph 17 with target 1
+Adding Receiver_add_17_18 to graph 18 with target 4
+			18 skipping layer: conv2d_19/BatchNorm
+			18 skipping layer: conv2d_19/LeakyRelu
+19 layer: conv2d_20/Conv2D
+Input node for the layer 19 is in graph: 18 Adding Transmitter to that graph
+Adding Sender_conv2d_19/LeakyRelu to graph 18 with target 4
+Adding Receiver_conv2d_19/LeakyRelu to graph 19 with target 1
+19 skipping layer: conv2d_20/BatchNorm
+19 skipping layer: conv2d_20/LeakyRelu
+19 skipping layer: add_19_20
+Input node for the layer 19 is in graph: 17and there is a sender node (mapped) for that node
+Adding Receiver_add_17_18 to graph 19 with target 1
+			20 layer: conv2d_21/Conv2D
+Input node for the layer 20 is in graph: 19 Adding Transmitter to that graph
+Adding Sender_add_19_20 to graph 19 with target 1
+Adding Receiver_add_19_20 to graph 20 with target 4
+			20 skipping layer: conv2d_21/BatchNorm
+			20 skipping layer: conv2d_21/LeakyRelu
+21 layer: conv2d_22/Conv2D
+Input node for the layer 21 is in graph: 20 Adding Transmitter to that graph
+Adding Sender_conv2d_21/LeakyRelu to graph 20 with target 4
+Adding Receiver_conv2d_21/LeakyRelu to graph 21 with target 1
+21 skipping layer: conv2d_22/BatchNorm
+21 skipping layer: conv2d_22/LeakyRelu
+21 skipping layer: add_21_22
+Input node for the layer 21 is in graph: 19and there is a sender node (mapped) for that node
+Adding Receiver_add_19_20 to graph 21 with target 1
+			22 layer: conv2d_23/Conv2D
+Input node for the layer 22 is in graph: 21 Adding Transmitter to that graph
+Adding Sender_add_21_22 to graph 21 with target 1
+Adding Receiver_add_21_22 to graph 22 with target 4
+			22 skipping layer: conv2d_23/BatchNorm
+			22 skipping layer: conv2d_23/LeakyRelu
+23 layer: conv2d_24/Conv2D
+Input node for the layer 23 is in graph: 22 Adding Transmitter to that graph
+Adding Sender_conv2d_23/LeakyRelu to graph 22 with target 4
+Adding Receiver_conv2d_23/LeakyRelu to graph 23 with target 1
+23 skipping layer: conv2d_24/BatchNorm
+23 skipping layer: conv2d_24/LeakyRelu
+23 skipping layer: add_23_24
+Input node for the layer 23 is in graph: 21and there is a sender node (mapped) for that node
+Adding Receiver_add_21_22 to graph 23 with target 1
+			24 layer: conv2d_25/Conv2D
+Input node for the layer 24 is in graph: 23 Adding Transmitter to that graph
+Adding Sender_add_23_24 to graph 23 with target 1
+Adding Receiver_add_23_24 to graph 24 with target 4
+			24 skipping layer: conv2d_25/BatchNorm
+			24 skipping layer: conv2d_25/LeakyRelu
+25 layer: conv2d_26/Conv2D
+Input node for the layer 25 is in graph: 24 Adding Transmitter to that graph
+Adding Sender_conv2d_25/LeakyRelu to graph 24 with target 4
+Adding Receiver_conv2d_25/LeakyRelu to graph 25 with target 1
+25 skipping layer: conv2d_26/BatchNorm
+25 skipping layer: conv2d_26/LeakyRelu
+25 skipping layer: add_25_26
+Input node for the layer 25 is in graph: 23and there is a sender node (mapped) for that node
+Adding Receiver_add_23_24 to graph 25 with target 1
+			26 layer: conv2d_27/Conv2D
+Input node for the layer 26 is in graph: 25 Adding Transmitter to that graph
+Adding Sender_add_25_26 to graph 25 with target 1
+Adding Receiver_add_25_26 to graph 26 with target 4
+			26 skipping layer: conv2d_27/BatchNorm
+			26 skipping layer: conv2d_27/LeakyRelu
+27 layer: conv2d_28/Conv2D
+Input node for the layer 27 is in graph: 26 Adding Transmitter to that graph
+Adding Sender_conv2d_27/LeakyRelu to graph 26 with target 4
+Adding Receiver_conv2d_27/LeakyRelu to graph 27 with target 1
+27 skipping layer: conv2d_28/BatchNorm
+27 skipping layer: conv2d_28/LeakyRelu
+			28 layer: conv2d_29/Conv2D
+Input node for the layer 28 is in graph: 27 Adding Transmitter to that graph
+Adding Sender_conv2d_28/LeakyRelu to graph 27 with target 1
+Adding Receiver_conv2d_28/LeakyRelu to graph 28 with target 4
+			28 skipping layer: conv2d_29/BatchNorm
+			28 skipping layer: conv2d_29/LeakyRelu
+			28 skipping layer: add_28_29
+Input node for the layer 28 is in graph: 26and there is a sender node (mapped) for that node
+Adding Receiver_conv2d_27/LeakyRelu to graph 28 with target 4
+29 layer: conv2d_30/Conv2D
+Input node for the layer 29 is in graph: 28 Adding Transmitter to that graph
+Adding Sender_add_28_29 to graph 28 with target 4
+Adding Receiver_add_28_29 to graph 29 with target 1
+29 skipping layer: conv2d_30/BatchNorm
+29 skipping layer: conv2d_30/LeakyRelu
+			30 layer: conv2d_31/Conv2D
+Input node for the layer 30 is in graph: 29 Adding Transmitter to that graph
+Adding Sender_conv2d_30/LeakyRelu to graph 29 with target 1
+Adding Receiver_conv2d_30/LeakyRelu to graph 30 with target 4
+			30 skipping layer: conv2d_31/BatchNorm
+			30 skipping layer: conv2d_31/LeakyRelu
+			30 skipping layer: add_30_31
+Input node for the layer 30 is in graph: 28and there is a sender node (mapped) for that node
+Adding Receiver_add_28_29 to graph 30 with target 4
+31 layer: conv2d_32/Conv2D
+Input node for the layer 31 is in graph: 30 Adding Transmitter to that graph
+Adding Sender_add_30_31 to graph 30 with target 4
+Adding Receiver_add_30_31 to graph 31 with target 1
+31 skipping layer: conv2d_32/BatchNorm
+31 skipping layer: conv2d_32/LeakyRelu
+			32 layer: conv2d_33/Conv2D
+Input node for the layer 32 is in graph: 31 Adding Transmitter to that graph
+Adding Sender_conv2d_32/LeakyRelu to graph 31 with target 1
+Adding Receiver_conv2d_32/LeakyRelu to graph 32 with target 4
+			32 skipping layer: conv2d_33/BatchNorm
+			32 skipping layer: conv2d_33/LeakyRelu
+			32 skipping layer: add_32_33
+Input node for the layer 32 is in graph: 30and there is a sender node (mapped) for that node
+Adding Receiver_add_30_31 to graph 32 with target 4
+33 layer: conv2d_34/Conv2D
+Input node for the layer 33 is in graph: 32 Adding Transmitter to that graph
+Adding Sender_add_32_33 to graph 32 with target 4
+Adding Receiver_add_32_33 to graph 33 with target 1
+33 skipping layer: conv2d_34/BatchNorm
+33 skipping layer: conv2d_34/LeakyRelu
+			34 layer: conv2d_35/Conv2D
+Input node for the layer 34 is in graph: 33 Adding Transmitter to that graph
+Adding Sender_conv2d_34/LeakyRelu to graph 33 with target 1
+Adding Receiver_conv2d_34/LeakyRelu to graph 34 with target 4
+			34 skipping layer: conv2d_35/BatchNorm
+			34 skipping layer: conv2d_35/LeakyRelu
+			34 skipping layer: add_34_35
+Input node for the layer 34 is in graph: 32and there is a sender node (mapped) for that node
+Adding Receiver_add_32_33 to graph 34 with target 4
+35 layer: conv2d_36/Conv2D
+Input node for the layer 35 is in graph: 34 Adding Transmitter to that graph
+Adding Sender_add_34_35 to graph 34 with target 4
+Adding Receiver_add_34_35 to graph 35 with target 1
+35 skipping layer: conv2d_36/BatchNorm
+35 skipping layer: conv2d_36/LeakyRelu
+			36 layer: conv2d_37/Conv2D
+Input node for the layer 36 is in graph: 35 Adding Transmitter to that graph
+Adding Sender_conv2d_36/LeakyRelu to graph 35 with target 1
+Adding Receiver_conv2d_36/LeakyRelu to graph 36 with target 4
+			36 skipping layer: conv2d_37/BatchNorm
+			36 skipping layer: conv2d_37/LeakyRelu
+			36 skipping layer: add_36_37
+Input node for the layer 36 is in graph: 34and there is a sender node (mapped) for that node
+Adding Receiver_add_34_35 to graph 36 with target 4
+37 layer: conv2d_38/Conv2D
+Input node for the layer 37 is in graph: 36 Adding Transmitter to that graph
+Adding Sender_add_36_37 to graph 36 with target 4
+Adding Receiver_add_36_37 to graph 37 with target 1
+37 skipping layer: conv2d_38/BatchNorm
+37 skipping layer: conv2d_38/LeakyRelu
+			38 layer: conv2d_39/Conv2D
+Input node for the layer 38 is in graph: 37 Adding Transmitter to that graph
+Adding Sender_conv2d_38/LeakyRelu to graph 37 with target 1
+Adding Receiver_conv2d_38/LeakyRelu to graph 38 with target 4
+			38 skipping layer: conv2d_39/BatchNorm
+			38 skipping layer: conv2d_39/LeakyRelu
+			38 skipping layer: add_38_39
+Input node for the layer 38 is in graph: 36and there is a sender node (mapped) for that node
+Adding Receiver_add_36_37 to graph 38 with target 4
+39 layer: conv2d_40/Conv2D
+Input node for the layer 39 is in graph: 38 Adding Transmitter to that graph
+Adding Sender_add_38_39 to graph 38 with target 4
+Adding Receiver_add_38_39 to graph 39 with target 1
+39 skipping layer: conv2d_40/BatchNorm
+39 skipping layer: conv2d_40/LeakyRelu
+			40 layer: conv2d_41/Conv2D
+Input node for the layer 40 is in graph: 39 Adding Transmitter to that graph
+Adding Sender_conv2d_40/LeakyRelu to graph 39 with target 1
+Adding Receiver_conv2d_40/LeakyRelu to graph 40 with target 4
+			40 skipping layer: conv2d_41/BatchNorm
+			40 skipping layer: conv2d_41/LeakyRelu
+			40 skipping layer: add_40_41
+Input node for the layer 40 is in graph: 38and there is a sender node (mapped) for that node
+Adding Receiver_add_38_39 to graph 40 with target 4
+41 layer: conv2d_42/Conv2D
+Input node for the layer 41 is in graph: 40 Adding Transmitter to that graph
+Adding Sender_add_40_41 to graph 40 with target 4
+Adding Receiver_add_40_41 to graph 41 with target 1
+41 skipping layer: conv2d_42/BatchNorm
+41 skipping layer: conv2d_42/LeakyRelu
+			42 layer: conv2d_43/Conv2D
+Input node for the layer 42 is in graph: 41 Adding Transmitter to that graph
+Adding Sender_conv2d_42/LeakyRelu to graph 41 with target 1
+Adding Receiver_conv2d_42/LeakyRelu to graph 42 with target 4
+			42 skipping layer: conv2d_43/BatchNorm
+			42 skipping layer: conv2d_43/LeakyRelu
+			42 skipping layer: add_42_43
+Input node for the layer 42 is in graph: 40and there is a sender node (mapped) for that node
+Adding Receiver_add_40_41 to graph 42 with target 4
+43 layer: conv2d_44/Conv2D
+Input node for the layer 43 is in graph: 42 Adding Transmitter to that graph
+Adding Sender_add_42_43 to graph 42 with target 4
+Adding Receiver_add_42_43 to graph 43 with target 1
+43 skipping layer: conv2d_44/BatchNorm
+43 skipping layer: conv2d_44/LeakyRelu
+			44 layer: conv2d_45/Conv2D
+Input node for the layer 44 is in graph: 43 Adding Transmitter to that graph
+Adding Sender_conv2d_44/LeakyRelu to graph 43 with target 1
+Adding Receiver_conv2d_44/LeakyRelu to graph 44 with target 4
+			44 skipping layer: conv2d_45/BatchNorm
+			44 skipping layer: conv2d_45/LeakyRelu
+45 layer: conv2d_46/Conv2D
+Input node for the layer 45 is in graph: 44 Adding Transmitter to that graph
+Adding Sender_conv2d_45/LeakyRelu to graph 44 with target 4
+Adding Receiver_conv2d_45/LeakyRelu to graph 45 with target 1
+45 skipping layer: conv2d_46/BatchNorm
+45 skipping layer: conv2d_46/LeakyRelu
+45 skipping layer: add_45_46
+Input node for the layer 45 is in graph: 43and there is a sender node (mapped) for that node
+Adding Receiver_conv2d_44/LeakyRelu to graph 45 with target 1
+			46 layer: conv2d_47/Conv2D
+Input node for the layer 46 is in graph: 45 Adding Transmitter to that graph
+Adding Sender_add_45_46 to graph 45 with target 1
+Adding Receiver_add_45_46 to graph 46 with target 4
+			46 skipping layer: conv2d_47/BatchNorm
+			46 skipping layer: conv2d_47/LeakyRelu
+47 layer: conv2d_48/Conv2D
+Input node for the layer 47 is in graph: 46 Adding Transmitter to that graph
+Adding Sender_conv2d_47/LeakyRelu to graph 46 with target 4
+Adding Receiver_conv2d_47/LeakyRelu to graph 47 with target 1
+47 skipping layer: conv2d_48/BatchNorm
+47 skipping layer: conv2d_48/LeakyRelu
+47 skipping layer: add_47_48
+Input node for the layer 47 is in graph: 45and there is a sender node (mapped) for that node
+Adding Receiver_add_45_46 to graph 47 with target 1
+			48 layer: conv2d_49/Conv2D
+Input node for the layer 48 is in graph: 47 Adding Transmitter to that graph
+Adding Sender_add_47_48 to graph 47 with target 1
+Adding Receiver_add_47_48 to graph 48 with target 4
+			48 skipping layer: conv2d_49/BatchNorm
+			48 skipping layer: conv2d_49/LeakyRelu
+49 layer: conv2d_50/Conv2D
+Input node for the layer 49 is in graph: 48 Adding Transmitter to that graph
+Adding Sender_conv2d_49/LeakyRelu to graph 48 with target 4
+Adding Receiver_conv2d_49/LeakyRelu to graph 49 with target 1
+49 skipping layer: conv2d_50/BatchNorm
+49 skipping layer: conv2d_50/LeakyRelu
+49 skipping layer: add_49_50
+Input node for the layer 49 is in graph: 47and there is a sender node (mapped) for that node
+Adding Receiver_add_47_48 to graph 49 with target 1
+			50 layer: conv2d_51/Conv2D
+Input node for the layer 50 is in graph: 49 Adding Transmitter to that graph
+Adding Sender_add_49_50 to graph 49 with target 1
+Adding Receiver_add_49_50 to graph 50 with target 4
+			50 skipping layer: conv2d_51/BatchNorm
+			50 skipping layer: conv2d_51/LeakyRelu
+51 layer: conv2d_52/Conv2D
+Input node for the layer 51 is in graph: 50 Adding Transmitter to that graph
+Adding Sender_conv2d_51/LeakyRelu to graph 50 with target 4
+Adding Receiver_conv2d_51/LeakyRelu to graph 51 with target 1
+51 skipping layer: conv2d_52/BatchNorm
+51 skipping layer: conv2d_52/LeakyRelu
+51 skipping layer: add_51_52
+Input node for the layer 51 is in graph: 49and there is a sender node (mapped) for that node
+Adding Receiver_add_49_50 to graph 51 with target 1
+			52 layer: conv2d_53
+Input node for the layer 52 is in graph: 51 Adding Transmitter to that graph
+Adding Sender_add_51_52 to graph 51 with target 1
+Adding Receiver_add_51_52 to graph 52 with target 4
+			52 skipping layer: conv2d_53/BatchNorm
+			52 skipping layer: conv2d_53/LeakyRelu
+53 layer: conv2d_54
+Input node for the layer 53 is in graph: 52 Adding Transmitter to that graph
+Adding Sender_conv2d_53/LeakyRelu to graph 52 with target 4
+Adding Receiver_conv2d_53/LeakyRelu to graph 53 with target 1
+53 skipping layer: conv2d_54/BatchNorm
+53 skipping layer: conv2d_54/LeakyRelu
+			54 layer: conv2d_55
+Input node for the layer 54 is in graph: 53 Adding Transmitter to that graph
+Adding Sender_conv2d_54/LeakyRelu to graph 53 with target 1
+Adding Receiver_conv2d_54/LeakyRelu to graph 54 with target 4
+			54 skipping layer: conv2d_55/BatchNorm
+			54 skipping layer: conv2d_55/LeakyRelu
+55 layer: conv2d_56
+Input node for the layer 55 is in graph: 54 Adding Transmitter to that graph
+Adding Sender_conv2d_55/LeakyRelu to graph 54 with target 4
+Adding Receiver_conv2d_55/LeakyRelu to graph 55 with target 1
+55 skipping layer: conv2d_56/BatchNorm
+55 skipping layer: conv2d_56/LeakyRelu
+			56 layer: conv2d_57
+Input node for the layer 56 is in graph: 55 Adding Transmitter to that graph
+Adding Sender_conv2d_56/LeakyRelu to graph 55 with target 1
+Adding Receiver_conv2d_56/LeakyRelu to graph 56 with target 4
+			56 skipping layer: conv2d_57/BatchNorm
+			56 skipping layer: conv2d_57/LeakyRelu
+57 layer: conv2d_58
+Input node for the layer 57 is in graph: 56 Adding Transmitter to that graph
+Adding Sender_conv2d_57/LeakyRelu to graph 56 with target 4
+Adding Receiver_conv2d_57/LeakyRelu to graph 57 with target 1
+57 skipping layer: conv2d_58/BatchNorm
+57 skipping layer: conv2d_58/LeakyRelu
+			58 layer: conv2d_59
+Input node for the layer 58 is in graph: 57 Adding Transmitter to that graph
+Adding Sender_conv2d_58/LeakyRelu to graph 57 with target 1
+Adding Receiver_conv2d_58/LeakyRelu to graph 58 with target 4
+			58 skipping layer: conv2d_59/Linear
+			58 skipping layer: Yolo1
+output accessor reading label file /data/local/ARM-CO-UP/assets//coco.names
+			58 skipping layer: output
+59 layer: conv2d_60
+Input node for the layer 59 is in graph: 56and there is a sender node (mapped) for that node
+Adding Receiver_conv2d_57/LeakyRelu to graph 59 with target 1
+59 skipping layer: conv2d_59/BatchNorm
+59 skipping layer: conv2d_60/LeakyRelu
+59 skipping layer: Upsample_60
+59 skipping layer: Route1
+Input node for the layer 59 is in graph: 42and there is a sender node (mapped) for that node
+Adding Receiver_add_42_43 to graph 59 with target 1
+			60 layer: conv2d_61
+Input node for the layer 60 is in graph: 59 Adding Transmitter to that graph
+Adding Sender_Route1 to graph 59 with target 1
+Adding Receiver_Route1 to graph 60 with target 4
+			60 skipping layer: conv2d_60/BatchNorm
+			60 skipping layer: conv2d_61/LeakyRelu
+61 layer: conv2d_62
+Input node for the layer 61 is in graph: 60 Adding Transmitter to that graph
+Adding Sender_conv2d_61/LeakyRelu to graph 60 with target 4
+Adding Receiver_conv2d_61/LeakyRelu to graph 61 with target 1
+61 skipping layer: conv2d_61/BatchNorm
+61 skipping layer: conv2d_62/LeakyRelu
+			62 layer: conv2d_63
+Input node for the layer 62 is in graph: 61 Adding Transmitter to that graph
+Adding Sender_conv2d_62/LeakyRelu to graph 61 with target 1
+Adding Receiver_conv2d_62/LeakyRelu to graph 62 with target 4
+			62 skipping layer: conv2d_62/BatchNorm
+			62 skipping layer: conv2d_63/LeakyRelu
+63 layer: conv2d_64
+Input node for the layer 63 is in graph: 62 Adding Transmitter to that graph
+Adding Sender_conv2d_63/LeakyRelu to graph 62 with target 4
+Adding Receiver_conv2d_63/LeakyRelu to graph 63 with target 1
+63 skipping layer: conv2d_63/BatchNorm
+63 skipping layer: conv2d_64/LeakyRelu
+			64 layer: conv2d_65
+Input node for the layer 64 is in graph: 63 Adding Transmitter to that graph
+Adding Sender_conv2d_64/LeakyRelu to graph 63 with target 1
+Adding Receiver_conv2d_64/LeakyRelu to graph 64 with target 4
+			64 skipping layer: conv2d_65/BatchNorm
+			64 skipping layer: conv2d_65/LeakyRelu
+65 layer: conv2d_66
+Input node for the layer 65 is in graph: 64 Adding Transmitter to that graph
+Adding Sender_conv2d_65/LeakyRelu to graph 64 with target 4
+Adding Receiver_conv2d_65/LeakyRelu to graph 65 with target 1
+65 skipping layer: conv2d_65/BatchNorm
+65 skipping layer: conv2d_66/LeakyRelu
+			66 layer: conv2d_67
+Input node for the layer 66 is in graph: 65 Adding Transmitter to that graph
+Adding Sender_conv2d_66/LeakyRelu to graph 65 with target 1
+Adding Receiver_conv2d_66/LeakyRelu to graph 66 with target 4
+			66 skipping layer: conv2d_67/Linear
+			66 skipping layer: Yolo2
+output accessor reading label file /data/local/ARM-CO-UP/assets//coco.names
+			66 skipping layer: output
+67 layer: conv2d_68
+Input node for the layer 67 is in graph: 64and there is a sender node (mapped) for that node
+Adding Receiver_conv2d_65/LeakyRelu to graph 67 with target 1
+67 skipping layer: conv2d_66/BatchNorm
+67 skipping layer: conv2d_68/LeakyRelu
+67 skipping layer: Upsample_68
+67 skipping layer: Route2
+Input node for the layer 67 is in graph: 25and there is a sender node (mapped) for that node
+Adding Receiver_add_25_26 to graph 67 with target 1
+			68 layer: conv2d_69
+Input node for the layer 68 is in graph: 67 Adding Transmitter to that graph
+Adding Sender_Route2 to graph 67 with target 1
+Adding Receiver_Route2 to graph 68 with target 4
+			68 skipping layer: conv2d_67/BatchNorm
+			68 skipping layer: conv2d_69/LeakyRelu
+69 layer: conv2d_70
+Input node for the layer 69 is in graph: 68 Adding Transmitter to that graph
+Adding Sender_conv2d_69/LeakyRelu to graph 68 with target 4
+Adding Receiver_conv2d_69/LeakyRelu to graph 69 with target 1
+69 skipping layer: conv2d_68/BatchNorm
+69 skipping layer: conv2d_70/LeakyRelu
+			70 layer: conv2d_71
+Input node for the layer 70 is in graph: 69 Adding Transmitter to that graph
+Adding Sender_conv2d_70/LeakyRelu to graph 69 with target 1
+Adding Receiver_conv2d_70/LeakyRelu to graph 70 with target 4
+			70 skipping layer: conv2d_69/BatchNorm
+			70 skipping layer: conv2d_71/LeakyRelu
+71 layer: conv2d_72
+Input node for the layer 71 is in graph: 70 Adding Transmitter to that graph
+Adding Sender_conv2d_71/LeakyRelu to graph 70 with target 4
+Adding Receiver_conv2d_71/LeakyRelu to graph 71 with target 1
+71 skipping layer: conv2d_70/BatchNorm
+71 skipping layer: conv2d_72/LeakyRelu
+			72 layer: conv2d_73
+Input node for the layer 72 is in graph: 71 Adding Transmitter to that graph
+Adding Sender_conv2d_72/LeakyRelu to graph 71 with target 1
+Adding Receiver_conv2d_72/LeakyRelu to graph 72 with target 4
+			72 skipping layer: conv2d_71/BatchNorm
+			72 skipping layer: conv2d_73/LeakyRelu
+73 layer: conv2d_74
+Input node for the layer 73 is in graph: 72 Adding Transmitter to that graph
+Adding Sender_conv2d_73/LeakyRelu to graph 72 with target 4
+Adding Receiver_conv2d_73/LeakyRelu to graph 73 with target 1
+73 skipping layer: conv2d_72/BatchNorm
+73 skipping layer: conv2d_74/LeakyRelu
+			74 layer: conv2d_75
+Input node for the layer 74 is in graph: 73 Adding Transmitter to that graph
+Adding Sender_conv2d_74/LeakyRelu to graph 73 with target 1
+Adding Receiver_conv2d_74/LeakyRelu to graph 74 with target 4
+			74 skipping layer: conv2d_75/Linear
+			74 skipping layer: Yolo3
+output accessor reading label file /data/local/ARM-CO-UP/assets//coco.names
+			74 skipping layer: output
+graph 0 target is NPU, merging nodes into one NPU Node ...
+Adding NPU Node NPU_YOLOv3_0_0 to graph 0 with target 4
+re-struct output node Sender_conv2d_1/LeakyRelu to the npu node
+producer is conv2d_1/LeakyRelu
+removing edge between producer and the output
+adding edge between NPU node and the output
+re-struct input node  to the npu node
+consumer is conv2d_1/Conv2D
+removing edge between input and the consumer
+adding edge between input and NPU node
+npu node created
+
+graph 2 target is NPU, merging nodes into one NPU Node ...
+Adding NPU Node NPU_YOLOv3_2_2 to graph 2 with target 4
+re-struct output node Sender_conv2d_3/LeakyRelu to the npu node
+producer is conv2d_3/LeakyRelu
+removing edge between producer and the output
+adding edge between NPU node and the output
+re-struct input node Receiver_conv2d_2/LeakyRelu to the npu node
+consumer is conv2d_3/Conv2D
+removing edge between input and the consumer
+adding edge between input and NPU node
+npu node created
+
+graph 4 target is NPU, merging nodes into one NPU Node ...
+Adding NPU Node NPU_YOLOv3_4_4 to graph 4 with target 4
+re-struct output node Sender_conv2d_5/LeakyRelu to the npu node
+producer is conv2d_5/LeakyRelu
+removing edge between producer and the output
+adding edge between NPU node and the output
+re-struct input node Receiver_add_3_4 to the npu node
+consumer is conv2d_5/Conv2D
+removing edge between input and the consumer
+adding edge between input and NPU node
+npu node created
+
+graph 6 target is NPU, merging nodes into one NPU Node ...
+Adding NPU Node NPU_YOLOv3_6_6 to graph 6 with target 4
+re-struct output node Sender_add_6_7 to the npu node
+producer is add_6_7
+removing edge between producer and the output
+adding edge between NPU node and the output
+re-struct input node Receiver_conv2d_6/LeakyRelu to the npu node
+consumer is conv2d_7/Conv2D
+removing edge between input and the consumer
+adding edge between input and NPU node
+re-struct input node Receiver_conv2d_5/LeakyRelu to the npu node
+consumer is add_6_7
+removing edge between input and the consumer
+adding edge between input and NPU node
+npu node created
+
+graph 8 target is NPU, merging nodes into one NPU Node ...
+Adding NPU Node NPU_YOLOv3_8_8 to graph 8 with target 4
+re-struct output node Sender_add_8_9 to the npu node
+producer is add_8_9
+removing edge between producer and the output
+adding edge between NPU node and the output
+re-struct input node Receiver_conv2d_8/LeakyRelu to the npu node
+consumer is conv2d_9/Conv2D
+removing edge between input and the consumer
+adding edge between input and NPU node
+re-struct input node Receiver_add_6_7 to the npu node
+consumer is add_8_9
+removing edge between input and the consumer
+adding edge between input and NPU node
+npu node created
+
+graph 10 target is NPU, merging nodes into one NPU Node ...
+Adding NPU Node NPU_YOLOv3_10_10 to graph 10 with target 4
+re-struct output node Sender_conv2d_11/LeakyRelu to the npu node
+producer is conv2d_11/LeakyRelu
+removing edge between producer and the output
+adding edge between NPU node and the output
+re-struct input node Receiver_conv2d_10/LeakyRelu to the npu node
+consumer is conv2d_11/Conv2D
+removing edge between input and the consumer
+adding edge between input and NPU node
+npu node created
+
+graph 12 target is NPU, merging nodes into one NPU Node ...
+Adding NPU Node NPU_YOLOv3_12_12 to graph 12 with target 4
+re-struct output node Sender_conv2d_13/LeakyRelu to the npu node
+producer is conv2d_13/LeakyRelu
+removing edge between producer and the output
+adding edge between NPU node and the output
+re-struct input node Receiver_add_11_12 to the npu node
+consumer is conv2d_13/Conv2D
+removing edge between input and the consumer
+adding edge between input and NPU node
+npu node created
+
+graph 14 target is NPU, merging nodes into one NPU Node ...
+Adding NPU Node NPU_YOLOv3_14_14 to graph 14 with target 4
+re-struct output node Sender_conv2d_15/LeakyRelu to the npu node
+producer is conv2d_15/LeakyRelu
+removing edge between producer and the output
+adding edge between NPU node and the output
+re-struct input node Receiver_add_13_14 to the npu node
+consumer is conv2d_15/Conv2D
+removing edge between input and the consumer
+adding edge between input and NPU node
+npu node created
+
+graph 16 target is NPU, merging nodes into one NPU Node ...
+Adding NPU Node NPU_YOLOv3_16_16 to graph 16 with target 4
+re-struct output node Sender_conv2d_17/LeakyRelu to the npu node
+producer is conv2d_17/LeakyRelu
+removing edge between producer and the output
+adding edge between NPU node and the output
+re-struct input node Receiver_add_15_16 to the npu node
+consumer is conv2d_17/Conv2D
+removing edge between input and the consumer
+adding edge between input and NPU node
+npu node created
+
+graph 18 target is NPU, merging nodes into one NPU Node ...
+Adding NPU Node NPU_YOLOv3_18_18 to graph 18 with target 4
+re-struct output node Sender_conv2d_19/LeakyRelu to the npu node
+producer is conv2d_19/LeakyRelu
+removing edge between producer and the output
+adding edge between NPU node and the output
+re-struct input node Receiver_add_17_18 to the npu node
+consumer is conv2d_19/Conv2D
+removing edge between input and the consumer
+adding edge between input and NPU node
+npu node created
+
+graph 20 target is NPU, merging nodes into one NPU Node ...
+Adding NPU Node NPU_YOLOv3_20_20 to graph 20 with target 4
+re-struct output node Sender_conv2d_21/LeakyRelu to the npu node
+producer is conv2d_21/LeakyRelu
+removing edge between producer and the output
+adding edge between NPU node and the output
+re-struct input node Receiver_add_19_20 to the npu node
+consumer is conv2d_21/Conv2D
+removing edge between input and the consumer
+adding edge between input and NPU node
+npu node created
+
+graph 22 target is NPU, merging nodes into one NPU Node ...
+Adding NPU Node NPU_YOLOv3_22_22 to graph 22 with target 4
+re-struct output node Sender_conv2d_23/LeakyRelu to the npu node
+producer is conv2d_23/LeakyRelu
+removing edge between producer and the output
+adding edge between NPU node and the output
+re-struct input node Receiver_add_21_22 to the npu node
+consumer is conv2d_23/Conv2D
+removing edge between input and the consumer
+adding edge between input and NPU node
+npu node created
+
+graph 24 target is NPU, merging nodes into one NPU Node ...
+Adding NPU Node NPU_YOLOv3_24_24 to graph 24 with target 4
+re-struct output node Sender_conv2d_25/LeakyRelu to the npu node
+producer is conv2d_25/LeakyRelu
+removing edge between producer and the output
+adding edge between NPU node and the output
+re-struct input node Receiver_add_23_24 to the npu node
+consumer is conv2d_25/Conv2D
+removing edge between input and the consumer
+adding edge between input and NPU node
+npu node created
+
+graph 26 target is NPU, merging nodes into one NPU Node ...
+Adding NPU Node NPU_YOLOv3_26_26 to graph 26 with target 4
+re-struct output node Sender_conv2d_27/LeakyRelu to the npu node
+producer is conv2d_27/LeakyRelu
+removing edge between producer and the output
+adding edge between NPU node and the output
+re-struct input node Receiver_add_25_26 to the npu node
+consumer is conv2d_27/Conv2D
+removing edge between input and the consumer
+adding edge between input and NPU node
+npu node created
+
+graph 28 target is NPU, merging nodes into one NPU Node ...
+Adding NPU Node NPU_YOLOv3_28_28 to graph 28 with target 4
+re-struct output node Sender_add_28_29 to the npu node
+producer is add_28_29
+removing edge between producer and the output
+adding edge between NPU node and the output
+re-struct input node Receiver_conv2d_28/LeakyRelu to the npu node
+consumer is conv2d_29/Conv2D
+removing edge between input and the consumer
+adding edge between input and NPU node
+re-struct input node Receiver_conv2d_27/LeakyRelu to the npu node
+consumer is add_28_29
+removing edge between input and the consumer
+adding edge between input and NPU node
+npu node created
+
+graph 30 target is NPU, merging nodes into one NPU Node ...
+Adding NPU Node NPU_YOLOv3_30_30 to graph 30 with target 4
+re-struct output node Sender_add_30_31 to the npu node
+producer is add_30_31
+removing edge between producer and the output
+adding edge between NPU node and the output
+re-struct input node Receiver_conv2d_30/LeakyRelu to the npu node
+consumer is conv2d_31/Conv2D
+removing edge between input and the consumer
+adding edge between input and NPU node
+re-struct input node Receiver_add_28_29 to the npu node
+consumer is add_30_31
+removing edge between input and the consumer
+adding edge between input and NPU node
+npu node created
+
+graph 32 target is NPU, merging nodes into one NPU Node ...
+Adding NPU Node NPU_YOLOv3_32_32 to graph 32 with target 4
+re-struct output node Sender_add_32_33 to the npu node
+producer is add_32_33
+removing edge between producer and the output
+adding edge between NPU node and the output
+re-struct input node Receiver_conv2d_32/LeakyRelu to the npu node
+consumer is conv2d_33/Conv2D
+removing edge between input and the consumer
+adding edge between input and NPU node
+re-struct input node Receiver_add_30_31 to the npu node
+consumer is add_32_33
+removing edge between input and the consumer
+adding edge between input and NPU node
+npu node created
+
+graph 34 target is NPU, merging nodes into one NPU Node ...
+Adding NPU Node NPU_YOLOv3_34_34 to graph 34 with target 4
+re-struct output node Sender_add_34_35 to the npu node
+producer is add_34_35
+removing edge between producer and the output
+adding edge between NPU node and the output
+re-struct input node Receiver_conv2d_34/LeakyRelu to the npu node
+consumer is conv2d_35/Conv2D
+removing edge between input and the consumer
+adding edge between input and NPU node
+re-struct input node Receiver_add_32_33 to the npu node
+consumer is add_34_35
+removing edge between input and the consumer
+adding edge between input and NPU node
+npu node created
+
+graph 36 target is NPU, merging nodes into one NPU Node ...
+Adding NPU Node NPU_YOLOv3_36_36 to graph 36 with target 4
+re-struct output node Sender_add_36_37 to the npu node
+producer is add_36_37
+removing edge between producer and the output
+adding edge between NPU node and the output
+re-struct input node Receiver_conv2d_36/LeakyRelu to the npu node
+consumer is conv2d_37/Conv2D
+removing edge between input and the consumer
+adding edge between input and NPU node
+re-struct input node Receiver_add_34_35 to the npu node
+consumer is add_36_37
+removing edge between input and the consumer
+adding edge between input and NPU node
+npu node created
+
+graph 38 target is NPU, merging nodes into one NPU Node ...
+Adding NPU Node NPU_YOLOv3_38_38 to graph 38 with target 4
+re-struct output node Sender_add_38_39 to the npu node
+producer is add_38_39
+removing edge between producer and the output
+adding edge between NPU node and the output
+re-struct input node Receiver_conv2d_38/LeakyRelu to the npu node
+consumer is conv2d_39/Conv2D
+removing edge between input and the consumer
+adding edge between input and NPU node
+re-struct input node Receiver_add_36_37 to the npu node
+consumer is add_38_39
+removing edge between input and the consumer
+adding edge between input and NPU node
+npu node created
+
+graph 40 target is NPU, merging nodes into one NPU Node ...
+Adding NPU Node NPU_YOLOv3_40_40 to graph 40 with target 4
+re-struct output node Sender_add_40_41 to the npu node
+producer is add_40_41
+removing edge between producer and the output
+adding edge between NPU node and the output
+re-struct input node Receiver_conv2d_40/LeakyRelu to the npu node
+consumer is conv2d_41/Conv2D
+removing edge between input and the consumer
+adding edge between input and NPU node
+re-struct input node Receiver_add_38_39 to the npu node
+consumer is add_40_41
+removing edge between input and the consumer
+adding edge between input and NPU node
+npu node created
+
+graph 42 target is NPU, merging nodes into one NPU Node ...
+Adding NPU Node NPU_YOLOv3_42_42 to graph 42 with target 4
+re-struct output node Sender_add_42_43 to the npu node
+producer is add_42_43
+removing edge between producer and the output
+adding edge between NPU node and the output
+re-struct input node Receiver_conv2d_42/LeakyRelu to the npu node
+consumer is conv2d_43/Conv2D
+removing edge between input and the consumer
+adding edge between input and NPU node
+re-struct input node Receiver_add_40_41 to the npu node
+consumer is add_42_43
+removing edge between input and the consumer
+adding edge between input and NPU node
+npu node created
+
+graph 44 target is NPU, merging nodes into one NPU Node ...
+Adding NPU Node NPU_YOLOv3_44_44 to graph 44 with target 4
+re-struct output node Sender_conv2d_45/LeakyRelu to the npu node
+producer is conv2d_45/LeakyRelu
+removing edge between producer and the output
+adding edge between NPU node and the output
+re-struct input node Receiver_conv2d_44/LeakyRelu to the npu node
+consumer is conv2d_45/Conv2D
+removing edge between input and the consumer
+adding edge between input and NPU node
+npu node created
+
+graph 46 target is NPU, merging nodes into one NPU Node ...
+Adding NPU Node NPU_YOLOv3_46_46 to graph 46 with target 4
+re-struct output node Sender_conv2d_47/LeakyRelu to the npu node
+producer is conv2d_47/LeakyRelu
+removing edge between producer and the output
+adding edge between NPU node and the output
+re-struct input node Receiver_add_45_46 to the npu node
+consumer is conv2d_47/Conv2D
+removing edge between input and the consumer
+adding edge between input and NPU node
+npu node created
+
+graph 48 target is NPU, merging nodes into one NPU Node ...
+Adding NPU Node NPU_YOLOv3_48_48 to graph 48 with target 4
+re-struct output node Sender_conv2d_49/LeakyRelu to the npu node
+producer is conv2d_49/LeakyRelu
+removing edge between producer and the output
+adding edge between NPU node and the output
+re-struct input node Receiver_add_47_48 to the npu node
+consumer is conv2d_49/Conv2D
+removing edge between input and the consumer
+adding edge between input and NPU node
+npu node created
+
+graph 50 target is NPU, merging nodes into one NPU Node ...
+Adding NPU Node NPU_YOLOv3_50_50 to graph 50 with target 4
+re-struct output node Sender_conv2d_51/LeakyRelu to the npu node
+producer is conv2d_51/LeakyRelu
+removing edge between producer and the output
+adding edge between NPU node and the output
+re-struct input node Receiver_add_49_50 to the npu node
+consumer is conv2d_51/Conv2D
+removing edge between input and the consumer
+adding edge between input and NPU node
+npu node created
+
+graph 52 target is NPU, merging nodes into one NPU Node ...
+Adding NPU Node NPU_YOLOv3_52_52 to graph 52 with target 4
+re-struct output node Sender_conv2d_53/LeakyRelu to the npu node
+producer is conv2d_53/LeakyRelu
+removing edge between producer and the output
+adding edge between NPU node and the output
+re-struct input node Receiver_add_51_52 to the npu node
+consumer is conv2d_53
+removing edge between input and the consumer
+adding edge between input and NPU node
+npu node created
+
+graph 54 target is NPU, merging nodes into one NPU Node ...
+Adding NPU Node NPU_YOLOv3_54_54 to graph 54 with target 4
+re-struct output node Sender_conv2d_55/LeakyRelu to the npu node
+producer is conv2d_55/LeakyRelu
+removing edge between producer and the output
+adding edge between NPU node and the output
+re-struct input node Receiver_conv2d_54/LeakyRelu to the npu node
+consumer is conv2d_55
+removing edge between input and the consumer
+adding edge between input and NPU node
+npu node created
+
+graph 56 target is NPU, merging nodes into one NPU Node ...
+Adding NPU Node NPU_YOLOv3_56_56 to graph 56 with target 4
+re-struct output node Sender_conv2d_57/LeakyRelu to the npu node
+producer is conv2d_57/LeakyRelu
+removing edge between producer and the output
+adding edge between NPU node and the output
+re-struct input node Receiver_conv2d_56/LeakyRelu to the npu node
+consumer is conv2d_57
+removing edge between input and the consumer
+adding edge between input and NPU node
+npu node created
+
+graph 58 target is NPU, merging nodes into one NPU Node ...
+Adding NPU Node NPU_YOLOv3_58_58 to graph 58 with target 4
+re-struct output node output to the npu node
+producer is Yolo1
+removing edge between producer and the output
+adding edge between NPU node and the output
+re-struct input node Receiver_conv2d_58/LeakyRelu to the npu node
+consumer is conv2d_59
+removing edge between input and the consumer
+adding edge between input and NPU node
+npu node created
+
+graph 60 target is NPU, merging nodes into one NPU Node ...
+Adding NPU Node NPU_YOLOv3_60_60 to graph 60 with target 4
+re-struct output node Sender_conv2d_61/LeakyRelu to the npu node
+producer is conv2d_61/LeakyRelu
+removing edge between producer and the output
+adding edge between NPU node and the output
+re-struct input node Receiver_Route1 to the npu node
+consumer is conv2d_61
+removing edge between input and the consumer
+adding edge between input and NPU node
+npu node created
+
+graph 62 target is NPU, merging nodes into one NPU Node ...
+Adding NPU Node NPU_YOLOv3_62_62 to graph 62 with target 4
+re-struct output node Sender_conv2d_63/LeakyRelu to the npu node
+producer is conv2d_63/LeakyRelu
+removing edge between producer and the output
+adding edge between NPU node and the output
+re-struct input node Receiver_conv2d_62/LeakyRelu to the npu node
+consumer is conv2d_63
+removing edge between input and the consumer
+adding edge between input and NPU node
+npu node created
+
+graph 64 target is NPU, merging nodes into one NPU Node ...
+Adding NPU Node NPU_YOLOv3_64_64 to graph 64 with target 4
+re-struct output node Sender_conv2d_65/LeakyRelu to the npu node
+producer is conv2d_65/LeakyRelu
+removing edge between producer and the output
+adding edge between NPU node and the output
+re-struct input node Receiver_conv2d_64/LeakyRelu to the npu node
+consumer is conv2d_65
+removing edge between input and the consumer
+adding edge between input and NPU node
+npu node created
+
+graph 66 target is NPU, merging nodes into one NPU Node ...
+Adding NPU Node NPU_YOLOv3_66_66 to graph 66 with target 4
+re-struct output node output to the npu node
+producer is Yolo2
+removing edge between producer and the output
+adding edge between NPU node and the output
+re-struct input node Receiver_conv2d_66/LeakyRelu to the npu node
+consumer is conv2d_67
+removing edge between input and the consumer
+adding edge between input and NPU node
+npu node created
+
+graph 68 target is NPU, merging nodes into one NPU Node ...
+Adding NPU Node NPU_YOLOv3_68_68 to graph 68 with target 4
+re-struct output node Sender_conv2d_69/LeakyRelu to the npu node
+producer is conv2d_69/LeakyRelu
+removing edge between producer and the output
+adding edge between NPU node and the output
+re-struct input node Receiver_Route2 to the npu node
+consumer is conv2d_69
+removing edge between input and the consumer
+adding edge between input and NPU node
+npu node created
+
+graph 70 target is NPU, merging nodes into one NPU Node ...
+Adding NPU Node NPU_YOLOv3_70_70 to graph 70 with target 4
+re-struct output node Sender_conv2d_71/LeakyRelu to the npu node
+producer is conv2d_71/LeakyRelu
+removing edge between producer and the output
+adding edge between NPU node and the output
+re-struct input node Receiver_conv2d_70/LeakyRelu to the npu node
+consumer is conv2d_71
+removing edge between input and the consumer
+adding edge between input and NPU node
+npu node created
+
+graph 72 target is NPU, merging nodes into one NPU Node ...
+Adding NPU Node NPU_YOLOv3_72_72 to graph 72 with target 4
+re-struct output node Sender_conv2d_73/LeakyRelu to the npu node
+producer is conv2d_73/LeakyRelu
+removing edge between producer and the output
+adding edge between NPU node and the output
+re-struct input node Receiver_conv2d_72/LeakyRelu to the npu node
+consumer is conv2d_73
+removing edge between input and the consumer
+adding edge between input and NPU node
+npu node created
+
+graph 74 target is NPU, merging nodes into one NPU Node ...
+Adding NPU Node NPU_YOLOv3_74_74 to graph 74 with target 4
+re-struct output node output to the npu node
+producer is Yolo3
+removing edge between producer and the output
+adding edge between NPU node and the output
+re-struct input node Receiver_conv2d_74/LeakyRelu to the npu node
+consumer is conv2d_75
+removing edge between input and the consumer
+adding edge between input and NPU node
+npu node created
+
+
+
+*********************
+Start finalizing Graphs
+*******************
+
+Graph id: 0 Target is: NPU
+Graph id: Graph id: Graph id: 1 Target is: Neon
+Creating a RockPi NPU node...
+NPU YOLOv3_0_0 Number of inputs: 1 and number of outputs: 1
+Model name: /data/local/ARM-CO-UP/graphs/YOLOv3_0_0.rknn
+3 Target is: Neon
+2 Target is: NPU
+NPU /data/local/ARM-CO-UP/graphs/YOLOv3_0_0.rknn Reading model...
+Graph id: 4 Target is: NPU
+Graph id: 5 Target is: Neon
+Graph id: 6 Target is: NPU
+Graph id: 11 Target is: Neon
+Graph id: Graph id: 10 Target is: NPU
+12 Target is: NPU
+Graph id: Graph id: 8 Target is: NPU
+Graph id: 9 Target is: Neon
+Graph id: Graph id: 7 Target is: Neon
+Graph id: 14 Target is: NPU
+15 Target is: Neon
+13 Target is: Neon
+Graph id: Graph id: 17 Target is: Neon
+Graph id: 18 Target is: NPU
+16 Target is: NPU
+Graph id: 19 Target is: Neon
+Graph id: Graph (1) Task 0: conv2d_2/Conv2D
+Creating a RockPi NPU node...
+Graph (20 Target is: NPU
+1NPU YOLOv3_4_4 Number of inputs: ) Task 1 and number of outputs: 1: conv2d_2/BatchNorm
+1
+Graph (Model name: /data/local/ARM-CO-UP/graphs/YOLOv3_4_4.rknn
+1) Task 2: conv2d_2/LeakyRelu
+Graph 1 input size: 0 receiver size: 1 tasks size: 3 senders size: 1 output size: 0
+
+Creating a RockPi NPU node...
+NPU YOLOv3_2_2 Number of inputs: 1 and number of outputs: 1
+Model name: /data/local/ARM-CO-UP/graphs/YOLOv3_2_2.rknn
+Creating a RockPi NPU node...
+NPU YOLOv3_6_6 Number of inputs: 2 and number of outputs: 1
+Graph (5) Task Model name: /data/local/ARM-CO-UP/graphs/YOLOv3_6_6.rknn
+0: conv2d_6/Conv2D
+Graph (5) Task 1: conv2d_6/BatchNorm
+Graph (5) Task 2: conv2d_6/LeakyRelu
+Graph 5 input size: 0 receiver size: 1 tasks size: 3 senders size: 1 output size: 0
+
+NPU /data/local/ARM-CO-UP/graphs/YOLOv3_2_2.rknn Reading model...
+Graph id: 21 Target is: Neon
+Graph id: 22 Target is: NPU
+Graph (3) Task 0: conv2d_4/Conv2D
+Graph (3) Task 1: conv2d_4/BatchNorm
+Graph (3) Task 2Graph id: : conv2d_4/LeakyRelu
+Graph (3) Task 3: add_3_4
+Graph 3 input size: 0 receiver size: 2 tasks size: 4 senders size: 1 output size: 0
+
+Creating a RockPi NPU node...
+NPU YOLOv3_12_12 Number of inputs: 1 and number of outputs: 1
+Model name: /data/local/ARM-CO-UP/graphs/YOLOv3_12_12.rknn
+Creating a RockPi NPU node...
+NPU YOLOv3_10_10 Number of inputs: 1 and number of outputs: 1
+Model name: /data/local/ARM-CO-UP/graphs/YOLOv3_10_10.rknn
+24 Target is: NPU
+Graph id: Creating a RockPi NPU node...
+NPU YOLOv3_8_8 Number of inputs: 2 and number of outputs: 1
+Model name: /data/local/ARM-CO-UP/graphs/YOLOv3_8_8.rknn
+Graph id: 23 Target is: Neon
+25 Target is: Neon
+NPU /data/local/ARM-CO-UP/graphs/YOLOv3_4_4.rknn Reading model...
+Graph id: 26 Target is: NPU
+NPU /data/local/ARM-CO-UP/graphs/YOLOv3_6_6.rknn Reading model...
+NPU /data/local/ARM-CO-UP/graphs/YOLOv3_10_10.rknn Reading model...
+NPU /data/local/ARM-CO-UP/graphs/YOLOv3_12_12.rknn Reading model...
+Creating a RockPi NPU node...
+NPU YOLOv3_26_26 Number of inputs: 1 and number of outputs: 1
+Model name: /data/local/ARM-CO-UP/graphs/YOLOv3_26_26.rknn
+Graph (9) Task 0: conv2d_10/Conv2D
+Graph (9) Task 1: conv2d_10/BatchNorm
+Graph (9) Task 2: conv2d_10/LeakyRelu
+Graph 9 input size: 0 receiver size: 1 tasks size: 3 senders size: 1 output size: 0
+
+Graph (11) Task Graph id: 0: conv2d_12/Conv2D
+Graph (11) Task 1: conv2d_12/BatchNorm
+Graph (11) Task 2: conv2d_12/LeakyRelu
+Graph (11) Task 3: add_11_12
+Graph 11 input size: 0 receiver size: 2 tasks size: 4 senders size: 1 output size: 0
+
+27 Target is: Neon
+Graph id: NPU /data/local/ARM-CO-UP/graphs/YOLOv3_8_8.rknn Reading model...
+Graph id: 28 Target is: NPU
+Graph id: 30Creating a RockPi NPU node...
+NPU YOLOv3_14_14 Number of inputs: 1 and number of outputs: 1
+Model name: /data/local/ARM-CO-UP/graphs/YOLOv3_14_14.rknn
+ Target is: NPU
+29 Target is: Neon
+NPU /data/local/ARM-CO-UP/graphs/YOLOv3_14_14.rknn Reading model...
+Graph (7) Task 0: conv2d_8/Conv2D
+Graph (7) Task 1: conv2d_8/BatchNorm
+Graph (7) Task 2: conv2d_8/LeakyRelu
+Graph 7 input size: 0 receiver size: 1 tasks size: 3 senders size: 1 output size: 0
+
+Graph id: Graph id: 32 Target is: NPU
+31 Target is: Neon
+Graph (15Graph id: ) Task 0: conv2d_16/Conv2D
+Graph (15) Task 1: conv2d_16/BatchNorm
+Graph (15) Task 2: conv2d_16/LeakyRelu
+Graph (15) Task 3: add_15_16
+Graph 15 input size: 0 receiver size: 2 tasks size: 4 senders size: 1 output size: 0
+
+33 Target is: Neon
+Graph id: 34 Target is: NPU
+Graph id: 35 Target is: Neon
+Graph (13) Task 0: conv2d_14/Conv2D
+Graph (13) Task 1: conv2d_14/BatchNorm
+Graph (13) Task 2: conv2d_14/LeakyRelu
+Graph (13) Task 3: add_13_14
+Graph 13 input size: 0 receiver size: 2 tasks size: 4 senders size: 1 output size: 0
+
+Creating a RockPi NPU node...
+NPU YOLOv3_18_18 Number of inputs: 1 and number of outputs: 1
+Model name: /data/local/ARM-CO-UP/graphs/YOLOv3_18_18.rknn
+Creating a RockPi NPU node...
+NPU YOLOv3_16_16 Number of inputs: 1 and number of outputs: 1
+Model name: /data/local/ARM-CO-UP/graphs/YOLOv3_16_16.rknn
+Graph id: 36 Target is: NPU
+Graph id: NPU /data/local/ARM-CO-UP/graphs/YOLOv3_16_16.rknn Reading model...
+Creating a RockPi NPU node...
+NPU YOLOv3_20_20 Number of inputs: 1 and number of outputs: 1
+Model name: /data/local/ARM-CO-UP/graphs/YOLOv3_20_20.rknn
+Graph id: 38 Target is: NPU
+37 Target is: Neon
+NPU /data/local/ARM-CO-UP/graphs/YOLOv3_18_18.rknn Reading model...
+Graph id: Creating a RockPi NPU node...
+NPU YOLOv3_22_22 Number of inputs: 1 and number of outputs: 1
+Model name: /data/local/ARM-CO-UP/graphs/YOLOv3_22_22.rknn
+Graph id: NPU /data/local/ARM-CO-UP/graphs/YOLOv3_20_20.rknn Reading model...
+39 Target is: Neon
+40 Target is: NPU
+Creating a RockPi NPU node...
+NPU YOLOv3_24_24 Number of inputs: 1 and number of outputs: 1
+Model name: /data/local/ARM-CO-UP/graphs/YOLOv3_24_24.rknn
+Graph (19) Task 0: conv2d_20/Conv2D
+Graph (17) Task 0: conv2d_18/Conv2D
+Graph (17) Task 1: conv2d_18/BatchNorm
+Graph (17) Task 2: conv2d_18/LeakyRelu
+Graph (17) Task 3: add_17_18
+Graph 17 input size: 0 receiver size: 2 tasks size: 4 senders size: 1 output size: 0
+
+Graph (19) Task 1: conv2d_20/BatchNorm
+Graph (19) Task 2: conv2d_20/LeakyRelu
+Graph (19) Task 3: add_19_20
+Graph 19 input size: 0 receiver size: 2 tasks size: 4 senders size: 1 output size: 0
+
+NPU /data/local/ARM-CO-UP/graphs/YOLOv3_22_22.rknn Reading model...
+Graph id: NPU /data/local/ARM-CO-UP/graphs/YOLOv3_24_24.rknn Reading model...
+41 Target is: Neon
+Graph (21) Task 0: conv2d_22/Conv2D
+Graph (21) Task 1: conv2d_22/BatchNorm
+Graph (21) Task 2: conv2d_22/LeakyRelu
+Graph (21) Task 3: add_21_22
+Graph 21 input size: 0 receiver size: 2 tasks size: 4 senders size: 1 output size: 0
+
+Graph id: 42 Target is: NPU
+Graph id: 43 Target is: Neon
+Creating a RockPi NPU node...
+NPU YOLOv3_30_30 Number of inputs: Graph (2 and number of outputs: 1
+Model name: /data/local/ARM-CO-UP/graphs/YOLOv3_30_30.rknn
+23) Task 0: conv2d_24/Conv2D
+Graph (23) Task 1: conv2d_24/BatchNorm
+Graph (23) Task 2: conv2d_24/LeakyRelu
+Graph (23) Task 3: add_23_24
+Graph 23 input size: 0 receiver size: 2 tasks size: 4 senders size: 1 output size: 0
+
+Creating a RockPi NPU node...
+NPU YOLOv3_28_28 Number of inputs: 2 and number of outputs: 1
+Model name: /data/local/ARM-CO-UP/graphs/YOLOv3_28_28.rknn
+Graph id: Graph (27) Task 0: conv2d_28/Conv2D
+Creating a RockPi NPU node...
+NPU YOLOv3_32_32 Number of inputs: 2 and number of outputs: 1
+Model name: /data/local/ARM-CO-UP/graphs/YOLOv3_32_32.rknn
+Graph (27) Task 1: conv2d_28/BatchNorm
+Graph (27) Task 2: conv2d_28/LeakyRelu
+Graph 27 input size: 0 receiver size: 1 tasks size: 3 senders size: 1 output size: 0
+
+44 Target is: NPU
+Graph (25) Task 0: conv2d_26/Conv2D
+Graph (25) Task 1: conv2d_26/BatchNorm
+Graph (25) Task 2: conv2d_26/LeakyRelu
+Graph (25) Task 3: add_25_26
+Graph 25 input size: 0 receiver size: 2 tasks size: 4 senders size: 1 output size: 0
+
+Graph id: Graph (29) Task 0: conv2d_30/Conv2D
+Graph (29) Task 1: conv2d_30/BatchNorm
+Graph (29) Task 2: conv2d_30/LeakyRelu
+Graph 29 input size: 0 receiver size: 1 tasks size: 3 senders size: 1 output size: 0
+
+45 Target is: Neon
+Graph id: Graph (31) Task 0: conv2d_32/Conv2D
+46 Target is: NPU
+Graph (31) Task 1: conv2d_32/BatchNorm
+Graph (31) Task 2: conv2d_32/LeakyRelu
+Graph 31 input size: 0 receiver size: 1 tasks size: 3 senders size: 1 output size: 0
+
+Creating a RockPi NPU node...
+NPU YOLOv3_34_34 Number of inputs: 2 and number of outputs: 1
+Model name: /data/local/ARM-CO-UP/graphs/YOLOv3_34_34.rknn
+Graph id: 47 Target is: Neon
+Graph id: Graph (33) Task 0: conv2d_34/Conv2D
+Graph (33) Task 1: conv2d_34/BatchNorm
+Graph (33) Task 2: conv2d_34/LeakyRelu
+Graph 33 input size: 0 receiver size: 1 tasks size: 3 senders size: 1 output size: 0
+
+Creating a RockPi NPU node...
+48 Target is: NPU
+Graph (35) Task 0: conv2d_36/Conv2D
+Creating a RockPi NPU node...
+NPU NPU YOLOv3_38_38 Number of inputs: YOLOv3_36_362 and number of outputs: 1
+ Number of inputs: Model name: /data/local/ARM-CO-UP/graphs/YOLOv3_38_38.rknn
+2 and number of outputs: 1
+Model name: /data/local/ARM-CO-UP/graphs/YOLOv3_36_36.rknn
+Graph (35) Task 1: conv2d_36/BatchNorm
+Graph (35) Task 2: conv2d_36/LeakyRelu
+Graph 35 input size: 0 receiver size: 1 tasks size: 3 senders size: 1 output size: 0
+
+Graph id: 49 Target is: Neon
+Graph id: Graph (37) Task 0: conv2d_38/Conv2D
+Graph (37) Task 1: conv2d_38/BatchNorm
+Graph (37) Task 2: conv2d_38/LeakyRelu
+Graph 37 input size: 0 receiver size: 1 tasks size: 3 senders size: 1 output size: 0
+
+50 Target is: NPU
+Graph id: Creating a RockPi NPU node...
+NPU YOLOv3_40_40 Number of inputs: 2 and number of outputs: 1
+Model name: /data/local/ARM-CO-UP/graphs/YOLOv3_40_40.rknn
+51 Target is: Neon
+Graph id: 53 Target is: Neon
+Graph id: Graph (39) Task 0: conv2d_40/Conv2D
+52Graph (39) Task 1: conv2d_40/BatchNorm
+Graph (39) Task 2: conv2d_40/LeakyRelu
+Graph 39 input size: 0 receiver size: 1 tasks size: 3 senders size: 1 output size: 0
+
+Creating a RockPi NPU node...
+NPU YOLOv3_42_42 Number of inputs: 2 and number of outputs: 1
+Model name: /data/local/ARM-CO-UP/graphs/YOLOv3_42_42.rknn
+ Target is: NPU
+Graph id: 54 Target is: NPU
+Graph (41) Task 0: conv2d_42/Conv2D
+Graph (41) Task 1: conv2d_42/BatchNorm
+Graph (41) Task 2: conv2d_42/LeakyRelu
+Graph 41 input size: 0 receiver size: 1 tasks size: 3 senders size: 1 output size: 0
+
+Graph id: 56 Target is: NPU
+Creating a RockPi NPU node...
+NPU Graph id: YOLOv3_44_44 Number of inputs: 1 and number of outputs: 1
+Model name: /data/local/ARM-CO-UP/graphs/YOLOv3_44_44.rknn
+55 Target is: Neon
+NPU /data/local/ARM-CO-UP/graphs/YOLOv3_26_26.rknn Reading model...
+Graph id: Graph (43) Task 0: conv2d_44/Conv2D
+57 Target is: Neon
+Graph (43) Task 1: conv2d_44/BatchNorm
+Graph (43) Task 2: conv2d_44/LeakyRelu
+Graph 43 input size: 0 receiver size: 1 tasks size: 3 senders size: 1 output size: 0
+
+Graph id: Creating a RockPi NPU node...
+NPU YOLOv3_46_46 Number of inputs: 1 and number of outputs: 1
+Model name: /data/local/ARM-CO-UP/graphs/YOLOv3_46_46.rknn
+58 Target is: NPU
+Creating a RockPi NPU node...
+NPU YOLOv3_48_48 Number of inputs: 1 and number of outputs: 1
+Model name: /data/local/ARM-CO-UP/graphs/YOLOv3_48_48.rknn
+Creating a RockPi NPU node...
+NPU YOLOv3_50_50 Number of inputs: 1 and number of outputs: 1
+Model name: /data/local/ARM-CO-UP/graphs/YOLOv3_50_50.rknn
+Graph id: 59 Target is: Neon
+Graph (45) Task 0: conv2d_46/Conv2D
+Graph (45) Task 1: conv2d_46/BatchNorm
+Graph (45) Task 2: conv2d_46/LeakyRelu
+Graph (45) Task 3: add_45_46
+Graph 45 input size: 0 receiver size: 2 tasks size: 4 senders size: 1 output size: 0
+
+Graph id: 60 Target is: NPU
+Graph id: Graph (53) Task 0: conv2d_54
+Graph (53) Task 1: conv2d_54/BatchNorm
+Graph (53) Task 2: conv2d_54/LeakyRelu
+Graph 53 input size: 0 receiver size: 1 tasks size: 3 senders size: 1 output size: 0
+
+61 Target is: Neon
+Creating a RockPi NPU node...
+NPU YOLOv3_52_52 Number of inputs: 1 and number of outputs: 1
+Model name: /data/local/ARM-CO-UP/graphs/YOLOv3_52_52.rknn
+Graph (49) Task 0: conv2d_50/Conv2D
+Graph (49) Task 1: conv2d_50/BatchNorm
+Graph (49) Task 2: conv2d_50/LeakyRelu
+Graph (49) Task 3: add_49_50
+Graph 49 input size: 0 receiver size: 2 tasks size: 4 senders size: 1 output size: 0
+
+Creating a RockPi NPU node...
+NPU YOLOv3_56_56 Number of inputs: 1 and number of outputs: 1
+Model name: /data/local/ARM-CO-UP/graphs/YOLOv3_56_56.rknn
+Creating a RockPi NPU node...
+NPU YOLOv3_54_54 Number of inputs: 1 and number of outputs: 1
+Model name: /data/local/ARM-CO-UP/graphs/YOLOv3_54_54.rknn
+Graph id: Graph (47) Task 0: conv2d_48/Conv2D
+Graph (47) Task 1: conv2d_48/BatchNorm
+Graph (47) Task 2: conv2d_48/LeakyRelu
+Graph (47) Task 3: add_47_48
+Graph 47 input size: 0 receiver size: 2 tasks size: 4 senders size: 1 output size: 0
+
+62 Target is: NPU
+Creating a RockPi NPU node...
+NPU YOLOv3_58_58 Number of inputs: 1 and number of outputs: 1
+Model name: /data/local/ARM-CO-UP/graphs/YOLOv3_58_58.rknn
+Graph id: 63 Target is: Neon
+Creating a RockPi NPU node...
+NPU YOLOv3_60_60 Number of inputs: 1 and number of outputs: 1
+Model name: /data/local/ARM-CO-UP/graphs/YOLOv3_60_60.rknn
+Graph id: 64 Target is: NPU
+Graph (59) Task 0: conv2d_60
+Graph (59) Task 1: conv2d_59/BatchNorm
+Graph (59) Task 2: conv2d_60/LeakyRelu
+Graph (59) Task 3: Upsample_60
+Graph id: Graph (59) Task 4: Route1
+Graph 59 input size: 0 receiver size: 2 tasks size: 5 senders size: 1 output size: 0
+
+65 Target is: Neon
+Creating a RockPi NPU node...
+NPU YOLOv3_62_62 Number of inputs: 1 and number of outputs: 1
+Model name: /data/local/ARM-CO-UP/graphs/YOLOv3_62_62.rknn
+Graph id: NPU /data/local/ARM-CO-UP/graphs/YOLOv3_44_44.rknn Reading model...
+66 Target is: NPU
+Graph (51) Task 0: conv2d_52/Conv2D
+Graph id: Graph (51) Task 1: conv2d_52/BatchNorm
+Graph (51) Task 2: conv2d_52/LeakyRelu
+Graph (51) Task 3: add_51_52
+Graph 51 input size: 0 receiver size: 2 tasks size: 4 senders size: 1 output size: 0
+
+67 Target is: Neon
+Graph (55) Task 0: conv2d_56
+NPU /data/local/ARM-CO-UP/graphs/YOLOv3_58_58.rknn Reading model...
+Graph (55) Task 1: conv2d_56/BatchNorm
+Graph (55) Task 2: conv2d_56/LeakyRelu
+Graph 55 input size: 0 receiver size: 1 tasks size: 3 senders size: 1 output size: 0
+
+Creating a RockPi NPU node...
+NPU YOLOv3_64_64 Number of inputs: 1 and number of outputs: 1
+Model name: /data/local/ARM-CO-UP/graphs/YOLOv3_64_64.rknn
+Graph id: 68 Target is: NPU
+Graph (57) Task 0: conv2d_58
+Graph (57) Task 1: conv2d_58/BatchNorm
+Graph (57) Task 2: conv2d_58/LeakyRelu
+Graph 57 input size: 0 receiver size: 1 tasks size: 3 senders size: 1 output size: 0
+
+Graph id: Graph (61) Task 0: conv2d_62
+69 Target is: Neon
+Graph (61) Task 1: conv2d_61/BatchNorm
+Graph (61) Task 2: conv2d_62/LeakyRelu
+Graph 61 input size: 0 receiver size: 1 tasks size: 3 senders size: 1 output size: 0
+
+Graph id: Creating a RockPi NPU node...
+NPU YOLOv3_66_66 Number of inputs: 1 and number of outputs: 1
+Model name: /data/local/ARM-CO-UP/graphs/YOLOv3_66_66.rknn
+70 Target is: NPU
+Graph id: Creating a RockPi NPU node...
+NPU YOLOv3_68_68 Number of inputs: 1 and number of outputs: NPU /data/local/ARM-CO-UP/graphs/YOLOv3_60_60.rknn Reading model...
+Graph (1
+63) Task 0: conv2d_64
+Model name: /data/local/ARM-CO-UP/graphs/YOLOv3_68_68.rknn
+Graph (63) Task 1: conv2d_63/BatchNorm
+Graph (63) Task 2: conv2d_64/LeakyRelu
+Graph 63 input size: 0 receiver size: 1 tasks size: 3 senders size: 1 output size: 0
+
+71 Target is: Neon
+Graph id: Graph (67) Task 0: conv2d_68
+Graph (67) Task 1: conv2d_66/BatchNorm
+Graph (67) Task 2: conv2d_68/LeakyRelu
+72 Target is: NPUNPU /data/local/ARM-CO-UP/graphs/YOLOv3_30_30.rknn Reading model...
+Creating a RockPi NPU node...
+NPU YOLOv3_70_70 Number of inputs: 1 and number of outputs: 1
+Model name: /data/local/ARM-CO-UP/graphs/YOLOv3_70_70.rknn
+NPU /data/local/ARM-CO-UP/graphs/YOLOv3_50_50.rknn Reading model...
+
+NPU /data/local/ARM-CO-UP/graphs/YOLOv3_46_46.rknn Reading model...
+NPU /data/local/ARM-CO-UP/graphs/YOLOv3_62_62.rknn Reading model...
+NPU /data/local/ARM-CO-UP/graphs/YOLOv3_32_32.rknn Reading model...
+NPU /data/local/ARM-CO-UP/graphs/YOLOv3_70_70.rknn Reading model...
+NPU /data/local/ARM-CO-UP/graphs/YOLOv3_48_48.rknn Reading model...
+Graph id: Graph (67) Task 3: Upsample_68
+Graph (67) Task 4: Route2
+Graph 67 input size: 0 receiver size: 2 tasks size: 5 senders size: 1 output size: 0
+
+Graph (65) Task 0: conv2d_66
+Graph (65) Task 1: conv2d_65/BatchNorm
+Graph (65) Task 2: conv2d_66/LeakyRelu
+Graph 65 input size: 0 receiver size: 1 tasks size: 3 senders size: 1 output size: 0
+
+73 Target is: Neon
+NPU /data/local/ARM-CO-UP/graphs/YOLOv3_68_68.rknn Reading model...
+NPU /data/local/ARM-CO-UP/graphs/YOLOv3_64_64.rknn Reading model...
+NPU /data/local/ARM-CO-UP/graphs/YOLOv3_56_56.rknn Reading model...
+NPU /data/local/ARM-CO-UP/graphs/YOLOv3_54_54.rknn Reading model...
+NPU /data/local/ARM-CO-UP/graphs/YOLOv3_28_28.rknn Reading model...
+NPU /data/local/ARM-CO-UP/graphs/YOLOv3_66_66.rknn Reading model...
+NPU /data/local/ARM-CO-UP/graphs/YOLOv3_34_34.rknn Reading model...
+NPU /data/local/ARM-CO-UP/graphs/YOLOv3_38_38.rknn Reading model...
+NPU /data/local/ARM-CO-UP/graphs/YOLOv3_36_36.rknn Reading model...
+NPU /data/local/ARM-CO-UP/graphs/YOLOv3_42_42.rknn Reading model...
+Creating a RockPi NPU node...
+NPU YOLOv3_72_72 Number of inputs: 1 and number of outputs: 1
+Model name: /data/local/ARM-CO-UP/graphs/YOLOv3_72_72.rknn
+NPU /data/local/ARM-CO-UP/graphs/YOLOv3_40_40.rknn Reading model...
+Graph id: 74 Target is: NPU
+NPU /data/local/ARM-CO-UP/graphs/YOLOv3_72_72.rknn Reading model...
+NPU /data/local/ARM-CO-UP/graphs/YOLOv3_52_52.rknn Reading model...
+Graph (69) Task 0: conv2d_70
+Graph (69) Task 1: conv2d_68/BatchNorm
+Graph (69) Task 2: conv2d_70/LeakyRelu
+Graph 69 input size: 0 receiver size: 1 tasks size: 3 senders size: 1 output size: 0
+
+Graph (71) Task 0: conv2d_72
+Graph (71) Task 1: conv2d_70/BatchNorm
+Graph (71) Task 2: conv2d_72/LeakyRelu
+Graph 71 input size: 0 receiver size: 1 tasks size: 3 senders size: 1 output size: 0
+
+Creating a RockPi NPU node...
+NPU YOLOv3_74_74 Number of inputs: 1 and number of outputs: 1
+Model name: /data/local/ARM-CO-UP/graphs/YOLOv3_74_74.rknn
+NPU /data/local/ARM-CO-UP/graphs/YOLOv3_74_74.rknn Reading model...
+Graph (73) Task 0: conv2d_74
+Graph (73) Task 1: conv2d_72/BatchNorm
+Graph (73) Task 2: conv2d_74/LeakyRelu
+Graph 73 input size: 0 receiver size: 1 tasks size: 3 senders size: 1 output size: 0
+
+setting ending for layer: conv2d_36/LeakyRelu
+Finish finalizing graph 35
+
+
+
+setting ending for layer: conv2d_30/LeakyRelu
+Finish finalizing graph 29
+
+
+
+setting ending for layer: conv2d_34/LeakyRelu
+Finish finalizing graph 33
+
+
+
+setting ending for layer: conv2d_32/LeakyRelu
+Finish finalizing graph 31
+
+
+
+setting ending for layer: conv2d_28/LeakyRelu
+Finish finalizing graph 27
+
+
+
+setting ending for layer: conv2d_42/LeakyRelu
+Finish finalizing graph 41
+
+
+
+setting ending for layer: conv2d_38/LeakyRelu
+Finish finalizing graph 37
+
+
+
+setting ending for layer: conv2d_40/LeakyRelu
+Finish finalizing graph 39
+
+
+
+setting ending for layer: Route2
+Finish finalizing graph 67
+
+
+
+setting ending for layer: Route1
+Finish finalizing graph 59
+
+
+
+setting ending for layer: conv2d_8/LeakyRelu
+Finish finalizing graph 7
+
+
+
+setting ending for layer: conv2d_6/LeakyRelu
+Finish finalizing graph 5
+
+
+
+model input num: 1, output num: 1
+NPU /data/local/ARM-CO-UP/graphs/YOLOv3_0_0.rknn Initialized
+
+Number of NPU model outputs: 1 number of NPU subgraph outputs: 1
+Number of NPU model inputs: 1 number of NPU subgraph inputs: 1
+NPU Model YOLOv3_0_0 Input:0	Num elements:1108992	Size:1108992	Name:	Fmt:1	Qnt type:2	Type:3
+Explre input 0 n_elements: 1108992
+Is match with sub graph input: 0
+
+NPU Model YOLOv3_0_0 Output:0	Num elements:11829248	Size:11829248	Name:	Fmt:0	Qnt type:2	Type:3
+Explore output 0 n_elements: 11829248
+Is match with sub graph output: 0
+Graph (0) Task 0: NPU_YOLOv3_0_0
+Graph 0 input size: 1 receiver size: 0 tasks size: 1 senders size: 1 output size: 0
+
+model input num: 1, output num: 1
+NPU /data/local/ARM-CO-UP/graphs/YOLOv3_2_2.rknn Initialized
+
+Number of NPU model outputs: 1 number of NPU subgraph outputs: 1
+Number of NPU model inputs: 1 number of NPU subgraph inputs: 1
+NPU Model YOLOv3_2_2 Input:0	Num elements:5914624	Size:5914624	Name:	Fmt:1	Qnt type:2	Type:3
+Explre input 0 n_elements: 5914624
+Is match with sub graph input: 0
+
+NPU Model YOLOv3_2_2 Output:0	Num elements:2957312	Size:2957312	Name:	Fmt:0	Qnt type:2	Type:3
+Explore output 0 n_elements: 2957312
+Is match with sub graph output: 0
+Graph (2) Task 0: NPU_YOLOv3_2_2
+Graph 2 input size: 0 receiver size: 1 tasks size: 1 senders size: 1 output size: 0
+
+model input num: 1, output num: 1
+NPU /data/local/ARM-CO-UP/graphs/YOLOv3_4_4.rknn Initialized
+
+Number of NPU model outputs: 1 number of NPU subgraph outputs: 1
+Number of NPU model inputs: 1 number of NPU subgraph inputs: 1
+NPU Model YOLOv3_4_4 Input:0	Num elements:5914624	Size:5914624	Name:	Fmt:1	Qnt type:2	Type:3
+Explre input 0 n_elements: 5914624
+Is match with sub graph input: 0
+
+NPU Model YOLOv3_4_4 Output:0	Num elements:2957312	Size:2957312	Name:	Fmt:0	Qnt type:2	Type:3
+Explore output 0 n_elements: 2957312
+Is match with sub graph output: 0
+Graph (4) Task 0: NPU_YOLOv3_4_4
+Graph 4 input size: 0 receiver size: 1 tasks size: 1 senders size: 1 output size: 0
+
+model input num: 2, output num: 1
+NPU /data/local/ARM-CO-UP/graphs/YOLOv3_6_6.rknn Initialized
+
+Number of NPU model outputs: 1 number of NPU subgraph outputs: 1
+Number of NPU model inputs: 2 number of NPU subgraph inputs: 2
+NPU Model YOLOv3_6_6 Input:0	Num elements:1478656	Size:1478656	Name:	Fmt:1	Qnt type:2	Type:3
+Explre input 0 n_elements: 1478656
+Is match with sub graph input: 0
+
+NPU Model YOLOv3_6_6 Input:1	Num elements:2957312	Size:5914624	Name:	Fmt:1	Qnt type:0	Type:1
+Explre input 0 n_elements: 1478656
+Explre input 1 n_elements: 2957312
+Is match with sub graph input: 1
+
+NPU Model YOLOv3_6_6 Output:0	Num elements:2957312	Size:2957312	Name:	Fmt:0	Qnt type:2	Type:3
+Explore output 0 n_elements: 2957312
+Is match with sub graph output: 0
+Graph (6) Task 0: NPU_YOLOv3_6_6
+Graph 6 input size: 0 receiver size: 2 tasks size: 1 senders size: 1 output size: 0
+
+NPU /data/local/ARM-CO-UP/graphs/YOLOv3_10_10.rknn Initialized
+NPU /data/local/ARM-CO-UP/graphs/YOLOv3_12_12.rknn Initialized
+NPU /data/local/ARM-CO-UP/graphs/YOLOv3_8_8.rknn Initialized
+model input num: 2, output num: 1
+
+Number of NPU model outputs: 1 number of NPU subgraph outputs: 1
+Number of NPU model inputs: 2 number of NPU subgraph inputs: 2
+NPU Model YOLOv3_8_8 Input:0	Num elements:1478656	Size:1478656	Name:	Fmt:1	Qnt type:2	Type:3
+Explre input 0 n_elements: 1478656
+Is match with sub graph input: 0
+
+NPU Model YOLOv3_8_8 Input:1	Num elements:2957312	Size:5914624	Name:	Fmt:1	Qnt type:0	Type:1
+Explre input 0 n_elements: 1478656
+Explre input 1 n_elements: 2957312
+Is match with sub graph input: 1
+
+NPU Model YOLOv3_8_8 Output:0	Num elements:2957312	Size:2957312	Name:	Fmt:0	Qnt type:2	Type:3
+Explore output 0 n_elements: 2957312
+Is match with sub graph output: 0
+Graph (8) Task 0: NPU_YOLOv3_8_8
+Graph 8 input size: 0 receiver size: 2 tasks size: 1 senders size: 1 output size: 0
+
+NPU /data/local/ARM-CO-UP/graphs/YOLOv3_14_14.rknn Initialized
+NPU /data/local/ARM-CO-UP/graphs/YOLOv3_16_16.rknn Initialized
+NPU /data/local/ARM-CO-UP/graphs/YOLOv3_18_18.rknn Initialized
+model input num: 1, output num: 1
+
+Number of NPU model outputs: 1 number of NPU subgraph outputs: 1
+Number of NPU model inputs: 1 number of NPU subgraph inputs: 1
+NPU Model YOLOv3_18_18 Input:0	Num elements:1478656	Size:1478656	Name:	Fmt:1	Qnt type:2	Type:3
+Explre input 0 n_elements: 1478656
+Is match with sub graph input: 0
+
+NPU Model YOLOv3_18_18 Output:0	Num elements:739328	Size:739328	Name:	Fmt:0	Qnt type:2	Type:3
+Explore output 0 n_elements: 739328
+Is match with sub graph output: 0
+Graph (18) Task 0: NPU_YOLOv3_18_18
+Graph 18 input size: 0 receiver size: 1 tasks size: 1 senders size: 1 output size: 0
+
+NPU /data/local/ARM-CO-UP/graphs/YOLOv3_20_20.rknn Initialized
+
+Number of NPU model outputs: model input num: 1, output num: 1
+1 number of NPU subgraph outputs: 1
+Number of NPU model inputs: 1 number of NPU subgraph inputs: 1
+NPU Model YOLOv3_20_20 Input:0	Num elements:1478656	Size:1478656	Name:	Fmt:1	Qnt type:2	Type:3
+Explre input 0 n_elements: 1478656
+Is match with sub graph input: 0
+
+NPU Model YOLOv3_20_20 Output:0	Num elements:739328	Size:739328	Name:	Fmt:0	Qnt type:2	Type:3
+Explore output 0 n_elements: 739328
+Is match with sub graph output: 0
+Graph (20) Task 0: NPU_YOLOv3_20_20
+Graph 20 input size: 0 receiver size: 1 tasks size: 1 senders size: 1 output size: 0
+
+NPU /data/local/ARM-CO-UP/graphs/YOLOv3_22_22.rknn Initialized
+model input num: 1, output num: 1
+
+Number of NPU model outputs: 1 number of NPU subgraph outputs: 1
+Number of NPU model inputs: 1 number of NPU subgraph inputs: 1
+NPU Model YOLOv3_22_22 Input:0	Num elements:1478656	Size:1478656	Name:	Fmt:1	Qnt type:2	Type:3
+Explre input 0 n_elements: 1478656
+Is match with sub graph input: 0
+
+NPU Model YOLOv3_22_22 Output:0	Num elements:739328	Size:739328	Name:	Fmt:0	Qnt type:2	Type:3
+Explore output 0 n_elements: 739328
+Is match with sub graph output: 0
+Graph (22) Task 0: NPU_YOLOv3_22_22
+Graph 22 input size: 0 receiver size: 1 tasks size: 1 senders size: 1 output size: 0
+
+NPU /data/local/ARM-CO-UP/graphs/YOLOv3_24_24.rknn Initialized
+model input num: 1, output num: 1
+
+Number of NPU model outputs: 1 number of NPU subgraph outputs: 1
+Number of NPU model inputs: 1 number of NPU subgraph inputs: 1
+NPU Model YOLOv3_24_24 Input:0	Num elements:1478656	Size:1478656	Name:	Fmt:1	Qnt type:2	Type:3
+Explre input 0 n_elements: 1478656
+Is match with sub graph input: 0
+
+NPU Model YOLOv3_24_24 Output:0	Num elements:739328	Size:739328	Name:	Fmt:0	Qnt type:2	Type:3
+Explore output 0 n_elements: 739328
+Is match with sub graph output: 0
+Graph (24) Task 0: NPU_YOLOv3_24_24
+Graph 24 input size: 0 receiver size: 1 tasks size: 1 senders size: 1 output size: 0
+
+model input num: 1, output num: 1
+NPU /data/local/ARM-CO-UP/graphs/YOLOv3_26_26.rknn Initialized
+
+Number of NPU model outputs: 1 number of NPU subgraph outputs: 1
+Number of NPU model inputs: 1 number of NPU subgraph inputs: 1
+NPU Model YOLOv3_26_26 Input:0	Num elements:1478656	Size:1478656	Name:	Fmt:1	Qnt type:2	Type:3
+Explre input 0 n_elements: 1478656
+Is match with sub graph input: 0
+
+NPU Model YOLOv3_26_26 Output:0	Num elements:739328	Size:739328	Name:	Fmt:0	Qnt type:2	Type:3
+Explore output 0 n_elements: 739328
+Is match with sub graph output: 0
+Graph (26) Task 0: NPU_YOLOv3_26_26
+Graph 26 input size: 0 receiver size: 1 tasks size: 1 senders size: 1 output size: 0
+
+NPU /data/local/ARM-CO-UP/graphs/YOLOv3_44_44.rknn Initialized
+model input num: 1, output num: 1
+
+Number of NPU model outputs: 1 number of NPU subgraph outputs: 1
+Number of NPU model inputs: 1 number of NPU subgraph inputs: 1
+NPU Model YOLOv3_44_44 Input:0	Num elements:369664	Size:369664	Name:	Fmt:1	Qnt type:2	Type:3
+Explre input 0 n_elements: 369664
+Is match with sub graph input: 0
+
+NPU Model YOLOv3_44_44 Output:0	Num elements:184832	Size:184832	Name:	Fmt:0	Qnt type:2	Type:3
+Explore output 0 n_elements: 184832
+Is match with sub graph output: 0
+Graph (44) Task 0: NPU_YOLOv3_44_44
+Graph 44 input size: 0 receiver size: 1 tasks size: 1 senders size: 1 output size: 0
+
+NPU /data/local/ARM-CO-UP/graphs/YOLOv3_58_58.rknn Initialized
+
+Number of NPU model outputs: model input num: 1, output num: 1
+1 number of NPU subgraph outputs: 1
+Number of NPU model inputs: 1 number of NPU subgraph inputs: 1
+NPU Model YOLOv3_58_58 Input:0	Num elements:369664	Size:369664	Name:	Fmt:1	Qnt type:2	Type:3
+Explre input 0 n_elements: 369664
+Is match with sub graph input: 0
+
+NPU Model YOLOv3_58_58 Output:0	Num elements:92055	Size:92055	Name:	Fmt:0	Qnt type:2	Type:3
+Explore output 0 n_elements: 92055
+Is match with sub graph output: 0
+Graph (58) Task 0: NPU_YOLOv3_58_58
+Graph 58 input size: 0 receiver size: 1 tasks size: 1 senders size: 0 output size: 1
+
+NPU /data/local/ARM-CO-UP/graphs/YOLOv3_60_60.rknn Initialized
+model input num: 1, output num: 1
+
+Number of NPU model outputs: 1 number of NPU subgraph outputs: 1
+Number of NPU model inputs: 1 number of NPU subgraph inputs: 1
+NPU Model YOLOv3_60_60 Input:0	Num elements:1108992	Size:1108992	Name:	Fmt:1	Qnt type:2	Type:3
+Explre input 0 n_elements: 1108992
+Is match with sub graph input: 0
+
+NPU Model YOLOv3_60_60 Output:0	Num elements:369664	Size:369664	Name:	Fmt:0	Qnt type:2	Type:3
+Explore output 0 n_elements: 369664
+Is match with sub graph output: 0
+Graph (60) Task 0: NPU_YOLOv3_60_60
+Graph 60 input size: 0 receiver size: 1 tasks size: 1 senders size: 1 output size: 0
+
+NPU /data/local/ARM-CO-UP/graphs/YOLOv3_30_30.rknn Initialized
+model input num: 1, output num: 1
+NPU /data/local/ARM-CO-UP/graphs/YOLOv3_50_50.rknn Initialized
+
+Number of NPU model outputs: 1 number of NPU subgraph outputs: 1
+Number of NPU model inputs: 1 number of NPU subgraph inputs: 1
+NPU Model YOLOv3_50_50 Input:0	Num elements:369664	Size:369664	Name:	Fmt:1	Qnt type:2	Type:3
+Explre input 0 n_elements: 369664
+Is match with sub graph input: 0
+
+NPU Model YOLOv3_50_50 Output:0	Num elements:184832	Size:184832	Name:	Fmt:0	Qnt type:2	Type:3
+Explore output 0 n_elements: 184832
+Is match with sub graph output: 0
+Graph (50) Task 0: NPU_YOLOv3_50_50
+Graph 50 input size: 0 receiver size: 1 tasks size: 1 senders size: 1 output size: 0
+
+NPU /data/local/ARM-CO-UP/graphs/YOLOv3_46_46.rknn Initialized
+model input num: 1, output num: 1
+
+Number of NPU model outputs: 1 number of NPU subgraph outputs: 1
+Number of NPU model inputs: 1 number of NPU subgraph inputs: 1
+NPU Model YOLOv3_46_46 Input:0	Num elements:369664	Size:369664	Name:	Fmt:1	Qnt type:2	Type:3
+Explre input 0 n_elements: 369664
+Is match with sub graph input: 0
+
+NPU Model YOLOv3_46_46 Output:0	Num elements:184832	Size:184832	Name:	Fmt:0	Qnt type:2	Type:3
+Explore output 0 n_elements: 184832
+Is match with sub graph output: 0
+Graph (46) Task 0: NPU_YOLOv3_46_46
+Graph 46 input size: 0 receiver size: 1 tasks size: 1 senders size: 1 output size: 0
+
+NPU /data/local/ARM-CO-UP/graphs/YOLOv3_62_62.rknn Initialized
+model input num: 1, output num: 1
+
+Number of NPU model outputs: 1 number of NPU subgraph outputs: 1
+Number of NPU model inputs: 1 number of NPU subgraph inputs: 1
+NPU Model YOLOv3_62_62 Input:0	Num elements:739328	Size:739328	Name:	Fmt:1	Qnt type:2	Type:3
+Explre input 0 n_elements: 739328
+Is match with sub graph input: 0
+
+NPU Model YOLOv3_62_62 Output:0	Num elements:369664	Size:369664	Name:	Fmt:0	Qnt type:2	Type:3
+Explore output 0 n_elements: 369664
+Is match with sub graph output: 0
+Graph (62) Task 0: NPU_YOLOv3_62_62
+Graph 62 input size: 0 receiver size: 1 tasks size: 1 senders size: 1 output size: 0
+
+model input num: 2, output num: 1
+NPU /data/local/ARM-CO-UP/graphs/YOLOv3_32_32.rknn Initialized
+
+Number of NPU model outputs: 1 number of NPU subgraph outputs: 1
+Number of NPU model inputs: 2 number of NPU subgraph inputs: 2
+NPU Model YOLOv3_32_32 Input:0	Num elements:369664	Size:369664	Name:	Fmt:1	Qnt type:2	Type:3
+Explre input 0 n_elements: 369664
+Is match with sub graph input: 0
+
+NPU Model YOLOv3_32_32 Input:1	Num elements:739328	Size:1478656	Name:	Fmt:1	Qnt type:0	Type:1
+Explre input 0 n_elements: 369664
+Explre input 1 n_elements: 739328
+Is match with sub graph input: 1
+
+NPU Model YOLOv3_32_32 Output:0	Num elements:739328	Size:739328	Name:	Fmt:0	Qnt type:2	Type:3
+Explore output 0 n_elements: 739328
+Is match with sub graph output: 0
+Graph (32) Task 0: NPU_YOLOv3_32_32
+Graph 32 input size: 0 receiver size: 2 tasks size: 1 senders size: 1 output size: 0
+
+model input num: 1, output num: 1
+NPU /data/local/ARM-CO-UP/graphs/YOLOv3_70_70.rknn Initialized
+
+Number of NPU model outputs: 1 number of NPU subgraph outputs: 1
+Number of NPU model inputs: 1 number of NPU subgraph inputs: 1
+NPU Model YOLOv3_70_70 Input:0	Num elements:1478656	Size:1478656	Name:	Fmt:1	Qnt type:2	Type:3
+Explre input 0 n_elements: 1478656
+Is match with sub graph input: 0
+
+NPU Model YOLOv3_70_70 Output:0	Num elements:739328	Size:739328	Name:	Fmt:0	Qnt type:2	Type:3
+Explore output 0 n_elements: 739328
+Is match with sub graph output: 0
+Graph (70) Task 0: NPU_YOLOv3_70_70
+Graph 70 input size: 0 receiver size: 1 tasks size: 1 senders size: 1 output size: 0
+
+NPU /data/local/ARM-CO-UP/graphs/YOLOv3_48_48.rknn Initialized
+model input num: 1, output num: 1
+
+Number of NPU model outputs: 1 number of NPU subgraph outputs: 1
+Number of NPU model inputs: 1 number of NPU subgraph inputs: 1
+NPU Model YOLOv3_48_48 Input:0	Num elements:369664	Size:369664	Name:	Fmt:1	Qnt type:2	Type:3
+Explre input 0 n_elements: 369664
+Is match with sub graph input: 0
+
+NPU Model YOLOv3_48_48 Output:0	Num elements:184832	Size:184832	Name:	Fmt:0	Qnt type:2	Type:3
+Explore output 0 n_elements: 184832
+Is match with sub graph output: 0
+Graph (48) Task 0: NPU_YOLOv3_48_48
+Graph 48 input size: 0 receiver size: 1 tasks size: 1 senders size: 1 output size: 0
+
+NPU /data/local/ARM-CO-UP/graphs/YOLOv3_68_68.rknn Initialized
+
+Number of NPU model outputs: 1 number of NPU subgraph outputs: 1
+Number of NPU model inputs: 1 number of NPU subgraph inputs: 1
+NPU Model YOLOv3_68_68 Input:0	Num elements:2217984	Size:2217984	Name:	Fmt:1	Qnt type:2	Type:3
+Explre input 0 n_elements: 2217984
+Is match with sub graph input: 0
+
+NPU Model YOLOv3_68_68 Output:0	Num elements:739328	Size:739328	Name:	Fmt:0	Qnt type:2	Type:3
+Explore output 0 n_elements: model input num: 1, output num: 1
+739328
+Is match with sub graph output: 0
+Graph (68) Task 0: NPU_YOLOv3_68_68
+Graph 68 input size: 0 receiver size: 1 tasks size: 1 senders size: 1 output size: 0
+
+model input num: 1, output num: 1
+NPU /data/local/ARM-CO-UP/graphs/YOLOv3_64_64.rknn Initialized
+
+Number of NPU model outputs: 1 number of NPU subgraph outputs: 1
+Number of NPU model inputs: 1 number of NPU subgraph inputs: 1
+NPU Model YOLOv3_64_64 Input:0	Num elements:739328	Size:739328	Name:	Fmt:1	Qnt type:2	Type:3
+Explre input 0 n_elements: 739328
+Is match with sub graph input: 0
+
+NPU Model YOLOv3_64_64 Output:0	Num elements:369664	Size:369664	Name:	Fmt:0	Qnt type:2	Type:3
+Explore output 0 n_elements: 369664
+Is match with sub graph output: 0
+Graph (64) Task 0: NPU_YOLOv3_64_64
+Graph 64 input size: 0 receiver size: 1 tasks size: 1 senders size: 1 output size: 0
+
+model input num: 1, output num: 1
+NPU /data/local/ARM-CO-UP/graphs/YOLOv3_56_56.rknn Initialized
+
+Number of NPU model outputs: 1 number of NPU subgraph outputs: 1
+Number of NPU model inputs: 1 number of NPU subgraph inputs: 1
+NPU Model YOLOv3_56_56 Input:0	Num elements:369664	Size:369664	Name:	Fmt:1	Qnt type:2	Type:3
+Explre input 0 n_elements: 369664
+Is match with sub graph input: 0
+
+NPU Model YOLOv3_56_56 Output:0	Num elements:184832	Size:184832	Name:	Fmt:0	Qnt type:2	Type:3
+Explore output 0 n_elements: 184832
+Is match with sub graph output: 0
+Graph (56) Task 0: NPU_YOLOv3_56_56
+Graph 56 input size: 0 receiver size: 1 tasks size: 1 senders size: 1 output size: 0
+
+model input num: 1, output num: 1
+NPU /data/local/ARM-CO-UP/graphs/YOLOv3_54_54.rknn Initialized
+
+Number of NPU model outputs: 1 number of NPU subgraph outputs: 1
+Number of NPU model inputs: 1 number of NPU subgraph inputs: 1
+NPU Model YOLOv3_54_54 Input:0	Num elements:369664	Size:369664	Name:	Fmt:1	Qnt type:2	Type:3
+Explre input 0 n_elements: 369664
+Is match with sub graph input: 0
+
+NPU Model YOLOv3_54_54 Output:0	Num elements:184832	Size:184832	Name:	Fmt:0	Qnt type:2	Type:3
+Explore output 0 n_elements: 184832
+Is match with sub graph output: 0
+Graph (54) Task 0: NPU_YOLOv3_54_54
+Graph 54 input size: 0 receiver size: 1 tasks size: 1 senders size: 1 output size: 0
+
+model input num: 2, output num: 1
+NPU /data/local/ARM-CO-UP/graphs/YOLOv3_28_28.rknn Initialized
+
+Number of NPU model outputs: 1 number of NPU subgraph outputs: 1
+Number of NPU model inputs: 2 number of NPU subgraph inputs: 2
+NPU Model YOLOv3_28_28 Input:0	Num elements:369664	Size:369664	Name:	Fmt:1	Qnt type:2	Type:3
+Explre input 0 n_elements: 369664
+Is match with sub graph input: 0
+
+NPU Model YOLOv3_28_28 Input:1	Num elements:739328	Size:1478656	Name:	Fmt:1	Qnt type:0	Type:1
+Explre input 0 n_elements: 369664
+Explre input 1 n_elements: 739328
+Is match with sub graph input: 1
+
+NPU Model YOLOv3_28_28 Output:0	Num elements:739328	Size:739328	Name:	Fmt:0	Qnt type:2	Type:3
+Explore output 0 n_elements: 739328
+Is match with sub graph output: 0
+Graph (28) Task 0: NPU_YOLOv3_28_28
+Graph 28 input size: 0 receiver size: 2 tasks size: 1 senders size: 1 output size: 0
+
+model input num: 1, output num: 1
+NPU /data/local/ARM-CO-UP/graphs/YOLOv3_66_66.rknn Initialized
+
+Number of NPU model outputs: 1 number of NPU subgraph outputs: 1
+Number of NPU model inputs: 1 number of NPU subgraph inputs: 1
+NPU Model YOLOv3_66_66 Input:0	Num elements:739328	Size:739328	Name:	Fmt:1	Qnt type:2	Type:3
+Explre input 0 n_elements: 739328
+Is match with sub graph input: 0
+
+NPU Model YOLOv3_66_66 Output:0	Num elements:368220	Size:368220	Name:	Fmt:0	Qnt type:2	Type:3
+Explore output 0 n_elements: 368220
+Is match with sub graph output: 0
+Graph (66) Task 0: NPU_YOLOv3_66_66
+Graph 66 input size: 0 receiver size: 1 tasks size: 1 senders size: 0 output size: 1
+
+NPU /data/local/ARM-CO-UP/graphs/YOLOv3_34_34.rknn Initialized
+model input num: 2, output num: 1
+
+Number of NPU model outputs: 1 number of NPU subgraph outputs: 1
+Number of NPU model inputs: 2 number of NPU subgraph inputs: 2
+NPU Model YOLOv3_34_34 Input:0	Num elements:369664	Size:369664	Name:	Fmt:1	Qnt type:2	Type:3
+Explre input 0 n_elements: 369664
+Is match with sub graph input: 0
+
+NPU Model YOLOv3_34_34 Input:1	Num elements:739328	Size:1478656	Name:	Fmt:1	Qnt type:0	Type:1
+Explre input 0 n_elements: 369664
+Explre input 1 n_elements: 739328
+Is match with sub graph input: 1
+
+NPU Model YOLOv3_34_34 Output:0	Num elements:739328	Size:739328	Name:	Fmt:0	Qnt type:2	Type:3
+Explore output 0 n_elements: 739328
+Is match with sub graph output: 0
+Graph (34) Task 0: NPU_YOLOv3_34_34
+Graph 34 input size: 0 receiver size: 2 tasks size: 1 senders size: 1 output size: 0
+
+NPU /data/local/ARM-CO-UP/graphs/YOLOv3_38_38.rknn Initialized
+NPU /data/local/ARM-CO-UP/graphs/YOLOv3_36_36.rknn Initialized
+NPU /data/local/ARM-CO-UP/graphs/YOLOv3_42_42.rknn Initialized
+model input num: 2, output num: 1
+
+Number of NPU model outputs: 1 number of NPU subgraph outputs: 1
+Number of NPU model inputs: 2 number of NPU subgraph inputs: 2NPU /data/local/ARM-CO-UP/graphs/YOLOv3_40_40.rknn Initialized
+model input num: 2, output num: 1
+
+Number of NPU model outputs: 1 number of NPU subgraph outputs: 1
+Number of NPU model inputs: 2 number of NPU subgraph inputs: 2
+NPU Model YOLOv3_40_40 Input:0	Num elements:369664	Size:369664	Name:	Fmt:1	Qnt type:2	Type:3
+Explre input 0 n_elements: 369664
+Is match with sub graph input: 0
+
+NPU Model YOLOv3_40_40 Input:1	Num elements:739328	Size:1478656	Name:	Fmt:1	Qnt type:0	Type:1
+Explre input 0 n_elements: 369664
+Explre input 1 n_elements: 739328
+Is match with sub graph input: 1
+
+NPU Model YOLOv3_40_40 Output:0	Num elements:739328	Size:739328	Name:	Fmt:0	Qnt type:2	Type:3
+Explore output 0 n_elements: 739328
+Is match with sub graph output: 0
+Graph (40) Task 0: NPU_YOLOv3_40_40
+Graph 40 input size: 0 receiver size: 2 tasks size: 1 senders size: 1 output size: 0
+
+NPU /data/local/ARM-CO-UP/graphs/YOLOv3_72_72.rknn Initialized
+
+Number of NPU model outputs: 1 number of NPU subgraph outputs: 1
+Number of NPU model inputs: 1 number of NPU subgraph inputs: 1
+NPU Model YOLOv3_72_72 Input:0	Num elements:1478656	Size:1478656	Name:	Fmt:1	Qnt type:2	Type:3
+Explre input 0 n_elements: model input num: 1, output num: 1
+1478656
+Is match with sub graph input: 0
+
+NPU Model YOLOv3_72_72 Output:0	Num elements:739328	Size:739328	Name:	Fmt:0	Qnt type:2	Type:3
+Explore output 0 n_elements: 739328
+Is match with sub graph output: 0
+Graph (72) Task 0: NPU_YOLOv3_72_72
+Graph 72 input size: 0 receiver size: 1 tasks size: 1 senders size: 1 output size: 0
+
+NPU /data/local/ARM-CO-UP/graphs/YOLOv3_52_52.rknn Initialized
+model input num: 1, output num: 1
+
+Number of NPU model outputs: 1 number of NPU subgraph outputs: 1
+Number of NPU model inputs: 1 number of NPU subgraph inputs: 1
+NPU Model YOLOv3_52_52 Input:0	Num elements:369664	Size:369664	Name:	Fmt:1	Qnt type:2	Type:3
+Explre input 0 n_elements: 369664
+Is match with sub graph input: 0
+
+NPU Model YOLOv3_52_52 Output:0	Num elements:184832	Size:184832	Name:	Fmt:0	Qnt type:2	Type:3
+Explore output 0 n_elements: 184832
+Is match with sub graph output: 0
+Graph (52) Task 0: NPU_YOLOv3_52_52
+Graph 52 input size: 0 receiver size: 1 tasks size: 1 senders size: 1 output size: 0
+
+model input num: 1, output num: 1
+NPU /data/local/ARM-CO-UP/graphs/YOLOv3_74_74.rknn Initialized
+
+NPU Model YOLOv3_0_0 Output:0	Num elements:11829248	Size:11829248	Name:	Fmt:0	Qnt type:2	Type:3
+Explore output 0 n_elements: 11829248
+Is match with sub graph output: 0
+setting ending for layer: NPU_YOLOv3_0_0
+Finish finalizing graph 0
+
+
+
+model input num: 1, output num: 1
+model input num: 1, output num: 1
+
+Number of NPU model outputs: 1 number of NPU subgraph outputs: 1
+Number of NPU model inputs: 1 number of NPU subgraph inputs: 1
+NPU Model YOLOv3_10_10 Input:0	Num elements:1478656	Size:1478656	Name:	Fmt:1	Qnt type:2	Type:3
+Explre input 0 n_elements: 1478656
+Is match with sub graph input: 0
+
+NPU Model YOLOv3_10_10 Output:0	Num elements:739328	Size:739328	Name:	Fmt:0	Qnt type:2	Type:3
+Explore output 0 n_elements: 739328
+Is match with sub graph output: 0
+Graph (10) Task 0: NPU_YOLOv3_10_10
+Graph 10 input size: 0 receiver size: 1 tasks size: 1 senders size: 1 output size: 0
+
+setting ending for layer: conv2d_10/LeakyRelu
+Finish finalizing graph 9
+
+
+
+
+Number of NPU model outputs: 1 number of NPU subgraph outputs: 1
+Number of NPU model inputs: 1 number of NPU subgraph inputs: 1
+NPU Model YOLOv3_12_12 Input:0	Num elements:1478656	Size:1478656	Name:	Fmt:1	Qnt type:2	Type:3
+Explre input 0 n_elements: 1478656
+Is match with sub graph input: 0
+
+NPU Model YOLOv3_12_12 Output:0	Num elements:739328	Size:739328	Name:	Fmt:0	Qnt type:2	Type:3
+Explore output 0 n_elements: 739328
+Is match with sub graph output: 0
+Graph (12) Task 0: NPU_YOLOv3_12_12
+Graph 12 input size: 0 receiver size: 1 tasks size: 1 senders size: 1 output size: 0
+
+setting ending for layer: conv2d_72/LeakyRelu
+Finish finalizing graph 71
+
+
+
+
+Number of NPU model outputs: 1 number of NPU subgraph outputs: 1
+Number of NPU model inputs: 1 number of NPU subgraph inputs: 1
+NPU Model YOLOv3_14_14 Input:0	Num elements:1478656	Size:1478656	Name:
+Number of NPU model outputs: setting ending for layer: 	Fmt:1	Qnt type:2	Type:3
+Explre input 0 n_elements: 
+NPU Model 
+Number of NPU model outputs: 1 number of NPU subgraph outputs: 1
+Number of NPU model inputs: 2 number of NPU subgraph inputs: 2
+NPU Model YOLOv3_30_30 Input:0	Num elements:add_11_12
+Number of NPU model outputs: 
+Finish finalizing graph 11
+
+
+
+369664	Size:369664	Name:	Fmt:1	Qnt type:2	Type:3
+Explre input 0 n_elements: setting ending for layer: 1add_13_14
+ number of NPU subgraph outputs: Finish finalizing graph 13
+
+
+
+1
+Number of NPU model inputs: 2 number of NPU subgraph inputs: 2
+NPU Model YOLOv3_36_36 Input:0	Num elements:369664setting ending for layer: conv2d_70/LeakyRelu
+Finish finalizing graph 69
+
+
+
+setting ending for layer: add_25_26
+Finish finalizing graph 25
+
+
+
+model input num: 1, output num: 1
+model input num: 1, output num: 1
+model input num: 2, output num: 1
+model input num: 2, output num: 1
+model input num: 2, output num: 1
+setting ending for layer: add_19_20
+Finish finalizing graph 19
+
+
+
+setting ending for layer: add_17_18
+Finish finalizing graph 17
+
+
+
+setting ending for layer: conv2d_74/LeakyRelu
+Finish finalizing graph 73
+
+
+
+setting ending for layer: add_15_16
+Finish finalizing graph 15
+
+
+
+setting ending for layer: add_21_22
+Finish finalizing graph 21
+
+
+
+setting ending for layer: add_23_24
+Finish finalizing graph 23
+
+
+
+setting ending for layer: conv2d_2/LeakyRelu
+Finish finalizing graph 1
+
+
+
+
+NPU Model YOLOv3_2_2 Output:0	Num elements:2957312	Size:2957312	Name:	Fmt:0	Qnt type:2	Type:3
+Explore output 0 n_elements: 2957312
+Is match with sub graph output: 0
+setting ending for layer: NPU_YOLOv3_2_2
+Finish finalizing graph 2
+
+
+
+setting ending for layer: conv2d_62/LeakyRelu
+Finish finalizing graph 61
+
+
+
+setting ending for layer: conv2d_64/LeakyRelu
+Finish finalizing graph 63
+
+
+
+setting ending for layer: conv2d_66/LeakyRelu
+Finish finalizing graph 65
+
+
+
+setting ending for layer: add_3_4
+Finish finalizing graph 3
+
+
+
+
+NPU Model YOLOv3_4_4 Output:0	Num elements:2957312	Size:2957312	Name:	Fmt:0	Qnt type:2	Type:3
+Explore output 0 n_elements: 2957312
+Is match with sub graph output: 0
+setting ending for layer: NPU_YOLOv3_4_4
+Finish finalizing graph 4
+
+
+
+
+NPU Model YOLOv3_6_6 Output:0	Num elements:2957312	Size:2957312	Name:	Fmt:0	Qnt type:2	Type:3
+Explore output 0 n_elements: 2957312
+Is match with sub graph output: 0
+setting ending for layer: NPU_YOLOv3_6_6
+Finish finalizing graph 6
+
+
+
+setting ending for layer: conv2d_54/LeakyRelu
+Finish finalizing graph 53
+
+
+
+setting ending for layer: conv2d_44/LeakyRelu
+Finish finalizing graph 43
+
+
+
+setting ending for layer: add_45_46
+Finish finalizing graph 45
+
+
+
+setting ending for layer: add_49_50
+Finish finalizing graph 49
+
+
+
+setting ending for layer: conv2d_56/LeakyRelu
+Finish finalizing graph 55
+
+
+
+setting ending for layer: add_47_48
+Finish finalizing graph 47
+
+
+
+setting ending for layer: conv2d_58/LeakyRelu
+Finish finalizing graph 57
+
+
+
+setting ending for layer: add_51_52
+Finish finalizing graph 51
+
+
+
+
+NPU Model YOLOv3_8_8 Output:0	Num elements:2957312	Size:2957312	Name:	Fmt:0	Qnt type:2	Type:3
+Explore output 0 n_elements: 2957312
+Is match with sub graph output: 0
+setting ending for layer: NPU_YOLOv3_8_8
+Finish finalizing graph 8
+
+
+
+
+NPU Model YOLOv3_18_18 Output:0	Num elements:739328	Size:739328	Name:	Fmt:0	Qnt type:2	Type:3
+Explore output 0 n_elements: 739328
+Is match with sub graph output: 0
+setting ending for layer: NPU_YOLOv3_18_18
+Finish finalizing graph 18
+
+
+
+	Size:369664	Name:	Fmt:1	Qnt type:2	Type:3
+Explre input 
+NPU Model 369664YOLOv3_42_421478656YOLOv3_20_20 Input:1 Output:0	Num elements:369664	Size:369664	Name:	Fmt:1	Qnt type:2	Type:3
+Explre input 0 n_elements: 369664
+
+Number of NPU model outputs: 0	Num elements:1 number of NPU subgraph outputs: 7393280Is match with sub graph input: 	Size:739328	Name:	Fmt:0	Qnt type:2	Type:3
+Explore output 0 n_elements: 739328
+Is match with sub graph output: 0
+setting ending for layer: NPU_YOLOv3_20_20
+Finish finalizing graph 20
+
+
+
+
+NPU Model YOLOv3_22_22 Output:0	Num elements:
+Number of NPU model outputs: 1
+Number of NPU model inputs: 0
+
+NPU Model YOLOv3_42_42 Input:1	Num elements:739328	Size:1478656	Name:	Fmt:1	Qnt type:0	Type:1
+Explre input 0 n_elements: 369664
+Explre input 1 n_elements: 739328
+Is match with sub graph input: 1
+
+NPU Model YOLOv3_42_42 Output:0	Num elements:739328	Size:739328	Name:	Fmt:0	Qnt type:2	Type:3
+Explore output 0 n_elements: 739328
+Is match with sub graph output: 0
+Graph (
+
+11 number of NPU subgraph inputs:  number of NPU subgraph outputs:  n_elements: 739328	Size:7393281
+Number of NPU model inputs: 2 number of NPU subgraph inputs: 2
+NPU Model YOLOv3_38_38 Input:0	Num elements:369664	Size:369664	Name:	Fmt:1	Qnt type:2	Type:3
+Explre input 0 n_elements: 369664
+Is match with sub graph input: 0
+
+NPU Model YOLOv3_38_38 Input:1	Num elements:739328	Size:1478656	Name:	Fmt:1	Qnt type:0	Type:1
+Explre input 0 n_elements: 369664
+Explre input 1 n_elements: 739328
+Is match with sub graph input: 1
+
+NPU Model YOLOv3_38_38 Output:1
+NPU Model YOLOv3_16_16 Input:0	Num elements:1478656	Size:1478656	Name:	Fmt:Is match with sub graph input: 1	Qnt type:02	Type:Is match with sub graph input: 	Name:3696640	Fmt:
+
+0	Qnt type:Is match with sub graph input: 
+NPU Model YOLOv3_30_300
+
+NPU Model YOLOv3_36_36 Input:1	Num elements:739328	Size:1478656	Name:	Fmt:1	Qnt type:0	Type:1
+Explre input 0 n_elements: 369664
+Explre input 1 n_elements: 739328
+Is match with sub graph input: 1
+
+NPU Model YOLOv3_36_36 Output:0	Num elements:739328	Size:739328	Name:	Fmt:0	Qnt type:2	Type:3
+Explore output 0 n_elements: 739328
+Is match with sub graph output: 0
+Graph (36) Task 0: NPU_YOLOv3_36_36
+Graph 36 input size: 0 receiver size: 2 tasks size: 1 senders size: 1 output size: 0
+
+2	Type:3
+Explore output 0 n_elements: 739328
+Is match with sub graph output: 0
+setting ending for layer: NPU_YOLOv3_22_22
+Finish finalizing graph 22
+
+
+
+
+NPU Model YOLOv3_24_24 Output:0	Num elements:739328	Size:739328	Name:	Fmt:0	Qnt type:2	Type:3
+Explore output 0 n_elements: 739328
+Is match with sub graph output: 0
+setting ending for layer: NPU_YOLOv3_24_24
+Finish finalizing graph 24
+
+
+
+0
+NPU Model  Input:
+
+NPU Model 42) Task 03YOLOv3_26_26 Output:1YOLOv3_14_14 Output:	Num elements: number of NPU subgraph outputs: 0	Num elements:1
+739328	Size:Explre input 739328	Size:1478656	Name:	Fmt:1	Qnt type:0	Type:1
+Explre input 0 n_elements: 369664
+0	Num elements:739328	Size:739328	Name:	Fmt:0	Qnt type:2	Type:3	Num elements:739328739328	Size:	Name:0
+
+Number of NPU model inputs: 	Fmt:Explore output  n_elements: Explre input 0: NPU_YOLOv3_42_420	Qnt type:7393281478656
+2	Type:	Name:	Fmt:Is match with sub graph input: 
+30 n_elements: 1 number of NPU subgraph inputs: 739328
+Is match with sub graph output: 0
+Graph 42 input size: 0 receiver size: 2 tasks size: 1 senders size: 1 output size: 0
+
+
+11 n_elements: 
+NPU Model YOLOv3_74_74 Input:0	Num elements:1478656	Size:1478656	Name:	Fmt:1	Qnt type:2	Type:3
+Explre input 0 n_elements: 1478656
+Is match with sub graph input: 0
+
+NPU Model YOLOv3_74_74 Output:0	Num elements:1472880	Size:1472880	Name:	Fmt:0	Qnt type:2	Type:3
+Explore output 0 n_elements: 1472880
+Is match with sub graph output: 0
+Graph (74) Task 0: NPU_YOLOv3_74_74
+Graph 74 input size: 0 receiver size: 1 tasks size: 1 senders size: 0 output size: 1
+
+Explore output 0 n_elements: 
+0739328
+Is match with sub graph output: 
+NPU Model YOLOv3_16_160
+setting ending for layer: NPU_YOLOv3_26_26
+Finish finalizing graph 26
+
+
+
+739328
+Is match with sub graph input: 1
+
+NPU Model YOLOv3_30_30 Output:0	Num elements:739328	Size:739328	Name:	Fmt:0	Qnt type:2	Type:3
+Explore output 0 n_elements: 739328
+Is match with sub graph output: 0
+Graph (30) Task 0: NPU_YOLOv3_30_30
+Graph 30 input size: 0 receiver size: 2 tasks size: 1 senders size: 1 output size: 0
+
+
+NPU Model YOLOv3_44_44 Output:0	Num elements:184832Graph (14) Task 0: NPU_YOLOv3_14_14
+	Size:184832	Name:	Fmt:0	Qnt type:2	Type:3	Qnt type:2	Type:3
+Explore output 0 n_elements: 739328
+Is match with sub graph output: 0
+Graph (38) Task 0: NPU_YOLOv3_38_38
+Graph 38 input size: 0 receiver size: 2 tasks size: 1 senders size: 1 output size: 0
+
+
+Explore output 0 n_elements: 184832
+Is match with sub graph output: 0
+setting ending for layer: NPU_YOLOv3_44_44
+Finish finalizing graph 44
+
+
+
+
+NPU Model YOLOv3_58_58 Output:0	Num elements:92055	Size:92055	Name:	Fmt:0	Qnt type:2	Type:3
+Explore output 0 n_elements: 92055
+Is match with sub graph output: 0
+setting ending for layer: NPU_YOLOv3_58_58
+Finish finalizing graph 58
+
+
+
+
+NPU Model YOLOv3_60_60 Output:0	Num elements:369664	Size:369664	Name:	Fmt:0	Qnt type:2	Type:3
+Explore output 0 n_elements: 369664
+Is match with sub graph output: 0
+setting ending for layer: NPU_YOLOv3_60_60
+Finish finalizing graph 60
+
+
+
+
+NPU Model YOLOv3_50_50 Output:0	Num elements:184832	Size:184832	Name:	Fmt:0	Qnt type:2	Type:3
+Explore output 0 n_elements: 184832
+Is match with sub graph output: 0
+setting ending for layer: NPU_YOLOv3_50_50
+Finish finalizing graph 50
+
+
+
+ Output:0	Num elements:739328	Size:739328	Name:	Fmt:0	Qnt type:2	Type:3
+Explore output 0 n_elements: 739328
+Is match with sub graph output: 0
+Graph (16) Task 0: NPU_YOLOv3_16_16
+Graph 16 input size: 0 receiver size: 1 tasks size: 1 senders size: 1 output size: 0
+
+
+NPU Model YOLOv3_46_46 Output:0	Num elements:184832	Size:184832	Name:	Fmt:0	Qnt type:2	Type:3
+Explore output 0 n_elements: 184832
+Is match with sub graph output: 0
+setting ending for layer: NPU_YOLOv3_46_46
+Finish finalizing graph 46
+
+
+
+
+NPU Model YOLOv3_62_62 Output:0	Num elements:369664	Size:369664	Name:	Fmt:0	Qnt type:2	Type:3
+Explore output 0 n_elements: 369664
+Is match with sub graph output: 0
+setting ending for layer: NPU_YOLOv3_62_62
+Finish finalizing graph 62
+
+
+
+
+NPU Model YOLOv3_32_32 Output:0	Num elements:739328	Size:739328	Name:	Fmt:0	Qnt type:2	Type:3
+Explore output 0 n_elements: 739328
+Is match with sub graph output: 0
+setting ending for layer: NPU_YOLOv3_32_32
+Finish finalizing graph 32
+
+
+
+
+NPU Model YOLOv3_70_70 Output:0	Num elements:739328	Size:739328	Name:	Fmt:0	Qnt type:2	Type:3
+Explore output 0 n_elements: 739328
+Is match with sub graph output: 0
+setting ending for layer: NPU_YOLOv3_70_70
+Finish finalizing graph 70
+
+
+
+
+NPU Model YOLOv3_48_48 Output:0	Num elements:184832	Size:184832	Name:	Fmt:0	Qnt type:2	Type:3
+Explore output 0 n_elements: 184832
+Is match with sub graph output: 0
+setting ending for layer: NPU_YOLOv3_48_48
+Finish finalizing graph 48
+
+
+
+
+NPU Model YOLOv3_68_68 Output:0	Num elements:739328	Size:739328	Name:	Fmt:0	Qnt type:2	Type:3
+Explore output 0 n_elements: 739328
+Is match with sub graph output: 0
+setting ending for layer: NPU_YOLOv3_68_68
+Finish finalizing graph 68
+
+
+
+
+NPU Model YOLOv3_64_64 Output:Graph 14 input size: 0 receiver size: 1 tasks size: 1 senders size: 1 output size: 0
+
+0	Num elements:369664	Size:369664	Name:	Fmt:0	Qnt type:2	Type:3
+Explore output 0 n_elements: 369664
+Is match with sub graph output: 0
+setting ending for layer: NPU_YOLOv3_64_64
+Finish finalizing graph 64
+
+
+
+
+NPU Model YOLOv3_56_56 Output:0	Num elements:184832	Size:184832	Name:	Fmt:0	Qnt type:2	Type:3
+Explore output 0 n_elements: 184832
+Is match with sub graph output: 0
+setting ending for layer: NPU_YOLOv3_56_56
+Finish finalizing graph 56
+
+
+
+
+NPU Model YOLOv3_54_54 Output:0	Num elements:184832	Size:184832	Name:	Fmt:0	Qnt type:2	Type:3
+Explore output 0 n_elements: 184832
+Is match with sub graph output: 0
+setting ending for layer: NPU_YOLOv3_54_54
+Finish finalizing graph 54
+
+
+
+
+NPU Model YOLOv3_28_28 Output:0	Num elements:739328	Size:739328	Name:	Fmt:0	Qnt type:2	Type:3
+Explore output 0 n_elements: 739328
+Is match with sub graph output: 0
+setting ending for layer: NPU_YOLOv3_28_28
+Finish finalizing graph 28
+
+
+
+
+NPU Model YOLOv3_66_66 Output:0	Num elements:368220	Size:368220	Name:	Fmt:0	Qnt type:2	Type:3
+Explore output 0 n_elements: 368220
+Is match with sub graph output: 0
+setting ending for layer: NPU_YOLOv3_66_66
+Finish finalizing graph 66
+
+
+
+
+NPU Model YOLOv3_34_34 Output:0	Num elements:739328	Size:739328	Name:	Fmt:0	Qnt type:2	Type:3
+Explore output 0 n_elements: 739328
+Is match with sub graph output: 0
+setting ending for layer: NPU_YOLOv3_34_34
+Finish finalizing graph 34
+
+
+
+
+NPU Model YOLOv3_40_40 Output:0	Num elements:739328	Size:739328	Name:	Fmt:0	Qnt type:2	Type:3
+Explore output 0 n_elements: 739328
+Is match with sub graph output: 0
+setting ending for layer: NPU_YOLOv3_40_40
+Finish finalizing graph 40
+
+
+
+
+NPU Model YOLOv3_72_72 Output:0	Num elements:739328	Size:739328	Name:	Fmt:0	Qnt type:2	Type:3
+Explore output 0 n_elements: 739328
+Is match with sub graph output: 0
+setting ending for layer: NPU_YOLOv3_72_72
+Finish finalizing graph 72
+
+
+
+
+NPU Model YOLOv3_52_52 Output:0	Num elements:184832	Size:184832	Name:	Fmt:0	Qnt type:2	Type:3
+Explore output 0 n_elements: 184832
+Is match with sub graph output: 0
+setting ending for layer: NPU_YOLOv3_52_52
+Finish finalizing graph 52
+
+
+
+
+NPU Model YOLOv3_16_16 Output:0	Num elements:739328	Size:739328	Name:	Fmt:0	Qnt type:2	Type:3
+Explore output 0 n_elements: 739328
+Is match with sub graph output: 0
+setting ending for layer: NPU_YOLOv3_16_16
+Finish finalizing graph 16
+
+
+
+
+NPU Model YOLOv3_36_36 Output:0	Num elements:739328	Size:739328	Name:	Fmt:0	Qnt type:2	Type:3
+Explore output 0 n_elements: 739328
+Is match with sub graph output: 0
+setting ending for layer: NPU_YOLOv3_36_36
+Finish finalizing graph 36
+
+
+
+
+NPU Model YOLOv3_38_38 Output:0	Num elements:739328	Size:739328	Name:	Fmt:0	Qnt type:2	Type:3
+Explore output 0 n_elements: 739328
+Is match with sub graph output: 0
+setting ending for layer: NPU_YOLOv3_38_38
+Finish finalizing graph 38
+
+
+
+
+NPU Model YOLOv3_12_12 Output:0	Num elements:739328	Size:739328	Name:	Fmt:0	Qnt type:2	Type:3
+Explore output 0 n_elements: 739328
+Is match with sub graph output: 0
+setting ending for layer: NPU_YOLOv3_12_12
+Finish finalizing graph 12
+
+
+
+
+NPU Model YOLOv3_30_30 Output:0	Num elements:739328	Size:739328	Name:	Fmt:0	Qnt type:2	Type:3
+Explore output 0 n_elements: 739328
+Is match with sub graph output: 0
+setting ending for layer: NPU_YOLOv3_30_30
+Finish finalizing graph 30
+
+
+
+
+NPU Model YOLOv3_14_14 Output:0	Num elements:739328	Size:739328	Name:	Fmt:0	Qnt type:2	Type:3
+Explore output 0 n_elements: 739328
+Is match with sub graph output: 0
+setting ending for layer: NPU_YOLOv3_14_14
+Finish finalizing graph 14
+
+
+
+
+NPU Model YOLOv3_42_42 Output:0	Num elements:739328	Size:739328	Name:	Fmt:0	Qnt type:2	Type:3
+Explore output 0 n_elements: 739328
+Is match with sub graph output: 0
+setting ending for layer: NPU_YOLOv3_42_42
+
+NPU Model YOLOv3_10_10 Output:0Finish finalizing graph 42
+
+
+
+	Num elements:739328	Size:739328	Name:	Fmt:0	Qnt type:2	Type:3
+Explore output 0 n_elements: 739328
+Is match with sub graph output: 0
+setting ending for layer: NPU_YOLOv3_10_10
+Finish finalizing graph 10
+
+
+
+
+NPU Model YOLOv3_74_74 Output:0	Num elements:1472880	Size:1472880	Name:	Fmt:0	Qnt type:2	Type:3
+Explore output 0 n_elements: 1472880
+Is match with sub graph output: 0
+setting ending for layer: NPU_YOLOv3_74_74
+Finish finalizing graph 74
+
+
+
+setup finished
+
+Please Enter the desired Frequency setttings: 
+0 Running Graph with 7-7-7-7-7-7-7-7-7-7-7-7-7-7-7-7-7-7-7-7-7-7-7-7-7-7-7-7-7-7-7-7-7-7-7-7-7-7-7-7-7-7-7-7-7-7-7-7-7-7-7-7-7-7-7-7-7-7-7-7-7-7-7-7-7-7-7-7-7-7-7-7-7-7-7 LW DVFS
+change governor to false for task:conv2d_58/LeakyRelu
+change governor to false for task:NPU_YOLOv3_58_58
+change governor to false for task:conv2d_66/LeakyRelu
+change governor to false for task:NPU_YOLOv3_66_66
+governor 0 task:NPU_YOLOv3_0_0 freqs:0,7,0
+governor 1 task:NPU_YOLOv3_10_10 freqs:0,7,0
+governor 2 task:NPU_YOLOv3_12_12 freqs:0,7,0
+governor 3 task:NPU_YOLOv3_14_14 freqs:0,7,0
+governor 4 task:NPU_YOLOv3_16_16 freqs:0,7,0
+governor 5 task:NPU_YOLOv3_18_18 freqs:0,7,0
+governor 6 task:NPU_YOLOv3_20_20 freqs:0,7,0
+governor 7 task:NPU_YOLOv3_22_22 freqs:0,7,0
+governor 8 task:NPU_YOLOv3_24_24 freqs:0,7,0
+governor 9 task:NPU_YOLOv3_26_26 freqs:0,7,0
+governor 10 task:NPU_YOLOv3_28_28 freqs:0,7,0
+governor 11 task:NPU_YOLOv3_2_2 freqs:0,7,0
+governor 12 task:NPU_YOLOv3_30_30 freqs:0,7,0
+governor 13 task:NPU_YOLOv3_32_32 freqs:0,7,0
+governor 14 task:NPU_YOLOv3_34_34 freqs:0,7,0
+governor 15 task:NPU_YOLOv3_36_36 freqs:0,7,0
+governor 16 task:NPU_YOLOv3_38_38 freqs:0,7,0
+governor 17 task:NPU_YOLOv3_40_40 freqs:0,7,0
+governor 18 task:NPU_YOLOv3_42_42 freqs:0,7,0
+governor 19 task:NPU_YOLOv3_44_44 freqs:0,7,0
+governor 20 task:NPU_YOLOv3_46_46 freqs:0,7,0
+governor 21 task:NPU_YOLOv3_48_48 freqs:0,7,0
+governor 22 task:NPU_YOLOv3_4_4 freqs:0,7,0
+governor 23 task:NPU_YOLOv3_50_50 freqs:0,7,0
+governor 24 task:NPU_YOLOv3_52_52 freqs:0,7,0
+governor 25 task:NPU_YOLOv3_54_54 freqs:0,7,0
+governor 26 task:NPU_YOLOv3_56_56 freqs:0,7,0
+governor 27 task:NPU_YOLOv3_58_58 freqs:0,7,0
+governor 28 task:NPU_YOLOv3_60_60 freqs:0,7,0
+governor 29 task:NPU_YOLOv3_62_62 freqs:0,7,0
+governor 30 task:NPU_YOLOv3_64_64 freqs:0,7,0
+governor 31 task:NPU_YOLOv3_66_66 freqs:0,7,0
+governor 32 task:NPU_YOLOv3_68_68 freqs:0,7,0
+governor 33 task:NPU_YOLOv3_6_6 freqs:0,7,0
+governor 34 task:NPU_YOLOv3_70_70 freqs:0,7,0
+governor 35 task:NPU_YOLOv3_72_72 freqs:0,7,0
+governor 36 task:NPU_YOLOv3_74_74 freqs:0,7,0
+governor 37 task:NPU_YOLOv3_8_8 freqs:0,7,0
+governor 38 task:Route1 freqs:0,7,0
+governor 39 task:Route2 freqs:0,7,0
+governor 40 task:add_11_12 freqs:0,7,0
+governor 41 task:add_13_14 freqs:0,7,0
+governor 42 task:add_15_16 freqs:0,7,0
+governor 43 task:add_17_18 freqs:0,7,0
+governor 44 task:add_19_20 freqs:0,7,0
+governor 45 task:add_21_22 freqs:0,7,0
+governor 46 task:add_23_24 freqs:0,7,0
+governor 47 task:add_25_26 freqs:0,7,0
+governor 48 task:add_3_4 freqs:0,7,0
+governor 49 task:add_45_46 freqs:0,7,0
+governor 50 task:add_47_48 freqs:0,7,0
+governor 51 task:add_49_50 freqs:0,7,0
+governor 52 task:add_51_52 freqs:0,7,0
+governor 53 task:conv2d_10/LeakyRelu freqs:0,7,0
+governor 54 task:conv2d_2/LeakyRelu freqs:0,7,0
+governor 55 task:conv2d_28/LeakyRelu freqs:0,7,0
+governor 56 task:conv2d_30/LeakyRelu freqs:0,7,0
+governor 57 task:conv2d_32/LeakyRelu freqs:0,7,0
+governor 58 task:conv2d_34/LeakyRelu freqs:0,7,0
+governor 59 task:conv2d_36/LeakyRelu freqs:0,7,0
+governor 60 task:conv2d_38/LeakyRelu freqs:0,7,0
+governor 61 task:conv2d_40/LeakyRelu freqs:0,7,0
+governor 62 task:conv2d_42/LeakyRelu freqs:0,7,0
+governor 63 task:conv2d_44/LeakyRelu freqs:0,7,0
+governor 64 task:conv2d_54/LeakyRelu freqs:0,7,0
+governor 65 task:conv2d_56/LeakyRelu freqs:0,7,0
+governor 66 task:conv2d_58/LeakyRelu freqs:0,7,0
+governor 67 task:conv2d_6/LeakyRelu freqs:0,7,0
+governor 68 task:conv2d_62/LeakyRelu freqs:0,7,0
+governor 69 task:conv2d_64/LeakyRelu freqs:0,7,0
+governor 70 task:conv2d_66/LeakyRelu freqs:0,7,0
+governor 71 task:conv2d_70/LeakyRelu freqs:0,7,0
+governor 72 task:conv2d_72/LeakyRelu freqs:0,7,0
+governor 73 task:conv2d_74/LeakyRelu freqs:0,7,0
+governor 74 task:conv2d_8/LeakyRelu freqs:0,7,0
+set_GPIOs with mode: layers
+change starting gpio to false for task:conv2d_58
+change ending gpio to false for task:conv2d_58/LeakyRelu
+change starting gpio to false for task:NPU_YOLOv3_58_58
+change ending gpio to false for task:NPU_YOLOv3_58_58
+change starting gpio to false for task:conv2d_66
+change ending gpio to false for task:conv2d_66/LeakyRelu
+change starting gpio to false for task:NPU_YOLOv3_66_66
+change ending gpio to false for task:NPU_YOLOv3_66_66
+0 task name: NPU_YOLOv3_0_0	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+1 task name: conv2d_2/Conv2D	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+2 task name: conv2d_2/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+3 task name: conv2d_2/LeakyRelu	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+4 task name: NPU_YOLOv3_2_2	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+5 task name: conv2d_4/Conv2D	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+6 task name: conv2d_4/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+7 task name: conv2d_4/LeakyRelu	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+8 task name: add_3_4	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+9 task name: NPU_YOLOv3_4_4	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+10 task name: conv2d_6/Conv2D	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+11 task name: conv2d_6/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+12 task name: conv2d_6/LeakyRelu	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+13 task name: NPU_YOLOv3_6_6	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+14 task name: conv2d_8/Conv2D	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+15 task name: conv2d_8/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+16 task name: conv2d_8/LeakyRelu	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+17 task name: NPU_YOLOv3_8_8	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+18 task name: conv2d_10/Conv2D	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+19 task name: conv2d_10/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+20 task name: conv2d_10/LeakyRelu	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+21 task name: NPU_YOLOv3_10_10	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+22 task name: conv2d_12/Conv2D	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+23 task name: conv2d_12/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+24 task name: conv2d_12/LeakyRelu	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+25 task name: add_11_12	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+26 task name: NPU_YOLOv3_12_12	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+27 task name: conv2d_14/Conv2D	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+28 task name: conv2d_14/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+29 task name: conv2d_14/LeakyRelu	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+30 task name: add_13_14	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+31 task name: NPU_YOLOv3_14_14	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+32 task name: conv2d_16/Conv2D	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+33 task name: conv2d_16/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+34 task name: conv2d_16/LeakyRelu	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+35 task name: add_15_16	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+36 task name: NPU_YOLOv3_16_16	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+37 task name: conv2d_18/Conv2D	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+38 task name: conv2d_18/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+39 task name: conv2d_18/LeakyRelu	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+40 task name: add_17_18	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+41 task name: NPU_YOLOv3_18_18	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+42 task name: conv2d_20/Conv2D	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+43 task name: conv2d_20/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+44 task name: conv2d_20/LeakyRelu	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+45 task name: add_19_20	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+46 task name: NPU_YOLOv3_20_20	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+47 task name: conv2d_22/Conv2D	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+48 task name: conv2d_22/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+49 task name: conv2d_22/LeakyRelu	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+50 task name: add_21_22	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+51 task name: NPU_YOLOv3_22_22	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+52 task name: conv2d_24/Conv2D	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+53 task name: conv2d_24/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+54 task name: conv2d_24/LeakyRelu	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+55 task name: add_23_24	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+56 task name: NPU_YOLOv3_24_24	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+57 task name: conv2d_26/Conv2D	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+58 task name: conv2d_26/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+59 task name: conv2d_26/LeakyRelu	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+60 task name: add_25_26	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+61 task name: NPU_YOLOv3_26_26	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+62 task name: conv2d_28/Conv2D	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+63 task name: conv2d_28/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+64 task name: conv2d_28/LeakyRelu	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+65 task name: NPU_YOLOv3_28_28	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+66 task name: conv2d_30/Conv2D	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+67 task name: conv2d_30/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+68 task name: conv2d_30/LeakyRelu	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+69 task name: NPU_YOLOv3_30_30	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+70 task name: conv2d_32/Conv2D	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+71 task name: conv2d_32/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+72 task name: conv2d_32/LeakyRelu	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+73 task name: NPU_YOLOv3_32_32	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+74 task name: conv2d_34/Conv2D	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+75 task name: conv2d_34/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+76 task name: conv2d_34/LeakyRelu	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+77 task name: NPU_YOLOv3_34_34	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+78 task name: conv2d_36/Conv2D	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+79 task name: conv2d_36/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+80 task name: conv2d_36/LeakyRelu	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+81 task name: NPU_YOLOv3_36_36	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+82 task name: conv2d_38/Conv2D	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+83 task name: conv2d_38/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+84 task name: conv2d_38/LeakyRelu	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+85 task name: NPU_YOLOv3_38_38	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+86 task name: conv2d_40/Conv2D	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+87 task name: conv2d_40/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+88 task name: conv2d_40/LeakyRelu	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+89 task name: NPU_YOLOv3_40_40	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+90 task name: conv2d_42/Conv2D	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+91 task name: conv2d_42/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+92 task name: conv2d_42/LeakyRelu	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+93 task name: NPU_YOLOv3_42_42	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+94 task name: conv2d_44/Conv2D	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+95 task name: conv2d_44/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+96 task name: conv2d_44/LeakyRelu	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+97 task name: NPU_YOLOv3_44_44	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+98 task name: conv2d_46/Conv2D	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+99 task name: conv2d_46/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+100 task name: conv2d_46/LeakyRelu	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+101 task name: add_45_46	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+102 task name: NPU_YOLOv3_46_46	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+103 task name: conv2d_48/Conv2D	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+104 task name: conv2d_48/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+105 task name: conv2d_48/LeakyRelu	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+106 task name: add_47_48	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+107 task name: NPU_YOLOv3_48_48	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+108 task name: conv2d_50/Conv2D	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+109 task name: conv2d_50/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+110 task name: conv2d_50/LeakyRelu	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+111 task name: add_49_50	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+112 task name: NPU_YOLOv3_50_50	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+113 task name: conv2d_52/Conv2D	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+114 task name: conv2d_52/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+115 task name: conv2d_52/LeakyRelu	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+116 task name: add_51_52	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+117 task name: NPU_YOLOv3_52_52	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+118 task name: conv2d_54	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+119 task name: conv2d_54/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+120 task name: conv2d_54/LeakyRelu	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+121 task name: NPU_YOLOv3_54_54	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+122 task name: conv2d_56	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+123 task name: conv2d_56/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+124 task name: conv2d_56/LeakyRelu	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+125 task name: NPU_YOLOv3_56_56	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+126 task name: conv2d_58	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+127 task name: conv2d_58/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+128 task name: conv2d_58/LeakyRelu	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+129 task name: NPU_YOLOv3_58_58	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+130 task name: conv2d_60	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+131 task name: conv2d_59/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+132 task name: conv2d_60/LeakyRelu	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+133 task name: Upsample_60	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+134 task name: Route1	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+135 task name: NPU_YOLOv3_60_60	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+136 task name: conv2d_62	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+137 task name: conv2d_61/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+138 task name: conv2d_62/LeakyRelu	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+139 task name: NPU_YOLOv3_62_62	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+140 task name: conv2d_64	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+141 task name: conv2d_63/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+142 task name: conv2d_64/LeakyRelu	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+143 task name: NPU_YOLOv3_64_64	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+144 task name: conv2d_66	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+145 task name: conv2d_65/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+146 task name: conv2d_66/LeakyRelu	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+147 task name: NPU_YOLOv3_66_66	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+148 task name: conv2d_68	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+149 task name: conv2d_66/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+150 task name: conv2d_68/LeakyRelu	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+151 task name: Upsample_68	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+152 task name: Route2	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+153 task name: NPU_YOLOv3_68_68	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+154 task name: conv2d_70	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+155 task name: conv2d_68/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+156 task name: conv2d_70/LeakyRelu	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+157 task name: NPU_YOLOv3_70_70	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+158 task name: conv2d_72	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+159 task name: conv2d_70/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+160 task name: conv2d_72/LeakyRelu	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+161 task name: NPU_YOLOv3_72_72	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+162 task name: conv2d_74	starting gpio: 1	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+163 task name: conv2d_72/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 1	profiling transfers: 0
+164 task name: conv2d_74/LeakyRelu	starting gpio: 0	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+165 task name: NPU_YOLOv3_74_74	starting gpio: 1	ending gpio: 1	profiling layers: 1	profiling transfers: 0
+
+
+
+*********************************************
+start running graphs
+*************************************************
+
+
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_608//apple.ppm
+*************
+
+
+getting output255x19x19
+finish getting output255x19x19
+---------- Top 5 predictions ----------
+
+0.5752 - [id = 166]
+0.2876 - [id = 251]
+0.2157 - [id = 81]
+0.1438 - [id = 77]
+0.0000 - [id = 73]
+getting output255x38x38
+finish getting output255x38x38
+---------- Top 5 predictions ----------
+
+0.4906 - [id = 84]
+0.2803 - [id = 169]
+0.2803 - [id = 168]
+0.2103 - [id = 167]
+0.1402 - [id = 170]
+getting output255x76x76
+---------- Top 5 predictions ----------
+
+0.7399 - [id = 21]
+0.4709 - [id = 106]
+0.2018 - [id = 127]
+0.1345 - [id = 85]
+0.0000 - [id = 0]
+finish getting output255x76x76
+
+
+************
+Photo_index:1
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_608//dishes.ppm
+*************
+
+
+getting output255x19x19
+---------- Top 5 predictions ----------
+
+0.5033 - [id = 166]
+0.2157 - [id = 251]
+0.1438 - [id = 81]
+0.0719 - [id = 73]
+0.0719 - [id = 77]
+finish getting output255x19x19
+getting output255x38x38
+---------- Top 5 predictions ----------
+
+0.2803 - [id = 169]
+0.2803 - [id = 168]
+0.2103 - [id = 167]
+0.1402 - [id = 85]
+0.0701 - [id = 252]
+finish getting output255x38x38
+getting output255x76x76
+---------- Top 5 predictions ----------
+
+0.5381 - [id = 21]
+0.2691 - [id = 127]
+0.2018 - [id = 191]
+0.1345 - [id = 85]
+0.0000 - [id = 148]
+finish getting output255x76x76
+
+
+************
+Photo_index:2
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_608//bus.ppm
+*************
+
+
+getting output255x19x19
+---------- Top 5 predictions ----------
+
+0.5033 - [id = 166]
+0.3595 - [id = 251]
+0.3595 - [id = 85]
+0.0719 - [id = 77]
+0.0000 - [id = 73]
+finish getting output255x19x19
+getting output255x38x38
+---------- Top 5 predictions ----------
+
+0.4205 - [id = 84]
+0.2803 - [id = 168]
+0.2103 - [id = 169]
+0.1402 - [id = 170]
+0.1402 - [id = 167]
+finish getting output255x38x38
+getting output255x76x76
+---------- Top 5 predictions ----------
+
+0.4709 - [id = 21]
+0.3363 - [id = 106]
+0.2691 - [id = 127]
+0.1345 - [id = 191]
+0.0673 - [id = 148]
+finish getting output255x76x76
+
+
+************
+Photo_index:3
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_608//zebra.ppm
+*************
+
+
+getting output255x19x19
+---------- Top 5 predictions ----------
+
+0.5033 - [id = 166]
+0.2157 - [id = 77]
+0.1438 - [id = 85]
+0.0719 - [id = 251]
+0.0000 - [id = 73]
+finish getting output255x19x19
+getting output255x38x38
+---------- Top 5 predictions ----------
+
+0.2803 - [id = 169]
+0.2803 - [id = 168]
+0.2103 - [id = 167]
+0.1402 - [id = 170]
+0.0000 - [id = 254]
+finish getting output255x38x38
+getting output255x76x76
+---------- Top 5 predictions ----------
+
+0.5381 - [id = 21]
+0.4036 - [id = 106]
+0.2018 - [id = 127]
+0.0673 - [id = 148]
+0.0673 - [id = 85]
+finish getting output255x76x76
+
+
+************
+Photo_index:4
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_608//bear.ppm
+*************
+
+
+getting output255x19x19
+---------- Top 5 predictions ----------
+
+0.2876 - [id = 166]
+0.2157 - [id = 81]
+0.1438 - [id = 251]
+0.1438 - [id = 77]
+0.0000 - [id = 73]
+finish getting output255x19x19
+getting output255x38x38
+---------- Top 5 predictions ----------
+
+0.3504 - [id = 168]
+0.3504 - [id = 85]
+0.2803 - [id = 169]
+0.1402 - [id = 167]
+0.1402 - [id = 84]
+finish getting output255x38x38
+getting output255x76x76
+---------- Top 5 predictions ----------
+
+0.5381 - [id = 106]
+0.4709 - [id = 21]
+0.2018 - [id = 127]
+0.0000 - [id = 191]
+0.0000 - [id = 148]
+finish getting output255x76x76
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_608//apple.ppm
+*************
+
+
+getting output255x19x19
+---------- Top 5 predictions ----------
+
+0.5752 - [id = 166]
+0.2876 - [id = 251]
+0.2157 - [id = 81]
+0.1438 - [id = 77]
+0.0000 - [id = 73]
+finish getting output255x19x19
+getting output255x38x38
+---------- Top 5 predictions ----------
+
+0.4906 - [id = 84]
+0.2803 - [id = 169]
+0.2803 - [id = 168]
+0.2103 - [id = 167]
+0.1402 - [id = 170]
+finish getting output255x38x38
+getting output255x76x76
+---------- Top 5 predictions ----------
+
+0.7399 - [id = 21]
+0.4709 - [id = 106]
+0.2018 - [id = 127]
+0.1345 - [id = 85]
+0.0000 - [id = 0]
+finish getting output255x76x76
+
+
+************
+Photo_index:1
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_608//dishes.ppm
+*************
+
+
+getting output255x19x19
+---------- Top 5 predictions ----------
+
+0.5033 - [id = 166]
+0.2157 - [id = 251]
+0.1438 - [id = 81]
+0.0719 - [id = 73]
+0.0719 - [id = 77]
+finish getting output255x19x19
+getting output255x38x38
+---------- Top 5 predictions ----------
+
+0.2803 - [id = 169]
+0.2803 - [id = 168]
+0.2103 - [id = 167]
+0.1402 - [id = 85]
+0.0701 - [id = 252]
+finish getting output255x38x38
+getting output255x76x76
+---------- Top 5 predictions ----------
+
+0.5381 - [id = 21]
+0.2691 - [id = 127]
+0.2018 - [id = 191]
+0.1345 - [id = 85]
+0.0000 - [id = 148]
+finish getting output255x76x76
+
+
+************
+Photo_index:2
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_608//bus.ppm
+*************
+
+
+getting output255x19x19
+---------- Top 5 predictions ----------
+
+0.5033 - [id = 166]
+0.3595 - [id = 251]
+0.3595 - [id = 85]
+0.0719 - [id = 77]
+0.0000 - [id = 73]
+finish getting output255x19x19
+getting output255x38x38
+---------- Top 5 predictions ----------
+
+0.4205 - [id = 84]
+0.2803 - [id = 168]
+0.2103 - [id = 169]
+0.1402 - [id = 170]
+0.1402 - [id = 167]
+finish getting output255x38x38
+getting output255x76x76
+---------- Top 5 predictions ----------
+
+0.4709 - [id = 21]
+0.3363 - [id = 106]
+0.2691 - [id = 127]
+0.1345 - [id = 191]
+0.0673 - [id = 148]
+finish getting output255x76x76
+
+
+************
+Photo_index:3
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_608//zebra.ppm
+*************
+
+
+getting output255x19x19
+---------- Top 5 predictions ----------
+
+0.5033 - [id = 166]
+0.2157 - [id = 77]
+0.1438 - [id = 85]
+0.0719 - [id = 251]
+0.0000 - [id = 73]
+finish getting output255x19x19
+---------- Top 5 predictions ----------
+
+0.2803 - [id = 169]
+0.2803 - [id = 168]
+0.2103 - [id = 167]
+0.1402 - [id = 170]
+0.0000 - [id = 254]
+getting output255x38x38
+finish getting output255x38x38
+getting output255x76x76
+---------- Top 5 predictions ----------
+
+0.5381 - [id = 21]
+0.4036 - [id = 106]
+0.2018 - [id = 127]
+0.0673 - [id = 148]
+0.0673 - [id = 85]
+finish getting output255x76x76
+
+
+************
+Photo_index:4
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_608//bear.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.2876 - [id = 166]
+0.2157 - [id = 81]
+0.1438 - [id = 251]
+0.1438 - [id = 77]
+0.0000 - [id = 73]
+getting output255x19x19
+finish getting output255x19x19
+getting output255x38x38
+---------- Top 5 predictions ----------
+
+0.3504 - [id = 168]
+0.3504 - [id = 85]
+0.2803 - [id = 169]
+0.1402 - [id = 167]
+0.1402 - [id = 84]
+finish getting output255x38x38
+getting output255x76x76
+---------- Top 5 predictions ----------
+
+0.5381 - [id = 106]
+0.4709 - [id = 21]
+0.2018 - [id = 127]
+0.0000 - [id = 191]
+0.0000 - [id = 148]
+finish getting output255x76x76
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_608//apple.ppm
+*************
+
+
+getting output255x19x19
+---------- Top 5 predictions ----------
+
+0.5752 - [id = 166]
+0.2876 - [id = 251]
+0.2157 - [id = 81]
+0.1438 - [id = 77]
+0.0000 - [id = 73]
+finish getting output255x19x19
+getting output255x38x38
+---------- Top 5 predictions ----------
+
+0.4906 - [id = 84]
+0.2803 - [id = 169]
+0.2803 - [id = 168]
+0.2103 - [id = 167]
+0.1402 - [id = 170]
+finish getting output255x38x38
+getting output255x76x76
+---------- Top 5 predictions ----------
+
+0.7399 - [id = 21]
+0.4709 - [id = 106]
+0.2018 - [id = 127]
+0.1345 - [id = 85]
+0.0000 - [id = 0]
+finish getting output255x76x76
+
+
+************
+Photo_index:1
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_608//dishes.ppm
+*************
+
+
+getting output255x19x19
+---------- Top 5 predictions ----------
+
+0.5033 - [id = 166]
+0.2157 - [id = 251]
+0.1438 - [id = 81]
+0.0719 - [id = 73]
+0.0719 - [id = 77]
+finish getting output255x19x19
+getting output255x38x38
+---------- Top 5 predictions ----------
+
+0.2803 - [id = 169]
+0.2803 - [id = 168]
+0.2103 - [id = 167]
+0.1402 - [id = 85]
+0.0701 - [id = 252]
+finish getting output255x38x38
+getting output255x76x76
+---------- Top 5 predictions ----------
+
+0.5381 - [id = 21]
+0.2691 - [id = 127]
+0.2018 - [id = 191]
+0.1345 - [id = 85]
+0.0000 - [id = 148]
+finish getting output255x76x76
+
+
+************
+Photo_index:2
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_608//bus.ppm
+*************
+
+
+getting output255x19x19
+---------- Top 5 predictions ----------
+
+0.5033 - [id = 166]
+0.3595 - [id = 251]
+0.3595 - [id = 85]
+0.0719 - [id = 77]
+0.0000 - [id = 73]
+finish getting output255x19x19
+getting output255x38x38
+---------- Top 5 predictions ----------
+
+0.4205 - [id = 84]
+0.2803 - [id = 168]
+0.2103 - [id = 169]
+0.1402 - [id = 170]
+0.1402 - [id = 167]
+finish getting output255x38x38
+getting output255x76x76
+---------- Top 5 predictions ----------
+
+0.4709 - [id = 21]
+0.3363 - [id = 106]
+0.2691 - [id = 127]
+0.1345 - [id = 191]
+0.0673 - [id = 148]
+finish getting output255x76x76
+0	Layer Name: NPU_YOLOv3_0_0 	 Layer time: 620.6763 	 number of inputs: 1 	 input shape: 3x608x608 	 output shape: 32x608x608
+Layer Number: 0 	 time: 620.6763
+----------------------------
+
+ Sum of Layers time: 620.6763
+
+
+Graph0   Input: 103.241   Task: 628.989   send: 18.2907   Out: 0.0009625   Process: 750.521
+
+NPU NPU_YOLOv3_0_0	AVG_input_time:17.0444	AVG_run_time:329.0692	AVG_prof_run_time:98.7730	AVG_output_time:267.9996
+
+
+********
+
+0	Layer Name: conv2d_2/Conv2D 	 Layer time: 183.2343 	 number of inputs: 3 	 input shape: 32x608x608 	 output shape: 64x304x304
+1	Layer Name: conv2d_2/BatchNorm 	 Layer time: 12.9204 	 number of inputs: 5 	 input shape: 64x304x304 	 output shape: 64x304x304
+2	Layer Name: conv2d_2/LeakyRelu 	 Layer time: 14.1695 	 number of inputs: 1 	 input shape: 64x304x304 	 output shape: 64x304x304
+Layer Number: 0 	 time: 210.3242
+----------------------------
+
+ Sum of Layers time: 210.3242
+
+
+Graph1   Input: 0.0065335   Task: 218.732   send: 19.0385   Out: 0.0009041   Process: 237.778
+
+
+
+********
+
+0	Layer Name: NPU_YOLOv3_2_2 	 Layer time: 298.2971 	 number of inputs: 1 	 input shape: 64x304x304 	 output shape: 32x304x304
+Layer Number: 0 	 time: 298.2971
+----------------------------
+
+ Sum of Layers time: 298.2971
+
+
+Graph2   Input: 0.0060375   Task: 306.679   send: 4.45045   Out: 0.0009041   Process: 311.136
+
+NPU NPU_YOLOv3_2_2	AVG_input_time:105.0469	AVG_run_time:139.4246	AVG_prof_run_time:52.8108	AVG_output_time:50.2398
+
+
+********
+
+0	Layer Name: conv2d_4/Conv2D 	 Layer time: 129.2822 	 number of inputs: 3 	 input shape: 32x304x304 	 output shape: 64x304x304
+1	Layer Name: conv2d_4/BatchNorm 	 Layer time: 12.9395 	 number of inputs: 5 	 input shape: 64x304x304 	 output shape: 64x304x304
+2	Layer Name: conv2d_4/LeakyRelu 	 Layer time: 14.1633 	 number of inputs: 1 	 input shape: 64x304x304 	 output shape: 64x304x304
+3	Layer Name: add_3_4 	 Layer time: 19.4731 	 number of inputs: 2 	 input shape: 64x304x304 	 output shape: 64x304x304
+Layer Number: 0 	 time: 175.8582
+----------------------------
+
+ Sum of Layers time: 175.8582
+
+
+Graph3   Input: 0.0068836   Task: 184.274   send: 9.4414   Out: 0.0009331   Process: 193.724
+
+
+
+********
+
+0	Layer Name: NPU_YOLOv3_4_4 	 Layer time: 337.4002 	 number of inputs: 1 	 input shape: 64x304x304 	 output shape: 128x152x152
+Layer Number: 0 	 time: 337.4002
+----------------------------
+
+ Sum of Layers time: 337.4002
+
+
+Graph4   Input: 0.0068832   Task: 345.698   send: 12.497   Out: 0.0009335   Process: 358.203
+
+NPU NPU_YOLOv3_4_4	AVG_input_time:104.6816	AVG_run_time:171.0230	AVG_prof_run_time:83.2151	AVG_output_time:57.8561
+
+
+********
+
+0	Layer Name: conv2d_6/Conv2D 	 Layer time: 33.6448 	 number of inputs: 3 	 input shape: 128x152x152 	 output shape: 64x152x152
+1	Layer Name: conv2d_6/BatchNorm 	 Layer time: 6.0520 	 number of inputs: 5 	 input shape: 64x152x152 	 output shape: 64x152x152
+2	Layer Name: conv2d_6/LeakyRelu 	 Layer time: 4.6941 	 number of inputs: 1 	 input shape: 64x152x152 	 output shape: 64x152x152
+Layer Number: 0 	 time: 44.3909
+----------------------------
+
+ Sum of Layers time: 44.3909
+
+
+Graph5   Input: 0.0060375   Task: 52.9286   send: 3.64525   Out: 0.0009042   Process: 56.5807
+
+
+
+********
+
+0	Layer Name: NPU_YOLOv3_6_6 	 Layer time: 296.4421 	 number of inputs: 2 	 input shape: 64x152x152 	 output shape: 128x152x152
+Layer Number: 0 	 time: 296.4421
+----------------------------
+
+ Sum of Layers time: 296.4421
+
+
+Graph6   Input: 0.0069709   Task: 304.762   send: 16.1994   Out: 0.0009334   Process: 320.969
+
+NPU NPU_YOLOv3_6_6	AVG_input_time:82.0985	AVG_run_time:153.3455	AVG_prof_run_time:65.1069	AVG_output_time:57.4583
+
+
+********
+
+0	Layer Name: conv2d_8/Conv2D 	 Layer time: 25.6599 	 number of inputs: 3 	 input shape: 128x152x152 	 output shape: 64x152x152
+1	Layer Name: conv2d_8/BatchNorm 	 Layer time: 5.0907 	 number of inputs: 5 	 input shape: 64x152x152 	 output shape: 64x152x152
+2	Layer Name: conv2d_8/LeakyRelu 	 Layer time: 4.3913 	 number of inputs: 1 	 input shape: 64x152x152 	 output shape: 64x152x152
+Layer Number: 0 	 time: 35.1420
+----------------------------
+
+ Sum of Layers time: 35.1420
+
+
+Graph7   Input: 0.0260459   Task: 43.6646   send: 4.87617   Out: 0.0008459   Process: 48.5676
+
+
+
+********
+
+0	Layer Name: NPU_YOLOv3_8_8 	 Layer time: 296.7255 	 number of inputs: 2 	 input shape: 64x152x152 	 output shape: 128x152x152
+Layer Number: 0 	 time: 296.7255
+----------------------------
+
+ Sum of Layers time: 296.7255
+
+
+Graph8   Input: 0.0061542   Task: 305.038   send: 6.46217   Out: 0.0011081   Process: 311.507
+
+NPU NPU_YOLOv3_8_8	AVG_input_time:83.4944	AVG_run_time:152.5580	AVG_prof_run_time:64.2283	AVG_output_time:57.1118
+
+
+********
+
+0	Layer Name: conv2d_10/Conv2D 	 Layer time: 219.6538 	 number of inputs: 3 	 input shape: 128x152x152 	 output shape: 256x76x76
+1	Layer Name: conv2d_10/BatchNorm 	 Layer time: 5.2651 	 number of inputs: 5 	 input shape: 256x76x76 	 output shape: 256x76x76
+2	Layer Name: conv2d_10/LeakyRelu 	 Layer time: 3.7980 	 number of inputs: 1 	 input shape: 256x76x76 	 output shape: 256x76x76
+Layer Number: 0 	 time: 228.7168
+----------------------------
+
+ Sum of Layers time: 228.7168
+
+
+Graph9   Input: 0.0068249   Task: 237.166   send: 8.49205   Out: 0.0010498   Process: 245.666
+
+
+
+********
+
+0	Layer Name: NPU_YOLOv3_10_10 	 Layer time: 89.2765 	 number of inputs: 1 	 input shape: 256x76x76 	 output shape: 128x76x76
+Layer Number: 0 	 time: 89.2765
+----------------------------
+
+ Sum of Layers time: 89.2765
+
+
+Graph10   Input: 0.0065331   Task: 97.6045   send: 3.24631   Out: 0.0008749   Process: 100.858
+
+NPU NPU_YOLOv3_10_10	AVG_input_time:28.3142	AVG_run_time:44.1961	AVG_prof_run_time:19.7270	AVG_output_time:13.9609
+
+
+********
+
+0	Layer Name: conv2d_12/Conv2D 	 Layer time: 89.4881 	 number of inputs: 3 	 input shape: 128x76x76 	 output shape: 256x76x76
+1	Layer Name: conv2d_12/BatchNorm 	 Layer time: 4.2200 	 number of inputs: 5 	 input shape: 256x76x76 	 output shape: 256x76x76
+2	Layer Name: conv2d_12/LeakyRelu 	 Layer time: 3.7113 	 number of inputs: 1 	 input shape: 256x76x76 	 output shape: 256x76x76
+3	Layer Name: add_11_12 	 Layer time: 4.7901 	 number of inputs: 2 	 input shape: 256x76x76 	 output shape: 256x76x76
+Layer Number: 0 	 time: 102.2096
+----------------------------
+
+ Sum of Layers time: 102.2096
+
+
+Graph11   Input: 0.0095376   Task: 110.597   send: 7.15473   Out: 0.0009623   Process: 117.762
+
+
+
+********
+
+0	Layer Name: NPU_YOLOv3_12_12 	 Layer time: 84.5387 	 number of inputs: 1 	 input shape: 256x76x76 	 output shape: 128x76x76
+Layer Number: 0 	 time: 84.5387
+----------------------------
+
+ Sum of Layers time: 84.5387
+
+
+Graph12   Input: 0.0061249   Task: 92.8933   send: 3.11792   Out: 0.0009625   Process: 96.0183
+
+NPU NPU_YOLOv3_12_12	AVG_input_time:26.3483	AVG_run_time:41.8055	AVG_prof_run_time:17.6786	AVG_output_time:13.5634
+
+
+********
+
+0	Layer Name: conv2d_14/Conv2D 	 Layer time: 83.2059 	 number of inputs: 3 	 input shape: 128x76x76 	 output shape: 256x76x76
+1	Layer Name: conv2d_14/BatchNorm 	 Layer time: 3.3465 	 number of inputs: 5 	 input shape: 256x76x76 	 output shape: 256x76x76
+2	Layer Name: conv2d_14/LeakyRelu 	 Layer time: 3.1643 	 number of inputs: 1 	 input shape: 256x76x76 	 output shape: 256x76x76
+3	Layer Name: add_13_14 	 Layer time: 4.4790 	 number of inputs: 2 	 input shape: 256x76x76 	 output shape: 256x76x76
+Layer Number: 0 	 time: 94.1957
+----------------------------
+
+ Sum of Layers time: 94.1957
+
+
+Graph13   Input: 0.0065916   Task: 102.59   send: 7.72561   Out: 0.0009333   Process: 110.324
+
+
+
+********
+
+0	Layer Name: NPU_YOLOv3_14_14 	 Layer time: 84.6272 	 number of inputs: 1 	 input shape: 256x76x76 	 output shape: 128x76x76
+Layer Number: 0 	 time: 84.6272
+----------------------------
+
+ Sum of Layers time: 84.6272
+
+
+Graph14   Input: 0.0060084   Task: 93.006   send: 3.19255   Out: 0.0009042   Process: 96.2055
+
+NPU NPU_YOLOv3_14_14	AVG_input_time:26.2238	AVG_run_time:41.8105	AVG_prof_run_time:17.6537	AVG_output_time:13.7459
+
+
+********
+
+0	Layer Name: conv2d_16/Conv2D 	 Layer time: 84.3514 	 number of inputs: 3 	 input shape: 128x76x76 	 output shape: 256x76x76
+1	Layer Name: conv2d_16/BatchNorm 	 Layer time: 3.4494 	 number of inputs: 5 	 input shape: 256x76x76 	 output shape: 256x76x76
+2	Layer Name: conv2d_16/LeakyRelu 	 Layer time: 3.5698 	 number of inputs: 1 	 input shape: 256x76x76 	 output shape: 256x76x76
+3	Layer Name: add_15_16 	 Layer time: 4.6982 	 number of inputs: 2 	 input shape: 256x76x76 	 output shape: 256x76x76
+Layer Number: 0 	 time: 96.0688
+----------------------------
+
+ Sum of Layers time: 96.0688
+
+
+Graph15   Input: 0.0062999   Task: 104.476   send: 8.67848   Out: 0.0010208   Process: 113.162
+
+
+
+********
+
+0	Layer Name: NPU_YOLOv3_16_16 	 Layer time: 85.1653 	 number of inputs: 1 	 input shape: 256x76x76 	 output shape: 128x76x76
+Layer Number: 0 	 time: 85.1653
+----------------------------
+
+ Sum of Layers time: 85.1653
+
+
+Graph16   Input: 0.0064457   Task: 93.4982   send: 2.83623   Out: 0.0007001   Process: 96.3416
+
+NPU NPU_YOLOv3_16_16	AVG_input_time:26.5638	AVG_run_time:41.7063	AVG_prof_run_time:17.7089	AVG_output_time:13.9193
+
+
+********
+
+0	Layer Name: conv2d_18/Conv2D 	 Layer time: 83.0274 	 number of inputs: 3 	 input shape: 128x76x76 	 output shape: 256x76x76
+1	Layer Name: conv2d_18/BatchNorm 	 Layer time: 3.3852 	 number of inputs: 5 	 input shape: 256x76x76 	 output shape: 256x76x76
+2	Layer Name: conv2d_18/LeakyRelu 	 Layer time: 3.1609 	 number of inputs: 1 	 input shape: 256x76x76 	 output shape: 256x76x76
+3	Layer Name: add_17_18 	 Layer time: 4.4242 	 number of inputs: 2 	 input shape: 256x76x76 	 output shape: 256x76x76
+Layer Number: 0 	 time: 93.9977
+----------------------------
+
+ Sum of Layers time: 93.9977
+
+
+Graph17   Input: 0.006504   Task: 102.414   send: 9.33917   Out: 0.0009626   Process: 111.761
+
+
+
+********
+
+0	Layer Name: NPU_YOLOv3_18_18 	 Layer time: 85.8518 	 number of inputs: 1 	 input shape: 256x76x76 	 output shape: 128x76x76
+Layer Number: 0 	 time: 85.8518
+----------------------------
+
+ Sum of Layers time: 85.8518
+
+
+Graph18   Input: 0.0059501   Task: 94.1737   send: 1.93378   Out: 0.0008457   Process: 96.1143
+
+NPU NPU_YOLOv3_18_18	AVG_input_time:27.6336	AVG_run_time:41.5110	AVG_prof_run_time:17.6393	AVG_output_time:14.0874
+
+
+********
+
+0	Layer Name: conv2d_20/Conv2D 	 Layer time: 72.7560 	 number of inputs: 3 	 input shape: 128x76x76 	 output shape: 256x76x76
+1	Layer Name: conv2d_20/BatchNorm 	 Layer time: 4.4033 	 number of inputs: 5 	 input shape: 256x76x76 	 output shape: 256x76x76
+2	Layer Name: conv2d_20/LeakyRelu 	 Layer time: 3.2333 	 number of inputs: 1 	 input shape: 256x76x76 	 output shape: 256x76x76
+3	Layer Name: add_19_20 	 Layer time: 4.4701 	 number of inputs: 2 	 input shape: 256x76x76 	 output shape: 256x76x76
+Layer Number: 0 	 time: 84.8626
+----------------------------
+
+ Sum of Layers time: 84.8626
+
+
+Graph19   Input: 0.0062709   Task: 93.2738   send: 10.3363   Out: 0.0009041   Process: 103.617
+
+
+
+********
+
+0	Layer Name: NPU_YOLOv3_20_20 	 Layer time: 87.4052 	 number of inputs: 1 	 input shape: 256x76x76 	 output shape: 128x76x76
+Layer Number: 0 	 time: 87.4052
+----------------------------
+
+ Sum of Layers time: 87.4052
+
+
+Graph20   Input: 0.0060375   Task: 95.7301   send: 1.27178   Out: 0.000904   Process: 97.0088
+
+NPU NPU_YOLOv3_20_20	AVG_input_time:28.6540	AVG_run_time:41.9421	AVG_prof_run_time:17.6897	AVG_output_time:13.6108
+
+
+********
+
+0	Layer Name: conv2d_22/Conv2D 	 Layer time: 80.8818 	 number of inputs: 3 	 input shape: 128x76x76 	 output shape: 256x76x76
+1	Layer Name: conv2d_22/BatchNorm 	 Layer time: 3.4209 	 number of inputs: 5 	 input shape: 256x76x76 	 output shape: 256x76x76
+2	Layer Name: conv2d_22/LeakyRelu 	 Layer time: 3.2519 	 number of inputs: 1 	 input shape: 256x76x76 	 output shape: 256x76x76
+3	Layer Name: add_21_22 	 Layer time: 4.4882 	 number of inputs: 2 	 input shape: 256x76x76 	 output shape: 256x76x76
+Layer Number: 0 	 time: 92.0428
+----------------------------
+
+ Sum of Layers time: 92.0428
+
+
+Graph21   Input: 0.0061541   Task: 100.46   send: 9.93863   Out: 0.0007584   Process: 110.406
+
+
+
+********
+
+0	Layer Name: NPU_YOLOv3_22_22 	 Layer time: 85.5276 	 number of inputs: 1 	 input shape: 256x76x76 	 output shape: 128x76x76
+Layer Number: 0 	 time: 85.5276
+----------------------------
+
+ Sum of Layers time: 85.5276
+
+
+Graph22   Input: 0.0060959   Task: 93.8356   send: 1.24918   Out: 0.0009042   Process: 95.0918
+
+NPU NPU_YOLOv3_22_22	AVG_input_time:27.7488	AVG_run_time:41.4580	AVG_prof_run_time:17.6392	AVG_output_time:13.6356
+
+
+********
+
+0	Layer Name: conv2d_24/Conv2D 	 Layer time: 75.5243 	 number of inputs: 3 	 input shape: 128x76x76 	 output shape: 256x76x76
+1	Layer Name: conv2d_24/BatchNorm 	 Layer time: 3.5440 	 number of inputs: 5 	 input shape: 256x76x76 	 output shape: 256x76x76
+2	Layer Name: conv2d_24/LeakyRelu 	 Layer time: 3.2208 	 number of inputs: 1 	 input shape: 256x76x76 	 output shape: 256x76x76
+3	Layer Name: add_23_24 	 Layer time: 4.5448 	 number of inputs: 2 	 input shape: 256x76x76 	 output shape: 256x76x76
+Layer Number: 0 	 time: 86.8340
+----------------------------
+
+ Sum of Layers time: 86.8340
+
+
+Graph23   Input: 0.0062124   Task: 95.2431   send: 10.1792   Out: 0.000875   Process: 105.429
+
+
+
+********
+
+0	Layer Name: NPU_YOLOv3_24_24 	 Layer time: 86.1367 	 number of inputs: 1 	 input shape: 256x76x76 	 output shape: 128x76x76
+Layer Number: 0 	 time: 86.1367
+----------------------------
+
+ Sum of Layers time: 86.1367
+
+
+Graph24   Input: 0.0065335   Task: 94.4528   send: 4.36456   Out: 0.0007291   Process: 98.8247
+
+NPU NPU_YOLOv3_24_24	AVG_input_time:28.0174	AVG_run_time:41.6559	AVG_prof_run_time:17.6355	AVG_output_time:13.7299
+
+
+********
+
+0	Layer Name: conv2d_26/Conv2D 	 Layer time: 89.2459 	 number of inputs: 3 	 input shape: 128x76x76 	 output shape: 256x76x76
+1	Layer Name: conv2d_26/BatchNorm 	 Layer time: 4.3607 	 number of inputs: 5 	 input shape: 256x76x76 	 output shape: 256x76x76
+2	Layer Name: conv2d_26/LeakyRelu 	 Layer time: 3.1658 	 number of inputs: 1 	 input shape: 256x76x76 	 output shape: 256x76x76
+3	Layer Name: add_25_26 	 Layer time: 4.5721 	 number of inputs: 2 	 input shape: 256x76x76 	 output shape: 256x76x76
+Layer Number: 0 	 time: 101.3444
+----------------------------
+
+ Sum of Layers time: 101.3444
+
+
+Graph25   Input: 0.0064167   Task: 109.713   send: 6.8038   Out: 0.0008459   Process: 116.524
+
+
+
+********
+
+0	Layer Name: NPU_YOLOv3_26_26 	 Layer time: 98.8034 	 number of inputs: 1 	 input shape: 256x76x76 	 output shape: 512x38x38
+Layer Number: 0 	 time: 98.8034
+----------------------------
+
+ Sum of Layers time: 98.8034
+
+
+Graph26   Input: 0.0072623   Task: 107.158   send: 7.4373   Out: 0.0009334   Process: 114.604
+
+NPU NPU_YOLOv3_26_26	AVG_input_time:26.2695	AVG_run_time:50.7712	AVG_prof_run_time:26.9940	AVG_output_time:19.1692
+
+
+********
+
+0	Layer Name: conv2d_28/Conv2D 	 Layer time: 30.7117 	 number of inputs: 3 	 input shape: 512x38x38 	 output shape: 256x38x38
+1	Layer Name: conv2d_28/BatchNorm 	 Layer time: 1.1105 	 number of inputs: 5 	 input shape: 256x38x38 	 output shape: 256x38x38
+2	Layer Name: conv2d_28/LeakyRelu 	 Layer time: 0.9156 	 number of inputs: 1 	 input shape: 256x38x38 	 output shape: 256x38x38
+Layer Number: 0 	 time: 32.7378
+----------------------------
+
+ Sum of Layers time: 32.7378
+
+
+Graph27   Input: 0.0062417   Task: 41.2367   send: 0.820225   Out: 0.0008751   Process: 42.0641
+
+
+
+********
+
+0	Layer Name: NPU_YOLOv3_28_28 	 Layer time: 84.2263 	 number of inputs: 2 	 input shape: 256x38x38 	 output shape: 512x38x38
+Layer Number: 0 	 time: 84.2263
+----------------------------
+
+ Sum of Layers time: 84.2263
+
+
+Graph28   Input: 0.0074083   Task: 92.5167   send: 8.02422   Out: 0.0010792   Process: 100.549
+
+NPU NPU_YOLOv3_28_28	AVG_input_time:20.8080	AVG_run_time:41.7038	AVG_prof_run_time:17.4977	AVG_output_time:19.0317
+
+
+********
+
+0	Layer Name: conv2d_30/Conv2D 	 Layer time: 26.5854 	 number of inputs: 3 	 input shape: 512x38x38 	 output shape: 256x38x38
+1	Layer Name: conv2d_30/BatchNorm 	 Layer time: 1.1542 	 number of inputs: 5 	 input shape: 256x38x38 	 output shape: 256x38x38
+2	Layer Name: conv2d_30/LeakyRelu 	 Layer time: 0.8958 	 number of inputs: 1 	 input shape: 256x38x38 	 output shape: 256x38x38
+Layer Number: 0 	 time: 28.6354
+----------------------------
+
+ Sum of Layers time: 28.6354
+
+
+Graph29   Input: 0.0070875   Task: 37.1101   send: 2.8378   Out: 0.0009916   Process: 39.956
+
+
+
+********
+
+0	Layer Name: NPU_YOLOv3_30_30 	 Layer time: 83.6793 	 number of inputs: 2 	 input shape: 256x38x38 	 output shape: 512x38x38
+Layer Number: 0 	 time: 83.6793
+----------------------------
+
+ Sum of Layers time: 83.6793
+
+
+Graph30   Input: 0.0070293   Task: 91.9754   send: 5.97179   Out: 0.0009625   Process: 97.9552
+
+NPU NPU_YOLOv3_30_30	AVG_input_time:20.3617	AVG_run_time:41.8250	AVG_prof_run_time:17.7177	AVG_output_time:18.7602
+
+
+********
+
+0	Layer Name: conv2d_32/Conv2D 	 Layer time: 33.7541 	 number of inputs: 3 	 input shape: 512x38x38 	 output shape: 256x38x38
+1	Layer Name: conv2d_32/BatchNorm 	 Layer time: 1.2024 	 number of inputs: 5 	 input shape: 256x38x38 	 output shape: 256x38x38
+2	Layer Name: conv2d_32/LeakyRelu 	 Layer time: 1.1724 	 number of inputs: 1 	 input shape: 256x38x38 	 output shape: 256x38x38
+Layer Number: 0 	 time: 36.1290
+----------------------------
+
+ Sum of Layers time: 36.1290
+
+
+Graph31   Input: 0.0089833   Task: 44.6602   send: 1.65751   Out: 0.0009334   Process: 46.3276
+
+
+
+********
+
+0	Layer Name: NPU_YOLOv3_32_32 	 Layer time: 85.5827 	 number of inputs: 2 	 input shape: 256x38x38 	 output shape: 512x38x38
+Layer Number: 0 	 time: 85.5827
+----------------------------
+
+ Sum of Layers time: 85.5827
+
+
+Graph32   Input: 0.0071165   Task: 93.8984   send: 7.28195   Out: 0.0009333   Process: 101.188
+
+NPU NPU_YOLOv3_32_32	AVG_input_time:22.0501	AVG_run_time:42.0479	AVG_prof_run_time:17.7555	AVG_output_time:18.9588
+
+
+********
+
+0	Layer Name: conv2d_34/Conv2D 	 Layer time: 30.2203 	 number of inputs: 3 	 input shape: 512x38x38 	 output shape: 256x38x38
+1	Layer Name: conv2d_34/BatchNorm 	 Layer time: 1.1618 	 number of inputs: 5 	 input shape: 256x38x38 	 output shape: 256x38x38
+2	Layer Name: conv2d_34/LeakyRelu 	 Layer time: 0.8918 	 number of inputs: 1 	 input shape: 256x38x38 	 output shape: 256x38x38
+Layer Number: 0 	 time: 32.2739
+----------------------------
+
+ Sum of Layers time: 32.2739
+
+
+Graph33   Input: 0.0067666   Task: 40.8127   send: 2.85413   Out: 0.0008751   Process: 43.6745
+
+
+
+********
+
+0	Layer Name: NPU_YOLOv3_34_34 	 Layer time: 84.8334 	 number of inputs: 2 	 input shape: 256x38x38 	 output shape: 512x38x38
+Layer Number: 0 	 time: 84.8334
+----------------------------
+
+ Sum of Layers time: 84.8334
+
+
+Graph34   Input: 0.0074377   Task: 93.1403   send: 6.24146   Out: 0.0011084   Process: 99.3903
+
+NPU NPU_YOLOv3_34_34	AVG_input_time:21.0216	AVG_run_time:42.1798	AVG_prof_run_time:17.7201	AVG_output_time:19.1032
+
+
+********
+
+0	Layer Name: conv2d_36/Conv2D 	 Layer time: 28.9580 	 number of inputs: 3 	 input shape: 512x38x38 	 output shape: 256x38x38
+1	Layer Name: conv2d_36/BatchNorm 	 Layer time: 1.2206 	 number of inputs: 5 	 input shape: 256x38x38 	 output shape: 256x38x38
+2	Layer Name: conv2d_36/LeakyRelu 	 Layer time: 0.8930 	 number of inputs: 1 	 input shape: 256x38x38 	 output shape: 256x38x38
+Layer Number: 0 	 time: 31.0716
+----------------------------
+
+ Sum of Layers time: 31.0716
+
+
+Graph35   Input: 0.0069124   Task: 39.6027   send: 2.4864   Out: 0.0007874   Process: 42.0968
+
+
+
+********
+
+0	Layer Name: NPU_YOLOv3_36_36 	 Layer time: 84.2220 	 number of inputs: 2 	 input shape: 256x38x38 	 output shape: 512x38x38
+Layer Number: 0 	 time: 84.2220
+----------------------------
+
+ Sum of Layers time: 84.2220
+
+
+Graph36   Input: 0.0071459   Task: 92.5269   send: 7.05906   Out: 0.0011667   Process: 99.5943
+
+NPU NPU_YOLOv3_36_36	AVG_input_time:20.9406	AVG_run_time:41.6020	AVG_prof_run_time:17.7116	AVG_output_time:18.9822
+
+
+********
+
+0	Layer Name: conv2d_38/Conv2D 	 Layer time: 31.7601 	 number of inputs: 3 	 input shape: 512x38x38 	 output shape: 256x38x38
+1	Layer Name: conv2d_38/BatchNorm 	 Layer time: 1.5800 	 number of inputs: 5 	 input shape: 256x38x38 	 output shape: 256x38x38
+2	Layer Name: conv2d_38/LeakyRelu 	 Layer time: 0.8963 	 number of inputs: 1 	 input shape: 256x38x38 	 output shape: 256x38x38
+Layer Number: 0 	 time: 34.2364
+----------------------------
+
+ Sum of Layers time: 34.2364
+
+
+Graph37   Input: 0.006621   Task: 42.7893   send: 2.32875   Out: 0.0010497   Process: 45.1258
+
+
+
+********
+
+0	Layer Name: NPU_YOLOv3_38_38 	 Layer time: 83.7672 	 number of inputs: 2 	 input shape: 256x38x38 	 output shape: 512x38x38
+Layer Number: 0 	 time: 83.7672
+----------------------------
+
+ Sum of Layers time: 83.7672
+
+
+Graph38   Input: 0.0069998   Task: 92.0805   send: 4.52145   Out: 0.0009332   Process: 96.6098
+
+NPU NPU_YOLOv3_38_38	AVG_input_time:20.7532	AVG_run_time:41.6431	AVG_prof_run_time:17.6684	AVG_output_time:18.9372
+
+
+********
+
+0	Layer Name: conv2d_40/Conv2D 	 Layer time: 33.7219 	 number of inputs: 3 	 input shape: 512x38x38 	 output shape: 256x38x38
+1	Layer Name: conv2d_40/BatchNorm 	 Layer time: 1.2986 	 number of inputs: 5 	 input shape: 256x38x38 	 output shape: 256x38x38
+2	Layer Name: conv2d_40/LeakyRelu 	 Layer time: 0.8921 	 number of inputs: 1 	 input shape: 256x38x38 	 output shape: 256x38x38
+Layer Number: 0 	 time: 35.9125
+----------------------------
+
+ Sum of Layers time: 35.9125
+
+
+Graph39   Input: 0.0067666   Task: 44.5033   send: 2.82876   Out: 0.0009333   Process: 47.3398
+
+
+
+********
+
+0	Layer Name: NPU_YOLOv3_40_40 	 Layer time: 84.4284 	 number of inputs: 2 	 input shape: 256x38x38 	 output shape: 512x38x38
+Layer Number: 0 	 time: 84.4284
+----------------------------
+
+ Sum of Layers time: 84.4284
+
+
+Graph40   Input: 0.007   Task: 92.7419   send: 5.39939   Out: 0.0010792   Process: 98.1493
+
+NPU NPU_YOLOv3_40_40	AVG_input_time:21.2989	AVG_run_time:41.6613	AVG_prof_run_time:17.7150	AVG_output_time:18.7412
+
+
+********
+
+0	Layer Name: conv2d_42/Conv2D 	 Layer time: 35.6430 	 number of inputs: 3 	 input shape: 512x38x38 	 output shape: 256x38x38
+1	Layer Name: conv2d_42/BatchNorm 	 Layer time: 1.2315 	 number of inputs: 5 	 input shape: 256x38x38 	 output shape: 256x38x38
+2	Layer Name: conv2d_42/LeakyRelu 	 Layer time: 1.0065 	 number of inputs: 1 	 input shape: 256x38x38 	 output shape: 256x38x38
+Layer Number: 0 	 time: 37.8810
+----------------------------
+
+ Sum of Layers time: 37.8810
+
+
+Graph41   Input: 0.0063584   Task: 46.362   send: 2.9867   Out: 0.0009041   Process: 49.3559
+
+
+
+********
+
+0	Layer Name: NPU_YOLOv3_42_42 	 Layer time: 85.4625 	 number of inputs: 2 	 input shape: 256x38x38 	 output shape: 512x38x38
+Layer Number: 0 	 time: 85.4625
+----------------------------
+
+ Sum of Layers time: 85.4625
+
+
+Graph42   Input: 0.0081668   Task: 93.7671   send: 6.25094   Out: 0.0012251   Process: 100.027
+
+NPU NPU_YOLOv3_42_42	AVG_input_time:20.6108	AVG_run_time:43.1780	AVG_prof_run_time:17.7251	AVG_output_time:19.0929
+
+
+********
+
+0	Layer Name: conv2d_44/Conv2D 	 Layer time: 205.6728 	 number of inputs: 3 	 input shape: 512x38x38 	 output shape: 1024x19x19
+1	Layer Name: conv2d_44/BatchNorm 	 Layer time: 1.0619 	 number of inputs: 5 	 input shape: 1024x19x19 	 output shape: 1024x19x19
+2	Layer Name: conv2d_44/LeakyRelu 	 Layer time: 0.6817 	 number of inputs: 1 	 input shape: 1024x19x19 	 output shape: 1024x19x19
+Layer Number: 0 	 time: 207.4164
+----------------------------
+
+ Sum of Layers time: 207.4164
+
+
+Graph43   Input: 0.0064456   Task: 215.897   send: 7.07283   Out: 0.0009333   Process: 222.977
+
+
+
+********
+
+0	Layer Name: NPU_YOLOv3_44_44 	 Layer time: 28.7757 	 number of inputs: 1 	 input shape: 1024x19x19 	 output shape: 512x19x19
+Layer Number: 0 	 time: 28.7757
+----------------------------
+
+ Sum of Layers time: 28.7757
+
+
+Graph44   Input: 0.0062708   Task: 37.09   send: 5.07133   Out: 0.0008167   Process: 42.1684
+
+NPU NPU_YOLOv3_44_44	AVG_input_time:6.8210	AVG_run_time:15.7465	AVG_prof_run_time:6.9137	AVG_output_time:3.9931
+
+
+********
+
+0	Layer Name: conv2d_46/Conv2D 	 Layer time: 120.1008 	 number of inputs: 3 	 input shape: 512x19x19 	 output shape: 1024x19x19
+1	Layer Name: conv2d_46/BatchNorm 	 Layer time: 0.9772 	 number of inputs: 5 	 input shape: 1024x19x19 	 output shape: 1024x19x19
+2	Layer Name: conv2d_46/LeakyRelu 	 Layer time: 0.7758 	 number of inputs: 1 	 input shape: 1024x19x19 	 output shape: 1024x19x19
+3	Layer Name: add_45_46 	 Layer time: 1.1032 	 number of inputs: 2 	 input shape: 1024x19x19 	 output shape: 1024x19x19
+Layer Number: 0 	 time: 122.9570
+----------------------------
+
+ Sum of Layers time: 122.9570
+
+
+Graph45   Input: 0.0062125   Task: 131.328   send: 6.42445   Out: 0.0008168   Process: 137.76
+
+
+
+********
+
+0	Layer Name: NPU_YOLOv3_46_46 	 Layer time: 28.0026 	 number of inputs: 1 	 input shape: 1024x19x19 	 output shape: 512x19x19
+Layer Number: 0 	 time: 28.0026
+----------------------------
+
+ Sum of Layers time: 28.0026
+
+
+Graph46   Input: 0.008079   Task: 36.305   send: 13.0542   Out: 0.0010792   Process: 49.3683
+
+NPU NPU_YOLOv3_46_46	AVG_input_time:6.8637	AVG_run_time:14.8899	AVG_prof_run_time:6.6456	AVG_output_time:4.2355
+
+
+********
+
+0	Layer Name: conv2d_48/Conv2D 	 Layer time: 125.5051 	 number of inputs: 3 	 input shape: 512x19x19 	 output shape: 1024x19x19
+1	Layer Name: conv2d_48/BatchNorm 	 Layer time: 1.0032 	 number of inputs: 5 	 input shape: 1024x19x19 	 output shape: 1024x19x19
+2	Layer Name: conv2d_48/LeakyRelu 	 Layer time: 0.7925 	 number of inputs: 1 	 input shape: 1024x19x19 	 output shape: 1024x19x19
+3	Layer Name: add_47_48 	 Layer time: 1.0457 	 number of inputs: 2 	 input shape: 1024x19x19 	 output shape: 1024x19x19
+Layer Number: 0 	 time: 128.3465
+----------------------------
+
+ Sum of Layers time: 128.3465
+
+
+Graph47   Input: 0.0062417   Task: 136.709   send: 6.58957   Out: 0.0009041   Process: 143.305
+
+
+
+********
+
+0	Layer Name: NPU_YOLOv3_48_48 	 Layer time: 28.2711 	 number of inputs: 1 	 input shape: 1024x19x19 	 output shape: 512x19x19
+Layer Number: 0 	 time: 28.2711
+----------------------------
+
+ Sum of Layers time: 28.2711
+
+
+Graph48   Input: 0.007   Task: 36.5943   send: 5.3459   Out: 0.0008166   Process: 41.948
+
+NPU NPU_YOLOv3_48_48	AVG_input_time:6.8361	AVG_run_time:14.9245	AVG_prof_run_time:6.6695	AVG_output_time:4.1973
+
+
+********
+
+0	Layer Name: conv2d_50/Conv2D 	 Layer time: 116.8834 	 number of inputs: 3 	 input shape: 512x19x19 	 output shape: 1024x19x19
+1	Layer Name: conv2d_50/BatchNorm 	 Layer time: 1.2111 	 number of inputs: 5 	 input shape: 1024x19x19 	 output shape: 1024x19x19
+2	Layer Name: conv2d_50/LeakyRelu 	 Layer time: 0.7452 	 number of inputs: 1 	 input shape: 1024x19x19 	 output shape: 1024x19x19
+3	Layer Name: add_49_50 	 Layer time: 1.0550 	 number of inputs: 2 	 input shape: 1024x19x19 	 output shape: 1024x19x19
+Layer Number: 0 	 time: 119.8946
+----------------------------
+
+ Sum of Layers time: 119.8946
+
+
+Graph49   Input: 0.0062709   Task: 128.271   send: 6.73056   Out: 0.0009332   Process: 135.008
+
+
+
+********
+
+0	Layer Name: NPU_YOLOv3_50_50 	 Layer time: 28.3049 	 number of inputs: 1 	 input shape: 1024x19x19 	 output shape: 512x19x19
+Layer Number: 0 	 time: 28.3049
+----------------------------
+
+ Sum of Layers time: 28.3049
+
+
+Graph50   Input: 0.0081083   Task: 36.6166   send: 10.8226   Out: 0.0009626   Process: 47.4482
+
+NPU NPU_YOLOv3_50_50	AVG_input_time:6.8428	AVG_run_time:14.9667	AVG_prof_run_time:6.6624	AVG_output_time:4.2420
+
+
+********
+
+0	Layer Name: conv2d_52/Conv2D 	 Layer time: 130.9470 	 number of inputs: 3 	 input shape: 512x19x19 	 output shape: 1024x19x19
+1	Layer Name: conv2d_52/BatchNorm 	 Layer time: 0.9985 	 number of inputs: 5 	 input shape: 1024x19x19 	 output shape: 1024x19x19
+2	Layer Name: conv2d_52/LeakyRelu 	 Layer time: 0.7736 	 number of inputs: 1 	 input shape: 1024x19x19 	 output shape: 1024x19x19
+3	Layer Name: add_51_52 	 Layer time: 1.0789 	 number of inputs: 2 	 input shape: 1024x19x19 	 output shape: 1024x19x19
+Layer Number: 0 	 time: 133.7980
+----------------------------
+
+ Sum of Layers time: 133.7980
+
+
+Graph51   Input: 0.00735   Task: 142.171   send: 5.69914   Out: 0.0007583   Process: 147.878
+
+
+
+********
+
+0	Layer Name: NPU_YOLOv3_52_52 	 Layer time: 28.0914 	 number of inputs: 1 	 input shape: 1024x19x19 	 output shape: 512x19x19
+Layer Number: 0 	 time: 28.0914
+----------------------------
+
+ Sum of Layers time: 28.0914
+
+
+Graph52   Input: 0.0075835   Task: 36.3989   send: 9.40958   Out: 0.000904   Process: 45.817
+
+NPU NPU_YOLOv3_52_52	AVG_input_time:6.5624	AVG_run_time:14.7953	AVG_prof_run_time:6.6663	AVG_output_time:4.2748
+
+
+********
+
+0	Layer Name: conv2d_54 	 Layer time: 118.1523 	 number of inputs: 3 	 input shape: 512x19x19 	 output shape: 1024x19x19
+1	Layer Name: conv2d_54/BatchNorm 	 Layer time: 1.0088 	 number of inputs: 5 	 input shape: 1024x19x19 	 output shape: 1024x19x19
+2	Layer Name: conv2d_54/LeakyRelu 	 Layer time: 0.7793 	 number of inputs: 1 	 input shape: 1024x19x19 	 output shape: 1024x19x19
+Layer Number: 0 	 time: 119.9405
+----------------------------
+
+ Sum of Layers time: 119.9405
+
+
+Graph53   Input: 0.0072333   Task: 128.317   send: 5.37058   Out: 0.0009627   Process: 133.695
+
+
+
+********
+
+0	Layer Name: NPU_YOLOv3_54_54 	 Layer time: 28.1119 	 number of inputs: 1 	 input shape: 1024x19x19 	 output shape: 512x19x19
+Layer Number: 0 	 time: 28.1119
+----------------------------
+
+ Sum of Layers time: 28.1119
+
+
+Graph54   Input: 0.0074669   Task: 36.41   send: 11.3262   Out: 0.0010209   Process: 47.7447
+
+NPU NPU_YOLOv3_54_54	AVG_input_time:6.6508	AVG_run_time:14.7988	AVG_prof_run_time:6.6645	AVG_output_time:4.2735
+
+
+********
+
+0	Layer Name: conv2d_56 	 Layer time: 124.6092 	 number of inputs: 3 	 input shape: 512x19x19 	 output shape: 1024x19x19
+1	Layer Name: conv2d_56/BatchNorm 	 Layer time: 1.2044 	 number of inputs: 5 	 input shape: 1024x19x19 	 output shape: 1024x19x19
+2	Layer Name: conv2d_56/LeakyRelu 	 Layer time: 0.7545 	 number of inputs: 1 	 input shape: 1024x19x19 	 output shape: 1024x19x19
+Layer Number: 0 	 time: 126.5680
+----------------------------
+
+ Sum of Layers time: 126.5680
+
+
+Graph55   Input: 0.0069126   Task: 134.952   send: 5.91343   Out: 0.000904   Process: 140.873
+
+
+
+********
+
+0	Layer Name: NPU_YOLOv3_56_56 	 Layer time: 27.7667 	 number of inputs: 1 	 input shape: 1024x19x19 	 output shape: 512x19x19
+Layer Number: 0 	 time: 27.7667
+----------------------------
+
+ Sum of Layers time: 27.7667
+
+
+Graph56   Input: 0.0049291   Task: 36.0744   send: 6.71046   Out: 0.0007292   Process: 42.7906
+
+NPU NPU_YOLOv3_56_56	AVG_input_time:6.6315	AVG_run_time:14.6371	AVG_prof_run_time:6.6338	AVG_output_time:4.2644
+
+
+********
+
+0	Layer Name: conv2d_58 	 Layer time: 138.9671 	 number of inputs: 3 	 input shape: 512x19x19 	 output shape: 1024x19x19
+1	Layer Name: conv2d_58/BatchNorm 	 Layer time: 3.1454 	 number of inputs: 5 	 input shape: 1024x19x19 	 output shape: 1024x19x19
+2	Layer Name: conv2d_58/LeakyRelu 	 Layer time: 1.3398 	 number of inputs: 1 	 input shape: 1024x19x19 	 output shape: 1024x19x19
+Layer Number: 0 	 time: 143.4523
+----------------------------
+
+ Sum of Layers time: 143.4523
+
+
+Graph57   Input: 0.006329   Task: 143.49   send: 4.43739   Out: 0.0009042   Process: 147.934
+
+
+
+********
+
+0	Layer Name: NPU_YOLOv3_58_58 	 Layer time: 54.1154 	 number of inputs: 1 	 input shape: 1024x19x19 	 output shape: 255x19x19
+Layer Number: 0 	 time: 54.1154
+----------------------------
+
+ Sum of Layers time: 54.1154
+
+
+Graph58   Input: 0.004054   Task: 54.1284   send: 0.0012835   Out: 1.23133   Process: 55.3651
+
+NPU NPU_YOLOv3_58_58	AVG_input_time:11.1678	AVG_run_time:24.5871	AVG_prof_run_time:5.1783	AVG_output_time:1.9913
+
+
+********
+
+0	Layer Name: conv2d_60 	 Layer time: 119.3105 	 number of inputs: 3 	 input shape: 512x19x19 	 output shape: 256x19x19
+1	Layer Name: conv2d_59/BatchNorm 	 Layer time: 0.4026 	 number of inputs: 5 	 input shape: 256x19x19 	 output shape: 256x19x19
+2	Layer Name: conv2d_60/LeakyRelu 	 Layer time: 0.2365 	 number of inputs: 1 	 input shape: 256x19x19 	 output shape: 256x19x19
+3	Layer Name: Upsample_60 	 Layer time: 0.7660 	 number of inputs: 1 	 input shape: 256x19x19 	 output shape: 256x38x38
+4	Layer Name: Route1 	 Layer time: 7.5161 	 number of inputs: 2 	 input shape: 256x38x38 	 output shape: 768x38x38
+Layer Number: 0 	 time: 128.2316
+----------------------------
+
+ Sum of Layers time: 128.2316
+
+
+Graph59   Input: 0.0062708   Task: 136.652   send: 3.34542   Out: 0.0008751   Process: 140.004
+
+
+
+********
+
+0	Layer Name: NPU_YOLOv3_60_60 	 Layer time: 69.3616 	 number of inputs: 1 	 input shape: 768x38x38 	 output shape: 256x38x38
+Layer Number: 0 	 time: 69.3616
+----------------------------
+
+ Sum of Layers time: 69.3616
+
+
+Graph60   Input: 0.007321   Task: 77.6778   send: 6.50571   Out: 0.0009625   Process: 84.1918
+
+NPU NPU_YOLOv3_60_60	AVG_input_time:21.8785	AVG_run_time:35.3941	AVG_prof_run_time:16.8488	AVG_output_time:9.6527
+
+
+********
+
+0	Layer Name: conv2d_62 	 Layer time: 97.2869 	 number of inputs: 3 	 input shape: 256x38x38 	 output shape: 512x38x38
+1	Layer Name: conv2d_61/BatchNorm 	 Layer time: 1.6703 	 number of inputs: 5 	 input shape: 512x38x38 	 output shape: 512x38x38
+2	Layer Name: conv2d_62/LeakyRelu 	 Layer time: 1.4206 	 number of inputs: 1 	 input shape: 512x38x38 	 output shape: 512x38x38
+Layer Number: 0 	 time: 100.3778
+----------------------------
+
+ Sum of Layers time: 100.3778
+
+
+Graph61   Input: 0.0068832   Task: 108.732   send: 5.22713   Out: 0.0009042   Process: 113.967
+
+
+
+********
+
+0	Layer Name: NPU_YOLOv3_62_62 	 Layer time: 51.1096 	 number of inputs: 1 	 input shape: 512x38x38 	 output shape: 256x38x38
+Layer Number: 0 	 time: 51.1096
+----------------------------
+
+ Sum of Layers time: 51.1096
+
+
+Graph62   Input: 0.0056584   Task: 59.4207   send: 1.33752   Out: 0.0104125   Process: 60.7743
+
+NPU NPU_YOLOv3_62_62	AVG_input_time:13.3279	AVG_run_time:26.1505	AVG_prof_run_time:12.7737	AVG_output_time:9.0817
+
+
+********
+
+0	Layer Name: conv2d_64 	 Layer time: 84.1579 	 number of inputs: 3 	 input shape: 256x38x38 	 output shape: 512x38x38
+1	Layer Name: conv2d_63/BatchNorm 	 Layer time: 1.7725 	 number of inputs: 5 	 input shape: 512x38x38 	 output shape: 512x38x38
+2	Layer Name: conv2d_64/LeakyRelu 	 Layer time: 1.4920 	 number of inputs: 1 	 input shape: 512x38x38 	 output shape: 512x38x38
+Layer Number: 0 	 time: 87.4224
+----------------------------
+
+ Sum of Layers time: 87.4224
+
+
+Graph63   Input: 0.0072043   Task: 95.804   send: 7.42458   Out: 0.0009914   Process: 103.237
+
+
+
+********
+
+0	Layer Name: NPU_YOLOv3_64_64 	 Layer time: 50.6683 	 number of inputs: 1 	 input shape: 512x38x38 	 output shape: 256x38x38
+Layer Number: 0 	 time: 50.6683
+----------------------------
+
+ Sum of Layers time: 50.6683
+
+
+Graph64   Input: 0.0054834   Task: 58.9706   send: 3.4921   Out: 0.00105   Process: 62.4692
+
+NPU NPU_YOLOv3_64_64	AVG_input_time:13.2977	AVG_run_time:25.7760	AVG_prof_run_time:12.7742	AVG_output_time:9.1753
+
+
+********
+
+0	Layer Name: conv2d_66 	 Layer time: 112.9777 	 number of inputs: 3 	 input shape: 256x38x38 	 output shape: 512x38x38
+1	Layer Name: conv2d_65/BatchNorm 	 Layer time: 4.2974 	 number of inputs: 5 	 input shape: 512x38x38 	 output shape: 512x38x38
+2	Layer Name: conv2d_66/LeakyRelu 	 Layer time: 2.0113 	 number of inputs: 1 	 input shape: 512x38x38 	 output shape: 512x38x38
+Layer Number: 0 	 time: 119.2864
+----------------------------
+
+ Sum of Layers time: 119.2864
+
+
+Graph65   Input: 0.0055124   Task: 119.677   send: 2.28635   Out: 0.0009041   Process: 121.969
+
+
+
+********
+
+0	Layer Name: NPU_YOLOv3_66_66 	 Layer time: 131.3747 	 number of inputs: 1 	 input shape: 512x38x38 	 output shape: 255x38x38
+Layer Number: 0 	 time: 131.3747
+----------------------------
+
+ Sum of Layers time: 131.3747
+
+
+Graph66   Input: 0.0037625   Task: 131.388   send: 0.0012251   Out: 2.09303   Process: 133.486
+
+NPU NPU_YOLOv3_66_66	AVG_input_time:18.2930	AVG_run_time:68.4233	AVG_prof_run_time:12.6391	AVG_output_time:10.5084
+
+
+********
+
+0	Layer Name: conv2d_68 	 Layer time: 70.3921 	 number of inputs: 3 	 input shape: 256x38x38 	 output shape: 128x38x38
+1	Layer Name: conv2d_66/BatchNorm 	 Layer time: 16.6451 	 number of inputs: 5 	 input shape: 128x38x38 	 output shape: 128x38x38
+2	Layer Name: conv2d_68/LeakyRelu 	 Layer time: 9.6102 	 number of inputs: 1 	 input shape: 128x38x38 	 output shape: 128x38x38
+3	Layer Name: Upsample_68 	 Layer time: 4.6565 	 number of inputs: 1 	 input shape: 128x38x38 	 output shape: 128x76x76
+4	Layer Name: Route2 	 Layer time: 10.2736 	 number of inputs: 2 	 input shape: 128x76x76 	 output shape: 384x76x76
+Layer Number: 0 	 time: 111.5774
+----------------------------
+
+ Sum of Layers time: 111.5774
+
+
+Graph67   Input: 0.0051918   Task: 120.021   send: 4.8487   Out: 0.000875   Process: 124.876
+
+
+
+********
+
+0	Layer Name: NPU_YOLOv3_68_68 	 Layer time: 137.9319 	 number of inputs: 1 	 input shape: 384x76x76 	 output shape: 128x76x76
+Layer Number: 0 	 time: 137.9319
+----------------------------
+
+ Sum of Layers time: 137.9319
+
+
+Graph68   Input: 0.0057749   Task: 146.252   send: 1.96464   Out: 0.001021   Process: 148.223
+
+NPU NPU_YOLOv3_68_68	AVG_input_time:45.2482	AVG_run_time:75.3766	AVG_prof_run_time:45.9704	AVG_output_time:14.1791
+
+
+********
+
+0	Layer Name: conv2d_70 	 Layer time: 92.2194 	 number of inputs: 3 	 input shape: 128x76x76 	 output shape: 256x76x76
+1	Layer Name: conv2d_68/BatchNorm 	 Layer time: 3.4556 	 number of inputs: 5 	 input shape: 256x76x76 	 output shape: 256x76x76
+2	Layer Name: conv2d_70/LeakyRelu 	 Layer time: 2.9945 	 number of inputs: 1 	 input shape: 256x76x76 	 output shape: 256x76x76
+Layer Number: 0 	 time: 98.6695
+----------------------------
+
+ Sum of Layers time: 98.6695
+
+
+Graph69   Input: 0.0067666   Task: 107.069   send: 5.00369   Out: 0.000904   Process: 112.08
+
+
+
+********
+
+0	Layer Name: NPU_YOLOv3_70_70 	 Layer time: 83.8366 	 number of inputs: 1 	 input shape: 256x76x76 	 output shape: 128x76x76
+Layer Number: 0 	 time: 83.8366
+----------------------------
+
+ Sum of Layers time: 83.8366
+
+
+Graph70   Input: 0.006154   Task: 92.1387   send: 2.8891   Out: 0.0010211   Process: 95.035
+
+NPU NPU_YOLOv3_70_70	AVG_input_time:25.7605	AVG_run_time:41.6547	AVG_prof_run_time:17.6500	AVG_output_time:13.7045
+
+
+********
+
+0	Layer Name: conv2d_72 	 Layer time: 90.4946 	 number of inputs: 3 	 input shape: 128x76x76 	 output shape: 256x76x76
+1	Layer Name: conv2d_70/BatchNorm 	 Layer time: 3.9718 	 number of inputs: 5 	 input shape: 256x76x76 	 output shape: 256x76x76
+2	Layer Name: conv2d_72/LeakyRelu 	 Layer time: 3.2193 	 number of inputs: 1 	 input shape: 256x76x76 	 output shape: 256x76x76
+Layer Number: 0 	 time: 97.6857
+----------------------------
+
+ Sum of Layers time: 97.6857
+
+
+Graph71   Input: 0.0069998   Task: 106.066   send: 5.98485   Out: 0.0009042   Process: 112.059
+
+
+
+********
+
+0	Layer Name: NPU_YOLOv3_72_72 	 Layer time: 85.1191 	 number of inputs: 1 	 input shape: 256x76x76 	 output shape: 128x76x76
+Layer Number: 0 	 time: 85.1191
+----------------------------
+
+ Sum of Layers time: 85.1191
+
+
+Graph72   Input: 0.0058917   Task: 93.4154   send: 2.43323   Out: 0.0011084   Process: 95.8556
+
+NPU NPU_YOLOv3_72_72	AVG_input_time:26.5248	AVG_run_time:41.7205	AVG_prof_run_time:17.6814	AVG_output_time:14.0486
+
+
+********
+
+0	Layer Name: conv2d_74 	 Layer time: 77.4049 	 number of inputs: 3 	 input shape: 128x76x76 	 output shape: 256x76x76
+1	Layer Name: conv2d_72/BatchNorm 	 Layer time: 3.4425 	 number of inputs: 5 	 input shape: 256x76x76 	 output shape: 256x76x76
+2	Layer Name: conv2d_74/LeakyRelu 	 Layer time: 3.3130 	 number of inputs: 1 	 input shape: 256x76x76 	 output shape: 256x76x76
+Layer Number: 0 	 time: 84.1603
+----------------------------
+
+ Sum of Layers time: 84.1603
+
+
+Graph73   Input: 0.0072916   Task: 92.5748   send: 6.20185   Out: 0.0010209   Process: 98.7849
+
+
+
+********
+
+0	Layer Name: NPU_YOLOv3_74_74 	 Layer time: 127.2219 	 number of inputs: 1 	 input shape: 256x76x76 	 output shape: 255x76x76
+Layer Number: 0 	 time: 127.2219
+----------------------------
+
+ Sum of Layers time: 127.2219
+
+
+Graph74   Input: 0.0040539   Task: 135.511   send: 0.0011081   Out: 0.192733   Process: 135.709
+
+NPU NPU_YOLOv3_74_74	AVG_input_time:27.1298	AVG_run_time:69.5527	AVG_prof_run_time:30.9189	AVG_output_time:27.5630
+
+
+********
+
+
+
+AVG Latency: 8343.01
+
+Profiling these DVFS settings finised
+Please Enter the desired Frequency setttings: 
+
+Test passed

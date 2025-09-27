@@ -1,0 +1,1679 @@
+List of devices attached
+4UB7RRTHY8	device
+
+disconnected everything
+adbd is already running as root
+remount succeeded
+/home/ehsan/UvA/ARMCL/Rock-Pi/ComputeLibrary_64_Yolov3/utils/DVFS/governor_pandoon.ko: 1 file pushed, 0 skipped. 1119.5 MB/s (260080 bytes in 0.000s)
+Module is already inserted, removing and reinserting...
+
+WARNING: linker: Warning: unable to normalize "build/"
+4 Input images are read from /data/local/ARM-CO-UP/assets//ppm_images_224/
+[UtilsPipeline.h] image directory is: /data/local/ARM-CO-UP/assets//ppm_images_224//
+Threads : 1
+Small Cores Threads : 1
+Target : Neon
+Data type : F32
+Data layout : NHWC
+Tuner enabled? : false
+Cache enabled? : false
+Tuner mode : Normal
+Tuner file : 
+MLGO file : 
+Fast math enabled? : false
+Data path : /data/local/ARM-CO-UP/assets//resnet50/
+Image file : /data/local/ARM-CO-UP/assets//ppm_images_224//
+Labels file : /data/local/ARM-CO-UP/assets//labels.txt
+Partition point is : 0
+Second partition point is : 0
+Order is : BGBGBGBGBGBGBGBGBG
+freqs of layers : 
+power_profile_mode : transfers
+GPU host is: B
+NPU host is: B
+Number of totla cores is : 6
+Number of little cores is : 4
+Print task names : 0
+Run network for 10 times.
+Layer timing: 0
+
+Adding Graph0 target 1 PE: B Host PE: B Layers: 0-0
+Adding Graph1 target 2 PE: G Host PE: B Layers: 1-1
+Adding Graph2 target 1 PE: B Host PE: B Layers: 2-2
+Adding Graph3 target 2 PE: G Host PE: B Layers: 3-3
+Adding Graph4 target 1 PE: B Host PE: B Layers: 4-4
+Adding Graph5 target 2 PE: G Host PE: B Layers: 5-5
+Adding Graph6 target 1 PE: B Host PE: B Layers: 6-6
+Adding Graph7 target 2 PE: G Host PE: B Layers: 7-7
+Adding Graph8 target 1 PE: B Host PE: B Layers: 8-8
+Adding Graph9 target 2 PE: G Host PE: B Layers: 9-9
+Adding Graph10 target 1 PE: B Host PE: B Layers: 10-10
+Adding Graph11 target 2 PE: G Host PE: B Layers: 11-11
+Adding Graph12 target 1 PE: B Host PE: B Layers: 12-12
+Adding Graph13 target 2 PE: G Host PE: B Layers: 13-13
+Adding Graph14 target 1 PE: B Host PE: B Layers: 14-14
+Adding Graph15 target 2 PE: G Host PE: B Layers: 15-15
+Adding Graph16 target 1 PE: B Host PE: B Layers: 16-16
+Adding Graph17 target 2 PE: G Host PE: B Layers: 17-17
+pandoon
+pandoon
+pandoon
+Pandoon opened at 3
+Threads : 1
+Small Cores Threads : 1
+Target : Neon
+Data type : F32
+Data layout : NHWC
+Tuner enabled? : false
+Cache enabled? : false
+Tuner mode : Normal
+Tuner file : 
+MLGO file : 
+Fast math enabled? : false
+Data path : /data/local/ARM-CO-UP/assets//resnet50/
+Image file : /data/local/ARM-CO-UP/assets//ppm_images_224//
+Labels file : /data/local/ARM-CO-UP/assets//labels.txt
+Partition point is : 0
+Second partition point is : 0
+Order is : BGBGBGBGBGBGBGBGBG
+freqs of layers : 
+power_profile_mode : transfers
+GPU host is: B
+NPU host is: B
+Number of totla cores is : 6
+Number of little cores is : 4
+Print task names : 0
+Run network for 10 times.
+Layer timing: 0
+
+****************************
+GraphUtils.cpp- reading images: /data/local/ARM-CO-UP/assets//ppm_images_224//
+/data/local/ARM-CO-UP/assets//ppm_images_224//gold_fish.ppm
+/data/local/ARM-CO-UP/assets//ppm_images_224//gondola.ppm
+/data/local/ARM-CO-UP/assets//ppm_images_224//school_bus.ppm
+/data/local/ARM-CO-UP/assets//ppm_images_224//go_kart.ppm
+*****************************
+
+
+
+			0 skipping layer: 
+current layer number: 0 layer name: 
+			0 skipping layer: conv1/convolution
+current layer number: 0 layer name: conv1/convolution
+			0 skipping layer: conv1/BatchNorm
+current layer number: 0 layer name: conv1/BatchNorm
+			0 skipping layer: conv1/Relu
+current layer number: 0 layer name: conv1/Relu
+			0 skipping layer: pool1/MaxPool
+current layer number: 0 layer name: pool1/MaxPool
+new sub stream with tail node: 9 and tail graph: 0
+1 layer: block1/unit1/bottleneck_v1/conv1/convolution
+current layer number: 1 layer name: block1/unit1/bottleneck_v1/conv1/convolution
+Input node for the layer 1 is in graph: 0 Adding Transmitter to that graph
+Adding Sender_pool1/MaxPool to graph 0 with target 1
+Adding Receiver_pool1/MaxPool to graph 1 with target 2
+1 skipping layer: block1/unit1/bottleneck_v1/conv1/BatchNorm
+current layer number: 1 layer name: block1/unit1/bottleneck_v1/conv1/BatchNorm
+1 skipping layer: block1/unit1/bottleneck_v1/conv1/Relu
+current layer number: 1 layer name: block1/unit1/bottleneck_v1/conv1/Relu
+1 skipping layer: block1/unit1/bottleneck_v1/conv2/convolution
+current layer number: 1 layer name: block1/unit1/bottleneck_v1/conv2/convolution
+1 skipping layer: block1/unit1/bottleneck_v1/conv2/BatchNorm
+current layer number: 1 layer name: block1/unit1/bottleneck_v1/conv2/BatchNorm
+1 skipping layer: block1/unit1/bottleneck_v1/conv1/Relu
+current layer number: 1 layer name: block1/unit1/bottleneck_v1/conv1/Relu
+1 skipping layer: block1/unit1/bottleneck_v1/conv3/convolution
+current layer number: 1 layer name: block1/unit1/bottleneck_v1/conv3/convolution
+1 skipping layer: block1/unit1/bottleneck_v1/conv2/BatchNorm
+current layer number: 1 layer name: block1/unit1/bottleneck_v1/conv2/BatchNorm
+new sub stream with tail node: 9 and tail graph: 0
+1 skipping layer: block1/unit1/bottleneck_v1/shortcut/convolution
+current layer number: 1 layer name: block1/unit1/bottleneck_v1/shortcut/convolution
+1 skipping layer: block1/unit1/bottleneck_v1/shortcut/BatchNorm
+current layer number: 1 layer name: block1/unit1/bottleneck_v1/shortcut/BatchNorm
+1 skipping layer: block1/unit1/bottleneck_v1/add
+current layer number: 1 layer name: block1/unit1/bottleneck_v1/add
+			2 layer: block1/unit1/bottleneck_v1/Relu
+current layer number: 2 layer name: block1/unit1/bottleneck_v1/Relu
+Input node for the layer 2 is in graph: 1 Adding Transmitter to that graph
+Adding Sender_block1/unit1/bottleneck_v1/add to graph 1 with target 2
+Adding Receiver_block1/unit1/bottleneck_v1/add to graph 2 with target 1
+new sub stream with tail node: 1 and tail graph: 2
+			2 skipping layer: block1/unit2/bottleneck_v1/conv1/convolution
+current layer number: 2 layer name: block1/unit2/bottleneck_v1/conv1/convolution
+			2 skipping layer: block1/unit2/bottleneck_v1/conv1/BatchNorm
+current layer number: 2 layer name: block1/unit2/bottleneck_v1/conv1/BatchNorm
+			2 skipping layer: block1/unit2/bottleneck_v1/conv1/Relu
+current layer number: 2 layer name: block1/unit2/bottleneck_v1/conv1/Relu
+			2 skipping layer: block1/unit2/bottleneck_v1/conv2/convolution
+current layer number: 2 layer name: block1/unit2/bottleneck_v1/conv2/convolution
+			2 skipping layer: block1/unit2/bottleneck_v1/conv2/BatchNorm
+current layer number: 2 layer name: block1/unit2/bottleneck_v1/conv2/BatchNorm
+			2 skipping layer: block1/unit2/bottleneck_v1/conv1/Relu
+current layer number: 2 layer name: block1/unit2/bottleneck_v1/conv1/Relu
+			2 skipping layer: block1/unit2/bottleneck_v1/conv3/convolution
+current layer number: 2 layer name: block1/unit2/bottleneck_v1/conv3/convolution
+			2 skipping layer: block1/unit2/bottleneck_v1/conv2/BatchNorm
+current layer number: 2 layer name: block1/unit2/bottleneck_v1/conv2/BatchNorm
+new sub stream with tail node: 1 and tail graph: 2
+			2 skipping layer: block1/unit2/bottleneck_v1/add
+current layer number: 2 layer name: block1/unit2/bottleneck_v1/add
+3 layer: block1/unit2/bottleneck_v1/Relu
+current layer number: 3 layer name: block1/unit2/bottleneck_v1/Relu
+Input node for the layer 3 is in graph: 2 Adding Transmitter to that graph
+Adding Sender_block1/unit2/bottleneck_v1/add to graph 2 with target 1
+Adding Receiver_block1/unit2/bottleneck_v1/add to graph 3 with target 2
+new sub stream with tail node: 1 and tail graph: 3
+3 skipping layer: block1/unit3/bottleneck_v1/conv1/convolution
+current layer number: 3 layer name: block1/unit3/bottleneck_v1/conv1/convolution
+3 skipping layer: block1/unit3/bottleneck_v1/conv1/BatchNorm
+current layer number: 3 layer name: block1/unit3/bottleneck_v1/conv1/BatchNorm
+3 skipping layer: block1/unit3/bottleneck_v1/conv1/Relu
+current layer number: 3 layer name: block1/unit3/bottleneck_v1/conv1/Relu
+3 skipping layer: block1/unit3/bottleneck_v1/conv2/convolution
+current layer number: 3 layer name: block1/unit3/bottleneck_v1/conv2/convolution
+3 skipping layer: block1/unit3/bottleneck_v1/conv2/BatchNorm
+current layer number: 3 layer name: block1/unit3/bottleneck_v1/conv2/BatchNorm
+3 skipping layer: block1/unit3/bottleneck_v1/conv1/Relu
+current layer number: 3 layer name: block1/unit3/bottleneck_v1/conv1/Relu
+3 skipping layer: block1/unit3/bottleneck_v1/conv3/convolution
+current layer number: 3 layer name: block1/unit3/bottleneck_v1/conv3/convolution
+3 skipping layer: block1/unit3/bottleneck_v1/conv2/BatchNorm
+current layer number: 3 layer name: block1/unit3/bottleneck_v1/conv2/BatchNorm
+new sub stream with tail node: 1 and tail graph: 3
+3 skipping layer: block1/unit3/bottleneck_v1/shortcut/MaxPool
+current layer number: 3 layer name: block1/unit3/bottleneck_v1/shortcut/MaxPool
+3 skipping layer: block1/unit3/bottleneck_v1/add
+current layer number: 3 layer name: block1/unit3/bottleneck_v1/add
+			4 layer: block1/unit3/bottleneck_v1/Relu
+current layer number: 4 layer name: block1/unit3/bottleneck_v1/Relu
+Input node for the layer 4 is in graph: 3 Adding Transmitter to that graph
+Adding Sender_block1/unit3/bottleneck_v1/add to graph 3 with target 2
+Adding Receiver_block1/unit3/bottleneck_v1/add to graph 4 with target 1
+new sub stream with tail node: 1 and tail graph: 4
+			4 skipping layer: block2/unit1/bottleneck_v1/conv1/convolution
+current layer number: 4 layer name: block2/unit1/bottleneck_v1/conv1/convolution
+			4 skipping layer: block2/unit1/bottleneck_v1/conv1/BatchNorm
+current layer number: 4 layer name: block2/unit1/bottleneck_v1/conv1/BatchNorm
+			4 skipping layer: block2/unit1/bottleneck_v1/conv1/Relu
+current layer number: 4 layer name: block2/unit1/bottleneck_v1/conv1/Relu
+			4 skipping layer: block2/unit1/bottleneck_v1/conv2/convolution
+current layer number: 4 layer name: block2/unit1/bottleneck_v1/conv2/convolution
+			4 skipping layer: block2/unit1/bottleneck_v1/conv2/BatchNorm
+current layer number: 4 layer name: block2/unit1/bottleneck_v1/conv2/BatchNorm
+			4 skipping layer: block2/unit1/bottleneck_v1/conv1/Relu
+current layer number: 4 layer name: block2/unit1/bottleneck_v1/conv1/Relu
+			4 skipping layer: block2/unit1/bottleneck_v1/conv3/convolution
+current layer number: 4 layer name: block2/unit1/bottleneck_v1/conv3/convolution
+			4 skipping layer: block2/unit1/bottleneck_v1/conv2/BatchNorm
+current layer number: 4 layer name: block2/unit1/bottleneck_v1/conv2/BatchNorm
+new sub stream with tail node: 1 and tail graph: 4
+			4 skipping layer: block2/unit1/bottleneck_v1/shortcut/convolution
+current layer number: 4 layer name: block2/unit1/bottleneck_v1/shortcut/convolution
+			4 skipping layer: block2/unit1/bottleneck_v1/shortcut/BatchNorm
+current layer number: 4 layer name: block2/unit1/bottleneck_v1/shortcut/BatchNorm
+			4 skipping layer: block2/unit1/bottleneck_v1/add
+current layer number: 4 layer name: block2/unit1/bottleneck_v1/add
+5 layer: block2/unit1/bottleneck_v1/Relu
+current layer number: 5 layer name: block2/unit1/bottleneck_v1/Relu
+Input node for the layer 5 is in graph: 4 Adding Transmitter to that graph
+Adding Sender_block2/unit1/bottleneck_v1/add to graph 4 with target 1
+Adding Receiver_block2/unit1/bottleneck_v1/add to graph 5 with target 2
+new sub stream with tail node: 1 and tail graph: 5
+5 skipping layer: block2/unit2/bottleneck_v1/conv1/convolution
+current layer number: 5 layer name: block2/unit2/bottleneck_v1/conv1/convolution
+5 skipping layer: block2/unit2/bottleneck_v1/conv1/BatchNorm
+current layer number: 5 layer name: block2/unit2/bottleneck_v1/conv1/BatchNorm
+5 skipping layer: block2/unit2/bottleneck_v1/conv1/Relu
+current layer number: 5 layer name: block2/unit2/bottleneck_v1/conv1/Relu
+5 skipping layer: block2/unit2/bottleneck_v1/conv2/convolution
+current layer number: 5 layer name: block2/unit2/bottleneck_v1/conv2/convolution
+5 skipping layer: block2/unit2/bottleneck_v1/conv2/BatchNorm
+current layer number: 5 layer name: block2/unit2/bottleneck_v1/conv2/BatchNorm
+5 skipping layer: block2/unit2/bottleneck_v1/conv1/Relu
+current layer number: 5 layer name: block2/unit2/bottleneck_v1/conv1/Relu
+5 skipping layer: block2/unit2/bottleneck_v1/conv3/convolution
+current layer number: 5 layer name: block2/unit2/bottleneck_v1/conv3/convolution
+5 skipping layer: block2/unit2/bottleneck_v1/conv2/BatchNorm
+current layer number: 5 layer name: block2/unit2/bottleneck_v1/conv2/BatchNorm
+new sub stream with tail node: 1 and tail graph: 5
+5 skipping layer: block2/unit2/bottleneck_v1/add
+current layer number: 5 layer name: block2/unit2/bottleneck_v1/add
+			6 layer: block2/unit2/bottleneck_v1/Relu
+current layer number: 6 layer name: block2/unit2/bottleneck_v1/Relu
+Input node for the layer 6 is in graph: 5 Adding Transmitter to that graph
+Adding Sender_block2/unit2/bottleneck_v1/add to graph 5 with target 2
+Adding Receiver_block2/unit2/bottleneck_v1/add to graph 6 with target 1
+new sub stream with tail node: 1 and tail graph: 6
+			6 skipping layer: block2/unit3/bottleneck_v1/conv1/convolution
+current layer number: 6 layer name: block2/unit3/bottleneck_v1/conv1/convolution
+			6 skipping layer: block2/unit3/bottleneck_v1/conv1/BatchNorm
+current layer number: 6 layer name: block2/unit3/bottleneck_v1/conv1/BatchNorm
+			6 skipping layer: block2/unit3/bottleneck_v1/conv1/Relu
+current layer number: 6 layer name: block2/unit3/bottleneck_v1/conv1/Relu
+			6 skipping layer: block2/unit3/bottleneck_v1/conv2/convolution
+current layer number: 6 layer name: block2/unit3/bottleneck_v1/conv2/convolution
+			6 skipping layer: block2/unit3/bottleneck_v1/conv2/BatchNorm
+current layer number: 6 layer name: block2/unit3/bottleneck_v1/conv2/BatchNorm
+			6 skipping layer: block2/unit3/bottleneck_v1/conv1/Relu
+current layer number: 6 layer name: block2/unit3/bottleneck_v1/conv1/Relu
+			6 skipping layer: block2/unit3/bottleneck_v1/conv3/convolution
+current layer number: 6 layer name: block2/unit3/bottleneck_v1/conv3/convolution
+			6 skipping layer: block2/unit3/bottleneck_v1/conv2/BatchNorm
+current layer number: 6 layer name: block2/unit3/bottleneck_v1/conv2/BatchNorm
+new sub stream with tail node: 1 and tail graph: 6
+			6 skipping layer: block2/unit3/bottleneck_v1/add
+current layer number: 6 layer name: block2/unit3/bottleneck_v1/add
+7 layer: block2/unit3/bottleneck_v1/Relu
+current layer number: 7 layer name: block2/unit3/bottleneck_v1/Relu
+Input node for the layer 7 is in graph: 6 Adding Transmitter to that graph
+Adding Sender_block2/unit3/bottleneck_v1/add to graph 6 with target 1
+Adding Receiver_block2/unit3/bottleneck_v1/add to graph 7 with target 2
+new sub stream with tail node: 1 and tail graph: 7
+7 skipping layer: block2/unit4/bottleneck_v1/conv1/convolution
+current layer number: 7 layer name: block2/unit4/bottleneck_v1/conv1/convolution
+7 skipping layer: block2/unit4/bottleneck_v1/conv1/BatchNorm
+current layer number: 7 layer name: block2/unit4/bottleneck_v1/conv1/BatchNorm
+7 skipping layer: block2/unit4/bottleneck_v1/conv1/Relu
+current layer number: 7 layer name: block2/unit4/bottleneck_v1/conv1/Relu
+7 skipping layer: block2/unit4/bottleneck_v1/conv2/convolution
+current layer number: 7 layer name: block2/unit4/bottleneck_v1/conv2/convolution
+7 skipping layer: block2/unit4/bottleneck_v1/conv2/BatchNorm
+current layer number: 7 layer name: block2/unit4/bottleneck_v1/conv2/BatchNorm
+7 skipping layer: block2/unit4/bottleneck_v1/conv1/Relu
+current layer number: 7 layer name: block2/unit4/bottleneck_v1/conv1/Relu
+7 skipping layer: block2/unit4/bottleneck_v1/conv3/convolution
+current layer number: 7 layer name: block2/unit4/bottleneck_v1/conv3/convolution
+7 skipping layer: block2/unit4/bottleneck_v1/conv2/BatchNorm
+current layer number: 7 layer name: block2/unit4/bottleneck_v1/conv2/BatchNorm
+new sub stream with tail node: 1 and tail graph: 7
+7 skipping layer: block2/unit4/bottleneck_v1/shortcut/MaxPool
+current layer number: 7 layer name: block2/unit4/bottleneck_v1/shortcut/MaxPool
+7 skipping layer: block2/unit4/bottleneck_v1/add
+current layer number: 7 layer name: block2/unit4/bottleneck_v1/add
+			8 layer: block2/unit4/bottleneck_v1/Relu
+current layer number: 8 layer name: block2/unit4/bottleneck_v1/Relu
+Input node for the layer 8 is in graph: 7 Adding Transmitter to that graph
+Adding Sender_block2/unit4/bottleneck_v1/add to graph 7 with target 2
+Adding Receiver_block2/unit4/bottleneck_v1/add to graph 8 with target 1
+new sub stream with tail node: 1 and tail graph: 8
+			8 skipping layer: block3/unit1/bottleneck_v1/conv1/convolution
+current layer number: 8 layer name: block3/unit1/bottleneck_v1/conv1/convolution
+			8 skipping layer: block3/unit1/bottleneck_v1/conv1/BatchNorm
+current layer number: 8 layer name: block3/unit1/bottleneck_v1/conv1/BatchNorm
+			8 skipping layer: block3/unit1/bottleneck_v1/conv1/Relu
+current layer number: 8 layer name: block3/unit1/bottleneck_v1/conv1/Relu
+			8 skipping layer: block3/unit1/bottleneck_v1/conv2/convolution
+current layer number: 8 layer name: block3/unit1/bottleneck_v1/conv2/convolution
+			8 skipping layer: block3/unit1/bottleneck_v1/conv2/BatchNorm
+current layer number: 8 layer name: block3/unit1/bottleneck_v1/conv2/BatchNorm
+			8 skipping layer: block3/unit1/bottleneck_v1/conv1/Relu
+current layer number: 8 layer name: block3/unit1/bottleneck_v1/conv1/Relu
+			8 skipping layer: block3/unit1/bottleneck_v1/conv3/convolution
+current layer number: 8 layer name: block3/unit1/bottleneck_v1/conv3/convolution
+			8 skipping layer: block3/unit1/bottleneck_v1/conv2/BatchNorm
+current layer number: 8 layer name: block3/unit1/bottleneck_v1/conv2/BatchNorm
+new sub stream with tail node: 1 and tail graph: 8
+			8 skipping layer: block3/unit1/bottleneck_v1/shortcut/convolution
+current layer number: 8 layer name: block3/unit1/bottleneck_v1/shortcut/convolution
+			8 skipping layer: block3/unit1/bottleneck_v1/shortcut/BatchNorm
+current layer number: 8 layer name: block3/unit1/bottleneck_v1/shortcut/BatchNorm
+			8 skipping layer: block3/unit1/bottleneck_v1/add
+current layer number: 8 layer name: block3/unit1/bottleneck_v1/add
+9 layer: block3/unit1/bottleneck_v1/Relu
+current layer number: 9 layer name: block3/unit1/bottleneck_v1/Relu
+Input node for the layer 9 is in graph: 8 Adding Transmitter to that graph
+Adding Sender_block3/unit1/bottleneck_v1/add to graph 8 with target 1
+Adding Receiver_block3/unit1/bottleneck_v1/add to graph 9 with target 2
+new sub stream with tail node: 1 and tail graph: 9
+9 skipping layer: block3/unit2/bottleneck_v1/conv1/convolution
+current layer number: 9 layer name: block3/unit2/bottleneck_v1/conv1/convolution
+9 skipping layer: block3/unit2/bottleneck_v1/conv1/BatchNorm
+current layer number: 9 layer name: block3/unit2/bottleneck_v1/conv1/BatchNorm
+9 skipping layer: block3/unit2/bottleneck_v1/conv1/Relu
+current layer number: 9 layer name: block3/unit2/bottleneck_v1/conv1/Relu
+9 skipping layer: block3/unit2/bottleneck_v1/conv2/convolution
+current layer number: 9 layer name: block3/unit2/bottleneck_v1/conv2/convolution
+9 skipping layer: block3/unit2/bottleneck_v1/conv2/BatchNorm
+current layer number: 9 layer name: block3/unit2/bottleneck_v1/conv2/BatchNorm
+9 skipping layer: block3/unit2/bottleneck_v1/conv1/Relu
+current layer number: 9 layer name: block3/unit2/bottleneck_v1/conv1/Relu
+9 skipping layer: block3/unit2/bottleneck_v1/conv3/convolution
+current layer number: 9 layer name: block3/unit2/bottleneck_v1/conv3/convolution
+9 skipping layer: block3/unit2/bottleneck_v1/conv2/BatchNorm
+current layer number: 9 layer name: block3/unit2/bottleneck_v1/conv2/BatchNorm
+new sub stream with tail node: 1 and tail graph: 9
+9 skipping layer: block3/unit2/bottleneck_v1/add
+current layer number: 9 layer name: block3/unit2/bottleneck_v1/add
+			10 layer: block3/unit2/bottleneck_v1/Relu
+current layer number: 10 layer name: block3/unit2/bottleneck_v1/Relu
+Input node for the layer 10 is in graph: 9 Adding Transmitter to that graph
+Adding Sender_block3/unit2/bottleneck_v1/add to graph 9 with target 2
+Adding Receiver_block3/unit2/bottleneck_v1/add to graph 10 with target 1
+new sub stream with tail node: 1 and tail graph: 10
+			10 skipping layer: block3/unit3/bottleneck_v1/conv1/convolution
+current layer number: 10 layer name: block3/unit3/bottleneck_v1/conv1/convolution
+			10 skipping layer: block3/unit3/bottleneck_v1/conv1/BatchNorm
+current layer number: 10 layer name: block3/unit3/bottleneck_v1/conv1/BatchNorm
+			10 skipping layer: block3/unit3/bottleneck_v1/conv1/Relu
+current layer number: 10 layer name: block3/unit3/bottleneck_v1/conv1/Relu
+			10 skipping layer: block3/unit3/bottleneck_v1/conv2/convolution
+current layer number: 10 layer name: block3/unit3/bottleneck_v1/conv2/convolution
+			10 skipping layer: block3/unit3/bottleneck_v1/conv2/BatchNorm
+current layer number: 10 layer name: block3/unit3/bottleneck_v1/conv2/BatchNorm
+			10 skipping layer: block3/unit3/bottleneck_v1/conv1/Relu
+current layer number: 10 layer name: block3/unit3/bottleneck_v1/conv1/Relu
+			10 skipping layer: block3/unit3/bottleneck_v1/conv3/convolution
+current layer number: 10 layer name: block3/unit3/bottleneck_v1/conv3/convolution
+			10 skipping layer: block3/unit3/bottleneck_v1/conv2/BatchNorm
+current layer number: 10 layer name: block3/unit3/bottleneck_v1/conv2/BatchNorm
+new sub stream with tail node: 1 and tail graph: 10
+			10 skipping layer: block3/unit3/bottleneck_v1/add
+current layer number: 10 layer name: block3/unit3/bottleneck_v1/add
+11 layer: block3/unit3/bottleneck_v1/Relu
+current layer number: 11 layer name: block3/unit3/bottleneck_v1/Relu
+Input node for the layer 11 is in graph: 10 Adding Transmitter to that graph
+Adding Sender_block3/unit3/bottleneck_v1/add to graph 10 with target 1
+Adding Receiver_block3/unit3/bottleneck_v1/add to graph 11 with target 2
+new sub stream with tail node: 1 and tail graph: 11
+11 skipping layer: block3/unit4/bottleneck_v1/conv1/convolution
+current layer number: 11 layer name: block3/unit4/bottleneck_v1/conv1/convolution
+11 skipping layer: block3/unit4/bottleneck_v1/conv1/BatchNorm
+current layer number: 11 layer name: block3/unit4/bottleneck_v1/conv1/BatchNorm
+11 skipping layer: block3/unit4/bottleneck_v1/conv1/Relu
+current layer number: 11 layer name: block3/unit4/bottleneck_v1/conv1/Relu
+11 skipping layer: block3/unit4/bottleneck_v1/conv2/convolution
+current layer number: 11 layer name: block3/unit4/bottleneck_v1/conv2/convolution
+11 skipping layer: block3/unit4/bottleneck_v1/conv2/BatchNorm
+current layer number: 11 layer name: block3/unit4/bottleneck_v1/conv2/BatchNorm
+11 skipping layer: block3/unit4/bottleneck_v1/conv1/Relu
+current layer number: 11 layer name: block3/unit4/bottleneck_v1/conv1/Relu
+11 skipping layer: block3/unit4/bottleneck_v1/conv3/convolution
+current layer number: 11 layer name: block3/unit4/bottleneck_v1/conv3/convolution
+11 skipping layer: block3/unit4/bottleneck_v1/conv2/BatchNorm
+current layer number: 11 layer name: block3/unit4/bottleneck_v1/conv2/BatchNorm
+new sub stream with tail node: 1 and tail graph: 11
+11 skipping layer: block3/unit4/bottleneck_v1/add
+current layer number: 11 layer name: block3/unit4/bottleneck_v1/add
+			12 layer: block3/unit4/bottleneck_v1/Relu
+current layer number: 12 layer name: block3/unit4/bottleneck_v1/Relu
+Input node for the layer 12 is in graph: 11 Adding Transmitter to that graph
+Adding Sender_block3/unit4/bottleneck_v1/add to graph 11 with target 2
+Adding Receiver_block3/unit4/bottleneck_v1/add to graph 12 with target 1
+new sub stream with tail node: 1 and tail graph: 12
+			12 skipping layer: block3/unit5/bottleneck_v1/conv1/convolution
+current layer number: 12 layer name: block3/unit5/bottleneck_v1/conv1/convolution
+			12 skipping layer: block3/unit5/bottleneck_v1/conv1/BatchNorm
+current layer number: 12 layer name: block3/unit5/bottleneck_v1/conv1/BatchNorm
+			12 skipping layer: block3/unit5/bottleneck_v1/conv1/Relu
+current layer number: 12 layer name: block3/unit5/bottleneck_v1/conv1/Relu
+			12 skipping layer: block3/unit5/bottleneck_v1/conv2/convolution
+current layer number: 12 layer name: block3/unit5/bottleneck_v1/conv2/convolution
+			12 skipping layer: block3/unit5/bottleneck_v1/conv2/BatchNorm
+current layer number: 12 layer name: block3/unit5/bottleneck_v1/conv2/BatchNorm
+			12 skipping layer: block3/unit5/bottleneck_v1/conv1/Relu
+current layer number: 12 layer name: block3/unit5/bottleneck_v1/conv1/Relu
+			12 skipping layer: block3/unit5/bottleneck_v1/conv3/convolution
+current layer number: 12 layer name: block3/unit5/bottleneck_v1/conv3/convolution
+			12 skipping layer: block3/unit5/bottleneck_v1/conv2/BatchNorm
+current layer number: 12 layer name: block3/unit5/bottleneck_v1/conv2/BatchNorm
+new sub stream with tail node: 1 and tail graph: 12
+			12 skipping layer: block3/unit5/bottleneck_v1/add
+current layer number: 12 layer name: block3/unit5/bottleneck_v1/add
+13 layer: block3/unit5/bottleneck_v1/Relu
+current layer number: 13 layer name: block3/unit5/bottleneck_v1/Relu
+Input node for the layer 13 is in graph: 12 Adding Transmitter to that graph
+Adding Sender_block3/unit5/bottleneck_v1/add to graph 12 with target 1
+Adding Receiver_block3/unit5/bottleneck_v1/add to graph 13 with target 2
+new sub stream with tail node: 1 and tail graph: 13
+13 skipping layer: block3/unit6/bottleneck_v1/conv1/convolution
+current layer number: 13 layer name: block3/unit6/bottleneck_v1/conv1/convolution
+13 skipping layer: block3/unit6/bottleneck_v1/conv1/BatchNorm
+current layer number: 13 layer name: block3/unit6/bottleneck_v1/conv1/BatchNorm
+13 skipping layer: block3/unit6/bottleneck_v1/conv1/Relu
+current layer number: 13 layer name: block3/unit6/bottleneck_v1/conv1/Relu
+13 skipping layer: block3/unit6/bottleneck_v1/conv2/convolution
+current layer number: 13 layer name: block3/unit6/bottleneck_v1/conv2/convolution
+13 skipping layer: block3/unit6/bottleneck_v1/conv2/BatchNorm
+current layer number: 13 layer name: block3/unit6/bottleneck_v1/conv2/BatchNorm
+13 skipping layer: block3/unit6/bottleneck_v1/conv1/Relu
+current layer number: 13 layer name: block3/unit6/bottleneck_v1/conv1/Relu
+13 skipping layer: block3/unit6/bottleneck_v1/conv3/convolution
+current layer number: 13 layer name: block3/unit6/bottleneck_v1/conv3/convolution
+13 skipping layer: block3/unit6/bottleneck_v1/conv2/BatchNorm
+current layer number: 13 layer name: block3/unit6/bottleneck_v1/conv2/BatchNorm
+new sub stream with tail node: 1 and tail graph: 13
+13 skipping layer: block3/unit6/bottleneck_v1/shortcut/MaxPool
+current layer number: 13 layer name: block3/unit6/bottleneck_v1/shortcut/MaxPool
+13 skipping layer: block3/unit6/bottleneck_v1/add
+current layer number: 13 layer name: block3/unit6/bottleneck_v1/add
+			14 layer: block3/unit6/bottleneck_v1/Relu
+current layer number: 14 layer name: block3/unit6/bottleneck_v1/Relu
+Input node for the layer 14 is in graph: 13 Adding Transmitter to that graph
+Adding Sender_block3/unit6/bottleneck_v1/add to graph 13 with target 2
+Adding Receiver_block3/unit6/bottleneck_v1/add to graph 14 with target 1
+new sub stream with tail node: 1 and tail graph: 14
+			14 skipping layer: block4/unit1/bottleneck_v1/conv1/convolution
+current layer number: 14 layer name: block4/unit1/bottleneck_v1/conv1/convolution
+			14 skipping layer: block4/unit1/bottleneck_v1/conv1/BatchNorm
+current layer number: 14 layer name: block4/unit1/bottleneck_v1/conv1/BatchNorm
+			14 skipping layer: block4/unit1/bottleneck_v1/conv1/Relu
+current layer number: 14 layer name: block4/unit1/bottleneck_v1/conv1/Relu
+			14 skipping layer: block4/unit1/bottleneck_v1/conv2/convolution
+current layer number: 14 layer name: block4/unit1/bottleneck_v1/conv2/convolution
+			14 skipping layer: block4/unit1/bottleneck_v1/conv2/BatchNorm
+current layer number: 14 layer name: block4/unit1/bottleneck_v1/conv2/BatchNorm
+			14 skipping layer: block4/unit1/bottleneck_v1/conv1/Relu
+current layer number: 14 layer name: block4/unit1/bottleneck_v1/conv1/Relu
+			14 skipping layer: block4/unit1/bottleneck_v1/conv3/convolution
+current layer number: 14 layer name: block4/unit1/bottleneck_v1/conv3/convolution
+			14 skipping layer: block4/unit1/bottleneck_v1/conv2/BatchNorm
+current layer number: 14 layer name: block4/unit1/bottleneck_v1/conv2/BatchNorm
+new sub stream with tail node: 1 and tail graph: 14
+			14 skipping layer: block4/unit1/bottleneck_v1/shortcut/convolution
+current layer number: 14 layer name: block4/unit1/bottleneck_v1/shortcut/convolution
+			14 skipping layer: block4/unit1/bottleneck_v1/shortcut/BatchNorm
+current layer number: 14 layer name: block4/unit1/bottleneck_v1/shortcut/BatchNorm
+			14 skipping layer: block4/unit1/bottleneck_v1/add
+current layer number: 14 layer name: block4/unit1/bottleneck_v1/add
+15 layer: block4/unit1/bottleneck_v1/Relu
+current layer number: 15 layer name: block4/unit1/bottleneck_v1/Relu
+Input node for the layer 15 is in graph: 14 Adding Transmitter to that graph
+Adding Sender_block4/unit1/bottleneck_v1/add to graph 14 with target 1
+Adding Receiver_block4/unit1/bottleneck_v1/add to graph 15 with target 2
+new sub stream with tail node: 1 and tail graph: 15
+15 skipping layer: block4/unit2/bottleneck_v1/conv1/convolution
+current layer number: 15 layer name: block4/unit2/bottleneck_v1/conv1/convolution
+15 skipping layer: block4/unit2/bottleneck_v1/conv1/BatchNorm
+current layer number: 15 layer name: block4/unit2/bottleneck_v1/conv1/BatchNorm
+15 skipping layer: block4/unit2/bottleneck_v1/conv1/Relu
+current layer number: 15 layer name: block4/unit2/bottleneck_v1/conv1/Relu
+15 skipping layer: block4/unit2/bottleneck_v1/conv2/convolution
+current layer number: 15 layer name: block4/unit2/bottleneck_v1/conv2/convolution
+15 skipping layer: block4/unit2/bottleneck_v1/conv2/BatchNorm
+current layer number: 15 layer name: block4/unit2/bottleneck_v1/conv2/BatchNorm
+15 skipping layer: block4/unit2/bottleneck_v1/conv1/Relu
+current layer number: 15 layer name: block4/unit2/bottleneck_v1/conv1/Relu
+15 skipping layer: block4/unit2/bottleneck_v1/conv3/convolution
+current layer number: 15 layer name: block4/unit2/bottleneck_v1/conv3/convolution
+15 skipping layer: block4/unit2/bottleneck_v1/conv2/BatchNorm
+current layer number: 15 layer name: block4/unit2/bottleneck_v1/conv2/BatchNorm
+new sub stream with tail node: 1 and tail graph: 15
+15 skipping layer: block4/unit2/bottleneck_v1/add
+current layer number: 15 layer name: block4/unit2/bottleneck_v1/add
+			16 layer: block4/unit2/bottleneck_v1/Relu
+current layer number: 16 layer name: block4/unit2/bottleneck_v1/Relu
+Input node for the layer 16 is in graph: 15 Adding Transmitter to that graph
+Adding Sender_block4/unit2/bottleneck_v1/add to graph 15 with target 2
+Adding Receiver_block4/unit2/bottleneck_v1/add to graph 16 with target 1
+new sub stream with tail node: 1 and tail graph: 16
+			16 skipping layer: block4/unit3/bottleneck_v1/conv1/convolution
+current layer number: 16 layer name: block4/unit3/bottleneck_v1/conv1/convolution
+			16 skipping layer: block4/unit3/bottleneck_v1/conv1/BatchNorm
+current layer number: 16 layer name: block4/unit3/bottleneck_v1/conv1/BatchNorm
+			16 skipping layer: block4/unit3/bottleneck_v1/conv1/Relu
+current layer number: 16 layer name: block4/unit3/bottleneck_v1/conv1/Relu
+			16 skipping layer: block4/unit3/bottleneck_v1/conv2/convolution
+current layer number: 16 layer name: block4/unit3/bottleneck_v1/conv2/convolution
+			16 skipping layer: block4/unit3/bottleneck_v1/conv2/BatchNorm
+current layer number: 16 layer name: block4/unit3/bottleneck_v1/conv2/BatchNorm
+			16 skipping layer: block4/unit3/bottleneck_v1/conv1/Relu
+current layer number: 16 layer name: block4/unit3/bottleneck_v1/conv1/Relu
+			16 skipping layer: block4/unit3/bottleneck_v1/conv3/convolution
+current layer number: 16 layer name: block4/unit3/bottleneck_v1/conv3/convolution
+			16 skipping layer: block4/unit3/bottleneck_v1/conv2/BatchNorm
+current layer number: 16 layer name: block4/unit3/bottleneck_v1/conv2/BatchNorm
+new sub stream with tail node: 1 and tail graph: 16
+			16 skipping layer: block4/unit3/bottleneck_v1/add
+current layer number: 16 layer name: block4/unit3/bottleneck_v1/add
+			16 skipping layer: block4/unit3/bottleneck_v1/Relu
+current layer number: 16 layer name: block4/unit3/bottleneck_v1/Relu
+			16 skipping layer: pool5
+current layer number: 16 layer name: pool5
+17 layer: logits/convolution
+current layer number: 17 layer name: logits/convolution
+Input node for the layer 17 is in graph: 16 Adding Transmitter to that graph
+Adding Sender_pool5 to graph 16 with target 1
+Adding Receiver_pool5 to graph 17 with target 2
+17 skipping layer: predictions/Reshape
+current layer number: 17 layer name: predictions/Reshape
+17 skipping layer: predictions/Softmax
+current layer number: 17 layer name: predictions/Softmax
+output accessor reading label file /data/local/ARM-CO-UP/assets//labels.txt
+			18 layer: 
+current layer number: 18 layer name: 
+
+
+*********************
+Start finalizing Graphs
+*******************
+
+Graph id: 2 Target is: Neon
+Graph id: Graph id: Graph id: 5 Target is: Neon
+0 Target is: Neon
+Graph id: 3 Target is: Neon
+Graph id: 4 Target is: Neon
+6 Target is: Neon
+Graph id: 7 Target is: Neon
+Graph id: 8 Target is: Neon
+Graph id: Graph id: 10 Target is: Neon
+9 Target is: Neon
+Graph id: 12 Target is: Neon
+Graph id: Graph id: 11 Target is: Neon
+13 Target is: Neon
+Graph id: 14 Target is: Neon
+Graph id: 15 Target is: Neon
+Graph id: Graph id: 17 Target is: Neon
+16 Target is: Neon
+Graph (2) Task 0: block1/unit1/bottleneck_v1/Relu
+Graph (2) Task 1: block1/unit2/bottleneck_v1/conv1/convolution
+Graph (2) Task 2: block1/unit2/bottleneck_v1/conv1/BatchNorm
+Graph (2) Task 3: block1/unit2/bottleneck_v1/conv1/Relu
+Graph (2) Task 4: block1/unit2/bottleneck_v1/conv2/convolution
+Graph (2) Task 5: block1/unit2/bottleneck_v1/conv2/BatchNorm
+Graph (2) Task 6: block1/unit2/bottleneck_v1/conv1/Relu
+Graph (2) Task 7: block1/unit2/bottleneck_v1/conv3/convolution
+Graph (2) Task 8: block1/unit2/bottleneck_v1/conv2/BatchNorm
+Graph (2) Task 9: block1/unit2/bottleneck_v1/add
+Graph 2 input size: 0 receiver size: 1 tasks size: 10 senders size: 1 output size: 0
+
+Graph id: 1 Target is: CL
+Graph (5) Task 0: block2/unit1/bottleneck_v1/Relu
+Graph (5) Task 1: block2/unit2/bottleneck_v1/conv1/convolution
+Graph (5) Task 2: block2/unit2/bottleneck_v1/conv1/BatchNorm
+Graph (5) Task 3: block2/unit2/bottleneck_v1/conv1/Relu
+Graph (5) Task 4: block2/unit2/bottleneck_v1/conv2/convolution
+Graph (5) Task 5: block2/unit2/bottleneck_v1/conv2/BatchNorm
+Graph (5) Task 6: block2/unit2/bottleneck_v1/conv1/Relu
+Graph (5) Task 7: block2/unit2/bottleneck_v1/conv3/convolution
+Graph (5) Task 8: block2/unit2/bottleneck_v1/conv2/BatchNorm
+Graph (5) Task 9: block2/unit2/bottleneck_v1/add
+Graph 5 input size: 0 receiver size: 1 tasks size: 10 senders size: 1 output size: 0
+
+Graph (0) Task 0: conv1/convolution
+Graph (0) Task 1: conv1/BatchNorm
+Graph (0) Task 2: conv1/Relu
+Graph (0) Task 3: pool1/MaxPool
+Graph 0 input size: 1 receiver size: 0 tasks size: 4 senders size: 1 output size: 0
+
+Graph (3) Task 0: block1/unit2/bottleneck_v1/Relu
+Graph (3) Task 1: block1/unit3/bottleneck_v1/conv1/convolution
+Graph (3) Task 2: block1/unit3/bottleneck_v1/conv1/BatchNorm
+Graph (3) Task 3: block1/unit3/bottleneck_v1/conv1/Relu
+Graph (3) Task 4: block1/unit3/bottleneck_v1/conv2/convolution
+Graph (3) Task 5: block1/unit3/bottleneck_v1/conv2/BatchNorm
+Graph (3) Task 6: block1/unit3/bottleneck_v1/conv1/Relu
+Graph (3) Task 7: block1/unit3/bottleneck_v1/conv3/convolution
+Graph (3) Task 8: block1/unit3/bottleneck_v1/conv2/BatchNorm
+Graph (3) Task 9: block1/unit3/bottleneck_v1/shortcut/MaxPool
+Graph (3) Task 10: block1/unit3/bottleneck_v1/add
+Graph 3 input size: 0 receiver size: 1 tasks size: 11 senders size: 1 output size: 0
+
+Graph (4) Task 0: block1/unit3/bottleneck_v1/Relu
+Graph (4) Task 1: block2/unit1/bottleneck_v1/conv1/convolution
+Graph (4) Task 2: block2/unit1/bottleneck_v1/conv1/BatchNorm
+Graph (4) Task 3: block2/unit1/bottleneck_v1/conv1/Relu
+Graph (4) Task 4: block2/unit1/bottleneck_v1/conv2/convolution
+Graph (4) Task 5: block2/unit1/bottleneck_v1/conv2/BatchNorm
+Graph (4) Task 6: block2/unit1/bottleneck_v1/conv1/Relu
+Graph (4) Task 7: block2/unit1/bottleneck_v1/conv3/convolution
+Graph (4) Task 8: block2/unit1/bottleneck_v1/conv2/BatchNorm
+Graph (4) Task 9: block2/unit1/bottleneck_v1/shortcut/convolution
+Graph (4) Task 10: block2/unit1/bottleneck_v1/shortcut/BatchNorm
+Graph (4) Task 11: block2/unit1/bottleneck_v1/add
+Graph 4 input size: 0 receiver size: 1 tasks size: 12 senders size: 1 output size: 0
+
+Graph (6) Task 0: block2/unit2/bottleneck_v1/Relu
+Graph (6) Task 1: block2/unit3/bottleneck_v1/conv1/convolution
+Graph (6) Task 2: block2/unit3/bottleneck_v1/conv1/BatchNorm
+Graph (6) Task 3: block2/unit3/bottleneck_v1/conv1/Relu
+Graph (6) Task 4: block2/unit3/bottleneck_v1/conv2/convolution
+Graph (6) Task 5: block2/unit3/bottleneck_v1/conv2/BatchNorm
+Graph (6) Task 6: block2/unit3/bottleneck_v1/conv1/Relu
+Graph (6) Task 7: block2/unit3/bottleneck_v1/conv3/convolution
+Graph (6) Task 8: block2/unit3/bottleneck_v1/conv2/BatchNorm
+Graph (6) Task 9: block2/unit3/bottleneck_v1/add
+Graph 6 input size: 0 receiver size: 1 tasks size: 10 senders size: 1 output size: 0
+
+Graph (7) Task 0: block2/unit3/bottleneck_v1/Relu
+Graph (7) Task 1: block2/unit4/bottleneck_v1/conv1/convolution
+Graph (7) Task 2: block2/unit4/bottleneck_v1/conv1/BatchNorm
+Graph (7) Task 3: block2/unit4/bottleneck_v1/conv1/Relu
+Graph (7) Task 4: block2/unit4/bottleneck_v1/conv2/convolution
+Graph (7) Task 5: block2/unit4/bottleneck_v1/conv2/BatchNorm
+Graph (7) Task 6: block2/unit4/bottleneck_v1/conv1/Relu
+Graph (7) Task 7: block2/unit4/bottleneck_v1/conv3/convolution
+Graph (7) Task 8: block2/unit4/bottleneck_v1/conv2/BatchNorm
+Graph (7) Task 9: block2/unit4/bottleneck_v1/shortcut/MaxPool
+Graph (7) Task 10: block2/unit4/bottleneck_v1/add
+Graph 7 input size: 0 receiver size: 1 tasks size: 11 senders size: 1 output size: 0
+
+Graph (8) Task 0: block2/unit4/bottleneck_v1/Relu
+Graph (8) Task 1: block3/unit1/bottleneck_v1/conv1/convolution
+Graph (8) Task 2: block3/unit1/bottleneck_v1/conv1/BatchNorm
+Graph (8) Task 3: block3/unit1/bottleneck_v1/conv1/Relu
+Graph (8) Task 4: block3/unit1/bottleneck_v1/conv2/convolution
+Graph (8) Task 5: block3/unit1/bottleneck_v1/conv2/BatchNorm
+Graph (8) Task 6: block3/unit1/bottleneck_v1/conv1/Relu
+Graph (8) Task 7: block3/unit1/bottleneck_v1/conv3/convolution
+Graph (8) Task 8: block3/unit1/bottleneck_v1/conv2/BatchNorm
+Graph (8) Task 9: block3/unit1/bottleneck_v1/shortcut/convolution
+Graph (8) Task 10: block3/unit1/bottleneck_v1/shortcut/BatchNorm
+Graph (8) Task 11: block3/unit1/bottleneck_v1/add
+Graph 8 input size: 0 receiver size: 1 tasks size: 12 senders size: 1 output size: 0
+
+Graph (10) Task 0: block3/unit2/bottleneck_v1/Relu
+Graph (10) Task 1: block3/unit3/bottleneck_v1/conv1/convolution
+Graph (10) Task 2: block3/unit3/bottleneck_v1/conv1/BatchNorm
+Graph (10) Task 3: block3/unit3/bottleneck_v1/conv1/Relu
+Graph (10) Task 4: block3/unit3/bottleneck_v1/conv2/convolution
+Graph (10) Task 5: block3/unit3/bottleneck_v1/conv2/BatchNorm
+Graph (10) Task 6: block3/unit3/bottleneck_v1/conv1/Relu
+Graph (10) Task 7: block3/unit3/bottleneck_v1/conv3/convolution
+Graph (10) Task 8: block3/unit3/bottleneck_v1/conv2/BatchNorm
+Graph (10) Task 9: block3/unit3/bottleneck_v1/add
+Graph 10 input size: 0 receiver size: 1 tasks size: 10 senders size: 1 output size: 0
+
+Graph (9) Task 0: block3/unit1/bottleneck_v1/Relu
+Graph (9) Task 1: block3/unit2/bottleneck_v1/conv1/convolution
+Graph (9) Task 2: block3/unit2/bottleneck_v1/conv1/BatchNorm
+Graph (9) Task 3: block3/unit2/bottleneck_v1/conv1/Relu
+Graph (9) Task 4: block3/unit2/bottleneck_v1/conv2/convolution
+Graph (9) Task 5: block3/unit2/bottleneck_v1/conv2/BatchNorm
+Graph (9) Task 6: block3/unit2/bottleneck_v1/conv1/Relu
+Graph (9) Task 7: block3/unit2/bottleneck_v1/conv3/convolution
+Graph (9) Task 8: block3/unit2/bottleneck_v1/conv2/BatchNorm
+Graph (9) Task 9: block3/unit2/bottleneck_v1/add
+Graph 9 input size: 0 receiver size: 1 tasks size: 10 senders size: 1 output size: 0
+
+Graph (12) Task 0: block3/unit4/bottleneck_v1/Relu
+Graph (12) Task 1: block3/unit5/bottleneck_v1/conv1/convolution
+Graph (12) Task 2: block3/unit5/bottleneck_v1/conv1/BatchNorm
+Graph (12) Task 3: block3/unit5/bottleneck_v1/conv1/Relu
+Graph (12) Task 4: block3/unit5/bottleneck_v1/conv2/convolution
+Graph (12) Task 5: block3/unit5/bottleneck_v1/conv2/BatchNorm
+Graph (12) Task 6: block3/unit5/bottleneck_v1/conv1/Relu
+Graph (12) Task 7: block3/unit5/bottleneck_v1/conv3/convolution
+Graph (12) Task 8: block3/unit5/bottleneck_v1/conv2/BatchNorm
+Graph (12) Task 9: block3/unit5/bottleneck_v1/add
+Graph 12 input size: 0 receiver size: 1 tasks size: 10 senders size: 1 output size: 0
+
+Graph (11) Task 0: block3/unit3/bottleneck_v1/Relu
+Graph (11) Task 1: block3/unit4/bottleneck_v1/conv1/convolution
+Graph (11) Task 2: block3/unit4/bottleneck_v1/conv1/BatchNorm
+Graph (11) Task 3: block3/unit4/bottleneck_v1/conv1/Relu
+Graph (11) Task 4: block3/unit4/bottleneck_v1/conv2/convolution
+Graph (11) Task 5: block3/unit4/bottleneck_v1/conv2/BatchNorm
+Graph (11) Task 6: block3/unit4/bottleneck_v1/conv1/Relu
+Graph (11) Task 7: block3/unit4/bottleneck_v1/conv3/convolution
+Graph (11) Task 8: block3/unit4/bottleneck_v1/conv2/BatchNorm
+Graph (11) Task 9: block3/unit4/bottleneck_v1/add
+Graph 11 input size: 0 receiver size: 1 tasks size: 10 senders size: 1 output size: 0
+
+Graph (13) Task 0: block3/unit5/bottleneck_v1/Relu
+Graph (13) Task 1: block3/unit6/bottleneck_v1/conv1/convolution
+Graph (13) Task 2: block3/unit6/bottleneck_v1/conv1/BatchNorm
+Graph (13) Task 3: block3/unit6/bottleneck_v1/conv1/Relu
+Graph (13) Task 4: block3/unit6/bottleneck_v1/conv2/convolution
+Graph (13) Task 5: block3/unit6/bottleneck_v1/conv2/BatchNorm
+Graph (13) Task 6: block3/unit6/bottleneck_v1/conv1/Relu
+Graph (13) Task 7: block3/unit6/bottleneck_v1/conv3/convolution
+Graph (13) Task 8: block3/unit6/bottleneck_v1/conv2/BatchNorm
+Graph (13) Task 9: block3/unit6/bottleneck_v1/shortcut/MaxPool
+Graph (13) Task 10: block3/unit6/bottleneck_v1/add
+Graph 13 input size: 0 receiver size: 1 tasks size: 11 senders size: 1 output size: 0
+
+Graph (14) Task 0: block3/unit6/bottleneck_v1/Relu
+Graph (14) Task 1: block4/unit1/bottleneck_v1/conv1/convolution
+Graph (14) Task 2: block4/unit1/bottleneck_v1/conv1/BatchNorm
+Graph (14) Task 3: block4/unit1/bottleneck_v1/conv1/Relu
+Graph (14) Task 4: block4/unit1/bottleneck_v1/conv2/convolution
+Graph (14) Task 5: block4/unit1/bottleneck_v1/conv2/BatchNorm
+Graph (14) Task 6: block4/unit1/bottleneck_v1/conv1/Relu
+Graph (14) Task 7: block4/unit1/bottleneck_v1/conv3/convolution
+Graph (14) Task 8: block4/unit1/bottleneck_v1/conv2/BatchNorm
+Graph (14) Task 9: block4/unit1/bottleneck_v1/shortcut/convolution
+Graph (14) Task 10: block4/unit1/bottleneck_v1/shortcut/BatchNorm
+Graph (14) Task 11: block4/unit1/bottleneck_v1/add
+Graph 14 input size: 0 receiver size: 1 tasks size: 12 senders size: 1 output size: 0
+
+Graph (15) Task 0: block4/unit1/bottleneck_v1/Relu
+Graph (15) Task 1: block4/unit2/bottleneck_v1/conv1/convolution
+Graph (15) Task 2: block4/unit2/bottleneck_v1/conv1/BatchNorm
+Graph (15) Task 3: block4/unit2/bottleneck_v1/conv1/Relu
+Graph (15) Task 4: block4/unit2/bottleneck_v1/conv2/convolution
+Graph (15) Task 5: block4/unit2/bottleneck_v1/conv2/BatchNorm
+Graph (15) Task 6: block4/unit2/bottleneck_v1/conv1/Relu
+Graph (15) Task 7: block4/unit2/bottleneck_v1/conv3/convolution
+Graph (15) Task 8: block4/unit2/bottleneck_v1/conv2/BatchNorm
+Graph (15) Task 9: block4/unit2/bottleneck_v1/add
+Graph 15 input size: 0 receiver size: 1 tasks size: 10 senders size: 1 output size: 0
+
+Graph (17) Task 0: logits/convolution
+Graph (17) Task 1: predictions/Reshape
+Graph (17) Task 2: predictions/Softmax
+Graph 17 input size: 0 receiver size: 1 tasks size: 3 senders size: 0 output size: 1
+
+Graph (16) Task 0: block4/unit2/bottleneck_v1/Relu
+Graph (16) Task 1: block4/unit3/bottleneck_v1/conv1/convolution
+Graph (16) Task 2: block4/unit3/bottleneck_v1/conv1/BatchNorm
+Graph (16) Task 3: block4/unit3/bottleneck_v1/conv1/Relu
+Graph (16) Task 4: block4/unit3/bottleneck_v1/conv2/convolution
+Graph (16) Task 5: block4/unit3/bottleneck_v1/conv2/BatchNorm
+Graph (16) Task 6: block4/unit3/bottleneck_v1/conv1/Relu
+Graph (16) Task 7: block4/unit3/bottleneck_v1/conv3/convolution
+Graph (16) Task 8: block4/unit3/bottleneck_v1/conv2/BatchNorm
+Graph (16) Task 9: block4/unit3/bottleneck_v1/add
+Graph (16) Task 10: block4/unit3/bottleneck_v1/Relu
+Graph (16) Task 11: pool5
+Graph 16 input size: 0 receiver size: 1 tasks size: 12 senders size: 1 output size: 0
+
+setting ending for layer: block1/unit2/bottleneck_v1/add
+Finish finalizing graph 2
+
+
+
+setting ending for layer: pool1/MaxPool
+Finish finalizing graph 0
+
+
+
+setting ending for layer: block2/unit2/bottleneck_v1/add
+Finish finalizing graph 5
+
+
+
+setting ending for layer: block1/unit3/bottleneck_v1/add
+Finish finalizing graph 3
+
+
+
+setting ending for layer: block2/unit4/bottleneck_v1/add
+Finish finalizing graph 7
+
+
+
+setting ending for layer: block2/unit1/bottleneck_v1/add
+Finish finalizing graph 4
+
+
+
+setting ending for layer: block2/unit3/bottleneck_v1/add
+Finish finalizing graph 6
+
+
+
+Graph (1) Task 0: block1/unit1/bottleneck_v1/shortcut/convolution
+Graph (1) Task 1: block1/unit1/bottleneck_v1/shortcut/BatchNorm
+Graph (1) Task 2: block1/unit1/bottleneck_v1/conv1/convolution
+Graph (1) Task 3: block1/unit1/bottleneck_v1/conv1/BatchNorm
+Graph (1) Task 4: block1/unit1/bottleneck_v1/conv1/Relu
+setting ending for layer: block3/unit2/bottleneck_v1/add
+Finish finalizing graph 9
+
+
+
+setting ending for layer: block3/unit3/bottleneck_v1/add
+Finish finalizing graph 10
+
+
+
+setting ending for layer: block3/unit5/bottleneck_v1/add
+Finish finalizing graph 12
+
+
+
+setting ending for layer: block3/unit4/bottleneck_v1/add
+Finish finalizing graph 11
+
+
+
+setting ending for layer: block3/unit6/bottleneck_v1/add
+Finish finalizing graph 13
+
+
+
+setting ending for layer: block3/unit1/bottleneck_v1/add
+Finish finalizing graph 8
+
+
+
+setting ending for layer: predictions/Softmax
+Finish finalizing graph 17
+
+
+
+setting ending for layer: block4/unit2/bottleneck_v1/add
+Finish finalizing graph 15
+
+
+
+setting ending for layer: pool5
+Finish finalizing graph 16
+
+
+
+Graph (1) Task 5: block1/unit1/bottleneck_v1/conv2/convolution
+Graph (1) Task 6: block1/unit1/bottleneck_v1/conv2/BatchNorm
+Graph (1) Task 7: block1/unit1/bottleneck_v1/conv1/Relu
+Graph (1) Task 8: block1/unit1/bottleneck_v1/conv3/convolution
+Graph (1) Task 9: block1/unit1/bottleneck_v1/conv2/BatchNorm
+setting ending for layer: block4/unit1/bottleneck_v1/add
+Finish finalizing graph 14
+
+
+
+Graph (1) Task 10: block1/unit1/bottleneck_v1/add
+Graph 1 input size: 0 receiver size: 1 tasks size: 11 senders size: 1 output size: 0
+
+setting ending for layer: block1/unit1/bottleneck_v1/add
+Finish finalizing graph 1
+
+
+
+setup finished
+
+Please Enter the desired Frequency setttings: 0 Running Graph with min LW DVFS
+governor 0 task:block1/unit1/bottleneck_v1/add freqs:0,0,0
+governor 1 task:block1/unit2/bottleneck_v1/add freqs:0,0,0
+governor 2 task:block1/unit3/bottleneck_v1/add freqs:0,0,0
+governor 3 task:block2/unit1/bottleneck_v1/add freqs:0,0,0
+governor 4 task:block2/unit2/bottleneck_v1/add freqs:0,0,0
+governor 5 task:block2/unit3/bottleneck_v1/add freqs:0,0,0
+governor 6 task:block2/unit4/bottleneck_v1/add freqs:0,0,0
+governor 7 task:block3/unit1/bottleneck_v1/add freqs:0,0,0
+governor 8 task:block3/unit2/bottleneck_v1/add freqs:0,0,0
+governor 9 task:block3/unit3/bottleneck_v1/add freqs:0,0,0
+governor 10 task:block3/unit4/bottleneck_v1/add freqs:0,0,0
+governor 11 task:block3/unit5/bottleneck_v1/add freqs:0,0,0
+governor 12 task:block3/unit6/bottleneck_v1/add freqs:0,0,0
+governor 13 task:block4/unit1/bottleneck_v1/add freqs:0,0,0
+governor 14 task:block4/unit2/bottleneck_v1/add freqs:0,0,0
+governor 15 task:pool1/MaxPool freqs:0,0,0
+governor 16 task:pool5 freqs:0,0,0
+governor 17 task:predictions/Softmax freqs:0,0,0
+set_GPIOs with mode: transfers
+tass name: conv1/convolution	starting gpio: 1	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv1/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: conv1/Relu	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: pool1/MaxPool	starting gpio: 0	ending gpio: 1	profiling layers: 0	profiling transfers: 1
+tass name: block1/unit1/bottleneck_v1/shortcut/convolution	starting gpio: 1	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block1/unit1/bottleneck_v1/shortcut/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block1/unit1/bottleneck_v1/conv1/convolution	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block1/unit1/bottleneck_v1/conv1/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block1/unit1/bottleneck_v1/conv1/Relu	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block1/unit1/bottleneck_v1/conv2/convolution	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block1/unit1/bottleneck_v1/conv2/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block1/unit1/bottleneck_v1/conv1/Relu	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block1/unit1/bottleneck_v1/conv3/convolution	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block1/unit1/bottleneck_v1/conv2/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block1/unit1/bottleneck_v1/add	starting gpio: 0	ending gpio: 1	profiling layers: 0	profiling transfers: 1
+tass name: block1/unit1/bottleneck_v1/Relu	starting gpio: 1	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block1/unit2/bottleneck_v1/conv1/convolution	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block1/unit2/bottleneck_v1/conv1/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block1/unit2/bottleneck_v1/conv1/Relu	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block1/unit2/bottleneck_v1/conv2/convolution	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block1/unit2/bottleneck_v1/conv2/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block1/unit2/bottleneck_v1/conv1/Relu	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block1/unit2/bottleneck_v1/conv3/convolution	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block1/unit2/bottleneck_v1/conv2/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block1/unit2/bottleneck_v1/add	starting gpio: 0	ending gpio: 1	profiling layers: 0	profiling transfers: 1
+tass name: block1/unit2/bottleneck_v1/Relu	starting gpio: 1	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block1/unit3/bottleneck_v1/conv1/convolution	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block1/unit3/bottleneck_v1/conv1/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block1/unit3/bottleneck_v1/conv1/Relu	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block1/unit3/bottleneck_v1/conv2/convolution	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block1/unit3/bottleneck_v1/conv2/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block1/unit3/bottleneck_v1/conv1/Relu	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block1/unit3/bottleneck_v1/conv3/convolution	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block1/unit3/bottleneck_v1/conv2/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block1/unit3/bottleneck_v1/shortcut/MaxPool	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block1/unit3/bottleneck_v1/add	starting gpio: 0	ending gpio: 1	profiling layers: 0	profiling transfers: 1
+tass name: block1/unit3/bottleneck_v1/Relu	starting gpio: 1	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block2/unit1/bottleneck_v1/conv1/convolution	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block2/unit1/bottleneck_v1/conv1/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block2/unit1/bottleneck_v1/conv1/Relu	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block2/unit1/bottleneck_v1/conv2/convolution	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block2/unit1/bottleneck_v1/conv2/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block2/unit1/bottleneck_v1/conv1/Relu	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block2/unit1/bottleneck_v1/conv3/convolution	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block2/unit1/bottleneck_v1/conv2/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block2/unit1/bottleneck_v1/shortcut/convolution	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block2/unit1/bottleneck_v1/shortcut/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block2/unit1/bottleneck_v1/add	starting gpio: 0	ending gpio: 1	profiling layers: 0	profiling transfers: 1
+tass name: block2/unit1/bottleneck_v1/Relu	starting gpio: 1	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block2/unit2/bottleneck_v1/conv1/convolution	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block2/unit2/bottleneck_v1/conv1/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block2/unit2/bottleneck_v1/conv1/Relu	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block2/unit2/bottleneck_v1/conv2/convolution	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block2/unit2/bottleneck_v1/conv2/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block2/unit2/bottleneck_v1/conv1/Relu	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block2/unit2/bottleneck_v1/conv3/convolution	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block2/unit2/bottleneck_v1/conv2/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block2/unit2/bottleneck_v1/add	starting gpio: 0	ending gpio: 1	profiling layers: 0	profiling transfers: 1
+tass name: block2/unit2/bottleneck_v1/Relu	starting gpio: 1	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block2/unit3/bottleneck_v1/conv1/convolution	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block2/unit3/bottleneck_v1/conv1/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block2/unit3/bottleneck_v1/conv1/Relu	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block2/unit3/bottleneck_v1/conv2/convolution	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block2/unit3/bottleneck_v1/conv2/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block2/unit3/bottleneck_v1/conv1/Relu	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block2/unit3/bottleneck_v1/conv3/convolution	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block2/unit3/bottleneck_v1/conv2/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block2/unit3/bottleneck_v1/add	starting gpio: 0	ending gpio: 1	profiling layers: 0	profiling transfers: 1
+tass name: block2/unit3/bottleneck_v1/Relu	starting gpio: 1	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block2/unit4/bottleneck_v1/conv1/convolution	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block2/unit4/bottleneck_v1/conv1/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block2/unit4/bottleneck_v1/conv1/Relu	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block2/unit4/bottleneck_v1/conv2/convolution	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block2/unit4/bottleneck_v1/conv2/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block2/unit4/bottleneck_v1/conv1/Relu	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block2/unit4/bottleneck_v1/conv3/convolution	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block2/unit4/bottleneck_v1/conv2/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block2/unit4/bottleneck_v1/shortcut/MaxPool	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block2/unit4/bottleneck_v1/add	starting gpio: 0	ending gpio: 1	profiling layers: 0	profiling transfers: 1
+tass name: block2/unit4/bottleneck_v1/Relu	starting gpio: 1	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block3/unit1/bottleneck_v1/conv1/convolution	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block3/unit1/bottleneck_v1/conv1/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block3/unit1/bottleneck_v1/conv1/Relu	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block3/unit1/bottleneck_v1/conv2/convolution	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block3/unit1/bottleneck_v1/conv2/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block3/unit1/bottleneck_v1/conv1/Relu	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block3/unit1/bottleneck_v1/conv3/convolution	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block3/unit1/bottleneck_v1/conv2/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block3/unit1/bottleneck_v1/shortcut/convolution	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block3/unit1/bottleneck_v1/shortcut/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block3/unit1/bottleneck_v1/add	starting gpio: 0	ending gpio: 1	profiling layers: 0	profiling transfers: 1
+tass name: block3/unit1/bottleneck_v1/Relu	starting gpio: 1	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block3/unit2/bottleneck_v1/conv1/convolution	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block3/unit2/bottleneck_v1/conv1/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block3/unit2/bottleneck_v1/conv1/Relu	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block3/unit2/bottleneck_v1/conv2/convolution	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block3/unit2/bottleneck_v1/conv2/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block3/unit2/bottleneck_v1/conv1/Relu	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block3/unit2/bottleneck_v1/conv3/convolution	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block3/unit2/bottleneck_v1/conv2/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block3/unit2/bottleneck_v1/add	starting gpio: 0	ending gpio: 1	profiling layers: 0	profiling transfers: 1
+tass name: block3/unit2/bottleneck_v1/Relu	starting gpio: 1	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block3/unit3/bottleneck_v1/conv1/convolution	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block3/unit3/bottleneck_v1/conv1/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block3/unit3/bottleneck_v1/conv1/Relu	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block3/unit3/bottleneck_v1/conv2/convolution	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block3/unit3/bottleneck_v1/conv2/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block3/unit3/bottleneck_v1/conv1/Relu	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block3/unit3/bottleneck_v1/conv3/convolution	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block3/unit3/bottleneck_v1/conv2/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block3/unit3/bottleneck_v1/add	starting gpio: 0	ending gpio: 1	profiling layers: 0	profiling transfers: 1
+tass name: block3/unit3/bottleneck_v1/Relu	starting gpio: 1	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block3/unit4/bottleneck_v1/conv1/convolution	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block3/unit4/bottleneck_v1/conv1/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block3/unit4/bottleneck_v1/conv1/Relu	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block3/unit4/bottleneck_v1/conv2/convolution	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block3/unit4/bottleneck_v1/conv2/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block3/unit4/bottleneck_v1/conv1/Relu	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block3/unit4/bottleneck_v1/conv3/convolution	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block3/unit4/bottleneck_v1/conv2/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block3/unit4/bottleneck_v1/add	starting gpio: 0	ending gpio: 1	profiling layers: 0	profiling transfers: 1
+tass name: block3/unit4/bottleneck_v1/Relu	starting gpio: 1	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block3/unit5/bottleneck_v1/conv1/convolution	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block3/unit5/bottleneck_v1/conv1/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block3/unit5/bottleneck_v1/conv1/Relu	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block3/unit5/bottleneck_v1/conv2/convolution	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block3/unit5/bottleneck_v1/conv2/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block3/unit5/bottleneck_v1/conv1/Relu	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block3/unit5/bottleneck_v1/conv3/convolution	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block3/unit5/bottleneck_v1/conv2/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block3/unit5/bottleneck_v1/add	starting gpio: 0	ending gpio: 1	profiling layers: 0	profiling transfers: 1
+tass name: block3/unit5/bottleneck_v1/Relu	starting gpio: 1	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block3/unit6/bottleneck_v1/conv1/convolution	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block3/unit6/bottleneck_v1/conv1/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block3/unit6/bottleneck_v1/conv1/Relu	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block3/unit6/bottleneck_v1/conv2/convolution	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block3/unit6/bottleneck_v1/conv2/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block3/unit6/bottleneck_v1/conv1/Relu	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block3/unit6/bottleneck_v1/conv3/convolution	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block3/unit6/bottleneck_v1/conv2/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block3/unit6/bottleneck_v1/shortcut/MaxPool	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block3/unit6/bottleneck_v1/add	starting gpio: 0	ending gpio: 1	profiling layers: 0	profiling transfers: 1
+tass name: block3/unit6/bottleneck_v1/Relu	starting gpio: 1	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block4/unit1/bottleneck_v1/conv1/convolution	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block4/unit1/bottleneck_v1/conv1/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block4/unit1/bottleneck_v1/conv1/Relu	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block4/unit1/bottleneck_v1/conv2/convolution	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block4/unit1/bottleneck_v1/conv2/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block4/unit1/bottleneck_v1/conv1/Relu	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block4/unit1/bottleneck_v1/conv3/convolution	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block4/unit1/bottleneck_v1/conv2/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block4/unit1/bottleneck_v1/shortcut/convolution	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block4/unit1/bottleneck_v1/shortcut/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block4/unit1/bottleneck_v1/add	starting gpio: 0	ending gpio: 1	profiling layers: 0	profiling transfers: 1
+tass name: block4/unit1/bottleneck_v1/Relu	starting gpio: 1	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block4/unit2/bottleneck_v1/conv1/convolution	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block4/unit2/bottleneck_v1/conv1/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block4/unit2/bottleneck_v1/conv1/Relu	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block4/unit2/bottleneck_v1/conv2/convolution	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block4/unit2/bottleneck_v1/conv2/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block4/unit2/bottleneck_v1/conv1/Relu	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block4/unit2/bottleneck_v1/conv3/convolution	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block4/unit2/bottleneck_v1/conv2/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block4/unit2/bottleneck_v1/add	starting gpio: 0	ending gpio: 1	profiling layers: 0	profiling transfers: 1
+tass name: block4/unit2/bottleneck_v1/Relu	starting gpio: 1	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block4/unit3/bottleneck_v1/conv1/convolution	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block4/unit3/bottleneck_v1/conv1/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block4/unit3/bottleneck_v1/conv1/Relu	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block4/unit3/bottleneck_v1/conv2/convolution	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block4/unit3/bottleneck_v1/conv2/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block4/unit3/bottleneck_v1/conv1/Relu	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block4/unit3/bottleneck_v1/conv3/convolution	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block4/unit3/bottleneck_v1/conv2/BatchNorm	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block4/unit3/bottleneck_v1/add	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: block4/unit3/bottleneck_v1/Relu	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: pool5	starting gpio: 0	ending gpio: 1	profiling layers: 0	profiling transfers: 1
+tass name: logits/convolution	starting gpio: 1	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: predictions/Reshape	starting gpio: 0	ending gpio: 0	profiling layers: 0	profiling transfers: 1
+tass name: predictions/Softmax	starting gpio: 0	ending gpio: 1	profiling layers: 0	profiling transfers: 1
+
+
+
+*********************************************
+start running graphs
+*************************************************
+
+
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//gold_fish.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0000 - [id = 0], n01440764 tench, Tinca tinca
+0.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 2], n01484850 great white shark, white shark, man-eater, man-eating shark, Carcharodon carcharias
+0.0000 - [id = 3], n01491361 tiger shark, Galeocerdo cuvieri
+0.0000 - [id = 4], n01494475 hammerhead, hammerhead shark
+
+
+************
+Photo_index:1
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//gondola.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0000 - [id = 0], n01440764 tench, Tinca tinca
+0.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 2], n01484850 great white shark, white shark, man-eater, man-eating shark, Carcharodon carcharias
+0.0000 - [id = 3], n01491361 tiger shark, Galeocerdo cuvieri
+0.0000 - [id = 4], n01494475 hammerhead, hammerhead shark
+
+
+************
+Photo_index:2
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//school_bus.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0000 - [id = 0], n01440764 tench, Tinca tinca
+0.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 2], n01484850 great white shark, white shark, man-eater, man-eating shark, Carcharodon carcharias
+0.0000 - [id = 3], n01491361 tiger shark, Galeocerdo cuvieri
+0.0000 - [id = 4], n01494475 hammerhead, hammerhead shark
+
+
+************
+Photo_index:3
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//go_kart.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0000 - [id = 0], n01440764 tench, Tinca tinca
+0.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 2], n01484850 great white shark, white shark, man-eater, man-eating shark, Carcharodon carcharias
+0.0000 - [id = 3], n01491361 tiger shark, Galeocerdo cuvieri
+0.0000 - [id = 4], n01494475 hammerhead, hammerhead shark
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//gold_fish.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0000 - [id = 0], n01440764 tench, Tinca tinca
+0.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 2], n01484850 great white shark, white shark, man-eater, man-eating shark, Carcharodon carcharias
+0.0000 - [id = 3], n01491361 tiger shark, Galeocerdo cuvieri
+0.0000 - [id = 4], n01494475 hammerhead, hammerhead shark
+
+
+************
+Photo_index:1
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//gondola.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0000 - [id = 0], n01440764 tench, Tinca tinca
+0.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 2], n01484850 great white shark, white shark, man-eater, man-eating shark, Carcharodon carcharias
+0.0000 - [id = 3], n01491361 tiger shark, Galeocerdo cuvieri
+0.0000 - [id = 4], n01494475 hammerhead, hammerhead shark
+
+
+************
+Photo_index:2
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//school_bus.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0000 - [id = 0], n01440764 tench, Tinca tinca
+0.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 2], n01484850 great white shark, white shark, man-eater, man-eating shark, Carcharodon carcharias
+0.0000 - [id = 3], n01491361 tiger shark, Galeocerdo cuvieri
+0.0000 - [id = 4], n01494475 hammerhead, hammerhead shark
+
+
+************
+Photo_index:3
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//go_kart.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0000 - [id = 0], n01440764 tench, Tinca tinca
+0.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 2], n01484850 great white shark, white shark, man-eater, man-eating shark, Carcharodon carcharias
+0.0000 - [id = 3], n01491361 tiger shark, Galeocerdo cuvieri
+0.0000 - [id = 4], n01494475 hammerhead, hammerhead shark
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//gold_fish.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0000 - [id = 0], n01440764 tench, Tinca tinca
+0.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 2], n01484850 great white shark, white shark, man-eater, man-eating shark, Carcharodon carcharias
+0.0000 - [id = 3], n01491361 tiger shark, Galeocerdo cuvieri
+0.0000 - [id = 4], n01494475 hammerhead, hammerhead shark
+
+
+************
+Photo_index:1
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//gondola.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0000 - [id = 0], n01440764 tench, Tinca tinca
+0.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 2], n01484850 great white shark, white shark, man-eater, man-eating shark, Carcharodon carcharias
+0.0000 - [id = 3], n01491361 tiger shark, Galeocerdo cuvieri
+0.0000 - [id = 4], n01494475 hammerhead, hammerhead shark
+
+
+************
+Photo_index:2
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//school_bus.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0000 - [id = 0], n01440764 tench, Tinca tinca
+0.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 2], n01484850 great white shark, white shark, man-eater, man-eating shark, Carcharodon carcharias
+0.0000 - [id = 3], n01491361 tiger shark, Galeocerdo cuvieri
+0.0000 - [id = 4], n01494475 hammerhead, hammerhead shark
+
+
+************
+Photo_index:3
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//go_kart.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0000 - [id = 0], n01440764 tench, Tinca tinca
+0.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 2], n01484850 great white shark, white shark, man-eater, man-eating shark, Carcharodon carcharias
+0.0000 - [id = 3], n01491361 tiger shark, Galeocerdo cuvieri
+0.0000 - [id = 4], n01494475 hammerhead, hammerhead shark
+
+
+************
+Photo_index:0
+Reading image: /data/local/ARM-CO-UP/assets//ppm_images_224//gold_fish.ppm
+*************
+
+
+---------- Top 5 predictions ----------
+
+0.0000 - [id = 0], n01440764 tench, Tinca tinca
+0.0000 - [id = 1], n01443537 goldfish, Carassius auratus
+0.0000 - [id = 2], n01484850 great white shark, white shark, man-eater, man-eating shark, Carcharodon carcharias
+0.0000 - [id = 3], n01491361 tiger shark, Galeocerdo cuvieri
+0.0000 - [id = 4], n01494475 hammerhead, hammerhead shark
+0	Layer Name: conv1/convolution 	 Layer time: 0 	 number of inputs: 3 	 input shape: 3x224x224 	 output shape: 64x112x112
+1	Layer Name: conv1/BatchNorm 	 Layer time: 0 	 number of inputs: 5 	 input shape: 64x112x112 	 output shape: 64x112x112
+2	Layer Name: conv1/Relu 	 Layer time: 0 	 number of inputs: 1 	 input shape: 64x112x112 	 output shape: 64x112x112
+3	Layer Name: pool1/MaxPool 	 Layer time: 0 	 number of inputs: 1 	 input shape: 64x112x112 	 output shape: 64x56x56
+Layer Number: 0 	 time: 0
+----------------------------
+
+ Sum of Layers time: 0
+
+
+Graph0   Input: 60.8796   Task: 33.446   send: 3.83935   Out: 0.002421   Process: 98.1674
+
+
+
+********
+
+0	Layer Name: block1/unit1/bottleneck_v1/shortcut/convolution 	 Layer time: 0 	 number of inputs: 3 	 input shape: 64x56x56 	 output shape: 256x56x56
+1	Layer Name: block1/unit1/bottleneck_v1/shortcut/BatchNorm 	 Layer time: 0 	 number of inputs: 5 	 input shape: 256x56x56 	 output shape: 256x56x56
+2	Layer Name: block1/unit1/bottleneck_v1/conv1/convolution 	 Layer time: 0 	 number of inputs: 3 	 input shape: 64x56x56 	 output shape: 64x56x56
+3	Layer Name: block1/unit1/bottleneck_v1/conv1/BatchNorm 	 Layer time: 0 	 number of inputs: 5 	 input shape: 64x56x56 	 output shape: 64x56x56
+4	Layer Name: block1/unit1/bottleneck_v1/conv1/Relu 	 Layer time: 0 	 number of inputs: 1 	 input shape: 64x56x56 	 output shape: 64x56x56
+5	Layer Name: block1/unit1/bottleneck_v1/conv2/convolution 	 Layer time: 0 	 number of inputs: 3 	 input shape: 64x56x56 	 output shape: 64x56x56
+6	Layer Name: block1/unit1/bottleneck_v1/conv2/BatchNorm 	 Layer time: 0 	 number of inputs: 5 	 input shape: 64x56x56 	 output shape: 64x56x56
+7	Layer Name: block1/unit1/bottleneck_v1/conv1/Relu 	 Layer time: 0 	 number of inputs: 1 	 input shape: 64x56x56 	 output shape: 64x56x56
+8	Layer Name: block1/unit1/bottleneck_v1/conv3/convolution 	 Layer time: 0 	 number of inputs: 3 	 input shape: 64x56x56 	 output shape: 256x56x56
+9	Layer Name: block1/unit1/bottleneck_v1/conv2/BatchNorm 	 Layer time: 0 	 number of inputs: 5 	 input shape: 256x56x56 	 output shape: 256x56x56
+10	Layer Name: block1/unit1/bottleneck_v1/add 	 Layer time: 0 	 number of inputs: 2 	 input shape: 256x56x56 	 output shape: 256x56x56
+Layer Number: 0 	 time: 0
+----------------------------
+
+ Sum of Layers time: 0
+
+
+Graph1   Input: 0.014   Task: 91.6819   send: 5.78451   Out: 0.0026834   Process: 97.4831
+
+
+
+********
+
+0	Layer Name: block1/unit1/bottleneck_v1/Relu 	 Layer time: 0 	 number of inputs: 1 	 input shape: 256x56x56 	 output shape: 256x56x56
+1	Layer Name: block1/unit2/bottleneck_v1/conv1/convolution 	 Layer time: 0 	 number of inputs: 3 	 input shape: 256x56x56 	 output shape: 64x56x56
+2	Layer Name: block1/unit2/bottleneck_v1/conv1/BatchNorm 	 Layer time: 0 	 number of inputs: 5 	 input shape: 64x56x56 	 output shape: 64x56x56
+3	Layer Name: block1/unit2/bottleneck_v1/conv1/Relu 	 Layer time: 0 	 number of inputs: 1 	 input shape: 64x56x56 	 output shape: 64x56x56
+4	Layer Name: block1/unit2/bottleneck_v1/conv2/convolution 	 Layer time: 0 	 number of inputs: 3 	 input shape: 64x56x56 	 output shape: 64x56x56
+5	Layer Name: block1/unit2/bottleneck_v1/conv2/BatchNorm 	 Layer time: 0 	 number of inputs: 5 	 input shape: 64x56x56 	 output shape: 64x56x56
+6	Layer Name: block1/unit2/bottleneck_v1/conv1/Relu 	 Layer time: 0 	 number of inputs: 1 	 input shape: 64x56x56 	 output shape: 64x56x56
+7	Layer Name: block1/unit2/bottleneck_v1/conv3/convolution 	 Layer time: 0 	 number of inputs: 3 	 input shape: 64x56x56 	 output shape: 256x56x56
+8	Layer Name: block1/unit2/bottleneck_v1/conv2/BatchNorm 	 Layer time: 0 	 number of inputs: 5 	 input shape: 256x56x56 	 output shape: 256x56x56
+9	Layer Name: block1/unit2/bottleneck_v1/add 	 Layer time: 0 	 number of inputs: 2 	 input shape: 256x56x56 	 output shape: 256x56x56
+Layer Number: 0 	 time: 0
+----------------------------
+
+ Sum of Layers time: 0
+
+
+Graph2   Input: 0.0114043   Task: 83.4958   send: 2.8355   Out: 0.0025374   Process: 86.3453
+
+
+
+********
+
+0	Layer Name: block1/unit2/bottleneck_v1/Relu 	 Layer time: 0 	 number of inputs: 1 	 input shape: 256x56x56 	 output shape: 256x56x56
+1	Layer Name: block1/unit3/bottleneck_v1/conv1/convolution 	 Layer time: 0 	 number of inputs: 3 	 input shape: 256x56x56 	 output shape: 64x56x56
+2	Layer Name: block1/unit3/bottleneck_v1/conv1/BatchNorm 	 Layer time: 0 	 number of inputs: 5 	 input shape: 64x56x56 	 output shape: 64x56x56
+3	Layer Name: block1/unit3/bottleneck_v1/conv1/Relu 	 Layer time: 0 	 number of inputs: 1 	 input shape: 64x56x56 	 output shape: 64x56x56
+4	Layer Name: block1/unit3/bottleneck_v1/conv2/convolution 	 Layer time: 0 	 number of inputs: 3 	 input shape: 64x56x56 	 output shape: 64x28x28
+5	Layer Name: block1/unit3/bottleneck_v1/conv2/BatchNorm 	 Layer time: 0 	 number of inputs: 5 	 input shape: 64x28x28 	 output shape: 64x28x28
+6	Layer Name: block1/unit3/bottleneck_v1/conv1/Relu 	 Layer time: 0 	 number of inputs: 1 	 input shape: 64x28x28 	 output shape: 64x28x28
+7	Layer Name: block1/unit3/bottleneck_v1/conv3/convolution 	 Layer time: 0 	 number of inputs: 3 	 input shape: 64x28x28 	 output shape: 256x28x28
+8	Layer Name: block1/unit3/bottleneck_v1/conv2/BatchNorm 	 Layer time: 0 	 number of inputs: 5 	 input shape: 256x28x28 	 output shape: 256x28x28
+9	Layer Name: block1/unit3/bottleneck_v1/shortcut/MaxPool 	 Layer time: 0 	 number of inputs: 1 	 input shape: 256x56x56 	 output shape: 256x28x28
+10	Layer Name: block1/unit3/bottleneck_v1/add 	 Layer time: 0 	 number of inputs: 2 	 input shape: 256x28x28 	 output shape: 256x28x28
+Layer Number: 0 	 time: 0
+----------------------------
+
+ Sum of Layers time: 0
+
+
+Graph3   Input: 0.0082542   Task: 91.7577   send: 0.644058   Out: 0.0022458   Process: 92.4123
+
+
+
+********
+
+0	Layer Name: block1/unit3/bottleneck_v1/Relu 	 Layer time: 0 	 number of inputs: 1 	 input shape: 256x28x28 	 output shape: 256x28x28
+1	Layer Name: block2/unit1/bottleneck_v1/conv1/convolution 	 Layer time: 0 	 number of inputs: 3 	 input shape: 256x28x28 	 output shape: 128x28x28
+2	Layer Name: block2/unit1/bottleneck_v1/conv1/BatchNorm 	 Layer time: 0 	 number of inputs: 5 	 input shape: 128x28x28 	 output shape: 128x28x28
+3	Layer Name: block2/unit1/bottleneck_v1/conv1/Relu 	 Layer time: 0 	 number of inputs: 1 	 input shape: 128x28x28 	 output shape: 128x28x28
+4	Layer Name: block2/unit1/bottleneck_v1/conv2/convolution 	 Layer time: 0 	 number of inputs: 3 	 input shape: 128x28x28 	 output shape: 128x28x28
+5	Layer Name: block2/unit1/bottleneck_v1/conv2/BatchNorm 	 Layer time: 0 	 number of inputs: 5 	 input shape: 128x28x28 	 output shape: 128x28x28
+6	Layer Name: block2/unit1/bottleneck_v1/conv1/Relu 	 Layer time: 0 	 number of inputs: 1 	 input shape: 128x28x28 	 output shape: 128x28x28
+7	Layer Name: block2/unit1/bottleneck_v1/conv3/convolution 	 Layer time: 0 	 number of inputs: 3 	 input shape: 128x28x28 	 output shape: 512x28x28
+8	Layer Name: block2/unit1/bottleneck_v1/conv2/BatchNorm 	 Layer time: 0 	 number of inputs: 5 	 input shape: 512x28x28 	 output shape: 512x28x28
+9	Layer Name: block2/unit1/bottleneck_v1/shortcut/convolution 	 Layer time: 0 	 number of inputs: 3 	 input shape: 256x28x28 	 output shape: 512x28x28
+10	Layer Name: block2/unit1/bottleneck_v1/shortcut/BatchNorm 	 Layer time: 0 	 number of inputs: 5 	 input shape: 512x28x28 	 output shape: 512x28x28
+11	Layer Name: block2/unit1/bottleneck_v1/add 	 Layer time: 0 	 number of inputs: 2 	 input shape: 512x28x28 	 output shape: 512x28x28
+Layer Number: 0 	 time: 0
+----------------------------
+
+ Sum of Layers time: 0
+
+
+Graph4   Input: 0.0107333   Task: 99.8336   send: 1.26099   Out: 0.0025081   Process: 101.108
+
+
+
+********
+
+0	Layer Name: block2/unit1/bottleneck_v1/Relu 	 Layer time: 0 	 number of inputs: 1 	 input shape: 512x28x28 	 output shape: 512x28x28
+1	Layer Name: block2/unit2/bottleneck_v1/conv1/convolution 	 Layer time: 0 	 number of inputs: 3 	 input shape: 512x28x28 	 output shape: 128x28x28
+2	Layer Name: block2/unit2/bottleneck_v1/conv1/BatchNorm 	 Layer time: 0 	 number of inputs: 5 	 input shape: 128x28x28 	 output shape: 128x28x28
+3	Layer Name: block2/unit2/bottleneck_v1/conv1/Relu 	 Layer time: 0 	 number of inputs: 1 	 input shape: 128x28x28 	 output shape: 128x28x28
+4	Layer Name: block2/unit2/bottleneck_v1/conv2/convolution 	 Layer time: 0 	 number of inputs: 3 	 input shape: 128x28x28 	 output shape: 128x28x28
+5	Layer Name: block2/unit2/bottleneck_v1/conv2/BatchNorm 	 Layer time: 0 	 number of inputs: 5 	 input shape: 128x28x28 	 output shape: 128x28x28
+6	Layer Name: block2/unit2/bottleneck_v1/conv1/Relu 	 Layer time: 0 	 number of inputs: 1 	 input shape: 128x28x28 	 output shape: 128x28x28
+7	Layer Name: block2/unit2/bottleneck_v1/conv3/convolution 	 Layer time: 0 	 number of inputs: 3 	 input shape: 128x28x28 	 output shape: 512x28x28
+8	Layer Name: block2/unit2/bottleneck_v1/conv2/BatchNorm 	 Layer time: 0 	 number of inputs: 5 	 input shape: 512x28x28 	 output shape: 512x28x28
+9	Layer Name: block2/unit2/bottleneck_v1/add 	 Layer time: 0 	 number of inputs: 2 	 input shape: 512x28x28 	 output shape: 512x28x28
+Layer Number: 0 	 time: 0
+----------------------------
+
+ Sum of Layers time: 0
+
+
+Graph5   Input: 0.0102084   Task: 83.5286   send: 1.23372   Out: 0.0026249   Process: 84.7752
+
+
+
+********
+
+0	Layer Name: block2/unit2/bottleneck_v1/Relu 	 Layer time: 0 	 number of inputs: 1 	 input shape: 512x28x28 	 output shape: 512x28x28
+1	Layer Name: block2/unit3/bottleneck_v1/conv1/convolution 	 Layer time: 0 	 number of inputs: 3 	 input shape: 512x28x28 	 output shape: 128x28x28
+2	Layer Name: block2/unit3/bottleneck_v1/conv1/BatchNorm 	 Layer time: 0 	 number of inputs: 5 	 input shape: 128x28x28 	 output shape: 128x28x28
+3	Layer Name: block2/unit3/bottleneck_v1/conv1/Relu 	 Layer time: 0 	 number of inputs: 1 	 input shape: 128x28x28 	 output shape: 128x28x28
+4	Layer Name: block2/unit3/bottleneck_v1/conv2/convolution 	 Layer time: 0 	 number of inputs: 3 	 input shape: 128x28x28 	 output shape: 128x28x28
+5	Layer Name: block2/unit3/bottleneck_v1/conv2/BatchNorm 	 Layer time: 0 	 number of inputs: 5 	 input shape: 128x28x28 	 output shape: 128x28x28
+6	Layer Name: block2/unit3/bottleneck_v1/conv1/Relu 	 Layer time: 0 	 number of inputs: 1 	 input shape: 128x28x28 	 output shape: 128x28x28
+7	Layer Name: block2/unit3/bottleneck_v1/conv3/convolution 	 Layer time: 0 	 number of inputs: 3 	 input shape: 128x28x28 	 output shape: 512x28x28
+8	Layer Name: block2/unit3/bottleneck_v1/conv2/BatchNorm 	 Layer time: 0 	 number of inputs: 5 	 input shape: 512x28x28 	 output shape: 512x28x28
+9	Layer Name: block2/unit3/bottleneck_v1/add 	 Layer time: 0 	 number of inputs: 2 	 input shape: 512x28x28 	 output shape: 512x28x28
+Layer Number: 0 	 time: 0
+----------------------------
+
+ Sum of Layers time: 0
+
+
+Graph6   Input: 0.0105583   Task: 83.5135   send: 1.27677   Out: 0.0025376   Process: 84.8034
+
+
+
+********
+
+0	Layer Name: block2/unit3/bottleneck_v1/Relu 	 Layer time: 0 	 number of inputs: 1 	 input shape: 512x28x28 	 output shape: 512x28x28
+1	Layer Name: block2/unit4/bottleneck_v1/conv1/convolution 	 Layer time: 0 	 number of inputs: 3 	 input shape: 512x28x28 	 output shape: 128x28x28
+2	Layer Name: block2/unit4/bottleneck_v1/conv1/BatchNorm 	 Layer time: 0 	 number of inputs: 5 	 input shape: 128x28x28 	 output shape: 128x28x28
+3	Layer Name: block2/unit4/bottleneck_v1/conv1/Relu 	 Layer time: 0 	 number of inputs: 1 	 input shape: 128x28x28 	 output shape: 128x28x28
+4	Layer Name: block2/unit4/bottleneck_v1/conv2/convolution 	 Layer time: 0 	 number of inputs: 3 	 input shape: 128x28x28 	 output shape: 128x14x14
+5	Layer Name: block2/unit4/bottleneck_v1/conv2/BatchNorm 	 Layer time: 0 	 number of inputs: 5 	 input shape: 128x14x14 	 output shape: 128x14x14
+6	Layer Name: block2/unit4/bottleneck_v1/conv1/Relu 	 Layer time: 0 	 number of inputs: 1 	 input shape: 128x14x14 	 output shape: 128x14x14
+7	Layer Name: block2/unit4/bottleneck_v1/conv3/convolution 	 Layer time: 0 	 number of inputs: 3 	 input shape: 128x14x14 	 output shape: 512x14x14
+8	Layer Name: block2/unit4/bottleneck_v1/conv2/BatchNorm 	 Layer time: 0 	 number of inputs: 5 	 input shape: 512x14x14 	 output shape: 512x14x14
+9	Layer Name: block2/unit4/bottleneck_v1/shortcut/MaxPool 	 Layer time: 0 	 number of inputs: 1 	 input shape: 512x28x28 	 output shape: 512x14x14
+10	Layer Name: block2/unit4/bottleneck_v1/add 	 Layer time: 0 	 number of inputs: 2 	 input shape: 512x14x14 	 output shape: 512x14x14
+Layer Number: 0 	 time: 0
+----------------------------
+
+ Sum of Layers time: 0
+
+
+Graph7   Input: 0.0076999   Task: 91.8282   send: 0.369046   Out: 0.0021876   Process: 92.2071
+
+
+
+********
+
+0	Layer Name: block2/unit4/bottleneck_v1/Relu 	 Layer time: 0 	 number of inputs: 1 	 input shape: 512x14x14 	 output shape: 512x14x14
+1	Layer Name: block3/unit1/bottleneck_v1/conv1/convolution 	 Layer time: 0 	 number of inputs: 3 	 input shape: 512x14x14 	 output shape: 256x14x14
+2	Layer Name: block3/unit1/bottleneck_v1/conv1/BatchNorm 	 Layer time: 0 	 number of inputs: 5 	 input shape: 256x14x14 	 output shape: 256x14x14
+3	Layer Name: block3/unit1/bottleneck_v1/conv1/Relu 	 Layer time: 0 	 number of inputs: 1 	 input shape: 256x14x14 	 output shape: 256x14x14
+4	Layer Name: block3/unit1/bottleneck_v1/conv2/convolution 	 Layer time: 0 	 number of inputs: 3 	 input shape: 256x14x14 	 output shape: 256x14x14
+5	Layer Name: block3/unit1/bottleneck_v1/conv2/BatchNorm 	 Layer time: 0 	 number of inputs: 5 	 input shape: 256x14x14 	 output shape: 256x14x14
+6	Layer Name: block3/unit1/bottleneck_v1/conv1/Relu 	 Layer time: 0 	 number of inputs: 1 	 input shape: 256x14x14 	 output shape: 256x14x14
+7	Layer Name: block3/unit1/bottleneck_v1/conv3/convolution 	 Layer time: 0 	 number of inputs: 3 	 input shape: 256x14x14 	 output shape: 1024x14x14
+8	Layer Name: block3/unit1/bottleneck_v1/conv2/BatchNorm 	 Layer time: 0 	 number of inputs: 5 	 input shape: 1024x14x14 	 output shape: 1024x14x14
+9	Layer Name: block3/unit1/bottleneck_v1/shortcut/convolution 	 Layer time: 0 	 number of inputs: 3 	 input shape: 512x14x14 	 output shape: 1024x14x14
+10	Layer Name: block3/unit1/bottleneck_v1/shortcut/BatchNorm 	 Layer time: 0 	 number of inputs: 5 	 input shape: 1024x14x14 	 output shape: 1024x14x14
+11	Layer Name: block3/unit1/bottleneck_v1/add 	 Layer time: 0 	 number of inputs: 2 	 input shape: 1024x14x14 	 output shape: 1024x14x14
+Layer Number: 0 	 time: 0
+----------------------------
+
+ Sum of Layers time: 0
+
+
+Graph8   Input: 0.0079042   Task: 99.9976   send: 0.65695   Out: 0.0022166   Process: 100.665
+
+
+
+********
+
+0	Layer Name: block3/unit1/bottleneck_v1/Relu 	 Layer time: 0 	 number of inputs: 1 	 input shape: 1024x14x14 	 output shape: 1024x14x14
+1	Layer Name: block3/unit2/bottleneck_v1/conv1/convolution 	 Layer time: 0 	 number of inputs: 3 	 input shape: 1024x14x14 	 output shape: 256x14x14
+2	Layer Name: block3/unit2/bottleneck_v1/conv1/BatchNorm 	 Layer time: 0 	 number of inputs: 5 	 input shape: 256x14x14 	 output shape: 256x14x14
+3	Layer Name: block3/unit2/bottleneck_v1/conv1/Relu 	 Layer time: 0 	 number of inputs: 1 	 input shape: 256x14x14 	 output shape: 256x14x14
+4	Layer Name: block3/unit2/bottleneck_v1/conv2/convolution 	 Layer time: 0 	 number of inputs: 3 	 input shape: 256x14x14 	 output shape: 256x14x14
+5	Layer Name: block3/unit2/bottleneck_v1/conv2/BatchNorm 	 Layer time: 0 	 number of inputs: 5 	 input shape: 256x14x14 	 output shape: 256x14x14
+6	Layer Name: block3/unit2/bottleneck_v1/conv1/Relu 	 Layer time: 0 	 number of inputs: 1 	 input shape: 256x14x14 	 output shape: 256x14x14
+7	Layer Name: block3/unit2/bottleneck_v1/conv3/convolution 	 Layer time: 0 	 number of inputs: 3 	 input shape: 256x14x14 	 output shape: 1024x14x14
+8	Layer Name: block3/unit2/bottleneck_v1/conv2/BatchNorm 	 Layer time: 0 	 number of inputs: 5 	 input shape: 1024x14x14 	 output shape: 1024x14x14
+9	Layer Name: block3/unit2/bottleneck_v1/add 	 Layer time: 0 	 number of inputs: 2 	 input shape: 1024x14x14 	 output shape: 1024x14x14
+Layer Number: 0 	 time: 0
+----------------------------
+
+ Sum of Layers time: 0
+
+
+Graph9   Input: 0.0084584   Task: 83.5441   send: 0.654996   Out: 0.0022167   Process: 84.2098
+
+
+
+********
+
+0	Layer Name: block3/unit2/bottleneck_v1/Relu 	 Layer time: 0 	 number of inputs: 1 	 input shape: 1024x14x14 	 output shape: 1024x14x14
+1	Layer Name: block3/unit3/bottleneck_v1/conv1/convolution 	 Layer time: 0 	 number of inputs: 3 	 input shape: 1024x14x14 	 output shape: 256x14x14
+2	Layer Name: block3/unit3/bottleneck_v1/conv1/BatchNorm 	 Layer time: 0 	 number of inputs: 5 	 input shape: 256x14x14 	 output shape: 256x14x14
+3	Layer Name: block3/unit3/bottleneck_v1/conv1/Relu 	 Layer time: 0 	 number of inputs: 1 	 input shape: 256x14x14 	 output shape: 256x14x14
+4	Layer Name: block3/unit3/bottleneck_v1/conv2/convolution 	 Layer time: 0 	 number of inputs: 3 	 input shape: 256x14x14 	 output shape: 256x14x14
+5	Layer Name: block3/unit3/bottleneck_v1/conv2/BatchNorm 	 Layer time: 0 	 number of inputs: 5 	 input shape: 256x14x14 	 output shape: 256x14x14
+6	Layer Name: block3/unit3/bottleneck_v1/conv1/Relu 	 Layer time: 0 	 number of inputs: 1 	 input shape: 256x14x14 	 output shape: 256x14x14
+7	Layer Name: block3/unit3/bottleneck_v1/conv3/convolution 	 Layer time: 0 	 number of inputs: 3 	 input shape: 256x14x14 	 output shape: 1024x14x14
+8	Layer Name: block3/unit3/bottleneck_v1/conv2/BatchNorm 	 Layer time: 0 	 number of inputs: 5 	 input shape: 1024x14x14 	 output shape: 1024x14x14
+9	Layer Name: block3/unit3/bottleneck_v1/add 	 Layer time: 0 	 number of inputs: 2 	 input shape: 1024x14x14 	 output shape: 1024x14x14
+Layer Number: 0 	 time: 0
+----------------------------
+
+ Sum of Layers time: 0
+
+
+Graph10   Input: 0.0080208   Task: 83.1923   send: 0.710471   Out: 0.0023041   Process: 83.9131
+
+
+
+********
+
+0	Layer Name: block3/unit3/bottleneck_v1/Relu 	 Layer time: 0 	 number of inputs: 1 	 input shape: 1024x14x14 	 output shape: 1024x14x14
+1	Layer Name: block3/unit4/bottleneck_v1/conv1/convolution 	 Layer time: 0 	 number of inputs: 3 	 input shape: 1024x14x14 	 output shape: 256x14x14
+2	Layer Name: block3/unit4/bottleneck_v1/conv1/BatchNorm 	 Layer time: 0 	 number of inputs: 5 	 input shape: 256x14x14 	 output shape: 256x14x14
+3	Layer Name: block3/unit4/bottleneck_v1/conv1/Relu 	 Layer time: 0 	 number of inputs: 1 	 input shape: 256x14x14 	 output shape: 256x14x14
+4	Layer Name: block3/unit4/bottleneck_v1/conv2/convolution 	 Layer time: 0 	 number of inputs: 3 	 input shape: 256x14x14 	 output shape: 256x14x14
+5	Layer Name: block3/unit4/bottleneck_v1/conv2/BatchNorm 	 Layer time: 0 	 number of inputs: 5 	 input shape: 256x14x14 	 output shape: 256x14x14
+6	Layer Name: block3/unit4/bottleneck_v1/conv1/Relu 	 Layer time: 0 	 number of inputs: 1 	 input shape: 256x14x14 	 output shape: 256x14x14
+7	Layer Name: block3/unit4/bottleneck_v1/conv3/convolution 	 Layer time: 0 	 number of inputs: 3 	 input shape: 256x14x14 	 output shape: 1024x14x14
+8	Layer Name: block3/unit4/bottleneck_v1/conv2/BatchNorm 	 Layer time: 0 	 number of inputs: 5 	 input shape: 1024x14x14 	 output shape: 1024x14x14
+9	Layer Name: block3/unit4/bottleneck_v1/add 	 Layer time: 0 	 number of inputs: 2 	 input shape: 1024x14x14 	 output shape: 1024x14x14
+Layer Number: 0 	 time: 0
+----------------------------
+
+ Sum of Layers time: 0
+
+
+Graph11   Input: 0.0083709   Task: 83.3002   send: 0.645779   Out: 0.0023041   Process: 83.9567
+
+
+
+********
+
+0	Layer Name: block3/unit4/bottleneck_v1/Relu 	 Layer time: 0 	 number of inputs: 1 	 input shape: 1024x14x14 	 output shape: 1024x14x14
+1	Layer Name: block3/unit5/bottleneck_v1/conv1/convolution 	 Layer time: 0 	 number of inputs: 3 	 input shape: 1024x14x14 	 output shape: 256x14x14
+2	Layer Name: block3/unit5/bottleneck_v1/conv1/BatchNorm 	 Layer time: 0 	 number of inputs: 5 	 input shape: 256x14x14 	 output shape: 256x14x14
+3	Layer Name: block3/unit5/bottleneck_v1/conv1/Relu 	 Layer time: 0 	 number of inputs: 1 	 input shape: 256x14x14 	 output shape: 256x14x14
+4	Layer Name: block3/unit5/bottleneck_v1/conv2/convolution 	 Layer time: 0 	 number of inputs: 3 	 input shape: 256x14x14 	 output shape: 256x14x14
+5	Layer Name: block3/unit5/bottleneck_v1/conv2/BatchNorm 	 Layer time: 0 	 number of inputs: 5 	 input shape: 256x14x14 	 output shape: 256x14x14
+6	Layer Name: block3/unit5/bottleneck_v1/conv1/Relu 	 Layer time: 0 	 number of inputs: 1 	 input shape: 256x14x14 	 output shape: 256x14x14
+7	Layer Name: block3/unit5/bottleneck_v1/conv3/convolution 	 Layer time: 0 	 number of inputs: 3 	 input shape: 256x14x14 	 output shape: 1024x14x14
+8	Layer Name: block3/unit5/bottleneck_v1/conv2/BatchNorm 	 Layer time: 0 	 number of inputs: 5 	 input shape: 1024x14x14 	 output shape: 1024x14x14
+9	Layer Name: block3/unit5/bottleneck_v1/add 	 Layer time: 0 	 number of inputs: 2 	 input shape: 1024x14x14 	 output shape: 1024x14x14
+Layer Number: 0 	 time: 0
+----------------------------
+
+ Sum of Layers time: 0
+
+
+Graph12   Input: 0.0081958   Task: 83.4727   send: 0.638838   Out: 0.0021583   Process: 84.1219
+
+
+
+********
+
+0	Layer Name: block3/unit5/bottleneck_v1/Relu 	 Layer time: 0 	 number of inputs: 1 	 input shape: 1024x14x14 	 output shape: 1024x14x14
+1	Layer Name: block3/unit6/bottleneck_v1/conv1/convolution 	 Layer time: 0 	 number of inputs: 3 	 input shape: 1024x14x14 	 output shape: 256x14x14
+2	Layer Name: block3/unit6/bottleneck_v1/conv1/BatchNorm 	 Layer time: 0 	 number of inputs: 5 	 input shape: 256x14x14 	 output shape: 256x14x14
+3	Layer Name: block3/unit6/bottleneck_v1/conv1/Relu 	 Layer time: 0 	 number of inputs: 1 	 input shape: 256x14x14 	 output shape: 256x14x14
+4	Layer Name: block3/unit6/bottleneck_v1/conv2/convolution 	 Layer time: 0 	 number of inputs: 3 	 input shape: 256x14x14 	 output shape: 256x7x7
+5	Layer Name: block3/unit6/bottleneck_v1/conv2/BatchNorm 	 Layer time: 0 	 number of inputs: 5 	 input shape: 256x7x7 	 output shape: 256x7x7
+6	Layer Name: block3/unit6/bottleneck_v1/conv1/Relu 	 Layer time: 0 	 number of inputs: 1 	 input shape: 256x7x7 	 output shape: 256x7x7
+7	Layer Name: block3/unit6/bottleneck_v1/conv3/convolution 	 Layer time: 0 	 number of inputs: 3 	 input shape: 256x7x7 	 output shape: 1024x7x7
+8	Layer Name: block3/unit6/bottleneck_v1/conv2/BatchNorm 	 Layer time: 0 	 number of inputs: 5 	 input shape: 1024x7x7 	 output shape: 1024x7x7
+9	Layer Name: block3/unit6/bottleneck_v1/shortcut/MaxPool 	 Layer time: 0 	 number of inputs: 1 	 input shape: 1024x14x14 	 output shape: 1024x7x7
+10	Layer Name: block3/unit6/bottleneck_v1/add 	 Layer time: 0 	 number of inputs: 2 	 input shape: 1024x7x7 	 output shape: 1024x7x7
+Layer Number: 0 	 time: 0
+----------------------------
+
+ Sum of Layers time: 0
+
+
+Graph13   Input: 0.0076125   Task: 91.7091   send: 0.189671   Out: 0.0021583   Process: 91.9085
+
+
+
+********
+
+0	Layer Name: block3/unit6/bottleneck_v1/Relu 	 Layer time: 0 	 number of inputs: 1 	 input shape: 1024x7x7 	 output shape: 1024x7x7
+1	Layer Name: block4/unit1/bottleneck_v1/conv1/convolution 	 Layer time: 0 	 number of inputs: 3 	 input shape: 1024x7x7 	 output shape: 512x7x7
+2	Layer Name: block4/unit1/bottleneck_v1/conv1/BatchNorm 	 Layer time: 0 	 number of inputs: 5 	 input shape: 512x7x7 	 output shape: 512x7x7
+3	Layer Name: block4/unit1/bottleneck_v1/conv1/Relu 	 Layer time: 0 	 number of inputs: 1 	 input shape: 512x7x7 	 output shape: 512x7x7
+4	Layer Name: block4/unit1/bottleneck_v1/conv2/convolution 	 Layer time: 0 	 number of inputs: 3 	 input shape: 512x7x7 	 output shape: 512x7x7
+5	Layer Name: block4/unit1/bottleneck_v1/conv2/BatchNorm 	 Layer time: 0 	 number of inputs: 5 	 input shape: 512x7x7 	 output shape: 512x7x7
+6	Layer Name: block4/unit1/bottleneck_v1/conv1/Relu 	 Layer time: 0 	 number of inputs: 1 	 input shape: 512x7x7 	 output shape: 512x7x7
+7	Layer Name: block4/unit1/bottleneck_v1/conv3/convolution 	 Layer time: 0 	 number of inputs: 3 	 input shape: 512x7x7 	 output shape: 2048x7x7
+8	Layer Name: block4/unit1/bottleneck_v1/conv2/BatchNorm 	 Layer time: 0 	 number of inputs: 5 	 input shape: 2048x7x7 	 output shape: 2048x7x7
+9	Layer Name: block4/unit1/bottleneck_v1/shortcut/convolution 	 Layer time: 0 	 number of inputs: 3 	 input shape: 1024x7x7 	 output shape: 2048x7x7
+10	Layer Name: block4/unit1/bottleneck_v1/shortcut/BatchNorm 	 Layer time: 0 	 number of inputs: 5 	 input shape: 2048x7x7 	 output shape: 2048x7x7
+11	Layer Name: block4/unit1/bottleneck_v1/add 	 Layer time: 0 	 number of inputs: 2 	 input shape: 2048x7x7 	 output shape: 2048x7x7
+Layer Number: 0 	 time: 0
+----------------------------
+
+ Sum of Layers time: 0
+
+
+Graph14   Input: 0.0079916   Task: 100.063   send: 0.341454   Out: 0.0022749   Process: 100.415
+
+
+
+********
+
+0	Layer Name: block4/unit1/bottleneck_v1/Relu 	 Layer time: 0 	 number of inputs: 1 	 input shape: 2048x7x7 	 output shape: 2048x7x7
+1	Layer Name: block4/unit2/bottleneck_v1/conv1/convolution 	 Layer time: 0 	 number of inputs: 3 	 input shape: 2048x7x7 	 output shape: 512x7x7
+2	Layer Name: block4/unit2/bottleneck_v1/conv1/BatchNorm 	 Layer time: 0 	 number of inputs: 5 	 input shape: 512x7x7 	 output shape: 512x7x7
+3	Layer Name: block4/unit2/bottleneck_v1/conv1/Relu 	 Layer time: 0 	 number of inputs: 1 	 input shape: 512x7x7 	 output shape: 512x7x7
+4	Layer Name: block4/unit2/bottleneck_v1/conv2/convolution 	 Layer time: 0 	 number of inputs: 3 	 input shape: 512x7x7 	 output shape: 512x7x7
+5	Layer Name: block4/unit2/bottleneck_v1/conv2/BatchNorm 	 Layer time: 0 	 number of inputs: 5 	 input shape: 512x7x7 	 output shape: 512x7x7
+6	Layer Name: block4/unit2/bottleneck_v1/conv1/Relu 	 Layer time: 0 	 number of inputs: 1 	 input shape: 512x7x7 	 output shape: 512x7x7
+7	Layer Name: block4/unit2/bottleneck_v1/conv3/convolution 	 Layer time: 0 	 number of inputs: 3 	 input shape: 512x7x7 	 output shape: 2048x7x7
+8	Layer Name: block4/unit2/bottleneck_v1/conv2/BatchNorm 	 Layer time: 0 	 number of inputs: 5 	 input shape: 2048x7x7 	 output shape: 2048x7x7
+9	Layer Name: block4/unit2/bottleneck_v1/add 	 Layer time: 0 	 number of inputs: 2 	 input shape: 2048x7x7 	 output shape: 2048x7x7
+Layer Number: 0 	 time: 0
+----------------------------
+
+ Sum of Layers time: 0
+
+
+Graph15   Input: 0.0079042   Task: 83.3   send: 0.334513   Out: 0.0022458   Process: 83.6447
+
+
+
+********
+
+0	Layer Name: block4/unit2/bottleneck_v1/Relu 	 Layer time: 0 	 number of inputs: 1 	 input shape: 2048x7x7 	 output shape: 2048x7x7
+1	Layer Name: block4/unit3/bottleneck_v1/conv1/convolution 	 Layer time: 0 	 number of inputs: 3 	 input shape: 2048x7x7 	 output shape: 512x7x7
+2	Layer Name: block4/unit3/bottleneck_v1/conv1/BatchNorm 	 Layer time: 0 	 number of inputs: 5 	 input shape: 512x7x7 	 output shape: 512x7x7
+3	Layer Name: block4/unit3/bottleneck_v1/conv1/Relu 	 Layer time: 0 	 number of inputs: 1 	 input shape: 512x7x7 	 output shape: 512x7x7
+4	Layer Name: block4/unit3/bottleneck_v1/conv2/convolution 	 Layer time: 0 	 number of inputs: 3 	 input shape: 512x7x7 	 output shape: 512x7x7
+5	Layer Name: block4/unit3/bottleneck_v1/conv2/BatchNorm 	 Layer time: 0 	 number of inputs: 5 	 input shape: 512x7x7 	 output shape: 512x7x7
+6	Layer Name: block4/unit3/bottleneck_v1/conv1/Relu 	 Layer time: 0 	 number of inputs: 1 	 input shape: 512x7x7 	 output shape: 512x7x7
+7	Layer Name: block4/unit3/bottleneck_v1/conv3/convolution 	 Layer time: 0 	 number of inputs: 3 	 input shape: 512x7x7 	 output shape: 2048x7x7
+8	Layer Name: block4/unit3/bottleneck_v1/conv2/BatchNorm 	 Layer time: 0 	 number of inputs: 5 	 input shape: 2048x7x7 	 output shape: 2048x7x7
+9	Layer Name: block4/unit3/bottleneck_v1/add 	 Layer time: 0 	 number of inputs: 2 	 input shape: 2048x7x7 	 output shape: 2048x7x7
+10	Layer Name: block4/unit3/bottleneck_v1/Relu 	 Layer time: 0 	 number of inputs: 1 	 input shape: 2048x7x7 	 output shape: 2048x7x7
+11	Layer Name: pool5 	 Layer time: 0 	 number of inputs: 1 	 input shape: 2048x7x7 	 output shape: 2048
+Layer Number: 0 	 time: 0
+----------------------------
+
+ Sum of Layers time: 0
+
+
+Graph16   Input: 0.0075833   Task: 99.7999   send: 0.0538708   Out: 0.0022752   Process: 99.8636
+
+
+
+********
+
+0	Layer Name: logits/convolution 	 Layer time: 0 	 number of inputs: 3 	 input shape: 2048 	 output shape: 1000
+1	Layer Name: predictions/Reshape 	 Layer time: 0 	 number of inputs: 1 	 input shape: 1000 	 output shape: 1000
+2	Layer Name: predictions/Softmax 	 Layer time: 0 	 number of inputs: 1 	 input shape: 1000 	 output shape: 1000
+Layer Number: 0 	 time: 0
+----------------------------
+
+ Sum of Layers time: 0
+
+
+Graph17   Input: 0.0076999   Task: 25.1579   send: 0.0029456   Out: 0.321883   Process: 25.4904
+
+
+
+********
+
+
+
+AVG Latency: 1577.26
+
+Profiling these DVFS settings finised
+Please Enter the desired Frequency setttings: 
+Test passed
